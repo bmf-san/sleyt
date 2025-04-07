@@ -1,0 +1,3415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMF CSS Framework - New Color Tones</title>
+  <link rel="stylesheet" href="../../dist/bmf-css.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* アイコンフォント用のスタイル */
+    .logo-icon::before {
+      content: "\e900";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .menu-icon::before {
+      content: "\e901";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-add::before {
+      content: "\e902";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .button-icon.icon-add::before {
+      margin-right: 0;
+    }
+
+    .icon-user::before {
+      content: "\e903";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-home::before {
+      content: "\e904";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-content::before {
+      content: "\e905";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-settings::before {
+      content: "\e906";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-calendar::before {
+      content: "\e920";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-angle-left::before {
+      content: "\e921";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-angle-right::before {
+      content: "\e922";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    /* アイコンフォントの定義（簡単なフォールバックバージョン） */
+    @font-face {
+      font-family: 'BMFIcons';
+      src: url('data:application/x-font-woff;charset=utf-8;base64,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');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* アイコンフォント用のスタイル */
+    .logo-icon::before {
+      content: "\e900";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .menu-icon::before {
+      content: "\e901";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-add::before {
+      content: "\e902";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .button-icon.icon-add::before {
+      margin-right: 0;
+    }
+
+    .icon-user::before {
+      content: "\e903";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-home::before {
+      content: "\e904";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-content::before {
+      content: "\e905";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-settings::before {
+      content: "\e906";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-calendar::before {
+      content: "\e920";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-angle-left::before {
+      content: "\e921";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    .icon-angle-right::before {
+      content: "\e922";
+      font-family: 'BMFIcons';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      fill: none;
+      line-height: 1;
+    }
+
+    /* アイコンフォントの定義（追加したアイコンを含む拡張版） */
+    @font-face {
+      font-family: 'BMFIcons';
+      src: url('data:font-woff2;charset=utf-8;base64,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') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid hsl(var(--border));
+      padding-bottom: 0.5rem;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .color-sample {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      border-radius: var(--radius);
+      height: 100px;
+      position: relative;
+    }
+
+    .color-sample .color-label {
+      margin-top: auto;
+      font-weight: bold;
+    }
+
+    .color-sample .color-value {
+      font-family: monospace;
+      font-size: 0.875rem;
+    }
+
+    .theme-switcher {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .theme-toggle {
+      margin-right: 0.5rem;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .color-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid hsl(var(--border));
+    }
+
+    .color-box {
+      height: 80px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.5rem;
+    }
+
+    .color-info {
+      background-color: hsl(var(--card));
+      padding: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .color-name {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+
+    .color-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    .color-table th,
+    .color-table td {
+      padding: 0.75rem;
+      border: 1px solid hsl(var(--border));
+      text-align: left;
+    }
+
+    .color-table th {
+      background-color: hsl(var(--muted));
+    }
+
+    .color-swatch {
+      width: 100%;
+      height: 80px;
+      border-radius: var(--radius);
+      margin-bottom: 0.5rem;
+      border: 1px solid hsl(var(--border));
+    }
+
+    .demo-section {
+      margin-bottom: 2rem;
+    }
+
+    .code-block {
+      white-space: pre-wrap;
+      margin-bottom: 1rem;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+      gap: 2rem;
+    }
+
+    .section-title {
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid hsl(var(--border));
+    }
+
+    .form-row {
+      margin-bottom: 1rem;
+    }
+
+    .color-swatch {
+      width: 100%;
+      height: 80px;
+      border-radius: var(--radius);
+      margin-bottom: 0.5rem;
+      border: 1px solid hsl(var(--border));
+    }
+
+    .menu-item {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+    }
+
+    .menu-item:hover {
+      background-color: hsl(var(--accent) / 0.1);
+    }
+
+    /* Pie chart and donut chart segment color definitions */
+    .segment-1 { background-color: rgb(10, 10, 10); } /* primary */
+    .segment-2 { background-color: rgb(244, 244, 245); } /* secondary */
+    .segment-3 { background-color: rgb(147, 51, 234); } /* purple */
+    .segment-4 { background-color: rgb(34, 197, 94); } /* success */
+    .segment-5 { background-color: rgb(245, 158, 11); } /* warning */
+
+    .chart-pie-segment:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+      z-index: 5;
+    }
+
+    /* Adding hover effects for bar charts */
+    .chart-bar-item:hover {
+      opacity: 0.8;
+    }
+
+    /* CSS-controlled modal styles */
+    .css-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+
+    /* Display modal when checkbox is checked */
+    .modal-toggle:checked + .css-modal-overlay {
+      display: flex;
+    }
+
+    /* Hybrid modal styles */
+    .hybrid-modal {
+      display: none;
+    }
+
+    .hybrid-modal.is-open {
+      display: block;
+    }
+
+    .hybrid-modal .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+
+    /* Color scale display styles */
+    .color-scale {
+      display: flex;
+      width: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .color-item {
+      flex: 1;
+      height: 60px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 5px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    .color-label {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 2px 4px;
+      border-radius: 3px;
+      color: #333;
+    }
+
+    .color-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Chart color display */
+    .color-chart {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+      width: 100%;
+    }
+
+    .color-chart-item {
+      height: 80px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .color-chart-label {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .color-chart-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Dark mode support */
+    .dark-mode .color-label,
+    .dark-mode .color-chart-label {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+    }
+
+    /* Monochrome grid for monochrome palette */
+    .monochrome-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .monochrome-section {
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      background-color: hsl(var(--card));
+    }
+
+    .monochrome-title {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .monochrome-scale {
+      display: flex;
+      width: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Styles for various modals */
+    .modal-demo-container {
+      margin: 2rem 0;
+    }
+
+    .modal-demo-section {
+      margin-bottom: 2rem;
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      background-color: hsl(var(--card));
+    }
+
+    .modal-demo-title {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .modal-demo-description {
+      margin-bottom: 1.5rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    /* CSS-controlled modal */
+    .css-modal-toggle {
+      display: none;
+    }
+
+    .css-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+
+    .css-modal-toggle:checked + .css-modal-overlay {
+      display: flex;
+    }
+
+    /* Hybrid modal */
+    .hybrid-modal {
+      display: none;
+    }
+
+    .hybrid-modal.is-open {
+      display: block;
+    }
+
+    .hybrid-modal .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+
+    /* Attribute-based modal */
+    [data-modal] {
+      display: none;
+    }
+
+    [data-modal].is-open {
+      display: block;
+    }
+
+    [data-modal] .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+
+    /* Navigation Styles */
+    .nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-horizontal {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-vertical {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: hsl(var(--foreground));
+      text-decoration: none;
+      border-radius: var(--radius);
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .nav-link:hover {
+      background-color: hsl(var(--muted));
+    }
+
+    .nav-link.active {
+      background-color: hsl(var(--primary) / 0.1);
+      color: hsl(var(--primary));
+      font-weight: var(--font-weight-medium);
+    }
+
+    .nav-link-icon {
+      margin-right: 0.5rem;
+    }
+
+    /* Vertical Navigation */
+    .nav-vertical .nav-link {
+      padding: 0.75rem 1rem;
+    }
+
+    .nav-vertical .nav-link.active {
+      border-left: 2px solid hsl(var(--primary));
+    }
+
+    /* Dropdown Menu */
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-dropdown-toggle::after {
+      content: '';
+      display: inline-block;
+      margin-left: 0.5rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform 0.2s;
+    }
+
+    .nav-dropdown.open .nav-dropdown-toggle::after {
+      transform: rotate(-135deg);
+    }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 10rem;
+      padding: 0.5rem 0;
+      margin-top: 0.25rem;
+      background-color: hsl(var(--background));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      z-index: 10;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+      display: block;
+    }
+
+    .nav-dropdown-item {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: hsl(var(--foreground));
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+
+    .nav-dropdown-item:hover {
+      background-color: hsl(var(--muted));
+    }
+
+    /* Side Navigation */
+    .nav-sidebar {
+      display: flex;
+      flex-direction: column;
+      background-color: hsl(var(--background));
+      border-right: 1px solid hsl(var(--border));
+      min-height: 100%;
+    }
+
+    .nav-header {
+      padding: 1rem;
+      font-weight: var(--font-weight-medium);
+      color: hsl(var(--muted-foreground));
+      font-size: var(--font-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-separator {
+      height: 1px;
+      background-color: hsl(var(--border));
+      margin: 0.5rem 0;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .nav-horizontal {
+        flex-wrap: wrap;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        padding: 0;
+        padding-left: 1rem;
+      }
+    }
+
+    .dark-mode .nav-link:hover {
+      background-color: hsl(var(--muted));
+    }
+
+    .dark-mode .nav-link.active {
+      background-color: hsl(var(--primary) / 0.2);
+      color: hsl(var(--primary));
+    }
+
+    .datepicker-input-wrapper {
+      position: relative;
+    }
+
+    .datepicker-icon {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .icon-calendar::before {
+      content: "\e920";
+      font-family: 'BMFIcons';
+      font-size: 16px;
+    }
+
+    .calendar {
+      width: 100%;
+      max-width: 320px;
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      background-color: hsl(var(--card));
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .calendar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      background-color: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+    }
+
+    .calendar-title {
+      font-weight: var(--font-weight-medium);
+      font-size: 1rem;
+    }
+
+    .calendar-nav {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .calendar-nav-btn {
+      background-color: transparent;
+      border: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .calendar-nav-btn:hover {
+      background-color: hsl(var(--primary-foreground) / 0.1);
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      padding: 0.5rem;
+    }
+
+    .calendar-weekday {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: var(--font-weight-medium);
+      color: hsl(var(--muted-foreground));
+      padding: 0.5rem 0;
+    }
+
+    .calendar-day {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.5rem;
+      font-size: 0.875rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .calendar-day:hover {
+      background-color: hsl(var(--muted) / 0.5);
+    }
+
+    .calendar-day-outside {
+      color: hsl(var(--muted-foreground) / 0.5);
+    }
+
+    .calendar-day-today {
+      background-color: hsl(var(--muted));
+      font-weight: var(--font-weight-medium);
+    }
+
+    .calendar-day-selected {
+      background-color: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      font-weight: var(--font-weight-medium);
+    }
+
+    .datepicker-input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      background-color: hsl(var(--background));
+      font-size: 0.875rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .datepicker-input:focus {
+      outline: none;
+      border-color: hsl(var(--ring));
+      box-shadow: 0 0 0 2px hsl(var(--ring) / 0.3);
+    }
+
+    .datepicker-dropdown {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      z-index: 50;
+      display: none;
+    }
+
+    /* CSS-controlled datepicker */
+    .css-datepicker-toggle {
+      display: none;
+    }
+
+    .css-datepicker-toggle:checked + .datepicker-dropdown {
+      display: block;
+    }
+
+    /* Hybrid datepicker */
+    .hybrid-datepicker .datepicker-dropdown.is-open {
+      display: block;
+    }
+
+    /* Attribute-based datepicker */
+    [data-datepicker] .datepicker-dropdown[data-visible="true"] {
+      display: block;
+    }
+
+    .icon-angle-left::before {
+      content: "\e921";
+      font-family: 'BMFIcons';
+      font-size: 16px;
+    }
+
+    .icon-angle-right::before {
+      content: "\e922";
+      font-family: 'BMFIcons';
+      font-size: 16px;
+    }
+
+    /* Hybrid tooltip */
+    .hybrid-tooltip {
+      position: absolute;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      z-index: 1000;
+      pointer-events: none;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .hybrid-tooltip:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 8px 8px 0;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+    }
+
+    .hybrid-tooltip-trigger {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .hybrid-tooltip-trigger:hover {
+      transform: scale(1.2);
+    }
+
+    /* Dark mode support for hybrid tooltip */
+    .dark-mode .hybrid-tooltip {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: black;
+    }
+
+    .dark-mode .hybrid-tooltip:after {
+      border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>BMF CSS Framework</h1>
+      <p>Modern design system using new color tones</p>
+
+      <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle" class="switch theme-toggle">
+        <label for="theme-toggle" class="switch-label">Dark Mode</label>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- アイコンフォントのデモンストレーション -->
+      <section>
+        <h2 class="section-title">Icon Font Implementation</h2>
+        <p>このサイトではSVGアイコンの代わりに、擬似要素を使ったアイコンフォントを実装しています。この方法により、アクセシビリティが向上し、メンテナンスも容易になります。</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">アイコンの例</h3>
+          </div>
+          <div class="card-content">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span class="icon-home">ホームアイコン</span>
+              <span class="icon-user">ユーザーアイコン</span>
+              <span class="icon-add">追加アイコン</span>
+              <span class="icon-settings">設定アイコン</span>
+              <span class="icon-content">コンテンツアイコン</span>
+              <span class="logo-icon">ロゴアイコン</span>
+            </div>
+
+            <p>利点:</p>
+            <ul>
+              <li>アクセシビリティの向上: 擬似要素を使うと、スクリーンリーダーがアイコンを読み上げることがなく、テキストのみを読み上げます</li>
+              <li>動的な変更に強い: HTMLを変更せずにCSSだけで見た目を変更できます</li>
+              <li>コードがすっきりする: 入れ子のiタグが不要になり、HTMLがすっきりします</li>
+              <li>管理がしやすい: アイコンをすべてCSSで一元管理できます</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Color Palette Section -->
+      <section>
+        <h2 class="section-title">カラーパレット</h2>
+        <p class="content-section-description">
+          体系的に整理された色彩パレットで一貫性のあるデザインを実現します
+        </p>
+
+        <!-- 機能別カラー -->
+        <h3 class="sub-section-title">機能別カラー</h3>
+        <p class="content-section-description">
+          UI要素やアクションを示す主要な機能色
+        </p>
+
+        <div class="table-responsive">
+          <table class="color-table">
+            <thead>
+              <tr>
+                <th>スウォッチ</th>
+                <th>カラー名</th>
+                <th>カラーコード</th>
+                <th>ダークモード</th>
+                <th>用途</th>
+                <th>コントラスト比</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #1E293B;"></div></td>
+                <td>primary</td>
+                <td>#1E293B</td>
+                <td>#FAFAFA（HSL(0 0% 98%)）</td>
+                <td>主要ボタン背景、重要テキスト</td>
+                <td>16:1 (白背景時) - AAA準拠</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #F1F5F9;"></div></td>
+                <td>secondary</td>
+                <td>#F1F5F9</td>
+                <td>#27272A（HSL(240 3.7% 15.9%)）</td>
+                <td>副次的なボタン、背景色</td>
+                <td>1.3:1 (白背景時) - 装飾用途のみ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 状態カラー -->
+        <h3 class="sub-section-title mt-4">状態カラー</h3>
+        <p class="content-section-description">
+          アプリケーションの状態やフィードバックを示す色彩
+        </p>
+
+        <div class="table-responsive">
+          <table class="color-table">
+            <thead>
+              <tr>
+                <th>スウォッチ</th>
+                <th>カラー名</th>
+                <th>カラーコード</th>
+                <th>ダークモード</th>
+                <th>用途</th>
+                <th>コントラスト比</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #EF4444;"></div></td>
+                <td>destructive</td>
+                <td>#EF4444</td>
+                <td>#9D174D（HSL(0 62.8% 30.6%)）</td>
+                <td>エラー表示、削除操作</td>
+                <td>4.5:1 (白背景時) - AA準拠</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #10B981;"></div></td>
+                <td>success</td>
+                <td>#10B981</td>
+                <td>#34D399（HSL(142.1 70.6% 45.3%)）</td>
+                <td>成功状態、確認メッセージ</td>
+                <td>3.2:1 (白背景時) - 大きなテキスト用途</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #F59E0B;"></div></td>
+                <td>warning</td>
+                <td>#F59E0B</td>
+                <td>#FB991C（HSL(35 100% 50%)）</td>
+                <td>警告メッセージ、注意喚起</td>
+                <td>2.1:1 (白背景時) - 大きなテキスト用途</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- UI表面カラー -->
+        <h3 class="sub-section-title mt-4">UI表面カラー</h3>
+        <p class="content-section-description">
+          背景、カード、境界線など、UIの表面要素に使用される色彩
+        </p>
+
+        <div class="table-responsive">
+          <table class="color-table">
+            <thead>
+              <tr>
+                <th>スウォッチ</th>
+                <th>カラー名</th>
+                <th>カラーコード</th>
+                <th>ダークモード</th>
+                <th>用途</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #FFFFFF;"></div></td>
+                <td>background</td>
+                <td>#FFFFFF</td>
+                <td>#0A0A0B（HSL(240 10% 3.9%)）</td>
+                <td>ページ背景、ベース表面</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #FFFFFF;"></div></td>
+                <td>card</td>
+                <td>#FFFFFF</td>
+                <td>#0A0A0B（HSL(240 10% 3.9%)）</td>
+                <td>カード、ウィジェット背景</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #E2E8F0;"></div></td>
+                <td>border</td>
+                <td>#E2E8F0</td>
+                <td>#27272A（HSL(240 3.7% 15.9%)）</td>
+                <td>境界線、区切り線</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #F1F5F9;"></div></td>
+                <td>muted</td>
+                <td>#F1F5F9</td>
+                <td>#27272A（HSL(240 3.7% 15.9%)）</td>
+                <td>弱め背景、非アクティブ要素</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ユーティリティカラー -->
+        <h3 class="sub-section-title mt-4">ユーティリティカラー</h3>
+        <p class="content-section-description">
+          様々な用途に使える豊かな色彩バリエーション
+        </p>
+
+        <div class="table-responsive">
+          <table class="color-table">
+            <thead>
+              <tr>
+                <th>スウォッチ</th>
+                <th>カラー名</th>
+                <th>カラーコード</th>
+                <th>HSL値</th>
+                <th>ダークモード</th>
+                <th>用途</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #3B82F6;"></div></td>
+                <td>utility-blue</td>
+                <td>#3B82F6</td>
+                <td>217 91% 60%</td>
+                <td>HSL(221 83% 40%)</td>
+                <td>情報表示、リンク、選択状態</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #6366F1;"></div></td>
+                <td>utility-indigo</td>
+                <td>#6366F1</td>
+                <td>239 84% 67%</td>
+                <td>HSL(243 75% 40%)</td>
+                <td>アクセント要素、セカンダリアクション</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #8B5CF6;"></div></td>
+                <td>utility-purple</td>
+                <td>#8B5CF6</td>
+                <td>258 90% 66%</td>
+                <td>HSL(262 83% 40%)</td>
+                <td>特別な状態、プレミアム機能</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #EC4899;"></div></td>
+                <td>utility-pink</td>
+                <td>#EC4899</td>
+                <td>330 81% 60%</td>
+                <td>HSL(330 81% 40%)</td>
+                <td>強調表示、特別なポイント</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #EF4444;"></div></td>
+                <td>utility-red</td>
+                <td>#EF4444</td>
+                <td>0 84% 60%</td>
+                <td>HSL(0 84% 40%)</td>
+                <td>エラー、削除アクション、警告</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #F97316;"></div></td>
+                <td>utility-orange</td>
+                <td>#F97316</td>
+                <td>24 95% 53%</td>
+                <td>HSL(33 97% 40%)</td>
+                <td>警告、アテンション要素</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #FACC15;"></div></td>
+                <td>utility-yellow</td>
+                <td>#FACC15</td>
+                <td>48 96% 53%</td>
+                <td>HSL(55 97% 40%)</td>
+                <td>注意喚起、ハイライト</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #10B981;"></div></td>
+                <td>utility-green</td>
+                <td>#10B981</td>
+                <td>158 64% 40%</td>
+                <td>HSL(142 76% 25%)</td>
+                <td>成功、確認、有効状態</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #14B8A6;"></div></td>
+                <td>utility-teal</td>
+                <td>#14B8A6</td>
+                <td>173 80% 40%</td>
+                <td>HSL(173 80% 25%)</td>
+                <td>アクセント、進行状態</td>
+              </tr>
+              <tr>
+                <td><div class="color-swatch" style="background-color: #0EA5E9;"></div></td>
+                <td>utility-cyan</td>
+                <td>#0EA5E9</td>
+                <td>199 84% 55%</td>
+                <td>HSL(195 83% 40%)</td>
+                <td>情報提示、補助的なアクセント</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- アクセシビリティ情報 -->
+        <h3 class="sub-section-title mt-4">アクセシビリティに関する注意事項</h3>
+        <div class="accessibility-info">
+          <p>
+            色は情報伝達の唯一の手段として使用するべきではありません。視覚障害を持つユーザーのためにテキストや形状など、他の視覚的な手がかりと組み合わせてください。
+          </p>
+          <p>
+            テキストと背景のコントラスト比：
+          </p>
+          <ul>
+            <li><strong>WCAG AAレベル：</strong> 通常テキストで4.5:1以上、大きなテキストで3:1以上</li>
+            <li><strong>WCAG AAAレベル：</strong> 通常テキストで7:1以上、大きなテキストで4.5:1以上</li>
+          </ul>
+          <p>
+            ユーティリティカラーは装飾的な要素やグラフィック表現に適していますが、テキスト表示の場合は適切なコントラストを確保してください。
+          </p>
+        </div>
+      </section>
+
+      <!-- カラースケールセクション -->
+      <section>
+        <h2 class="section-title">カラースケール</h2>
+        <p class="content-section-description">
+          段階的な明度で構成された体系的なカラースケール
+        </p>
+
+        <!-- モノクロスケール - Slate -->
+        <h3 class="sub-section-title">モノクロスケール - Slate</h3>
+        <p class="content-section-description">
+          青みがかったグレーのモノクロカラースケール
+        </p>
+
+        <div class="monochrome-display">
+          <div class="color-scale">
+            <div class="color-item" style="background-color: hsl(210, 40%, 98%);">
+              <span class="color-label">50</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(210, 40%, 96%);">
+              <span class="color-label">100</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(214, 32%, 91%);">
+              <span class="color-label">200</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(213, 27%, 84%);">
+              <span class="color-label">300</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(215, 20%, 65%);">
+              <span class="color-label">400</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(215, 16%, 47%);">
+              <span class="color-label">500</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(215, 19%, 35%);">
+              <span class="color-label">600</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(215, 25%, 27%);">
+              <span class="color-label">700</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(217, 33%, 17%);">
+              <span class="color-label">800</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(222, 47%, 11%);">
+              <span class="color-label">900</span>
+            </div>
+            <div class="color-item" style="background-color: hsl(229, 84%, 5%);">
+              <span class="color-label">950</span>
+            </div>
+          </div>
+          <div class="mt-4">
+            <h4>用途：</h4>
+            <ul>
+              <li><strong>50-100:</strong> 背景、区切り要素</li>
+              <li><strong>200-300:</strong> 境界線、分割線、非アクティブ要素</li>
+              <li><strong>400-500:</strong> プレースホルダー、セカンダリテキスト</li>
+              <li><strong>600-700:</strong> 本文テキスト、コントロール要素</li>
+              <li><strong>800-950:</strong> 見出し、強調テキスト、ダークモード背景</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chart Sample Section -->
+      <section>
+        <h2 class="section-title">チャートとグラフのサンプル</h2>
+        <p class="content-section-description">
+          データの視覚化に適した様々なチャートとグラフの実装例
+        </p>
+        <div class="content-two-columns">
+          <div class="chart-container chart-demo">
+            <div class="chart-title">棒グラフ</div>
+            <div class="chart">
+              <div class="chart-bar">
+                <div class="chart-bar-item chart-bar-item-primary" style="height: 60%;" data-label="データA" data-value="60">
+                  <div class="chart-bar-label">データA</div>
+                  <div class="chart-bar-value">60</div>
+                </div>
+                <div class="chart-bar-item chart-bar-item-secondary" style="height: 80%;" data-label="データB" data-value="80">
+                  <div class="chart-bar-label">データB</div>
+                  <div class="chart-bar-value">80</div>
+                </div>
+                <div class="chart-bar-item chart-bar-item-purple" style="height: 45%;" data-label="データC" data-value="45">
+                  <div class="chart-bar-label">データC</div>
+                  <div class="chart-bar-value">45</div>
+                </div>
+                <div class="chart-bar-item chart-bar-item-success" style="height: 75%;" data-label="データD" data-value="75">
+                  <div class="chart-bar-label">データD</div>
+                  <div class="chart-bar-value">75</div>
+                </div>
+                <div class="chart-bar-item chart-bar-item-warning" style="height: 50%;" data-label="データE" data-value="50">
+                  <div class="chart-bar-label">データE</div>
+                  <div class="chart-bar-value">50</div>
+                </div>
+              </div>
+              <div class="chart-tooltip" id="bar-tooltip">
+                <div class="chart-tooltip-title"></div>
+                <div class="chart-tooltip-value"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-container chart-demo">
+            <div class="chart-title">円グラフ</div>
+            <div class="chart">
+              <div class="chart-pie" style="position: relative; width: 200px; height: 200px; margin: 0 auto;">
+                <svg width="200" height="200" viewBox="0 0 200 200" role="img" aria-labelledby="pie-chart-title pie-chart-desc">
+                  <title id="pie-chart-title">カテゴリー別データの円グラフ</title>
+                  <desc id="pie-chart-desc">カテゴリA(30%)、カテゴリB(25%)、カテゴリC(20%)、カテゴリD(15%)、カテゴリE(10%)の割合を示す円グラフ</desc>
+                  <!-- 中心点: 100, 100、半径: 90 -->
+                  <!-- 30% = 108° -->
+                  <path d="M 100 100 L 100 10 A 90 90 0 0 1 179 142 Z" fill="hsl(var(--utility-blue))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリA: 30%" data-label="カテゴリA" data-value="30%">
+                    <title>カテゴリA: 30%</title>
+                  </path>
+                  <!-- 25% = 90° -->
+                  <path d="M 100 100 L 179 142 A 90 90 0 0 1 100 190 Z" fill="hsl(var(--utility-indigo))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリB: 25%" data-label="カテゴリB" data-value="25%">
+                    <title>カテゴリB: 25%</title>
+                  </path>
+                  <!-- 20% = 72° -->
+                  <path d="M 100 100 L 100 190 A 90 90 0 0 1 21 142 Z" fill="hsl(var(--utility-purple))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリC: 20%" data-label="カテゴリC" data-value="20%">
+                    <title>カテゴリC: 20%</title>
+                  </path>
+                  <!-- 15% = 54° -->
+                  <path d="M 100 100 L 21 142 A 90 90 0 0 1 39 32 Z" fill="hsl(var(--utility-green))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリD: 15%" data-label="カテゴリD" data-value="15%">
+                    <title>カテゴリD: 15%</title>
+                  </path>
+                  <!-- 10% = 36° -->
+                  <path d="M 100 100 L 39 32 A 90 90 0 0 1 100 10 Z" fill="hsl(var(--utility-red))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリE: 10%" data-label="カテゴリE" data-value="10%">
+                    <title>カテゴリE: 10%</title>
+                  </path>
+                </svg>
+                <!-- CSS-controlled tooltip -->
+                <div class="chart-tooltip" id="pie-tooltip">
+                  <div class="chart-tooltip-title"></div>
+                  <div class="chart-tooltip-value"></div>
+                </div>
+              </div>
+              <div class="chart-legend">
+                <div class="chart-legend-item">
+                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-blue));"></div>
+                  <span>カテゴリA (30%)</span>
+                </div>
+                <div class="chart-legend-item">
+                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-indigo));"></div>
+                  <span>カテゴリB (25%)</span>
+                </div>
+                <div class="chart-legend-item">
+                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-purple));"></div>
+                  <span>カテゴリC (20%)</span>
+                </div>
+                <div class="chart-legend-item">
+                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-green));"></div>
+                  <span>カテゴリD (15%)</span>
+                </div>
+                <div class="chart-legend-item">
+                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-red));"></div>
+                  <span>カテゴリE (10%)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 折れ線グラフの追加 -->
+          <div class="chart-container chart-demo">
+            <div class="chart-title">折れ線グラフ</div>
+            <div class="chart">
+              <svg width="100%" height="240" viewBox="-60 -20 660 300" style="overflow: visible;" role="img" aria-labelledby="line-chart-title line-chart-desc">
+                <title id="line-chart-title">6ヶ月間の製品別売上データのグラフ</title>
+                <desc id="line-chart-desc">1月から6月までの製品A、B、Cの売上推移を示す折れ線グラフ</desc>
+                <!-- グリッド線 -->
+                <line x1="0" y1="0" x2="600" y2="0" stroke="hsl(var(--border))" stroke-width="1" stroke-dasharray="4,4" role="presentation" />
+                <line x1="0" y1="60" x2="600" y2="60" stroke="hsl(var(--border))" stroke-width="1" stroke-dasharray="4,4" role="presentation" />
+                <line x1="0" y1="120" x2="600" y2="120" stroke="hsl(var(--border))" stroke-width="1" stroke-dasharray="4,4" role="presentation" />
+                <line x1="0" y1="180" x2="600" y2="180" stroke="hsl(var(--border))" stroke-width="1" stroke-dasharray="4,4" role="presentation" />
+                <line x1="0" y1="240" x2="600" y2="240" stroke="hsl(var(--border))" stroke-width="1" role="presentation" />
+
+                <!-- Y軸ラベル -->
+                <text x="-25" y="0" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">100</text>
+                <text x="-25" y="60" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">75</text>
+                <text x="-25" y="120" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">50</text>
+                <text x="-25" y="180" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">25</text>
+                <text x="-25" y="240" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">0</text>
+
+                <!-- X軸ラベル -->
+                <text x="50" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">1月</text>
+                <text x="150" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">2月</text>
+                <text x="250" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">3月</text>
+                <text x="350" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">4月</text>
+                <text x="450" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">5月</text>
+                <text x="550" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">6月</text>
+
+                <!-- データライン -->
+                <polyline points="50,120 150,180 250,60 350,90 450,30 550,60"
+                          fill="none" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 1月から6月までの売上データ" />
+
+                <polyline points="50,150 150,90 250,120 350,60 450,120 550,30"
+                          fill="none" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 1月から6月までの売上データ" />
+
+                <polyline points="50,180 150,150 250,165 350,195 450,120 550,60"
+                          fill="none" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 1月から6月までの売上データ" />
+
+                <!-- データポイント -->
+                <!-- 系列1 -->
+                <circle cx="50" cy="120" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 1月の売上データ" data-product="製品A" data-month="1月" data-value="50" class="chart-line-point" data-tooltip="製品A - 1月: 売上 50">
+                  <title>製品A - 1月: 売上 50</title>
+                </circle>
+                <circle cx="150" cy="180" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 2月の売上データ" data-product="製品A" data-month="2月" data-value="25" class="chart-line-point" data-tooltip="製品A - 2月: 売上 25">
+                  <title>製品A - 2月: 売上 25</title>
+                </circle>
+                <circle cx="250" cy="60" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 3月の売上データ" data-product="製品A" data-month="3月" data-value="75" class="chart-line-point" data-tooltip="製品A - 3月: 売上 75">
+                  <title>製品A - 3月: 売上 75</title>
+                </circle>
+                <circle cx="350" cy="90" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 4月の売上データ" data-product="製品A" data-month="4月" data-value="63" class="chart-line-point" data-tooltip="製品A - 4月: 売上 63">
+                  <title>製品A - 4月: 売上 63</title>
+                </circle>
+                <circle cx="450" cy="30" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 5月の売上データ" data-product="製品A" data-month="5月" data-value="88" class="chart-line-point" data-tooltip="製品A - 5月: 売上 88">
+                  <title>製品A - 5月: 売上 88</title>
+                </circle>
+                <circle cx="550" cy="60" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 6月の売上データ" data-product="製品A" data-month="6月" data-value="75" class="chart-line-point" data-tooltip="製品A - 6月: 売上 75">
+                  <title>製品A - 6月: 売上 75</title>
+                </circle>
+
+                <!-- 系列2 -->
+                <circle cx="50" cy="150" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 1月の売上データ" data-product="製品B" data-month="1月" data-value="38" class="chart-line-point" data-tooltip="製品B - 1月: 売上 38">
+                  <title>製品B - 1月: 売上 38</title>
+                </circle>
+                <circle cx="150" cy="90" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 2月の売上データ" data-product="製品B" data-month="2月" data-value="63" class="chart-line-point" data-tooltip="製品B - 2月: 売上 63">
+                  <title>製品B - 2月: 売上 63</title>
+                </circle>
+                <circle cx="250" cy="120" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 3月の売上データ" data-product="製品B" data-month="3月" data-value="50" class="chart-line-point" data-tooltip="製品B - 3月: 売上 50">
+                  <title>製品B - 3月: 売上 50</title>
+                </circle>
+                <circle cx="350" cy="60" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 4月の売上データ" data-product="製品B" data-month="4月" data-value="75" class="chart-line-point" data-tooltip="製品B - 4月: 売上 75">
+                  <title>製品B - 4月: 売上 75</title>
+                </circle>
+                <circle cx="450" cy="120" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 5月の売上データ" data-product="製品B" data-month="5月" data-value="50" class="chart-line-point" data-tooltip="製品B - 5月: 売上 50">
+                  <title>製品B - 5月: 売上 50</title>
+                </circle>
+                <circle cx="550" cy="30" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 6月の売上データ" data-product="製品B" data-month="6月" data-value="88" class="chart-line-point" data-tooltip="製品B - 6月: 売上 88">
+                  <title>製品B - 6月: 売上 88</title>
+                </circle>
+
+                <!-- 系列3 -->
+                <circle cx="50" cy="180" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 1月の売上データ" data-product="製品C" data-month="1月" data-value="25" class="chart-line-point" data-tooltip="製品C - 1月: 売上 25">
+                  <title>製品C - 1月: 売上 25</title>
+                </circle>
+                <circle cx="150" cy="150" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 2月の売上データ" data-product="製品C" data-month="2月" data-value="38" class="chart-line-point" data-tooltip="製品C - 2月: 売上 38">
+                  <title>製品C - 2月: 売上 38</title>
+                </circle>
+                <circle cx="250" cy="165" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 3月の売上データ" data-product="製品C" data-month="3月" data-value="31" class="chart-line-point" data-tooltip="製品C - 3月: 売上 31">
+                  <title>製品C - 3月: 売上 31</title>
+                </circle>
+                <circle cx="350" cy="195" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 4月の売上データ" data-product="製品C" data-month="4月" data-value="19" class="hybrid-tooltip-trigger" data-tooltip-content="製品C - 4月: 売上 19">
+                  <title>製品C - 4月: 売上 19</title>
+                </circle>
+                <circle cx="450" cy="120" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 5月の売上データ" data-product="製品C" data-month="5月" data-value="50" class="hybrid-tooltip-trigger" data-tooltip-content="製品C - 5月: 売上 50">
+                  <title>製品C - 5月: 売上 50</title>
+                </circle>
+                <circle cx="550" cy="60" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 6月の売上データ" data-product="製品C" data-month="6月" data-value="75" class="hybrid-tooltip-trigger" data-tooltip-content="製品C - 6月: 売上 75">
+                  <title>製品C - 6月: 売上 75</title>
+                </circle>
+              </svg>
+              <div class="chart-tooltip hybrid-tooltip" id="line-tooltip">
+                <div class="chart-tooltip-content"></div>
+              </div>
+
+              <!-- 凡例 -->
+              <div class="chart-legend">
+                <div class="chart-legend-item">
+                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-blue));"></div>
+                  <span>製品A</span>
+                </div>
+                <div class="chart-legend-item">
+                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-cyan));"></div>
+                  <span>製品B</span>
+                </div>
+                <div class="chart-legend-item">
+                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-purple));"></div>
+                  <span>製品C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal Component Section -->
+      <section>
+        <h2 class="section-title">Modal Component</h2>
+
+        <div class="modal-demo-container">
+          <!-- CSS-controlled modal -->
+          <div class="modal-demo-section">
+            <h3 class="modal-demo-title">CSS-controlled Modal</h3>
+            <p class="modal-demo-description">
+              Controls the display of the modal without JavaScript.
+              Provides basic modal functionality.
+            </p>
+
+            <label for="css-modal-demo" class="button primary-button">Open CSS Modal</label>
+            <input type="checkbox" id="css-modal-demo" class="css-modal-toggle">
+
+            <div class="css-modal-overlay">
+              <div class="modal">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title">Modal Controlled by CSS Only</h3>
+                    <label for="css-modal-demo" class="modal-close">&times;</label>
+            </div>
+                  <div class="modal-body">
+                    <p>This modal is implemented using CSS only. The state of the checkbox is used to toggle the display of the modal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <label for="css-modal-demo" class="button secondary-button">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hybrid controlled modal -->
+          <div class="modal-demo-section">
+            <h3 class="modal-demo-title">Hybrid Controlled Modal</h3>
+            <p class="modal-demo-description">
+              Defines styles with CSS and controls opening and closing with JavaScript.
+              Adds additional functionality like animations and scroll locking.
+            </p>
+
+            <button id="hybrid-modal-open" class="button primary-button">Open Hybrid Modal</button>
+
+            <div id="hybrid-modal" class="hybrid-modal">
+              <div class="modal-overlay">
+                <div class="modal">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title">Hybrid Controlled Modal</h3>
+                      <button class="modal-close hybrid-modal-close">&times;</button>
+            </div>
+                    <div class="modal-body">
+                      <p>This modal is implemented as a "hybrid" where styles are defined with CSS and opening/closing is controlled with JavaScript. Additional functionality like animations and scroll locking can be added.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="button secondary-button hybrid-modal-close">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attribute-based controlled modal -->
+          <div class="modal-demo-section">
+            <h3 class="modal-demo-title">Attribute-based Controlled Modal</h3>
+            <p class="modal-demo-description">
+              Controls the modal declaratively using data attributes.
+              Makes maintenance easier and allows managing multiple modals efficiently.
+            </p>
+
+            <button data-modal-open="attr-modal" class="button primary-button">Open Attribute-based Modal</button>
+
+            <div id="attr-modal" data-modal>
+              <div class="modal-overlay">
+                <div class="modal">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title">Attribute-based Controlled Modal</h3>
+                      <button data-modal-close="attr-modal" class="modal-close">&times;</button>
+            </div>
+                    <div class="modal-body">
+                      <p>This modal is controlled declaratively using data attributes. For example, you can use <code>data-modal-open="modal-id"</code> and <code>data-modal-close="modal-id"</code> attributes to control the opening and closing of the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button data-modal-close="attr-modal" class="button secondary-button">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+        <script>
+          // Hybrid modal control
+          document.getElementById('hybrid-modal-open').addEventListener('click', function() {
+            const modal = document.getElementById('hybrid-modal');
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+          });
+
+          document.querySelectorAll('.hybrid-modal-close').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              const modal = document.getElementById('hybrid-modal');
+              modal.classList.remove('is-open');
+              document.body.style.overflow = ''; // Restore scrolling
+            });
+          });
+
+          // Attribute-based modal control
+          document.querySelectorAll('[data-modal-open]').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              const modalId = this.getAttribute('data-modal-open');
+              const modal = document.getElementById(modalId);
+              if (modal) {
+                modal.classList.add('is-open');
+                document.body.style.overflow = 'hidden';
+              }
+            });
+          });
+
+          document.querySelectorAll('[data-modal-close]').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              const modalId = this.getAttribute('data-modal-close');
+              const modal = document.getElementById(modalId);
+              if (modal) {
+                modal.classList.remove('is-open');
+                document.body.style.overflow = '';
+              }
+            });
+          });
+
+          // Clicking outside the modal to close (attribute-based modal)
+          document.querySelectorAll('[data-modal] .modal-overlay').forEach(function(overlay) {
+            overlay.addEventListener('click', function(e) {
+              if (e.target === this) {
+                const modal = this.closest('[data-modal]');
+                modal.classList.remove('is-open');
+                document.body.style.overflow = '';
+              }
+            });
+          });
+        </script>
+      </section>
+
+      <!-- Button Component Section -->
+      <section>
+        <h2 class="section-title">Button Component</h2>
+
+          <div class="card">
+            <div class="card-header">
+            <h3 class="card-title">Button Variations</h3>
+            </div>
+            <div class="card-content">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+              <button class="button primary-button">Primary</button>
+              <button class="button secondary-button">Secondary</button>
+              <button class="button button-outline">Outline</button>
+              <button class="button button-ghost">Ghost</button>
+              <button class="button button-destructive">Destructive</button>
+              <button class="button button-link">Link</button>
+              </div>
+
+            <h4 class="mb-2">Size Variations</h4>
+            <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+              <button class="button primary-button button-sm">Small</button>
+              <button class="button primary-button">Default</button>
+              <button class="button primary-button button-lg">Large</button>
+            </div>
+
+            <h4 class="mb-2">State</h4>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+              <button class="button primary-button">Normal</button>
+              <button class="button primary-button" disabled>Disabled</button>
+              <button class="button primary-button button-loading">Loading</button>
+          </div>
+
+            <h4 class="mb-2">Button with Icon</h4>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button class="button primary-button icon-add">
+                <span>Add</span>
+              </button>
+              <button class="button button-outline icon-user">
+                <span>User</span>
+              </button>
+              <button class="button primary-button button-icon icon-add">
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Component Section -->
+      <section>
+        <h2 class="section-title">Form Component</h2>
+
+          <div class="card">
+            <div class="card-header">
+            <h3 class="card-title">Input Fields</h3>
+            </div>
+            <div class="card-content">
+            <div class="form-group">
+              <label for="name-input" class="form-label">Full Name</label>
+              <input type="text" id="name-input" class="input" placeholder="Taro Yamada">
+              <span class="help-text">Please enter your full name</span>
+              </div>
+
+            <div class="form-group">
+              <label for="email-input" class="form-label">Email Address</label>
+              <input type="email" id="email-input" class="input input-error" placeholder="example@mail.com">
+              <span class="error-text">Please enter a valid email address</span>
+            </div>
+
+            <div class="form-group">
+              <label for="disabled-input" class="form-label">Disabled Input</label>
+              <input type="text" id="disabled-input" class="input" placeholder="Cannot be entered" disabled>
+          </div>
+
+            <div class="form-group">
+              <label for="textarea" class="form-label">Message</label>
+              <textarea id="textarea" class="input" rows="4" placeholder="Enter your message here"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="select" class="form-label">Select</label>
+              <select id="select" class="input">
+                <option value="" disabled selected>Please select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+              </div>
+
+            <div class="form-group">
+              <label class="form-label">Checkboxes</label>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox1" class="checkbox">
+                <label for="checkbox1">Option 1</label>
+            </div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox2" class="checkbox" checked>
+                <label for="checkbox2">Option 2</label>
+          </div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox3" class="checkbox" disabled>
+                <label for="checkbox3">Disabled Option</label>
+        </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Radio Buttons</label>
+              <div class="radio-wrapper">
+                <input type="radio" id="radio1" name="radio-group" class="radio">
+                <label for="radio1">Option 1</label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" id="radio2" name="radio-group" class="radio" checked>
+                <label for="radio2">Option 2</label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" id="radio3" name="radio-group" class="radio" disabled>
+                <label for="radio3">Disabled Option</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card Component Section -->
+      <section>
+        <h2 class="section-title">Card Component</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Basic Card</h3>
+              <p class="card-description">Basic card layout</p>
+            </div>
+            <div class="card-content">
+              <p>Cards are used to group information. They have a header, content, and footer.</p>
+            </div>
+            <div class="card-footer">
+              <button class="button secondary-button">Cancel</button>
+              <button class="button primary-button">Confirm</button>
+            </div>
+          </div>
+
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Primary Card</h3>
+              <p class="card-description">Card styled with primary color</p>
+            </div>
+            <div class="card-content">
+              <p>This card is styled with the primary color. It's used to emphasize important information.</p>
+            </div>
+            <div class="card-footer">
+              <button class="button primary-button">Action</button>
+            </div>
+          </div>
+
+          <div class="card card-destructive">
+            <div class="card-header">
+              <h3 class="card-title">Destructive Card</h3>
+              <p class="card-description">Card to display warnings</p>
+            </div>
+            <div class="card-content">
+              <p>This card is used to display warnings or error messages. It's used to emphasize information that requires attention.</p>
+            </div>
+            <div class="card-footer">
+              <button class="button button-destructive">Delete</button>
+            </div>
+          </div>
+
+          <div class="card card-interactive">
+            <div class="card-header">
+              <h3 class="card-title">Interactive Card</h3>
+              <p class="card-description">Card that can be clicked</p>
+            </div>
+            <div class="card-content">
+              <p>This card can be clicked. It provides visual feedback on hover. The entire card can be used as a clickable area.</p>
+            </div>
+            <div class="card-footer">
+              <span class="help-text">Click to perform action</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal Component Section -->
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Sample CSS Framework | Color Tones Adjustment</p>
+    </footer>
+
+    <!-- Actual modal (initially hidden) -->
+    <div class="modal-overlay" id="real-modal-overlay" style="display: none;">
+      <div class="modal">
+        <div class="modal-header">
+          <h4 class="modal-title">Actual Modal</h4>
+          <button class="modal-close" id="close-real-modal">×</button>
+            </div>
+        <div class="modal-content">
+          <p>This is an actual modal. Click outside or press the close button to close it.</p>
+          <p>Modals are important elements used to grab the user's attention.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="button button-outline" id="cancel-real-modal">Cancel</button>
+          <button class="button primary-button" id="confirm-real-modal">Confirm</button>
+        </div>
+      </div>
+              </div>
+
+    <script>
+      // Dark mode toggle
+      const themeToggle = document.getElementById('theme-toggle');
+
+      // Get theme setting from local storage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+      }
+
+      // Theme toggle event
+      themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+
+      // 折れ線グラフのツールチップ表示機能
+      document.addEventListener('DOMContentLoaded', function() {
+        const dataPoints = document.querySelectorAll('.chart-line-point');
+        const tooltip = document.getElementById('line-tooltip');
+
+        dataPoints.forEach(point => {
+          point.addEventListener('mouseover', function(e) {
+            // ツールチップのコンテンツを設定
+            const tooltipContent = this.getAttribute('data-tooltip');
+            const product = this.getAttribute('data-product');
+            const month = this.getAttribute('data-month');
+            const value = this.getAttribute('data-value');
+
+            tooltip.querySelector('.chart-tooltip-title').textContent = `${product} - ${month}`;
+            tooltip.querySelector('.chart-tooltip-value').textContent = `売上: ${value}`;
+
+            // ポイントの位置を取得
+            const rect = this.getBoundingClientRect();
+            const svgRect = this.closest('svg').getBoundingClientRect();
+
+            // ツールチップの位置を設定
+            tooltip.style.display = 'block';
+            tooltip.style.left = `${rect.left}px`;
+            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
+          });
+
+          point.addEventListener('mouseout', function() {
+            tooltip.style.display = 'none';
+          });
+        });
+      });
+
+      // ハイブリッドツールチップの実装
+      document.addEventListener('DOMContentLoaded', function() {
+        const tooltipTriggers = document.querySelectorAll('.hybrid-tooltip-trigger');
+        const tooltip = document.getElementById('line-tooltip');
+
+        tooltipTriggers.forEach(trigger => {
+          trigger.addEventListener('mouseenter', function(e) {
+            // ツールチップの内容を設定
+            const content = this.getAttribute('data-tooltip-content');
+            tooltip.querySelector('.chart-tooltip-content').textContent = content;
+
+            // ツールチップの位置を設定
+            const rect = this.getBoundingClientRect();
+            const svgRect = this.closest('svg').getBoundingClientRect();
+
+            tooltip.style.display = 'block';
+            tooltip.style.left = `${rect.left + rect.width/2 - tooltip.offsetWidth/2}px`;
+            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
+          });
+
+          trigger.addEventListener('mouseleave', function() {
+            tooltip.style.display = 'none';
+          });
+        });
+      });
+
+      // Actual modal control
+      document.getElementById('show-real-modal').addEventListener('click', () => {
+        document.getElementById('real-modal-overlay').style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+      });
+
+      document.getElementById('close-real-modal').addEventListener('click', closeRealModal);
+      document.getElementById('cancel-real-modal').addEventListener('click', closeRealModal);
+      document.getElementById('confirm-real-modal').addEventListener('click', closeRealModal);
+      document.getElementById('real-modal-overlay').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('real-modal-overlay')) {
+          closeRealModal();
+        }
+      });
+
+      function closeRealModal() {
+        document.getElementById('real-modal-overlay').style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+
+      // Hybrid modal control
+      document.getElementById('hybrid-modal-button').addEventListener('click', function() {
+        document.getElementById('hybrid-modal').classList.add('is-open');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+      });
+
+      // Modal control using data attributes
+      document.querySelectorAll('[data-modal-open]').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const modalId = this.getAttribute('href');
+          document.querySelector(modalId).classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      document.querySelectorAll('[data-modal-close]').forEach(button => {
+        button.addEventListener('click', function() {
+          const modal = this.closest('.hybrid-modal');
+          if (modal) {
+            modal.classList.remove('is-open');
+            document.body.style.overflow = '';
+          }
+        });
+      });
+
+      // Clicking outside the modal to close (attribute-based modal)
+      document.querySelectorAll('.hybrid-modal .modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.closest('.hybrid-modal').classList.remove('is-open');
+            document.body.style.overflow = '';
+          }
+        });
+      });
+    </script>
+          </div>
+
+  <!-- Header Component -->
+  <section id="header-section" class="component-section">
+    <h2 class="section-title">Header</h2>
+    <p>This is a component that appears at the top of a website. It includes navigation and actions.</p>
+
+    <div class="demo-section">
+      <h3>Basic Header</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); overflow: hidden; margin-bottom: 1rem;">
+        <header class="header">
+          <div class="header-container">
+            <a href="#" class="header-logo">
+              <span class="logo-icon"></span>
+              <span>BMF CSS</span>
+            </a>
+            <nav class="header-nav">
+              <a href="#" class="header-nav-item active">Home</a>
+              <a href="#" class="header-nav-item">Features</a>
+              <a href="#" class="header-nav-item">Documentation</a>
+              <a href="#" class="header-nav-item">Components</a>
+            </nav>
+            <div class="header-actions">
+              <button class="button button-ghost button-sm">Login</button>
+              <button class="button primary-button button-sm">Register</button>
+            </div>
+            <button class="header-menu-button menu-icon">
+            </button>
+                </div>
+        </header>
+              </div>
+
+      <h3>Fixed Header</h3>
+      <p>This header remains visible while scrolling.</p>
+      <div class="code-block">
+        &lt;header class="header header-fixed"&gt;
+          &lt;div class="header-container"&gt;
+            &lt;!-- Header content --&gt;
+          &lt;/div&gt;
+        &lt;/header&gt;
+            </div>
+          </div>
+  </section>
+
+  <!-- Footer Component -->
+  <section id="footer-section" class="component-section">
+    <h2 class="section-title">Footer</h2>
+    <p>This is a component that appears at the bottom of a website. It includes links and copyright information.</p>
+
+    <div class="demo-section">
+      <h3>Basic Footer</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); overflow: hidden; margin-bottom: 1rem;">
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-section">
+              <a href="#" class="footer-logo">
+                <span class="logo-icon"></span>
+                <span>BMF CSS</span>
+              </a>
+              <p class="footer-description">
+                Simple and lightweight CSS framework for modern web applications
+              </p>
+            </div>
+
+            <div class="footer-section">
+              <h4 class="footer-title">Links</h4>
+              <ul class="footer-links">
+                <li class="footer-link"><a href="#">Home</a></li>
+                <li class="footer-link"><a href="#">Features</a></li>
+                <li class="footer-link"><a href="#">Documentation</a></li>
+                <li class="footer-link"><a href="#">Components</a></li>
+              </ul>
+                  </div>
+
+            <div class="footer-section">
+              <h4 class="footer-title">Support</h4>
+              <ul class="footer-links">
+                <li class="footer-link"><a href="#">FAQ</a></li>
+                <li class="footer-link"><a href="#">Contact Us</a></li>
+                <li class="footer-link"><a href="#">GitHub</a></li>
+              </ul>
+                  </div>
+                </div>
+          <div class="footer-bottom">
+            <p>&copy; 2023 BMF CSS. All rights reserved.</p>
+              </div>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Component -->
+  <section id="nav-section" class="component-section">
+    <h2 class="section-title">Navigation</h2>
+    <p>This is a component that displays links grouped together. It supports various layouts and styles.</p>
+
+    <div class="demo-section">
+      <h3>Horizontal Navigation</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem;">
+        <ul class="nav nav-horizontal">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Features</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+                  </div>
+
+      <h3>Vertical Navigation</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem; width: 200px;">
+        <ul class="nav nav-vertical">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Logout</a>
+          </li>
+        </ul>
+                  </div>
+
+      <h3>Dropdown Menu</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem;">
+        <ul class="nav nav-horizontal">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item nav-dropdown open">
+            <a href="#" class="nav-link nav-dropdown-toggle">Products</a>
+            <div class="nav-dropdown-menu">
+              <a href="#" class="nav-dropdown-item">Product A</a>
+              <a href="#" class="nav-dropdown-item">Product B</a>
+              <a href="#" class="nav-dropdown-item">Product C</a>
+                </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Services</a>
+          </li>
+        </ul>
+              </div>
+
+      <h3>Side Navigation</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); overflow: hidden; margin-bottom: 1rem; width: 250px;">
+        <div class="nav-sidebar">
+          <div class="nav-header">Main Menu</div>
+          <ul class="nav nav-vertical">
+            <li class="nav-item">
+              <a href="#" class="nav-link active icon-home">
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link icon-user">
+                <span>User Management</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link icon-content">
+                <span>Content Management</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="nav-separator"></div>
+
+          <div class="nav-header">Settings</div>
+          <ul class="nav nav-vertical">
+            <li class="nav-item">
+              <a href="#" class="nav-link icon-settings">
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <!-- Sidebar Layout Section -->
+  <section id="sidebar-layout-section" class="component-section">
+    <h2 class="section-title">Sidebar Layout</h2>
+    <p>A layout example with side navigation. Suitable for admin panels and documentation sites.</p>
+
+    <div class="demo-section">
+      <h3>Basic Sidebar Layout</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); overflow: hidden; margin-bottom: 1rem;">
+        <div class="content">
+          <div class="content-with-sidebar content-sidebar-left">
+            <div class="nav-sidebar" style="width: 250px; padding: 1rem;">
+              <div class="nav-header">Main Menu</div>
+              <ul class="nav nav-vertical">
+                <li class="nav-item">
+                  <a href="#" class="nav-link active icon-home">
+                    <span>Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link icon-user">
+                    <span>User Management</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link icon-content">
+                    <span>Content Management</span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-separator"></div>
+
+              <div class="nav-header">Settings</div>
+              <ul class="nav nav-vertical">
+                <li class="nav-item">
+                  <a href="#" class="nav-link icon-settings">
+                    <span>Settings</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="content-container" style="padding: 1rem; flex: 1;">
+              <div class="content-section">
+                <h2 class="content-section-title">Dashboard</h2>
+                <p class="content-section-description">
+                  Admin panel layout example with side navigation.
+                </p>
+                <div class="content-card">
+                  <div class="content-card-header">
+                    <h3 class="content-card-title">Statistics</h3>
+                </div>
+                  <div class="content-card-body">
+                    <div class="content-three-columns">
+                      <div style="text-align: center; padding: 1rem;">
+                        <div style="font-size: 2rem; font-weight: bold;">1,234</div>
+                        <div>Total Users</div>
+              </div>
+                      <div style="text-align: center; padding: 1rem;">
+                        <div style="font-size: 2rem; font-weight: bold;">56</div>
+                        <div>New Registrations</div>
+                      </div>
+                      <div style="text-align: center; padding: 1rem;">
+                        <div style="font-size: 2rem; font-weight: bold;">789</div>
+                        <div>Active Users</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        <h3>Dropdown Navigation</h3>
+        <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem;">
+          <ul class="nav nav-horizontal">
+            <li class="nav-item">
+              <a href="#" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item nav-dropdown open">
+              <a href="#" class="nav-link nav-dropdown-toggle">Products</a>
+              <div class="nav-dropdown-menu">
+                <a href="#" class="nav-dropdown-item">Product A</a>
+                <a href="#" class="nav-dropdown-item">Product B</a>
+                <a href="#" class="nav-dropdown-item">Product C</a>
+            </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+                </div>
+              </div>
+                </div>
+  </section>
+
+  <!-- Content Component -->
+  <section id="content-section" class="component-section">
+    <h2 class="section-title">Content</h2>
+    <p>Components for structuring the main content area of a website.</p>
+
+    <div class="demo-section">
+      <h3>Content Section</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem;">
+        <div class="content-section">
+          <h2 class="content-section-title">Section Title</h2>
+          <p class="content-section-description">
+            This is a section description. It can be used to explain the overview or features of the section.
+          </p>
+          <div class="demo-block">Content goes here</div>
+              </div>
+                </div>
+
+      <h3>Two-Column Layout</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem;">
+        <div class="content-two-columns">
+          <div class="demo-block">Column 1</div>
+          <div class="demo-block">Column 2</div>
+              </div>
+      </div>
+
+      <h3>Three-Column Layout</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem;">
+        <div class="content-three-columns">
+          <div class="demo-block">Column 1</div>
+          <div class="demo-block">Column 2</div>
+          <div class="demo-block">Column 3</div>
+            </div>
+          </div>
+
+      <h3>Layout with Sidebar</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem;">
+        <div class="content-with-sidebar">
+          <div class="demo-block">Main Content</div>
+          <div class="content-sidebar">
+            <h3>Sidebar</h3>
+            <p>Sidebar content goes here.</p>
+            </div>
+                </div>
+              </div>
+
+      <h3>Content Card</h3>
+      <div class="example-wrapper" style="border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <h3 class="content-card-title">Card Title</h3>
+            <p class="content-card-description">Card Description</p>
+                </div>
+          <div class="content-card-body">
+            <p>Card body content</p>
+              </div>
+          <div class="content-card-footer">
+            <button class="button button-outline button-sm">Cancel</button>
+            <button class="button primary-button button-sm">Save</button>
+                </div>
+              </div>
+                </div>
+              </div>
+  </section>
+
+  <!-- Icon Component -->
+  <section id="icon-section" class="component-section">
+    <h2 class="section-title">Icon Font Implementation</h2>
+    <p>このサイトではSVGアイコンの代わりに、擬似要素を使ったアイコンフォントを実装しています。この方法により、アクセシビリティが向上し、メンテナンスも容易になります。</p>
+
+    <style>
+      .icon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1rem;
+      }
+
+      .icon-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        border-radius: var(--radius);
+        border: 1px solid hsl(var(--border));
+        background-color: hsl(var(--card));
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .icon-item:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .icon-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 0.5rem;
+        font-size: 24px;
+      }
+
+      .icon-name {
+        font-size: 0.75rem;
+        text-align: center;
+        color: hsl(var(--foreground));
+      }
+
+      /* アイコンフォント追加定義 */
+      .icon-menu::before {
+        content: "\e901";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-home::before {
+        content: "\e904";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-search::before {
+        content: "\e907";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-back::before {
+        content: "\e908";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-add::before {
+        content: "\e902";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-close::before {
+        content: "\e909";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-check::before {
+        content: "\e90a";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-download::before {
+        content: "\e90b";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-upload::before {
+        content: "\e90c";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-edit::before {
+        content: "\e90d";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-user::before {
+        content: "\e903";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-mail::before {
+        content: "\e90e";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-phone::before {
+        content: "\e90f";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-message::before {
+        content: "\e910";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-users::before {
+        content: "\e911";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-play::before {
+        content: "\e912";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-pause::before {
+        content: "\e913";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-eye::before {
+        content: "\e914";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-cart::before {
+        content: "\e915";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-invoice::before {
+        content: "\e916";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-card::before {
+        content: "\e917";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-sun::before {
+        content: "\e918";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-moon::before {
+        content: "\e919";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-book::before {
+        content: "\e91a";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-shield::before {
+        content: "\e91b";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-star::before {
+        content: "\e91c";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-alert::before {
+        content: "\e91d";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-help::before {
+        content: "\e91e";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-info::before {
+        content: "\e91f";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-content::before {
+        content: "\e905";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-settings::before {
+        content: "\e906";
+        font-family: 'BMFIcons';
+      }
+
+      .icon-logo::before {
+        content: "\e900";
+        font-family: 'BMFIcons';
+      }
+    </style>
+
+    <div class="demo-section">
+      <h3>アイコンの例</h3>
+      <div class="icon-grid">
+        <!-- Navigation Icons -->
+        <div class="icon-item">
+          <div class="icon-display icon-menu"></div>
+          <div class="icon-name">ホームアイコン</div>
+        </div>
+
+        <div class="icon-item">
+          <div class="icon-display icon-home"></div>
+          <div class="icon-name">ユーザーアイコン</div>
+        </div>
+
+        <div class="icon-item">
+          <div class="icon-display icon-search"></div>
+          <div class="icon-name">追加アイコン</div>
+        </div>
+
+        <div class="icon-item">
+          <div class="icon-display icon-back"></div>
+          <div class="icon-name">設定アイコン</div>
+        </div>
+
+        <div class="icon-item">
+          <div class="icon-display icon-content"></div>
+          <div class="icon-name">コンテンツアイコン</div>
+        </div>
+
+        <div class="icon-item">
+          <div class="icon-display icon-logo"></div>
+          <div class="icon-name">ロゴアイコン</div>
+        </div>
+      </div>
+
+      <h3 class="mt-4">利点:</h3>
+      <ul>
+        <li>アクセシビリティの向上: 擬似要素を使うと、スクリーンリーダーがアイコンを読み上げることがなく、テキストのみを読み上げます</li>
+        <li>動的な変更に強い: HTMLを変更せずにCSSだけで見た目を変更できます</li>
+        <li>コードがすっきりする: 入れ子のタグが不要になり、HTMLがすっきりします</li>
+        <li>管理がしやすい: アイコンをすべてCSSで一元管理できます</li>
+      </ul>
+
+      <h3 class="mt-4">アイコンフォントの使用例</h3>
+      <p>擬似要素を使用したアイコンフォントの実装例：</p>
+
+      <pre class="code-block" style="background-color: hsl(var(--muted)); padding: 1rem; border-radius: var(--radius); overflow: auto;">
+// HTML
+&lt;button class="button"&gt;&lt;span class="icon-add"&gt;&lt;/span&gt; 追加&lt;/button&gt;
+
+// CSS
+.icon-add::before {
+  content: "\e902";
+  font-family: 'BMFIcons';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  line-height: 1;
+}
+      </pre>
+
+      <div style="display: flex; gap: 2rem; align-items: center; margin-top: 2rem;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+          <div class="icon-display icon-add" style="font-size: 32px;"></div>
+          <span>通常サイズ (32px)</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+          <div class="icon-display icon-user" style="font-size: 24px; color: hsl(var(--primary));"></div>
+          <span>プライマリカラー</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+          <div class="icon-display icon-settings" style="font-size: 24px; color: hsl(var(--primary));"></div>
+          <span>プライマリカラー</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar and Datepicker Component -->
+  <section id="calendar-section" class="component-section">
+    <h2 class="section-title">Calendar and Datepicker</h2>
+    <p>カレンダーとデートピッカーコンポーネントで日付の選択ができます。</p>
+
+    <style>
+      /* Calendar Styles */
+      .calendar {
+        width: 100%;
+        max-width: 320px;
+        border: 1px solid hsl(var(--border));
+        border-radius: var(--radius);
+        background-color: hsl(var(--card));
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+      }
+
+      .calendar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        background-color: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+      }
+
+      .calendar-title {
+        font-weight: var(--font-weight-medium);
+        font-size: 1rem;
+      }
+
+      .calendar-nav {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .calendar-nav-btn {
+        background-color: transparent;
+        border: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .calendar-nav-btn:hover {
+        background-color: hsl(var(--primary-foreground) / 0.1);
+      }
+
+      .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        padding: 0.5rem;
+      }
+
+      .calendar-weekday {
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: var(--font-weight-medium);
+        color: hsl(var(--muted-foreground));
+        padding: 0.5rem 0;
+      }
+
+      .calendar-day {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        font-size: 0.875rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .calendar-day:hover {
+        background-color: hsl(var(--muted) / 0.5);
+      }
+
+      .calendar-day-outside {
+        color: hsl(var(--muted-foreground) / 0.5);
+      }
+
+      .calendar-day-today {
+        background-color: hsl(var(--muted));
+        font-weight: var(--font-weight-medium);
+      }
+
+      .calendar-day-selected {
+        background-color: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+        font-weight: var(--font-weight-medium);
+      }
+
+      .datepicker-input {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border: 1px solid hsl(var(--border));
+        border-radius: var(--radius);
+        background-color: hsl(var(--background));
+        font-size: 0.875rem;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+
+      .datepicker-input:focus {
+        outline: none;
+        border-color: hsl(var(--ring));
+        box-shadow: 0 0 0 2px hsl(var(--ring) / 0.3);
+      }
+
+      .datepicker-dropdown {
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        z-index: 50;
+        display: none;
+      }
+
+      /* CSS-controlled datepicker */
+      .css-datepicker-toggle {
+        display: none;
+      }
+
+      .css-datepicker-toggle:checked + .datepicker-dropdown {
+        display: block;
+      }
+
+      /* Hybrid datepicker */
+      .hybrid-datepicker .datepicker-dropdown.is-open {
+        display: block;
+      }
+
+      /* Attribute-based datepicker */
+      [data-datepicker] .datepicker-dropdown[data-visible="true"] {
+        display: block;
+      }
+
+      .icon-angle-left::before {
+        content: "\e921";
+        font-family: 'BMFIcons';
+        font-size: 16px;
+      }
+
+      .icon-angle-right::before {
+        content: "\e922";
+        font-family: 'BMFIcons';
+        font-size: 16px;
+      }
+    </style>
+
+    <div class="demo-section">
+      <!-- CSS-controlled Datepicker -->
+      <h3 class="mt-4 mb-2">CSS-controlled Datepicker</h3>
+      <p class="mb-4">CSSのみで表示・非表示を制御するシンプルなデートピッカー</p>
+
+      <div class="datepicker css-datepicker">
+        <label for="css-datepicker-input" class="form-label">日付を選択</label>
+        <div class="datepicker-input-wrapper">
+          <input type="text" id="css-datepicker-input" class="datepicker-input" placeholder="YYYY/MM/DD" readonly>
+          <label for="css-datepicker-toggle" class="datepicker-icon">
+            <span class="icon-calendar"></span>
+          </label>
+        </div>
+        <input type="checkbox" id="css-datepicker-toggle" class="css-datepicker-toggle">
+        <div class="datepicker-dropdown">
+              <div class="calendar">
+                <div class="calendar-header">
+                  <button class="calendar-nav-btn">
+                    <span class="icon-angle-left"></span>
+                  </button>
+              <div class="calendar-title">2023年12月</div>
+                  <button class="calendar-nav-btn">
+                    <span class="icon-angle-right"></span>
+                  </button>
+                </div>
+            <div class="calendar-grid">
+                  <div class="calendar-weekday">日</div>
+                  <div class="calendar-weekday">月</div>
+                  <div class="calendar-weekday">火</div>
+                  <div class="calendar-weekday">水</div>
+                  <div class="calendar-weekday">木</div>
+                  <div class="calendar-weekday">金</div>
+                  <div class="calendar-weekday">土</div>
+
+              <div class="calendar-day calendar-day-outside">26</div>
+              <div class="calendar-day calendar-day-outside">27</div>
+              <div class="calendar-day calendar-day-outside">28</div>
+              <div class="calendar-day calendar-day-outside">29</div>
+              <div class="calendar-day calendar-day-outside">30</div>
+                  <div class="calendar-day">1</div>
+                  <div class="calendar-day">2</div>
+                  <div class="calendar-day">3</div>
+                  <div class="calendar-day">4</div>
+                  <div class="calendar-day">5</div>
+                  <div class="calendar-day">6</div>
+                  <div class="calendar-day">7</div>
+                  <div class="calendar-day">8</div>
+                  <div class="calendar-day">9</div>
+                  <div class="calendar-day">10</div>
+                  <div class="calendar-day">11</div>
+                  <div class="calendar-day">12</div>
+              <div class="calendar-day calendar-day-today">13</div>
+                  <div class="calendar-day">14</div>
+              <div class="calendar-day calendar-day-selected">15</div>
+                  <div class="calendar-day">16</div>
+                  <div class="calendar-day">17</div>
+                  <div class="calendar-day">18</div>
+              <div class="calendar-day">19</div>
+                  <div class="calendar-day">20</div>
+                  <div class="calendar-day">21</div>
+                  <div class="calendar-day">22</div>
+                  <div class="calendar-day">23</div>
+                  <div class="calendar-day">24</div>
+                  <div class="calendar-day">25</div>
+                  <div class="calendar-day">26</div>
+                  <div class="calendar-day">27</div>
+                  <div class="calendar-day">28</div>
+                  <div class="calendar-day">29</div>
+                  <div class="calendar-day">30</div>
+              <div class="calendar-day">31</div>
+              <div class="calendar-day calendar-day-outside">1</div>
+              <div class="calendar-day calendar-day-outside">2</div>
+              <div class="calendar-day calendar-day-outside">3</div>
+              <div class="calendar-day calendar-day-outside">4</div>
+              <div class="calendar-day calendar-day-outside">5</div>
+              <div class="calendar-day calendar-day-outside">6</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- Hybrid Datepicker -->
+      <h3 class="mt-5 mb-2">Hybrid Datepicker</h3>
+      <p class="mb-4">JavaScriptとCSSを組み合わせて動的な機能を持つデートピッカー</p>
+
+      <div class="datepicker hybrid-datepicker">
+        <label for="hybrid-datepicker-input" class="form-label">日付を選択</label>
+        <div class="datepicker-input-wrapper">
+          <input type="text" id="hybrid-datepicker-input" class="datepicker-input" placeholder="YYYY/MM/DD" readonly>
+          <button type="button" id="hybrid-datepicker-toggle" class="datepicker-icon">
+            <span class="icon-calendar"></span>
+          </button>
+        </div>
+        <div class="datepicker-dropdown">
+          <div class="calendar">
+                <div class="calendar-header">
+              <button class="calendar-nav-btn" id="hybrid-prev-month">
+                <span class="icon-angle-left"></span>
+              </button>
+              <div class="calendar-title" id="hybrid-month-title">2023年12月</div>
+              <button class="calendar-nav-btn" id="hybrid-next-month">
+                <span class="icon-angle-right"></span>
+              </button>
+                </div>
+            <div class="calendar-grid" id="hybrid-calendar-grid">
+              <!-- Calendar grid populated by JavaScript -->
+              <div class="calendar-weekday">日</div>
+              <div class="calendar-weekday">月</div>
+              <div class="calendar-weekday">火</div>
+              <div class="calendar-weekday">水</div>
+              <div class="calendar-weekday">木</div>
+              <div class="calendar-weekday">金</div>
+              <div class="calendar-weekday">土</div>
+              <!-- Days will be dynamically added by JavaScript -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- Attribute-based Datepicker -->
+      <h3 class="mt-5 mb-2">Attribute-based Datepicker</h3>
+      <p class="mb-4">HTMLの属性を使って状態を制御するデートピッカー</p>
+
+      <div class="datepicker" data-datepicker>
+        <label for="attr-datepicker-input" class="form-label">日付を選択</label>
+        <div class="datepicker-input-wrapper">
+          <input type="text" id="attr-datepicker-input" class="datepicker-input" placeholder="YYYY/MM/DD" readonly>
+          <button type="button" data-datepicker-toggle class="datepicker-icon">
+            <span class="icon-calendar"></span>
+          </button>
+        </div>
+        <div class="datepicker-dropdown" data-visible="false">
+          <div class="calendar">
+            <div class="calendar-header">
+              <button class="calendar-nav-btn" data-month-nav="-1">
+                <span class="icon-angle-left"></span>
+              </button>
+              <div class="calendar-title" data-calendar-title>2023年12月</div>
+              <button class="calendar-nav-btn" data-month-nav="1">
+                <span class="icon-angle-right"></span>
+              </button>
+            </div>
+            <div class="calendar-grid" data-calendar-grid>
+              <!-- Calendar grid populated by JavaScript -->
+              <div class="calendar-weekday">日</div>
+              <div class="calendar-weekday">月</div>
+              <div class="calendar-weekday">火</div>
+              <div class="calendar-weekday">水</div>
+              <div class="calendar-weekday">木</div>
+              <div class="calendar-weekday">金</div>
+              <div class="calendar-weekday">土</div>
+              <!-- Days will be dynamically added by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for Datepickers -->
+    <script>
+      // Hybrid Datepicker Control
+      document.addEventListener('DOMContentLoaded', function() {
+        // CSS-controlled datepicker - add day selection functionality
+        const cssDatepicker = document.querySelector('.css-datepicker');
+        const cssInput = document.getElementById('css-datepicker-input');
+        const cssDays = cssDatepicker.querySelectorAll('.calendar-day:not(.calendar-day-outside)');
+        const cssToggle = document.getElementById('css-datepicker-toggle');
+
+        // 追加：カレンダーアイコンをクリックしたときにトグルをクリックする効果を与えます
+        const cssLabel = cssDatepicker.querySelector('.datepicker-icon');
+        cssLabel.addEventListener('click', function() {
+          cssToggle.checked = !cssToggle.checked;
+        });
+
+        // 追加：inputをクリックしたときにもカレンダーを表示
+        cssInput.addEventListener('click', function() {
+          cssToggle.checked = true;
+        });
+
+        cssDays.forEach(day => {
+          day.addEventListener('click', function() {
+            const month = 12; // December (hardcoded for this example)
+            const year = 2023; // Hardcoded for this example
+            const dayNum = parseInt(this.textContent);
+            cssInput.value = `${year}/${month}/${dayNum}`;
+
+            // Remove selected class from all days
+            cssDays.forEach(d => d.classList.remove('calendar-day-selected'));
+            // Add selected class to clicked day
+            this.classList.add('calendar-day-selected');
+
+            // Close the datepicker
+            cssToggle.checked = false;
+          });
+        });
+
+        const hybridToggle = document.getElementById('hybrid-datepicker-toggle');
+        const hybridDropdown = document.querySelector('.hybrid-datepicker .datepicker-dropdown');
+        const hybridInput = document.getElementById('hybrid-datepicker-input');
+
+        if (hybridToggle && hybridDropdown) {
+          hybridToggle.addEventListener('click', function() {
+            hybridDropdown.classList.toggle('is-open');
+          });
+
+          // Close datepicker when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!event.target.closest('.hybrid-datepicker') && hybridDropdown.classList.contains('is-open')) {
+              hybridDropdown.classList.remove('is-open');
+            }
+          });
+
+          // Handle date selection
+          const calendarDays = hybridDropdown.querySelectorAll('.calendar-day:not(.calendar-day-outside)');
+          calendarDays.forEach(day => {
+            day.addEventListener('click', function() {
+              const selectedDay = this.textContent.trim();
+              const currentMonth = document.querySelector('.hybrid-datepicker .calendar-title').textContent;
+              hybridInput.value = `2023/12/${selectedDay}`;
+
+              // Remove selected class from all days
+              calendarDays.forEach(d => d.classList.remove('calendar-day-selected'));
+              // Add selected class to clicked day
+              this.classList.add('calendar-day-selected');
+
+              // Close datepicker after selection
+              hybridDropdown.classList.remove('is-open');
+            });
+          });
+        }
+      });
+
+      // Attribute-based Datepicker Control
+      document.addEventListener('DOMContentLoaded', function() {
+        const attrDatepicker = document.querySelector('[data-datepicker]');
+        if (!attrDatepicker) return;
+
+        const attrToggle = attrDatepicker.querySelector('[data-datepicker-toggle]');
+        const attrDropdown = attrDatepicker.querySelector('.datepicker-dropdown');
+        const attrInput = document.getElementById('attr-datepicker-input');
+
+        if (attrToggle && attrDropdown) {
+          // トグルボタンクリック時の処理を修正
+          attrToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // イベントの伝播を止める
+            const isVisible = attrDropdown.getAttribute('data-visible') === 'true';
+            attrDropdown.setAttribute('data-visible', isVisible ? 'false' : 'true');
+          });
+
+          // 外部クリック時にドロップダウンを閉じる処理を修正
+          document.addEventListener('click', function(event) {
+            if (!event.target.closest('[data-datepicker]') && attrDropdown.getAttribute('data-visible') === 'true') {
+              attrDropdown.setAttribute('data-visible', 'false');
+            }
+          });
+
+          // Generate calendar days
+          const calendarGrid = attrDatepicker.querySelector('[data-calendar-grid]');
+          const monthTitle = attrDatepicker.querySelector('[data-calendar-title]');
+          let currentDate = new Date(2023, 11); // December 2023
+
+          function generateCalendar(date) {
+            // Clear previous days (except weekday headers)
+            const weekdays = calendarGrid.querySelectorAll('.calendar-weekday');
+            calendarGrid.innerHTML = '';
+            weekdays.forEach(day => calendarGrid.appendChild(day));
+
+            // Set month title
+            const options = { year: 'numeric', month: 'long' };
+            monthTitle.textContent = date.toLocaleDateString('ja-JP', options);
+
+            // Get first day of month and last day
+            const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+            const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+
+            // Add days from previous month to fill first week
+            const firstDayOfWeek = firstDay.getDay();
+            if (firstDayOfWeek > 0) {
+              const prevMonthLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+              for (let i = firstDayOfWeek - 1; i >= 0; i--) {
+                const dayElem = document.createElement('div');
+                dayElem.className = 'calendar-day calendar-day-outside';
+                dayElem.textContent = prevMonthLastDay - i;
+                calendarGrid.appendChild(dayElem);
+              }
+            }
+
+            // Add days of current month
+            const today = new Date();
+            for (let i = 1; i <= lastDay.getDate(); i++) {
+              const dayElem = document.createElement('div');
+              dayElem.className = 'calendar-day';
+              dayElem.textContent = i;
+
+              // Check if this day is today
+              if (date.getFullYear() === today.getFullYear() &&
+                  date.getMonth() === today.getMonth() &&
+                  i === today.getDate()) {
+                dayElem.classList.add('calendar-day-today');
+              }
+
+              // Add click event
+              dayElem.addEventListener('click', function() {
+                const year = date.getFullYear();
+                const month = date.getMonth() + 1;
+                const day = i;
+                attrInput.value = `${year}/${month}/${day}`;
+
+                // Remove selected class from all days
+                const allDays = calendarGrid.querySelectorAll('.calendar-day');
+                allDays.forEach(d => d.classList.remove('calendar-day-selected'));
+                // Add selected class to clicked day
+                this.classList.add('calendar-day-selected');
+
+                // Close datepicker after selection
+                attrDropdown.setAttribute('data-visible', 'false');
+              });
+
+              calendarGrid.appendChild(dayElem);
+            }
+
+            // Add days from next month to fill last week
+            const lastDayOfWeek = lastDay.getDay();
+            if (lastDayOfWeek < 6) {
+              for (let i = 1; i <= 6 - lastDayOfWeek; i++) {
+                const dayElem = document.createElement('div');
+                dayElem.className = 'calendar-day calendar-day-outside';
+                dayElem.textContent = i;
+                calendarGrid.appendChild(dayElem);
+              }
+            }
+          }
+
+          // Initial calendar generation
+          generateCalendar(currentDate);
+
+          // Month navigation
+          const monthNavButtons = attrDatepicker.querySelectorAll('[data-month-nav]');
+          monthNavButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+              e.stopPropagation();
+              const change = parseInt(this.getAttribute('data-month-nav'));
+              currentDate.setMonth(currentDate.getMonth() + change);
+              generateCalendar(currentDate);
+            });
+          });
+      }
+    });
+  </script>
+
+  <!-- チャートツールチップのJavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 円グラフのツールチップ
+      const pieTooltip = document.getElementById('pie-tooltip');
+      if (pieTooltip) {
+        const pieSegments = document.querySelectorAll('.chart-pie-segment');
+
+        pieSegments.forEach(segment => {
+          segment.addEventListener('mouseover', function(e) {
+            const label = this.getAttribute('data-label');
+            const value = this.getAttribute('data-value');
+
+            pieTooltip.querySelector('.chart-tooltip-title').textContent = label;
+            pieTooltip.querySelector('.chart-tooltip-value').textContent = value;
+
+            // ツールチップの位置を設定
+            const rect = this.getBoundingClientRect();
+            const chartRect = this.closest('.chart-pie').getBoundingClientRect();
+
+            pieTooltip.style.left = (e.clientX - chartRect.left) + 'px';
+            pieTooltip.style.top = (e.clientY - chartRect.top - 40) + 'px';
+            pieTooltip.style.visibility = 'visible';
+          });
+
+          segment.addEventListener('mouseout', function() {
+            pieTooltip.style.visibility = 'hidden';
+          });
+
+          segment.addEventListener('mousemove', function(e) {
+            const chartRect = this.closest('.chart-pie').getBoundingClientRect();
+            pieTooltip.style.left = (e.clientX - chartRect.left) + 'px';
+            pieTooltip.style.top = (e.clientY - chartRect.top - 40) + 'px';
+          });
+        });
+      }
+
+      // 折れ線グラフのツールチップ
+      const lineTooltip = document.getElementById('line-tooltip');
+      if (lineTooltip) {
+        const dataPoints = document.querySelectorAll('circle[data-product]');
+
+        dataPoints.forEach(point => {
+          point.addEventListener('mouseover', function(e) {
+            const product = this.getAttribute('data-product');
+            const month = this.getAttribute('data-month');
+            const value = this.getAttribute('data-value');
+
+            lineTooltip.querySelector('.chart-tooltip-title').textContent = `${product} - ${month}`;
+            lineTooltip.querySelector('.chart-tooltip-value').textContent = `売上: ${value}`;
+
+            // ツールチップの位置を設定
+            const chartContainer = this.closest('.chart');
+            const chartRect = chartContainer.getBoundingClientRect();
+
+            lineTooltip.style.left = (e.clientX - chartRect.left) + 'px';
+            lineTooltip.style.top = (e.clientY - chartRect.top - 40) + 'px';
+            lineTooltip.style.visibility = 'visible';
+          });
+
+          point.addEventListener('mouseout', function() {
+            lineTooltip.style.visibility = 'hidden';
+          });
+
+          point.addEventListener('mousemove', function(e) {
+            const chartRect = this.closest('.chart').getBoundingClientRect();
+            lineTooltip.style.left = (e.clientX - chartRect.left) + 'px';
+            lineTooltip.style.top = (e.clientY - chartRect.top - 40) + 'px';
+          });
+        });
+      }
+
+      // 棒グラフのツールチップ
+      const barTooltip = document.getElementById('bar-tooltip');
+      if (barTooltip) {
+        const barItems = document.querySelectorAll('.chart-bar-item');
+
+        barItems.forEach(bar => {
+          bar.addEventListener('mouseover', function(e) {
+            const label = this.getAttribute('data-label');
+            const value = this.getAttribute('data-value');
+
+            barTooltip.querySelector('.chart-tooltip-title').textContent = label;
+            barTooltip.querySelector('.chart-tooltip-value').textContent = `値: ${value}`;
+
+            // ツールチップの位置を設定
+            const chartContainer = this.closest('.chart');
+            const chartRect = chartContainer.getBoundingClientRect();
+            const barRect = this.getBoundingClientRect();
+
+            barTooltip.style.left = (barRect.left + barRect.width/2 - chartRect.left) + 'px';
+            barTooltip.style.top = (barRect.top - chartRect.top - 40) + 'px';
+            barTooltip.style.visibility = 'visible';
+          });
+
+          bar.addEventListener('mouseout', function() {
+            barTooltip.style.visibility = 'hidden';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

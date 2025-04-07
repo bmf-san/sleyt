@@ -1,0 +1,200 @@
+/**
+ * モーダルコンポーネント
+ * ダイアログやポップアップを表示するためのshadcn/uiスタイルのモーダル
+ */
+
+/* モーダルオーバーレイ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: modal-overlay-in 0.15s ease-out;
+  backdrop-filter: blur(2px);
+}
+
+@keyframes modal-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* モーダルコンテナ */
+.modal {
+  position: relative;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  width: var(--modal-width, 90%);
+  max-width: var(--modal-max-width, 32rem);
+  max-height: var(--modal-max-height, calc(100vh - 2rem));
+  overflow: hidden;
+  animation: modal-in 0.2s ease-out;
+  border: 1px solid hsl(var(--border));
+  z-index: 101;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* モーダルヘッダー */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+/* 閉じるボタン */
+.modal-close {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--muted-foreground));
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.modal-close:hover {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.modal-close svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* モーダルコンテンツ */
+.modal-content {
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: var(--modal-content-max-height, calc(100vh - 10rem));
+}
+
+/* モーダルフッター */
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid hsl(var(--border));
+}
+
+/* サイズバリエーション */
+.modal-sm {
+  --modal-max-width: 24rem;
+}
+
+.modal-lg {
+  --modal-max-width: 48rem;
+}
+
+.modal-xl {
+  --modal-max-width: 72rem;
+}
+
+.modal-full {
+  --modal-max-width: calc(100vw - 2rem);
+  --modal-width: calc(100vw - 2rem);
+  --modal-max-height: calc(100vh - 2rem);
+}
+
+/* ダークモード対応 */
+.dark-mode .modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* アニメーション - 終了時 */
+.modal-overlay-exit {
+  animation: modal-overlay-out 0.15s ease-in forwards;
+}
+
+.modal-exit {
+  animation: modal-out 0.15s ease-in forwards;
+}
+
+@keyframes modal-overlay-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+/* モーダルコンテンツスクロールスタイル */
+.modal-content::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted));
+  border-radius: 9999px;
+}
+
+/* アラートダイアログバリエーション */
+.modal-alert {
+  --modal-max-width: 28rem;
+}
+
+.modal-alert .modal-header {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.modal-alert .modal-footer {
+  padding-top: 0;
+  border-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.modal-alert .modal-content {
+  padding-top: 0;
+}

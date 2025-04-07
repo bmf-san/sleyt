@@ -1,0 +1,199 @@
+/**
+ * Button Component
+ * サンプルアプリケーションのボタンコンポーネント
+ */
+
+.button,
+.primary-button,
+.btn,
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+  min-width: 8rem;
+}
+
+.button:hover,
+.primary-button:hover,
+.btn:hover,
+.btn-primary:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.button-secondary,
+.secondary-button,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--border));
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+  min-width: 8rem;
+}
+
+.button-secondary:hover,
+.secondary-button:hover,
+.btn-secondary:hover {
+  background-color: hsl(var(--muted));
+  opacity: 0.9;
+}
+
+/* アウトラインボタン */
+.button-outline,
+.btn-outline {
+  background-color: transparent;
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.button-outline:hover,
+.btn-outline:hover {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+/* ゴーストボタン */
+.button-ghost,
+.btn-ghost {
+  background-color: transparent;
+  color: hsl(var(--foreground));
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.button-ghost:hover,
+.btn-ghost:hover {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+/* デストラクティブボタン */
+.button-destructive,
+.btn-destructive {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+  border: none;
+}
+
+.button-destructive:hover,
+.btn-destructive:hover {
+  background-color: hsl(var(--destructive) / 0.9);
+}
+
+/* リンクボタン */
+.button-link,
+.btn-link {
+  background-color: transparent;
+  color: hsl(var(--primary));
+  border-color: transparent;
+  box-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.button-link:hover,
+.btn-link:hover {
+  text-decoration: none;
+}
+
+/* サイズバリエーション */
+.button-sm,
+.btn-sm {
+  height: 2rem;
+  font-size: 0.75rem;
+  padding: 0 0.75rem;
+  min-width: 5rem;
+}
+
+.button-lg,
+.btn-lg {
+  height: 3rem;
+  font-size: 1rem;
+  padding: 0 1.5rem;
+}
+
+/* 無効状態 */
+.button:disabled,
+.button.disabled,
+.primary-button:disabled,
+.secondary-button:disabled,
+.btn:disabled,
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* アイコン付きボタン */
+.button-icon,
+.btn-icon {
+  padding: 0;
+  width: 2.5rem;
+  justify-content: center;
+  min-width: auto;
+}
+
+.button-icon.button-sm,
+.btn-icon.btn-sm {
+  width: 2rem;
+}
+
+/* アイコンのスペーシング */
+.button svg + span,
+.primary-button svg + span,
+.secondary-button svg + span,
+.btn svg + span,
+.btn-primary svg + span,
+.btn-secondary svg + span {
+  margin-left: 0.5rem;
+}
+
+/* ローディング状態 */
+.button-loading,
+.btn-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.button-loading::after,
+.btn-loading::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 50%;
+  left: 50%;
+  margin: -0.5rem 0 0 -0.5rem;
+  border-radius: 9999px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: buttonLoader 0.6s linear infinite;
+}
+
+@keyframes buttonLoader {
+  to {
+    transform: rotate(360deg);
+  }
+}

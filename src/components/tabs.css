@@ -1,0 +1,200 @@
+/**
+ * タブコンポーネント
+ * コンテンツを切り替え表示するためのタブシステム
+ */
+
+/* タブコンテナ */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* タブリスト */
+.tabs-list {
+  display: flex;
+  flex-shrink: 0;
+  border-bottom: 1px solid hsl(var(--border));
+  margin-bottom: -1px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* 垂直タブリスト */
+.tabs-list-vertical {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: 1px solid hsl(var(--border));
+  margin-bottom: 0;
+  margin-right: -1px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* タブトリガー */
+.tab-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  whitespace: nowrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  position: relative;
+  color: hsl(var(--muted-foreground));
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom-color: hsl(var(--border));
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.tab-trigger:hover {
+  color: hsl(var(--foreground));
+}
+
+.tab-trigger-active {
+  color: hsl(var(--foreground));
+  border-bottom-color: transparent;
+  border-top-color: hsl(var(--border));
+  border-left-color: hsl(var(--border));
+  border-right-color: hsl(var(--border));
+  background-color: hsl(var(--background));
+  font-weight: 500;
+}
+
+.tab-trigger-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  right: 0;
+  height: 2px;
+  background-color: hsl(var(--primary));
+}
+
+.tab-trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
+  border-radius: var(--radius);
+}
+
+.tab-trigger-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 垂直タブトリガー */
+.tab-trigger-vertical {
+  justify-content: flex-start;
+  padding: 0.75rem 1rem;
+  height: auto;
+  border: 1px solid transparent;
+  border-right-color: hsl(var(--border));
+}
+
+.tab-trigger-vertical.tab-trigger-active {
+  border-right-color: transparent;
+  border-top-color: hsl(var(--border));
+  border-left-color: hsl(var(--border));
+  border-bottom-color: hsl(var(--border));
+}
+
+.tab-trigger-vertical.tab-trigger-active::after {
+  left: auto;
+  bottom: 0;
+  right: -1px;
+  top: 0;
+  height: auto;
+  width: 2px;
+}
+
+/* タブアイコン */
+.tab-trigger-icon {
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+/* タブコンテンツ */
+.tab-content {
+  border: 1px solid hsl(var(--border));
+  border-top: none;
+  padding: 1.25rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  outline: none;
+  background-color: hsl(var(--background));
+}
+
+/* タブコンテンツ（垂直） */
+.tab-content-vertical {
+  border: 1px solid hsl(var(--border));
+  border-left: none;
+  padding: 1.25rem;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+/* タブパネル */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel-active {
+  display: block;
+  animation: tabFadeIn 0.2s ease forwards;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* タブセパレーター */
+.tab-separator {
+  width: 1px;
+  margin: 0 0.5rem;
+  height: 1.25rem;
+  background-color: hsl(var(--border));
+  align-self: center;
+}
+
+.tab-separator-vertical {
+  width: auto;
+  height: 1px;
+  margin: 0.5rem 0;
+  background-color: hsl(var(--border));
+}
+
+/* リンク付きタブ */
+.tab-link-trigger {
+  text-decoration: none;
+}
+
+/* サイズバリエーション */
+.tab-trigger-sm {
+  height: 2rem;
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+
+.tab-trigger-lg {
+  height: 3rem;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+}
+
+/* フル幅タブ */
+.tabs-list-full .tab-trigger {
+  flex: 1 1 auto;
+}

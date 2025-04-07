@@ -1,0 +1,144 @@
+/**
+ * Header Component
+ * ウェブサイトのヘッダー部分を定義するコンポーネント
+ */
+
+/* ベースヘッダー */
+.header {
+  width: 100%;
+  background-color: hsl(var(--background));
+  border-bottom: 1px solid hsl(var(--border));
+  padding: 1rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* 固定ヘッダー */
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ヘッダーコンテナ */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--container-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+/* ヘッダーのロゴ部分 */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+}
+
+.header-logo:hover {
+  text-decoration: none;
+}
+
+.header-logo img {
+  max-height: 2rem;
+  width: auto;
+}
+
+/* ヘッダーのナビゲーション */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-nav-item {
+  display: inline-flex;
+  align-items: center;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  transition: all 0.15s ease;
+}
+
+.header-nav-item:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--muted) / 0.1);
+  text-decoration: none;
+}
+
+.header-nav-item.active {
+  color: hsl(var(--primary));
+  font-weight: 600;
+}
+
+/* ヘッダーのアクション部分 */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* モバイル用メニューボタン */
+.header-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+}
+
+.header-menu-button:hover {
+  background-color: hsl(var(--muted) / 0.1);
+  color: hsl(var(--foreground));
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .header-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: hsl(var(--background));
+    border-bottom: 1px solid hsl(var(--border));
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: var(--shadow-md);
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+
+  .header-nav-item {
+    width: 100%;
+  }
+}
+
+/* ダークモード対応 */
+.dark-mode .header {
+  background-color: hsl(var(--background));
+  border-bottom-color: hsl(var(--border));
+}

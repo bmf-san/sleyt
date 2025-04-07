@@ -1,0 +1,276 @@
+/**
+ * トーストコンポーネント
+ * 一時的な通知メッセージを表示するためのコンポーネント
+ */
+
+/* トーストコンテナ */
+.toast-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  width: auto;
+  max-width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.toast-container-top-right {
+  top: 1rem;
+  right: 1rem;
+  bottom: auto;
+}
+
+.toast-container-top-left {
+  top: 1rem;
+  left: 1rem;
+  right: auto;
+  bottom: auto;
+}
+
+.toast-container-bottom-left {
+  bottom: 1rem;
+  left: 1rem;
+  right: auto;
+}
+
+.toast-container-bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.toast-container-top-center {
+  top: 1rem;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.toast-container-bottom-center {
+  bottom: 1rem;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+/* トースト */
+.toast {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 22rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  pointer-events: auto;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+}
+
+/* トーストアニメーション */
+.toast-enter {
+  animation-name: toastEnter;
+}
+
+.toast-leave {
+  animation-name: toastLeave;
+}
+
+@keyframes toastEnter {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toastLeave {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* トーストアイコン */
+.toast-icon {
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+  width: 1rem;
+  height: 1rem;
+  stroke-width: 2;
+}
+
+/* トーストコンテンツ */
+.toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+/* トーストタイトル */
+.toast-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* トースト説明 */
+.toast-description {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  color: hsl(var(--muted-foreground));
+}
+
+/* トースト閉じるボタン */
+.toast-close {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--muted-foreground));
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.toast-close:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+.toast-close:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--ring));
+}
+
+.toast-close svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* トースト進行バー */
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: hsl(var(--primary));
+  border-bottom-left-radius: var(--radius);
+  animation-name: toastProgress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes toastProgress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/* トーストバリエーション */
+.toast-default {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.toast-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.toast-primary .toast-description {
+  color: hsl(var(--primary-foreground) / 0.8);
+}
+
+.toast-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.toast-secondary .toast-description {
+  color: hsl(var(--secondary-foreground) / 0.8);
+}
+
+.toast-destructive {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.toast-destructive .toast-description {
+  color: hsl(var(--destructive-foreground) / 0.8);
+}
+
+.toast-success {
+  background-color: hsl(var(--success));
+  color: hsl(var(--success-foreground));
+}
+
+.toast-success .toast-description {
+  color: hsl(var(--success-foreground) / 0.8);
+}
+
+/* アクション付きトースト */
+.toast-actions {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.toast-action {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  border: none;
+  transition: all 0.15s;
+}
+
+.toast-action:hover {
+  background-color: hsl(var(--primary) / 0.2);
+}
+
+.toast-action:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--ring));
+}
+
+/* ダークモード対応 */
+.dark-mode .toast-close:hover {
+  background-color: hsl(var(--muted) / 0.2);
+}
+
+/* トーストグループ */
+.toast-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

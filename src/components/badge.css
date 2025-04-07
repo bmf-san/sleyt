@@ -1,0 +1,201 @@
+/**
+ * バッジコンポーネント
+ * ステータスやカテゴリを表示するインラインの小さなコンポーネント
+ */
+
+/* ベースバッジ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0 0.5rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  transition: all 0.15s;
+  border: 1px solid transparent;
+}
+
+/* デフォルトバッジ */
+.badge-default {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+/* プライマリバッジ */
+.badge-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* セカンダリバッジ */
+.badge-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+/* アウトラインバッジ */
+.badge-outline {
+  background-color: transparent;
+  border-color: hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+/* デストラクティブバッジ */
+.badge-destructive {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+/* 成功バッジ */
+.badge-success {
+  background-color: hsl(var(--success));
+  color: hsl(var(--success-foreground));
+}
+
+/* 警告バッジ */
+.badge-warning {
+  background-color: hsl(var(--warning));
+  color: hsl(var(--warning-foreground));
+}
+
+/* サイズバリエーション */
+.badge-sm {
+  height: 1rem;
+  padding: 0 0.375rem;
+  font-size: 0.625rem;
+}
+
+.badge-lg {
+  height: 1.5rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* バッジアイコン */
+.badge-icon {
+  display: inline-flex;
+  margin-right: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.badge-icon-right {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+.badge-sm .badge-icon {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.badge-lg .badge-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* 削除可能なバッジ */
+.badge-removable {
+  padding-right: 0.25rem;
+}
+
+.badge-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  color: currentColor;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.15s, background-color 0.15s;
+}
+
+.badge-remove:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.badge-remove:focus {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.dark-mode .badge-remove:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .badge-remove:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 点滅バッジ */
+.badge-pulse {
+  position: relative;
+}
+
+.badge-pulse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  animation: pulse 1.5s infinite;
+  opacity: 0.5;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* ドット付きバッジ */
+.badge-dot {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.badge-dot::before {
+  content: '';
+  position: absolute;
+  left: 0.375rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 9999px;
+  background-color: currentColor;
+}
+
+/* ダークモード対応 */
+.dark-mode .badge-outline {
+  border-color: hsl(var(--border));
+}
+
+/* ホバー効果 */
+.badge-interactive {
+  cursor: pointer;
+}
+
+.badge-interactive:hover {
+  opacity: 0.8;
+}
+
+.badge-interactive:active {
+  opacity: 0.7;
+}

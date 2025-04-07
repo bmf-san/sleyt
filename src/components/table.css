@@ -1,0 +1,228 @@
+/**
+ * テーブルコンポーネント
+ * データを行と列で表示するためのコンポーネント
+ */
+
+/* テーブルコンテナ */
+.table-container {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius);
+}
+
+/* ベーステーブル */
+.table {
+  width: 100%;
+  caption-side: bottom;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+/* テーブルキャプション */
+.table-caption {
+  padding: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+/* テーブルヘッダー */
+.table-header {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+.table-header th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* テーブルボディ */
+.table-body tr {
+  border-bottom: 1px solid hsl(var(--border));
+  transition: background-color 0.15s;
+}
+
+.table-body tr:last-child {
+  border-bottom: none;
+}
+
+.table-body td {
+  padding: 0.75rem;
+  color: hsl(var(--foreground));
+  vertical-align: middle;
+}
+
+/* テーブルフッター */
+.table-footer {
+  background-color: hsl(var(--muted) / 0.2);
+  font-weight: 500;
+}
+
+.table-footer td {
+  padding: 0.75rem;
+  color: hsl(var(--foreground));
+  border-top: 1px solid hsl(var(--border));
+}
+
+/* ホバー効果 */
+.table-hover tbody tr:hover {
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+/* ストライプテーブル */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: hsl(var(--muted) / 0.1);
+}
+
+.table-striped.table-hover tbody tr:hover {
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+/* ボーダー付きテーブル */
+.table-bordered {
+  border: 1px solid hsl(var(--border));
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid hsl(var(--border));
+}
+
+/* コンパクトテーブル */
+.table-compact th,
+.table-compact td {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* ソート可能なヘッダー */
+.table-sort-header {
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.table-sort-icon {
+  height: 1rem;
+  width: 1rem;
+  margin-left: 0.5rem;
+}
+
+/* スクロールテーブル */
+.table-scroll {
+  min-width: 40rem;
+}
+
+/* 選択可能な行 */
+.table-row-selectable {
+  cursor: pointer;
+}
+
+.table-row-selected {
+  background-color: hsl(var(--primary) / 0.1) !important;
+}
+
+/* テーブルセルの位置合わせ */
+.table-cell-start {
+  text-align: left;
+}
+
+.table-cell-center {
+  text-align: center;
+}
+
+.table-cell-end {
+  text-align: right;
+}
+
+/* スティッキーヘッダー */
+.table-sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: hsl(var(--muted) / 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* カスタムセル幅 */
+.table-cell-xs {
+  width: 3rem;
+}
+
+.table-cell-sm {
+  width: 5rem;
+}
+
+.table-cell-md {
+  width: 10rem;
+}
+
+.table-cell-lg {
+  width: 15rem;
+}
+
+.table-cell-xl {
+  width: 20rem;
+}
+
+/* レスポンシブテーブル（モバイル対応） */
+@media (max-width: 640px) {
+  .table-responsive {
+    display: block;
+  }
+
+  .table-responsive thead {
+    display: none;
+  }
+
+  .table-responsive tbody,
+  .table-responsive tr,
+  .table-responsive td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-responsive tr {
+    margin-bottom: 1rem;
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .table-responsive td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .table-responsive td:last-child {
+    border-bottom: none;
+  }
+
+  .table-responsive td::before {
+    content: attr(data-label);
+    font-weight: 500;
+    text-align: left;
+    padding-right: 1rem;
+  }
+}
+
+/* ダークモード対応 */
+.dark-mode .table-header {
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+.dark-mode .table-striped tbody tr:nth-child(odd) {
+  background-color: hsl(var(--muted) / 0.15);
+}
+
+.dark-mode .table-hover tbody tr:hover {
+  background-color: hsl(var(--muted) / 0.2);
+}

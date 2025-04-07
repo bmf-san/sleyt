@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation - BMF-CSS</title>
+  <link rel="stylesheet" href="../dist/bmf-css.min.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="logo">BMF-CSS</h1>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="installation.html" class="active">Installation</a></li>
+          <li><a href="implementation-approaches.html">Implementation Approaches</a></li>
+          <li>
+            <a href="base/index.html">Base</a>
+            <ul>
+              <li><a href="base/reset.html">Reset & Normalize</a></li>
+              <li><a href="base/typography.html">Typography</a></li>
+              <li><a href="base/links.html">Links</a></li>
+              <li><a href="base/forms.html">Forms</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="tokens/index.html">Tokens</a>
+            <ul>
+              <li><a href="tokens/colors.html">Colors</a></li>
+              <li><a href="tokens/typography.html">Typography</a></li>
+              <li><a href="tokens/spacing.html">Spacing</a></li>
+              <li><a href="tokens/shadows.html">Shadows & Elevation</a></li>
+              <li><a href="tokens/breakpoints.html">Breakpoints</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="components/index.html">Components</a>
+            <ul>
+              <li><a href="components/buttons.html">Buttons</a></li>
+              <li><a href="components/forms.html">Form Elements</a></li>
+              <li><a href="components/cards.html">Cards</a></li>
+              <li><a href="components/navigation.html">Navigation</a></li>
+              <li><a href="components/alerts.html">Alerts</a></li>
+              <li><a href="components/modals.html">Modals</a></li>
+              <li><a href="components/tooltips.html">Tooltips</a></li>
+              <li><a href="components/tabs.html">Tabs</a></li>
+              <li><a href="components/tables.html">Tables</a></li>
+              <li><a href="components/pagination.html">Pagination</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="utilities/index.html">Utilities</a>
+            <ul>
+              <li><a href="utilities/spacing.html">Spacing</a></li>
+              <li><a href="utilities/text.html">Text</a></li>
+              <li><a href="utilities/display.html">Display</a></li>
+              <li><a href="utilities/colors.html">Colors & Background</a></li>
+              <li><a href="utilities/borders.html">Borders & Shadows</a></li>
+              <li><a href="utilities/flex.html">Flex & Grid</a></li>
+              <li><a href="utilities/position.html">Position</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="themes/index.html">Themes</a>
+            <ul>
+              <li><a href="themes/default.html">Default Theme</a></li>
+              <li><a href="themes/dark-mode.html">Dark Mode</a></li>
+              <li><a href="themes/customization.html">Customization</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="demos/index.html">Demos</a>
+            <ul>
+              <li><a href="demos/blog.html">Blog</a></li>
+              <li><a href="demos/admin.html">Admin Dashboard</a></li>
+              <li><a href="demos/dashboard.html">Dashboard</a></li>
+              <li><a href="demos/ecommerce.html">E-Commerce</a></li>
+              <li><a href="demos/portfolio.html">Portfolio</a></li>
+              <li><a href="demos/landing.html">Landing Page</a></li>
+            </ul>
+          </li>
+          <li><a href="api-reference.html">API Reference</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="content-header">
+        <h1>Installation</h1>
+        <p>Getting started with BMF-CSS</p>
+      </header>
+
+      <section>
+        <h2>Installation Options</h2>
+        <p>There are several ways to include BMF-CSS in your project:</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>NPM Installation</h3>
+          </div>
+          <div class="card-body">
+            <p>Install BMF-CSS using NPM:</p>
+            <pre><code>npm install @bmf-san/bmf-css</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Yarn Installation</h3>
+          </div>
+          <div class="card-body">
+            <p>Install BMF-CSS using Yarn:</p>
+            <pre><code>yarn add @bmf-san/bmf-css</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>CDN</h3>
+          </div>
+          <div class="card-body">
+            <p>Include BMF-CSS directly from a CDN:</p>
+            <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bmf-san/bmf-css/dist/bmf-css.min.css"&gt;</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Direct Download</h3>
+          </div>
+          <div class="card-body">
+            <p>Download the CSS files directly and include in your project:</p>
+            <a href="https://github.com/bmf-san/bmf-css/releases" class="btn btn-primary">Download Latest Release</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Usage</h2>
+
+        <div class="tabs">
+          <div class="tab-list" role="tablist">
+            <button class="tab active" role="tab" aria-selected="true">HTML</button>
+            <button class="tab" role="tab" aria-selected="false">JavaScript (ES6)</button>
+            <button class="tab" role="tab" aria-selected="false">JavaScript (CommonJS)</button>
+          </div>
+
+          <div class="tab-panel active" role="tabpanel">
+            <div class="card">
+              <div class="card-body">
+                <p>Include BMF-CSS in your HTML file:</p>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Project&lt;/title&gt;
+  &lt;link rel="stylesheet" href="node_modules/@bmf-san/bmf-css/dist/bmf-css.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Your content here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel">
+            <div class="card">
+              <div class="card-body">
+                <p>Import BMF-CSS in your JavaScript (ES6):</p>
+                <pre><code>// In your main JS file
+import '@bmf-san/bmf-css/dist/bmf-css.min.css';
+
+// Your JavaScript code
+</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel">
+            <div class="card">
+              <div class="card-body">
+                <p>Import BMF-CSS in your JavaScript (CommonJS):</p>
+                <pre><code>// In your main JS file
+require('@bmf-san/bmf-css/dist/bmf-css.min.css');
+
+// Your JavaScript code
+</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Basic Template</h2>
+        <p>Here's a basic template to get you started:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;BMF-CSS Starter Template&lt;/title&gt;
+  &lt;link rel="stylesheet" href="path/to/bmf-css.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class="header"&gt;
+    &lt;div class="container"&gt;
+      &lt;h1&gt;Page Title&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main class="container"&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Section Title&lt;/h2&gt;
+      &lt;p&gt;This is a paragraph with some text.&lt;/p&gt;
+
+      &lt;div class="card"&gt;
+        &lt;div class="card-header"&gt;Card Header&lt;/div&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;
+          &lt;p&gt;Card content goes here.&lt;/p&gt;
+          &lt;button class="btn btn-primary"&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer class="footer"&gt;
+    &lt;div class="container"&gt;
+      &lt;p&gt;&copy; 2024 My Website&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </section>
+
+      <section>
+        <h2>Next Steps</h2>
+        <p>Now that you have BMF-CSS installed, you can:</p>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Explore Components</h3>
+              <p>Learn about all the UI components available in BMF-CSS.</p>
+              <a href="components/index.html" class="btn btn-primary">Browse Components</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Study Implementation Approaches</h3>
+              <p>Understand the different ways to implement BMF-CSS components.</p>
+              <a href="implementation-approaches.html" class="btn btn-primary">Implementation Approaches</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Check Demos</h3>
+              <p>See BMF-CSS in action with real-world examples.</p>
+              <a href="demos/index.html" class="btn btn-primary">View Demos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 BMF-CSS</p>
+    </div>
+  </footer>
+
+  <!-- Basic tabs functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabButtons = document.querySelectorAll('.tab');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+
+      tabButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          // Deactivate all tabs
+          tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          });
+          tabPanels.forEach(panel => {
+            panel.classList.remove('active');
+          });
+
+          // Activate clicked tab
+          button.classList.add('active');
+          button.setAttribute('aria-selected', 'true');
+          tabPanels[index].classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

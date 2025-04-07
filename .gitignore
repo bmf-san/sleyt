@@ -1,0 +1,44 @@
+# 依存関係
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnpm-debug.log
+.npm
+
+# ビルド結果
+# dist/ (ビルド結果は公開するためコメントアウト)
+build/
+*.min.css
+*.min.js
+
+# エディタ設定
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# テスト関連
+coverage/
+.nyc_output/
+
+# キャッシュファイル
+.cache/
+.parcel-cache/
+.sass-cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# 環境変数
+.env
+.env.*
+!.env.example
+
+# その他
+logs/
+*.log
+temp/
+tmp/

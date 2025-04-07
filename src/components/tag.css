@@ -1,0 +1,131 @@
+/* タグコンポーネント */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: var(--radius-sm, 0.25rem);
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border: 1px solid hsl(var(--border));
+  transition: all 0.2s ease;
+}
+
+/* バリエーション */
+.tag-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+}
+
+.tag-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--secondary));
+}
+
+.tag-success {
+  background-color: hsl(var(--success));
+  color: hsl(var(--success-foreground));
+  border-color: hsl(var(--success));
+}
+
+.tag-warning {
+  background-color: hsl(var(--warning));
+  color: hsl(var(--warning-foreground));
+  border-color: hsl(var(--warning));
+}
+
+.tag-danger {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+  border-color: hsl(var(--destructive));
+}
+
+/* アウトラインバリエーション */
+.tag-outline {
+  background-color: transparent;
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+}
+
+.tag-outline.tag-primary {
+  color: hsl(var(--primary));
+  border-color: hsl(var(--primary));
+}
+
+.tag-outline.tag-secondary {
+  color: hsl(var(--secondary));
+  border-color: hsl(var(--secondary));
+}
+
+.tag-outline.tag-success {
+  color: hsl(var(--success));
+  border-color: hsl(var(--success));
+}
+
+.tag-outline.tag-warning {
+  color: hsl(var(--warning));
+  border-color: hsl(var(--warning));
+}
+
+.tag-outline.tag-danger {
+  color: hsl(var(--destructive));
+  border-color: hsl(var(--destructive));
+}
+
+/* サイズバリエーション */
+.tag-sm {
+  font-size: 0.625rem;
+  padding: 0.125rem 0.375rem;
+}
+
+.tag-lg {
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+}
+
+/* 角丸バリエーション */
+.tag-rounded {
+  border-radius: var(--radius-full, 999px);
+}
+
+/* 削除可能なタグ */
+.tag-dismissible {
+  padding-right: 0.25rem;
+}
+
+.tag-dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: currentColor;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tag-dismiss:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* リンクタグ */
+a.tag:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+/* タグのグループ */
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utilities - BMF-CSS</title>
+  <link rel="stylesheet" href="../../dist/bmf-css.min.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="logo">BMF-CSS</h1>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="../index.html">Overview</a></li>
+          <li><a href="../installation.html">Installation</a></li>
+          <li><a href="../implementation-approaches.html">Implementation Approaches</a></li>
+          <li>
+            <a href="../base/index.html">Base</a>
+            <ul>
+              <li><a href="../base/reset.html">Reset & Normalize</a></li>
+              <li><a href="../base/typography.html">Typography</a></li>
+              <li><a href="../base/links.html">Links</a></li>
+              <li><a href="../base/forms.html">Forms</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../tokens/index.html">Tokens</a>
+            <ul>
+              <li><a href="../tokens/colors.html">Colors</a></li>
+              <li><a href="../tokens/typography.html">Typography</a></li>
+              <li><a href="../tokens/spacing.html">Spacing</a></li>
+              <li><a href="../tokens/shadows.html">Shadows & Elevation</a></li>
+              <li><a href="../tokens/breakpoints.html">Breakpoints</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../components/index.html">Components</a>
+            <ul>
+              <li><a href="../components/buttons.html">Buttons</a></li>
+              <li><a href="../components/forms.html">Form Elements</a></li>
+              <li><a href="../components/cards.html">Cards</a></li>
+              <li><a href="../components/navigation.html">Navigation</a></li>
+              <li><a href="../components/alerts.html">Alerts</a></li>
+              <li><a href="../components/modals.html">Modals</a></li>
+              <li><a href="../components/tooltips.html">Tooltips</a></li>
+              <li><a href="../components/tabs.html">Tabs</a></li>
+              <li><a href="../components/tables.html">Tables</a></li>
+              <li><a href="../components/pagination.html">Pagination</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="index.html" class="active">Utilities</a>
+            <ul>
+              <li><a href="spacing.html">Spacing</a></li>
+              <li><a href="text.html">Text</a></li>
+              <li><a href="display.html">Display</a></li>
+              <li><a href="colors.html">Colors & Background</a></li>
+              <li><a href="borders.html">Borders & Shadows</a></li>
+              <li><a href="flex.html">Flex & Grid</a></li>
+              <li><a href="position.html">Position</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../themes/index.html">Themes</a>
+            <ul>
+              <li><a href="../themes/default.html">Default Theme</a></li>
+              <li><a href="../themes/dark-mode.html">Dark Mode</a></li>
+              <li><a href="../themes/customization.html">Customization</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../demos/index.html">Demos</a>
+            <ul>
+              <li><a href="../demos/blog.html">Blog</a></li>
+              <li><a href="../demos/admin.html">Admin Dashboard</a></li>
+              <li><a href="../demos/dashboard.html">Dashboard</a></li>
+              <li><a href="../demos/ecommerce.html">E-Commerce</a></li>
+              <li><a href="../demos/portfolio.html">Portfolio</a></li>
+              <li><a href="../demos/landing.html">Landing Page</a></li>
+            </ul>
+          </li>
+          <li><a href="../api-reference.html">API Reference</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="content-header">
+        <h1>ユーティリティクラス</h1>
+        <p>迅速なスタイリングと柔軟なレイアウト構築のための汎用クラスコレクション</p>
+      </header>
+
+      <section>
+        <h2>概要</h2>
+        <p>ユーティリティクラスは、単一の目的を持つ小さなスタイルユニットで、HTML要素に直接適用することでスタイリングを効率的に行えます。BMF-CSSは、コンポーネントアプローチとユーティリティアプローチを組み合わせたハイブリッドシステムを提供し、迅速な開発と柔軟なカスタマイズを可能にします。</p>
+      </section>
+
+      <section>
+        <h2>ユーティリティカテゴリー</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">スペーシング</h3>
+              <p>マージン、パディング、ギャップを素早く調整するためのクラス。一貫したスペーシングを実現します。</p>
+              <a href="spacing.html" class="btn btn-primary">スペーシングを見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">テキスト</h3>
+              <p>フォントサイズ、ウェイト、配置、装飾などのテキストスタイリングを制御するクラスです。</p>
+              <a href="text.html" class="btn btn-primary">テキストを見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">表示</h3>
+              <p>要素の表示方法、可視性、オーバーフローなどの基本的なレイアウトプロパティを管理します。</p>
+              <a href="display.html" class="btn btn-primary">表示を見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">色と背景</h3>
+              <p>テキスト色、背景色、グラデーションなどのカラーベースのユーティリティを提供します。</p>
+              <a href="colors.html" class="btn btn-primary">色と背景を見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">ボーダーとシャドウ</h3>
+              <p>ボーダー、境界線半径、ボックスシャドウを簡単に適用するためのクラスです。</p>
+              <a href="borders.html" class="btn btn-primary">ボーダーとシャドウを見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">フレックスとグリッド</h3>
+              <p>フレックスボックスとグリッドレイアウトを素早く構築するためのクラスセットです。</p>
+              <a href="flex.html" class="btn btn-primary">フレックスとグリッドを見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">ポジション</h3>
+              <p>要素の位置、z-index、スティッキー動作などを制御するユーティリティクラスです。</p>
+              <a href="position.html" class="btn btn-primary">ポジションを見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>ユーティリティの使用方法</h2>
+        <p>BMF-CSSユーティリティクラスは、HTML要素に直接適用することで使用できます。複数のユーティリティを組み合わせて複雑なスタイリングを実現できます。</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>基本的な使用例</h3>
+          </div>
+          <div class="card-body">
+            <pre><code>&lt;div class="p-4 m-2 bg-primary text-white rounded"&gt;
+  This is a primary colored box with padding, margin, and rounded corners.
+&lt;/div&gt;
+
+&lt;div class="flex justify-between items-center p-3 border-bottom"&gt;
+  &lt;span class="text-lg font-bold"&gt;Flex Layout Example&lt;/span&gt;
+  &lt;button class="btn btn-sm"&gt;Action&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>ユーティリティの命名規則</h2>
+        <p>BMF-CSSユーティリティクラスは、簡潔で理解しやすい命名規則に従っています。これにより、クラス名から目的と効果を簡単に推測できます。</p>
+
+        <div class="card">
+          <div class="card-body">
+            <h3>スペーシング</h3>
+            <p><code>{property}{direction}-{size}</code></p>
+            <ul>
+              <li><code>property</code>: <code>m</code> (margin)、<code>p</code> (padding)</li>
+              <li><code>direction</code>: <code>t</code> (top)、<code>r</code> (right)、<code>b</code> (bottom)、<code>l</code> (left)、<code>x</code> (horizontal)、<code>y</code> (vertical)、または省略（全方向）</li>
+              <li><code>size</code>: <code>0</code>、<code>1</code>、<code>2</code>、<code>3</code>、<code>4</code>、<code>5</code>、<code>6</code>、<code>8</code>、<code>10</code>、<code>12</code>、<code>16</code></li>
+            </ul>
+            <p>例: <code>mt-4</code>（上マージン4単位）、<code>p-3</code>（全方向パディング3単位）</p>
+
+            <h3>テキスト</h3>
+            <p><code>text-{property}</code> または <code>font-{property}</code></p>
+            <p>例: <code>text-center</code>、<code>font-bold</code>、<code>text-lg</code></p>
+
+            <h3>色</h3>
+            <p><code>text-{color}</code>（テキスト色）、<code>bg-{color}</code>（背景色）</p>
+            <p>例: <code>text-primary</code>、<code>bg-success</code></p>
+
+            <h3>フレックス</h3>
+            <p><code>flex</code>、<code>flex-{property}</code>、<code>justify-{value}</code>、<code>items-{value}</code></p>
+            <p>例: <code>flex</code>、<code>justify-between</code>、<code>items-center</code></p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>レスポンシブユーティリティ</h2>
+        <p>BMF-CSSユーティリティは、レスポンシブ接頭辞を使用して、特定のブレークポイントでのみ適用されるようにできます。</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>レスポンシブ接頭辞</h3>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li><code>sm:</code> - 小画面（640px以上）</li>
+              <li><code>md:</code> - 中画面（768px以上）</li>
+              <li><code>lg:</code> - 大画面（1024px以上）</li>
+              <li><code>xl:</code> - 特大画面（1280px以上）</li>
+              <li><code>2xl:</code> - 超大画面（1536px以上）</li>
+            </ul>
+
+            <p>使用例:</p>
+            <pre><code>&lt;div class="hidden md:block"&gt;
+  This content is visible only on medium screens and above.
+&lt;/div&gt;
+
+&lt;div class="flex-col md:flex-row"&gt;
+  Stack on mobile, side-by-side on medium screens and above.
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>実装パターン</h2>
+        <p>BMF-CSSの3つの実装パターンそれぞれでのユーティリティの使用方法を示します。</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>CSS-Basedパターン</h3>
+          </div>
+          <div class="card-body">
+            <pre><code>&lt;div class="p-4 m-2 flex justify-between items-center bg-primary text-white rounded"&gt;
+  &lt;span class="text-lg font-bold"&gt;CSS-Based Example&lt;/span&gt;
+  &lt;button class="btn btn-sm"&gt;Action&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Hybridパターン</h3>
+          </div>
+          <div class="card-body">
+            <pre><code>&lt;!-- HTMLにユーティリティクラスを適用し、JavaScriptでインタラクションを追加 --&gt;
+&lt;div class="p-4 m-2 flex justify-between items-center bg-primary text-white rounded"
+     id="hybrid-example"&gt;
+  &lt;span class="text-lg font-bold"&gt;Hybrid Example&lt;/span&gt;
+  &lt;button class="btn btn-sm" id="hybrid-button"&gt;Toggle&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  // JavaScriptでクラスを動的に追加/削除
+  document.getElementById('hybrid-button').addEventListener('click', function() {
+    const container = document.getElementById('hybrid-example');
+    container.classList.toggle('bg-secondary');
+  });
+&lt;/script&gt;</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Attribute-Basedパターン</h3>
+          </div>
+          <div class="card-body">
+            <pre><code>&lt;!-- データ属性を使用してスタイルを適用 --&gt;
+&lt;div data-padding="4"
+     data-margin="2"
+     data-display="flex"
+     data-justify="between"
+     data-items="center"
+     data-bg="primary"
+     data-text-color="white"
+     data-rounded&gt;
+  &lt;span data-text-size="lg" data-font-weight="bold"&gt;Attribute-Based Example&lt;/span&gt;
+  &lt;button data-button data-button-size="sm"&gt;Action&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>ユーティリティの組み合わせ</h2>
+        <p>複数のユーティリティを組み合わせることで、複雑なレイアウトやスタイリングを迅速に実現できます。</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>カードレイアウトの例</h3>
+          </div>
+          <div class="card-body">
+            <pre><code>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-4"&gt;
+  &lt;!-- カード1 --&gt;
+  &lt;div class="p-4 bg-white rounded shadow"&gt;
+    &lt;h3 class="text-lg font-bold mb-2"&gt;Card Title&lt;/h3&gt;
+    &lt;p class="text-gray mb-4"&gt;Card description text goes here.&lt;/p&gt;
+    &lt;div class="flex justify-end"&gt;
+      &lt;button class="btn btn-sm btn-primary"&gt;Action&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- カード2 --&gt;
+  &lt;div class="p-4 bg-white rounded shadow"&gt;
+    &lt;h3 class="text-lg font-bold mb-2"&gt;Card Title&lt;/h3&gt;
+    &lt;p class="text-gray mb-4"&gt;Card description text goes here.&lt;/p&gt;
+    &lt;div class="flex justify-end"&gt;
+      &lt;button class="btn btn-sm btn-primary"&gt;Action&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- カード3 --&gt;
+  &lt;div class="p-4 bg-white rounded shadow"&gt;
+    &lt;h3 class="text-lg font-bold mb-2"&gt;Card Title&lt;/h3&gt;
+    &lt;p class="text-gray mb-4"&gt;Card description text goes here.&lt;/p&gt;
+    &lt;div class="flex justify-end"&gt;
+      &lt;button class="btn btn-sm btn-primary"&gt;Action&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>ベストプラクティス</h2>
+        <div class="card">
+          <div class="card-body">
+            <h3>1. ユーティリティとコンポーネントの適切なバランス</h3>
+            <p>繰り返し使用されるパターンにはコンポーネントクラスを使用し、一度限りのスタイリングやレイアウト調整にはユーティリティクラスを使用します。</p>
+
+            <h3>2. レスポンシブデザインの考慮</h3>
+            <p>モバイルファーストのアプローチを採用し、必要に応じてレスポンシブ接頭辞を使用して画面サイズごとにスタイルを調整します。</p>
+
+            <h3>3. 過度の使用を避ける</h3>
+            <p>多数のユーティリティクラスを使用すると、HTMLが読みにくくなる可能性があります。必要に応じてコンポーネント抽出を検討しましょう。</p>
+
+            <h3>4. 一貫性の維持</h3>
+            <p>スペーシング、色、フォントサイズなどのスタイリングに一貫性を持たせるため、ユーティリティクラスを一貫して使用します。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 BMF-CSS</p>
+    </div>
+  </footer>
+</body>
+</html>

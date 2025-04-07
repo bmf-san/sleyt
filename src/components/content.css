@@ -1,0 +1,174 @@
+/**
+ * Content Component
+ * ウェブサイトのメインコンテンツ部分を定義するコンポーネント
+ */
+
+/* メインコンテンツエリア */
+.content {
+  flex: 1;
+  width: 100%;
+  padding: var(--spacing-4) 0;
+}
+
+/* コンテンツコンテナ */
+.content-container {
+  width: 100%;
+  max-width: var(--container-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+/* コンテンツセクション */
+.content-section {
+  margin-bottom: 2rem;
+}
+
+/* コンテンツセクションタイトル */
+.content-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: hsl(var(--foreground));
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* コンテンツセクション説明 */
+.content-section-description {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1.5rem;
+}
+
+/* 2カラムレイアウト */
+.content-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* 3カラムレイアウト */
+.content-three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* サイドバー付きレイアウト */
+.content-with-sidebar {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+.content-sidebar-left {
+  grid-template-columns: 1fr 3fr;
+}
+
+/* サイドバー */
+.content-sidebar {
+  background-color: hsl(var(--background));
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  padding: 1.5rem;
+}
+
+/* コンテンツカード */
+.content-card {
+  background-color: hsl(var(--card));
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.content-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.content-card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.content-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.content-card-description {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+.content-card-body {
+  padding: 1.5rem;
+}
+
+.content-card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid hsl(var(--border));
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* コンテンツテキストブロック */
+.content-text {
+  max-width: 65ch;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.content-text p {
+  margin-bottom: 1rem;
+}
+
+.content-text h1,
+.content-text h2,
+.content-text h3,
+.content-text h4,
+.content-text h5,
+.content-text h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.content-text ul,
+.content-text ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.content-text li {
+  margin-bottom: 0.5rem;
+}
+
+.content-text blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid hsl(var(--primary));
+  background-color: hsl(var(--muted) / 0.1);
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 992px) {
+  .content-two-columns,
+  .content-three-columns,
+  .content-with-sidebar,
+  .content-sidebar-left {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ダークモード対応 */
+.dark-mode .content-sidebar,
+.dark-mode .content-card {
+  background-color: hsl(var(--card));
+  border-color: hsl(var(--border));
+}

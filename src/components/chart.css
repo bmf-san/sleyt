@@ -1,0 +1,471 @@
+/**
+ * チャートコンポーネント
+ * データを視覚的に表示するためのグラフ構造
+ */
+
+/* チャートコンテナ */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 10rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1rem;
+}
+
+.chart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: hsl(var(--foreground));
+}
+
+.chart-subtitle {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* 共通のチャート要素 */
+.chart {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* 軸線と目盛り */
+.chart-axis {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.chart-axis-line {
+  height: 1px;
+  background-color: hsl(var(--border));
+  position: relative;
+}
+
+.chart-axis-y {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: hsl(var(--border));
+}
+
+.chart-tick {
+  position: absolute;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.chart-tick-x {
+  top: 0.5rem;
+  transform: translateX(-50%);
+}
+
+.chart-tick-y {
+  right: 0.5rem;
+  transform: translateY(50%);
+}
+
+.chart-grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.chart-grid-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: hsl(var(--border) / 0.3);
+}
+
+/* 凡例 */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.chart-legend-color {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* 棒グラフ */
+.chart-bar {
+  display: flex;
+  height: 15rem;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.chart-bar-item {
+  flex: 1;
+  background-color: hsl(var(--primary));
+  min-width: 1.5rem;
+  position: relative;
+  transition: height 0.3s ease, background-color 0.3s ease;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.chart-bar-item:hover {
+  opacity: 0.8;
+}
+
+.chart-bar-label {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
+}
+
+.chart-bar-value {
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+/* カラーバリエーション */
+.chart-bar-item-primary {
+  background-color: hsl(var(--chart-blue));
+}
+
+.chart-bar-item-secondary {
+  background-color: hsl(var(--chart-indigo));
+}
+
+.chart-bar-item-purple {
+  background-color: hsl(var(--chart-purple));
+}
+
+.chart-bar-item-success {
+  background-color: hsl(var(--chart-green));
+}
+
+.chart-bar-item-warning {
+  background-color: hsl(var(--chart-orange));
+}
+
+.chart-bar-item-destructive {
+  background-color: hsl(var(--chart-red));
+}
+
+/* 追加のチャートカラーバリエーション */
+.chart-bar-item-pink {
+  background-color: hsl(var(--chart-pink));
+}
+
+.chart-bar-item-yellow {
+  background-color: hsl(var(--chart-yellow));
+}
+
+.chart-bar-item-teal {
+  background-color: hsl(var(--chart-teal));
+}
+
+.chart-bar-item-cyan {
+  background-color: hsl(var(--chart-cyan));
+}
+
+/* パステルバリエーション */
+.chart-bar-item-pastel-blue {
+  background-color: hsl(var(--chart-pastel-blue));
+}
+
+.chart-bar-item-pastel-indigo {
+  background-color: hsl(var(--chart-pastel-indigo));
+}
+
+.chart-bar-item-pastel-purple {
+  background-color: hsl(var(--chart-pastel-purple));
+}
+
+.chart-bar-item-pastel-pink {
+  background-color: hsl(var(--chart-pastel-pink));
+}
+
+.chart-bar-item-pastel-red {
+  background-color: hsl(var(--chart-pastel-red));
+}
+
+.chart-bar-item-pastel-orange {
+  background-color: hsl(var(--chart-pastel-orange));
+}
+
+.chart-bar-item-pastel-yellow {
+  background-color: hsl(var(--chart-pastel-yellow));
+}
+
+.chart-bar-item-pastel-green {
+  background-color: hsl(var(--chart-pastel-green));
+}
+
+.chart-bar-item-pastel-teal {
+  background-color: hsl(var(--chart-pastel-teal));
+}
+
+.chart-bar-item-pastel-cyan {
+  background-color: hsl(var(--chart-pastel-cyan));
+}
+
+/* 複数データセット */
+.chart-bar-item-group {
+  flex: 1;
+  display: flex;
+  gap: 0.25rem;
+  align-items: flex-end;
+}
+
+/* 水平棒グラフ */
+.chart-bar-horizontal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-left: 6rem;
+  position: relative;
+}
+
+.chart-bar-horizontal-item {
+  height: 1.5rem;
+  background-color: hsl(var(--primary));
+  transition: width 0.3s ease, background-color 0.3s ease;
+  border-radius: 0 0.25rem 0.25rem 0;
+  position: relative;
+}
+
+.chart-bar-horizontal-label {
+  position: absolute;
+  left: -5.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
+  width: 5rem;
+  text-align: right;
+}
+
+.chart-bar-horizontal-value {
+  position: absolute;
+  right: -3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+/* 円グラフ */
+.chart-pie {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+}
+
+.chart-pie-segment {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 50% 0%);
+  transform-origin: center;
+}
+
+/* 円グラフのホバー効果 */
+.chart-pie-segment:hover {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
+
+/* ドーナツグラフ */
+.chart-donut {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.chart-donut::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  background-color: hsl(var(--card));
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.chart-donut-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  z-index: 2;
+  text-align: center;
+}
+
+/* 折れ線グラフ */
+.chart-line {
+  height: 15rem;
+  position: relative;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.chart-line-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chart-line-path {
+  fill: none;
+  stroke: hsl(var(--primary));
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart-line-area {
+  fill: hsl(var(--primary) / 0.1);
+  stroke: none;
+}
+
+.chart-line-point {
+  fill: hsl(var(--card));
+  stroke: hsl(var(--primary));
+  stroke-width: 2;
+  r: 4;
+  transition: r 0.2s ease;
+}
+
+.chart-line-point:hover {
+  r: 6;
+  stroke-width: 3;
+}
+
+/* ツールチップ */
+.chart-tooltip {
+  position: absolute;
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid hsl(var(--border));
+  pointer-events: none;
+  z-index: 10;
+  display: none;
+}
+
+/* 点をホバーした時のツールチップ表示 */
+.chart-line-point:hover + .chart-tooltip,
+.chart-pie-segment:hover + .chart-tooltip,
+.chart-bar-item:hover + .chart-tooltip {
+  display: block;
+}
+
+.chart-tooltip-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.chart-tooltip-value {
+  color: hsl(var(--primary));
+  font-weight: 500;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 640px) {
+  .chart-legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .chart-bar, .chart-line {
+    height: 10rem;
+  }
+
+  .chart-pie, .chart-donut {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+/* ダークモード対応 */
+.dark-mode .chart-line-point {
+  fill: hsl(var(--muted));
+}
+
+.dark-mode .chart-grid-line {
+  background-color: hsl(var(--border) / 0.2);
+}
+
+/* 円グラフセグメント色定義 */
+.segment-1 { background-color: hsl(var(--chart-blue)); }
+.segment-2 { background-color: hsl(var(--chart-indigo)); }
+.segment-3 { background-color: hsl(var(--chart-purple)); }
+.segment-4 { background-color: hsl(var(--chart-green)); }
+.segment-5 { background-color: hsl(var(--chart-orange)); }
+.segment-6 { background-color: hsl(var(--chart-red)); }
+.segment-7 { background-color: hsl(var(--chart-yellow)); }
+.segment-8 { background-color: hsl(var(--chart-teal)); }
+.segment-9 { background-color: hsl(var(--chart-pink)); }
+.segment-10 { background-color: hsl(var(--chart-cyan)); }
+
+/* パステルバージョン */
+.segment-pastel-1 { background-color: hsl(var(--chart-pastel-blue)); }
+.segment-pastel-2 { background-color: hsl(var(--chart-pastel-indigo)); }
+.segment-pastel-3 { background-color: hsl(var(--chart-pastel-purple)); }
+.segment-pastel-4 { background-color: hsl(var(--chart-pastel-green)); }
+.segment-pastel-5 { background-color: hsl(var(--chart-pastel-orange)); }
+.segment-pastel-6 { background-color: hsl(var(--chart-pastel-red)); }
+.segment-pastel-7 { background-color: hsl(var(--chart-pastel-yellow)); }
+.segment-pastel-8 { background-color: hsl(var(--chart-pastel-teal)); }
+.segment-pastel-9 { background-color: hsl(var(--chart-pastel-pink)); }
+.segment-pastel-10 { background-color: hsl(var(--chart-pastel-cyan)); }

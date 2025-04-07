@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMF-CSS Documentation</title>
+  <link rel="stylesheet" href="../dist/bmf-css.min.css">
+</head>
+<body>
+  <div class="layout centered">
+    <main class="content">
+      <header class="content-header text-center">
+        <h1>BMF-CSS</h1>
+        <p>CMS向けの軽量でシンプルなUIスタイルフレームワーク</p>
+      </header>
+
+      <section class="mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="card">
+            <div class="card-body text-center">
+              <h2 class="card-title">ユーザーガイド</h2>
+              <p>BMF-CSSの使用方法、コンポーネント、ユーティリティ、テーマなどの詳細なガイド</p>
+              <a href="users_guide/index.html" class="btn btn-primary mt-4">ユーザーガイドを見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body text-center">
+              <h2 class="card-title">開発者ガイド</h2>
+              <p>BMF-CSSへの貢献、コーディング規約、リリースプロセスなどの開発者向け情報</p>
+              <a href="developer_guide/index.html" class="btn btn-secondary mt-4">開発者ガイドを見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-8">
+        <div class="card">
+          <div class="card-header">
+            <h2>BMF-CSSの特徴</h2>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>軽量かつシンプルな設計</li>
+              <li>CSSのみ（JSやプリプロセッサなし）</li>
+              <li>ダークモード対応</li>
+              <li>モバイルフレンドリー（レスポンシブ）</li>
+              <li>アクセシビリティ考慮（<code>focus-visible</code>、<code>aria-*</code>対応）</li>
+              <li>セマンティック + ユーティリティのハイブリッド設計</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-6">
+        <div class="card">
+          <div class="card-header">
+            <h2>クイックスタート</h2>
+          </div>
+          <div class="card-body">
+            <h3>インストール</h3>
+            <pre><code>npm install @bmf-san/bmf-css</code></pre>
+            <p>または</p>
+            <pre><code>yarn add @bmf-san/bmf-css</code></pre>
+
+            <h3 class="mt-4">使用方法</h3>
+            <p>HTMLファイルに直接インポート:</p>
+            <pre><code>&lt;link rel="stylesheet" href="node_modules/@bmf-san/bmf-css/dist/bmf-css.min.css"&gt;</code></pre>
+
+            <p>JavaScriptでインポート:</p>
+            <pre><code>// React, Vue, Angularなど
+import '@bmf-san/bmf-css/dist/bmf-css.min.css';</code></pre>
+
+            <p class="mt-4">詳細な使用方法は<a href="users_guide/installation.html">インストールガイド</a>をご覧ください。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="text-center">
+        <p>&copy; 2024 BMF-CSS</p>
+        <p class="mt-2">
+          <a href="https://github.com/bmf-san/bmf-css" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

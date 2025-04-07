@@ -1,0 +1,225 @@
+/**
+ * ポップオーバーコンポーネント
+ * クリックやフォーカスで表示される情報ポップアップ
+ */
+
+/* ポップオーバートリガー */
+.popover-trigger {
+  display: inline-flex;
+  position: relative;
+}
+
+/* ポップオーバーコンテナ */
+.popover {
+  position: absolute;
+  z-index: 50;
+  min-width: 12rem;
+  max-width: var(--popover-max-width, 24rem);
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  box-shadow: var(--shadow-md);
+  animation-duration: 0.2s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+  transform-origin: var(--popover-transform-origin, top);
+}
+
+/* ポップオーバー矢印 */
+.popover::before,
+.popover::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.popover::before {
+  border-width: 6px;
+  z-index: 1;
+}
+
+.popover::after {
+  border-width: 5px;
+  z-index: 2;
+}
+
+/* トップ位置 */
+.popover[data-position="top"] {
+  margin-bottom: 10px;
+  animation-name: popoverSlideDownAndFade;
+  --popover-transform-origin: bottom;
+}
+
+.popover[data-position="top"]::before {
+  bottom: -12px;
+  left: calc(50% - 6px);
+  border-color: hsl(var(--border)) transparent transparent transparent;
+}
+
+.popover[data-position="top"]::after {
+  bottom: -10px;
+  left: calc(50% - 5px);
+  border-color: hsl(var(--popover)) transparent transparent transparent;
+}
+
+/* ボトム位置 */
+.popover[data-position="bottom"] {
+  margin-top: 10px;
+  animation-name: popoverSlideUpAndFade;
+  --popover-transform-origin: top;
+}
+
+.popover[data-position="bottom"]::before {
+  top: -12px;
+  left: calc(50% - 6px);
+  border-color: transparent transparent hsl(var(--border)) transparent;
+}
+
+.popover[data-position="bottom"]::after {
+  top: -10px;
+  left: calc(50% - 5px);
+  border-color: transparent transparent hsl(var(--popover)) transparent;
+}
+
+/* 左位置 */
+.popover[data-position="left"] {
+  margin-right: 10px;
+  animation-name: popoverSlideRightAndFade;
+  --popover-transform-origin: right;
+}
+
+.popover[data-position="left"]::before {
+  right: -12px;
+  top: calc(50% - 6px);
+  border-color: transparent transparent transparent hsl(var(--border));
+}
+
+.popover[data-position="left"]::after {
+  right: -10px;
+  top: calc(50% - 5px);
+  border-color: transparent transparent transparent hsl(var(--popover));
+}
+
+/* 右位置 */
+.popover[data-position="right"] {
+  margin-left: 10px;
+  animation-name: popoverSlideLeftAndFade;
+  --popover-transform-origin: left;
+}
+
+.popover[data-position="right"]::before {
+  left: -12px;
+  top: calc(50% - 6px);
+  border-color: transparent hsl(var(--border)) transparent transparent;
+}
+
+.popover[data-position="right"]::after {
+  left: -10px;
+  top: calc(50% - 5px);
+  border-color: transparent hsl(var(--popover)) transparent transparent;
+}
+
+/* ポップオーバーヘッダー */
+.popover-header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid hsl(var(--border));
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ポップオーバーコンテンツ */
+.popover-content {
+  padding: 0.75rem 1rem;
+  overflow-y: auto;
+  max-height: var(--popover-content-max-height, 20rem);
+}
+
+/* ポップオーバーフッター */
+.popover-footer {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid hsl(var(--border));
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* 閉じるボタン */
+.popover-close {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--muted-foreground));
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.popover-close:hover {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.popover-close svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* アニメーション */
+@keyframes popoverSlideUpAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popoverSlideRightAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popoverSlideDownAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popoverSlideLeftAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ダークモード対応 */
+.dark-mode .popover {
+  box-shadow: var(--shadow-dark);
+}

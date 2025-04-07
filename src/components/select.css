@@ -1,0 +1,199 @@
+/**
+ * Select Component
+ * サンプルアプリケーションのセレクトコンポーネント
+ */
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.select {
+  appearance: none;
+  position: relative;
+  width: 100%;
+  min-width: 10rem;
+  height: 2.5rem;
+  padding: 0 2.5rem 0 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* セレクト矢印 */
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.75rem;
+  height: 0.75rem;
+  border-right: 2px solid hsl(var(--foreground));
+  border-bottom: 2px solid hsl(var(--foreground));
+  pointer-events: none;
+  transform: translateY(-50%) rotate(45deg);
+  opacity: 0.6;
+}
+
+.select:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.3);
+}
+
+.select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: hsl(var(--muted));
+}
+
+/* セレクトサイズ */
+.select-sm {
+  height: 2rem;
+  font-size: 0.75rem;
+  padding: 0 2rem 0 0.5rem;
+}
+
+.select-lg {
+  height: 3rem;
+  font-size: 1rem;
+  padding: 0 3rem 0 1rem;
+}
+
+/* エラー状態 */
+.select.error {
+  border-color: hsl(var(--destructive));
+}
+
+.select.error:focus {
+  box-shadow: 0 0 0 2px hsl(var(--destructive) / 0.3);
+}
+
+/* カスタムセレクト（拡張機能） */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 10rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-select-trigger:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.3);
+}
+
+.custom-select-arrow {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-right: 2px solid hsl(var(--foreground));
+  border-bottom: 2px solid hsl(var(--foreground));
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  opacity: 0.6;
+}
+
+.custom-select.open .custom-select-arrow {
+  transform: rotate(-135deg);
+}
+
+.custom-select-dropdown {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  width: 100%;
+  max-height: 15rem;
+  overflow-y: auto;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+
+.custom-select.open .custom-select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.custom-select-option {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-select-option:hover {
+  background-color: hsl(var(--secondary));
+}
+
+.custom-select-option.selected {
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.custom-select-option.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 複数選択 */
+.custom-select-multiple .custom-select-trigger {
+  height: auto;
+  min-height: 2.5rem;
+  padding: 0.25rem;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.custom-select-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+.custom-select-tag-remove {
+  margin-left: 0.25rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.custom-select-tag-remove:hover {
+  opacity: 1;
+}

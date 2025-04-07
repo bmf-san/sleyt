@@ -1,0 +1,98 @@
+/**
+ * Basic Typography Styles
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: inherit;
+}
+
+h1 {
+  font-size: var(--font-3xl);
+}
+
+h2 {
+  font-size: var(--font-2xl);
+}
+
+h3 {
+  font-size: var(--font-xl);
+}
+
+h4 {
+  font-size: var(--font-lg);
+}
+
+h5 {
+  font-size: var(--font-base);
+}
+
+h6 {
+  font-size: var(--font-sm);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-700);
+}
+
+blockquote {
+  margin: 0 0 var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-left: var(--border-width-normal) solid var(--color-muted);
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-sm);
+}
+
+code {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-sm);
+  color: var(--color-accent);
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-sm);
+}
+
+pre {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-sm);
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-4);
+  overflow: auto;
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-md);
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  padding-left: var(--spacing-6);
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: var(--spacing-1);
+}

@@ -1,0 +1,247 @@
+/**
+ * セレクトドロップダウンコンポーネント
+ * セレクトボックスの選択肢部分のスタイル
+ */
+
+/* ドロップダウンコンテナ */
+.select-dropdown {
+  position: absolute;
+  z-index: 50;
+  min-width: 8rem;
+  width: var(--dropdown-width, 100%);
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  box-shadow: var(--shadow-lg);
+  transform-origin: top;
+  animation: dropdown-in 0.15s ease-out;
+  margin-top: 0.25rem;
+}
+
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ドロップダウン内部のスクロール領域 */
+.select-dropdown-viewport {
+  max-height: var(--dropdown-max-height, 15rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted)) transparent;
+}
+
+.select-dropdown-viewport::-webkit-scrollbar {
+  width: 6px;
+}
+
+.select-dropdown-viewport::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.select-dropdown-viewport::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted));
+  border-radius: 3px;
+}
+
+/* ドロップダウンアイテム */
+.select-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  user-select: none;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+}
+
+.select-item:hover {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+/* アクティブなアイテム */
+.select-item.selected {
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  font-weight: 500;
+}
+
+.select-item.selected:hover {
+  background-color: hsl(var(--primary) / 0.15);
+}
+
+/* 選択肢アイコン (チェックマーク) */
+.select-item.selected::after {
+  content: "";
+  position: absolute;
+  right: 0.75rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+/* 無効アイテム */
+.select-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* グループヘッダー */
+.select-group-label {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* セパレーター */
+.select-separator {
+  height: 1px;
+  background-color: hsl(var(--border));
+  margin: 0.25rem 0;
+}
+
+/* 空の状態 */
+.select-empty {
+  padding: 0.75rem;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+/* 検索入力 */
+.select-search {
+  padding: 0.5rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.select-search-input {
+  width: 100%;
+  height: 2rem;
+  padding: 0 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--input));
+  background-color: hsl(var(--background));
+  font-size: 0.875rem;
+}
+
+.select-search-input:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.3);
+}
+
+/* ラベル付きアイテム */
+.select-item-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-item-text {
+  font-weight: 500;
+}
+
+.select-item-description {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* アイコン付きアイテム */
+.select-item-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.select-item-icon img,
+.select-item-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* モバイル対応 */
+@media (max-width: 640px) {
+  .select-dropdown {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    animation: dropdown-mobile-in 0.3s ease-out;
+    z-index: 100;
+  }
+
+  @keyframes dropdown-mobile-in {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .select-dropdown-viewport {
+    max-height: 50vh;
+  }
+
+  .select-dropdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    animation: fade-in 0.2s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .select-item {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* ダークモード調整 */
+.dark-mode .select-dropdown {
+  box-shadow: var(--shadow-dark);
+}
+
+.dark-mode .select-item.selected {
+  background-color: hsl(var(--primary) / 0.2);
+}
+
+.dark-mode .select-item.selected:hover {
+  background-color: hsl(var(--primary) / 0.25);
+}

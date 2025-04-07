@@ -1,0 +1,164 @@
+/**
+ * アコーディオンコンポーネント
+ * 折りたたみ可能なコンテンツパネル
+ */
+
+/* アコーディオンコンテナ */
+.accordion {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* アコーディオンアイテム */
+.accordion-item {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.accordion-item:first-child {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.accordion-item:last-child {
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  border-bottom: none;
+}
+
+/* アコーディオントリガー */
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.accordion-trigger:hover {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+/* アコーディオントリガーのフォーカス状態 */
+.accordion-trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
+}
+
+/* アコーディオンアイコン */
+.accordion-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  color: hsl(var(--foreground));
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* アコーディオンコンテンツ */
+.accordion-content {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.2s ease-out;
+}
+
+.accordion-content-inner {
+  padding: 0 1rem 1rem 1rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+/* アクティブなアコーディオン */
+.accordion-item-active .accordion-content {
+  height: auto;
+}
+
+/* ボーダー付きアコーディオン */
+.accordion-bordered {
+  border: 1px solid hsl(var(--border));
+}
+
+.accordion-bordered .accordion-item {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.accordion-bordered .accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* サイズバリエーション */
+.accordion-sm .accordion-trigger {
+  padding: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.accordion-sm .accordion-content-inner {
+  padding: 0 0.75rem 0.75rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.accordion-lg .accordion-trigger {
+  padding: 1.25rem;
+  font-size: 1rem;
+}
+
+.accordion-lg .accordion-content-inner {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  font-size: 1rem;
+}
+
+/* アコーディオンアイコンの位置 */
+.accordion-icon-left .accordion-trigger {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.accordion-icon-left .accordion-icon {
+  margin-right: 0.75rem;
+}
+
+/* ダークモード対応 */
+.dark-mode .accordion-trigger:hover {
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+/* アニメーションスタイル */
+@keyframes accordionSlideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--accordion-content-height);
+  }
+}
+
+@keyframes accordionSlideUp {
+  from {
+    height: var(--accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* アコーディオングループ */
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accordion-group .accordion {
+  margin: 0;
+}

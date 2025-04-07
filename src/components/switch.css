@@ -1,0 +1,184 @@
+/**
+ * スイッチコンポーネント
+ * shadcn/uiスタイルのトグル/スイッチコンポーネント
+ */
+
+/* ベーススイッチスタイル */
+.switch {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* スイッチラベル */
+.switch-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 0.5rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* スイッチトラック（背景） */
+.switch-label::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 2.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background-color: hsl(var(--muted));
+  transition: all 0.2s ease-in-out;
+  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* スイッチサム（ノブ） */
+.switch-label::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background-color: hsl(var(--background));
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* チェック時のスタイル */
+.switch:checked + .switch-label::before {
+  background-color: hsl(var(--primary));
+}
+
+.switch:checked + .switch-label::after {
+  transform: translateX(1rem);
+  background-color: hsl(var(--primary-foreground));
+}
+
+/* ホバースタイル */
+.switch + .switch-label:hover::before {
+  background-color: hsl(var(--muted-foreground));
+}
+
+.switch:checked + .switch-label:hover::before {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+/* フォーカススタイル */
+.switch:focus-visible + .switch-label::before {
+  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
+}
+
+/* 無効スタイル */
+.switch:disabled + .switch-label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* サイズバリアント */
+/* スモール */
+.switch.switch-sm + .switch-label::before {
+  width: 2rem;
+  height: 1.25rem;
+}
+
+.switch.switch-sm + .switch-label::after {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.switch.switch-sm:checked + .switch-label::after {
+  transform: translateX(0.75rem);
+}
+
+/* ラージ */
+.switch.switch-lg + .switch-label::before {
+  width: 3rem;
+  height: 1.75rem;
+}
+
+.switch.switch-lg + .switch-label::after {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.switch.switch-lg:checked + .switch-label::after {
+  transform: translateX(1.25rem);
+}
+
+/* カラーバリアント */
+/* プライマリ（デフォルト） */
+.switch.switch-primary:checked + .switch-label::before {
+  background-color: hsl(var(--primary));
+}
+
+.switch.switch-primary:checked + .switch-label::after {
+  background-color: hsl(var(--primary-foreground));
+}
+
+/* セカンダリ */
+.switch.switch-secondary:checked + .switch-label::before {
+  background-color: hsl(var(--secondary));
+}
+
+.switch.switch-secondary:checked + .switch-label::after {
+  background-color: hsl(var(--secondary-foreground));
+}
+
+/* デストラクティブ */
+.switch.switch-destructive:checked + .switch-label::before {
+  background-color: hsl(var(--destructive));
+}
+
+.switch.switch-destructive:checked + .switch-label::after {
+  background-color: hsl(var(--destructive-foreground));
+}
+
+/* 成功 */
+.switch.switch-success:checked + .switch-label::before {
+  background-color: hsl(var(--success));
+}
+
+.switch.switch-success:checked + .switch-label::after {
+  background-color: hsl(var(--success-foreground));
+}
+
+/* 警告 */
+.switch.switch-warning:checked + .switch-label::before {
+  background-color: hsl(var(--warning));
+}
+
+.switch.switch-warning:checked + .switch-label::after {
+  background-color: hsl(var(--warning-foreground));
+}
+
+/* ダークモード調整 */
+.dark-mode .switch + .switch-label::before {
+  background-color: hsl(var(--muted));
+}
+
+.dark-mode .switch + .switch-label::after {
+  background-color: hsl(var(--muted-foreground));
+}
+
+.dark-mode .switch:checked + .switch-label::before {
+  background-color: hsl(var(--primary));
+}
+
+.dark-mode .switch:checked + .switch-label::after {
+  background-color: hsl(var(--primary-foreground));
+}
+
+/* ラベル配置 */
+.switch-label-start {
+  flex-direction: row-reverse;
+}
+
+.switch-label-start .switch-label::before,
+.switch-label-start .switch-label::after {
+  margin-right: 0.5rem;
+}

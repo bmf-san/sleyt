@@ -1,0 +1,47 @@
+{
+  "name": "@bmf-san/bmf-css",
+  "version": "0.1.0",
+  "description": "CMS向けの共通UIスタイルフレームワーク",
+  "main": "dist/bmf-css.min.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "postcss src/index.css -o dist/bmf-css.css && postcss src/index.css -o dist/bmf-css.min.css --env production",
+    "lint": "eslint .",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:a11y": "stylelint --config .stylelintrc-a11y.json \"src/**/*.css\"",
+    "lint:fix": "eslint . --fix && stylelint \"src/**/*.css\" --fix",
+    "test": "jest",
+    "test:a11y": "jest --testPathPattern=tests/a11y"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "ui",
+    "cms"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@axe-core/puppeteer": "^4.8.1",
+    "@babel/preset-react": "^7.26.3",
+    "autoprefixer": "^10.4.14",
+    "css-loader": "^7.1.2",
+    "cssnano": "^6.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "jest": "^29.7.0",
+    "jest-puppeteer": "^9.0.1",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "puppeteer": "^21.6.1",
+    "style-loader": "^4.0.0",
+    "stylelint": "^15.6.2",
+    "stylelint-a11y": "^1.2.3",
+    "webpack": "^5.99.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  }
+}

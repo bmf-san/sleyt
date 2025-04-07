@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Themes - BMF-CSS</title>
+  <link rel="stylesheet" href="../../dist/bmf-css.min.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="logo">BMF-CSS</h1>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="../index.html">Overview</a></li>
+          <li><a href="../installation.html">Installation</a></li>
+          <li><a href="../implementation-approaches.html">Implementation Approaches</a></li>
+          <li>
+            <a href="../base/index.html">Base</a>
+            <ul>
+              <li><a href="../base/reset.html">Reset & Normalize</a></li>
+              <li><a href="../base/typography.html">Typography</a></li>
+              <li><a href="../base/links.html">Links</a></li>
+              <li><a href="../base/forms.html">Forms</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../tokens/index.html">Tokens</a>
+            <ul>
+              <li><a href="../tokens/colors.html">Colors</a></li>
+              <li><a href="../tokens/typography.html">Typography</a></li>
+              <li><a href="../tokens/spacing.html">Spacing</a></li>
+              <li><a href="../tokens/shadows.html">Shadows & Elevation</a></li>
+              <li><a href="../tokens/breakpoints.html">Breakpoints</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../components/index.html">Components</a>
+            <ul>
+              <li><a href="../components/buttons.html">Buttons</a></li>
+              <li><a href="../components/forms.html">Form Elements</a></li>
+              <li><a href="../components/cards.html">Cards</a></li>
+              <li><a href="../components/navigation.html">Navigation</a></li>
+              <li><a href="../components/alerts.html">Alerts</a></li>
+              <li><a href="../components/modals.html">Modals</a></li>
+              <li><a href="../components/tooltips.html">Tooltips</a></li>
+              <li><a href="../components/tabs.html">Tabs</a></li>
+              <li><a href="../components/tables.html">Tables</a></li>
+              <li><a href="../components/pagination.html">Pagination</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../utilities/index.html">Utilities</a>
+            <ul>
+              <li><a href="../utilities/spacing.html">Spacing</a></li>
+              <li><a href="../utilities/text.html">Text</a></li>
+              <li><a href="../utilities/display.html">Display</a></li>
+              <li><a href="../utilities/colors.html">Colors & Background</a></li>
+              <li><a href="../utilities/borders.html">Borders & Shadows</a></li>
+              <li><a href="../utilities/flex.html">Flex & Grid</a></li>
+              <li><a href="../utilities/position.html">Position</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="index.html" class="active">Themes</a>
+            <ul>
+              <li><a href="default.html">Default Theme</a></li>
+              <li><a href="dark-mode.html">Dark Mode</a></li>
+              <li><a href="customization.html">Customization</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../demos/index.html">Demos</a>
+            <ul>
+              <li><a href="../demos/blog.html">Blog</a></li>
+              <li><a href="../demos/admin.html">Admin Dashboard</a></li>
+              <li><a href="../demos/dashboard.html">Dashboard</a></li>
+              <li><a href="../demos/ecommerce.html">E-Commerce</a></li>
+              <li><a href="../demos/portfolio.html">Portfolio</a></li>
+              <li><a href="../demos/landing.html">Landing Page</a></li>
+            </ul>
+          </li>
+          <li><a href="../api-reference.html">API Reference</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="content-header">
+        <h1>テーマ</h1>
+        <p>アプリケーション全体のルック＆フィールを制御するための包括的なテーマシステム</p>
+      </header>
+
+      <section>
+        <h2>概要</h2>
+        <p>BMF-CSSのテーマシステムは、CSSカスタムプロパティ（変数）を活用して、アプリケーション全体のスタイルを一貫して管理します。デフォルトテーマをベースにしながら、ダークモードの提供や独自テーマの作成が簡単に行えます。</p>
+      </section>
+
+      <section>
+        <h2>テーマカテゴリー</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">デフォルトテーマ</h3>
+              <p>BMF-CSSの標準テーマ。清潔でモダンなデザインを提供し、あらゆるプロジェクトの基盤となります。</p>
+              <a href="default.html" class="btn btn-primary">デフォルトテーマを見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">ダークモード</h3>
+              <p>低照度環境での使用に最適化された、コントラストの高いダークテーマです。3つの実装方法を提供します。</p>
+              <a href="dark-mode.html" class="btn btn-primary">ダークモードを見る</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">カスタマイズ</h3>
+              <p>独自のブランドカラーやスタイルに合わせて、テーマを簡単にカスタマイズする方法を説明します。</p>
+              <a href="customization.html" class="btn btn-primary">カスタマイズを見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>テーマの仕組み</h2>
+        <p>BMF-CSSのテーマは、CSSカスタムプロパティを使用して以下の方法で実装されています：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <h3>1. ルートレベルの変数定義</h3>
+            <p>すべてのテーマ変数は<code>:root</code>セレクタで定義され、アプリケーション全体で使用可能です：</p>
+
+            <pre><code>:root {
+  /* カラートークン */
+  --color-primary: #3b82f6;
+  --color-secondary: #6b7280;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+
+  /* 背景と前景 */
+  --background: #ffffff;
+  --foreground: #111827;
+  --background-subtle: #f9fafb;
+
+  /* その他のテーマ変数 */
+  /* ... */
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3>2. テーマ変数の使用</h3>
+            <p>コンポーネントとユーティリティは、直接色やサイズを指定する代わりに変数を参照します：</p>
+
+            <pre><code>.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+.card {
+  background-color: var(--background);
+  color: var(--foreground);
+  box-shadow: var(--shadow-md);
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3>3. テーマの切り替え</h3>
+            <p>新しいテーマは、特定のセレクタ内でカスタムプロパティを再定義することで適用されます：</p>
+
+            <pre><code>.theme-dark {
+  --background: #1f2937;
+  --foreground: #f9fafb;
+  --background-subtle: #374151;
+  --color-primary: #60a5fa;
+  /* 他のダークテーマ変数 */
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>テーマ実装パターン</h2>
+        <p>BMF-CSSは、テーマ実装のための3つの異なるアプローチを提供します：</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>CSS-Basedパターン</h3>
+          </div>
+          <div class="card-body">
+            <p>クラスベースのテーマ切り替えを使用します：</p>
+
+            <pre><code>&lt;!-- HTMLにテーマクラスを追加 --&gt;
+&lt;html class="theme-dark"&gt;
+  ...
+&lt;/html&gt;</code></pre>
+
+            <p>CSSでテーマを定義：</p>
+
+            <pre><code>/* デフォルトテーマ（ライトモード） */
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  /* 他の変数 */
+}
+
+/* ダークテーマ */
+.theme-dark {
+  --background: #1f2937;
+  --foreground: #f9fafb;
+  /* 他の変数 */
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Hybridパターン</h3>
+          </div>
+          <div class="card-body">
+            <p>JavaScriptとCSSを組み合わせたアプローチ：</p>
+
+            <pre><code>&lt;!-- HTMLに切り替えボタンを追加 --&gt;
+&lt;button id="theme-toggle" class="btn"&gt;ダークモード切替&lt;/button&gt;
+
+&lt;script&gt;
+  // JavaScriptでテーマを切り替え
+  document.getElementById('theme-toggle').addEventListener('click', function() {
+    document.documentElement.classList.toggle('theme-dark');
+
+    // ユーザー設定を保存（オプション）
+    const isDarkMode = document.documentElement.classList.contains('theme-dark');
+    localStorage.setItem('darkMode', isDarkMode);
+  });
+
+  // 保存されたユーザー設定を読み込む
+  document.addEventListener('DOMContentLoaded', function() {
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (savedDarkMode) {
+      document.documentElement.classList.add('theme-dark');
+    }
+  });
+&lt;/script&gt;</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Attribute-Basedパターン</h3>
+          </div>
+          <div class="card-body">
+            <p>データ属性を使用したアプローチ：</p>
+
+            <pre><code>&lt;!-- HTMLにテーマ属性を追加 --&gt;
+&lt;html data-theme="dark"&gt;
+  ...
+&lt;/html&gt;</code></pre>
+
+            <p>CSSでテーマを定義：</p>
+
+            <pre><code>/* デフォルトテーマ（ライトモード） */
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  /* 他の変数 */
+}
+
+/* ダークテーマ */
+[data-theme="dark"] {
+  --background: #1f2937;
+  --foreground: #f9fafb;
+  /* 他の変数 */
+}</code></pre>
+
+            <p>JavaScriptでテーマを切り替え：</p>
+
+            <pre><code>&lt;script&gt;
+  // データ属性を使用してテーマを切り替え
+  function toggleTheme() {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  }
+
+  // 保存されたテーマを適用
+  document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  });
+&lt;/script&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>システム設定の検出</h2>
+        <p>BMF-CSSは、ユーザーのシステム設定（ライト/ダークモード設定）に基づいてテーマを自動的に切り替えることもサポートしています。</p>
+
+        <div class="card">
+          <div class="card-body">
+            <h3>CSSのみでの実装</h3>
+            <pre><code>/* システム設定に基づいて適用されるダークテーマ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1f2937;
+    --foreground: #f9fafb;
+    /* 他のダークテーマ変数 */
+  }
+}</code></pre>
+
+            <h3>JavaScriptでの実装</h3>
+            <pre><code>&lt;script&gt;
+  // システム設定を検出
+  function detectColorScheme() {
+    // ローカルストレージにユーザー設定があればそれを優先
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      return;
+    }
+
+    // システム設定を検出
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+
+    // システム設定の変更を監視
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      const newTheme = event.matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+    });
+  }
+
+  // ページ読み込み時に実行
+  document.addEventListener('DOMContentLoaded', detectColorScheme);
+&lt;/script&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>カスタムテーマの作成</h2>
+        <p>BMF-CSSの既存のテーマを拡張して、独自のカスタムテーマを簡単に作成できます：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <h3>1. カスタムテーマファイルの作成</h3>
+            <pre><code>/* custom-theme.css */
+.theme-brand {
+  /* オーバーライドするカラー変数 */
+  --color-primary: #8e44ad;
+  --color-secondary: #16a085;
+
+  /* 背景と前景 */
+  --background: #f8f9fa;
+  --foreground: #2c3e50;
+
+  /* コンポーネント固有の変数もオーバーライド可能 */
+  --button-border-radius: 2px;
+  --card-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}</code></pre>
+
+            <h3>2. HTMLでテーマを適用</h3>
+            <pre><code>&lt;!-- クラスベースのアプローチ --&gt;
+&lt;html class="theme-brand"&gt;
+  ...
+&lt;/html&gt;
+
+&lt;!-- または、属性ベースのアプローチ --&gt;
+&lt;html data-theme="brand"&gt;
+  ...
+&lt;/html&gt;</code></pre>
+
+            <h3>3. 複数テーマの管理</h3>
+            <pre><code>/* テーマを切り替える関数 */
+function setTheme(themeName) {
+  // 既存のテーマクラスをすべて削除
+  document.documentElement.classList.remove('theme-dark', 'theme-light', 'theme-brand');
+
+  // 新しいテーマを設定
+  if (themeName !== 'default') {
+    document.documentElement.classList.add(`theme-${themeName}`);
+  }
+
+  // 設定を保存
+  localStorage.setItem('theme', themeName);
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>テーマのベストプラクティス</h2>
+        <div class="card">
+          <div class="card-body">
+            <h3>1. 変数の抽象化レベルを保つ</h3>
+            <p>テーマ変数を直接使用せず、コンポーネント固有の変数を介して間接的に使用します：</p>
+
+            <pre><code>/* 良い例 */
+:root {
+  /* 基本カラートークン */
+  --color-primary: #3b82f6;
+
+  /* コンポーネント固有の変数 */
+  --button-primary-bg: var(--color-primary);
+  --button-primary-text: white;
+}
+
+.btn-primary {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+}</code></pre>
+
+            <h3>2. ユーザー設定の尊重</h3>
+            <p>常にユーザーの明示的な設定をシステム設定よりも優先します。</p>
+
+            <h3>3. テーマ切り替え時のちらつき防止</h3>
+            <pre><code>/* CSSでちらつきを最小限に抑える */
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}</code></pre>
+
+            <pre><code>&lt;script&gt;
+// テーマ切り替え時にアニメーションを一時的に無効化
+function setThemeWithoutFlicker(themeName) {
+  // トランジションを一時的に無効化
+  document.documentElement.classList.add('color-theme-in-transition');
+
+  // テーマを設定
+  document.documentElement.setAttribute('data-theme', themeName);
+
+  // 強制的にリフローを発生させる
+  window.getComputedStyle(document.documentElement).backgroundColor;
+
+  // トランジションを再度有効化（次のフレームで）
+  setTimeout(() => {
+    document.documentElement.classList.remove('color-theme-in-transition');
+  }, 1);
+}
+&lt;/script&gt;</code></pre>
+
+            <h3>4. 一貫したコントラスト比の維持</h3>
+            <p>すべてのテーマで、アクセシビリティのためのコントラスト比を確保します。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 BMF-CSS</p>
+    </div>
+  </footer>
+</body>
+</html>
