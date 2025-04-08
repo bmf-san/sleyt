@@ -1,0 +1,176 @@
+/**
+ * Icon Component
+ * BMF-CSSで使用されるアイコンコンポーネントのスタイル
+ */
+
+/* 基本アイコンスタイル */
+[class^="icon-"]::before,
+[class*=" icon-"]::before,
+.bmf-icon::before {
+  font-family: 'BMFIcons';
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* サイズバリエーション */
+.bmf-icon-xs::before,
+.icon-xs::before {
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+}
+
+.bmf-icon-sm::before,
+.icon-sm::before {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.bmf-icon::before,
+.icon-md::before {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.bmf-icon-lg::before,
+.icon-lg::before {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.bmf-icon-xl::before,
+.icon-xl::before {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+/* 個別アイコン定義 */
+.icon-logo::before {
+  content: var(--icon-logo);
+}
+
+.icon-menu::before {
+  content: var(--icon-menu);
+}
+
+.icon-add::before {
+  content: var(--icon-add);
+}
+
+.icon-user::before {
+  content: var(--icon-user);
+}
+
+.icon-home::before {
+  content: var(--icon-home);
+}
+
+.icon-content::before {
+  content: var(--icon-content);
+}
+
+.icon-settings::before {
+  content: var(--icon-settings);
+}
+
+.icon-calendar::before {
+  content: var(--icon-calendar);
+}
+
+.icon-angle-left::before {
+  content: var(--icon-angle-left);
+}
+
+.icon-angle-right::before {
+  content: var(--icon-angle-right);
+}
+
+/* テキスト付きアイコン */
+.icon-with-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-with-text::before {
+  margin-right: 0.5rem;
+}
+
+/* アイコンだけのボタン用スタイル */
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.button-icon::before {
+  margin-right: 0;
+}
+
+/* アイコンのカラーバリエーション */
+.icon-primary::before {
+  color: hsl(var(--primary));
+}
+
+.icon-secondary::before {
+  color: hsl(var(--secondary));
+}
+
+.icon-muted::before {
+  color: hsl(var(--muted-foreground));
+}
+
+.icon-danger::before,
+.icon-destructive::before {
+  color: hsl(var(--destructive));
+}
+
+.icon-success::before {
+  color: hsl(var(--success));
+}
+
+.icon-warning::before {
+  color: hsl(var(--warning));
+}
+
+/* アイコンの配置 */
+.icon-right::before {
+  order: 2;
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* アニメーション */
+.icon-spin::before {
+  animation: icon-spin 2s linear infinite;
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* アイコンの状態 */
+.disabled .bmf-icon::before,
+.disabled[class^="icon-"]::before,
+.disabled[class*=" icon-"]::before {
+  opacity: 0.5;
+}

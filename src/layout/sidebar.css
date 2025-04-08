@@ -1,0 +1,246 @@
+/**
+ * Sidebar Layout
+ * サイドバー付きレイアウト用のスタイル
+ */
+
+/* サイドバーレイアウトのコンテナ */
+.layout-sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .layout-sidebar {
+    flex-direction: row;
+  }
+}
+
+/* サイドバー */
+.sidebar {
+  width: 100%;
+  background-color: hsl(var(--background));
+  border-right: 1px solid hsl(var(--border));
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 280px;
+    min-width: 280px;
+    flex-shrink: 0;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+}
+
+/* サイドバーがスクロール可能であることを示す影 */
+.sidebar-with-shadow {
+  background:
+    linear-gradient(hsl(var(--background)), hsl(var(--background))) center top,
+    linear-gradient(hsl(var(--background)), hsl(var(--background))) center bottom,
+    linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent 10px) center bottom,
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent 10px) center top;
+  background-repeat: no-repeat;
+  background-size: 100% calc(100% - 20px), 100% calc(100% - 20px), 100% 10px, 100% 10px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* サイドバー内のセクション */
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.sidebar-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* メインコンテンツエリア */
+.main-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    min-height: 100vh;
+    width: calc(100% - 280px);
+  }
+}
+
+/* 右サイドバーレイアウト */
+.layout-sidebar-right {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .layout-sidebar-right {
+    flex-direction: row-reverse;
+  }
+
+  .layout-sidebar-right .sidebar {
+    border-right: none;
+    border-left: 1px solid hsl(var(--border));
+  }
+}
+
+/* 2つのサイドバー */
+.layout-two-sidebars {
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .layout-two-sidebars {
+    flex-direction: row;
+  }
+
+  .layout-two-sidebars .main-content {
+    width: calc(100% - 560px);
+  }
+
+  .layout-two-sidebars .sidebar-right {
+    border-right: none;
+    border-left: 1px solid hsl(var(--border));
+  }
+}
+
+/* 通常のサイドバーナビゲーション */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: all 0.15s ease;
+}
+
+.sidebar-nav-link:hover {
+  background-color: hsl(var(--muted) / 0.1);
+  color: hsl(var(--foreground));
+}
+
+.sidebar-nav-link.active {
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  font-weight: 500;
+}
+
+/* ネストされたサイドバーナビゲーション */
+.sidebar-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sidebar-nav-group-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: all 0.15s ease;
+}
+
+.sidebar-nav-group-title:hover {
+  background-color: hsl(var(--muted) / 0.1);
+}
+
+.sidebar-nav-group-icon {
+  transition: transform 0.15s ease;
+}
+
+.sidebar-nav-group.open .sidebar-nav-group-icon {
+  transform: rotate(90deg);
+}
+
+.sidebar-nav-group-items {
+  padding-left: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.sidebar-nav-group.open .sidebar-nav-group-items {
+  max-height: 500px; /* 十分大きな値 */
+}
+
+/* ユーティリティクラス for docs */
+.docs-sidebar {
+  border-right: 1px solid hsl(var(--border));
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+}
+
+.docs-sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.docs-sidebar-nav ul ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.docs-sidebar-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.docs-sidebar-nav a {
+  display: block;
+  padding: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: all 0.15s ease;
+}
+
+.docs-sidebar-nav a:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--muted) / 0.1);
+}
+
+.docs-sidebar-nav a.active {
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  font-weight: 500;
+}
+
+/* ダークモード対応 */
+.dark-mode .sidebar,
+.dark-mode .docs-sidebar {
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--border));
+}
+
+.dark-mode .sidebar-with-shadow {
+  background:
+    linear-gradient(hsl(var(--background)), hsl(var(--background))) center top,
+    linear-gradient(hsl(var(--background)), hsl(var(--background))) center bottom,
+    linear-gradient(to top, rgba(255, 255, 255, 0.05), transparent 10px) center bottom,
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent 10px) center top;
+  background-repeat: no-repeat;
+  background-size: 100% calc(100% - 20px), 100% calc(100% - 20px), 100% 10px, 100% 10px;
+  background-attachment: local, local, scroll, scroll;
+}

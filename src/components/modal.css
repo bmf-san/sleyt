@@ -3,166 +3,137 @@
  * ダイアログやポップアップを表示するためのshadcn/uiスタイルのモーダル
  */
 
-/* モーダルオーバーレイ */
+/* モーダルのベースとなる隠しコンテナ */
+.modal-container,
+[data-modal] {
+  display: none;
+}
+
+/* モーダルが開いているときの状態 */
+.modal-container.is-open,
+[data-modal].is-open {
+  display: block;
+}
+
+/* モーダルのオーバーレイ（背景） */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  background-color: hsla(var(--foreground) / 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: modal-overlay-in 0.15s ease-out;
-  backdrop-filter: blur(2px);
+  z-index: 50;
+  backdrop-filter: blur(1px);
 }
 
-@keyframes modal-overlay-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* モーダルコンテナ */
+/* モーダル本体 */
 .modal {
-  position: relative;
   background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  border-radius: var(--radius);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-  width: var(--modal-width, 90%);
-  max-width: var(--modal-max-width, 32rem);
-  max-height: var(--modal-max-height, calc(100vh - 2rem));
-  overflow: hidden;
-  animation: modal-in 0.2s ease-out;
-  border: 1px solid hsl(var(--border));
-  z-index: 101;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+  animation: modal-in 0.3s var(--ease-out) forwards;
 }
 
-@keyframes modal-in {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* モーダルヘッダー */
+/* モーダルのヘッダー部分 */
 .modal-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid hsl(var(--border));
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  border-bottom: 1px solid hsl(var(--border));
 }
 
 .modal-title {
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-}
-
-/* 閉じるボタン */
-.modal-close {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: hsl(var(--muted-foreground));
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-.modal-close:hover {
-  background-color: hsl(var(--muted));
+  margin: 0;
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-medium);
   color: hsl(var(--foreground));
 }
 
-.modal-close svg {
-  width: 1rem;
-  height: 1rem;
+/* モーダルを閉じるボタン */
+.modal-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0;
+  color: hsl(var(--muted-foreground));
+  transition: color 0.2s ease;
 }
 
-/* モーダルコンテンツ */
-.modal-content {
-  padding: 1rem;
-  overflow-y: auto;
-  max-height: var(--modal-content-max-height, calc(100vh - 10rem));
+.modal-close:hover {
+  color: hsl(var(--foreground));
 }
 
-/* モーダルフッター */
+/* モーダルの本文部分 */
+.modal-body {
+  padding: 1.5rem;
+}
+
+/* モーダルのフッター部分 */
 .modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid hsl(var(--border));
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0.5rem;
-  padding: 1rem;
-  border-top: 1px solid hsl(var(--border));
 }
 
-/* サイズバリエーション */
+/* モーダルのサイズバリエーション */
 .modal-sm {
-  --modal-max-width: 24rem;
+  max-width: 300px;
 }
 
 .modal-lg {
-  --modal-max-width: 48rem;
+  max-width: 800px;
 }
 
 .modal-xl {
-  --modal-max-width: 72rem;
+  max-width: 1140px;
 }
 
-.modal-full {
-  --modal-max-width: calc(100vw - 2rem);
-  --modal-width: calc(100vw - 2rem);
-  --modal-max-height: calc(100vh - 2rem);
+.modal-fullscreen {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
 }
 
-/* ダークモード対応 */
-.dark-mode .modal-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* アニメーション - 終了時 */
-.modal-overlay-exit {
-  animation: modal-overlay-out 0.15s ease-in forwards;
-}
-
-.modal-exit {
-  animation: modal-out 0.15s ease-in forwards;
-}
-
-@keyframes modal-overlay-out {
+/* モーダルのアニメーション */
+@keyframes modal-in {
   from {
-    opacity: 1;
+    opacity: 0;
+    transform: translateY(-10px);
   }
   to {
-    opacity: 0;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes modal-out {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.95);
-  }
+/* 開閉トグル用のdata属性サポート */
+[data-modal-open] {
+  cursor: pointer;
+}
+
+[data-modal-close] {
+  cursor: pointer;
+}
+
+/* モーダルが開いているときのbodyスタイル */
+body.modal-open {
+  overflow: hidden;
 }
 
 /* モーダルコンテンツスクロールスタイル */
