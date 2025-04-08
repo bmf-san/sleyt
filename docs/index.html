@@ -27,6 +27,10 @@
             <li class="nav-item"><a href="#api" class="nav-link">API</a></li>
           </ul>
         </nav>
+        <div class="theme-switcher">
+          <input type="checkbox" id="theme-toggle" class="switch theme-toggle">
+          <label for="theme-toggle" class="switch-label">Dark Mode</label>
+        </div>
       </div>
     </div>
   </header>
@@ -36,7 +40,7 @@
       <section id="overview" class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Overview</h2>
         <div class="card">
-          <div class="card-body">
+          <div class="card-content">
             <h3 class="text-xl mb-2">BMF-CSS Framework</h3>
             <p class="mb-4">
               BMF-CSS is a lightweight, flexible CSS framework designed for modern web applications.
@@ -66,7 +70,7 @@
       <section id="installation" class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Installation & Usage</h2>
         <div class="card">
-          <div class="card-body">
+          <div class="card-content">
             <h3 class="text-xl mb-4">Installing BMF-CSS</h3>
 
             <h4 class="text-lg font-semibold mb-2">NPM Installation</h4>
@@ -121,7 +125,7 @@
       <section id="implementation" class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Implementation Approach</h2>
         <div class="card">
-          <div class="card-body">
+          <div class="card-content">
             <p class="mb-4">
               BMF-CSS uses a CSS-Based implementation approach, providing a simple and intuitive way to style your application.
             </p>
@@ -145,7 +149,7 @@
               <div class="card-header">
                 <h3 class="text-lg font-semibold">Implementation Best Practices</h3>
               </div>
-              <div class="card-body">
+              <div class="card-content">
                 <ul class="list">
                   <li class="mb-2">Use semantic HTML elements with appropriate classes</li>
                   <li class="mb-2">Combine component classes with utility classes for fine-tuning</li>
@@ -161,7 +165,7 @@
       <section id="base" class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Base</h2>
         <div class="card">
-          <div class="card-body">
+          <div class="card-content">
             <p class="mb-4">
               BMF-CSS provides a solid foundation with reset and normalization styles, ensuring consistent rendering across browsers.
             </p>
@@ -282,7 +286,7 @@ body {
       <section id="tokens" class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Tokens</h2>
         <div class="card">
-          <div class="card-body">
+          <div class="card-content">
             <p class="mb-4">
               Design tokens are the foundation of BMF-CSS's design system, providing consistent values for colors, typography, spacing, and more.
             </p>
@@ -509,7 +513,7 @@ body {
       <section id="components" class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Components</h2>
         <div class="card">
-          <div class="card-body">
+          <div class="card-content">
             <p class="mb-6">
               BMF-CSS provides a comprehensive set of UI components that can be used to build modern web interfaces.
               Each component uses the CSS-Based approach with simple class names that are easy to remember and use.
@@ -619,7 +623,7 @@ body {
   &lt;div class="card-header"&gt;
     &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;
   &lt;/div&gt;
-  &lt;div class="card-body"&gt;
+  &lt;div class="card-content"&gt;
     &lt;p&gt;This is the main content of the card. You can add any content here.&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="card-footer"&gt;
@@ -634,7 +638,7 @@ body {
                   <div class="card-header">
                     <h3 class="card-title">Card Title</h3>
                   </div>
-                  <div class="card-body">
+                  <div class="card-content">
                     <p>This is the main content of the card. You can add any content here.</p>
                   </div>
                   <div class="card-footer">
@@ -647,7 +651,7 @@ body {
 
             <!-- 他のコンポーネントも同様に追加 -->
             <div class="card bg-muted-foreground text-white">
-              <div class="card-body text-center">
+              <div class="card-content text-center">
                 <p class="mb-2">Many more components are available in BMF-CSS:</p>
                 <div class="flex flex-wrap gap-2 justify-center">
                   <a href="#" class="badge">Alert</a>
@@ -669,7 +673,7 @@ body {
       <section id="utilities" class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Utilities</h2>
         <div class="card">
-          <div class="card-body">
+          <div class="card-content">
             <p class="mb-6">
               BMF-CSS provides essential utility classes to help you build layouts and style elements without writing custom CSS.
             </p>
@@ -775,7 +779,7 @@ body {
       <section id="responsive" class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Responsive Design</h2>
         <div class="card">
-          <div class="card-body">
+          <div class="card-content">
             <p class="mb-6">
               BMF-CSS includes a robust responsive system that allows you to build mobile-first designs that adapt to different screen sizes.
             </p>
@@ -816,28 +820,28 @@ xl: 1280px  /* Extra-large devices (desktops) */
 &lt;div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"&gt;
   &lt;!-- Cards that adapt to screen width --&gt;
   &lt;div class="card"&gt;
-    &lt;div class="card-body"&gt;
+    &lt;div class="card-content"&gt;
       &lt;h3 class="card-title"&gt;Card 1&lt;/h3&gt;
       &lt;p&gt;Content for card 1&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
   &lt;div class="card"&gt;
-    &lt;div class="card-body"&gt;
+    &lt;div class="card-content"&gt;
       &lt;h3 class="card-title"&gt;Card 2&lt;/h3&gt;
       &lt;p&gt;Content for card 2&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
   &lt;div class="card"&gt;
-    &lt;div class="card-body"&gt;
+    &lt;div class="card-content"&gt;
       &lt;h3 class="card-title"&gt;Card 3&lt;/h3&gt;
       &lt;p&gt;Content for card 3&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
   &lt;div class="card"&gt;
-    &lt;div class="card-body"&gt;
+    &lt;div class="card-content"&gt;
       &lt;h3 class="card-title"&gt;Card 4&lt;/h3&gt;
       &lt;p&gt;Content for card 4&lt;/p&gt;
     &lt;/div&gt;
@@ -847,14 +851,14 @@ xl: 1280px  /* Extra-large devices (desktops) */
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div class="card">
-                <div class="card-body">
+                <div class="card-content">
                   <h3 class="card-title">Card 1</h3>
                   <p>This is a responsive card layout. The number of columns changes based on screen size.</p>
                 </div>
               </div>
 
               <div class="card">
-                <div class="card-body">
+                <div class="card-content">
                   <h3 class="card-title">Card 2</h3>
                   <p>On mobile: 1 column</p>
                   <p>On tablet: 2 columns</p>
@@ -863,14 +867,14 @@ xl: 1280px  /* Extra-large devices (desktops) */
               </div>
 
               <div class="card">
-                <div class="card-body">
+                <div class="card-content">
                   <h3 class="card-title">Card 3</h3>
                   <p>Resize your browser window to see how the layout adapts.</p>
                 </div>
               </div>
 
               <div class="card">
-                <div class="card-body">
+                <div class="card-content">
                   <h3 class="card-title">Card 4</h3>
                   <p>BMF-CSS makes responsive design easy with utility classes.</p>
                 </div>
@@ -881,6 +885,202 @@ xl: 1280px  /* Extra-large devices (desktops) */
       </section>
 
       <section id="themes" class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Themes</h2>
+        <div class="card">
+          <div class="card-content">
+            <p class="mb-6">
+              BMF-CSS provides a powerful theming system using CSS custom properties, making it easy to implement light and dark modes.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-4">Default Theme</h3>
+            <p class="mb-4">
+              The default theme uses a clean, professional color palette suitable for most applications.
+            </p>
+            <div class="bg-muted p-4 rounded mb-6">
+              <pre><code>:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --radius: 0.5rem;
+}</code></pre>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4">Dark Mode</h3>
+            <p class="mb-4">
+              BMF-CSS provides a simple CSS-Based approach to implementing dark mode using a class on the body element.
+            </p>
+
+            <div class="bg-muted p-4 rounded mb-4">
+              <pre><code>/* Define dark theme colors */
+.dark-theme {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+}</code></pre>
+            </div>
+
+            <p class="mb-4">
+              To implement the dark mode, simply add the <code>dark-theme</code> class to the body element:
+            </p>
+
+            <div class="bg-muted p-4 rounded mb-6">
+              <pre><code>&lt;body class="dark-theme"&gt;
+  &lt;!-- Your content will use dark theme styles --&gt;
+&lt;/body&gt;</code></pre>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4">System Preference Detection</h3>
+            <p class="mb-4">
+              You can use CSS media queries to automatically apply dark mode based on the user's system preferences:
+            </p>
+
+            <div class="bg-muted p-4 rounded mb-6">
+              <pre><code>/* Default light theme variables */
+:root {
+  --background: 0 0% 100%;
+  /* ...other light theme variables... */
+}
+
+/* Apply dark theme when user prefers dark color scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 222.2 84% 4.9%;
+    /* ...other dark theme variables... */
+  }
+}</code></pre>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4">Manual Theme Toggle</h3>
+            <p class="mb-4">
+              For manual theme switching, combine CSS classes with a small amount of JavaScript to toggle the theme class:
+            </p>
+
+            <div class="bg-muted p-4 rounded mb-6">
+              <pre><code>&lt;!-- Theme toggle switch --&gt;
+&lt;div class="theme-switcher"&gt;
+  &lt;input type="checkbox" id="theme-toggle" class="switch theme-toggle"&gt;
+  &lt;label for="theme-toggle" class="switch-label"&gt;Dark Mode&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  // Theme toggle functionality
+  const themeToggle = document.getElementById('theme-toggle');
+
+  // Check for saved theme or system preference
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+
+  // Apply initial theme
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.body.classList.add('dark-theme');
+    themeToggle.checked = true;
+  }
+
+  // Handle toggle click
+  themeToggle.addEventListener('change', function() {
+    if (this.checked) {
+      document.body.classList.add('dark-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4">Customizing Themes</h3>
+            <p class="mb-4">
+              You can customize BMF-CSS themes by overriding CSS variables in your own stylesheet.
+            </p>
+            <div class="bg-muted p-4 rounded mb-6">
+              <pre><code>/* Create a custom theme */
+:root {
+  /* Override primary color */
+  --primary: 262.1 83.3% 57.8%; /* Purple */
+  --primary-foreground: 210 40% 98%;
+
+  /* Override border radius */
+  --radius: 0.25rem;
+}
+
+/* Create a custom dark theme */
+.dark-theme {
+  /* Override dark theme background */
+  --background: 220 20% 10%;
+  --foreground: 210 40% 98%;
+}</code></pre>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4">Theme Example</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-6 rounded" style="background-color: hsl(var(--background));">
+                <h4 class="font-semibold mb-4">Light Theme</h4>
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Card Title</h3>
+                  </div>
+                  <div class="card-content">
+                    <p class="mb-4">This card shows the light theme styles.</p>
+                    <button class="btn-primary">Primary Button</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6 rounded dark-theme" style="background-color: hsl(222.2 84% 4.9%);">
+                <h4 class="font-semibold mb-4 text-white">Dark Theme</h4>
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Card Title</h3>
+                  </div>
+                  <div class="card-content">
+                    <p class="mb-4">This card shows the dark theme styles.</p>
+                    <button class="btn-primary">Primary Button</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -923,15 +1123,28 @@ xl: 1280px  /* Extra-large devices (desktops) */
         });
       });
 
-      // Demo theme toggle functionality
-      const demoThemeToggle = document.getElementById('demo-theme-toggle');
-      if (demoThemeToggle) {
-        demoThemeToggle.addEventListener('click', function() {
-          const lightIcon = document.getElementById('demo-light-icon');
-          const darkIcon = document.getElementById('demo-dark-icon');
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        // Check for saved theme preference or respect OS preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('bmf-theme');
 
-          lightIcon.classList.toggle('hidden');
-          darkIcon.classList.toggle('hidden');
+        // Apply theme based on saved preference or OS preference
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.body.classList.add('dark-theme');
+          themeToggle.checked = true;
+        }
+
+        // Handle theme toggle click
+        themeToggle.addEventListener('change', function() {
+          if (this.checked) {
+            document.body.classList.add('dark-theme');
+            localStorage.setItem('bmf-theme', 'dark');
+          } else {
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('bmf-theme', 'light');
+          }
         });
       }
 
