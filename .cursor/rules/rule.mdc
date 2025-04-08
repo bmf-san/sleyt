@@ -41,13 +41,7 @@ alwaysApply: true
 - CDN利用方法
 - プロジェクトへの組み込み方
 
-### 3. Implementation Approaches
-- CSS-Based実装の概要と利点
-- Hybrid実装（CSS + JS）の概要と利点
-- Attribute-Based実装（data属性利用）の概要と利点
-- 実装パターンの選び方ガイド
-
-### 4. Base
+### 3. Base
 - リセットとノーマライズ
 - ルート要素（html, body）
 - タイポグラフィ基本設定
@@ -55,7 +49,7 @@ alwaysApply: true
 - フォームリセット
 - コード例
 
-### 5. Tokens
+### 4. Tokens
 - カラーシステム
 - タイポグラフィ変数
 - スペーシング
@@ -64,7 +58,7 @@ alwaysApply: true
 - CSSカスタムプロパティ一覧
 - コード例
 
-### 6. Components
+### 5. Components
 - 各コンポーネントに3種類の実装例（CSS-Based, Hybrid, Attribute-Based）を記載
   - ボタン
   - フォーム要素
@@ -78,7 +72,7 @@ alwaysApply: true
   - ページネーション
   - その他UIパーツ
 
-### 7. Utilities
+### 6. Utilities
 - スペーシング（margin, padding）
 - テキストスタイル
 - 表示プロパティ
@@ -88,14 +82,14 @@ alwaysApply: true
 - ポジショニング
 - 使用例付きで記載すること
 
-### 8. Themes
+### 7. Themes
 - デフォルトテーマ
 - ダークモード（3つの実装パターン）
 - カスタマイズ方法
 - CSSカスタムプロパティの活用
 - コード例を含める
 
-### 9. Demos
+### 8. Demos
 - 各実装パターンでの実用的なデモを提供
   - ブログサイト
   - 管理画面
@@ -104,7 +98,7 @@ alwaysApply: true
   - ポートフォリオサイト
   - ランディングページ
 
-### 10. API Reference
+### 9. API Reference
 - クラス名一覧とその説明
 - 変数とカスタマイズポイント
 - data属性一覧
