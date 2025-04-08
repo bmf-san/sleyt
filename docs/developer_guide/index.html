@@ -7,192 +7,247 @@
   <link rel="stylesheet" href="../../dist/bmf-css.min.css">
 </head>
 <body>
-  <div class="layout">
-    <!-- Navigation Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <h1 class="logo">BMF-CSS</h1>
-      </div>
-      <nav class="sidebar-nav">
-        <ul>
-          <li><a href="../users_guide/index.html">ユーザーガイド</a></li>
-          <li><a href="index.html" class="active">開発者ガイド</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="content">
-      <header class="content-header">
-        <h1>BMF-CSS 開発者ガイド</h1>
-        <p>BMF-CSSドキュメントの開発・メンテナンス方針</p>
-      </header>
-
-      <section>
-        <h2>ドキュメント作成の基本方針</h2>
-        <div class="card">
-          <div class="card-body">
-            <h3>BMF-CSSのみ使用</h3>
-            <ul>
-              <li>BMF-CSSで用意されているCSSのみを使用</li>
-              <li>インラインスタイルの追加禁止</li>
-              <li>ドキュメント専用のclass・id定義の追加禁止</li>
-            </ul>
-
-            <h3>ドキュメント構造</h3>
-            <ul>
-              <li><strong>複数ページ構成</strong>：各セクション・コンポーネントごとに別ページ</li>
-              <li><strong>ナビゲーション</strong>：サイドバー方式（BMF-CSSの機能を使用）</li>
-              <li><strong>言語</strong>：英語のみ</li>
-            </ul>
-          </div>
+  <div class="container-fluid">
+    <div class="grid grid-cols-1 md:grid-cols-4">
+      <!-- Navigation Sidebar -->
+      <aside class="nav-sidebar">
+        <div class="content-section">
+          <h1 class="content-section-title">BMF-CSS</h1>
         </div>
-      </section>
+        <nav class="nav nav-vertical">
+          <ul>
+            <li><a href="../users_guide/index.html">ユーザーガイド</a></li>
+            <li><a href="index.html" class="active">開発者ガイド</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-      <section>
-        <h2>ドキュメントアウトライン</h2>
-        <div class="card">
-          <div class="card-body">
-            <h3>1. 概要（Overview）</h3>
-            <ul>
-              <li>フレームワークの紹介</li>
-              <li>特徴と利点</li>
-              <li>設計思想（セマンティック + ユーティリティのハイブリッド設計）</li>
-            </ul>
+      <!-- Main Content -->
+      <main class="content col-span-3">
+        <header class="content-section">
+          <h1 class="content-section-title">BMF-CSS 開発者ガイド</h1>
+          <p class="content-section-description">BMF-CSSドキュメントの開発・メンテナンス方針</p>
+        </header>
 
-            <h3>2. インストールと使用方法</h3>
-            <ul>
-              <li>NPM/Yarnでのインストール方法</li>
-              <li>CDNからの利用方法</li>
-              <li>プロジェクトへの組み込み方法</li>
-            </ul>
+        <section class="content-section">
+          <h2 class="content-section-title">ドキュメント作成の基本方針</h2>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">BMF-CSSのみ使用</h3>
+              <ul>
+                <li>BMF-CSSで用意されているCSSのみを使用</li>
+                <li>インラインスタイルの追加禁止</li>
+                <li>ドキュメント専用のclass・id定義の追加禁止</li>
+                <li>追加スタイルが必要な場合は事前に相談</li>
+              </ul>
 
-            <h3>3. 実装アプローチ</h3>
-            <ul>
-              <li>CSS-Based実装（JavaScriptなし）の概要と利点</li>
-              <li>Hybrid実装（CSS + JavaScript）の概要と利点</li>
-              <li>Attribute-Based実装（データ属性による宣言的実装）の概要と利点</li>
-              <li>実装パターンの選択ガイド</li>
-            </ul>
-
-            <h3>4. Base</h3>
-            <ul>
-              <li>リセットとノーマライズ</li>
-              <li>ルート要素（html, body）</li>
-              <li>タイポグラフィ基本設定</li>
-              <li>リンクスタイル</li>
-              <li>フォームリセット</li>
-              <li>コード例</li>
-            </ul>
-
-            <h3>5. Tokens</h3>
-            <ul>
-              <li>カラーシステム</li>
-              <li>タイポグラフィ変数</li>
-              <li>スペーシング</li>
-              <li>シャドウとエレベーション</li>
-              <li>ブレークポイント</li>
-              <li>CSSカスタム変数一覧</li>
-              <li>コード例</li>
-            </ul>
-
-            <h3>6. Components</h3>
-            <p>各コンポーネントについて、3つの実装パターンのコード例と説明：</p>
-            <ul>
-              <li>ボタン</li>
-              <li>フォーム要素</li>
-              <li>カード</li>
-              <li>ナビゲーション</li>
-              <li>アラート/通知</li>
-              <li>モーダル</li>
-              <li>ツールチップ</li>
-              <li>タブ</li>
-              <li>テーブル</li>
-              <li>ページネーション</li>
-              <li>その他のUIコンポーネント</li>
-            </ul>
-
-            <h3>7. Utilities</h3>
-            <ul>
-              <li>スペーシング（マージン、パディング）</li>
-              <li>テキストスタイル</li>
-              <li>表示プロパティ</li>
-              <li>色と背景</li>
-              <li>ボーダーとシャドウ</li>
-              <li>フレックスとグリッド</li>
-              <li>ポジショニング</li>
-              <li>コード例と使用パターン</li>
-            </ul>
-
-            <h3>8. Themes</h3>
-            <ul>
-              <li>デフォルトテーマ</li>
-              <li>ダークモード（3つの実装パターン）</li>
-              <li>テーマのカスタマイズ方法</li>
-              <li>CSSカスタムプロパティの活用</li>
-              <li>コード例</li>
-            </ul>
-
-            <h3>9. デモ</h3>
-            <p>実用的なレベルのデモ（各実装パターン別）：</p>
-            <ul>
-              <li>ブログサイト</li>
-              <li>管理画面</li>
-              <li>ダッシュボード</li>
-              <li>ECサイト</li>
-              <li>ポートフォリオサイト</li>
-              <li>ランディングページ</li>
-            </ul>
-
-            <h3>10. API リファレンス</h3>
-            <ul>
-              <li>クラス名の一覧と説明</li>
-              <li>変数とカスタマイズポイント</li>
-              <li>データ属性一覧</li>
-              <li>JavaScriptインターフェース</li>
-            </ul>
+              <h3 class="card-title">ドキュメント構造</h3>
+              <ul>
+                <li><strong>複数ページ構成</strong>：各セクション・コンポーネントごとに別ページ</li>
+                <li><strong>ナビゲーション</strong>：サイドバー方式（BMF-CSSの機能を使用）</li>
+                <li><strong>言語</strong>：英語のみ</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>表示方法の方針</h2>
-        <div class="card">
-          <div class="card-body">
-            <h3>コード例</h3>
-            <ul>
-              <li>BMF-CSSが提供するコードブロック表示機能を使用</li>
-              <li>実装と表示を上下に配置</li>
-              <li>実装パターンはBMF-CSSのタブUIで切り替え（CSS-Based → Hybrid → Attribute-Basedの順）</li>
-            </ul>
+        <section class="content-section">
+          <h2 class="content-section-title">ドキュメントアウトライン</h2>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">1. 概要（Overview）</h3>
+              <ul>
+                <li>フレームワークの紹介</li>
+                <li>特徴と利点</li>
+                <li>設計思想（セマンティック + ユーティリティのハイブリッド設計）</li>
+              </ul>
 
-            <h3>レスポンシブ対応</h3>
-            <ul>
-              <li>BMF-CSSが提供するレスポンシブ機能のみを使用</li>
-              <li>モバイル向けナビゲーションはBMF-CSSの既存機能で対応</li>
-            </ul>
+              <h3 class="card-title">2. インストールと使用方法</h3>
+              <ul>
+                <li>NPM/Yarnでのインストール方法</li>
+                <li>CDNからの利用方法</li>
+                <li>プロジェクトへの組み込み方法</li>
+              </ul>
 
-            <h3>ページ共通要素</h3>
-            <ul>
-              <li>ヘッダー/フッター（BMF-CSSの既存コンポーネントを使用）</li>
-              <li>サイドバーナビゲーション（BMF-CSSのナビゲーションコンポーネントを使用）</li>
-            </ul>
+              <h3 class="card-title">3. 実装アプローチ</h3>
+              <ul>
+                <li>CSS-Based実装（JavaScriptなし）の概要と利点</li>
+                <li>Hybrid実装（CSS + JavaScript）の概要と利点</li>
+                <li>Attribute-Based実装（データ属性による宣言的実装）の概要と利点</li>
+                <li>実装パターンの選択ガイド</li>
+              </ul>
 
-            <h3>コンポーネント表示</h3>
-            <ul>
-              <li>BMF-CSSが提供するレイアウトコンポーネントのみを使用して配置</li>
-            </ul>
+              <h3 class="card-title">4. Base</h3>
+              <ul>
+                <li>リセットとノーマライズ</li>
+                <li>ルート要素（html, body）</li>
+                <li>タイポグラフィ基本設定</li>
+                <li>リンクスタイル</li>
+                <li>フォームリセット</li>
+                <li>コード例</li>
+              </ul>
 
-            <p class="text-warning mt-4"><strong>重要</strong>：どうしても追加スタイルが必要な場合（例：コードハイライト）は、事前に相談の上で対応を決定します。</p>
+              <h3 class="card-title">5. Tokens</h3>
+              <ul>
+                <li>カラーシステム</li>
+                <li>タイポグラフィ変数</li>
+                <li>スペーシング</li>
+                <li>シャドウとエレベーション</li>
+                <li>ブレークポイント</li>
+                <li>CSSカスタム変数一覧</li>
+                <li>コード例</li>
+              </ul>
+
+              <h3 class="card-title">6. Components</h3>
+              <p>各コンポーネントについて、3つの実装パターンのコード例と説明：</p>
+              <ul>
+                <li>ボタン</li>
+                <li>フォーム要素</li>
+                <li>カード</li>
+                <li>ナビゲーション</li>
+                <li>アラート/通知</li>
+                <li>モーダル</li>
+                <li>ツールチップ</li>
+                <li>タブ</li>
+                <li>テーブル</li>
+                <li>ページネーション</li>
+                <li>その他のUIコンポーネント</li>
+              </ul>
+
+              <h3 class="card-title">7. Utilities</h3>
+              <ul>
+                <li>スペーシング（マージン、パディング）</li>
+                <li>テキストスタイル</li>
+                <li>表示プロパティ</li>
+                <li>色と背景</li>
+                <li>ボーダーとシャドウ</li>
+                <li>フレックスとグリッド</li>
+                <li>ポジショニング</li>
+                <li>コード例と使用パターン</li>
+              </ul>
+
+              <h3 class="card-title">8. Themes</h3>
+              <ul>
+                <li>デフォルトテーマ</li>
+                <li>ダークモード（3つの実装パターン）</li>
+                <li>テーマのカスタマイズ方法</li>
+                <li>CSSカスタムプロパティの活用</li>
+                <li>コード例</li>
+              </ul>
+
+              <h3 class="card-title">9. デモ</h3>
+              <p>実用的なレベルのデモ（各実装パターン別）：</p>
+              <ul>
+                <li>ブログサイト</li>
+                <li>管理画面</li>
+                <li>ダッシュボード</li>
+                <li>ECサイト</li>
+                <li>ポートフォリオサイト</li>
+                <li>ランディングページ</li>
+              </ul>
+
+              <h3 class="card-title">10. API リファレンス</h3>
+              <ul>
+                <li>クラス名の一覧と説明</li>
+                <li>変数とカスタマイズポイント</li>
+                <li>データ属性一覧</li>
+                <li>JavaScriptインターフェース</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        <section class="content-section">
+          <h2 class="content-section-title">表示方法の方針</h2>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">コード例</h3>
+              <ul>
+                <li>BMF-CSSが提供するコードブロック表示機能を使用</li>
+                <li>実装と表示を上下に配置</li>
+                <li>実装パターンはBMF-CSSのタブUIで切り替え（CSS-Based → Hybrid → Attribute-Basedの順）</li>
+              </ul>
+
+              <h3 class="card-title">レスポンシブ対応</h3>
+              <ul>
+                <li>BMF-CSSが提供するレスポンシブ機能のみを使用</li>
+                <li>モバイル向けナビゲーションはBMF-CSSの既存機能で対応</li>
+              </ul>
+
+              <h3 class="card-title">ページ共通要素</h3>
+              <ul>
+                <li>ヘッダー/フッター（BMF-CSSの既存コンポーネントを使用）</li>
+                <li>サイドバーナビゲーション（BMF-CSSのナビゲーションコンポーネントを使用）</li>
+              </ul>
+
+              <h3 class="card-title">コンポーネント表示</h3>
+              <ul>
+                <li>BMF-CSSが提供するレイアウトコンポーネントのみを使用して配置</li>
+              </ul>
+
+              <p class="text-warning"><strong>重要</strong>：どうしても追加スタイルが必要な場合（例：コードハイライト）は、事前に相談の上で対応を決定します。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2 class="content-section-title">ディレクトリ構造</h2>
+          <div class="card">
+            <div class="card-body">
+              <pre><code>docs/
+├── users_guide/         # ユーザー向けドキュメント
+│   ├── index.html       # 概要
+│   ├── installation.html # インストールと使用方法
+│   ├── implementation-approaches.html # 実装アプローチ
+│   ├── base/            # ベーススタイル
+│   │   ├── index.html
+│   │   ├── reset.html
+│   │   ├── typography.html
+│   │   ├── links.html
+│   │   └── forms.html
+│   ├── tokens/          # デザイントークン
+│   │   ├── index.html
+│   │   ├── colors.html
+│   │   ├── typography.html
+│   │   ├── spacing.html
+│   │   ├── shadows.html
+│   │   └── breakpoints.html
+│   ├── components/      # コンポーネント
+│   │   ├── index.html
+│   │   ├── buttons.html
+│   │   ├── forms.html
+│   │   ├── cards.html
+│   │   └── ...
+│   ├── utilities/       # ユーティリティ
+│   │   ├── index.html
+│   │   ├── spacing.html
+│   │   ├── text.html
+│   │   └── ...
+│   ├── themes/          # テーマ
+│   │   ├── index.html
+│   │   ├── default.html
+│   │   ├── dark-mode.html
+│   │   └── customization.html
+│   └── demos/           # デモ
+│       ├── index.html
+│       ├── blog.html
+│       ├── admin.html
+│       └── ...
+└── developer_guide/     # 開発者向けドキュメント
+    ├── index.html       # 本ページ
+    ├── contribution.html # コントリビューションガイド
+    ├── coding-standards.html # コーディング規約
+    └── release-process.html # リリースプロセス</code></pre>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   </div>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025BMF-CSS</p>
+      <p>&copy; 2024 BMF-CSS</p>
     </div>
   </footer>
 </body>

@@ -7,216 +7,305 @@
   <link rel="stylesheet" href="../../dist/bmf-css.min.css">
 </head>
 <body>
-  <div class="layout">
-    <!-- Navigation Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <h1 class="logo">BMF-CSS</h1>
-      </div>
-      <nav class="sidebar-nav">
-        <ul>
-          <li><a href="../index.html">ドキュメントホーム</a></li>
-          <li><a href="index.html" class="active">Overview</a></li>
-          <li><a href="installation.html">Installation</a></li>
-          <li><a href="implementation-approaches.html">Implementation Approaches</a></li>
-          <li>
-            <a href="base/index.html">Base</a>
-            <ul>
-              <li><a href="base/reset.html">Reset & Normalize</a></li>
-              <li><a href="base/typography.html">Typography</a></li>
-              <li><a href="base/links.html">Links</a></li>
-              <li><a href="base/forms.html">Forms</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="tokens/index.html">Tokens</a>
-            <ul>
-              <li><a href="tokens/colors.html">Colors</a></li>
-              <li><a href="tokens/typography.html">Typography</a></li>
-              <li><a href="tokens/spacing.html">Spacing</a></li>
-              <li><a href="tokens/shadows.html">Shadows & Elevation</a></li>
-              <li><a href="tokens/breakpoints.html">Breakpoints</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="components/index.html">Components</a>
-            <ul>
-              <li><a href="components/buttons.html">Buttons</a></li>
-              <li><a href="components/forms.html">Form Elements</a></li>
-              <li><a href="components/cards.html">Cards</a></li>
-              <li><a href="components/navigation.html">Navigation</a></li>
-              <li><a href="components/alerts.html">Alerts</a></li>
-              <li><a href="components/modals.html">Modals</a></li>
-              <li><a href="components/tooltips.html">Tooltips</a></li>
-              <li><a href="components/tabs.html">Tabs</a></li>
-              <li><a href="components/tables.html">Tables</a></li>
-              <li><a href="components/pagination.html">Pagination</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="utilities/index.html">Utilities</a>
-            <ul>
-              <li><a href="utilities/spacing.html">Spacing</a></li>
-              <li><a href="utilities/text.html">Text</a></li>
-              <li><a href="utilities/display.html">Display</a></li>
-              <li><a href="utilities/colors.html">Colors & Background</a></li>
-              <li><a href="utilities/borders.html">Borders & Shadows</a></li>
-              <li><a href="utilities/flex.html">Flex & Grid</a></li>
-              <li><a href="utilities/position.html">Position</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="themes/index.html">Themes</a>
-            <ul>
-              <li><a href="themes/default.html">Default Theme</a></li>
-              <li><a href="themes/dark-mode.html">Dark Mode</a></li>
-              <li><a href="themes/customization.html">Customization</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="demos/index.html">Demos</a>
-            <ul>
-              <li><a href="demos/blog.html">Blog</a></li>
-              <li><a href="demos/admin.html">Admin Dashboard</a></li>
-              <li><a href="demos/dashboard.html">Dashboard</a></li>
-              <li><a href="demos/ecommerce.html">E-Commerce</a></li>
-              <li><a href="demos/portfolio.html">Portfolio</a></li>
-              <li><a href="demos/landing.html">Landing Page</a></li>
-            </ul>
-          </li>
-          <li><a href="api-reference.html">API Reference</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="content">
-      <header class="content-header">
-        <h1>BMF-CSS</h1>
-        <p>軽量なCMS向けCSSフレームワーク</p>
-      </header>
-
-      <section>
-        <h2>概要</h2>
-        <p>BMF-CSSは、CMS向けに設計された軽量でシンプルなUIスタイルフレームワークです。このフレームワークはJavaScriptやプリプロセッサを必要とせずCSSのみで構成されており、あらゆるプロジェクトに簡単に統合できます。</p>
-
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">特徴</h3>
-            <ul>
-              <li>軽量かつシンプルな設計</li>
-              <li>CSSのみ（JSやプリプロセッサなし）</li>
-              <li>ダークモード対応</li>
-              <li>モバイルフレンドリー（レスポンシブ）</li>
-              <li>アクセシビリティ考慮（focus-visible、aria-*対応）</li>
-              <li>セマンティック + ユーティリティのハイブリッド設計</li>
-            </ul>
-          </div>
+  <div class="container-fluid">
+    <div class="grid grid-cols-1 md:grid-cols-4">
+      <!-- Navigation Sidebar -->
+      <aside class="nav-sidebar">
+        <div class="content-section">
+          <h1 class="content-section-title">BMF-CSS</h1>
         </div>
-      </section>
+        <nav class="nav nav-vertical">
+          <ul>
+            <li><a href="../index.html">ドキュメントホーム</a></li>
+            <li><a href="index.html" class="active">Overview</a></li>
+            <li><a href="installation.html">Installation</a></li>
+            <li><a href="implementation-approaches.html">Implementation Approaches</a></li>
+            <li>
+              <a href="base/index.html">Base</a>
+              <ul>
+                <li><a href="base/reset.html">Reset & Normalize</a></li>
+                <li><a href="base/typography.html">Typography</a></li>
+                <li><a href="base/links.html">Links</a></li>
+                <li><a href="base/forms.html">Forms</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="tokens/index.html">Tokens</a>
+              <ul>
+                <li><a href="tokens/colors.html">Colors</a></li>
+                <li><a href="tokens/typography.html">Typography</a></li>
+                <li><a href="tokens/spacing.html">Spacing</a></li>
+                <li><a href="tokens/shadows.html">Shadows & Elevation</a></li>
+                <li><a href="tokens/breakpoints.html">Breakpoints</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="components/index.html">Components</a>
+              <ul>
+                <li><a href="components/buttons.html">Buttons</a></li>
+                <li><a href="components/forms.html">Form Elements</a></li>
+                <li><a href="components/cards.html">Cards</a></li>
+                <li><a href="components/navigation.html">Navigation</a></li>
+                <li><a href="components/alerts.html">Alerts</a></li>
+                <li><a href="components/modals.html">Modals</a></li>
+                <li><a href="components/tooltips.html">Tooltips</a></li>
+                <li><a href="components/tabs.html">Tabs</a></li>
+                <li><a href="components/tables.html">Tables</a></li>
+                <li><a href="components/pagination.html">Pagination</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="utilities/index.html">Utilities</a>
+              <ul>
+                <li><a href="utilities/spacing.html">Spacing</a></li>
+                <li><a href="utilities/text.html">Text</a></li>
+                <li><a href="utilities/display.html">Display</a></li>
+                <li><a href="utilities/colors.html">Colors & Background</a></li>
+                <li><a href="utilities/borders.html">Borders & Shadows</a></li>
+                <li><a href="utilities/flex.html">Flex & Grid</a></li>
+                <li><a href="utilities/position.html">Position</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="themes/index.html">Themes</a>
+              <ul>
+                <li><a href="themes/default.html">Default Theme</a></li>
+                <li><a href="themes/dark-mode.html">Dark Mode</a></li>
+                <li><a href="themes/customization.html">Customization</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="demos/index.html">Demos</a>
+              <ul>
+                <li><a href="demos/blog.html">Blog</a></li>
+                <li><a href="demos/admin.html">Admin Dashboard</a></li>
+                <li><a href="demos/dashboard.html">Dashboard</a></li>
+                <li><a href="demos/ecommerce.html">E-Commerce</a></li>
+                <li><a href="demos/portfolio.html">Portfolio</a></li>
+                <li><a href="demos/landing.html">Landing Page</a></li>
+              </ul>
+            </li>
+            <li><a href="api-reference.html">API Reference</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-      <section>
-        <h2>設計思想</h2>
-        <p>BMF-CSSは、セマンティックなコンポーネントクラスとユーティリティクラスを組み合わせたハイブリッドアプローチを採用しています。これにより柔軟性を保ちながら、可読性と構造を維持できます。</p>
+      <!-- Main Content -->
+      <main class="content col-span-3">
+        <header class="content-section">
+          <h1 class="content-section-title">BMF-CSS</h1>
+          <p class="content-section-description">軽量なCMS向けCSSフレームワーク</p>
+        </header>
 
-        <div class="grid">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">セマンティックコンポーネントクラス</h3>
-              <p>コンポーネントの構造と基本的なスタイリングを定義します。</p>
-              <pre><code>.btn, .card, .alert, .nav</code></pre>
-            </div>
-          </div>
+        <section class="content-section">
+          <h2 class="content-section-title">概要</h2>
+          <p>BMF-CSSは、CMS向けに設計された軽量でシンプルなUIスタイルフレームワークです。このフレームワークはJavaScriptやプリプロセッサを必要とせずCSSのみで構成されており、あらゆるプロジェクトに簡単に統合できます。</p>
 
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">ユーティリティクラス</h3>
-              <p>間隔、配置、外観の微調整のためのクラスです。</p>
-              <pre><code>.m-2, .text-center, .flex, .bg-primary</code></pre>
+              <h3 class="card-title">特徴</h3>
+              <ul>
+                <li>軽量かつシンプルな設計</li>
+                <li>CSSのみ（JSやプリプロセッサなし）</li>
+                <li>ダークモード対応</li>
+                <li>モバイルフレンドリー（レスポンシブ）</li>
+                <li>アクセシビリティ考慮（focus-visible、aria-*対応）</li>
+                <li>セマンティック + ユーティリティのハイブリッド設計</li>
+              </ul>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>実装アプローチ</h2>
-        <p>BMF-CSSは、ニーズに合わせて3つの異なる実装パターンを提供しています：</p>
+        <section class="content-section">
+          <h2 class="content-section-title">設計思想</h2>
+          <p>BMF-CSSは、セマンティックなコンポーネントクラスとユーティリティクラスを組み合わせたハイブリッドアプローチを採用しています。これにより柔軟性を保ちながら、可読性と構造を維持できます。</p>
 
-        <div class="tabs">
-          <div class="tab-list" role="tablist">
-            <button class="tab active" role="tab" aria-selected="true">CSS-Based</button>
-            <button class="tab" role="tab" aria-selected="false">Hybrid</button>
-            <button class="tab" role="tab" aria-selected="false">Attribute-Based</button>
-          </div>
-
-          <div class="tab-panel active" role="tabpanel">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="card">
               <div class="card-body">
-                <h3 class="card-title">CSS-Based実装</h3>
-                <p>JavaScriptなしでCSSのみを使用します。軽量でシンプルな実装です。</p>
-                <p>静的なコンポーネントやJavaScriptを最小限に抑えたい場合に最適です。</p>
+                <h3 class="card-title">セマンティックコンポーネントクラス</h3>
+                <p>コンポーネントの構造と基本的なスタイリングを定義します。</p>
+                <pre><code>.btn, .card, .alert, .nav</code></pre>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">ユーティリティクラス</h3>
+                <p>間隔、配置、外観の微調整のためのクラスです。</p>
+                <pre><code>.m-2, .text-center, .flex, .bg-primary</code></pre>
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="tab-panel" role="tabpanel">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Hybrid実装</h3>
-                <p>より高度な機能と動的な動作のために、CSSとJavaScriptを組み合わせます。</p>
-                <p>状態管理を必要とするインタラクティブなコンポーネントに最適です。</p>
+        <section class="content-section">
+          <h2 class="content-section-title">実装アプローチ</h2>
+          <p>BMF-CSSは、ニーズに合わせて3つの異なる実装パターンを提供しています：</p>
+
+          <div class="tabs">
+            <div class="tab-list" role="tablist">
+              <button class="tab active" role="tab" aria-selected="true">CSS-Based</button>
+              <button class="tab" role="tab" aria-selected="false">Hybrid</button>
+              <button class="tab" role="tab" aria-selected="false">Attribute-Based</button>
+            </div>
+
+            <div class="tab-panel active" role="tabpanel">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">CSS-Based実装</h3>
+                  <p>JavaScriptなしでCSSのみを使用します。軽量でシンプルな実装です。</p>
+                  <p>静的なコンポーネントやJavaScriptを最小限に抑えたい場合に最適です。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-panel" role="tabpanel">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Hybrid実装</h3>
+                  <p>より高度な機能と動的な動作のために、CSSとJavaScriptを組み合わせます。</p>
+                  <p>状態管理を必要とするインタラクティブなコンポーネントに最適です。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-panel" role="tabpanel">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Attribute-Based実装</h3>
+                  <p>宣言的な実装のためにデータ属性を使用し、より保守性の高いコードを実現します。</p>
+                  <p>関心事の明確な分離を望むチームに最適です。</p>
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="tab-panel" role="tabpanel">
+        <section class="content-section">
+          <h2 class="content-section-title">はじめに</h2>
+          <p>BMF-CSSの使用を開始する準備はできましたか？インストールガイドとコンポーネントドキュメントをチェックしてください：</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="card">
               <div class="card-body">
-                <h3 class="card-title">Attribute-Based実装</h3>
-                <p>宣言的な実装のためにデータ属性を使用し、より保守性の高いコードを実現します。</p>
-                <p>関心事の明確な分離を望むチームに最適です。</p>
+                <h3 class="card-title">インストール</h3>
+                <p>プロジェクトでBMF-CSSを実行するためのクイックセットアップ手順。</p>
+                <a href="installation.html" class="btn btn-primary">インストールガイド</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">コンポーネント</h3>
+                <p>コンポーネントライブラリと実装例を閲覧します。</p>
+                <a href="components/index.html" class="btn btn-primary">コンポーネントドキュメント</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">デモ</h3>
+                <p>実際の例でBMF-CSSの動作を確認します。</p>
+                <a href="demos/index.html" class="btn btn-primary">デモを見る</a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>はじめに</h2>
-        <p>BMF-CSSの使用を開始する準備はできましたか？インストールガイドとコンポーネントドキュメントをチェックしてください：</p>
+        <section class="content-section">
+          <h2 class="content-section-title">ドキュメントの構成</h2>
+          <p>BMF-CSSのドキュメントは以下のセクションで構成されています：</p>
 
-        <div class="grid">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">インストール</h3>
-              <p>プロジェクトでBMF-CSSを実行するためのクイックセットアップ手順。</p>
-              <a href="installation.html" class="btn btn-primary">インストールガイド</a>
+              <h3 class="card-title">インストールと基本設定</h3>
+              <ul>
+                <li><a href="installation.html">インストール</a> - インストール方法と基本設定</li>
+                <li><a href="implementation-approaches.html">実装アプローチ</a> - CSSベース、ハイブリッド、属性ベースの実装方法</li>
+              </ul>
             </div>
           </div>
 
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">コンポーネント</h3>
-              <p>コンポーネントライブラリと実装例を閲覧します。</p>
-              <a href="components/index.html" class="btn btn-primary">コンポーネントドキュメント</a>
+              <h3 class="card-title">基本スタイルとトークン</h3>
+              <ul>
+                <li><a href="base/index.html">ベーススタイル</a> - リセット、タイポグラフィ、リンク、フォーム</li>
+                <li><a href="tokens/index.html">デザイントークン</a> - 色、タイポグラフィ、間隔、影、ブレークポイント</li>
+              </ul>
             </div>
           </div>
 
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">デモ</h3>
-              <p>実際の例でBMF-CSSの動作を確認します。</p>
-              <a href="demos/index.html" class="btn btn-primary">デモを見る</a>
+              <h3 class="card-title">UIコンポーネントとユーティリティ</h3>
+              <ul>
+                <li><a href="components/index.html">コンポーネント</a> - ボタン、カード、フォーム要素、モーダルなど</li>
+                <li><a href="utilities/index.html">ユーティリティ</a> - 間隔、テキスト、レイアウト、色、表示などの調整</li>
+              </ul>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">テーマとデモ</h3>
+              <ul>
+                <li><a href="themes/index.html">テーマ</a> - デフォルト、ダークモード、カスタマイズ</li>
+                <li><a href="demos/index.html">デモ</a> - ブログ、ダッシュボード、Eコマースなどの実装例</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2 class="content-section-title">利用上の注意</h2>
+          <p>BMF-CSSを最大限に活用するための重要な注意点：</p>
+
+          <div class="alert alert-info">
+            <h3 class="alert-title">BMF-CSSのみを使用する</h3>
+            <p>BMF-CSSは単独で機能するように設計されています。競合を避けるため、他のCSSフレームワークとの併用は避けてください。</p>
+          </div>
+
+          <div class="alert alert-warning">
+            <h3 class="alert-title">インラインスタイルの禁止</h3>
+            <p>一貫性を維持するため、インラインスタイルは使用せず、BMF-CSSのクラスとユーティリティを使用してください。</p>
+          </div>
+
+          <div class="alert alert-success">
+            <h3 class="alert-title">拡張とカスタマイズ</h3>
+            <p>追加のスタイルが必要な場合は、BMF-CSSのカスタマイズガイドラインに従ってください。</p>
+          </div>
+        </section>
+      </main>
+    </div>
   </div>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2024 BMF-CSS</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <h3>BMF-CSS</h3>
+          <p>軽量なCMS向けCSSフレームワーク</p>
+          <p>&copy; 2024 BMF-CSS</p>
+        </div>
+        <div>
+          <h4>リソース</h4>
+          <ul>
+            <li><a href="https://github.com/example/bmf-css">GitHub</a></li>
+            <li><a href="../developer_guide/index.html">開発者ガイド</a></li>
+            <li><a href="api-reference.html">APIリファレンス</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>サポート</h4>
+          <ul>
+            <li><a href="../faq.html">よくある質問</a></li>
+            <li><a href="../contact.html">お問い合わせ</a></li>
+            <li><a href="../license.html">ライセンス</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 

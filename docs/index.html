@@ -7,20 +7,20 @@
   <link rel="stylesheet" href="../dist/bmf-css.min.css">
 </head>
 <body>
-  <div class="layout centered">
+  <div class="container">
     <main class="content">
-      <header class="content-header text-center">
-        <h1>BMF-CSS</h1>
-        <p>CMS向けの軽量でシンプルなUIスタイルフレームワーク</p>
+      <header class="content-section">
+        <h1 class="content-section-title text-center">BMF-CSS</h1>
+        <p class="content-section-description text-center">CMS向けの軽量でシンプルなUIスタイルフレームワーク</p>
       </header>
 
-      <section class="mt-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section class="content-section">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="card">
             <div class="card-body text-center">
               <h2 class="card-title">ユーザーガイド</h2>
               <p>BMF-CSSの使用方法、コンポーネント、ユーティリティ、テーマなどの詳細なガイド</p>
-              <a href="users_guide/index.html" class="btn btn-primary mt-4">ユーザーガイドを見る</a>
+              <a href="users_guide/index.html" class="btn btn-primary">ユーザーガイドを見る</a>
             </div>
           </div>
 
@@ -28,13 +28,13 @@
             <div class="card-body text-center">
               <h2 class="card-title">開発者ガイド</h2>
               <p>BMF-CSSへの貢献、コーディング規約、リリースプロセスなどの開発者向け情報</p>
-              <a href="developer_guide/index.html" class="btn btn-secondary mt-4">開発者ガイドを見る</a>
+              <a href="developer_guide/index.html" class="btn btn-secondary">開発者ガイドを見る</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="mt-8">
+      <section class="content-section">
         <div class="card">
           <div class="card-header">
             <h2>BMF-CSSの特徴</h2>
@@ -52,7 +52,7 @@
         </div>
       </section>
 
-      <section class="mt-6">
+      <section class="content-section">
         <div class="card">
           <div class="card-header">
             <h2>クイックスタート</h2>
@@ -63,7 +63,7 @@
             <p>または</p>
             <pre><code>yarn add @bmf-san/bmf-css</code></pre>
 
-            <h3 class="mt-4">使用方法</h3>
+            <h3>使用方法</h3>
             <p>HTMLファイルに直接インポート:</p>
             <pre><code>&lt;link rel="stylesheet" href="node_modules/@bmf-san/bmf-css/dist/bmf-css.min.css"&gt;</code></pre>
 
@@ -71,7 +71,7 @@
             <pre><code>// React, Vue, Angularなど
 import '@bmf-san/bmf-css/dist/bmf-css.min.css';</code></pre>
 
-            <p class="mt-4">詳細な使用方法は<a href="users_guide/installation.html">インストールガイド</a>をご覧ください。</p>
+            <p>詳細な使用方法は<a href="users_guide/installation.html">インストールガイド</a>をご覧ください。</p>
           </div>
         </div>
       </section>
@@ -82,7 +82,7 @@ import '@bmf-san/bmf-css/dist/bmf-css.min.css';</code></pre>
     <div class="container">
       <div class="text-center">
         <p>&copy; 2024 BMF-CSS</p>
-        <p class="mt-2">
+        <p>
           <a href="https://github.com/bmf-san/bmf-css" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
       </div>

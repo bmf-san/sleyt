@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブレークポイント - BMF-CSS</title>
+  <link rel="stylesheet" href="../../../dist/bmf-css.min.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="logo">BMF-CSS</h1>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="../index.html">Overview</a></li>
+          <li><a href="../installation.html">Installation</a></li>
+          <li><a href="../implementation-approaches.html">Implementation Approaches</a></li>
+          <li>
+            <a href="../base/index.html">Base</a>
+            <ul>
+              <li><a href="../base/reset.html">Reset & Normalize</a></li>
+              <li><a href="../base/typography.html">Typography</a></li>
+              <li><a href="../base/links.html">Links</a></li>
+              <li><a href="../base/forms.html">Forms</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="index.html" class="active">Tokens</a>
+            <ul>
+              <li><a href="colors.html">Colors</a></li>
+              <li><a href="typography.html">Typography</a></li>
+              <li><a href="spacing.html">Spacing</a></li>
+              <li><a href="shadows.html">Shadows & Elevation</a></li>
+              <li><a href="breakpoints.html" class="active">Breakpoints</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../components/index.html">Components</a>
+            <ul>
+              <li><a href="../components/buttons.html">Buttons</a></li>
+              <li><a href="../components/forms.html">Form Elements</a></li>
+              <li><a href="../components/cards.html">Cards</a></li>
+              <li><a href="../components/navigation.html">Navigation</a></li>
+              <li><a href="../components/alerts.html">Alerts</a></li>
+              <li><a href="../components/modals.html">Modals</a></li>
+              <li><a href="../components/tooltips.html">Tooltips</a></li>
+              <li><a href="../components/tabs.html">Tabs</a></li>
+              <li><a href="../components/tables.html">Tables</a></li>
+              <li><a href="../components/pagination.html">Pagination</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../utilities/index.html">Utilities</a>
+            <ul>
+              <li><a href="../utilities/spacing.html">Spacing</a></li>
+              <li><a href="../utilities/text.html">Text</a></li>
+              <li><a href="../utilities/display.html">Display</a></li>
+              <li><a href="../utilities/colors.html">Colors & Background</a></li>
+              <li><a href="../utilities/borders.html">Borders & Shadows</a></li>
+              <li><a href="../utilities/flex.html">Flex & Grid</a></li>
+              <li><a href="../utilities/position.html">Position</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../themes/index.html">Themes</a>
+            <ul>
+              <li><a href="../themes/default.html">Default Theme</a></li>
+              <li><a href="../themes/dark-mode.html">Dark Mode</a></li>
+              <li><a href="../themes/customization.html">Customization</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../demos/index.html">Demos</a>
+            <ul>
+              <li><a href="../demos/blog.html">Blog</a></li>
+              <li><a href="../demos/admin.html">Admin Dashboard</a></li>
+              <li><a href="../demos/dashboard.html">Dashboard</a></li>
+              <li><a href="../demos/ecommerce.html">E-Commerce</a></li>
+              <li><a href="../demos/portfolio.html">Portfolio</a></li>
+              <li><a href="../demos/landing.html">Landing Page</a></li>
+            </ul>
+          </li>
+          <li><a href="../api-reference.html">API Reference</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="content-header">
+        <h1>ブレークポイント</h1>
+        <p>レスポンシブデザインのためのブレークポイント定義とその活用方法</p>
+      </header>
+
+      <section>
+        <h2>概要</h2>
+        <p>BMF-CSSは、さまざまな画面サイズやデバイスに対応したレスポンシブデザインを実現するために、一連の標準ブレークポイントを提供しています。これらのブレークポイントを活用することで、画面サイズに応じてレイアウトやコンポーネントの表示を調整できます。</p>
+      </section>
+
+      <section>
+        <h2>標準ブレークポイント</h2>
+        <p>BMF-CSSでは、以下の標準ブレークポイントを使用しています：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>ブレークポイント名</th>
+                  <th>最小幅</th>
+                  <th>説明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>sm</code></td>
+                  <td>640px</td>
+                  <td>小型デバイス（タブレット、大型モバイル）</td>
+                </tr>
+                <tr>
+                  <td><code>md</code></td>
+                  <td>768px</td>
+                  <td>中型デバイス（タブレット）</td>
+                </tr>
+                <tr>
+                  <td><code>lg</code></td>
+                  <td>1024px</td>
+                  <td>大型デバイス（デスクトップ）</td>
+                </tr>
+                <tr>
+                  <td><code>xl</code></td>
+                  <td>1280px</td>
+                  <td>特大デバイス（ワイドスクリーン）</td>
+                </tr>
+                <tr>
+                  <td><code>2xl</code></td>
+                  <td>1536px</td>
+                  <td>超大型デバイス（大型ディスプレイ）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="alert alert-info">
+          <p><strong>注：</strong> BMF-CSSはモバイルファーストのアプローチを採用しています。つまり、スタイルはまず小さな画面サイズ向けに定義され、その後大きな画面サイズに合わせて調整されます。</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>コンテナのブレークポイント</h2>
+        <p>BMF-CSSの<code>.container</code>クラスは、以下のブレークポイントに基づいて自動的に幅を調整します：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>ブレークポイント</th>
+                  <th>コンテナの最大幅</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&lt; 576px</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>≥ 576px</td>
+                  <td>540px</td>
+                </tr>
+                <tr>
+                  <td>≥ 768px</td>
+                  <td>720px</td>
+                </tr>
+                <tr>
+                  <td>≥ 992px</td>
+                  <td>960px</td>
+                </tr>
+                <tr>
+                  <td>≥ 1200px</td>
+                  <td>1140px</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 class="mt-4">コンテナバリエーション</h3>
+            <ul>
+              <li><code>.container</code> - 標準コンテナ（すべてのブレークポイントで応答）</li>
+              <li><code>.container-fluid</code> - 常に100%幅を維持するコンテナ</li>
+              <li><code>.container-sm</code> - 576px以上で最大幅が固定されるコンテナ</li>
+              <li><code>.container-md</code> - 768px以上で最大幅が固定されるコンテナ</li>
+              <li><code>.container-lg</code> - 992px以上で最大幅が固定されるコンテナ</li>
+              <li><code>.container-xl</code> - 1200px以上で最大幅が固定されるコンテナ</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>レスポンシブユーティリティ</h2>
+        <p>BMF-CSSでは、ブレークポイント接頭辞を使用して、特定の画面サイズでのみスタイルを適用できます：</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>レスポンシブ接頭辞の使用例</h3>
+          </div>
+          <div class="card-body">
+            <pre><code>&lt;!-- モバイルでは縦並び、768px以上では横並びになる --&gt;
+&lt;div class="flex-col md:flex-row"&gt;
+  &lt;div class="p-4"&gt;アイテム1&lt;/div&gt;
+  &lt;div class="p-4"&gt;アイテム2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- モバイルでは非表示、768px以上で表示される --&gt;
+&lt;div class="hidden md:block"&gt;
+  大きな画面でのみ表示されるコンテンツ
+&lt;/div&gt;
+
+&lt;!-- グリッドカラムがブレークポイントに応じて変化 --&gt;
+&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"&gt;
+  &lt;div class="p-4"&gt;アイテム1&lt;/div&gt;
+  &lt;div class="p-4"&gt;アイテム2&lt;/div&gt;
+  &lt;div class="p-4"&gt;アイテム3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>独自のメディアクエリ</h2>
+        <p>BMF-CSSのブレークポイントを独自のCSSで使用する場合は、以下のメディアクエリを使用できます：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <pre><code>/* Small (sm) */
+@media (min-width: 640px) {
+  /* スタイルをここに記述 */
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+  /* スタイルをここに記述 */
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+  /* スタイルをここに記述 */
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+  /* スタイルをここに記述 */
+}
+
+/* 2X Large (2xl) */
+@media (min-width: 1536px) {
+  /* スタイルをここに記述 */
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>レスポンシブデザインのベストプラクティス</h2>
+        <div class="card">
+          <div class="card-body">
+            <h3>1. モバイルファーストアプローチを採用する</h3>
+            <p>まずモバイル向けのスタイルを定義し、その後大きなブレークポイント向けにスタイルを拡張します。</p>
+
+            <h3>2. コンテナを使用する</h3>
+            <p><code>.container</code>クラスを使用して、コンテンツを適切な幅に制限します。</p>
+
+            <h3>3. 複雑なレイアウトにはグリッドシステムを使用する</h3>
+            <p>複数カラムのレイアウトには、レスポンシブなグリッドシステムを活用します。</p>
+
+            <h3>4. レスポンシブユーティリティを適切に使用する</h3>
+            <p>特定の画面サイズで要素を表示/非表示にするために、<code>hidden</code>/<code>block</code>などのユーティリティクラスを組み合わせます。</p>
+
+            <h3>5. デバイスでテストする</h3>
+            <p>実際のデバイスや、ブラウザの開発者ツールのデバイスエミュレーションモードでデザインをテストします。</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>レスポンシブイメージ</h2>
+        <p>BMF-CSSでは、画像を自動的にレスポンシブにするスタイルが適用されています：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <pre><code>img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+            <p>これにより、画像はコンテナの幅を超えないようになります。より高度な制御が必要な場合は、以下のユーティリティクラスを使用できます：</p>
+            <ul>
+              <li><code>.img-fluid</code> - レスポンシブイメージ（max-width: 100%, height: auto）</li>
+              <li><code>.img-full</code> - 親要素いっぱいに広がるイメージ（width: 100%）</li>
+              <li><code>.img-cover</code> - 親要素全体をカバーするイメージ（object-fit: cover）</li>
+              <li><code>.img-contain</code> - 親要素内に収まるイメージ（object-fit: contain）</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 BMF-CSS</p>
+    </div>
+  </footer>
+</body>
+</html>

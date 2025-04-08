@@ -7,144 +7,145 @@
   <link rel="stylesheet" href="../../dist/bmf-css.min.css">
 </head>
 <body>
-  <div class="layout">
-    <!-- Navigation Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <h1 class="logo">BMF-CSS</h1>
-      </div>
-      <nav class="sidebar-nav">
-        <ul>
-          <li><a href="../index.html">ドキュメントホーム</a></li>
-          <li><a href="index.html">Overview</a></li>
-          <li><a href="installation.html">Installation</a></li>
-          <li><a href="implementation-approaches.html" class="active">Implementation Approaches</a></li>
-          <li>
-            <a href="base/index.html">Base</a>
-            <ul>
-              <li><a href="base/reset.html">Reset & Normalize</a></li>
-              <li><a href="base/typography.html">Typography</a></li>
-              <li><a href="base/links.html">Links</a></li>
-              <li><a href="base/forms.html">Forms</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="tokens/index.html">Tokens</a>
-            <ul>
-              <li><a href="tokens/colors.html">Colors</a></li>
-              <li><a href="tokens/typography.html">Typography</a></li>
-              <li><a href="tokens/spacing.html">Spacing</a></li>
-              <li><a href="tokens/shadows.html">Shadows & Elevation</a></li>
-              <li><a href="tokens/breakpoints.html">Breakpoints</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="components/index.html">Components</a>
-            <ul>
-              <li><a href="components/buttons.html">Buttons</a></li>
-              <li><a href="components/forms.html">Form Elements</a></li>
-              <li><a href="components/cards.html">Cards</a></li>
-              <li><a href="components/navigation.html">Navigation</a></li>
-              <li><a href="components/alerts.html">Alerts</a></li>
-              <li><a href="components/modals.html">Modals</a></li>
-              <li><a href="components/tooltips.html">Tooltips</a></li>
-              <li><a href="components/tabs.html">Tabs</a></li>
-              <li><a href="components/tables.html">Tables</a></li>
-              <li><a href="components/pagination.html">Pagination</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="utilities/index.html">Utilities</a>
-            <ul>
-              <li><a href="utilities/spacing.html">Spacing</a></li>
-              <li><a href="utilities/text.html">Text</a></li>
-              <li><a href="utilities/display.html">Display</a></li>
-              <li><a href="utilities/colors.html">Colors & Background</a></li>
-              <li><a href="utilities/borders.html">Borders & Shadows</a></li>
-              <li><a href="utilities/flex.html">Flex & Grid</a></li>
-              <li><a href="utilities/position.html">Position</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="themes/index.html">Themes</a>
-            <ul>
-              <li><a href="themes/default.html">Default Theme</a></li>
-              <li><a href="themes/dark-mode.html">Dark Mode</a></li>
-              <li><a href="themes/customization.html">Customization</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="demos/index.html">Demos</a>
-            <ul>
-              <li><a href="demos/blog.html">Blog</a></li>
-              <li><a href="demos/admin.html">Admin Dashboard</a></li>
-              <li><a href="demos/dashboard.html">Dashboard</a></li>
-              <li><a href="demos/ecommerce.html">E-Commerce</a></li>
-              <li><a href="demos/portfolio.html">Portfolio</a></li>
-              <li><a href="demos/landing.html">Landing Page</a></li>
-            </ul>
-          </li>
-          <li><a href="api-reference.html">API Reference</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="content">
-      <header class="content-header">
-        <h1>Implementation Approaches</h1>
-        <p>Three ways to implement BMF-CSS components</p>
-      </header>
-
-      <section>
-        <h2>Overview</h2>
-        <p>BMF-CSS provides three distinct implementation patterns for its components, each with its own advantages. Choose the approach that best fits your project requirements and preferences.</p>
-      </section>
-
-      <section>
-        <h2>CSS-Based Implementation</h2>
-
-        <div class="card">
-          <div class="card-header">
-            <h3>Description</h3>
-          </div>
-          <div class="card-body">
-            <p>The CSS-Based implementation uses only CSS to create components, without requiring any JavaScript. This approach relies on CSS selectors, pseudo-classes, and clever structure to create interactive elements.</p>
-
-            <h4>Key Features:</h4>
-            <ul>
-              <li>No JavaScript required</li>
-              <li>Lightweight and fast</li>
-              <li>Works without any build process</li>
-              <li>SEO-friendly</li>
-              <li>Minimal dependencies</li>
-            </ul>
-
-            <h4>Best For:</h4>
-            <ul>
-              <li>Static sites</li>
-              <li>Projects where JavaScript should be minimized</li>
-              <li>Simple interactive components</li>
-              <li>Maximum performance optimization</li>
-            </ul>
-          </div>
+  <div class="container-fluid">
+    <div class="grid grid-cols-1 md:grid-cols-4">
+      <!-- Navigation Sidebar -->
+      <aside class="nav-sidebar">
+        <div class="content-section">
+          <h1 class="content-section-title">BMF-CSS</h1>
         </div>
+        <nav class="nav nav-vertical">
+          <ul>
+            <li><a href="../index.html">ドキュメントホーム</a></li>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="installation.html">Installation</a></li>
+            <li><a href="implementation-approaches.html" class="active">Implementation Approaches</a></li>
+            <li>
+              <a href="base/index.html">Base</a>
+              <ul>
+                <li><a href="base/reset.html">Reset & Normalize</a></li>
+                <li><a href="base/typography.html">Typography</a></li>
+                <li><a href="base/links.html">Links</a></li>
+                <li><a href="base/forms.html">Forms</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="tokens/index.html">Tokens</a>
+              <ul>
+                <li><a href="tokens/colors.html">Colors</a></li>
+                <li><a href="tokens/typography.html">Typography</a></li>
+                <li><a href="tokens/spacing.html">Spacing</a></li>
+                <li><a href="tokens/shadows.html">Shadows & Elevation</a></li>
+                <li><a href="tokens/breakpoints.html">Breakpoints</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="components/index.html">Components</a>
+              <ul>
+                <li><a href="components/buttons.html">Buttons</a></li>
+                <li><a href="components/forms.html">Form Elements</a></li>
+                <li><a href="components/cards.html">Cards</a></li>
+                <li><a href="components/navigation.html">Navigation</a></li>
+                <li><a href="components/alerts.html">Alerts</a></li>
+                <li><a href="components/modals.html">Modals</a></li>
+                <li><a href="components/tooltips.html">Tooltips</a></li>
+                <li><a href="components/tabs.html">Tabs</a></li>
+                <li><a href="components/tables.html">Tables</a></li>
+                <li><a href="components/pagination.html">Pagination</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="utilities/index.html">Utilities</a>
+              <ul>
+                <li><a href="utilities/spacing.html">Spacing</a></li>
+                <li><a href="utilities/text.html">Text</a></li>
+                <li><a href="utilities/display.html">Display</a></li>
+                <li><a href="utilities/colors.html">Colors & Background</a></li>
+                <li><a href="utilities/borders.html">Borders & Shadows</a></li>
+                <li><a href="utilities/flex.html">Flex & Grid</a></li>
+                <li><a href="utilities/position.html">Position</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="themes/index.html">Themes</a>
+              <ul>
+                <li><a href="themes/default.html">Default Theme</a></li>
+                <li><a href="themes/dark-mode.html">Dark Mode</a></li>
+                <li><a href="themes/customization.html">Customization</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="demos/index.html">Demos</a>
+              <ul>
+                <li><a href="demos/blog.html">Blog</a></li>
+                <li><a href="demos/admin.html">Admin Dashboard</a></li>
+                <li><a href="demos/dashboard.html">Dashboard</a></li>
+                <li><a href="demos/ecommerce.html">E-Commerce</a></li>
+                <li><a href="demos/portfolio.html">Portfolio</a></li>
+                <li><a href="demos/landing.html">Landing Page</a></li>
+              </ul>
+            </li>
+            <li><a href="api-reference.html">API Reference</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-        <div class="card">
-          <div class="card-header">
-            <h3>Example: Dropdown Menu</h3>
+      <!-- Main Content -->
+      <main class="content col-span-3">
+        <header class="content-section">
+          <h1 class="content-section-title">Implementation Approaches</h1>
+          <p class="content-section-description">Three ways to implement BMF-CSS components</p>
+        </header>
+
+        <section class="content-section">
+          <h2 class="content-section-title">Overview</h2>
+          <p>BMF-CSS provides three distinct implementation patterns for its components, each with its own advantages. Choose the approach that best fits your project requirements and preferences.</p>
+        </section>
+
+        <section class="content-section">
+          <h2 class="content-section-title">CSS-Based Implementation</h2>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Description</h3>
+            </div>
+            <div class="card-body">
+              <p>The CSS-Based implementation uses only CSS to create components, without requiring any JavaScript. This approach relies on CSS selectors, pseudo-classes, and clever structure to create interactive elements.</p>
+
+              <h4>Key Features:</h4>
+              <ul>
+                <li>No JavaScript required</li>
+                <li>Lightweight and fast</li>
+                <li>Works without any build process</li>
+                <li>SEO-friendly</li>
+                <li>Minimal dependencies</li>
+              </ul>
+
+              <h4>Best For:</h4>
+              <ul>
+                <li>Static sites</li>
+                <li>Projects where JavaScript should be minimized</li>
+                <li>Simple interactive components</li>
+                <li>Maximum performance optimization</li>
+              </ul>
+            </div>
           </div>
-          <div class="card-body">
-            <p>Here's how to implement a dropdown menu using the CSS-Based approach:</p>
 
-            <div class="tabs">
-              <div class="tab-list" role="tablist">
-                <button class="tab active" role="tab" aria-selected="true">HTML</button>
-                <button class="tab" role="tab" aria-selected="false">Result</button>
-              </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Example: Dropdown Menu</h3>
+            </div>
+            <div class="card-body">
+              <p>Here's how to implement a dropdown menu using the CSS-Based approach:</p>
 
-              <div class="tab-panel active" role="tabpanel">
-                <pre><code>&lt;div class="dropdown"&gt;
+              <div class="tabs">
+                <div class="tab-list" role="tablist">
+                  <button class="tab active" role="tab" aria-selected="true">HTML</button>
+                  <button class="tab" role="tab" aria-selected="false">Result</button>
+                </div>
+
+                <div class="tab-panel active" role="tabpanel">
+                  <pre><code>&lt;div class="dropdown"&gt;
   &lt;button class="btn dropdown-toggle"&gt;Dropdown&lt;/button&gt;
   &lt;ul class="dropdown-menu"&gt;
     &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Option 1&lt;/a&gt;&lt;/li&gt;
@@ -152,68 +153,68 @@
     &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Option 3&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
-              </div>
+                </div>
 
-              <div class="tab-panel" role="tabpanel">
-                <div class="dropdown">
-                  <button class="btn dropdown-toggle">Dropdown</button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Option 1</a></li>
-                    <li><a href="#" class="dropdown-item">Option 2</a></li>
-                    <li><a href="#" class="dropdown-item">Option 3</a></li>
-                  </ul>
+                <div class="tab-panel" role="tabpanel">
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle">Dropdown</button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="dropdown-item">Option 1</a></li>
+                      <li><a href="#" class="dropdown-item">Option 2</a></li>
+                      <li><a href="#" class="dropdown-item">Option 3</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>Hybrid Implementation</h2>
+        <section class="content-section">
+          <h2 class="content-section-title">Hybrid Implementation</h2>
 
-        <div class="card">
-          <div class="card-header">
-            <h3>Description</h3>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Description</h3>
+            </div>
+            <div class="card-body">
+              <p>The Hybrid implementation combines CSS styling with JavaScript functionality. This approach leverages CSS for appearance and basic interactions, while using JavaScript for more complex behavior and state management.</p>
+
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Enhanced functionality through JavaScript</li>
+                <li>Better control over component states</li>
+                <li>Improved accessibility</li>
+                <li>More complex interactions possible</li>
+                <li>Programmatic control over components</li>
+              </ul>
+
+              <h4>Best For:</h4>
+              <ul>
+                <li>Complex interactive components</li>
+                <li>Applications requiring state management</li>
+                <li>Components needing dynamic content</li>
+                <li>Projects where accessibility is a priority</li>
+              </ul>
+            </div>
           </div>
-          <div class="card-body">
-            <p>The Hybrid implementation combines CSS styling with JavaScript functionality. This approach leverages CSS for appearance and basic interactions, while using JavaScript for more complex behavior and state management.</p>
 
-            <h4>Key Features:</h4>
-            <ul>
-              <li>Enhanced functionality through JavaScript</li>
-              <li>Better control over component states</li>
-              <li>Improved accessibility</li>
-              <li>More complex interactions possible</li>
-              <li>Programmatic control over components</li>
-            </ul>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Example: Dropdown Menu</h3>
+            </div>
+            <div class="card-body">
+              <p>Here's how to implement a dropdown menu using the Hybrid approach:</p>
 
-            <h4>Best For:</h4>
-            <ul>
-              <li>Complex interactive components</li>
-              <li>Applications requiring state management</li>
-              <li>Components needing dynamic content</li>
-              <li>Projects where accessibility is a priority</li>
-            </ul>
-          </div>
-        </div>
+              <div class="tabs">
+                <div class="tab-list" role="tablist">
+                  <button class="tab active" role="tab" aria-selected="true">HTML</button>
+                  <button class="tab" role="tab" aria-selected="false">JavaScript</button>
+                  <button class="tab" role="tab" aria-selected="false">Result</button>
+                </div>
 
-        <div class="card">
-          <div class="card-header">
-            <h3>Example: Dropdown Menu</h3>
-          </div>
-          <div class="card-body">
-            <p>Here's how to implement a dropdown menu using the Hybrid approach:</p>
-
-            <div class="tabs">
-              <div class="tab-list" role="tablist">
-                <button class="tab active" role="tab" aria-selected="true">HTML</button>
-                <button class="tab" role="tab" aria-selected="false">JavaScript</button>
-                <button class="tab" role="tab" aria-selected="false">Result</button>
-              </div>
-
-              <div class="tab-panel active" role="tabpanel">
-                <pre><code>&lt;div class="dropdown" id="js-dropdown"&gt;
+                <div class="tab-panel active" role="tabpanel">
+                  <pre><code>&lt;div class="dropdown" id="js-dropdown"&gt;
   &lt;button class="btn dropdown-toggle" id="js-dropdown-toggle" aria-haspopup="true" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
   &lt;ul class="dropdown-menu" id="js-dropdown-menu" aria-labelledby="js-dropdown-toggle"&gt;
     &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Option 1&lt;/a&gt;&lt;/li&gt;
@@ -221,10 +222,10 @@
     &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Option 3&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
-              </div>
+                </div>
 
-              <div class="tab-panel" role="tabpanel">
-                <pre><code>document.addEventListener('DOMContentLoaded', function() {
+                <div class="tab-panel" role="tabpanel">
+                  <pre><code>document.addEventListener('DOMContentLoaded', function() {
   const dropdownToggle = document.getElementById('js-dropdown-toggle');
   const dropdownMenu = document.getElementById('js-dropdown-menu');
 
@@ -257,68 +258,68 @@
     });
   }
 });</code></pre>
-              </div>
+                </div>
 
-              <div class="tab-panel" role="tabpanel">
-                <div class="dropdown">
-                  <button class="btn dropdown-toggle">Dropdown (JS Enhanced)</button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Option 1</a></li>
-                    <li><a href="#" class="dropdown-item">Option 2</a></li>
-                    <li><a href="#" class="dropdown-item">Option 3</a></li>
-                  </ul>
+                <div class="tab-panel" role="tabpanel">
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle">Dropdown (JS Enhanced)</button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="dropdown-item">Option 1</a></li>
+                      <li><a href="#" class="dropdown-item">Option 2</a></li>
+                      <li><a href="#" class="dropdown-item">Option 3</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>Attribute-Based Implementation</h2>
+        <section class="content-section">
+          <h2 class="content-section-title">Attribute-Based Implementation</h2>
 
-        <div class="card">
-          <div class="card-header">
-            <h3>Description</h3>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Description</h3>
+            </div>
+            <div class="card-body">
+              <p>The Attribute-Based implementation uses HTML data attributes to initialize and configure components. This declarative approach helps separate functionality from presentation and makes the code easier to understand and maintain.</p>
+
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Declarative implementation</li>
+                <li>Cleaner HTML</li>
+                <li>Better separation of concerns</li>
+                <li>Easier component customization</li>
+                <li>Improved maintainability</li>
+              </ul>
+
+              <h4>Best For:</h4>
+              <ul>
+                <li>Larger projects with many developers</li>
+                <li>Components with many configuration options</li>
+                <li>Projects requiring clear organization</li>
+                <li>When consistency is a priority</li>
+              </ul>
+            </div>
           </div>
-          <div class="card-body">
-            <p>The Attribute-Based implementation uses HTML data attributes to initialize and configure components. This declarative approach helps separate functionality from presentation and makes the code easier to understand and maintain.</p>
 
-            <h4>Key Features:</h4>
-            <ul>
-              <li>Declarative implementation</li>
-              <li>Cleaner HTML</li>
-              <li>Better separation of concerns</li>
-              <li>Easier component customization</li>
-              <li>Improved maintainability</li>
-            </ul>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Example: Dropdown Menu</h3>
+            </div>
+            <div class="card-body">
+              <p>Here's how to implement a dropdown menu using the Attribute-Based approach:</p>
 
-            <h4>Best For:</h4>
-            <ul>
-              <li>Larger projects with many developers</li>
-              <li>Components with many configuration options</li>
-              <li>Projects requiring clear organization</li>
-              <li>When consistency is a priority</li>
-            </ul>
-          </div>
-        </div>
+              <div class="tabs">
+                <div class="tab-list" role="tablist">
+                  <button class="tab active" role="tab" aria-selected="true">HTML</button>
+                  <button class="tab" role="tab" aria-selected="false">JavaScript</button>
+                  <button class="tab" role="tab" aria-selected="false">Result</button>
+                </div>
 
-        <div class="card">
-          <div class="card-header">
-            <h3>Example: Dropdown Menu</h3>
-          </div>
-          <div class="card-body">
-            <p>Here's how to implement a dropdown menu using the Attribute-Based approach:</p>
-
-            <div class="tabs">
-              <div class="tab-list" role="tablist">
-                <button class="tab active" role="tab" aria-selected="true">HTML</button>
-                <button class="tab" role="tab" aria-selected="false">JavaScript</button>
-                <button class="tab" role="tab" aria-selected="false">Result</button>
-              </div>
-
-              <div class="tab-panel active" role="tabpanel">
-                <pre><code>&lt;div data-dropdown&gt;
+                <div class="tab-panel active" role="tabpanel">
+                  <pre><code>&lt;div data-dropdown&gt;
   &lt;button class="btn" data-dropdown-toggle&gt;Dropdown&lt;/button&gt;
   &lt;ul class="dropdown-menu" data-dropdown-menu&gt;
     &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Option 1&lt;/a&gt;&lt;/li&gt;
@@ -326,10 +327,10 @@
     &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Option 3&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
-              </div>
+                </div>
 
-              <div class="tab-panel" role="tabpanel">
-                <pre><code>document.addEventListener('DOMContentLoaded', function() {
+                <div class="tab-panel" role="tabpanel">
+                  <pre><code>document.addEventListener('DOMContentLoaded', function() {
   // Initialize all dropdowns on the page
   initDropdowns();
 
@@ -367,102 +368,103 @@
     });
   }
 });</code></pre>
-              </div>
+                </div>
 
-              <div class="tab-panel" role="tabpanel">
-                <div class="dropdown">
-                  <button class="btn dropdown-toggle">Dropdown (Attribute-Based)</button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Option 1</a></li>
-                    <li><a href="#" class="dropdown-item">Option 2</a></li>
-                    <li><a href="#" class="dropdown-item">Option 3</a></li>
-                  </ul>
+                <div class="tab-panel" role="tabpanel">
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle">Dropdown (Attribute-Based)</button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="dropdown-item">Option 1</a></li>
+                      <li><a href="#" class="dropdown-item">Option 2</a></li>
+                      <li><a href="#" class="dropdown-item">Option 3</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>Choosing the Right Approach</h2>
+        <section class="content-section">
+          <h2 class="content-section-title">Choosing the Right Approach</h2>
 
-        <div class="card">
-          <div class="card-body">
-            <p>Consider these factors when choosing which implementation pattern to use for your project:</p>
+          <div class="card">
+            <div class="card-body">
+              <p>Consider these factors when choosing which implementation pattern to use for your project:</p>
 
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Factor</th>
-                    <th>CSS-Based</th>
-                    <th>Hybrid</th>
-                    <th>Attribute-Based</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Complexity</td>
-                    <td>Low</td>
-                    <td>Medium</td>
-                    <td>Medium-High</td>
-                  </tr>
-                  <tr>
-                    <td>Performance</td>
-                    <td>Excellent</td>
-                    <td>Good</td>
-                    <td>Good</td>
-                  </tr>
-                  <tr>
-                    <td>Accessibility</td>
-                    <td>Basic</td>
-                    <td>Excellent</td>
-                    <td>Excellent</td>
-                  </tr>
-                  <tr>
-                    <td>Interactivity</td>
-                    <td>Limited</td>
-                    <td>Extensive</td>
-                    <td>Extensive</td>
-                  </tr>
-                  <tr>
-                    <td>Maintainability</td>
-                    <td>Good</td>
-                    <td>Good</td>
-                    <td>Excellent</td>
-                  </tr>
-                  <tr>
-                    <td>Learning Curve</td>
-                    <td>Low</td>
-                    <td>Medium</td>
-                    <td>Medium</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Factor</th>
+                      <th>CSS-Based</th>
+                      <th>Hybrid</th>
+                      <th>Attribute-Based</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Complexity</td>
+                      <td>Low</td>
+                      <td>Medium</td>
+                      <td>Medium-High</td>
+                    </tr>
+                    <tr>
+                      <td>Performance</td>
+                      <td>Excellent</td>
+                      <td>Good</td>
+                      <td>Good</td>
+                    </tr>
+                    <tr>
+                      <td>Accessibility</td>
+                      <td>Basic</td>
+                      <td>Excellent</td>
+                      <td>Excellent</td>
+                    </tr>
+                    <tr>
+                      <td>Interactivity</td>
+                      <td>Limited</td>
+                      <td>Extensive</td>
+                      <td>Extensive</td>
+                    </tr>
+                    <tr>
+                      <td>Maintainability</td>
+                      <td>Good</td>
+                      <td>Good</td>
+                      <td>Excellent</td>
+                    </tr>
+                    <tr>
+                      <td>Learning Curve</td>
+                      <td>Low</td>
+                      <td>Medium</td>
+                      <td>Medium</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>Mixed Approach</h2>
+        <section class="content-section">
+          <h2 class="content-section-title">Mixed Approach</h2>
 
-        <div class="card">
-          <div class="card-body">
-            <p>You're not limited to using just one implementation pattern throughout your project. In fact, it's common and often beneficial to mix approaches based on the specific requirements of each component:</p>
+          <div class="card">
+            <div class="card-body">
+              <p>You're not limited to using just one implementation pattern throughout your project. In fact, it's common and often beneficial to mix approaches based on the specific requirements of each component:</p>
 
-            <ul>
-              <li>Use <strong>CSS-Based</strong> for simple UI elements like buttons, cards, and basic dropdowns</li>
-              <li>Use <strong>Hybrid</strong> for components requiring complex interactions like modals, tabs, and sliders</li>
-              <li>Use <strong>Attribute-Based</strong> for components that need to be reused extensively or where configuration options are important</li>
-            </ul>
+              <ul>
+                <li>Use <strong>CSS-Based</strong> for simple UI elements like buttons, cards, and basic dropdowns</li>
+                <li>Use <strong>Hybrid</strong> for components requiring complex interactions like modals, tabs, and sliders</li>
+                <li>Use <strong>Attribute-Based</strong> for components that need to be reused extensively or where configuration options are important</li>
+              </ul>
 
-            <p>This flexible approach allows you to optimize for both simplicity and functionality where appropriate.</p>
+              <p>This flexible approach allows you to optimize for both simplicity and functionality where appropriate.</p>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   </div>
 
   <footer class="footer">

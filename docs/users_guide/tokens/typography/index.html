@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タイポグラフィトークン - BMF-CSS</title>
+  <link rel="stylesheet" href="../../../../dist/bmf-css.min.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="logo">BMF-CSS</h1>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="../../index.html">Overview</a></li>
+          <li><a href="../../installation.html">Installation</a></li>
+          <li><a href="../../implementation-approaches.html">Implementation Approaches</a></li>
+          <li>
+            <a href="../../base/index.html">Base</a>
+            <ul>
+              <li><a href="../../base/reset.html">Reset & Normalize</a></li>
+              <li><a href="../../base/typography.html">Typography</a></li>
+              <li><a href="../../base/links.html">Links</a></li>
+              <li><a href="../../base/forms.html">Forms</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../index.html" class="active">Tokens</a>
+            <ul>
+              <li><a href="../colors/index.html">Colors</a></li>
+              <li><a href="../typography/index.html" class="active">Typography</a></li>
+              <li><a href="../spacing/index.html">Spacing</a></li>
+              <li><a href="../shadows/index.html">Shadows & Elevation</a></li>
+              <li><a href="../breakpoints.html">Breakpoints</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../../components/index.html">Components</a>
+            <ul>
+              <li><a href="../../components/buttons.html">Buttons</a></li>
+              <li><a href="../../components/forms.html">Form Elements</a></li>
+              <li><a href="../../components/cards.html">Cards</a></li>
+              <li><a href="../../components/navigation.html">Navigation</a></li>
+              <li><a href="../../components/alerts.html">Alerts</a></li>
+              <li><a href="../../components/modals.html">Modals</a></li>
+              <li><a href="../../components/tooltips.html">Tooltips</a></li>
+              <li><a href="../../components/tabs.html">Tabs</a></li>
+              <li><a href="../../components/tables.html">Tables</a></li>
+              <li><a href="../../components/pagination.html">Pagination</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../../utilities/index.html">Utilities</a>
+            <ul>
+              <li><a href="../../utilities/spacing.html">Spacing</a></li>
+              <li><a href="../../utilities/text.html">Text</a></li>
+              <li><a href="../../utilities/display.html">Display</a></li>
+              <li><a href="../../utilities/colors.html">Colors & Background</a></li>
+              <li><a href="../../utilities/borders.html">Borders & Shadows</a></li>
+              <li><a href="../../utilities/flex.html">Flex & Grid</a></li>
+              <li><a href="../../utilities/position.html">Position</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../../themes/index.html">Themes</a>
+            <ul>
+              <li><a href="../../themes/default.html">Default Theme</a></li>
+              <li><a href="../../themes/dark-mode.html">Dark Mode</a></li>
+              <li><a href="../../themes/customization.html">Customization</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../../demos/index.html">Demos</a>
+            <ul>
+              <li><a href="../../demos/blog.html">Blog</a></li>
+              <li><a href="../../demos/admin.html">Admin Dashboard</a></li>
+              <li><a href="../../demos/dashboard.html">Dashboard</a></li>
+              <li><a href="../../demos/ecommerce.html">E-Commerce</a></li>
+              <li><a href="../../demos/portfolio.html">Portfolio</a></li>
+              <li><a href="../../demos/landing.html">Landing Page</a></li>
+            </ul>
+          </li>
+          <li><a href="../../api-reference.html">API Reference</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="content-header">
+        <h1>タイポグラフィトークン</h1>
+        <p>BMF-CSSで使用されるフォントサイズ、ウェイト、行高さなどのタイポグラフィトークンの説明</p>
+      </header>
+
+      <section>
+        <h2>概要</h2>
+        <p>BMF-CSSは、一貫性のあるタイポグラフィシステムを提供するために、定義済みのタイポグラフィトークンを使用しています。これらのトークンは、フォントサイズ、フォントウェイト、行高さ、フォントファミリーなど、テキストの視覚的特性を制御するためのCSSカスタムプロパティ（変数）として実装されています。</p>
+      </section>
+
+      <section>
+        <h2>フォントサイズ</h2>
+        <p>BMF-CSSは、以下のフォントサイズトークンを提供しています：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>トークン</th>
+                  <th>値</th>
+                  <th>サンプル</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>--font-xs</code></td>
+                  <td>12px</td>
+                  <td><span style="font-size: var(--font-xs);">小さなテキストサンプル</span></td>
+                </tr>
+                <tr>
+                  <td><code>--font-sm</code></td>
+                  <td>14px</td>
+                  <td><span style="font-size: var(--font-sm);">小さめのテキストサンプル</span></td>
+                </tr>
+                <tr>
+                  <td><code>--font-base</code></td>
+                  <td>16px</td>
+                  <td><span style="font-size: var(--font-base);">基本テキストサンプル</span></td>
+                </tr>
+                <tr>
+                  <td><code>--font-lg</code></td>
+                  <td>18px</td>
+                  <td><span style="font-size: var(--font-lg);">大きめのテキストサンプル</span></td>
+                </tr>
+                <tr>
+                  <td><code>--font-xl</code></td>
+                  <td>20px</td>
+                  <td><span style="font-size: var(--font-xl);">より大きなテキストサンプル</span></td>
+                </tr>
+                <tr>
+                  <td><code>--font-2xl</code></td>
+                  <td>24px</td>
+                  <td><span style="font-size: var(--font-2xl);">見出しレベルのテキストサンプル</span></td>
+                </tr>
+                <tr>
+                  <td><code>--font-3xl</code></td>
+                  <td>30px</td>
+                  <td><span style="font-size: var(--font-3xl);">大見出しレベルのテキストサンプル</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="code-example">
+          <pre><code>/* フォントサイズトークンの使用例 */
+.title {
+  font-size: var(--font-2xl);
+}
+
+.subtitle {
+  font-size: var(--font-xl);
+}
+
+.body-text {
+  font-size: var(--font-base);
+}
+
+.caption {
+  font-size: var(--font-sm);
+}
+</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h2>フォントウェイト</h2>
+        <p>BMF-CSSは、以下のフォントウェイトトークンを提供しています：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>トークン</th>
+                  <th>値</th>
+                  <th>サンプル</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>--font-weight-normal</code></td>
+                  <td>400</td>
+                  <td><span style="font-weight: var(--font-weight-normal);">通常のテキストウェイト</span></td>
+                </tr>
+                <tr>
+                  <td><code>--font-weight-medium</code></td>
+                  <td>500</td>
+                  <td><span style="font-weight: var(--font-weight-medium);">中程度のテキストウェイト</span></td>
+                </tr>
+                <tr>
+                  <td><code>--font-weight-bold</code></td>
+                  <td>700</td>
+                  <td><span style="font-weight: var(--font-weight-bold);">太字のテキストウェイト</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="code-example">
+          <pre><code>/* フォントウェイトトークンの使用例 */
+.heading {
+  font-weight: var(--font-weight-bold);
+}
+
+.subheading {
+  font-weight: var(--font-weight-medium);
+}
+
+.paragraph {
+  font-weight: var(--font-weight-normal);
+}
+</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h2>行高さ</h2>
+        <p>BMF-CSSは、以下の行高さトークンを提供しています：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>トークン</th>
+                  <th>値</th>
+                  <th>適用</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>--line-height-tight</code></td>
+                  <td>1.25</td>
+                  <td>見出しや短いテキストに適しています</td>
+                </tr>
+                <tr>
+                  <td><code>--line-height-normal</code></td>
+                  <td>1.5</td>
+                  <td>一般的な本文テキストに最適です</td>
+                </tr>
+                <tr>
+                  <td><code>--line-height-relaxed</code></td>
+                  <td>1.75</td>
+                  <td>読みやすさを重視する長文に適しています</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="line-height-examples">
+          <div class="example">
+            <h4>Tight (1.25)</h4>
+            <p style="line-height: var(--line-height-tight);">
+              これは行高さがtightに設定されたテキストの例です。行間が狭くなるため、見出しや短いテキストに適しています。ただし、長文の場合は読みにくくなる可能性があります。
+            </p>
+          </div>
+          <div class="example">
+            <h4>Normal (1.5)</h4>
+            <p style="line-height: var(--line-height-normal);">
+              これは行高さがnormalに設定されたテキストの例です。一般的な本文テキストに最適で、読みやすさとスペースのバランスが取れています。多くのウェブサイトやアプリケーションで使用されている標準的な行高さです。
+            </p>
+          </div>
+          <div class="example">
+            <h4>Relaxed (1.75)</h4>
+            <p style="line-height: var(--line-height-relaxed);">
+              これは行高さがrelaxedに設定されたテキストの例です。行間が広くなるため、長文や複雑な内容の文章で読みやすさを向上させます。ブログ記事や記事本文などで効果的です。
+            </p>
+          </div>
+        </div>
+
+        <div class="code-example">
+          <pre><code>/* 行高さトークンの使用例 */
+h1, h2, h3 {
+  line-height: var(--line-height-tight);
+}
+
+p, li {
+  line-height: var(--line-height-normal);
+}
+
+.article-content {
+  line-height: var(--line-height-relaxed);
+}
+</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h2>フォントファミリー</h2>
+        <p>BMF-CSSは、以下のフォントファミリートークンを提供しています：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>トークン</th>
+                  <th>値</th>
+                  <th>適用</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>--font-family-base</code></td>
+                  <td>システムフォントスタック</td>
+                  <td>本文テキスト用の主要フォント</td>
+                </tr>
+                <tr>
+                  <td><code>--font-family-heading</code></td>
+                  <td>システムフォントスタック（より強調）</td>
+                  <td>見出し用のフォント</td>
+                </tr>
+                <tr>
+                  <td><code>--font-family-mono</code></td>
+                  <td>等幅フォントスタック</td>
+                  <td>コードサンプルや等幅テキスト</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="font-family-examples">
+          <div class="example">
+            <h4>Base Font</h4>
+            <p style="font-family: var(--font-family-base);">
+              これは基本フォントファミリーを使用したテキストの例です。一般的なコンテンツや本文テキストに適しています。
+            </p>
+          </div>
+          <div class="example">
+            <h4>Heading Font</h4>
+            <p style="font-family: var(--font-family-heading);">
+              これは見出しフォントファミリーを使用したテキストの例です。見出しやタイトルに適しています。
+            </p>
+          </div>
+          <div class="example">
+            <h4>Monospace Font</h4>
+            <p style="font-family: var(--font-family-mono);">
+              これは等幅フォントファミリーを使用したテキストの例です。コードやプログラミング関連のコンテンツに適しています。
+            </p>
+          </div>
+        </div>
+
+        <div class="code-example">
+          <pre><code>/* フォントファミリートークンの使用例 */
+body {
+  font-family: var(--font-family-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+}
+
+code, pre {
+  font-family: var(--font-family-mono);
+}
+</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h2>レタースペーシング</h2>
+        <p>BMF-CSSは、以下のレタースペーシングトークンを提供しています：</p>
+
+        <div class="card">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>トークン</th>
+                  <th>値</th>
+                  <th>適用</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>--letter-spacing-tight</code></td>
+                  <td>-0.025em</td>
+                  <td>文字間隔を狭くし、大きい見出しなどに適しています</td>
+                </tr>
+                <tr>
+                  <td><code>--letter-spacing-normal</code></td>
+                  <td>0</td>
+                  <td>標準的な文字間隔で、通常のテキストに使用されます</td>
+                </tr>
+                <tr>
+                  <td><code>--letter-spacing-wide</code></td>
+                  <td>0.025em</td>
+                  <td>文字間隔を広くし、小さいテキストや全て大文字のテキストに適しています</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="letter-spacing-examples">
+          <div class="example">
+            <h4>Tight (-0.025em)</h4>
+            <p style="letter-spacing: var(--letter-spacing-tight); font-size: var(--font-xl);">
+              文字間隔が狭いテキストの例です。大きな見出しに効果的です。
+            </p>
+          </div>
+          <div class="example">
+            <h4>Normal (0)</h4>
+            <p style="letter-spacing: var(--letter-spacing-normal);">
+              標準的な文字間隔のテキストの例です。通常のテキストコンテンツに使用されます。
+            </p>
+          </div>
+          <div class="example">
+            <h4>Wide (0.025em)</h4>
+            <p style="letter-spacing: var(--letter-spacing-wide); text-transform: uppercase; font-size: var(--font-sm);">
+              文字間隔が広いテキストの例です。小さいテキストや全て大文字のテキストに適しています。
+            </p>
+          </div>
+        </div>
+
+        <div class="code-example">
+          <pre><code>/* レタースペーシングトークンの使用例 */
+h1 {
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+p {
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.small-caps {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h2>利用方法</h2>
+        <p>タイポグラフィトークンは、CSSカスタムプロパティとして実装されているため、簡単に使用できます。以下に一般的な使用例を示します：</p>
+
+        <div class="code-example">
+          <pre><code>/* タイポグラフィトークンの使用例 */
+.page-title {
+  font-size: var(--font-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  font-family: var(--font-family-heading);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.article {
+  font-size: var(--font-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  font-family: var(--font-family-base);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.code-block {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-sm);
+  line-height: var(--line-height-normal);
+}
+</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h2>レスポンシブタイポグラフィ</h2>
+        <p>BMF-CSSでは、メディアクエリを使用して画面サイズに応じたタイポグラフィの調整が可能です：</p>
+
+        <div class="code-example">
+          <pre><code>/* レスポンシブなタイポグラフィの例 */
+:root {
+  --font-base: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+  --font-2xl: 24px;
+  --font-3xl: 30px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-base: 15px;
+    --font-lg: 17px;
+    --font-xl: 19px;
+    --font-2xl: 22px;
+    --font-3xl: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-base: 14px;
+    --font-lg: 16px;
+    --font-xl: 18px;
+    --font-2xl: 20px;
+    --font-3xl: 24px;
+  }
+}
+</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h2>カスタマイズ</h2>
+        <p>プロジェクトの要件に合わせてタイポグラフィトークンをカスタマイズする方法：</p>
+
+        <ol>
+          <li>
+            <p><strong>CSSファイルのオーバーライド：</strong> 独自のCSSファイルでトークンを再定義します。</p>
+            <div class="code-example">
+              <pre><code>/* custom-typography.css */
+:root {
+  --font-base: 18px;  /* 基本フォントサイズを18pxに変更 */
+  --font-family-base: 'Open Sans', sans-serif;  /* フォントファミリーを変更 */
+  --line-height-normal: 1.6;  /* 行高さを調整 */
+}
+</code></pre>
+            </div>
+          </li>
+          <li>
+            <p><strong>インライン変数の上書き：</strong> 特定の要素や範囲で変数を上書きします。</p>
+            <div class="code-example">
+              <pre><code>.special-section {
+  --font-base: 17px;  /* このセクション内でのみフォントサイズを調整 */
+  --line-height-normal: 1.7;  /* このセクション内でのみ行高さを調整 */
+}
+</code></pre>
+            </div>
+          </li>
+          <li>
+            <p><strong>CSS変数の上書き（JavaScript）：</strong> 動的な変更が必要な場合はJavaScriptで変数を更新します。</p>
+            <div class="code-example">
+              <pre><code>// フォントサイズを動的に変更する
+document.documentElement.style.setProperty('--font-base', '17px');
+
+// ユーザー設定に基づいてフォントサイズを調整する関数
+function adjustFontSize(sizePreference) {
+  let newSize;
+  switch(sizePreference) {
+    case 'small':
+      newSize = '14px';
+      break;
+    case 'large':
+      newSize = '18px';
+      break;
+    default:
+      newSize = '16px';
+  }
+  document.documentElement.style.setProperty('--font-base', newSize);
+}
+</code></pre>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>ベストプラクティス</h2>
+        <p>BMF-CSSのタイポグラフィトークンを効果的に使用するためのベストプラクティス：</p>
+
+        <ul>
+          <li>一貫性を保つため、カスタムフォントサイズを定義する代わりに、提供されているトークンを使用しましょう。</li>
+          <li>見出しレベルに応じて適切なフォントサイズと行高さのトークンを組み合わせましょう。</li>
+          <li>スマートフォンやタブレットなど、さまざまな画面サイズでのタイポグラフィの表示を確認しましょう。</li>
+          <li>アクセシビリティを考慮し、十分なコントラストと読みやすさを確保しましょう。</li>
+          <li>過度に多くのフォントサイズやスタイルを使用しないようにし、デザインの一貫性を維持しましょう。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>関連トークン</h2>
+        <p>タイポグラフィと組み合わせて使用すると効果的な関連トークン：</p>
+
+        <ul>
+          <li><a href="../colors/index.html">カラートークン</a> - テキストカラーや背景色</li>
+          <li><a href="../spacing/index.html">スペーシングトークン</a> - テキスト要素間のマージンやパディング</li>
+          <li><a href="../breakpoints.html">ブレークポイント</a> - レスポンシブタイポグラフィの実装</li>
+        </ul>
+      </section>
+
+      <footer class="content-footer">
+        <p>BMF-CSSタイポグラフィトークンドキュメント</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
