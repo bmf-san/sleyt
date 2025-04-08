@@ -85,50 +85,6 @@
       z-index: 100;
     }
 
-    .switch {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .switch-label {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .switch-label::before {
-      content: "";
-      width: 2.5rem;
-      height: 1.25rem;
-      background-color: hsl(var(--muted));
-      border-radius: 1rem;
-      margin-right: 0.5rem;
-      transition: background-color 0.2s;
-      position: relative;
-    }
-
-    .switch-label::after {
-      content: "";
-      position: absolute;
-      left: 0.125rem;
-      width: 1rem;
-      height: 1rem;
-      border-radius: 50%;
-      background-color: hsl(var(--background));
-      transition: transform 0.2s;
-    }
-
-    .switch:checked + .switch-label::before {
-      background-color: hsl(var(--primary));
-    }
-
-    .switch:checked + .switch-label::after {
-      transform: translateX(1.25rem);
-    }
-
     /* ドロップダウンメニュースタイル */
     .nav-list {
       display: flex;
@@ -212,7 +168,7 @@
   </style>
 </head>
 <body>
-  <input type="checkbox" id="theme-toggle" class="switch theme-toggle">
+  <input type="checkbox" id="theme-toggle" class="switch switch-primary">
 
   <div class="container">
     <header>
@@ -1400,13 +1356,13 @@ xl: 1280px  /* Extra-large devices (desktops) */
 
             <h3 class="text-xl font-semibold mb-4">Manual Theme Toggle</h3>
             <p class="mb-4">
-              For manual theme switching, use a CSS-only approach with a checkbox and general sibling selector:
+              For manual theme switching, BMF-CSS provides a switch component that can be used with the CSS-only approach:
             </p>
 
             <div class="bg-muted p-4 rounded mb-6">
               <pre><code>&lt;!-- HTML structure for theme toggle --&gt;
 &lt;body&gt;
-  &lt;input type="checkbox" id="theme-toggle" class="switch theme-toggle"&gt;
+  &lt;input type="checkbox" id="theme-toggle" class="switch switch-primary"&gt;
 
   &lt;div class="container"&gt;
     &lt;!-- Site content --&gt;
@@ -1417,7 +1373,7 @@ xl: 1280px  /* Extra-large devices (desktops) */
   &lt;/div&gt;
 &lt;/body&gt;
 
-&lt;!-- CSS implementation --&gt;
+&lt;!-- CSS implementation for theme toggle --&gt;
 &lt;style&gt;
   /* Apply dark mode styles when checkbox is checked */
   #theme-toggle:checked ~ * {
@@ -1425,31 +1381,62 @@ xl: 1280px  /* Extra-large devices (desktops) */
     --foreground: 210 40% 98%;
     /* ... other dark theme variables ... */
   }
-
-  /* Hide checkbox but keep it functional */
-  .theme-toggle {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  /* Style toggle switch appearance */
-  .switch-label::before {
-    content: "";
-    width: 2.5rem;
-    height: 1.25rem;
-    background-color: hsl(var(--muted));
-    border-radius: 1rem;
-    margin-right: 0.5rem;
-    transition: background-color 0.2s;
-    position: relative;
-  }
-
-  .switch:checked + .switch-label::before {
-    background-color: hsl(var(--primary));
-  }
 &lt;/style&gt;</code></pre>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4">Switch Variants</h3>
+            <p class="mb-4">
+              BMF-CSS provides several switch variants for different use cases:
+            </p>
+
+            <div class="bg-muted p-4 rounded mb-6">
+              <pre><code>&lt;!-- Size variants --&gt;
+&lt;div class="mb-4"&gt;
+  &lt;input type="checkbox" id="switch-sm" class="switch switch-sm"&gt;
+  &lt;label for="switch-sm" class="switch-label"&gt;Small Switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;input type="checkbox" id="switch-default" class="switch"&gt;
+  &lt;label for="switch-default" class="switch-label"&gt;Default Switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;input type="checkbox" id="switch-lg" class="switch switch-lg"&gt;
+  &lt;label for="switch-lg" class="switch-label"&gt;Large Switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Color variants --&gt;
+&lt;div class="mb-4"&gt;
+  &lt;input type="checkbox" id="switch-primary" class="switch switch-primary" checked&gt;
+  &lt;label for="switch-primary" class="switch-label"&gt;Primary Switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;input type="checkbox" id="switch-secondary" class="switch switch-secondary" checked&gt;
+  &lt;label for="switch-secondary" class="switch-label"&gt;Secondary Switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;input type="checkbox" id="switch-destructive" class="switch switch-destructive" checked&gt;
+  &lt;label for="switch-destructive" class="switch-label"&gt;Destructive Switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;input type="checkbox" id="switch-success" class="switch switch-success" checked&gt;
+  &lt;label for="switch-success" class="switch-label"&gt;Success Switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;input type="checkbox" id="switch-warning" class="switch switch-warning" checked&gt;
+  &lt;label for="switch-warning" class="switch-label"&gt;Warning Switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Label position --&gt;
+&lt;div class="mb-4 switch-label-start"&gt;
+  &lt;input type="checkbox" id="switch-label-start" class="switch"&gt;
+  &lt;label for="switch-label-start" class="switch-label"&gt;Label at Start&lt;/label&gt;
+&lt;/div&gt;</code></pre>
             </div>
 
             <h3 class="text-xl font-semibold mb-4">Customizing Themes</h3>
@@ -1516,38 +1503,6 @@ xl: 1280px  /* Extra-large devices (desktops) */
   </footer>
 
   <script>
-    // Simple tab switching functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabButtons = document.querySelectorAll('.tab');
-
-      tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          // Get the tab group
-          const tabsList = this.closest('.tabs-list');
-          const tabsContainer = this.closest('.tabs');
-
-          // Remove active class from all tabs in this group
-          tabsList.querySelectorAll('.tab').forEach(tab => {
-            tab.classList.remove('active');
-          });
-
-          // Hide all content panels
-          tabsContainer.querySelectorAll('.tab-content').forEach(content => {
-            content.classList.remove('active');
-          });
-
-          // Add active class to clicked tab
-          this.classList.add('active');
-
-          // Show corresponding content
-          const tabId = this.getAttribute('data-tab');
-          const contentPanel = tabsContainer.querySelector(`#${tabId}`);
-          if (contentPanel) {
-            contentPanel.classList.add('active');
-          }
-        });
-      });
-
       // ドロップダウンメニュー機能
       const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
@@ -1577,7 +1532,6 @@ xl: 1280px  /* Extra-large devices (desktops) */
           });
         }
       });
-    });
   </script>
 </body>
 </html>
