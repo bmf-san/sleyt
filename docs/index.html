@@ -5,12 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMF-CSS Documentation</title>
   <link rel="stylesheet" href="../dist/bmf-css.min.css">
+  <style>
+    /* ドロップダウンメニュースタイル */
+    .nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .dropdown-toggle::after {
+      content: "▼";
+      font-size: 0.6rem;
+      margin-left: 0.5rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      background-color: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      padding: 0.5rem 0;
+      margin-top: 0.25rem;
+      display: none;
+      z-index: 100;
+    }
+
+    .dropdown.active .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-item {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: hsl(var(--foreground));
+      text-decoration: none;
+    }
+
+    .dropdown-item:hover {
+      background-color: hsl(var(--muted));
+      color: hsl(var(--foreground));
+    }
+
+    /* ダークモード対応 */
+    .dark-theme .dropdown-menu {
+      background-color: hsl(var(--card));
+      border-color: hsl(var(--border));
+    }
+
+    .dark-theme .dropdown-item {
+      color: hsl(var(--foreground));
+    }
+
+    .dark-theme .dropdown-item:hover {
+      background-color: hsl(var(--muted));
+    }
+
+    /* レスポンシブなドロップダウン */
+    @media (max-width: 640px) {
+      .nav-list {
+        flex-direction: column;
+      }
+
+      .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-left: 2px solid hsl(var(--primary));
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>BMF-CSS Framework</h1>
       <p>A lightweight, flexible CSS framework for modern web applications</p>
+
+      <nav class="nav mt-4">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#overview" class="nav-link">概要</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">コンポーネント</a>
+            <ul class="dropdown-menu">
+              <li><a href="#component-button" class="dropdown-item">ボタン</a></li>
+              <li><a href="#component-form" class="dropdown-item">フォーム要素</a></li>
+              <li><a href="#component-card" class="dropdown-item">カード</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">ユーティリティ</a>
+            <ul class="dropdown-menu">
+              <li><a href="#utilities" class="dropdown-item">スペーシング</a></li>
+              <li><a href="#utilities" class="dropdown-item">Flexbox</a></li>
+              <li><a href="#utilities" class="dropdown-item">Grid</a></li>
+              <li><a href="#utilities" class="dropdown-item">テキスト</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#themes" class="nav-link">テーマ</a>
+          </li>
+        </ul>
+      </nav>
 
       <div class="theme-switcher">
         <input type="checkbox" id="theme-toggle" class="switch theme-toggle">
@@ -1296,7 +1406,37 @@ xl: 1280px  /* Extra-large devices (desktops) */
         });
       });
 
-      // Theme toggle functionality
+      // ドロップダウンメニュー機能
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+      // クリックイベントリスナーを追加
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const parent = this.parentNode;
+
+          // 他のすべてのドロップダウンを閉じる
+          document.querySelectorAll('.dropdown').forEach(dropdown => {
+            if (dropdown !== parent) {
+              dropdown.classList.remove('active');
+            }
+          });
+
+          // 現在のドロップダウンの状態をトグル
+          parent.classList.toggle('active');
+        });
+      });
+
+      // ドロップダウン外のクリックで閉じる
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+          });
+        }
+      });
+
+      // テーマ切り替え機能
       const themeToggle = document.getElementById('theme-toggle');
       if (themeToggle) {
         // Check for saved theme preference or respect OS preference
