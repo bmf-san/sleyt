@@ -6,6 +6,117 @@
   <title>BMF-CSS Documentation</title>
   <link rel="stylesheet" href="../dist/bmf-css.min.css">
   <style>
+    /* CSS-onlyダークモード実装 */
+    :root {
+      /* ライトモードのデフォルト変数 */
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 214.3 31.8% 91.4%;
+      --radius: 0.5rem;
+    }
+
+    /* チェックボックスが:checkedのとき、bodyに変数を適用 */
+    #theme-toggle:checked ~ main,
+    #theme-toggle:checked ~ header,
+    #theme-toggle:checked ~ footer {
+      /* ダークモード変数 */
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 217.2 32.6% 17.5%;
+    }
+
+    /* システム設定の暗いテーマを優先 */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        /* ダークモードのデフォルト変数 */
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+        /* 他のダークモード変数... */
+      }
+
+      /* システム設定がダークなら、チェックボックスをデフォルトでオン */
+      #theme-toggle {
+        checked: true;
+      }
+    }
+
+    /* テーマ切り替えスイッチのスタイリング */
+    .theme-switcher {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .switch {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .switch-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .switch-label::before {
+      content: "";
+      width: 2.5rem;
+      height: 1.25rem;
+      background-color: hsl(var(--muted));
+      border-radius: 1rem;
+      margin-right: 0.5rem;
+      transition: background-color 0.2s;
+      position: relative;
+    }
+
+    .switch-label::after {
+      content: "";
+      position: absolute;
+      left: 0.125rem;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: hsl(var(--background));
+      transition: transform 0.2s;
+    }
+
+    .switch:checked + .switch-label::before {
+      background-color: hsl(var(--primary));
+    }
+
+    .switch:checked + .switch-label::after {
+      transform: translateX(1.25rem);
+    }
+
     /* ドロップダウンメニュースタイル */
     .nav-list {
       display: flex;
@@ -89,6 +200,7 @@
   </style>
 </head>
 <body>
+  <input type="checkbox" id="theme-toggle" class="switch theme-toggle">
   <div class="container">
     <header>
       <h1>BMF-CSS Framework</h1>
@@ -123,7 +235,6 @@
       </nav>
 
       <div class="theme-switcher">
-        <input type="checkbox" id="theme-toggle" class="switch theme-toggle">
         <label for="theme-toggle" class="switch-label">Dark Mode</label>
       </div>
     </header>
@@ -1262,7 +1373,7 @@ xl: 1280px  /* Extra-large devices (desktops) */
   /* ...other light theme variables... */
 }
 
-/* Apply dark theme when user prefers dark color scheme */
+/* Apply dark mode when user prefers dark color scheme */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: 222.2 84% 4.9%;
