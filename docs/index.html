@@ -7,36 +7,18 @@
   <link rel="stylesheet" href="../dist/bmf-css.min.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="header-logo">
-          <h1 class="text-xl font-bold">BMF-CSS</h1>
-        </div>
-        <nav class="header-nav">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#overview" class="nav-link">Overview</a></li>
-            <li class="nav-item"><a href="#installation" class="nav-link">Installation</a></li>
-            <li class="nav-item"><a href="#implementation" class="nav-link">Implementation</a></li>
-            <li class="nav-item"><a href="#base" class="nav-link">Base</a></li>
-            <li class="nav-item"><a href="#tokens" class="nav-link">Tokens</a></li>
-            <li class="nav-item"><a href="#components" class="nav-link">Components</a></li>
-            <li class="nav-item"><a href="#utilities" class="nav-link">Utilities</a></li>
-            <li class="nav-item"><a href="#themes" class="nav-link">Themes</a></li>
-            <li class="nav-item"><a href="#demos" class="nav-link">Demos</a></li>
-            <li class="nav-item"><a href="#api" class="nav-link">API</a></li>
-          </ul>
-        </nav>
-        <div class="theme-switcher">
-          <input type="checkbox" id="theme-toggle" class="switch theme-toggle">
-          <label for="theme-toggle" class="switch-label">Dark Mode</label>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div class="container">
+    <header>
+      <h1>BMF-CSS Framework</h1>
+      <p>A lightweight, flexible CSS framework for modern web applications</p>
 
-  <main class="content">
-    <div class="container">
+      <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle" class="switch theme-toggle">
+        <label for="theme-toggle" class="switch-label">Dark Mode</label>
+      </div>
+    </header>
+
+    <main>
       <section id="overview" class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Overview</h2>
         <div class="card">
@@ -330,6 +312,197 @@ body {
                 <p class="font-semibold">Card</p>
                 <p class="text-sm">--card</p>
               </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Color Palette</h3>
+            <p class="mb-4">
+              BMF-CSS provides comprehensive color palettes for different functional needs.
+            </p>
+
+            <h4 class="text-lg font-semibold mb-2">Functional Colors</h4>
+            <div class="overflow-x-auto mb-6">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Color</th>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Dark Mode</th>
+                    <th>Usage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: hsl(var(--primary));"></div></td>
+                    <td>primary</td>
+                    <td>HSL(222.2 47.4% 11.2%)</td>
+                    <td>HSL(210 40% 98%)</td>
+                    <td>Primary buttons, important text</td>
+                  </tr>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: hsl(var(--secondary));"></div></td>
+                    <td>secondary</td>
+                    <td>HSL(210 40% 96.1%)</td>
+                    <td>HSL(217.2 32.6% 17.5%)</td>
+                    <td>Secondary buttons, backgrounds</td>
+                  </tr>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: hsl(var(--destructive));"></div></td>
+                    <td>destructive</td>
+                    <td>HSL(0 84.2% 60.2%)</td>
+                    <td>HSL(0 62.8% 30.6%)</td>
+                    <td>Error displays, delete actions</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 class="text-lg font-semibold mb-2">UI Surface Colors</h4>
+            <div class="overflow-x-auto mb-6">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Color</th>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Dark Mode</th>
+                    <th>Usage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: hsl(var(--background));"></div></td>
+                    <td>background</td>
+                    <td>HSL(0 0% 100%)</td>
+                    <td>HSL(240 10% 3.9%)</td>
+                    <td>Page backgrounds, base surfaces</td>
+                  </tr>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: hsl(var(--card));"></div></td>
+                    <td>card</td>
+                    <td>HSL(0 0% 100%)</td>
+                    <td>HSL(240 10% 3.9%)</td>
+                    <td>Cards, widget backgrounds</td>
+                  </tr>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: hsl(var(--border));"></div></td>
+                    <td>border</td>
+                    <td>HSL(214.3 31.8% 91.4%)</td>
+                    <td>HSL(240 3.7% 15.9%)</td>
+                    <td>Border lines, dividers</td>
+                  </tr>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: hsl(var(--muted));"></div></td>
+                    <td>muted</td>
+                    <td>HSL(210 40% 96.1%)</td>
+                    <td>HSL(240 3.7% 15.9%)</td>
+                    <td>Muted backgrounds, inactive elements</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 class="text-lg font-semibold mb-2">Utility Colors</h4>
+            <div class="overflow-x-auto mb-6">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Color</th>
+                    <th>Name</th>
+                    <th>HSL Value</th>
+                    <th>Usage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: #3B82F6;"></div></td>
+                    <td>utility-blue</td>
+                    <td>217 91% 60%</td>
+                    <td>Information displays, links</td>
+                  </tr>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: #10B981;"></div></td>
+                    <td>utility-green</td>
+                    <td>158 64% 40%</td>
+                    <td>Success, confirmations</td>
+                  </tr>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: #F59E0B;"></div></td>
+                    <td>utility-yellow</td>
+                    <td>48 96% 53%</td>
+                    <td>Warnings, highlights</td>
+                  </tr>
+                  <tr>
+                    <td><div class="w-6 h-6 rounded" style="background-color: #8B5CF6;"></div></td>
+                    <td>utility-purple</td>
+                    <td>258 90% 66%</td>
+                    <td>Special states, premium features</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Color Scale</h3>
+            <p class="mb-4">
+              Systematically organized color scales with gradual luminosity.
+            </p>
+
+            <h4 class="text-lg font-semibold mb-2">Monochrome Scale - Slate</h4>
+            <div class="flex flex-wrap gap-1 mb-6">
+              <div class="p-3 rounded" style="background-color: hsl(210, 40%, 98%);">
+                <span class="text-xs">50</span>
+              </div>
+              <div class="p-3 rounded" style="background-color: hsl(210, 40%, 96%);">
+                <span class="text-xs">100</span>
+              </div>
+              <div class="p-3 rounded" style="background-color: hsl(214, 32%, 91%);">
+                <span class="text-xs">200</span>
+              </div>
+              <div class="p-3 rounded" style="background-color: hsl(213, 27%, 84%);">
+                <span class="text-xs">300</span>
+              </div>
+              <div class="p-3 rounded" style="background-color: hsl(215, 20%, 65%);">
+                <span class="text-xs">400</span>
+              </div>
+              <div class="p-3 rounded text-white" style="background-color: hsl(215, 16%, 47%);">
+                <span class="text-xs">500</span>
+              </div>
+              <div class="p-3 rounded text-white" style="background-color: hsl(215, 19%, 35%);">
+                <span class="text-xs">600</span>
+              </div>
+              <div class="p-3 rounded text-white" style="background-color: hsl(215, 25%, 27%);">
+                <span class="text-xs">700</span>
+              </div>
+              <div class="p-3 rounded text-white" style="background-color: hsl(217, 33%, 17%);">
+                <span class="text-xs">800</span>
+              </div>
+              <div class="p-3 rounded text-white" style="background-color: hsl(222, 47%, 11%);">
+                <span class="text-xs">900</span>
+              </div>
+              <div class="p-3 rounded text-white" style="background-color: hsl(229, 84%, 5%);">
+                <span class="text-xs">950</span>
+              </div>
+            </div>
+
+            <div class="bg-muted p-4 rounded mb-6">
+              <h4 class="text-lg font-semibold mb-2">Usage Guidelines:</h4>
+              <ul class="list">
+                <li><strong>50-100:</strong> Backgrounds, separator elements</li>
+                <li><strong>200-300:</strong> Borders, dividers, inactive elements</li>
+                <li><strong>400-500:</strong> Placeholders, secondary text</li>
+                <li><strong>600-700:</strong> Body text, control elements</li>
+                <li><strong>800-950:</strong> Headings, emphasized text, dark mode backgrounds</li>
+              </ul>
+            </div>
+
+            <div class="bg-muted p-4 rounded mb-6">
+              <h4 class="text-lg font-semibold mb-2">Accessibility Note:</h4>
+              <p class="mb-2">Color should never be used as the only means of conveying information. Combine with text or shapes for users with visual impairments.</p>
+              <p class="mb-2">Text-background contrast ratio requirements:</p>
+              <ul class="list">
+                <li><strong>WCAG AA level:</strong> 4.5:1+ for normal text, 3:1+ for large text</li>
+                <li><strong>WCAG AAA level:</strong> 7:1+ for normal text, 4.5:1+ for large text</li>
+              </ul>
             </div>
 
             <h3 class="text-xl font-semibold mb-3">Typography Variables</h3>
@@ -1081,8 +1254,8 @@ xl: 1280px  /* Extra-large devices (desktops) */
           </div>
         </div>
       </section>
-    </div>
-  </main>
+    </main>
+  </div>
 
   <footer class="footer">
     <div class="container">
