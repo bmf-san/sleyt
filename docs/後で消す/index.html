@@ -5,1082 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMF CSS Framework - New Color Tones</title>
   <link rel="stylesheet" href="../../dist/bmf-css.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 2rem;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* アイコンフォント用のスタイル */
-    .logo-icon::before {
-      content: "\e900";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .menu-icon::before {
-      content: "\e901";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-add::before {
-      content: "\e902";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .button-icon.icon-add::before {
-      margin-right: 0;
-    }
-
-    .icon-user::before {
-      content: "\e903";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-home::before {
-      content: "\e904";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-content::before {
-      content: "\e905";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-settings::before {
-      content: "\e906";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-calendar::before {
-      content: "\e920";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-angle-left::before {
-      content: "\e921";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-angle-right::before {
-      content: "\e922";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    /* アイコンフォントの定義（簡単なフォールバックバージョン） */
-    @font-face {
-      font-family: 'BMFIcons';
-      src: url('data:application/x-font-woff;charset=utf-8;base64,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');
-      font-weight: normal;
-      font-style: normal;
-      font-display: block;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* アイコンフォント用のスタイル */
-    .logo-icon::before {
-      content: "\e900";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .menu-icon::before {
-      content: "\e901";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-add::before {
-      content: "\e902";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .button-icon.icon-add::before {
-      margin-right: 0;
-    }
-
-    .icon-user::before {
-      content: "\e903";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-home::before {
-      content: "\e904";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-content::before {
-      content: "\e905";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-settings::before {
-      content: "\e906";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-calendar::before {
-      content: "\e920";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-angle-left::before {
-      content: "\e921";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    .icon-angle-right::before {
-      content: "\e922";
-      font-family: 'BMFIcons';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      fill: none;
-      line-height: 1;
-    }
-
-    /* アイコンフォントの定義（追加したアイコンを含む拡張版） */
-    @font-face {
-      font-family: 'BMFIcons';
-      src: url('data:font-woff2;charset=utf-8;base64,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') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-      font-display: block;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    .section-title {
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid hsl(var(--border));
-      padding-bottom: 0.5rem;
-    }
-
-    .demo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-    }
-
-    .color-sample {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem;
-      border-radius: var(--radius);
-      height: 100px;
-      position: relative;
-    }
-
-    .color-sample .color-label {
-      margin-top: auto;
-      font-weight: bold;
-    }
-
-    .color-sample .color-value {
-      font-family: monospace;
-      font-size: 0.875rem;
-    }
-
-    .theme-switcher {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .theme-toggle {
-      margin-right: 0.5rem;
-    }
-
-    .color-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .color-card {
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid hsl(var(--border));
-    }
-
-    .color-box {
-      height: 80px;
-      display: flex;
-      align-items: flex-end;
-      padding: 0.5rem;
-    }
-
-    .color-info {
-      background-color: hsl(var(--card));
-      padding: 0.5rem;
-      font-size: 0.875rem;
-    }
-
-    .color-name {
-      font-weight: bold;
-      margin-bottom: 0.25rem;
-    }
-
-    .color-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
-    }
-
-    .color-table th,
-    .color-table td {
-      padding: 0.75rem;
-      border: 1px solid hsl(var(--border));
-      text-align: left;
-    }
-
-    .color-table th {
-      background-color: hsl(var(--muted));
-    }
-
-    .color-swatch {
-      width: 100%;
-      height: 80px;
-      border-radius: var(--radius);
-      margin-bottom: 0.5rem;
-      border: 1px solid hsl(var(--border));
-    }
-
-    .demo-section {
-      margin-bottom: 2rem;
-    }
-
-    .code-block {
-      white-space: pre-wrap;
-      margin-bottom: 1rem;
-    }
-
-    .demo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
-      gap: 2rem;
-    }
-
-    .section-title {
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid hsl(var(--border));
-    }
-
-    .form-row {
-      margin-bottom: 1rem;
-    }
-
-    .color-swatch {
-      width: 100%;
-      height: 80px;
-      border-radius: var(--radius);
-      margin-bottom: 0.5rem;
-      border: 1px solid hsl(var(--border));
-    }
-
-    .menu-item {
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius);
-    }
-
-    .menu-item:hover {
-      background-color: hsl(var(--accent) / 0.1);
-    }
-
-    /* Pie chart and donut chart segment color definitions */
-    .segment-1 { background-color: rgb(10, 10, 10); } /* primary */
-    .segment-2 { background-color: rgb(244, 244, 245); } /* secondary */
-    .segment-3 { background-color: rgb(147, 51, 234); } /* purple */
-    .segment-4 { background-color: rgb(34, 197, 94); } /* success */
-    .segment-5 { background-color: rgb(245, 158, 11); } /* warning */
-
-    .chart-pie-segment:hover {
-      opacity: 0.8;
-      transform: scale(1.05);
-      z-index: 5;
-    }
-
-    /* Adding hover effects for bar charts */
-    .chart-bar-item:hover {
-      opacity: 0.8;
-    }
-
-    /* CSS-controlled modal styles */
-    .css-modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 100;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(2px);
-    }
-
-    /* Display modal when checkbox is checked */
-    .modal-toggle:checked + .css-modal-overlay {
-      display: flex;
-    }
-
-    /* Hybrid modal styles */
-    .hybrid-modal {
-      display: none;
-    }
-
-    .hybrid-modal.is-open {
-      display: block;
-    }
-
-    .hybrid-modal .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(2px);
-    }
-
-    /* Color scale display styles */
-    .color-scale {
-      display: flex;
-      width: 100%;
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-
-    .color-item {
-      flex: 1;
-      height: 60px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 5px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      transition: transform 0.2s ease;
-    }
-
-    .color-label {
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 2px 4px;
-      border-radius: 3px;
-      color: #333;
-    }
-
-    .color-item:hover {
-      transform: translateY(-5px);
-    }
-
-    /* Chart color display */
-    .color-chart {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      gap: 10px;
-      width: 100%;
-    }
-
-    .color-chart-item {
-      height: 80px;
-      border-radius: var(--radius);
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 8px;
-      transition: transform 0.2s ease;
-    }
-
-    .color-chart-label {
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 3px 6px;
-      border-radius: 3px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .color-chart-item:hover {
-      transform: translateY(-5px);
-    }
-
-    /* Dark mode support */
-    .dark-mode .color-label,
-    .dark-mode .color-chart-label {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #fff;
-    }
-
-    /* Monochrome grid for monochrome palette */
-    .monochrome-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .monochrome-section {
-      border: 1px solid hsl(var(--border));
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      background-color: hsl(var(--card));
-    }
-
-    .monochrome-title {
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-
-    .monochrome-scale {
-      display: flex;
-      width: 100%;
-      border-radius: var(--radius);
-      overflow: hidden;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Styles for various modals */
-    .modal-demo-container {
-      margin: 2rem 0;
-    }
-
-    .modal-demo-section {
-      margin-bottom: 2rem;
-      border: 1px solid hsl(var(--border));
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      background-color: hsl(var(--card));
-    }
-
-    .modal-demo-title {
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-
-    .modal-demo-description {
-      margin-bottom: 1.5rem;
-      color: hsl(var(--muted-foreground));
-    }
-
-    /* CSS-controlled modal */
-    .css-modal-toggle {
-      display: none;
-    }
-
-    .css-modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 100;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(2px);
-    }
-
-    .css-modal-toggle:checked + .css-modal-overlay {
-      display: flex;
-    }
-
-    /* Hybrid modal */
-    .hybrid-modal {
-      display: none;
-    }
-
-    .hybrid-modal.is-open {
-      display: block;
-    }
-
-    .hybrid-modal .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(2px);
-    }
-
-    /* Attribute-based modal */
-    [data-modal] {
-      display: none;
-    }
-
-    [data-modal].is-open {
-      display: block;
-    }
-
-    [data-modal] .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(2px);
-    }
-
-    /* Navigation Styles */
-    .nav {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .nav-horizontal {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-vertical {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-link {
-      display: flex;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      color: hsl(var(--foreground));
-      text-decoration: none;
-      border-radius: var(--radius);
-      transition: background-color 0.2s, color 0.2s;
-    }
-
-    .nav-link:hover {
-      background-color: hsl(var(--muted));
-    }
-
-    .nav-link.active {
-      background-color: hsl(var(--primary) / 0.1);
-      color: hsl(var(--primary));
-      font-weight: var(--font-weight-medium);
-    }
-
-    .nav-link-icon {
-      margin-right: 0.5rem;
-    }
-
-    /* Vertical Navigation */
-    .nav-vertical .nav-link {
-      padding: 0.75rem 1rem;
-    }
-
-    .nav-vertical .nav-link.active {
-      border-left: 2px solid hsl(var(--primary));
-    }
-
-    /* Dropdown Menu */
-    .nav-dropdown {
-      position: relative;
-    }
-
-    .nav-dropdown-toggle {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-dropdown-toggle::after {
-      content: '';
-      display: inline-block;
-      margin-left: 0.5rem;
-      width: 0.5rem;
-      height: 0.5rem;
-      border-right: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-      transform: rotate(45deg);
-      transition: transform 0.2s;
-    }
-
-    .nav-dropdown.open .nav-dropdown-toggle::after {
-      transform: rotate(-135deg);
-    }
-
-    .nav-dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      min-width: 10rem;
-      padding: 0.5rem 0;
-      margin-top: 0.25rem;
-      background-color: hsl(var(--background));
-      border: 1px solid hsl(var(--border));
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-md);
-      z-index: 10;
-    }
-
-    .nav-dropdown.open .nav-dropdown-menu {
-      display: block;
-    }
-
-    .nav-dropdown-item {
-      display: block;
-      padding: 0.5rem 1rem;
-      color: hsl(var(--foreground));
-      text-decoration: none;
-      transition: background-color 0.2s;
-    }
-
-    .nav-dropdown-item:hover {
-      background-color: hsl(var(--muted));
-    }
-
-    /* Side Navigation */
-    .nav-sidebar {
-      display: flex;
-      flex-direction: column;
-      background-color: hsl(var(--background));
-      border-right: 1px solid hsl(var(--border));
-      min-height: 100%;
-    }
-
-    .nav-header {
-      padding: 1rem;
-      font-weight: var(--font-weight-medium);
-      color: hsl(var(--muted-foreground));
-      font-size: var(--font-sm);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .nav-separator {
-      height: 1px;
-      background-color: hsl(var(--border));
-      margin: 0.5rem 0;
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .nav-horizontal {
-        flex-wrap: wrap;
-      }
-
-      .nav-dropdown-menu {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        border: none;
-        border-radius: 0;
-        background-color: transparent;
-        padding: 0;
-        padding-left: 1rem;
-      }
-    }
-
-    .dark-mode .nav-link:hover {
-      background-color: hsl(var(--muted));
-    }
-
-    .dark-mode .nav-link.active {
-      background-color: hsl(var(--primary) / 0.2);
-      color: hsl(var(--primary));
-    }
-
-    .datepicker-input-wrapper {
-      position: relative;
-    }
-
-    .datepicker-icon {
-      position: absolute;
-      right: 0.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 2rem;
-      height: 2rem;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      color: hsl(var(--muted-foreground));
-    }
-
-    .icon-calendar::before {
-      content: "\e920";
-      font-family: 'BMFIcons';
-      font-size: 16px;
-    }
-
-    .calendar {
-      width: 100%;
-      max-width: 320px;
-      border: 1px solid hsl(var(--border));
-      border-radius: var(--radius);
-      background-color: hsl(var(--card));
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
-    }
-
-    .calendar-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 1rem;
-      background-color: hsl(var(--primary));
-      color: hsl(var(--primary-foreground));
-    }
-
-    .calendar-title {
-      font-weight: var(--font-weight-medium);
-      font-size: 1rem;
-    }
-
-    .calendar-nav {
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .calendar-nav-btn {
-      background-color: transparent;
-      border: none;
-      color: inherit;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .calendar-nav-btn:hover {
-      background-color: hsl(var(--primary-foreground) / 0.1);
-    }
-
-    .calendar-grid {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      padding: 0.5rem;
-    }
-
-    .calendar-weekday {
-      text-align: center;
-      font-size: 0.75rem;
-      font-weight: var(--font-weight-medium);
-      color: hsl(var(--muted-foreground));
-      padding: 0.5rem 0;
-    }
-
-    .calendar-day {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2.5rem;
-      font-size: 0.875rem;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-
-    .calendar-day:hover {
-      background-color: hsl(var(--muted) / 0.5);
-    }
-
-    .calendar-day-outside {
-      color: hsl(var(--muted-foreground) / 0.5);
-    }
-
-    .calendar-day-today {
-      background-color: hsl(var(--muted));
-      font-weight: var(--font-weight-medium);
-    }
-
-    .calendar-day-selected {
-      background-color: hsl(var(--primary));
-      color: hsl(var(--primary-foreground));
-      font-weight: var(--font-weight-medium);
-    }
-
-    .datepicker-input {
-      width: 100%;
-      padding: 0.5rem 1rem;
-      border: 1px solid hsl(var(--border));
-      border-radius: var(--radius);
-      background-color: hsl(var(--background));
-      font-size: 0.875rem;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .datepicker-input:focus {
-      outline: none;
-      border-color: hsl(var(--ring));
-      box-shadow: 0 0 0 2px hsl(var(--ring) / 0.3);
-    }
-
-    .datepicker-dropdown {
-      position: absolute;
-      top: calc(100% + 5px);
-      left: 0;
-      z-index: 50;
-      display: none;
-    }
-
-    /* CSS-controlled datepicker */
-    .css-datepicker-toggle {
-      display: none;
-    }
-
-    .css-datepicker-toggle:checked + .datepicker-dropdown {
-      display: block;
-    }
-
-    /* Hybrid datepicker */
-    .hybrid-datepicker .datepicker-dropdown.is-open {
-      display: block;
-    }
-
-    /* Attribute-based datepicker */
-    [data-datepicker] .datepicker-dropdown[data-visible="true"] {
-      display: block;
-    }
-
-    .icon-angle-left::before {
-      content: "\e921";
-      font-family: 'BMFIcons';
-      font-size: 16px;
-    }
-
-    .icon-angle-right::before {
-      content: "\e922";
-      font-family: 'BMFIcons';
-      font-size: 16px;
-    }
-
-    /* Hybrid tooltip */
-    .hybrid-tooltip {
-      position: absolute;
-      display: none;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 14px;
-      z-index: 1000;
-      pointer-events: none;
-      white-space: nowrap;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .hybrid-tooltip:after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-width: 8px 8px 0;
-      border-style: solid;
-      border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
-    }
-
-    .hybrid-tooltip-trigger {
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .hybrid-tooltip-trigger:hover {
-      transform: scale(1.2);
-    }
-
-    /* Dark mode support for hybrid tooltip */
-    .dark-mode .hybrid-tooltip {
-      background-color: rgba(255, 255, 255, 0.9);
-      color: black;
-    }
-
-    .dark-mode .hybrid-tooltip:after {
-      border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -1138,9 +62,9 @@
           UI要素やアクションを示す主要な機能色
         </p>
 
-        <div class="table-responsive">
-          <table class="color-table">
-            <thead>
+        <div class="table-container">
+          <table class="table">
+            <thead class="table-header">
               <tr>
                 <th>スウォッチ</th>
                 <th>カラー名</th>
@@ -1150,7 +74,7 @@
                 <th>コントラスト比</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="table-body">
               <tr>
                 <td><div class="color-swatch" style="background-color: #1E293B;"></div></td>
                 <td>primary</td>
@@ -1177,9 +101,9 @@
           アプリケーションの状態やフィードバックを示す色彩
         </p>
 
-        <div class="table-responsive">
-          <table class="color-table">
-            <thead>
+        <div class="table-container">
+          <table class="table">
+            <thead class="table-header">
               <tr>
                 <th>スウォッチ</th>
                 <th>カラー名</th>
@@ -1189,7 +113,7 @@
                 <th>コントラスト比</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="table-body">
               <tr>
                 <td><div class="color-swatch" style="background-color: #EF4444;"></div></td>
                 <td>destructive</td>
@@ -1224,9 +148,9 @@
           背景、カード、境界線など、UIの表面要素に使用される色彩
         </p>
 
-        <div class="table-responsive">
-          <table class="color-table">
-            <thead>
+        <div class="table-container">
+          <table class="table">
+            <thead class="table-header">
               <tr>
                 <th>スウォッチ</th>
                 <th>カラー名</th>
@@ -1235,7 +159,7 @@
                 <th>用途</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="table-body">
               <tr>
                 <td><div class="color-swatch" style="background-color: #FFFFFF;"></div></td>
                 <td>background</td>
@@ -1274,9 +198,9 @@
           様々な用途に使える豊かな色彩バリエーション
         </p>
 
-        <div class="table-responsive">
-          <table class="color-table">
-            <thead>
+        <div class="table-container">
+          <table class="table">
+            <thead class="table-header">
               <tr>
                 <th>スウォッチ</th>
                 <th>カラー名</th>
@@ -1286,7 +210,7 @@
                 <th>用途</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="table-body">
               <tr>
                 <td><div class="color-swatch" style="background-color: #3B82F6;"></div></td>
                 <td>utility-blue</td>
@@ -1403,51 +327,55 @@
           青みがかったグレーのモノクロカラースケール
         </p>
 
-        <div class="monochrome-display">
-          <div class="color-scale">
-            <div class="color-item" style="background-color: hsl(210, 40%, 98%);">
-              <span class="color-label">50</span>
+        <div class="monochrome-section">
+          <div class="content-two-columns gap-4">
+            <div>
+              <div class="color-scale">
+                <div class="color-item" style="background-color: hsl(210, 40%, 98%);">
+                  <span class="color-label">50</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(210, 40%, 96%);">
+                  <span class="color-label">100</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(214, 32%, 91%);">
+                  <span class="color-label">200</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(213, 27%, 84%);">
+                  <span class="color-label">300</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(215, 20%, 65%);">
+                  <span class="color-label">400</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(215, 16%, 47%);">
+                  <span class="color-label">500</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(215, 19%, 35%);">
+                  <span class="color-label">600</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(215, 25%, 27%);">
+                  <span class="color-label">700</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(217, 33%, 17%);">
+                  <span class="color-label">800</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(222, 47%, 11%);">
+                  <span class="color-label">900</span>
+                </div>
+                <div class="color-item" style="background-color: hsl(229, 84%, 5%);">
+                  <span class="color-label">950</span>
+                </div>
+              </div>
             </div>
-            <div class="color-item" style="background-color: hsl(210, 40%, 96%);">
-              <span class="color-label">100</span>
+            <div>
+              <h4 class="mb-2">用途：</h4>
+              <ul>
+                <li><strong>50-100:</strong> 背景、区切り要素</li>
+                <li><strong>200-300:</strong> 境界線、分割線、非アクティブ要素</li>
+                <li><strong>400-500:</strong> プレースホルダー、セカンダリテキスト</li>
+                <li><strong>600-700:</strong> 本文テキスト、コントロール要素</li>
+                <li><strong>800-950:</strong> 見出し、強調テキスト、ダークモード背景</li>
+              </ul>
             </div>
-            <div class="color-item" style="background-color: hsl(214, 32%, 91%);">
-              <span class="color-label">200</span>
-            </div>
-            <div class="color-item" style="background-color: hsl(213, 27%, 84%);">
-              <span class="color-label">300</span>
-            </div>
-            <div class="color-item" style="background-color: hsl(215, 20%, 65%);">
-              <span class="color-label">400</span>
-            </div>
-            <div class="color-item" style="background-color: hsl(215, 16%, 47%);">
-              <span class="color-label">500</span>
-            </div>
-            <div class="color-item" style="background-color: hsl(215, 19%, 35%);">
-              <span class="color-label">600</span>
-            </div>
-            <div class="color-item" style="background-color: hsl(215, 25%, 27%);">
-              <span class="color-label">700</span>
-            </div>
-            <div class="color-item" style="background-color: hsl(217, 33%, 17%);">
-              <span class="color-label">800</span>
-            </div>
-            <div class="color-item" style="background-color: hsl(222, 47%, 11%);">
-              <span class="color-label">900</span>
-            </div>
-            <div class="color-item" style="background-color: hsl(229, 84%, 5%);">
-              <span class="color-label">950</span>
-            </div>
-          </div>
-          <div class="mt-4">
-            <h4>用途：</h4>
-            <ul>
-              <li><strong>50-100:</strong> 背景、区切り要素</li>
-              <li><strong>200-300:</strong> 境界線、分割線、非アクティブ要素</li>
-              <li><strong>400-500:</strong> プレースホルダー、セカンダリテキスト</li>
-              <li><strong>600-700:</strong> 本文テキスト、コントロール要素</li>
-              <li><strong>800-950:</strong> 見出し、強調テキスト、ダークモード背景</li>
-            </ul>
           </div>
         </div>
       </section>
@@ -1459,7 +387,7 @@
           データの視覚化に適した様々なチャートとグラフの実装例
         </p>
         <div class="content-two-columns">
-          <div class="chart-container chart-demo">
+          <div class="chart-container">
             <div class="chart-title">棒グラフ</div>
             <div class="chart">
               <div class="chart-bar">
@@ -1491,7 +419,7 @@
             </div>
           </div>
 
-          <div class="chart-container chart-demo">
+          <div class="chart-container">
             <div class="chart-title">円グラフ</div>
             <div class="chart">
               <div class="chart-pie" style="position: relative; width: 200px; height: 200px; margin: 0 auto;">
@@ -1500,23 +428,23 @@
                   <desc id="pie-chart-desc">カテゴリA(30%)、カテゴリB(25%)、カテゴリC(20%)、カテゴリD(15%)、カテゴリE(10%)の割合を示す円グラフ</desc>
                   <!-- 中心点: 100, 100、半径: 90 -->
                   <!-- 30% = 108° -->
-                  <path d="M 100 100 L 100 10 A 90 90 0 0 1 179 142 Z" fill="hsl(var(--utility-blue))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリA: 30%" data-label="カテゴリA" data-value="30%">
+                  <path d="M 100 100 L 100 10 A 90 90 0 0 1 179 142 Z" fill="hsl(var(--utility-blue))" class="chart-pie-segment" role="graphics-symbol" aria-label="カテゴリA: 30%" data-label="カテゴリA" data-value="30%">
                     <title>カテゴリA: 30%</title>
                   </path>
                   <!-- 25% = 90° -->
-                  <path d="M 100 100 L 179 142 A 90 90 0 0 1 100 190 Z" fill="hsl(var(--utility-indigo))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリB: 25%" data-label="カテゴリB" data-value="25%">
+                  <path d="M 100 100 L 179 142 A 90 90 0 0 1 100 190 Z" fill="hsl(var(--utility-indigo))" class="chart-pie-segment" role="graphics-symbol" aria-label="カテゴリB: 25%" data-label="カテゴリB" data-value="25%">
                     <title>カテゴリB: 25%</title>
                   </path>
                   <!-- 20% = 72° -->
-                  <path d="M 100 100 L 100 190 A 90 90 0 0 1 21 142 Z" fill="hsl(var(--utility-purple))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリC: 20%" data-label="カテゴリC" data-value="20%">
+                  <path d="M 100 100 L 100 190 A 90 90 0 0 1 21 142 Z" fill="hsl(var(--utility-purple))" class="chart-pie-segment" role="graphics-symbol" aria-label="カテゴリC: 20%" data-label="カテゴリC" data-value="20%">
                     <title>カテゴリC: 20%</title>
                   </path>
                   <!-- 15% = 54° -->
-                  <path d="M 100 100 L 21 142 A 90 90 0 0 1 39 32 Z" fill="hsl(var(--utility-green))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリD: 15%" data-label="カテゴリD" data-value="15%">
+                  <path d="M 100 100 L 21 142 A 90 90 0 0 1 39 32 Z" fill="hsl(var(--utility-green))" class="chart-pie-segment" role="graphics-symbol" aria-label="カテゴリD: 15%" data-label="カテゴリD" data-value="15%">
                     <title>カテゴリD: 15%</title>
                   </path>
                   <!-- 10% = 36° -->
-                  <path d="M 100 100 L 39 32 A 90 90 0 0 1 100 10 Z" fill="hsl(var(--utility-red))" class="chart-pie-segment css-tooltip-trigger" role="graphics-symbol" aria-label="カテゴリE: 10%" data-label="カテゴリE" data-value="10%">
+                  <path d="M 100 100 L 39 32 A 90 90 0 0 1 100 10 Z" fill="hsl(var(--utility-red))" class="chart-pie-segment" role="graphics-symbol" aria-label="カテゴリE: 10%" data-label="カテゴリE" data-value="10%">
                     <title>カテゴリE: 10%</title>
                   </path>
                 </svg>
@@ -1550,128 +478,6 @@
               </div>
             </div>
           </div>
-
-          <!-- 折れ線グラフの追加 -->
-          <div class="chart-container chart-demo">
-            <div class="chart-title">折れ線グラフ</div>
-            <div class="chart">
-              <svg width="100%" height="240" viewBox="-60 -20 660 300" style="overflow: visible;" role="img" aria-labelledby="line-chart-title line-chart-desc">
-                <title id="line-chart-title">6ヶ月間の製品別売上データのグラフ</title>
-                <desc id="line-chart-desc">1月から6月までの製品A、B、Cの売上推移を示す折れ線グラフ</desc>
-                <!-- グリッド線 -->
-                <line x1="0" y1="0" x2="600" y2="0" stroke="hsl(var(--border))" stroke-width="1" stroke-dasharray="4,4" role="presentation" />
-                <line x1="0" y1="60" x2="600" y2="60" stroke="hsl(var(--border))" stroke-width="1" stroke-dasharray="4,4" role="presentation" />
-                <line x1="0" y1="120" x2="600" y2="120" stroke="hsl(var(--border))" stroke-width="1" stroke-dasharray="4,4" role="presentation" />
-                <line x1="0" y1="180" x2="600" y2="180" stroke="hsl(var(--border))" stroke-width="1" stroke-dasharray="4,4" role="presentation" />
-                <line x1="0" y1="240" x2="600" y2="240" stroke="hsl(var(--border))" stroke-width="1" role="presentation" />
-
-                <!-- Y軸ラベル -->
-                <text x="-25" y="0" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">100</text>
-                <text x="-25" y="60" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">75</text>
-                <text x="-25" y="120" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">50</text>
-                <text x="-25" y="180" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">25</text>
-                <text x="-25" y="240" dominant-baseline="middle" text-anchor="end" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">0</text>
-
-                <!-- X軸ラベル -->
-                <text x="50" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">1月</text>
-                <text x="150" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">2月</text>
-                <text x="250" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">3月</text>
-                <text x="350" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">4月</text>
-                <text x="450" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">5月</text>
-                <text x="550" y="260" dominant-baseline="hanging" text-anchor="middle" style="font-size: 12px; fill: hsl(var(--muted-foreground));" role="text">6月</text>
-
-                <!-- データライン -->
-                <polyline points="50,120 150,180 250,60 350,90 450,30 550,60"
-                          fill="none" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 1月から6月までの売上データ" />
-
-                <polyline points="50,150 150,90 250,120 350,60 450,120 550,30"
-                          fill="none" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 1月から6月までの売上データ" />
-
-                <polyline points="50,180 150,150 250,165 350,195 450,120 550,60"
-                          fill="none" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 1月から6月までの売上データ" />
-
-                <!-- データポイント -->
-                <!-- 系列1 -->
-                <circle cx="50" cy="120" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 1月の売上データ" data-product="製品A" data-month="1月" data-value="50" class="chart-line-point" data-tooltip="製品A - 1月: 売上 50">
-                  <title>製品A - 1月: 売上 50</title>
-                </circle>
-                <circle cx="150" cy="180" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 2月の売上データ" data-product="製品A" data-month="2月" data-value="25" class="chart-line-point" data-tooltip="製品A - 2月: 売上 25">
-                  <title>製品A - 2月: 売上 25</title>
-                </circle>
-                <circle cx="250" cy="60" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 3月の売上データ" data-product="製品A" data-month="3月" data-value="75" class="chart-line-point" data-tooltip="製品A - 3月: 売上 75">
-                  <title>製品A - 3月: 売上 75</title>
-                </circle>
-                <circle cx="350" cy="90" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 4月の売上データ" data-product="製品A" data-month="4月" data-value="63" class="chart-line-point" data-tooltip="製品A - 4月: 売上 63">
-                  <title>製品A - 4月: 売上 63</title>
-                </circle>
-                <circle cx="450" cy="30" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 5月の売上データ" data-product="製品A" data-month="5月" data-value="88" class="chart-line-point" data-tooltip="製品A - 5月: 売上 88">
-                  <title>製品A - 5月: 売上 88</title>
-                </circle>
-                <circle cx="550" cy="60" r="5" fill="white" stroke="hsl(var(--utility-blue))" stroke-width="3" role="graphics-symbol" aria-label="製品A: 6月の売上データ" data-product="製品A" data-month="6月" data-value="75" class="chart-line-point" data-tooltip="製品A - 6月: 売上 75">
-                  <title>製品A - 6月: 売上 75</title>
-                </circle>
-
-                <!-- 系列2 -->
-                <circle cx="50" cy="150" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 1月の売上データ" data-product="製品B" data-month="1月" data-value="38" class="chart-line-point" data-tooltip="製品B - 1月: 売上 38">
-                  <title>製品B - 1月: 売上 38</title>
-                </circle>
-                <circle cx="150" cy="90" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 2月の売上データ" data-product="製品B" data-month="2月" data-value="63" class="chart-line-point" data-tooltip="製品B - 2月: 売上 63">
-                  <title>製品B - 2月: 売上 63</title>
-                </circle>
-                <circle cx="250" cy="120" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 3月の売上データ" data-product="製品B" data-month="3月" data-value="50" class="chart-line-point" data-tooltip="製品B - 3月: 売上 50">
-                  <title>製品B - 3月: 売上 50</title>
-                </circle>
-                <circle cx="350" cy="60" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 4月の売上データ" data-product="製品B" data-month="4月" data-value="75" class="chart-line-point" data-tooltip="製品B - 4月: 売上 75">
-                  <title>製品B - 4月: 売上 75</title>
-                </circle>
-                <circle cx="450" cy="120" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 5月の売上データ" data-product="製品B" data-month="5月" data-value="50" class="chart-line-point" data-tooltip="製品B - 5月: 売上 50">
-                  <title>製品B - 5月: 売上 50</title>
-                </circle>
-                <circle cx="550" cy="30" r="5" fill="white" stroke="hsl(var(--utility-cyan))" stroke-width="3" role="graphics-symbol" aria-label="製品B: 6月の売上データ" data-product="製品B" data-month="6月" data-value="88" class="chart-line-point" data-tooltip="製品B - 6月: 売上 88">
-                  <title>製品B - 6月: 売上 88</title>
-                </circle>
-
-                <!-- 系列3 -->
-                <circle cx="50" cy="180" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 1月の売上データ" data-product="製品C" data-month="1月" data-value="25" class="chart-line-point" data-tooltip="製品C - 1月: 売上 25">
-                  <title>製品C - 1月: 売上 25</title>
-                </circle>
-                <circle cx="150" cy="150" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 2月の売上データ" data-product="製品C" data-month="2月" data-value="38" class="chart-line-point" data-tooltip="製品C - 2月: 売上 38">
-                  <title>製品C - 2月: 売上 38</title>
-                </circle>
-                <circle cx="250" cy="165" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 3月の売上データ" data-product="製品C" data-month="3月" data-value="31" class="chart-line-point" data-tooltip="製品C - 3月: 売上 31">
-                  <title>製品C - 3月: 売上 31</title>
-                </circle>
-                <circle cx="350" cy="195" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 4月の売上データ" data-product="製品C" data-month="4月" data-value="19" class="hybrid-tooltip-trigger" data-tooltip-content="製品C - 4月: 売上 19">
-                  <title>製品C - 4月: 売上 19</title>
-                </circle>
-                <circle cx="450" cy="120" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 5月の売上データ" data-product="製品C" data-month="5月" data-value="50" class="hybrid-tooltip-trigger" data-tooltip-content="製品C - 5月: 売上 50">
-                  <title>製品C - 5月: 売上 50</title>
-                </circle>
-                <circle cx="550" cy="60" r="5" fill="white" stroke="hsl(var(--utility-purple))" stroke-width="3" role="graphics-symbol" aria-label="製品C: 6月の売上データ" data-product="製品C" data-month="6月" data-value="75" class="hybrid-tooltip-trigger" data-tooltip-content="製品C - 6月: 売上 75">
-                  <title>製品C - 6月: 売上 75</title>
-                </circle>
-              </svg>
-              <div class="chart-tooltip hybrid-tooltip" id="line-tooltip">
-                <div class="chart-tooltip-content"></div>
-              </div>
-
-              <!-- 凡例 -->
-              <div class="chart-legend">
-                <div class="chart-legend-item">
-                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-blue));"></div>
-                  <span>製品A</span>
-                </div>
-                <div class="chart-legend-item">
-                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-cyan));"></div>
-                  <span>製品B</span>
-                </div>
-                <div class="chart-legend-item">
-                  <div class="chart-legend-color" style="background-color: hsl(var(--utility-purple));"></div>
-                  <span>製品C</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -1679,30 +485,34 @@
       <section>
         <h2 class="section-title">Modal Component</h2>
 
-        <div class="modal-demo-container">
+        <div class="content-section">
           <!-- CSS-controlled modal -->
-          <div class="modal-demo-section">
-            <h3 class="modal-demo-title">CSS-controlled Modal</h3>
-            <p class="modal-demo-description">
-              Controls the display of the modal without JavaScript.
-              Provides basic modal functionality.
-            </p>
-
-            <label for="css-modal-demo" class="button primary-button">Open CSS Modal</label>
-            <input type="checkbox" id="css-modal-demo" class="css-modal-toggle">
-
-            <div class="css-modal-overlay">
-              <div class="modal">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h3 class="modal-title">Modal Controlled by CSS Only</h3>
-                    <label for="css-modal-demo" class="modal-close">&times;</label>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">CSS-controlled Modal</h3>
             </div>
-                  <div class="modal-body">
-                    <p>This modal is implemented using CSS only. The state of the checkbox is used to toggle the display of the modal.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <label for="css-modal-demo" class="button secondary-button">Close</label>
+            <div class="card-content">
+              <p class="mb-4">
+                Controls the display of the modal without JavaScript.
+                Provides basic modal functionality.
+              </p>
+
+              <label for="css-modal-demo" class="button primary-button">Open CSS Modal</label>
+              <input type="checkbox" id="css-modal-demo" class="hidden">
+
+              <div class="modal-overlay hidden" id="css-modal-overlay">
+                <div class="modal">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title">Modal Controlled by CSS Only</h3>
+                      <label for="css-modal-demo" class="modal-close">&times;</label>
+                    </div>
+                    <div class="modal-body">
+                      <p>This modal is implemented using CSS only. The state of the checkbox is used to toggle the display of the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <label for="css-modal-demo" class="button secondary-button">Close</label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1710,23 +520,25 @@
           </div>
 
           <!-- Hybrid controlled modal -->
-          <div class="modal-demo-section">
-            <h3 class="modal-demo-title">Hybrid Controlled Modal</h3>
-            <p class="modal-demo-description">
-              Defines styles with CSS and controls opening and closing with JavaScript.
-              Adds additional functionality like animations and scroll locking.
-            </p>
+          <div class="card mt-4">
+            <div class="card-header">
+              <h3 class="card-title">Hybrid Controlled Modal</h3>
+            </div>
+            <div class="card-content">
+              <p class="mb-4">
+                Defines styles with CSS and controls opening and closing with JavaScript.
+                Adds additional functionality like animations and scroll locking.
+              </p>
 
-            <button id="hybrid-modal-open" class="button primary-button">Open Hybrid Modal</button>
+              <button id="hybrid-modal-open" class="button primary-button">Open Hybrid Modal</button>
 
-            <div id="hybrid-modal" class="hybrid-modal">
-              <div class="modal-overlay">
+              <div id="hybrid-modal" class="modal-overlay hidden">
                 <div class="modal">
                   <div class="modal-content">
                     <div class="modal-header">
                       <h3 class="modal-title">Hybrid Controlled Modal</h3>
                       <button class="modal-close hybrid-modal-close">&times;</button>
-            </div>
+                    </div>
                     <div class="modal-body">
                       <p>This modal is implemented as a "hybrid" where styles are defined with CSS and opening/closing is controlled with JavaScript. Additional functionality like animations and scroll locking can be added.</p>
                     </div>
@@ -1738,124 +550,43 @@
               </div>
             </div>
           </div>
-
-          <!-- Attribute-based controlled modal -->
-          <div class="modal-demo-section">
-            <h3 class="modal-demo-title">Attribute-based Controlled Modal</h3>
-            <p class="modal-demo-description">
-              Controls the modal declaratively using data attributes.
-              Makes maintenance easier and allows managing multiple modals efficiently.
-            </p>
-
-            <button data-modal-open="attr-modal" class="button primary-button">Open Attribute-based Modal</button>
-
-            <div id="attr-modal" data-modal>
-              <div class="modal-overlay">
-                <div class="modal">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h3 class="modal-title">Attribute-based Controlled Modal</h3>
-                      <button data-modal-close="attr-modal" class="modal-close">&times;</button>
-            </div>
-                    <div class="modal-body">
-                      <p>This modal is controlled declaratively using data attributes. For example, you can use <code>data-modal-open="modal-id"</code> and <code>data-modal-close="modal-id"</code> attributes to control the opening and closing of the modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button data-modal-close="attr-modal" class="button secondary-button">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-
-        <script>
-          // Hybrid modal control
-          document.getElementById('hybrid-modal-open').addEventListener('click', function() {
-            const modal = document.getElementById('hybrid-modal');
-            modal.classList.add('is-open');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-          });
-
-          document.querySelectorAll('.hybrid-modal-close').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-              const modal = document.getElementById('hybrid-modal');
-              modal.classList.remove('is-open');
-              document.body.style.overflow = ''; // Restore scrolling
-            });
-          });
-
-          // Attribute-based modal control
-          document.querySelectorAll('[data-modal-open]').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-              const modalId = this.getAttribute('data-modal-open');
-              const modal = document.getElementById(modalId);
-              if (modal) {
-                modal.classList.add('is-open');
-                document.body.style.overflow = 'hidden';
-              }
-            });
-          });
-
-          document.querySelectorAll('[data-modal-close]').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-              const modalId = this.getAttribute('data-modal-close');
-              const modal = document.getElementById(modalId);
-              if (modal) {
-                modal.classList.remove('is-open');
-                document.body.style.overflow = '';
-              }
-            });
-          });
-
-          // Clicking outside the modal to close (attribute-based modal)
-          document.querySelectorAll('[data-modal] .modal-overlay').forEach(function(overlay) {
-            overlay.addEventListener('click', function(e) {
-              if (e.target === this) {
-                const modal = this.closest('[data-modal]');
-                modal.classList.remove('is-open');
-                document.body.style.overflow = '';
-              }
-            });
-          });
-        </script>
+        </div>
       </section>
 
       <!-- Button Component Section -->
       <section>
         <h2 class="section-title">Button Component</h2>
 
-          <div class="card">
-            <div class="card-header">
+        <div class="card">
+          <div class="card-header">
             <h3 class="card-title">Button Variations</h3>
-            </div>
-            <div class="card-content">
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+          </div>
+          <div class="card-content">
+            <div class="flex flex-wrap gap-4 mb-6">
               <button class="button primary-button">Primary</button>
               <button class="button secondary-button">Secondary</button>
               <button class="button button-outline">Outline</button>
               <button class="button button-ghost">Ghost</button>
               <button class="button button-destructive">Destructive</button>
               <button class="button button-link">Link</button>
-              </div>
+            </div>
 
             <h4 class="mb-2">Size Variations</h4>
-            <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+            <div class="flex items-center gap-4 mb-6">
               <button class="button primary-button button-sm">Small</button>
               <button class="button primary-button">Default</button>
               <button class="button primary-button button-lg">Large</button>
             </div>
 
             <h4 class="mb-2">State</h4>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <div class="flex flex-wrap gap-4 mb-6">
               <button class="button primary-button">Normal</button>
               <button class="button primary-button" disabled>Disabled</button>
               <button class="button primary-button button-loading">Loading</button>
-          </div>
+            </div>
 
             <h4 class="mb-2">Button with Icon</h4>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="flex flex-wrap gap-4">
               <button class="button primary-button icon-add">
                 <span>Add</span>
               </button>
@@ -1873,27 +604,27 @@
       <section>
         <h2 class="section-title">Form Component</h2>
 
-          <div class="card">
-            <div class="card-header">
+        <div class="card">
+          <div class="card-header">
             <h3 class="card-title">Input Fields</h3>
-            </div>
-            <div class="card-content">
+          </div>
+          <div class="card-content">
             <div class="form-group">
               <label for="name-input" class="form-label">Full Name</label>
               <input type="text" id="name-input" class="input" placeholder="Taro Yamada">
               <span class="help-text">Please enter your full name</span>
-              </div>
+            </div>
 
             <div class="form-group">
               <label for="email-input" class="form-label">Email Address</label>
-              <input type="email" id="email-input" class="input input-error" placeholder="example@mail.com">
+              <input type="email" id="email-input" class="input error" placeholder="example@mail.com">
               <span class="error-text">Please enter a valid email address</span>
             </div>
 
             <div class="form-group">
               <label for="disabled-input" class="form-label">Disabled Input</label>
               <input type="text" id="disabled-input" class="input" placeholder="Cannot be entered" disabled>
-          </div>
+            </div>
 
             <div class="form-group">
               <label for="textarea" class="form-label">Message</label>
@@ -1902,7 +633,7 @@
 
             <div class="form-group">
               <label for="select" class="form-label">Select</label>
-              <select id="select" class="input">
+              <select id="select" class="select">
                 <option value="" disabled selected>Please select</option>
                 <option value="option1">Option 1</option>
                 <option value="option2">Option 2</option>
@@ -1949,7 +680,7 @@
       <section>
         <h2 class="section-title">Card Component</h2>
 
-        <div class="card-grid">
+        <div class="grid grid-cols-2 gap-6">
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">Basic Card</h3>
@@ -2032,141 +763,72 @@
 
     <script>
       // Dark mode toggle
-      const themeToggle = document.getElementById('theme-toggle');
+      document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
 
-      // Get theme setting from local storage
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-        themeToggle.checked = true;
-      }
-
-      // Theme toggle event
-      themeToggle.addEventListener('change', () => {
-        if (themeToggle.checked) {
+        // Get theme setting from local storage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
           document.body.classList.add('dark-mode');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          document.body.classList.remove('dark-mode');
-          localStorage.setItem('theme', 'light');
+          themeToggle.checked = true;
         }
-      });
 
-      // 折れ線グラフのツールチップ表示機能
-      document.addEventListener('DOMContentLoaded', function() {
-        const dataPoints = document.querySelectorAll('.chart-line-point');
-        const tooltip = document.getElementById('line-tooltip');
-
-        dataPoints.forEach(point => {
-          point.addEventListener('mouseover', function(e) {
-            // ツールチップのコンテンツを設定
-            const tooltipContent = this.getAttribute('data-tooltip');
-            const product = this.getAttribute('data-product');
-            const month = this.getAttribute('data-month');
-            const value = this.getAttribute('data-value');
-
-            tooltip.querySelector('.chart-tooltip-title').textContent = `${product} - ${month}`;
-            tooltip.querySelector('.chart-tooltip-value').textContent = `売上: ${value}`;
-
-            // ポイントの位置を取得
-            const rect = this.getBoundingClientRect();
-            const svgRect = this.closest('svg').getBoundingClientRect();
-
-            // ツールチップの位置を設定
-            tooltip.style.display = 'block';
-            tooltip.style.left = `${rect.left}px`;
-            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
-          });
-
-          point.addEventListener('mouseout', function() {
-            tooltip.style.display = 'none';
-          });
-        });
-      });
-
-      // ハイブリッドツールチップの実装
-      document.addEventListener('DOMContentLoaded', function() {
-        const tooltipTriggers = document.querySelectorAll('.hybrid-tooltip-trigger');
-        const tooltip = document.getElementById('line-tooltip');
-
-        tooltipTriggers.forEach(trigger => {
-          trigger.addEventListener('mouseenter', function(e) {
-            // ツールチップの内容を設定
-            const content = this.getAttribute('data-tooltip-content');
-            tooltip.querySelector('.chart-tooltip-content').textContent = content;
-
-            // ツールチップの位置を設定
-            const rect = this.getBoundingClientRect();
-            const svgRect = this.closest('svg').getBoundingClientRect();
-
-            tooltip.style.display = 'block';
-            tooltip.style.left = `${rect.left + rect.width/2 - tooltip.offsetWidth/2}px`;
-            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
-          });
-
-          trigger.addEventListener('mouseleave', function() {
-            tooltip.style.display = 'none';
-          });
-        });
-      });
-
-      // Actual modal control
-      document.getElementById('show-real-modal').addEventListener('click', () => {
-        document.getElementById('real-modal-overlay').style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-      });
-
-      document.getElementById('close-real-modal').addEventListener('click', closeRealModal);
-      document.getElementById('cancel-real-modal').addEventListener('click', closeRealModal);
-      document.getElementById('confirm-real-modal').addEventListener('click', closeRealModal);
-      document.getElementById('real-modal-overlay').addEventListener('click', (e) => {
-        if (e.target === document.getElementById('real-modal-overlay')) {
-          closeRealModal();
-        }
-      });
-
-      function closeRealModal() {
-        document.getElementById('real-modal-overlay').style.display = 'none';
-        document.body.style.overflow = ''; // Restore scrolling
-      }
-
-      // Hybrid modal control
-      document.getElementById('hybrid-modal-button').addEventListener('click', function() {
-        document.getElementById('hybrid-modal').classList.add('is-open');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-      });
-
-      // Modal control using data attributes
-      document.querySelectorAll('[data-modal-open]').forEach(button => {
-        button.addEventListener('click', function(e) {
-          e.preventDefault();
-          const modalId = this.getAttribute('href');
-          document.querySelector(modalId).classList.add('is-open');
-          document.body.style.overflow = 'hidden';
-        });
-      });
-
-      document.querySelectorAll('[data-modal-close]').forEach(button => {
-        button.addEventListener('click', function() {
-          const modal = this.closest('.hybrid-modal');
-          if (modal) {
-            modal.classList.remove('is-open');
-            document.body.style.overflow = '';
+        // Theme toggle event
+        themeToggle.addEventListener('change', () => {
+          if (themeToggle.checked) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
           }
         });
-      });
 
-      // Clicking outside the modal to close (attribute-based modal)
-      document.querySelectorAll('.hybrid-modal .modal-overlay').forEach(overlay => {
-        overlay.addEventListener('click', function(e) {
-          if (e.target === this) {
-            this.closest('.hybrid-modal').classList.remove('is-open');
-            document.body.style.overflow = '';
-          }
-        });
+        // Hybrid modal control
+        const hybridModalOpen = document.getElementById('hybrid-modal-open');
+        const hybridModal = document.getElementById('hybrid-modal');
+        const hybridModalCloseButtons = document.querySelectorAll('.hybrid-modal-close');
+
+        if (hybridModalOpen && hybridModal) {
+          hybridModalOpen.addEventListener('click', function() {
+            hybridModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+          });
+
+          hybridModalCloseButtons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              hybridModal.classList.add('hidden');
+              document.body.style.overflow = ''; // Restore scrolling
+            });
+          });
+
+          // Close modal when clicking on overlay
+          hybridModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+              hybridModal.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+
+        // CSS-controlled modal
+        const cssModalCheckbox = document.getElementById('css-modal-demo');
+        const cssModalOverlay = document.getElementById('css-modal-overlay');
+
+        if (cssModalCheckbox && cssModalOverlay) {
+          cssModalCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+              cssModalOverlay.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            } else {
+              cssModalOverlay.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
       });
     </script>
-          </div>
+  </div>
 
   <!-- Header Component -->
   <section id="header-section" class="component-section">
