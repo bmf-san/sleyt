@@ -7,85 +7,980 @@
   <link rel="stylesheet" href="../dist/bmf-css.min.css">
 </head>
 <body>
-  <div class="container">
-    <main class="content">
-      <header class="content-section">
-        <h1 class="content-section-title text-center">BMF-CSS</h1>
-        <p class="content-section-description text-center">CMS向けの軽量でシンプルなUIスタイルフレームワーク</p>
-      </header>
-
-      <section class="content-section">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="card">
-            <div class="card-body text-center">
-              <h2 class="card-title">ユーザーガイド</h2>
-              <p>BMF-CSSの使用方法、コンポーネント、ユーティリティ、テーマなどの詳細なガイド</p>
-              <a href="users_guide/index.html" class="btn btn-primary">ユーザーガイドを見る</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body text-center">
-              <h2 class="card-title">開発者ガイド</h2>
-              <p>BMF-CSSへの貢献、コーディング規約、リリースプロセスなどの開発者向け情報</p>
-              <a href="developer_guide/index.html" class="btn btn-secondary">開発者ガイドを見る</a>
-            </div>
-          </div>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="header-logo">
+          <h1 class="text-xl font-bold">BMF-CSS</h1>
         </div>
-      </section>
+        <nav class="header-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#overview" class="nav-link">Overview</a></li>
+            <li class="nav-item"><a href="#installation" class="nav-link">Installation</a></li>
+            <li class="nav-item"><a href="#implementation" class="nav-link">Implementation</a></li>
+            <li class="nav-item"><a href="#base" class="nav-link">Base</a></li>
+            <li class="nav-item"><a href="#tokens" class="nav-link">Tokens</a></li>
+            <li class="nav-item"><a href="#components" class="nav-link">Components</a></li>
+            <li class="nav-item"><a href="#utilities" class="nav-link">Utilities</a></li>
+            <li class="nav-item"><a href="#themes" class="nav-link">Themes</a></li>
+            <li class="nav-item"><a href="#demos" class="nav-link">Demos</a></li>
+            <li class="nav-item"><a href="#api" class="nav-link">API</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-      <section class="content-section">
+  <main class="content">
+    <div class="container">
+      <section id="overview" class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Overview</h2>
         <div class="card">
-          <div class="card-header">
-            <h2>BMF-CSSの特徴</h2>
-          </div>
           <div class="card-body">
-            <ul>
-              <li>軽量かつシンプルな設計</li>
-              <li>CSSのみ（JSやプリプロセッサなし）</li>
-              <li>ダークモード対応</li>
-              <li>モバイルフレンドリー（レスポンシブ）</li>
-              <li>アクセシビリティ考慮（<code>focus-visible</code>、<code>aria-*</code>対応）</li>
-              <li>セマンティック + ユーティリティのハイブリッド設計</li>
+            <h3 class="text-xl mb-2">BMF-CSS Framework</h3>
+            <p class="mb-4">
+              BMF-CSS is a lightweight, flexible CSS framework designed for modern web applications.
+              It provides a set of carefully crafted components and utilities that help you build
+              consistent and responsive interfaces with minimal effort.
+            </p>
+
+            <h4 class="text-lg font-semibold mt-4 mb-2">Features and Benefits</h4>
+            <ul class="list">
+              <li class="mb-2">Semantic component classes with utility classes for fine-tuning</li>
+              <li class="mb-2">Consistent design system with color scales and typography rules</li>
+              <li class="mb-2">Responsive utilities with simple prefixes</li>
+              <li class="mb-2">Lightweight and performant with minimal CSS</li>
+              <li class="mb-2">Easily customizable with CSS custom properties</li>
             </ul>
+
+            <h4 class="text-lg font-semibold mt-4 mb-2">Design Philosophy</h4>
+            <p>
+              BMF-CSS follows a hybrid approach combining semantic components and utility classes.
+              This provides a balance between structure and flexibility, allowing you to create
+              complex layouts without sacrificing maintainability.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="content-section">
+      <section id="installation" class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Installation & Usage</h2>
         <div class="card">
-          <div class="card-header">
-            <h2>クイックスタート</h2>
-          </div>
           <div class="card-body">
-            <h3>インストール</h3>
-            <pre><code>npm install @bmf-san/bmf-css</code></pre>
-            <p>または</p>
-            <pre><code>yarn add @bmf-san/bmf-css</code></pre>
+            <h3 class="text-xl mb-4">Installing BMF-CSS</h3>
 
-            <h3>使用方法</h3>
-            <p>HTMLファイルに直接インポート:</p>
-            <pre><code>&lt;link rel="stylesheet" href="node_modules/@bmf-san/bmf-css/dist/bmf-css.min.css"&gt;</code></pre>
+            <h4 class="text-lg font-semibold mb-2">NPM Installation</h4>
+            <div class="bg-muted p-4 rounded mb-4">
+              <code>npm install bmf-css</code>
+            </div>
 
-            <p>JavaScriptでインポート:</p>
-            <pre><code>// React, Vue, Angularなど
-import '@bmf-san/bmf-css/dist/bmf-css.min.css';</code></pre>
+            <h4 class="text-lg font-semibold mb-2">Yarn Installation</h4>
+            <div class="bg-muted p-4 rounded mb-4">
+              <code>yarn add bmf-css</code>
+            </div>
 
-            <p>詳細な使用方法は<a href="users_guide/installation.html">インストールガイド</a>をご覧ください。</p>
+            <h4 class="text-lg font-semibold mb-2">CDN Usage</h4>
+            <div class="bg-muted p-4 rounded mb-4">
+              <code>&lt;link rel="stylesheet" href="https://cdn.example.com/bmf-css/1.0.0/bmf-css.min.css"&gt;</code>
+            </div>
+
+            <h3 class="text-xl mt-6 mb-4">Integrating with Your Project</h3>
+
+            <h4 class="text-lg font-semibold mb-2">Import in JavaScript</h4>
+            <div class="bg-muted p-4 rounded mb-4">
+              <code>import 'bmf-css/dist/bmf-css.min.css';</code>
+            </div>
+
+            <h4 class="text-lg font-semibold mb-2">Import in CSS/SCSS</h4>
+            <div class="bg-muted p-4 rounded mb-4">
+              <code>@import 'bmf-css/dist/bmf-css.min.css';</code>
+            </div>
+
+            <h4 class="text-lg font-semibold mb-2">Basic HTML Template</h4>
+            <div class="bg-muted p-4 rounded">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My BMF-CSS Project&lt;/title&gt;
+  &lt;link rel="stylesheet" href="path/to/bmf-css.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;h1 class="text-2xl mt-4"&gt;Hello, BMF-CSS!&lt;/h1&gt;
+    &lt;button class="btn-primary"&gt;Click Me&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
           </div>
         </div>
       </section>
-    </main>
-  </div>
+
+      <section id="implementation" class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Implementation Approaches</h2>
+        <div class="card">
+          <div class="card-body">
+            <p class="mb-4">
+              BMF-CSS offers three implementation approaches, giving you flexibility to choose the best method for your project's needs.
+            </p>
+
+            <div class="tabs">
+              <div class="tabs-list">
+                <button class="tab active" data-tab="css-based">CSS-Based</button>
+                <button class="tab" data-tab="hybrid">Hybrid (CSS + JS)</button>
+                <button class="tab" data-tab="attribute">Attribute-Based</button>
+              </div>
+
+              <div class="tab-content active" id="css-based">
+                <h3 class="text-xl font-semibold mb-2">CSS-Based Implementation</h3>
+                <p class="mb-4">
+                  The CSS-based approach is the most straightforward way to use BMF-CSS. Simply apply CSS classes to your HTML elements.
+                </p>
+                <h4 class="text-lg font-semibold mb-2">Benefits:</h4>
+                <ul class="list">
+                  <li class="mb-1">No JavaScript dependencies</li>
+                  <li class="mb-1">Simple and intuitive</li>
+                  <li class="mb-1">Works in all environments</li>
+                  <li class="mb-1">Easy to maintain</li>
+                </ul>
+                <div class="bg-muted p-4 rounded mt-4">
+                  <code>&lt;button class="btn-primary"&gt;Click Me&lt;/button&gt;</code>
+                </div>
+              </div>
+
+              <div class="tab-content" id="hybrid">
+                <h3 class="text-xl font-semibold mb-2">Hybrid Implementation (CSS + JS)</h3>
+                <p class="mb-4">
+                  The hybrid approach combines CSS classes with JavaScript enhancements for more interactive components.
+                </p>
+                <h4 class="text-lg font-semibold mb-2">Benefits:</h4>
+                <ul class="list">
+                  <li class="mb-1">Enhanced interactivity</li>
+                  <li class="mb-1">Dynamic state management</li>
+                  <li class="mb-1">Progressive enhancement</li>
+                  <li class="mb-1">JavaScript APIs for complex interactions</li>
+                </ul>
+                <div class="bg-muted p-4 rounded mt-4">
+                  <pre><code>&lt;button class="btn-primary" data-toggle="modal" data-target="#my-modal"&gt;
+  Open Modal
+&lt;/button&gt;
+
+&lt;script&gt;
+  // JavaScript enhancement
+  document.querySelector('[data-toggle="modal"]').addEventListener('click', function() {
+    const targetId = this.getAttribute('data-target');
+    const modal = document.querySelector(targetId);
+    modal.classList.add('active');
+  });
+&lt;/script&gt;</code></pre>
+                </div>
+              </div>
+
+              <div class="tab-content" id="attribute">
+                <h3 class="text-xl font-semibold mb-2">Attribute-Based Implementation</h3>
+                <p class="mb-4">
+                  The attribute-based approach uses HTML data attributes instead of classes for styling.
+                </p>
+                <h4 class="text-lg font-semibold mb-2">Benefits:</h4>
+                <ul class="list">
+                  <li class="mb-1">Cleaner HTML with separation of styling and structure</li>
+                  <li class="mb-1">More semantic markup</li>
+                  <li class="mb-1">Easier to manage in component-based systems</li>
+                  <li class="mb-1">Better for complex components with multiple states</li>
+                </ul>
+                <div class="bg-muted p-4 rounded mt-4">
+                  <code>&lt;button data-bmf-button="primary"&gt;Click Me&lt;/button&gt;</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mt-6">
+              <div class="card-header">
+                <h3 class="text-lg font-semibold">Choosing the Right Approach</h3>
+              </div>
+              <div class="card-body">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Factor</th>
+                      <th>CSS-Based</th>
+                      <th>Hybrid</th>
+                      <th>Attribute-Based</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Simplicity</td>
+                      <td>High</td>
+                      <td>Medium</td>
+                      <td>Medium</td>
+                    </tr>
+                    <tr>
+                      <td>Interactivity</td>
+                      <td>Low</td>
+                      <td>High</td>
+                      <td>Medium</td>
+                    </tr>
+                    <tr>
+                      <td>Maintainability</td>
+                      <td>Medium</td>
+                      <td>Medium</td>
+                      <td>High</td>
+                    </tr>
+                    <tr>
+                      <td>Best For</td>
+                      <td>Static sites</td>
+                      <td>Web applications</td>
+                      <td>Component systems</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="base" class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Base</h2>
+        <div class="card">
+          <div class="card-body">
+            <p class="mb-4">
+              BMF-CSS provides a solid foundation with reset and normalization styles, ensuring consistent rendering across browsers.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3">Reset and Normalization</h3>
+            <p class="mb-4">
+              Our reset styles eliminate browser inconsistencies while preserving useful defaults, giving you a clean slate to work with.
+            </p>
+            <div class="bg-muted p-4 rounded mb-6">
+              <pre><code>* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  min-height: 100vh;
+}</code></pre>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Typography Basics</h3>
+            <p class="mb-4">
+              BMF-CSS sets sensible defaults for typography, ensuring readability and consistency.
+            </p>
+            <div class="flex flex-wrap gap-4 mb-6">
+              <div class="p-4 bg-muted rounded">
+                <h1 class="text-4xl">Heading 1</h1>
+                <p class="text-sm text-muted mt-1">font-size: 2.25rem</p>
+              </div>
+              <div class="p-4 bg-muted rounded">
+                <h2 class="text-3xl">Heading 2</h2>
+                <p class="text-sm text-muted mt-1">font-size: 1.875rem</p>
+              </div>
+              <div class="p-4 bg-muted rounded">
+                <h3 class="text-2xl">Heading 3</h3>
+                <p class="text-sm text-muted mt-1">font-size: 1.5rem</p>
+              </div>
+              <div class="p-4 bg-muted rounded">
+                <h4 class="text-xl">Heading 4</h4>
+                <p class="text-sm text-muted mt-1">font-size: 1.25rem</p>
+              </div>
+              <div class="p-4 bg-muted rounded">
+                <h5 class="text-lg">Heading 5</h5>
+                <p class="text-sm text-muted mt-1">font-size: 1.125rem</p>
+              </div>
+              <div class="p-4 bg-muted rounded">
+                <h6 class="text-base">Heading 6</h6>
+                <p class="text-sm text-muted mt-1">font-size: 1rem</p>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Link Styles</h3>
+            <p class="mb-4">
+              Default styling for links with hover states and transitions.
+            </p>
+            <div class="bg-muted p-4 rounded mb-6">
+              <a href="#" class="text-primary">Default Link</a>
+              <span class="mx-2">|</span>
+              <a href="#" class="text-primary hover:underline">Hover Link</a>
+              <span class="mx-2">|</span>
+              <a href="#" class="btn-link">Button Link</a>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Form Reset</h3>
+            <p class="mb-4">
+              Form elements are normalized for consistent styling across browsers.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div class="p-4 bg-muted rounded">
+                <label for="text-input" class="block mb-1">Text Input</label>
+                <input type="text" id="text-input" class="input" placeholder="Enter text">
+              </div>
+              <div class="p-4 bg-muted rounded">
+                <label for="select-input" class="block mb-1">Select Input</label>
+                <select id="select-input" class="select">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Code Example</h3>
+            <p class="mb-4">
+              A sample usage of BMF-CSS base styles:
+            </p>
+            <div class="bg-muted p-4 rounded">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;BMF-CSS Base Example&lt;/title&gt;
+  &lt;link rel="stylesheet" href="bmf-css.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;h1 class="text-3xl mb-4"&gt;Welcome to BMF-CSS&lt;/h1&gt;
+    &lt;p class="mb-4"&gt;This example shows the base styles provided by BMF-CSS.&lt;/p&gt;
+    &lt;a href="#" class="btn-primary"&gt;Get Started&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tokens" class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Tokens</h2>
+        <div class="card">
+          <div class="card-body">
+            <p class="mb-4">
+              Design tokens are the foundation of BMF-CSS's design system, providing consistent values for colors, typography, spacing, and more.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3">Color System</h3>
+            <p class="mb-4">
+              Our color system uses HSL values with CSS custom properties, making it easy to create consistent color schemes.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              <div class="p-4 rounded" style="background-color: hsl(var(--primary));">
+                <p class="text-primary-foreground font-semibold">Primary</p>
+                <p class="text-primary-foreground text-sm">--primary</p>
+              </div>
+              <div class="p-4 rounded" style="background-color: hsl(var(--secondary));">
+                <p class="text-secondary-foreground font-semibold">Secondary</p>
+                <p class="text-secondary-foreground text-sm">--secondary</p>
+              </div>
+              <div class="p-4 rounded" style="background-color: hsl(var(--accent));">
+                <p class="text-accent-foreground font-semibold">Accent</p>
+                <p class="text-accent-foreground text-sm">--accent</p>
+              </div>
+              <div class="p-4 rounded" style="background-color: hsl(var(--destructive));">
+                <p class="text-destructive-foreground font-semibold">Destructive</p>
+                <p class="text-destructive-foreground text-sm">--destructive</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              <div class="p-4 rounded" style="background-color: hsl(var(--background));">
+                <p class="font-semibold">Background</p>
+                <p class="text-sm">--background</p>
+              </div>
+              <div class="p-4 rounded" style="background-color: hsl(var(--foreground));">
+                <p class="text-white font-semibold">Foreground</p>
+                <p class="text-white text-sm">--foreground</p>
+              </div>
+              <div class="p-4 rounded" style="background-color: hsl(var(--muted));">
+                <p class="text-muted-foreground font-semibold">Muted</p>
+                <p class="text-muted-foreground text-sm">--muted</p>
+              </div>
+              <div class="p-4 rounded border" style="background-color: hsl(var(--card));">
+                <p class="font-semibold">Card</p>
+                <p class="text-sm">--card</p>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Typography Variables</h3>
+            <p class="mb-4">
+              Consistent typography with font families, weights, and sizes.
+            </p>
+            <div class="bg-muted p-4 rounded mb-6">
+              <pre><code>:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Noto Sans JP', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}</code></pre>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Spacing</h3>
+            <p class="mb-4">
+              Consistent spacing scales for margin, padding, and layout.
+            </p>
+            <div class="flex flex-wrap gap-4 mb-6 items-end">
+              <div class="bg-primary" style="width: 0.25rem; height: 0.25rem;">
+                <div class="mt-6 text-xs">1</div>
+              </div>
+              <div class="bg-primary" style="width: 0.5rem; height: 0.5rem;">
+                <div class="mt-6 text-xs">2</div>
+              </div>
+              <div class="bg-primary" style="width: 0.75rem; height: 0.75rem;">
+                <div class="mt-6 text-xs">3</div>
+              </div>
+              <div class="bg-primary" style="width: 1rem; height: 1rem;">
+                <div class="mt-6 text-xs">4</div>
+              </div>
+              <div class="bg-primary" style="width: 1.5rem; height: 1.5rem;">
+                <div class="mt-6 text-xs">6</div>
+              </div>
+              <div class="bg-primary" style="width: 2rem; height: 2rem;">
+                <div class="mt-6 text-xs">8</div>
+              </div>
+              <div class="bg-primary" style="width: 2.5rem; height: 2.5rem;">
+                <div class="mt-6 text-xs">10</div>
+              </div>
+              <div class="bg-primary" style="width: 3rem; height: 3rem;">
+                <div class="mt-6 text-xs">12</div>
+              </div>
+              <div class="bg-primary" style="width: 3.5rem; height: 3.5rem;">
+                <div class="mt-6 text-xs">14</div>
+              </div>
+              <div class="bg-primary" style="width: 4rem; height: 4rem;">
+                <div class="mt-6 text-xs">16</div>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Shadows and Elevation</h3>
+            <p class="mb-4">
+              Consistent shadow tokens for depth and elevation.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div class="p-4 bg-card rounded shadow">
+                <p class="font-semibold">Shadow</p>
+                <p class="text-sm text-muted-foreground">--shadow</p>
+              </div>
+              <div class="p-4 bg-card rounded shadow-md">
+                <p class="font-semibold">Shadow MD</p>
+                <p class="text-sm text-muted-foreground">--shadow-md</p>
+              </div>
+              <div class="p-4 bg-card rounded shadow-lg">
+                <p class="font-semibold">Shadow LG</p>
+                <p class="text-sm text-muted-foreground">--shadow-lg</p>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Breakpoints</h3>
+            <p class="mb-4">
+              Responsive breakpoints for different screen sizes.
+            </p>
+            <div class="overflow-x-auto mb-6">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>CSS</th>
+                    <th>Usage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>sm</td>
+                    <td>640px</td>
+                    <td>@media (min-width: 640px)</td>
+                    <td><code>sm:flex</code></td>
+                  </tr>
+                  <tr>
+                    <td>md</td>
+                    <td>768px</td>
+                    <td>@media (min-width: 768px)</td>
+                    <td><code>md:flex</code></td>
+                  </tr>
+                  <tr>
+                    <td>lg</td>
+                    <td>1024px</td>
+                    <td>@media (min-width: 1024px)</td>
+                    <td><code>lg:flex</code></td>
+                  </tr>
+                  <tr>
+                    <td>xl</td>
+                    <td>1280px</td>
+                    <td>@media (min-width: 1280px)</td>
+                    <td><code>xl:flex</code></td>
+                  </tr>
+                  <tr>
+                    <td>2xl</td>
+                    <td>1536px</td>
+                    <td>@media (min-width: 1536px)</td>
+                    <td><code>2xl:flex</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">CSS Custom Properties List</h3>
+            <p class="mb-4">
+              A reference of all available CSS custom properties in BMF-CSS.
+            </p>
+            <div class="bg-muted p-4 rounded">
+              <pre><code>/* Color Properties */
+--primary: 222.2 47.4% 11.2%;
+--primary-foreground: 210 40% 98%;
+--secondary: 210 40% 96.1%;
+--secondary-foreground: 222.2 47.4% 11.2%;
+--accent: 210 40% 96.1%;
+--accent-foreground: 222.2 47.4% 11.2%;
+--muted: 210 40% 96.1%;
+--muted-foreground: 215.4 16.3% 46.9%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 210 40% 98%;
+--background: 0 0% 100%;
+--foreground: 222.2 84% 4.9%;
+--card: 0 0% 100%;
+--card-foreground: 222.2 84% 4.9%;
+--border: 214.3 31.8% 91.4%;
+
+/* Typography Properties */
+--font-sans: /* ... */;
+--font-mono: /* ... */;
+--font-size-xs: 0.75rem;
+/* ... and more */
+
+/* Spacing Properties */
+--spacing-1: 0.25rem;
+--spacing-2: 0.5rem;
+/* ... and more */
+
+/* Shadow Properties */
+--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+/* ... and more */
+
+/* Other Properties */
+--radius: 0.5rem;
+--radius-sm: 0.25rem;
+--radius-lg: 0.75rem;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="components" class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Components</h2>
+        <div class="card">
+          <div class="card-body">
+            <p class="mb-6">
+              BMF-CSS provides a comprehensive set of UI components that can be used to build modern web interfaces.
+              Each component is available in three implementation approaches: CSS-Based, Hybrid, and Attribute-Based.
+            </p>
+
+            <!-- ボタンコンポーネント -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4" id="component-button">Buttons</h3>
+              <p class="mb-4">
+                Buttons are used to trigger actions or events, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.
+              </p>
+
+              <div class="tabs">
+                <div class="tabs-list">
+                  <button class="tab active" data-tab="button-css">CSS-Based</button>
+                  <button class="tab" data-tab="button-hybrid">Hybrid</button>
+                  <button class="tab" data-tab="button-attribute">Attribute-Based</button>
+                </div>
+
+                <div class="tab-content active" id="button-css">
+                  <div class="bg-muted p-4 rounded mb-4">
+                    <pre><code>&lt;button class="btn-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn-secondary"&gt;Secondary Button&lt;/button&gt;
+&lt;button class="btn-outline"&gt;Outline Button&lt;/button&gt;
+&lt;button class="btn-ghost"&gt;Ghost Button&lt;/button&gt;
+&lt;button class="btn-destructive"&gt;Destructive Button&lt;/button&gt;</code></pre>
+                  </div>
+
+                  <div class="flex flex-wrap gap-2">
+                    <button class="btn-primary">Primary Button</button>
+                    <button class="btn-secondary">Secondary Button</button>
+                    <button class="btn-outline">Outline Button</button>
+                    <button class="btn-ghost">Ghost Button</button>
+                    <button class="btn-destructive">Destructive Button</button>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="button-hybrid">
+                  <div class="bg-muted p-4 rounded mb-4">
+                    <pre><code>&lt;button class="btn-primary" data-loading="false" id="loading-button"&gt;
+  Click to Load
+&lt;/button&gt;
+
+&lt;script&gt;
+  document.getElementById('loading-button').addEventListener('click', function() {
+    this.setAttribute('data-loading', 'true');
+    this.classList.add('btn-loading');
+
+    // Simulate loading
+    setTimeout(() => {
+      this.setAttribute('data-loading', 'false');
+      this.classList.remove('btn-loading');
+    }, 2000);
+  });
+&lt;/script&gt;</code></pre>
+                  </div>
+
+                  <div class="flex flex-wrap gap-2">
+                    <button class="btn-primary" id="demo-loading-button">Click to Load</button>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="button-attribute">
+                  <div class="bg-muted p-4 rounded mb-4">
+                    <pre><code>&lt;button data-bmf-button="primary"&gt;Primary&lt;/button&gt;
+&lt;button data-bmf-button="secondary"&gt;Secondary&lt;/button&gt;
+&lt;button data-bmf-button="outline"&gt;Outline&lt;/button&gt;
+&lt;button data-bmf-button="ghost"&gt;Ghost&lt;/button&gt;
+&lt;button data-bmf-button="destructive"&gt;Destructive&lt;/button&gt;</code></pre>
+                  </div>
+
+                  <div class="flex flex-wrap gap-2">
+                    <button class="btn-primary">Primary</button>
+                    <button class="btn-secondary">Secondary</button>
+                    <button class="btn-outline">Outline</button>
+                    <button class="btn-ghost">Ghost</button>
+                    <button class="btn-destructive">Destructive</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- フォーム要素 -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4" id="component-form">Form Elements</h3>
+              <p class="mb-4">
+                Form elements like inputs, selects, and checkboxes are essential for collecting user data.
+              </p>
+
+              <div class="tabs">
+                <div class="tabs-list">
+                  <button class="tab active" data-tab="form-css">CSS-Based</button>
+                  <button class="tab" data-tab="form-hybrid">Hybrid</button>
+                  <button class="tab" data-tab="form-attribute">Attribute-Based</button>
+                </div>
+
+                <div class="tab-content active" id="form-css">
+                  <div class="bg-muted p-4 rounded mb-4">
+                    <pre><code>&lt;div class="mb-4"&gt;
+  &lt;label for="name" class="block mb-1"&gt;Name&lt;/label&gt;
+  &lt;input type="text" id="name" class="input" placeholder="Enter your name"&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;label for="email" class="block mb-1"&gt;Email&lt;/label&gt;
+  &lt;input type="email" id="email" class="input" placeholder="Enter your email"&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;label for="country" class="block mb-1"&gt;Country&lt;/label&gt;
+  &lt;select id="country" class="select"&gt;
+    &lt;option&gt;Select a country&lt;/option&gt;
+    &lt;option&gt;United States&lt;/option&gt;
+    &lt;option&gt;United Kingdom&lt;/option&gt;
+    &lt;option&gt;Canada&lt;/option&gt;
+    &lt;option&gt;Japan&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span&gt;I agree to the terms and conditions&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mb-4">
+                      <label for="demo-name" class="block mb-1">Name</label>
+                      <input type="text" id="demo-name" class="input" placeholder="Enter your name">
+                    </div>
+
+                    <div class="mb-4">
+                      <label for="demo-email" class="block mb-1">Email</label>
+                      <input type="email" id="demo-email" class="input" placeholder="Enter your email">
+                    </div>
+
+                    <div class="mb-4">
+                      <label for="demo-country" class="block mb-1">Country</label>
+                      <select id="demo-country" class="select">
+                        <option>Select a country</option>
+                        <option>United States</option>
+                        <option>United Kingdom</option>
+                        <option>Canada</option>
+                        <option>Japan</option>
+                      </select>
+                    </div>
+
+                    <div class="mb-4">
+                      <label class="checkbox">
+                        <input type="checkbox">
+                        <span>I agree to the terms and conditions</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="form-hybrid">
+                  <div class="bg-muted p-4 rounded mb-4">
+                    <pre><code>&lt;div class="mb-4"&gt;
+  &lt;label for="password" class="block mb-1"&gt;Password&lt;/label&gt;
+  &lt;div class="input-group"&gt;
+    &lt;input type="password" id="password" class="input" placeholder="Enter password"&gt;
+    &lt;button class="btn-icon" data-toggle="password"&gt;
+      &lt;svg width="16" height="16" viewBox="0 0 24 24"&gt;
+        &lt;path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  document.querySelector('[data-toggle="password"]').addEventListener('click', function() {
+    const input = this.parentNode.querySelector('input');
+    const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+    input.setAttribute('type', type);
+  });
+&lt;/script&gt;</code></pre>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="demo-password" class="block mb-1">Password</label>
+                    <div class="flex">
+                      <input type="password" id="demo-password" class="input" placeholder="Enter password">
+                      <button class="btn-icon ml-2" id="demo-toggle-password">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="form-attribute">
+                  <div class="bg-muted p-4 rounded mb-4">
+                    <pre><code>&lt;div class="mb-4"&gt;
+  &lt;label for="name-attr" class="block mb-1"&gt;Name&lt;/label&gt;
+  &lt;input type="text" id="name-attr" data-bmf-input placeholder="Enter your name"&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;label for="country-attr" class="block mb-1"&gt;Country&lt;/label&gt;
+  &lt;select id="country-attr" data-bmf-select&gt;
+    &lt;option&gt;Select a country&lt;/option&gt;
+    &lt;option&gt;United States&lt;/option&gt;
+    &lt;option&gt;United Kingdom&lt;/option&gt;
+    &lt;option&gt;Canada&lt;/option&gt;
+    &lt;option&gt;Japan&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class="mb-4"&gt;
+  &lt;label data-bmf-checkbox&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span&gt;I agree to the terms and conditions&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mb-4">
+                      <label for="demo-name-attr" class="block mb-1">Name</label>
+                      <input type="text" id="demo-name-attr" class="input" placeholder="Enter your name">
+                    </div>
+
+                    <div class="mb-4">
+                      <label for="demo-country-attr" class="block mb-1">Country</label>
+                      <select id="demo-country-attr" class="select">
+                        <option>Select a country</option>
+                        <option>United States</option>
+                        <option>United Kingdom</option>
+                        <option>Canada</option>
+                        <option>Japan</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- カードコンポーネント -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4" id="component-card">Cards</h3>
+              <p class="mb-4">
+                Cards are used to group and display content in a clear and concise format.
+              </p>
+
+              <div class="tabs">
+                <div class="tabs-list">
+                  <button class="tab active" data-tab="card-css">CSS-Based</button>
+                  <button class="tab" data-tab="card-hybrid">Hybrid</button>
+                  <button class="tab" data-tab="card-attribute">Attribute-Based</button>
+                </div>
+
+                <div class="tab-content active" id="card-css">
+                  <div class="bg-muted p-4 rounded mb-4">
+                    <pre><code>&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;p&gt;This is the main content of the card. You can add any content here.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;button class="btn-primary"&gt;Action&lt;/button&gt;
+    &lt;button class="btn-secondary"&gt;Cancel&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="card">
+                      <div class="card-header">
+                        <h3 class="card-title">Card Title</h3>
+                      </div>
+                      <div class="card-body">
+                        <p>This is the main content of the card. You can add any content here.</p>
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn-primary">Action</button>
+                        <button class="btn-secondary">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="card-hybrid">
+                  <div class="bg-muted p-4 rounded mb-4">
+                    <pre><code>&lt;div class="card" data-collapsible&gt;
+  &lt;div class="card-header" data-toggle="collapse"&gt;
+    &lt;h3 class="card-title"&gt;Collapsible Card&lt;/h3&gt;
+    &lt;button class="btn-icon"&gt;
+      &lt;svg width="16" height="16" viewBox="0 0 24 24"&gt;
+        &lt;path d="M7 10l5 5 5-5H7z"&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body collapse"&gt;
+    &lt;p&gt;This content can be collapsed and expanded.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  document.querySelectorAll('[data-toggle="collapse"]').forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const target = this.nextElementSibling;
+      target.classList.toggle('show');
+    });
+  });
+&lt;/script&gt;</code></pre>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="demo-collapsible-header">
+                      <h3 class="card-title">Collapsible Card</h3>
+                      <button class="btn-icon" id="demo-collapse-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M7 10l5 5 5-5H7z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="card-body" id="demo-collapsible-body">
+                      <p>This content can be collapsed and expanded.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="card-attribute">
+                  <div class="bg-muted p-4 rounded mb-4">
+                    <pre><code>&lt;div data-bmf-card&gt;
+  &lt;div data-bmf-card-header&gt;
+    &lt;h3 data-bmf-card-title&gt;Card Title&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div data-bmf-card-body&gt;
+    &lt;p&gt;This is the main content of the card using attributes.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div data-bmf-card-footer&gt;
+    &lt;button data-bmf-button="primary"&gt;Action&lt;/button&gt;
+    &lt;button data-bmf-button="secondary"&gt;Cancel&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Card Title</h3>
+                    </div>
+                    <div class="card-body">
+                      <p>This is the main content of the card using attributes.</p>
+                    </div>
+                    <div class="card-footer">
+                      <button class="btn-primary">Action</button>
+                      <button class="btn-secondary">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 他のコンポーネントも同様に追加 -->
+            <div class="card bg-muted-foreground text-white">
+              <div class="card-body text-center">
+                <p class="mb-2">Many more components are available in BMF-CSS:</p>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <a href="#" class="badge">Alert</a>
+                  <a href="#" class="badge">Modal</a>
+                  <a href="#" class="badge">Tooltip</a>
+                  <a href="#" class="badge">Tabs</a>
+                  <a href="#" class="badge">Table</a>
+                  <a href="#" class="badge">Pagination</a>
+                  <a href="#" class="badge">Navigation</a>
+                  <a href="#" class="badge">Accordion</a>
+                  <a href="#" class="badge">and more...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="text-center">
-        <p>&copy; 2024 BMF-CSS</p>
-        <p>
-          <a href="https://github.com/bmf-san/bmf-css" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </p>
-      </div>
+      <p class="text-center">BMF-CSS Framework &copy; 2023</p>
     </div>
   </footer>
 </body>
