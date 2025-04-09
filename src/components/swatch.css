@@ -1,0 +1,10 @@
+/* スウォッチ */
+.swatch {
+  align-items: center;
+  border-radius: var(--border-radius);
+  color: var(--text-on-primary);
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
+}

@@ -1,0 +1,85 @@
+/* フォーム */
+.form-group {
+  margin-bottom: var(--spacing-4);
+}
+
+.form-label {
+  color: var(--text-secondary);
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-2);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+.form-control {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  display: block;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  padding: var(--spacing-2) var(--spacing-3);
+  transition: none;
+  width: 100%;
+}
+}
+
+.form-control {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  display: block;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  padding: var(--spacing-2) var(--spacing-3);
+  transition: var(--transition-base);
+  width: 100%;
+}
+
+.form-control:focus {
+  border-color: var(--color-gray-400);
+  box-shadow: 0 0 0 2px hsl(0deg 0% 0% / 5%);
+  outline: none;
+}
+
+.form-control:disabled {
+  background-color: var(--color-gray-100);
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* チェックボックスとラジオボタン */
+.form-check {
+  align-items: center;
+  display: flex;
+  margin-bottom: var(--spacing-2);
+}
+
+.form-check-input {
+  margin-right: var(--spacing-2);
+}
+
+.form-check-label {
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+}
+
+/* フォームの検証スタイル */
+.form-control.is-invalid {
+  border-color: var(--color-danger);
+}
+
+.form-control.is-valid {
+  border-color: var(--color-success);
+}
+
+.invalid-feedback {
+  color: var(--color-danger);
+  display: block;
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-1);
+  width: 100%;
+}

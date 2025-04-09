@@ -1,0 +1,29 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "selector-id-pattern": null,
+    "keyframes-name-pattern": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "apply",
+          "layer",
+          "responsive",
+          "screen",
+          "tailwind"
+        ]
+      }
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["theme"]
+      }
+    ],
+    "no-descending-specificity": null,
+    "declaration-block-no-redundant-longhand-properties": null
+  }
+}
