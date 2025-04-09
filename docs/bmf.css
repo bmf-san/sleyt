@@ -97,12 +97,12 @@ ol {
 a {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: hsl(217, 91%, 60%);
+  color: hsl(0, 0%, 98%);
   color: var(--color-primary);
 }
 
 a:hover {
-  color: hsl(217, 91%, 50%);
+  color: hsl(240, 6%, 90%);
   color: var(--color-primary-hover);
 }
 
@@ -142,28 +142,14 @@ a:not([class]) {
 :root {
   /*
    * Color System - Base Colors
-   * これらの色がカラーシステムの基盤となります
+   * These colors form the foundation of the color system
    */
 
-  /* Brand Colors */
-  --color-primary: hsl(217, 91%, 60%);
-  --color-primary-hover: hsl(217, 91%, 50%);
-  --color-secondary: hsl(215, 25%, 47%);
-  --color-secondary-hover: hsl(215, 25%, 35%);
-
-  /* Feedback Colors */
-  --color-success: hsl(158, 84%, 41%);
-  --color-info: hsl(188, 94%, 43%);
-  --color-warning: hsl(35, 92%, 50%);
-  --color-danger: hsl(0, 84%, 60%);
-
-  /* Neutral Colors */
-  --color-gray-50: hsl(0, 0%, 98%);
-  --color-gray-900: hsl(240, 10%, 4%);
-  --color-gray-100: hsl(214, 30%, 95%);
-  --color-gray-800: hsl(222, 47%, 11%);
-
-  /* Grayscale - Neutral Color Palette */
+  /* Grayscale - Neutral Color Palette
+   * A palette of achromatic colors used to express the hierarchical structure
+   * of the UI. Used for text, backgrounds, borders, and to represent
+   * different levels of emphasis with 10 levels of variation from 50 to 900.
+   */
   --color-gray-50: hsl(0, 0%, 98%);
   --color-gray-100: hsl(240, 5%, 96%);
   --color-gray-200: hsl(240, 6%, 90%);
@@ -175,7 +161,46 @@ a:not([class]) {
   --color-gray-800: hsl(240, 4%, 16%);
   --color-gray-900: hsl(240, 4%, 12%);
 
-  /* Opacity Levels - 透明度の標準値 */
+  /* Brand Colors
+   * These are the main colors that represent the brand identity.
+   * Primary color is used as the iconic brand color,
+   * while secondary color plays a supporting role or accent.
+   */
+  --color-primary: var(--color-gray-50);
+  --color-primary-hover: var(--color-gray-200);
+  --color-secondary: var(--color-gray-500);
+  --color-secondary-hover: var(--color-gray-600);
+
+  /* Feedback Colors
+   * These colors are used to visually communicate the result of user actions
+   * or system states. Used for success, information, warning, and error messages.
+   */
+  --color-success: hsl(158, 84%, 41%);
+  --color-info: hsl(188, 94%, 43%);
+  --color-warning: hsl(35, 92%, 50%);
+  --color-danger: hsl(0, 84%, 60%);
+
+  /* Utility Colors
+   * These are general-purpose color definitions.
+   * Unlike primary or secondary colors, these provide
+   * a basic color palette that can be used more freely.
+   *
+   * Usage examples:
+   * - As accent colors
+   * - For decorative elements
+   * - When visual distinction is needed without specific meaning
+   */
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-blue: hsl(217, 91%, 60%);
+  --color-red: hsl(0, 84%, 60%);
+  --color-green: hsl(158, 84%, 41%);
+  --color-yellow: hsl(35, 92%, 50%);
+  --color-purple: hsl(271, 100%, 40%);
+  --color-orange: hsl(25, 98%, 50%);
+  --color-gray: hsl(240, 4%, 46%);
+
+  /* Opacity Levels - Standard opacity values */
   --opacity-low: 0.1;
   --opacity-medium: 0.3;
   --opacity-high: 0.6;
@@ -846,21 +871,7 @@ pre code {
  */
 
 :root {
-  /* データビジュアライズ用トークン */
-  --color-primary: hsl(217, 91%, 60%);
-  --color-primary-hover: hsl(217, 91%, 50%);
-  --color-secondary: hsl(215, 25%, 47%);
-  --color-secondary-hover: hsl(215, 25%, 35%);
-  --color-success: hsl(158, 84%, 41%);
-  --color-info: hsl(188, 94%, 43%);
-  --color-warning: hsl(35, 92%, 50%);
-  --color-danger: hsl(0, 84%, 60%);
-
-  /* ライト/ダークテーマトークン */
-  --color-gray-100: hsl(214, 30%, 95%);
-  --color-gray-800: hsl(222, 47%, 11%);
-
-  /* テキストトークン */
+  /* Text Tokens */
   --color-text-default: var(--color-gray-900);
   --color-text-muted: var(--color-gray-500);
   --color-text-disabled: var(--color-gray-400);
@@ -869,26 +880,26 @@ pre code {
   --color-text-link: var(--color-primary);
   --color-text-link-hover: var(--color-primary-hover);
 
-  /* 背景トークン */
+  /* Background Tokens */
   --color-bg-default: var(--color-gray-50);
-  --color-bg-subtle: var(--color-gray-50);
-  --color-bg-muted: var(--color-gray-100);
-  --color-bg-emphasis: var(--color-gray-200);
+  --color-bg-subtle: var(--color-gray-100);
+  --color-bg-muted: var(--color-gray-200);
+  --color-bg-emphasis: var(--color-gray-300);
   --color-bg-inverted: var(--color-gray-800);
   --color-bg-overlay: hsla(var(--color-gray-900), var(--opacity-medium));
 
-  /* ボーダートークン */
+  /* Border Tokens */
   --color-border-default: var(--color-gray-200);
   --color-border-muted: var(--color-gray-300);
   --color-border-accent: var(--color-primary);
   --color-border-critical: var(--color-danger);
 
-  /* フォーカストークン */
+  /* Focus Tokens */
   --color-ring-default: hsla(var(--color-gray-900), var(--opacity-low));
   --color-ring-accent: hsla(var(--color-primary), var(--opacity-medium));
   --color-ring-critical: hsla(var(--color-danger), var(--opacity-medium));
 
-  /* シャドウトークン */
+  /* Shadow Tokens */
   --shadow-color: 220 3% 15%;
   --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.1);
   --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.1),
@@ -900,7 +911,7 @@ pre code {
   --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.1),
               0 10px 10px -5px hsl(var(--shadow-color) / 0.04);
 
-  /* 状態トークン */
+  /* State Tokens */
   --color-state-hover: var(--color-gray-100);
   --color-state-focus: var(--color-gray-200);
   --color-state-active: var(--color-gray-300);
@@ -908,231 +919,34 @@ pre code {
   --color-state-disabled: var(--color-gray-200);
 }
 
-/* ユーティリティクラス */
-
-/* Text Colors */
-
-.text-primary { color: hsl(217, 91%, 60%); color: var(--color-primary); }
-
-.text-secondary { color: hsl(215, 25%, 47%); color: var(--color-secondary); }
-
-.text-success { color: hsl(158, 84%, 41%); color: var(--color-success); }
-
-.text-info { color: hsl(188, 94%, 43%); color: var(--color-info); }
-
-.text-warning { color: hsl(35, 92%, 50%); color: var(--color-warning); }
-
-.text-danger { color: hsl(0, 84%, 60%); color: var(--color-danger); }
-
-.text-light { color: hsl(214, 30%, 95%); color: var(--color-gray-100); }
-
-.text-dark { color: hsl(222, 47%, 11%); color: var(--color-gray-800); }
-
-.text-white { color: hsl(0, 0%, 98%); color: var(--color-gray-50); }
-
-.text-black { color: hsl(240, 10%, 4%); color: var(--color-gray-900); }
-
-/* Semantic Text Colors */
-
-.text-default { color: hsl(240, 4%, 12%); color: var(--color-text-default); }
-
-.text-muted { color: hsl(240, 4%, 46%); color: var(--color-text-muted); }
-
-.text-disabled { color: hsl(240, 5%, 65%); color: var(--color-text-disabled); }
-
-.text-accent { color: hsl(217, 91%, 60%); color: var(--color-text-accent); }
-
-.text-inverted { color: hsl(0, 0%, 98%); color: var(--color-text-inverted); }
-
-/* Grayscale Text */
-
-.text-gray-50 { color: hsl(0, 0%, 98%); color: var(--color-gray-50); }
-
-.text-gray-100 { color: hsl(240, 5%, 96%); color: var(--color-gray-100); }
-
-.text-gray-200 { color: hsl(240, 6%, 90%); color: var(--color-gray-200); }
-
-.text-gray-300 { color: hsl(240, 5%, 84%); color: var(--color-gray-300); }
-
-.text-gray-400 { color: hsl(240, 5%, 65%); color: var(--color-gray-400); }
-
-.text-gray-500 { color: hsl(240, 4%, 46%); color: var(--color-gray-500); }
-
-.text-gray-600 { color: hsl(240, 5%, 34%); color: var(--color-gray-600); }
-
-.text-gray-700 { color: hsl(240, 5%, 26%); color: var(--color-gray-700); }
-
-.text-gray-800 { color: hsl(240, 4%, 16%); color: var(--color-gray-800); }
-
-.text-gray-900 { color: hsl(240, 4%, 12%); color: var(--color-gray-900); }
-
-/* Background Colors */
-
-.bg-primary { background-color: hsl(217, 91%, 60%); background-color: var(--color-primary); }
-
-.bg-secondary { background-color: hsl(215, 25%, 47%); background-color: var(--color-secondary); }
-
-.bg-success { background-color: hsl(158, 84%, 41%); background-color: var(--color-success); }
-
-.bg-info { background-color: hsl(188, 94%, 43%); background-color: var(--color-info); }
-
-.bg-warning { background-color: hsl(35, 92%, 50%); background-color: var(--color-warning); }
-
-.bg-danger { background-color: hsl(0, 84%, 60%); background-color: var(--color-danger); }
-
-.bg-light { background-color: hsl(214, 30%, 95%); background-color: var(--color-gray-100); }
-
-.bg-dark { background-color: hsl(222, 47%, 11%); background-color: var(--color-gray-800); }
-
-.bg-white { background-color: hsl(0, 0%, 98%); background-color: var(--color-gray-50); }
-
-.bg-black { background-color: hsl(240, 10%, 4%); background-color: var(--color-gray-900); }
-
-.bg-transparent { background-color: transparent; }
-
-/* Semantic Background Colors */
-
-.bg-default { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-default); }
-
-.bg-subtle { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-subtle); }
-
-.bg-muted { background-color: hsl(240, 5%, 96%); background-color: var(--color-bg-muted); }
-
-.bg-emphasis { background-color: hsl(240, 6%, 90%); background-color: var(--color-bg-emphasis); }
-
-.bg-inverted { background-color: hsl(222, 47%, 11%); background-color: var(--color-bg-inverted); }
-
-/* Grayscale Background */
-
-.bg-gray-50 { background-color: hsl(0, 0%, 98%); background-color: var(--color-gray-50); }
-
-.bg-gray-100 { background-color: hsl(240, 5%, 96%); background-color: var(--color-gray-100); }
-
-.bg-gray-200 { background-color: hsl(240, 6%, 90%); background-color: var(--color-gray-200); }
-
-.bg-gray-300 { background-color: hsl(240, 5%, 84%); background-color: var(--color-gray-300); }
-
-.bg-gray-400 { background-color: hsl(240, 5%, 65%); background-color: var(--color-gray-400); }
-
-.bg-gray-500 { background-color: hsl(240, 4%, 46%); background-color: var(--color-gray-500); }
-
-.bg-gray-600 { background-color: hsl(240, 5%, 34%); background-color: var(--color-gray-600); }
-
-.bg-gray-700 { background-color: hsl(240, 5%, 26%); background-color: var(--color-gray-700); }
-
-.bg-gray-800 { background-color: hsl(240, 4%, 16%); background-color: var(--color-gray-800); }
-
-.bg-gray-900 { background-color: hsl(240, 4%, 12%); background-color: var(--color-gray-900); }
-
-/* Legacy Theme Classes */
-
-.bg-body { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-default); }
-
-.bg-card { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-default); }
-
-.bg-surface { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-default); }
-
-.bg-input { background-color: hsl(240, 5%, 96%); background-color: var(--color-bg-muted); }
-
-/* Border Colors */
-
-.border-primary { border-color: hsl(217, 91%, 60%); border-color: var(--color-primary); }
-
-.border-secondary { border-color: hsl(215, 25%, 47%); border-color: var(--color-secondary); }
-
-.border-success { border-color: hsl(158, 84%, 41%); border-color: var(--color-success); }
-
-.border-info { border-color: hsl(188, 94%, 43%); border-color: var(--color-info); }
-
-.border-warning { border-color: hsl(35, 92%, 50%); border-color: var(--color-warning); }
-
-.border-danger { border-color: hsl(0, 84%, 60%); border-color: var(--color-danger); }
-
-.border-light { border-color: hsl(214, 30%, 95%); border-color: var(--color-gray-100); }
-
-.border-dark { border-color: hsl(222, 47%, 11%); border-color: var(--color-gray-800); }
-
-.border-white { border-color: hsl(0, 0%, 98%); border-color: var(--color-gray-50); }
-
-.border-black { border-color: hsl(240, 10%, 4%); border-color: var(--color-gray-900); }
-
-/* Semantic Border Colors */
-
-.border-default { border-color: hsl(240, 6%, 90%); border-color: var(--color-border-default); }
-
-.border-muted { border-color: hsl(240, 5%, 84%); border-color: var(--color-border-muted); }
-
-.border-accent { border-color: hsl(217, 91%, 60%); border-color: var(--color-border-accent); }
-
-.border-critical { border-color: hsl(0, 84%, 60%); border-color: var(--color-border-critical); }
-
-/* Grayscale Border */
-
-.border-gray-50 { border-color: hsl(0, 0%, 98%); border-color: var(--color-gray-50); }
-
-.border-gray-100 { border-color: hsl(240, 5%, 96%); border-color: var(--color-gray-100); }
-
-.border-gray-200 { border-color: hsl(240, 6%, 90%); border-color: var(--color-gray-200); }
-
-.border-gray-300 { border-color: hsl(240, 5%, 84%); border-color: var(--color-gray-300); }
-
-.border-gray-400 { border-color: hsl(240, 5%, 65%); border-color: var(--color-gray-400); }
-
-.border-gray-500 { border-color: hsl(240, 4%, 46%); border-color: var(--color-gray-500); }
-
-.border-gray-600 { border-color: hsl(240, 5%, 34%); border-color: var(--color-gray-600); }
-
-.border-gray-700 { border-color: hsl(240, 5%, 26%); border-color: var(--color-gray-700); }
-
-.border-gray-800 { border-color: hsl(240, 4%, 16%); border-color: var(--color-gray-800); }
-
-.border-gray-900 { border-color: hsl(240, 4%, 12%); border-color: var(--color-gray-900); }
-
-/* Default Border */
-
-.border { border: 1px solid hsl(240, 6%, 90%); border: 1px solid var(--color-border-default); }
-
-.border-t { border-top: 1px solid hsl(240, 6%, 90%); border-top: 1px solid var(--color-border-default); }
-
-.border-r { border-right: 1px solid hsl(240, 6%, 90%); border-right: 1px solid var(--color-border-default); }
-
-.border-b { border-bottom: 1px solid hsl(240, 6%, 90%); border-bottom: 1px solid var(--color-border-default); }
-
-.border-l { border-left: 1px solid hsl(240, 6%, 90%); border-left: 1px solid var(--color-border-default); }
-
-/* Border Widths */
-
-.border-0 { border-width: 0; }
-
-.border-2 { border-width: 2px; }
-
-.border-4 { border-width: 4px; }
-
-.border-8 { border-width: 8px; }
-
 /**
  * BMF CSS Framework - Dark Mode
  */
 
-/* 自動的にダークモードを適用するメディアクエリ */
+/* Automatic dark mode application via media query */
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* データビジュアライズ用トークン */
-    --color-primary: hsl(217, 91%, 60%);
-    --color-primary-hover: hsl(217, 91%, 50%);
-    --color-secondary: hsl(210, 15%, 65%);
-    --color-secondary-hover: hsl(210, 15%, 55%);
-    --color-success: hsl(158, 84%, 41%);
-    --color-info: hsl(188, 94%, 43%);
-    --color-warning: hsl(35, 92%, 50%);
-    --color-danger: hsl(0, 84%, 60%);
+  :root,
+  :root.dark-mode {
+	/* Grayscale Overrides */
+    --color-gray-50: hsl(240, 6%, 95%);
+    --color-gray-100: hsl(240, 6%, 90%);
+    --color-gray-200: hsl(240, 6%, 80%);
+    --color-gray-300: hsl(240, 5%, 65%);
+    --color-gray-400: hsl(240, 5%, 50%);
+    --color-gray-500: hsl(240, 4%, 40%);
+    --color-gray-600: hsl(240, 5%, 30%);
+    --color-gray-700: hsl(240, 5%, 20%);
+    --color-gray-800: hsl(240, 6%, 12%);
+    --color-gray-900: hsl(240, 10%, 5%);
 
-    /* ライト/ダークテーマトークン */
-    --color-gray-100: var(--color-gray-200);
-    --color-gray-800: var(--color-gray-800);
+	/* Brand Colors Overrides */
+	--color-primary: var(--color-gray-900);
+    --color-primary-hover: var(--color-gray-700);
+    --color-secondary: var(--color-gray-400);
+    --color-secondary-hover: var(--color-gray-300);
 
-    /* テキストトークン */
+    /* Text Tokens */
     --color-text-default: var(--color-gray-50);
     --color-text-muted: var(--color-gray-300);
     --color-text-disabled: var(--color-gray-500);
@@ -1141,26 +955,26 @@ pre code {
     --color-text-link: var(--color-primary);
     --color-text-link-hover: hsl(217, 91%, 75%);
 
-    /* 背景トークン */
+    /* Background Tokens */
     --color-bg-default: var(--color-gray-900);
     --color-bg-subtle: var(--color-gray-800);
     --color-bg-muted: var(--color-gray-700);
     --color-bg-emphasis: var(--color-gray-600);
     --color-bg-inverted: var(--color-gray-50);
-    --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
+    --color-bg-overlay: hsla(var(--color-gray-900), var(--opacity-high));
 
-    /* ボーダートークン */
+    /* Border Tokens */
     --color-border-default: var(--color-gray-700);
     --color-border-muted: var(--color-gray-600);
     --color-border-accent: var(--color-primary);
     --color-border-critical: var(--color-danger);
 
-    /* フォーカストークン */
+    /* Focus Tokens */
     --color-ring-default: hsla(0, 0%, 100%, 0.1);
     --color-ring-accent: hsla(217, 91%, 60%, 0.3);
     --color-ring-critical: hsla(0, 84%, 60%, 0.3);
 
-    /* シャドウトークン */
+    /* Shadow Tokens */
     --shadow-color: 240 3% 2%;
     --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.2);
     --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.2),
@@ -1172,146 +986,14 @@ pre code {
     --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.2),
                 0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
 
-    /* 状態トークン */
+    /* State Tokens */
     --color-state-hover: var(--color-gray-800);
     --color-state-focus: var(--color-gray-700);
     --color-state-active: var(--color-gray-600);
     --color-state-selected: var(--color-gray-700);
     --color-state-disabled: var(--color-gray-600);
-
-    /* グレースケールオーバーライド */
-    --color-gray-50: hsl(240, 6%, 95%);
-    --color-gray-100: hsl(240, 6%, 90%);
-    --color-gray-200: hsl(240, 6%, 80%);
-    --color-gray-300: hsl(240, 5%, 65%);
-    --color-gray-400: hsl(240, 5%, 50%);
-    --color-gray-500: hsl(240, 4%, 40%);
-    --color-gray-600: hsl(240, 5%, 30%);
-    --color-gray-700: hsl(240, 5%, 20%);
-    --color-gray-800: hsl(240, 6%, 12%);
-    --color-gray-900: hsl(240, 10%, 5%);
   }
 }
-
-/* マニュアルダークモード切り替え用のクラス */
-
-.dark-mode {
-  /* データビジュアライズ用トークン */
-  --color-primary: hsl(217, 91%, 60%);
-  --color-primary-hover: hsl(217, 91%, 50%);
-  --color-secondary: hsl(210, 15%, 65%);
-  --color-secondary-hover: hsl(210, 15%, 55%);
-  --color-success: hsl(158, 84%, 41%);
-  --color-info: hsl(188, 94%, 43%);
-  --color-warning: hsl(35, 92%, 50%);
-  --color-danger: hsl(0, 84%, 60%);
-
-  /* ライト/ダークテーマトークン */
-  --color-gray-100: var(--color-gray-200);
-  --color-gray-800: var(--color-gray-800);
-
-  /* テキストトークン */
-  --color-text-default: var(--color-gray-50);
-  --color-text-muted: var(--color-gray-300);
-  --color-text-disabled: var(--color-gray-500);
-  --color-text-accent: var(--color-primary);
-  --color-text-inverted: var(--color-gray-900);
-  --color-text-link: var(--color-primary);
-  --color-text-link-hover: hsl(217, 91%, 75%);
-
-  /* 背景トークン */
-  --color-bg-default: var(--color-gray-900);
-  --color-bg-subtle: var(--color-gray-800);
-  --color-bg-muted: var(--color-gray-700);
-  --color-bg-emphasis: var(--color-gray-600);
-  --color-bg-inverted: var(--color-gray-50);
-  --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
-
-  /* ボーダートークン */
-  --color-border-default: var(--color-gray-700);
-  --color-border-muted: var(--color-gray-600);
-  --color-border-accent: var(--color-primary);
-  --color-border-critical: var(--color-danger);
-
-  /* フォーカストークン */
-  --color-ring-default: hsla(0, 0%, 100%, 0.1);
-  --color-ring-accent: hsla(217, 91%, 60%, 0.3);
-  --color-ring-critical: hsla(0, 84%, 60%, 0.3);
-
-  /* シャドウトークン */
-  --shadow-color: 240 3% 2%;
-  --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.2);
-  --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.2),
-            0 1px 2px hsl(var(--shadow-color) / 0.15);
-  --shadow-md: 0 4px 6px -1px hsl(var(--shadow-color) / 0.2),
-              0 2px 4px -1px hsl(var(--shadow-color) / 0.15);
-  --shadow-lg: 0 10px 15px -3px hsl(var(--shadow-color) / 0.2),
-              0 4px 6px -2px hsl(var(--shadow-color) / 0.15);
-  --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.2),
-              0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
-
-  /* 状態トークン */
-  --color-state-hover: var(--color-gray-800);
-  --color-state-focus: var(--color-gray-700);
-  --color-state-active: var(--color-gray-600);
-  --color-state-selected: var(--color-gray-700);
-  --color-state-disabled: var(--color-gray-600);
-
-  /* グレースケールオーバーライド */
-  --color-gray-50: hsl(240, 6%, 95%);
-  --color-gray-100: hsl(240, 6%, 90%);
-  --color-gray-200: hsl(240, 6%, 80%);
-  --color-gray-300: hsl(240, 5%, 65%);
-  --color-gray-400: hsl(240, 5%, 50%);
-  --color-gray-500: hsl(240, 4%, 40%);
-  --color-gray-600: hsl(240, 5%, 30%);
-  --color-gray-700: hsl(240, 5%, 20%);
-  --color-gray-800: hsl(240, 6%, 12%);
-  --color-gray-900: hsl(240, 10%, 5%);
-}
-
-/* ダークモード用ユーティリティクラス - 参考情報 (CSSファイルの分離時に移行可能) */
-
-/*
-.dark .text-primary { color: var(--color-primary); }
-.dark .text-secondary { color: var(--color-secondary); }
-.dark .text-success { color: var(--color-success); }
-.dark .text-info { color: var(--color-info); }
-.dark .text-warning { color: var(--color-warning); }
-.dark .text-danger { color: var(--color-danger); }
-.dark .text-light { color: var(--color-gray-100); }
-.dark .text-dark { color: var(--color-gray-800); }
-.dark .text-white { color: var(--color-gray-50); }
-.dark .text-black { color: var(--color-gray-900); }
-
-.dark .text-default { color: var(--color-text-default); }
-.dark .text-muted { color: var(--color-text-muted); }
-.dark .text-disabled { color: var(--color-text-disabled); }
-.dark .text-accent { color: var(--color-text-accent); }
-.dark .text-inverted { color: var(--color-text-inverted); }
-
-.dark .bg-primary { background-color: var(--color-primary); }
-.dark .bg-secondary { background-color: var(--color-secondary); }
-.dark .bg-success { background-color: var(--color-success); }
-.dark .bg-info { background-color: var(--color-info); }
-.dark .bg-warning { background-color: var(--color-warning); }
-.dark .bg-danger { background-color: var(--color-danger); }
-.dark .bg-light { background-color: var(--color-gray-100); }
-.dark .bg-dark { background-color: var(--color-gray-800); }
-.dark .bg-white { background-color: var(--color-gray-50); }
-.dark .bg-black { background-color: var(--color-gray-900); }
-
-.dark .bg-default { background-color: var(--color-bg-default); }
-.dark .bg-subtle { background-color: var(--color-bg-subtle); }
-.dark .bg-muted { background-color: var(--color-bg-muted); }
-.dark .bg-emphasis { background-color: var(--color-bg-emphasis); }
-.dark .bg-inverted { background-color: var(--color-bg-inverted); }
-
-.dark .border-default { border-color: var(--color-border-default); }
-.dark .border-muted { border-color: var(--color-border-muted); }
-.dark .border-accent { border-color: var(--color-border-accent); }
-.dark .border-critical { border-color: var(--color-border-critical); }
-*/
 
 /* Layout */
 
@@ -2617,9 +2299,9 @@ pre code {
 .btn-primary {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(217, 91%, 60%);
+  background-color: hsl(0, 0%, 98%);
   background-color: var(--color-primary);
-  border-color: hsl(217, 91%, 60%);
+  border-color: hsl(0, 0%, 98%);
   border-color: var(--color-primary);
 }
 
@@ -2627,18 +2309,18 @@ pre code {
 .btn-primary:focus {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(217, 91%, 50%);
+  background-color: hsl(240, 6%, 90%);
   background-color: var(--color-primary-hover);
-  border-color: hsl(217, 91%, 50%);
+  border-color: hsl(240, 6%, 90%);
   border-color: var(--color-primary-hover);
 }
 
 .btn-secondary {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(215, 25%, 47%);
+  background-color: hsl(240, 4%, 46%);
   background-color: var(--color-secondary);
-  border-color: hsl(215, 25%, 47%);
+  border-color: hsl(240, 4%, 46%);
   border-color: var(--color-secondary);
 }
 
@@ -2646,9 +2328,9 @@ pre code {
 .btn-secondary:focus {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(215, 25%, 35%);
+  background-color: hsl(240, 5%, 34%);
   background-color: var(--color-secondary-hover);
-  border-color: hsl(215, 25%, 35%);
+  border-color: hsl(240, 5%, 34%);
   border-color: var(--color-secondary-hover);
 }
 
@@ -2693,17 +2375,17 @@ pre code {
 }
 
 .btn-light {
-  color: hsl(222, 47%, 11%);
+  color: hsl(240, 4%, 16%);
   color: var(--color-gray-800);
-  background-color: hsl(214, 30%, 95%);
+  background-color: hsl(240, 5%, 96%);
   background-color: var(--color-gray-100);
-  border-color: hsl(214, 30%, 95%);
+  border-color: hsl(240, 5%, 96%);
   border-color: var(--color-gray-100);
 }
 
 .btn-light:hover,
 .btn-light:focus {
-  color: hsl(222, 47%, 11%);
+  color: hsl(240, 4%, 16%);
   color: var(--color-gray-800);
   background-color: hsl(240, 6%, 90%);
   background-color: var(--color-gray-200);
@@ -2714,9 +2396,9 @@ pre code {
 .btn-dark {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(222, 47%, 11%);
+  background-color: hsl(240, 4%, 16%);
   background-color: var(--color-gray-800);
-  border-color: hsl(222, 47%, 11%);
+  border-color: hsl(240, 4%, 16%);
   border-color: var(--color-gray-800);
 }
 
@@ -2733,10 +2415,10 @@ pre code {
 /* Outline Buttons */
 
 .btn-outline-primary {
-  color: hsl(217, 91%, 60%);
+  color: hsl(0, 0%, 98%);
   color: var(--color-primary);
   background-color: transparent;
-  border-color: hsl(217, 91%, 60%);
+  border-color: hsl(0, 0%, 98%);
   border-color: var(--color-primary);
 }
 
@@ -2744,17 +2426,17 @@ pre code {
 .btn-outline-primary:focus {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(217, 91%, 60%);
+  background-color: hsl(0, 0%, 98%);
   background-color: var(--color-primary);
-  border-color: hsl(217, 91%, 60%);
+  border-color: hsl(0, 0%, 98%);
   border-color: var(--color-primary);
 }
 
 .btn-outline-secondary {
-  color: hsl(215, 25%, 47%);
+  color: hsl(240, 4%, 46%);
   color: var(--color-secondary);
   background-color: transparent;
-  border-color: hsl(215, 25%, 47%);
+  border-color: hsl(240, 4%, 46%);
   border-color: var(--color-secondary);
 }
 
@@ -2762,9 +2444,9 @@ pre code {
 .btn-outline-secondary:focus {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(215, 25%, 47%);
+  background-color: hsl(240, 4%, 46%);
   background-color: var(--color-secondary);
-  border-color: hsl(215, 25%, 47%);
+  border-color: hsl(240, 4%, 46%);
   border-color: var(--color-secondary);
 }
 
@@ -2812,7 +2494,7 @@ pre code {
 /* Text Button (No Background) */
 
 .btn-text {
-  color: hsl(217, 91%, 60%);
+  color: hsl(0, 0%, 98%);
   color: var(--color-primary);
   background-color: transparent;
   border-color: transparent;
@@ -2822,7 +2504,7 @@ pre code {
 
 .btn-text:hover,
 .btn-text:focus {
-  color: hsl(217, 91%, 50%);
+  color: hsl(240, 6%, 90%);
   color: var(--color-primary-hover);
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -3053,9 +2735,9 @@ pre code {
 /* Color Variants */
 
 .card-primary {
-  background-color: hsl(217, 91%, 60%);
+  background-color: hsl(0, 0%, 98%);
   background-color: var(--color-primary);
-  border-color: hsl(217, 91%, 60%);
+  border-color: hsl(0, 0%, 98%);
   border-color: var(--color-primary);
   color: #fff;
 }
@@ -3115,29 +2797,29 @@ pre code {
 /* Card Color Variants */
 
 .card-secondary {
-  background-color: hsl(215, 25%, 47%);
+  background-color: hsl(240, 4%, 46%);
   background-color: var(--color-secondary);
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  border-color: hsl(215, 25%, 47%);
+  border-color: hsl(240, 4%, 46%);
   border-color: var(--color-secondary);
 }
 
 .card-light {
-  background-color: hsl(214, 30%, 95%);
+  background-color: hsl(240, 5%, 96%);
   background-color: var(--color-gray-100);
-  color: hsl(222, 47%, 11%);
+  color: hsl(240, 4%, 16%);
   color: var(--color-gray-800);
-  border-color: hsl(214, 30%, 95%);
+  border-color: hsl(240, 5%, 96%);
   border-color: var(--color-gray-100);
 }
 
 .card-dark {
-  background-color: hsl(222, 47%, 11%);
+  background-color: hsl(240, 4%, 16%);
   background-color: var(--color-gray-800);
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  border-color: hsl(222, 47%, 11%);
+  border-color: hsl(240, 4%, 16%);
   border-color: var(--color-gray-800);
 }
 
@@ -3169,7 +2851,7 @@ pre code {
 .form-control:focus {
   color: var(--color-text-primary);
   background-color: var(--color-bg-input);
-  border-color: hsl(217, 91%, 60%);
+  border-color: hsl(0, 0%, 98%);
   border-color: var(--color-primary);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(74, 108, 247, 0.25);
@@ -3269,9 +2951,9 @@ select.form-control::-ms-expand {
 }
 
 .form-check-input:checked {
-  background-color: hsl(217, 91%, 60%);
+  background-color: hsl(0, 0%, 98%);
   background-color: var(--color-primary);
-  border-color: hsl(217, 91%, 60%);
+  border-color: hsl(0, 0%, 98%);
   border-color: var(--color-primary);
 }
 
@@ -3450,7 +3132,7 @@ select.form-control::-ms-expand {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: hsl(217, 91%, 60%);
+  color: hsl(0, 0%, 98%);
   color: var(--color-primary);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3460,7 +3142,7 @@ select.form-control::-ms-expand {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: hsl(217, 91%, 50%);
+  color: hsl(240, 6%, 90%);
   color: var(--color-primary-hover);
 }
 
@@ -3511,7 +3193,7 @@ select.form-control::-ms-expand {
 .nav-pills .show > .nav-link {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(217, 91%, 60%);
+  background-color: hsl(0, 0%, 98%);
   background-color: var(--color-primary);
 }
 
@@ -3619,7 +3301,7 @@ select.form-control::-ms-expand {
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
-  color: hsl(217, 91%, 60%);
+  color: hsl(0, 0%, 98%);
   color: var(--color-primary);
 }
 
@@ -3702,22 +3384,22 @@ select.form-control::-ms-expand {
 /* Color variants */
 
 .navbar-primary {
-  background-color: hsl(217, 91%, 60%);
+  background-color: hsl(0, 0%, 98%);
   background-color: var(--color-primary);
 }
 
 .navbar-secondary {
-  background-color: hsl(215, 25%, 47%);
+  background-color: hsl(240, 4%, 46%);
   background-color: var(--color-secondary);
 }
 
 .navbar-light {
-  background-color: hsl(214, 30%, 95%);
+  background-color: hsl(240, 5%, 96%);
   background-color: var(--color-gray-100);
 }
 
 .navbar-dark {
-  background-color: hsl(222, 47%, 11%);
+  background-color: hsl(240, 4%, 16%);
   background-color: var(--color-gray-800);
 }
 
@@ -3786,32 +3468,11 @@ select.form-control::-ms-expand {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.dark-mode .table-striped > tbody > tr:nth-of-type(odd) > * {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Hover Table */
-
-.table-hover > tbody > tr:hover > * {
-  background-color: rgba(0, 0, 0, 0.075);
-  color: var(--color-text-primary);
-}
-
-.dark-mode .table-hover > tbody > tr:hover > * {
-  background-color: rgba(255, 255, 255, 0.075);
-  color: var(--color-text-primary);
-}
-
 /* Active Table Row */
 
 .table > tbody > tr.active > *,
 .table > :not(caption) > .active > * {
   background-color: rgba(0, 0, 0, 0.075);
-}
-
-.dark-mode .table > tbody > tr.active > *,
-.dark-mode .table > :not(caption) > .active > * {
-  background-color: rgba(255, 255, 255, 0.075);
 }
 
 /* Table Variants */
@@ -3964,26 +3625,26 @@ caption {
 /* Alert Variants */
 
 .alert-primary {
-  color: hsl(217, 91%, 60%);
+  color: hsl(0, 0%, 98%);
   color: var(--color-primary);
   background-color: rgba(74, 108, 247, 0.15);
   border-color: rgba(74, 108, 247, 0.4);
 }
 
 .alert-primary .alert-link {
-  color: hsl(217, 91%, 60%);
+  color: hsl(0, 0%, 98%);
   color: var(--color-primary);
 }
 
 .alert-secondary {
-  color: hsl(215, 25%, 47%);
+  color: hsl(240, 4%, 46%);
   color: var(--color-secondary);
   background-color: rgba(117, 127, 158, 0.15);
   border-color: rgba(117, 127, 158, 0.4);
 }
 
 .alert-secondary .alert-link {
-  color: hsl(215, 25%, 47%);
+  color: hsl(240, 4%, 46%);
   color: var(--color-secondary);
 }
 
@@ -4038,7 +3699,7 @@ caption {
 }
 
 .alert-dark {
-  color: hsl(222, 47%, 11%);
+  color: hsl(240, 4%, 16%);
   color: var(--color-gray-800);
   background-color: rgba(29, 33, 68, 0.15);
   border-color: rgba(29, 33, 68, 0.4);
@@ -4096,7 +3757,7 @@ caption {
   border-radius: var(--border-radius-full);
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(215, 25%, 47%);
+  background-color: hsl(240, 4%, 46%);
   background-color: var(--color-secondary);
 }
 
@@ -4113,14 +3774,14 @@ caption {
 .badge-primary {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(217, 91%, 60%);
+  background-color: hsl(0, 0%, 98%);
   background-color: var(--color-primary);
 }
 
 .badge-secondary {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(215, 25%, 47%);
+  background-color: hsl(240, 4%, 46%);
   background-color: var(--color-secondary);
 }
 
@@ -4139,7 +3800,7 @@ caption {
 }
 
 .badge-warning {
-  color: hsl(222, 47%, 11%);
+  color: hsl(240, 4%, 16%);
   color: var(--color-gray-800);
   background-color: hsl(35, 92%, 50%);
   background-color: var(--color-warning);
@@ -4153,34 +3814,34 @@ caption {
 }
 
 .badge-light {
-  color: hsl(222, 47%, 11%);
+  color: hsl(240, 4%, 16%);
   color: var(--color-gray-800);
-  background-color: hsl(214, 30%, 95%);
+  background-color: hsl(240, 5%, 96%);
   background-color: var(--color-gray-100);
 }
 
 .badge-dark {
   color: hsl(0, 0%, 98%);
   color: var(--color-gray-50);
-  background-color: hsl(222, 47%, 11%);
+  background-color: hsl(240, 4%, 16%);
   background-color: var(--color-gray-800);
 }
 
 /* Outline Badge Variants */
 
 .badge-outline-primary {
-  color: hsl(217, 91%, 60%);
+  color: hsl(0, 0%, 98%);
   color: var(--color-primary);
   background-color: transparent;
-  border: 1px solid hsl(217, 91%, 60%);
+  border: 1px solid hsl(0, 0%, 98%);
   border: 1px solid var(--color-primary);
 }
 
 .badge-outline-secondary {
-  color: hsl(215, 25%, 47%);
+  color: hsl(240, 4%, 46%);
   color: var(--color-secondary);
   background-color: transparent;
-  border: 1px solid hsl(215, 25%, 47%);
+  border: 1px solid hsl(240, 4%, 46%);
   border: 1px solid var(--color-secondary);
 }
 
@@ -4220,15 +3881,15 @@ caption {
   color: hsl(240, 5%, 34%);
   color: var(--color-gray-600);
   background-color: transparent;
-  border: 1px solid hsl(214, 30%, 95%);
+  border: 1px solid hsl(240, 5%, 96%);
   border: 1px solid var(--color-gray-100);
 }
 
 .badge-outline-dark {
-  color: hsl(222, 47%, 11%);
+  color: hsl(240, 4%, 16%);
   color: var(--color-gray-800);
   background-color: transparent;
-  border: 1px solid hsl(222, 47%, 11%);
+  border: 1px solid hsl(240, 4%, 16%);
   border: 1px solid var(--color-gray-800);
 }
 
@@ -4334,7 +3995,7 @@ a.badge:focus {
 }
 
 .toggle input:checked + label {
-  background-color: hsl(217, 91%, 60%);
+  background-color: hsl(0, 0%, 98%);
   background-color: var(--color-primary);
 }
 
@@ -4626,77 +4287,6 @@ a.badge:focus {
 /**
  * BMF CSS Framework - Responsive Utilities
  */
-
-/* Accessibility */
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.not-sr-only {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-/* Pointer events */
-
-.pointer-events-none {
-  pointer-events: none;
-}
-
-.pointer-events-auto {
-  pointer-events: auto;
-}
-
-/* Visibility */
-
-.visible {
-  visibility: visible;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-/* User select */
-
-.select-none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-.select-text {
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
-}
-
-.select-all {
-  -webkit-user-select: all;
-     -moz-user-select: all;
-          user-select: all;
-}
-
-.select-auto {
-  -webkit-user-select: auto;
-     -moz-user-select: auto;
-          user-select: auto;
-}
 
 /* Responsive visibility utilities */
 
