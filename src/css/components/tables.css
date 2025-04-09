@@ -58,30 +58,10 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.dark-mode .table-striped > tbody > tr:nth-of-type(odd) > * {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Hover Table */
-.table-hover > tbody > tr:hover > * {
-  background-color: rgba(0, 0, 0, 0.075);
-  color: var(--color-text-primary);
-}
-
-.dark-mode .table-hover > tbody > tr:hover > * {
-  background-color: rgba(255, 255, 255, 0.075);
-  color: var(--color-text-primary);
-}
-
 /* Active Table Row */
 .table > tbody > tr.active > *,
 .table > :not(caption) > .active > * {
   background-color: rgba(0, 0, 0, 0.075);
-}
-
-.dark-mode .table > tbody > tr.active > *,
-.dark-mode .table > :not(caption) > .active > * {
-  background-color: rgba(255, 255, 255, 0.075);
 }
 
 /* Table Variants */

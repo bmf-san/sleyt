@@ -4,20 +4,25 @@
 
 /* Automatic dark mode application via media query */
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* Data Visualization Tokens */
-    --color-primary: hsl(217, 91%, 60%);
-    --color-primary-hover: hsl(217, 91%, 50%);
-    --color-secondary: hsl(210, 15%, 65%);
-    --color-secondary-hover: hsl(210, 15%, 55%);
-    --color-success: hsl(158, 84%, 41%);
-    --color-info: hsl(188, 94%, 43%);
-    --color-warning: hsl(35, 92%, 50%);
-    --color-danger: hsl(0, 84%, 60%);
+  :root,
+  :root.dark-mode {
+	/* Grayscale Overrides */
+    --color-gray-50: hsl(240, 6%, 95%);
+    --color-gray-100: hsl(240, 6%, 90%);
+    --color-gray-200: hsl(240, 6%, 80%);
+    --color-gray-300: hsl(240, 5%, 65%);
+    --color-gray-400: hsl(240, 5%, 50%);
+    --color-gray-500: hsl(240, 4%, 40%);
+    --color-gray-600: hsl(240, 5%, 30%);
+    --color-gray-700: hsl(240, 5%, 20%);
+    --color-gray-800: hsl(240, 6%, 12%);
+    --color-gray-900: hsl(240, 10%, 5%);
 
-    /* Light/Dark Theme Tokens */
-    --color-gray-100: var(--color-gray-200);
-    --color-gray-800: var(--color-gray-800);
+	/* Brand Colors Overrides */
+	--color-primary: var(--color-gray-900);
+    --color-primary-hover: var(--color-gray-700);
+    --color-secondary: var(--color-gray-400);
+    --color-secondary-hover: var(--color-gray-300);
 
     /* Text Tokens */
     --color-text-default: var(--color-gray-50);
@@ -65,135 +70,5 @@
     --color-state-active: var(--color-gray-600);
     --color-state-selected: var(--color-gray-700);
     --color-state-disabled: var(--color-gray-600);
-
-    /* Grayscale Overrides */
-    --color-gray-50: hsl(240, 6%, 95%);
-    --color-gray-100: hsl(240, 6%, 90%);
-    --color-gray-200: hsl(240, 6%, 80%);
-    --color-gray-300: hsl(240, 5%, 65%);
-    --color-gray-400: hsl(240, 5%, 50%);
-    --color-gray-500: hsl(240, 4%, 40%);
-    --color-gray-600: hsl(240, 5%, 30%);
-    --color-gray-700: hsl(240, 5%, 20%);
-    --color-gray-800: hsl(240, 6%, 12%);
-    --color-gray-900: hsl(240, 10%, 5%);
   }
 }
-
-/* Manual dark mode class for toggle functionality */
-.dark-mode {
-  /* Data Visualization Tokens */
-  --color-primary: hsl(217, 91%, 60%);
-  --color-primary-hover: hsl(217, 91%, 50%);
-  --color-secondary: hsl(210, 15%, 65%);
-  --color-secondary-hover: hsl(210, 15%, 55%);
-  --color-success: hsl(158, 84%, 41%);
-  --color-info: hsl(188, 94%, 43%);
-  --color-warning: hsl(35, 92%, 50%);
-  --color-danger: hsl(0, 84%, 60%);
-
-  /* Light/Dark Theme Tokens */
-  --color-gray-100: var(--color-gray-200);
-  --color-gray-800: var(--color-gray-800);
-
-  /* Text Tokens */
-  --color-text-default: var(--color-gray-50);
-  --color-text-muted: var(--color-gray-300);
-  --color-text-disabled: var(--color-gray-500);
-  --color-text-accent: var(--color-primary);
-  --color-text-inverted: var(--color-gray-900);
-  --color-text-link: var(--color-primary);
-  --color-text-link-hover: hsl(217, 91%, 75%);
-
-  /* Background Tokens */
-  --color-bg-default: var(--color-gray-900);
-  --color-bg-subtle: var(--color-gray-800);
-  --color-bg-muted: var(--color-gray-700);
-  --color-bg-emphasis: var(--color-gray-600);
-  --color-bg-inverted: var(--color-gray-50);
-  --color-bg-overlay: hsla(var(--color-gray-900), var(--opacity-high));
-
-  /* Border Tokens */
-  --color-border-default: var(--color-gray-700);
-  --color-border-muted: var(--color-gray-600);
-  --color-border-accent: var(--color-primary);
-  --color-border-critical: var(--color-danger);
-
-  /* Focus Tokens */
-  --color-ring-default: hsla(0, 0%, 100%, 0.1);
-  --color-ring-accent: hsla(217, 91%, 60%, 0.3);
-  --color-ring-critical: hsla(0, 84%, 60%, 0.3);
-
-  /* Shadow Tokens */
-  --shadow-color: 240 3% 2%;
-  --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.2);
-  --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.2),
-            0 1px 2px hsl(var(--shadow-color) / 0.15);
-  --shadow-md: 0 4px 6px -1px hsl(var(--shadow-color) / 0.2),
-              0 2px 4px -1px hsl(var(--shadow-color) / 0.15);
-  --shadow-lg: 0 10px 15px -3px hsl(var(--shadow-color) / 0.2),
-              0 4px 6px -2px hsl(var(--shadow-color) / 0.15);
-  --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.2),
-              0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
-
-  /* State Tokens */
-  --color-state-hover: var(--color-gray-800);
-  --color-state-focus: var(--color-gray-700);
-  --color-state-active: var(--color-gray-600);
-  --color-state-selected: var(--color-gray-700);
-  --color-state-disabled: var(--color-gray-600);
-
-  /* Grayscale Overrides */
-  --color-gray-50: hsl(240, 6%, 95%);
-  --color-gray-100: hsl(240, 6%, 90%);
-  --color-gray-200: hsl(240, 6%, 80%);
-  --color-gray-300: hsl(240, 5%, 65%);
-  --color-gray-400: hsl(240, 5%, 50%);
-  --color-gray-500: hsl(240, 4%, 40%);
-  --color-gray-600: hsl(240, 5%, 30%);
-  --color-gray-700: hsl(240, 5%, 20%);
-  --color-gray-800: hsl(240, 6%, 12%);
-  --color-gray-900: hsl(240, 10%, 5%);
-}
-
-/* Dark mode utility classes - Reference information (can be moved to separate CSS files) */
-/*
-.dark .text-primary { color: var(--color-primary); }
-.dark .text-secondary { color: var(--color-secondary); }
-.dark .text-success { color: var(--color-success); }
-.dark .text-info { color: var(--color-info); }
-.dark .text-warning { color: var(--color-warning); }
-.dark .text-danger { color: var(--color-danger); }
-.dark .text-light { color: var(--color-gray-100); }
-.dark .text-dark { color: var(--color-gray-800); }
-.dark .text-white { color: var(--color-gray-50); }
-.dark .text-black { color: var(--color-gray-900); }
-
-.dark .text-default { color: var(--color-text-default); }
-.dark .text-muted { color: var(--color-text-muted); }
-.dark .text-disabled { color: var(--color-text-disabled); }
-.dark .text-accent { color: var(--color-text-accent); }
-.dark .text-inverted { color: var(--color-text-inverted); }
-
-.dark .bg-primary { background-color: var(--color-primary); }
-.dark .bg-secondary { background-color: var(--color-secondary); }
-.dark .bg-success { background-color: var(--color-success); }
-.dark .bg-info { background-color: var(--color-info); }
-.dark .bg-warning { background-color: var(--color-warning); }
-.dark .bg-danger { background-color: var(--color-danger); }
-.dark .bg-light { background-color: var(--color-gray-100); }
-.dark .bg-dark { background-color: var(--color-gray-800); }
-.dark .bg-white { background-color: var(--color-gray-50); }
-.dark .bg-black { background-color: var(--color-gray-900); }
-
-.dark .bg-default { background-color: var(--color-bg-default); }
-.dark .bg-subtle { background-color: var(--color-bg-subtle); }
-.dark .bg-muted { background-color: var(--color-bg-muted); }
-.dark .bg-emphasis { background-color: var(--color-bg-emphasis); }
-.dark .bg-inverted { background-color: var(--color-bg-inverted); }
-
-.dark .border-default { border-color: var(--color-border-default); }
-.dark .border-muted { border-color: var(--color-border-muted); }
-.dark .border-accent { border-color: var(--color-border-accent); }
-.dark .border-critical { border-color: var(--color-border-critical); }
-*/
