@@ -1092,27 +1092,27 @@ pre code {
     --color-info: hsl(188, 94%, 43%);
     --color-warning: hsl(35, 92%, 50%);
     --color-danger: hsl(0, 84%, 60%);
-    --color-light: hsl(222, 32%, 18%);
-    --color-dark: hsl(214, 30%, 95%);
+    --color-light: var(--color-gray-200);
+    --color-dark: var(--color-gray-800);
 
     /* Semantic Tokens - Dark Mode */
-    --color-text-default: hsl(240, 6%, 95%);
-    --color-text-muted: hsl(240, 5%, 65%);
-    --color-text-disabled: hsl(240, 5%, 45%);
+    --color-text-default: var(--color-gray-50);
+    --color-text-muted: var(--color-gray-300);
+    --color-text-disabled: var(--color-gray-500);
     --color-text-accent: var(--color-primary);
-    --color-text-inverted: hsl(240, 10%, 5%);
-    --color-text-link: hsl(217, 91%, 70%);
-    --color-text-link-hover: hsl(217, 91%, 80%);
+    --color-text-inverted: var(--color-gray-900);
+    --color-text-link: var(--color-primary);
+    --color-text-link-hover: hsl(217, 91%, 75%);
 
-    --color-bg-default: hsl(240, 10%, 5%);
-    --color-bg-subtle: hsl(240, 6%, 10%);
-    --color-bg-muted: hsl(240, 5%, 14%);
-    --color-bg-emphasis: hsl(240, 5%, 20%);
-    --color-bg-inverted: hsl(0, 0%, 100%);
+    --color-bg-default: var(--color-gray-900);
+    --color-bg-subtle: var(--color-gray-800);
+    --color-bg-muted: var(--color-gray-700);
+    --color-bg-emphasis: var(--color-gray-600);
+    --color-bg-inverted: var(--color-gray-50);
     --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
 
-    --color-border-default: hsl(240, 4%, 22%);
-    --color-border-muted: hsl(240, 4%, 28%);
+    --color-border-default: var(--color-gray-700);
+    --color-border-muted: var(--color-gray-600);
     --color-border-accent: var(--color-primary);
     --color-border-critical: var(--color-danger);
 
@@ -1145,26 +1145,26 @@ pre code {
   --color-info: hsl(188, 94%, 43%);
   --color-warning: hsl(35, 92%, 50%);
   --color-danger: hsl(0, 84%, 60%);
-  --color-light: hsl(222, 32%, 18%);
-  --color-dark: hsl(214, 30%, 95%);
+  --color-light: var(--color-gray-200);
+  --color-dark: var(--color-gray-800);
 
-  --color-text-default: hsl(240, 6%, 95%);
-  --color-text-muted: hsl(240, 5%, 65%);
-  --color-text-disabled: hsl(240, 5%, 45%);
+  --color-text-default: var(--color-gray-50);
+  --color-text-muted: var(--color-gray-300);
+  --color-text-disabled: var(--color-gray-500);
   --color-text-accent: var(--color-primary);
-  --color-text-inverted: hsl(240, 10%, 5%);
-  --color-text-link: hsl(217, 91%, 70%);
-  --color-text-link-hover: hsl(217, 91%, 80%);
+  --color-text-inverted: var(--color-gray-900);
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: hsl(217, 91%, 75%);
 
-  --color-bg-default: hsl(240, 10%, 5%);
-  --color-bg-subtle: hsl(240, 6%, 10%);
-  --color-bg-muted: hsl(240, 5%, 14%);
-  --color-bg-emphasis: hsl(240, 5%, 20%);
-  --color-bg-inverted: hsl(0, 0%, 100%);
+  --color-bg-default: var(--color-gray-900);
+  --color-bg-subtle: var(--color-gray-800);
+  --color-bg-muted: var(--color-gray-700);
+  --color-bg-emphasis: var(--color-gray-600);
+  --color-bg-inverted: var(--color-gray-50);
   --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
 
-  --color-border-default: hsl(240, 4%, 22%);
-  --color-border-muted: hsl(240, 4%, 28%);
+  --color-border-default: var(--color-gray-700);
+  --color-border-muted: var(--color-gray-600);
   --color-border-accent: var(--color-primary);
   --color-border-critical: var(--color-danger);
 
