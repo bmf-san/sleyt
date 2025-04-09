@@ -3,13 +3,21 @@ module.exports = (ctx) => ({
     require('postcss-import'),
     require('postcss-nested'),
     require('postcss-preset-env')({
-      stage: 2,
+      stage: 3,
       features: {
+        'nesting-rules': true,
         'custom-properties': true,
-        'nesting-rules': true
+        'custom-media-queries': true
       }
     }),
-    require('autoprefixer'),
-    ctx.env === 'production' ? require('cssnano') : false
+    require('postcss-discard-duplicates'),
+    ...(ctx.env === 'production'
+      ? [
+          require('autoprefixer'),
+          require('cssnano')({
+            preset: 'default'
+          })
+        ]
+      : [])
   ]
 });

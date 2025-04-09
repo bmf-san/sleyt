@@ -30,8 +30,8 @@
    * Primary color is used as the iconic brand color,
    * while secondary color plays a supporting role or accent.
    */
-  --color-primary: var(--color-gray-50);
-  --color-primary-hover: var(--color-gray-200);
+  --color-primary: hsl(217, 91%, 60%);
+  --color-primary-hover: hsl(217, 91%, 50%);
   --color-secondary: var(--color-gray-500);
   --color-secondary-hover: var(--color-gray-600);
 

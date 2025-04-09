@@ -3,6 +3,11 @@
  */
 
 :root {
+  /* Brand Colors */
+  --color-primary: hsl(217, 91%, 60%);
+  --color-primary-hover: hsl(217, 91%, 50%);
+  --color-secondary: var(--color-gray-500);
+  --color-secondary-hover: var(--color-gray-600);
 
   /* Text Tokens */
   --color-text-default: var(--color-gray-900);

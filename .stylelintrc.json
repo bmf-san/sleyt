@@ -4,7 +4,9 @@
   ],
   "plugins": [
     "stylelint-a11y",
-    "stylelint-order"
+    "stylelint-order",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-selector-bem-pattern"
   ],
   "rules": {
     "indentation": 2,
@@ -18,6 +20,44 @@
     "no-descending-specificity": null,
     "no-duplicate-selectors": true,
     "no-empty-source": true,
+    "plugin/declaration-block-no-ignored-properties": true,
+    "plugin/selector-bem-pattern": {
+      "preset": "suit",
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.{componentName}(?:-[a-z]+)?(?:--[a-z]+)?(?:__[a-z]+)?(?:--[a-z]+)?$"
+      },
+      "ignoreSelectors": [
+        "^\\.u-",
+        "^\\.is-",
+        "^\\.has-",
+        "^\\.no-",
+        "^\\.js-",
+        "^\\.s-",
+        "^h[1-6]$",
+        "^img$",
+        "^p$",
+        "^a$",
+        "^code$",
+        "^pre$",
+        "^blockquote$",
+        "^iframe$",
+        "^table$",
+        "^tr$",
+        "^td$",
+        "^th$",
+        "^input$",
+        "^select$",
+        "^textarea$",
+        "^button$",
+        "^label$",
+        "^fieldset$",
+        "^legend$"
+      ],
+      "ignoreCustomProperties": ["^--color-", "^--font-", "^--spacing-", "^--z-index-"],
+      "severity": "warning"
+    },
     "property-no-vendor-prefix": [true, { "ignoreProperties": ["appearance"] }],
     "selector-no-vendor-prefix": true,
     "value-no-vendor-prefix": true,

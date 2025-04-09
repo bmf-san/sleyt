@@ -10,7 +10,8 @@
     "build-docs": "postcss src/css/index.css -o dist/bmf.min.css --env production && cp dist/bmf.min.css docs/bmf.min.css",
     "lint": "stylelint \"src/**/*.css\"",
     "lint:fix": "stylelint \"src/**/*.css\" --fix",
-    "format": "stylelint \"src/**/*.css\" --fix && npm run build"
+    "format": "stylelint \"src/**/*.css\" --fix && npm run build",
+    "check-duplicates": "stylelint-find-rules --unused"
   },
   "keywords": [
     "css",
@@ -25,9 +26,15 @@
     "cssnano": "^6.0.0",
     "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
+    "postcss-discard-duplicates": "^7.0.1",
     "postcss-html": "^1.8.0",
     "postcss-import": "^15.1.0",
     "postcss-nested": "^6.0.1",
-    "postcss-preset-env": "^8.3.2"
+    "postcss-preset-env": "^8.3.2",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-find-rules": "^2.2.0",
+    "stylelint-selector-bem-pattern": "^4.0.1"
   }
 }
