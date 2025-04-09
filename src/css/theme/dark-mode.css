@@ -6,7 +6,8 @@
 @media (prefers-color-scheme: dark) {
   :root,
   :root.dark-mode {
-	/* Grayscale Overrides */
+
+    /* Grayscale Overrides */
     --color-gray-50: hsl(240, 6%, 95%);
     --color-gray-100: hsl(240, 6%, 90%);
     --color-gray-200: hsl(240, 6%, 80%);
@@ -18,8 +19,8 @@
     --color-gray-800: hsl(240, 6%, 12%);
     --color-gray-900: hsl(240, 10%, 5%);
 
-	/* Brand Colors Overrides */
-	--color-primary: var(--color-gray-900);
+    /* Brand Colors Overrides */
+    --color-primary: var(--color-gray-900);
     --color-primary-hover: var(--color-gray-700);
     --color-secondary: var(--color-gray-400);
     --color-secondary-hover: var(--color-gray-300);
@@ -55,14 +56,18 @@
     /* Shadow Tokens */
     --shadow-color: 240 3% 2%;
     --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.2);
-    --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.2),
-              0 1px 2px hsl(var(--shadow-color) / 0.15);
-    --shadow-md: 0 4px 6px -1px hsl(var(--shadow-color) / 0.2),
-                0 2px 4px -1px hsl(var(--shadow-color) / 0.15);
-    --shadow-lg: 0 10px 15px -3px hsl(var(--shadow-color) / 0.2),
-                0 4px 6px -2px hsl(var(--shadow-color) / 0.15);
-    --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.2),
-                0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
+    --shadow:
+      0 1px 3px hsl(var(--shadow-color) / 0.2),
+      0 1px 2px hsl(var(--shadow-color) / 0.15);
+    --shadow-md:
+      0 4px 6px -1px hsl(var(--shadow-color) / 0.2),
+      0 2px 4px -1px hsl(var(--shadow-color) / 0.15);
+    --shadow-lg:
+      0 10px 15px -3px hsl(var(--shadow-color) / 0.2),
+      0 4px 6px -2px hsl(var(--shadow-color) / 0.15);
+    --shadow-xl:
+      0 20px 25px -5px hsl(var(--shadow-color) / 0.2),
+      0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
 
     /* State Tokens */
     --color-state-hover: var(--color-gray-800);

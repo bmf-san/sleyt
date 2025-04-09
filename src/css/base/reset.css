@@ -24,27 +24,27 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: var(--line-height-normal);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
+  line-height: var(--line-height-normal);
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -77,11 +77,12 @@ ol {
 
 /* Set default anchor styles */
 a {
-  text-decoration: none;
   color: var(--color-primary);
+  text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--color-primary-hover);
 }
 

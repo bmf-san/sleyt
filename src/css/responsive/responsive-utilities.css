@@ -4,6 +4,7 @@
 
 /* Small (sm) */
 @media (min-width: 640px) {
+
   /* Display */
   .sm\:flex { display: flex; }
   .sm\:hidden { display: none; }
@@ -20,9 +21,9 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
     border-width: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
   }
 
   .sm\:not-sr-only {
@@ -89,6 +90,7 @@
 
 /* Medium (md) */
 @media (min-width: 768px) {
+
   /* Display */
   .md\:flex { display: flex; }
   .md\:hidden { display: none; }
@@ -105,9 +107,9 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
     border-width: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
   }
 
   .md\:not-sr-only {
@@ -174,6 +176,7 @@
 
 /* Large (lg) */
 @media (min-width: 1024px) {
+
   /* Display */
   .lg\:flex { display: flex; }
   .lg\:hidden { display: none; }
@@ -190,9 +193,9 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
     border-width: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
   }
 
   .lg\:not-sr-only {
@@ -259,6 +262,7 @@
 
 /* Extra Large (xl) */
 @media (min-width: 1280px) {
+
   /* Display */
   .xl\:flex { display: flex; }
   .xl\:hidden { display: none; }
@@ -275,9 +279,9 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
     border-width: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
   }
 
   .xl\:not-sr-only {

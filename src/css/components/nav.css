@@ -11,6 +11,16 @@
   list-style: none;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: none;
+  }
+}
+
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
@@ -49,9 +59,9 @@
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: var(--color-gray-700);
-  background-color: var(--color-bg-card);
   border-color: var(--color-border) var(--color-border) var(--color-bg-card);
+  background-color: var(--color-bg-card);
+  color: var(--color-gray-700);
 }
 
 /* Nav pills */
@@ -61,8 +71,8 @@
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: var(--color-gray-50);
   background-color: var(--color-primary);
+  color: var(--color-gray-50);
 }
 
 /* Nav fill and justified */
@@ -74,8 +84,8 @@
 
 .nav-justified .nav-item,
 .nav-justified > .nav-link {
-  flex-basis: 0;
   flex-grow: 1;
+  flex-basis: 0;
   text-align: center;
 }
 
@@ -84,8 +94,8 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 0.5rem 1rem;
 }
 
@@ -94,11 +104,11 @@
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
+  color: var(--color-text-primary);
   font-size: 1.25rem;
   line-height: inherit;
-  white-space: nowrap;
-  color: var(--color-text-primary);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .navbar-brand:hover,
@@ -185,11 +195,11 @@
 /* Navbar toggler */
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
   border: 1px solid transparent;
   border-radius: var(--border-radius);
+  background-color: transparent;
+  font-size: 1.25rem;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -202,15 +212,15 @@
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
-  vertical-align: middle;
-  background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
 }
 
 .navbar-light .navbar-toggler {
-  color: var(--color-text-primary);
   border-color: rgba(0, 0, 0, 0.1);
+  color: var(--color-text-primary);
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -218,8 +228,8 @@
 }
 
 .navbar-dark .navbar-toggler {
-  color: var(--color-gray-50);
   border-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-gray-50);
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -228,9 +238,9 @@
 
 /* Navbar collapse */
 .navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
   align-items: center;
+  flex-grow: 1;
+  flex-basis: 100%;
 }
 
 /* Color variants */

@@ -7,7 +7,10 @@
     "build": "postcss src/css/index.css -o dist/bmf.css",
     "build:min": "postcss src/css/index.css -o dist/bmf.min.css --env production",
     "dev": "postcss src/css/index.css -o dist/bmf.css --watch",
-    "build-docs": "postcss src/css/index.css -o dist/bmf.min.css --env production && cp dist/bmf.min.css docs/bmf.min.css"
+    "build-docs": "postcss src/css/index.css -o dist/bmf.min.css --env production && cp dist/bmf.min.css docs/bmf.min.css",
+    "lint": "stylelint \"src/**/*.css\"",
+    "lint:fix": "stylelint \"src/**/*.css\" --fix",
+    "format": "stylelint \"src/**/*.css\" --fix && npm run build"
   },
   "keywords": [
     "css",
@@ -22,6 +25,7 @@
     "cssnano": "^6.0.0",
     "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
+    "postcss-html": "^1.8.0",
     "postcss-import": "^15.1.0",
     "postcss-nested": "^6.0.1",
     "postcss-preset-env": "^8.3.2"

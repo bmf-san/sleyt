@@ -11,7 +11,24 @@
 .shadow-xl { box-shadow: var(--shadow-xl); }
 
 /* Transitions */
+@media screen and (prefers-reduced-motion: reduce) {
+  .transition {
+    transition: none;
+  }
+}
 .transition { transition: var(--transition-base); }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .transition-slow {
+    transition: none;
+  }
+}
 .transition-slow { transition: var(--transition-slow); }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .transition-fast {
+    transition: none;
+  }
+}
 .transition-fast { transition: var(--transition-fast); }
 .transition-none { transition-property: none; }

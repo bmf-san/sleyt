@@ -21,17 +21,17 @@
   top: 0;
   right: 0;
   padding: 1rem;
-  color: inherit;
-  background-color: transparent;
   border: 0;
+  background-color: transparent;
+  color: inherit;
   cursor: pointer;
 }
 
 /* Alert Title */
 .alert-title {
-  font-weight: var(--font-weight-bold);
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-bold);
 }
 
 /* Alert Link */
@@ -47,9 +47,9 @@
 
 /* Alert Variants */
 .alert-primary {
-  color: var(--color-primary);
-  background-color: rgba(74, 108, 247, 0.15);
   border-color: rgba(74, 108, 247, 0.4);
+  background-color: rgba(74, 108, 247, 0.15);
+  color: var(--color-primary);
 }
 
 .alert-primary .alert-link {
@@ -57,9 +57,9 @@
 }
 
 .alert-secondary {
-  color: var(--color-secondary);
-  background-color: rgba(117, 127, 158, 0.15);
   border-color: rgba(117, 127, 158, 0.4);
+  background-color: rgba(117, 127, 158, 0.15);
+  color: var(--color-secondary);
 }
 
 .alert-secondary .alert-link {
@@ -67,9 +67,9 @@
 }
 
 .alert-success {
-  color: #0f7d4a;
-  background-color: rgba(19, 206, 102, 0.15);
   border-color: rgba(19, 206, 102, 0.4);
+  background-color: rgba(19, 206, 102, 0.15);
+  color: #0f7d4a;
 }
 
 .alert-success .alert-link {
@@ -77,9 +77,9 @@
 }
 
 .alert-info {
-  color: #2d6ea3;
-  background-color: rgba(86, 182, 247, 0.15);
   border-color: rgba(86, 182, 247, 0.4);
+  background-color: rgba(86, 182, 247, 0.15);
+  color: #2d6ea3;
 }
 
 .alert-info .alert-link {
@@ -87,9 +87,9 @@
 }
 
 .alert-warning {
-  color: #97700a;
-  background-color: rgba(255, 186, 0, 0.15);
   border-color: rgba(255, 186, 0, 0.4);
+  background-color: rgba(255, 186, 0, 0.15);
+  color: #97700a;
 }
 
 .alert-warning .alert-link {
@@ -97,9 +97,9 @@
 }
 
 .alert-danger {
-  color: #a1232d;
-  background-color: rgba(252, 87, 87, 0.15);
   border-color: rgba(252, 87, 87, 0.4);
+  background-color: rgba(252, 87, 87, 0.15);
+  color: #a1232d;
 }
 
 .alert-danger .alert-link {
@@ -107,9 +107,9 @@
 }
 
 .alert-light {
-  color: #575a65;
-  background-color: rgba(248, 249, 255, 0.15);
   border-color: rgba(248, 249, 255, 0.4);
+  background-color: rgba(248, 249, 255, 0.15);
+  color: #575a65;
 }
 
 .alert-light .alert-link {
@@ -117,9 +117,9 @@
 }
 
 .alert-dark {
-  color: var(--color-gray-800);
-  background-color: rgba(29, 33, 68, 0.15);
   border-color: rgba(29, 33, 68, 0.4);
+  background-color: rgba(29, 33, 68, 0.15);
+  color: var(--color-gray-800);
 }
 
 .alert-dark .alert-link {

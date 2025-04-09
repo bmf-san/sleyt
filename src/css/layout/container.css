@@ -5,10 +5,10 @@
 /* Base Container */
 .container {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
   padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Responsive Container Sizes */
@@ -38,52 +38,52 @@
 
 /* Container Variants */
 .container-sm {
-  max-width: var(--container-max-width-sm);
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
+  max-width: var(--container-max-width-sm);
   padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container-md {
-  max-width: var(--container-max-width-md);
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
+  max-width: var(--container-max-width-md);
   padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container-lg {
-  max-width: var(--container-max-width-lg);
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
+  max-width: var(--container-max-width-lg);
   padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container-xl {
-  max-width: var(--container-max-width-xl);
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
+  max-width: var(--container-max-width-xl);
   padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Full width container (ignores max-width) */
 .container-fluid {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
   padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Container with no padding */
 .container-no-padding {
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
