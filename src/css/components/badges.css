@@ -1,0 +1,157 @@
+/**
+ * BMF CSS Framework - Badge Components
+ */
+
+/* Base Badge */
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--border-radius-full);
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+
+/* Badge Pill */
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+
+/* Badge Variants */
+.badge-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.badge-secondary {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+
+.badge-success {
+  color: var(--color-white);
+  background-color: var(--color-success);
+}
+
+.badge-info {
+  color: var(--color-white);
+  background-color: var(--color-info);
+}
+
+.badge-warning {
+  color: var(--color-dark);
+  background-color: var(--color-warning);
+}
+
+.badge-danger {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+}
+
+.badge-light {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.badge-dark {
+  color: var(--color-white);
+  background-color: var(--color-dark);
+}
+
+/* Outline Badge Variants */
+.badge-outline-primary {
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+}
+
+.badge-outline-secondary {
+  color: var(--color-secondary);
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+}
+
+.badge-outline-success {
+  color: var(--color-success);
+  background-color: transparent;
+  border: 1px solid var(--color-success);
+}
+
+.badge-outline-info {
+  color: var(--color-info);
+  background-color: transparent;
+  border: 1px solid var(--color-info);
+}
+
+.badge-outline-warning {
+  color: var(--color-warning);
+  background-color: transparent;
+  border: 1px solid var(--color-warning);
+}
+
+.badge-outline-danger {
+  color: var(--color-danger);
+  background-color: transparent;
+  border: 1px solid var(--color-danger);
+}
+
+.badge-outline-light {
+  color: var(--color-gray-600);
+  background-color: transparent;
+  border: 1px solid var(--color-light);
+}
+
+.badge-outline-dark {
+  color: var(--color-dark);
+  background-color: transparent;
+  border: 1px solid var(--color-dark);
+}
+
+/* Badge Sizes */
+.badge-sm {
+  padding: 0.25em 0.45em;
+  font-size: 0.65em;
+}
+
+.badge-lg {
+  padding: 0.45em 0.8em;
+  font-size: 0.85em;
+}
+
+/* Badge positioning when inside buttons */
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+/* Badge as a link */
+a.badge {
+  text-decoration: none;
+}
+
+a.badge:hover,
+a.badge:focus {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+/* Notification Badge */
+.badge-notification {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  font-size: 0.65em;
+  padding: 0.25em 0.45em;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

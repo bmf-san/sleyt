@@ -1,0 +1,23 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- CSSフレームワーク
+- このフレームワークを使うことで、Webサイトの見た目を統一感のあるものにすることができる
+- npmで配布する
+- ビルドはpostcssを使う
+- CSSのみで実装
+- jsは使わない
+- 言語は英語を利用する
+- a11y対応
+- セマンティッククラス：`.btn`, `.card`, `.input` など、再利用可能なUI構造
+- ユーティリティクラス：`.mt-2`, `.text-center`, `.flex` など、補助的な調整用
+- BEMではなく、用途に応じたシンプルなクラス名を優先（例：`.btn-primary`, `.text-muted`）
+- `.flex`, `.flex-col`, `.items-center`, `.justify-between` などの基本ユーティリティを提供
+- グリッドは必要最小限の`.grid`, `.gap-*`レベルに留める
+- レスポンシブはメディアクエリによるユーティリティプレフィックス（例：`md:flex`）で対応
+- 表示切替ユーティリティ（`.hidden`, `.block`, `.sr-only`）あり
+- docs/index.htmlを単一ページ構成のドキュメントとする
+- docs/index.htmlは設計方針、install方法、基本的な使い方、カラーパレット、カラースケール、各コンポーネント等、CSSクラス一覧の説明で構成
+- docs/index.htmlでは、bmf-cssで定義していないcssクラス・id・jsを利用しない。inline styleも禁止とする。

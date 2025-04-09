@@ -1,0 +1,172 @@
+/**
+ * BMF CSS Framework - Table Components
+ */
+
+/* Base Table */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+  vertical-align: top;
+  border-color: var(--color-border);
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.75rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-border);
+}
+
+.table > tbody {
+  vertical-align: inherit;
+}
+
+.table > thead {
+  vertical-align: bottom;
+}
+
+/* Bordered Table */
+.table-bordered {
+  border: 1px solid var(--color-border);
+}
+
+.table-bordered > :not(caption) > * > * {
+  border-width: 1px 0;
+}
+
+.table-bordered > :not(caption) > * > *:first-child {
+  border-left-width: 1px;
+}
+
+.table-bordered > :not(caption) > * > *:last-child {
+  border-right-width: 1px;
+}
+
+/* Borderless Table */
+.table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+
+/* Small Table */
+.table-sm > :not(caption) > * > * {
+  padding: 0.3rem;
+}
+
+/* Striped Table */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Hover Table */
+.table-hover > tbody > tr:hover > * {
+  background-color: rgba(0, 0, 0, 0.075);
+  color: var(--color-text-primary);
+}
+
+.dark-mode .table-hover > tbody > tr:hover > * {
+  background-color: rgba(255, 255, 255, 0.075);
+  color: var(--color-text-primary);
+}
+
+/* Active Table Row */
+.table > tbody > tr.active > *,
+.table > :not(caption) > .active > * {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.dark-mode .table > tbody > tr.active > *,
+.dark-mode .table > :not(caption) > .active > * {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+/* Table Variants */
+.table-primary > :not(caption) > * > * {
+  background-color: rgba(74, 108, 247, 0.1);
+  color: var(--color-text-primary);
+}
+
+.table-secondary > :not(caption) > * > * {
+  background-color: rgba(117, 127, 158, 0.1);
+  color: var(--color-text-primary);
+}
+
+.table-success > :not(caption) > * > * {
+  background-color: rgba(19, 206, 102, 0.1);
+  color: var(--color-text-primary);
+}
+
+.table-info > :not(caption) > * > * {
+  background-color: rgba(86, 182, 247, 0.1);
+  color: var(--color-text-primary);
+}
+
+.table-warning > :not(caption) > * > * {
+  background-color: rgba(255, 186, 0, 0.1);
+  color: var(--color-text-primary);
+}
+
+.table-danger > :not(caption) > * > * {
+  background-color: rgba(252, 87, 87, 0.1);
+  color: var(--color-text-primary);
+}
+
+.table-light > :not(caption) > * > * {
+  background-color: rgba(248, 249, 255, 0.1);
+  color: var(--color-text-primary);
+}
+
+.table-dark > :not(caption) > * > * {
+  background-color: rgba(29, 33, 68, 0.1);
+  color: var(--color-text-primary);
+}
+
+/* Responsive Table */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Table caption */
+.table-caption-top {
+  caption-side: top;
+}
+
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--color-text-muted);
+  text-align: left;
+}

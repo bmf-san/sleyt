@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMF CSS - コンパクトナビゲーションバー</title>
+  <link rel="stylesheet" href="../bmf.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    /* ダークモード用のスタイル */
+    body.dark-mode {
+      background-color: #121631;
+      color: #e9ecef;
+    }
+    .navbar {
+      background-color: #1e293b;
+      color: white;
+      padding: 0.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+    .dark-mode .navbar {
+      background-color: #0f172a;
+    }
+    .nav-items {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .nav-item {
+      color: white;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    /* トグルスイッチのインラインスタイル */
+    .custom-toggle {
+      position: relative;
+      display: inline-block;
+      width: 2.4rem;
+      height: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+    .custom-toggle input[type="checkbox"] {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+      position: absolute;
+    }
+    .custom-toggle label {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      background-color: #4361ee;
+      border: none;
+      border-radius: 9999px;
+      display: block;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+    }
+    .custom-toggle label::after {
+      content: '';
+      position: absolute;
+      top: 0.2rem;
+      left: 0.2rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: all 0.2s ease-in-out;
+      z-index: 2;
+    }
+    .custom-toggle input:checked + label::after {
+      left: calc(100% - 1rem);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-items">
+      <div class="nav-item">概要</div>
+      <div class="nav-item">カラー</div>
+      <div class="nav-item">タイポグラフィ</div>
+      <div class="nav-item">ボタン</div>
+      <div class="nav-item">トグル</div>
+      <div class="nav-item">フォーム</div>
+      <div class="nav-item">テーブル</div>
+      <div class="nav-item">アラート</div>
+      <div class="nav-item">バッジ</div>
+      <div class="nav-item">カード</div>
+      <div class="nav-item">レイアウト</div>
+      <div class="nav-item">ユーティリティ</div>
+    </div>
+    <div class="flex items-center">
+      <div class="custom-toggle">
+        <input type="checkbox" id="darkmode-toggle" />
+        <label for="darkmode-toggle"></label>
+      </div>
+      <span class="ml-2 text-sm">Dark Mode</span>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1>BMF CSSフレームワーク</h1>
+    <p>BMF CSSは、シンプルで使いやすいCSSフレームワークです。ダークモードにも対応しています。</p>
+  </div>
+
+  <script>
+    // ダークモード切り替え機能
+    document.addEventListener('DOMContentLoaded', function() {
+      const darkModeToggle = document.getElementById('darkmode-toggle');
+
+      if (!darkModeToggle) return;
+
+      function toggleDarkMode(isDark) {
+        if (isDark) {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('darkMode', 'enabled');
+        } else {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('darkMode', 'disabled');
+        }
+      }
+
+      // ページ読み込み時のダークモード設定を復元
+      const darkMode = localStorage.getItem('darkMode');
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+      if (darkMode === 'enabled' || (darkMode === null && prefersDarkScheme.matches)) {
+        darkModeToggle.checked = true;
+        toggleDarkMode(true);
+      }
+
+      // トグル切り替え時のイベント
+      darkModeToggle.addEventListener('change', function() {
+        toggleDarkMode(this.checked);
+      });
+    });
+  </script>
+</body>
+</html>

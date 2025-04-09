@@ -1,0 +1,46 @@
+/**
+ * BMF CSS Framework - Responsive Breakpoints
+ */
+
+/* Breakpoints:
+ * sm: 640px
+ * md: 768px
+ * lg: 1024px
+ * xl: 1280px
+ * 2xl: 1536px
+ */
+
+/* Small (sm) */
+@media (min-width: 640px) {
+  .sm\:container {
+    max-width: var(--container-max-width-sm);
+  }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+  .md\:container {
+    max-width: var(--container-max-width-md);
+  }
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+  .lg\:container {
+    max-width: var(--container-max-width-lg);
+  }
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+  .xl\:container {
+    max-width: var(--container-max-width-xl);
+  }
+}
+
+/* 2x Extra Large (2xl) */
+@media (min-width: 1536px) {
+  .\\32xl\:container {
+    max-width: var(--breakpoint-2xl);
+  }
+}

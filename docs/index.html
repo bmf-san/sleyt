@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="ja" class="auto-dark-mode">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMF-CSS Framework - Documentation</title>
+  <meta name="description" content="BMF-CSSはシンプルで軽量、使いやすいCSSフレームワークです。ダークモード対応、レスポンシブデザイン、アクセシビリティに配慮した設計を提供します。">
+  <link rel="stylesheet" href="bmf.min.css">
+  <script src="js/darkmode.js"></script>
+</head>
+<body class="bg-default dark-mode-content">
+  <header class="bg-primary text-white py-12">
+    <div class="container">
+      <h1 class="text-4xl font-bold">BMF-CSS Framework</h1>
+      <p class="text-xl mt-4">シンプルで軽量なCSSフレームワーク</p>
+      <div class="mt-8">
+        <button class="btn btn-light">ダウンロード</button>
+        <button class="btn btn-outline-light ml-4">GitHub</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="bg-surface border-b sticky top-0 z-50">
+    <div class="container flex justify-between items-center">
+      <ul class="flex overflow-x-auto py-4">
+        <li class="mr-6"><a href="#overview" class="text-primary font-medium">概要</a></li>
+        <li class="mr-6"><a href="#colors" class="text-primary font-medium">カラー</a></li>
+        <li class="mr-6"><a href="#typography" class="text-primary font-medium">タイポグラフィ</a></li>
+        <li class="mr-6"><a href="#buttons" class="text-primary font-medium">ボタン</a></li>
+        <li class="mr-6"><a href="#toggle" class="text-primary font-medium">トグル</a></li>
+        <li class="mr-6"><a href="#forms" class="text-primary font-medium">フォーム</a></li>
+        <li class="mr-6"><a href="#tables" class="text-primary font-medium">テーブル</a></li>
+        <li class="mr-6"><a href="#alerts" class="text-primary font-medium">アラート</a></li>
+        <li class="mr-6"><a href="#badges" class="text-primary font-medium">バッジ</a></li>
+        <li class="mr-6"><a href="#cards" class="text-primary font-medium">カード</a></li>
+        <li class="mr-6"><a href="#layout" class="text-primary font-medium">レイアウト</a></li>
+        <li class="mr-6"><a href="#utilities" class="text-primary font-medium">ユーティリティ</a></li>
+      </ul>
+
+      <div class="py-4 flex items-center">
+        <div class="toggle">
+          <input type="checkbox" id="darkmode-toggle" />
+          <label for="darkmode-toggle"></label>
+        </div>
+        <span class="ml-2">Dark Mode</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-12 dark-mode-content">
+    <section id="overview" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">BMF-CSSとは</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <p class="mb-4">BMF-CSSは、シンプルで軽量、使いやすいCSSフレームワークです。モダンなWebアプリケーションやレスポンシブWebサイトを素早く構築するために必要な基本的なスタイルとコンポーネントを提供します。</p>
+          <h3 class="text-xl font-semibold mb-4">特徴</h3>
+          <ul class="list-disc pl-6">
+            <li class="mb-2">軽量：必要最小限のスタイルとユーティリティのみを提供</li>
+            <li class="mb-2">モダン：CSSカスタムプロパティを活用</li>
+            <li class="mb-2">レスポンシブ：モバイルファーストのアプローチ</li>
+            <li class="mb-2">ダークモード対応：自動/手動切り替え</li>
+            <li class="mb-2">アクセシビリティ：WAI-ARIAに準拠</li>
+            <li>カスタマイズ可能：変数を変更するだけで簡単にカスタマイズ</li>
+          </ul>
+        </div>
+        <div class="bg-subtle p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">使い方</h3>
+          <p class="mb-4">npmでインストール:</p>
+          <pre class="bg-dark text-light p-4 rounded font-mono text-sm mb-6">npm install bmf-css</pre>
+          <p class="mb-4">または、直接CSSをリンク:</p>
+          <pre class="bg-dark text-light p-4 rounded font-mono text-sm overflow-x-auto">&lt;link rel="stylesheet" href="path/to/bmf.min.css"&gt;</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="colors" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">カラーシステム</h2>
+      <p class="mb-8">BMF-CSSは、抽象化されたセマンティックトークンを提供し、一貫性のあるデザインシステムを構築します。すべてのトークンはCSSカスタムプロパティで定義され、簡単にカスタマイズできます。</p>
+
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h3 class="text-2xl font-semibold mb-4">抽象トークン分類</h3>
+        <div class="grid grid-cols-1 gap-6">
+          <table class="min-w-full border rounded-lg overflow-hidden">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="py-3 px-4 text-left">カテゴリ</th>
+                <th class="py-3 px-4 text-left">用途</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y">
+              <tr>
+                <td class="py-3 px-4 font-medium"><code>text-*</code></td>
+                <td class="py-3 px-4">通常文字・ラベル・補足など</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-medium"><code>bg-*</code></td>
+                <td class="py-3 px-4">背景、カード、オーバーレイなど</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-medium"><code>border-*</code></td>
+                <td class="py-3 px-4">ボーダー、仕切り</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-medium"><code>color-*</code></td>
+                <td class="py-3 px-4">ステータス、セマンティック色</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-medium"><code>shadow-*</code></td>
+                <td class="py-3 px-4">シャドウ（レイヤー階層）</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-medium"><code>state-*</code></td>
+                <td class="py-3 px-4"><code>hover</code>, <code>focus</code>, <code>active</code>, <code>disabled</code></td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-medium"><code>component-*</code></td>
+                <td class="py-3 px-4">特定UI部品向け（必要な場合のみ）</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-medium"><code>chart-*</code></td>
+                <td class="py-3 px-4">データビジュアル（必要な場合）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <!-- テキストトークン -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold mb-4">テキストトークン <code>text-*</code></h3>
+          <div class="space-y-4">
+            <div class="p-4 rounded border">
+              <div class="font-medium" style="color: var(--color-text-primary);">text-default</div>
+              <div class="text-sm text-gray-600">基本テキスト #1d2144</div>
+            </div>
+            <div class="p-4 rounded border">
+              <div class="font-medium" style="color: var(--color-text-secondary);">text-subdued</div>
+              <div class="text-sm text-gray-600">控えめなテキスト #4b5563</div>
+            </div>
+            <div class="p-4 rounded border">
+              <div class="font-medium" style="color: var(--color-text-muted);">text-muted</div>
+              <div class="text-sm text-gray-600">弱めのテキスト #6b7280</div>
+            </div>
+            <div class="p-4 rounded border">
+              <div class="font-medium" style="color: var(--color-primary);">text-accent</div>
+              <div class="text-sm text-gray-600">アクセントテキスト #4a6cf7</div>
+            </div>
+            <div class="p-4 rounded border">
+              <div class="font-medium text-white bg-dark px-2">text-inverse</div>
+              <div class="text-sm text-gray-600">反転テキスト #ffffff</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 背景トークン -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold mb-4">背景トークン <code>bg-*</code></h3>
+          <div class="space-y-4">
+            <div class="p-4 rounded" style="background-color: var(--color-bg-primary);">
+              <div class="font-medium">bg-default</div>
+              <div class="text-sm text-gray-600">基本背景 #ffffff</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: var(--color-bg-secondary);">
+              <div class="font-medium">bg-subtle</div>
+              <div class="text-sm text-gray-600">薄い背景 #f8f9ff</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: var(--color-bg-card);">
+              <div class="font-medium">bg-surface</div>
+              <div class="text-sm text-gray-600">表面背景 #ffffff</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: var(--color-bg-input);">
+              <div class="font-medium">bg-input</div>
+              <div class="text-sm text-gray-600">入力欄背景 #f8f9ff</div>
+            </div>
+            <div class="p-4 rounded text-white bg-dark">
+              <div class="font-medium">bg-inverse</div>
+              <div class="text-sm text-gray-300">反転背景 #1d2144</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <!-- ボーダートークン -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold mb-4">ボーダートークン <code>border-*</code></h3>
+          <div class="space-y-4">
+            <div class="p-4 rounded border" style="border-color: var(--color-border) !important;">
+              <div class="font-medium">border-default</div>
+              <div class="text-sm text-gray-600">基本ボーダー #e5e7eb</div>
+            </div>
+            <div class="p-4 rounded border-2" style="border-color: var(--color-border) !important;">
+              <div class="font-medium">border-strong</div>
+              <div class="text-sm text-gray-600">強調ボーダー #e5e7eb</div>
+            </div>
+            <div class="p-4 rounded border" style="border-color: var(--color-primary) !important;">
+              <div class="font-medium">border-accent</div>
+              <div class="text-sm text-gray-600">アクセントボーダー #4a6cf7</div>
+            </div>
+            <div class="p-4 rounded border" style="border-color: var(--color-danger) !important;">
+              <div class="font-medium">border-critical</div>
+              <div class="text-sm text-gray-600">警告ボーダー #fc5757</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ステータストークン -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold mb-4">ステータストークン <code>color-*</code></h3>
+          <div class="space-y-4">
+            <div class="p-4 rounded" style="background-color: rgba(74, 108, 247, 0.15); color: var(--color-primary);">
+              <div class="font-medium">color-primary</div>
+              <div class="text-sm">主要アクション #4a6cf7</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: rgba(19, 206, 102, 0.15); color: #0f7d4a;">
+              <div class="font-medium">color-success</div>
+              <div class="text-sm">成功・完了 #13ce66</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: rgba(252, 87, 87, 0.15); color: #a1232d;">
+              <div class="font-medium">color-critical</div>
+              <div class="text-sm">エラー・危険 #fc5757</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: rgba(255, 186, 0, 0.15); color: #97700a;">
+              <div class="font-medium">color-warning</div>
+              <div class="text-sm">警告・注意 #ffba00</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: rgba(86, 182, 247, 0.15); color: #2d6ea3;">
+              <div class="font-medium">color-info</div>
+              <div class="text-sm">情報・お知らせ #56b6f7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <!-- シャドウトークン -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold mb-4">シャドウトークン <code>shadow-*</code></h3>
+          <div class="space-y-6">
+            <div class="p-4 rounded bg-white shadow-sm">
+              <div class="font-medium">shadow-xs</div>
+              <div class="text-sm text-gray-600">最小シャドウ</div>
+            </div>
+            <div class="p-4 rounded bg-white shadow">
+              <div class="font-medium">shadow-sm</div>
+              <div class="text-sm text-gray-600">小さいシャドウ</div>
+            </div>
+            <div class="p-4 rounded bg-white shadow-md">
+              <div class="font-medium">shadow-md</div>
+              <div class="text-sm text-gray-600">中程度シャドウ</div>
+            </div>
+            <div class="p-4 rounded bg-white shadow-lg">
+              <div class="font-medium">shadow-lg</div>
+              <div class="text-sm text-gray-600">大きいシャドウ</div>
+            </div>
+            <div class="p-4 rounded bg-white shadow-xl">
+              <div class="font-medium">shadow-xl</div>
+              <div class="text-sm text-gray-600">特大シャドウ</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 状態トークン -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold mb-4">状態トークン <code>state-*</code></h3>
+          <div class="space-y-6">
+            <div>
+              <button class="btn btn-primary w-full mb-2">state-default</button>
+              <div class="text-sm text-gray-600">デフォルト状態</div>
+            </div>
+            <div>
+              <button class="btn w-full mb-2" style="background-color: var(--color-primary-hover); color: white;">state-hover</button>
+              <div class="text-sm text-gray-600">ホバー状態 - 明るさ+10%</div>
+            </div>
+            <div>
+              <button class="btn w-full mb-2" style="background-color: #3a5ce5; color: white;">state-pressed</button>
+              <div class="text-sm text-gray-600">プレス状態 - 明るさ-10%</div>
+            </div>
+            <div>
+              <button class="btn btn-primary w-full mb-2" style="box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.3);">state-focus</button>
+              <div class="text-sm text-gray-600">フォーカス状態 - 輪郭強調</div>
+            </div>
+            <div>
+              <button class="btn btn-primary w-full mb-2 opacity-50 cursor-not-allowed">state-disabled</button>
+              <div class="text-sm text-gray-600">無効状態 - 透明度50%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <!-- コンポーネントトークン -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold mb-4">コンポーネントトークン <code>component-*</code></h3>
+          <div class="space-y-4">
+            <div class="p-4 bg-primary text-white rounded">
+              <div class="font-medium">component-button-primary</div>
+              <div class="text-sm text-gray-100">メインボタン</div>
+            </div>
+            <div class="card p-4 mb-0">
+              <div class="font-medium">component-card-default</div>
+              <div class="text-sm text-gray-600">基本カード</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: var(--color-bg-input);">
+              <div class="font-medium">component-input-default</div>
+              <div class="text-sm text-gray-600">入力フィールド</div>
+            </div>
+            <div class="alert alert-info p-4 mb-0">
+              <div class="font-medium">component-alert-info</div>
+              <div class="text-sm">情報アラート</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- データビジュアルトークン -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold mb-4">データビジュアルトークン <code>chart-*</code></h3>
+          <div class="space-y-4 mb-6">
+            <div class="p-4 rounded" style="background-color: #4a6cf7;">
+              <div class="font-medium text-white">chart-1</div>
+              <div class="text-sm text-gray-100">プライマリー #4a6cf7</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: #13ce66;">
+              <div class="font-medium text-white">chart-2</div>
+              <div class="text-sm text-gray-100">セカンダリー #13ce66</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: #ffba00;">
+              <div class="font-medium text-dark">chart-3</div>
+              <div class="text-sm">ターシャリー #ffba00</div>
+            </div>
+            <div class="p-4 rounded" style="background-color: #fc5757;">
+              <div class="font-medium text-white">chart-4</div>
+              <div class="text-sm text-gray-100">クオータナリー #fc5757</div>
+            </div>
+          </div>
+          <div class="h-32 flex items-end">
+            <div class="h-32 w-1/4 bg-primary"></div>
+            <div class="h-24 w-1/4 bg-success"></div>
+            <div class="h-20 w-1/4 bg-warning"></div>
+            <div class="h-16 w-1/4 bg-danger"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h3 class="text-2xl font-semibold mb-4">ダークモードの対応</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="text-xl font-medium mb-3">ライトモード</h4>
+            <div class="space-y-4">
+              <div class="p-4 rounded flex gap-4">
+                <div class="w-8 h-8 bg-primary rounded"></div>
+                <div>
+                  <div class="font-medium">color-primary</div>
+                  <div class="text-sm text-gray-600">#4a6cf7</div>
+                </div>
+              </div>
+              <div class="p-4 rounded flex gap-4" style="background-color: var(--color-bg-primary);">
+                <div class="w-8 h-8 rounded border" style="background-color: var(--color-bg-primary);"></div>
+                <div>
+                  <div class="font-medium">bg-default</div>
+                  <div class="text-sm text-gray-600">#ffffff</div>
+                </div>
+              </div>
+              <div class="p-4 rounded flex gap-4">
+                <div class="w-8 h-8 rounded" style="background-color: var(--color-text-primary);"></div>
+                <div>
+                  <div class="font-medium">text-default</div>
+                  <div class="text-sm text-gray-600">#1d2144</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dark-mode p-6 rounded-lg">
+            <h4 class="text-xl font-medium mb-3 text-white">ダークモード</h4>
+            <div class="space-y-4">
+              <div class="p-4 rounded flex gap-4 bg-gray-800">
+                <div class="w-8 h-8 bg-primary rounded"></div>
+                <div>
+                  <div class="font-medium text-white">color-primary</div>
+                  <div class="text-sm text-gray-400">#4a6cf7</div>
+                </div>
+              </div>
+              <div class="p-4 rounded flex gap-4 bg-gray-800">
+                <div class="w-8 h-8 rounded border border-gray-700" style="background-color: #131630;"></div>
+                <div>
+                  <div class="font-medium text-white">bg-default</div>
+                  <div class="text-sm text-gray-400">#131630</div>
+                </div>
+              </div>
+              <div class="p-4 rounded flex gap-4 bg-gray-800">
+                <div class="w-8 h-8 rounded" style="background-color: #f1f5f9;"></div>
+                <div>
+                  <div class="font-medium text-white">text-default</div>
+                  <div class="text-sm text-gray-400">#f1f5f9</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="typography" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">タイポグラフィ</h2>
+
+      <h3 class="text-2xl font-semibold mb-4">見出し</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h1 class="mb-4">h1. BMF見出し</h1>
+        <h2 class="mb-4">h2. BMF見出し</h2>
+        <h3 class="mb-4">h3. BMF見出し</h3>
+        <h4 class="mb-4">h4. BMF見出し</h4>
+        <h5 class="mb-4">h5. BMF見出し</h5>
+        <h6>h6. BMF見出し</h6>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">テキスト</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <p class="lead mb-4">これはリードパラグラフです。目立つテキストとして使用します。</p>
+        <p class="mb-4">これは通常の段落テキストです。フレームワークのデフォルトスタイルで表示されます。</p>
+        <p class="text-sm">これは小さいテキストです。注針や補足情報に使用します。</p>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">テキストユーティリティ</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h4 class="text-xl font-semibold mb-4">フォントサイズ</h4>
+          <p class="text-xs mb-2">.text-xs (0.75rem)</p>
+          <p class="text-sm mb-2">.text-sm (0.875rem)</p>
+          <p class="text-base mb-2">.text-base (1rem)</p>
+          <p class="text-lg mb-2">.text-lg (1.125rem)</p>
+          <p class="text-xl mb-2">.text-xl (1.25rem)</p>
+          <p class="text-2xl mb-2">.text-2xl (1.5rem)</p>
+          <p class="text-3xl mb-2">.text-3xl (1.875rem)</p>
+          <p class="text-4xl">.text-4xl (2.25rem)</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-4">フォントウェイト</h4>
+          <p class="font-light mb-2">.font-light</p>
+          <p class="font-normal mb-2">.font-normal</p>
+          <p class="font-medium mb-2">.font-medium</p>
+          <p class="font-semibold mb-2">.font-semibold</p>
+          <p class="font-bold">.font-bold</p>
+
+          <h4 class="text-xl font-semibold mb-4 mt-8">テキスト配置</h4>
+          <p class="text-left mb-2">.text-left</p>
+          <p class="text-center mb-2">.text-center</p>
+          <p class="text-right">.text-right</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="buttons" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">ボタン</h2>
+
+      <h3 class="text-2xl font-semibold mb-4">基本的なボタン</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <button class="btn btn-primary mr-2 mb-2">Primary</button>
+        <button class="btn btn-secondary mr-2 mb-2">Secondary</button>
+        <button class="btn btn-success mr-2 mb-2">Success</button>
+        <button class="btn btn-danger mr-2 mb-2">Danger</button>
+        <button class="btn btn-warning mr-2 mb-2">Warning</button>
+        <button class="btn btn-light mr-2 mb-2">Light</button>
+        <button class="btn btn-dark mr-2 mb-2">Dark</button>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">アウトラインボタン</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <button class="btn btn-outline-primary mr-2 mb-2">Primary</button>
+        <button class="btn btn-outline-secondary mr-2 mb-2">Secondary</button>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">ボタンサイズ</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <button class="btn btn-primary btn-sm mr-2 mb-2">Small</button>
+        <button class="btn btn-primary mr-2 mb-2">Default</button>
+        <button class="btn btn-primary btn-lg mr-2 mb-2">Large</button>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">ブロックボタン</h3>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <button class="btn btn-primary btn-block mb-2">Block Button</button>
+        <button class="btn btn-outline-primary btn-block">Block Outline</button>
+      </div>
+    </section>
+
+    <section id="toggle" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">トグルスイッチ</h2>
+      <h3 class="text-2xl font-semibold mb-4">基本的なトグル</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <div class="mb-4">
+          <div class="flex items-center">
+            <div class="toggle">
+              <input type="checkbox" id="toggle-demo-contrast" />
+              <label for="toggle-demo-contrast"></label>
+            </div>
+            <span class="ml-2">トグル</span>
+          </div>
+        </div>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm mb-6">&lt;div class="flex items-center"&gt;
+  &lt;div class="toggle"&gt;
+    &lt;input type="checkbox" id="toggle-id" /&gt;
+    &lt;label for="toggle-id"&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;span class="ml-2"&gt;ダークモード切替&lt;/span&gt;
+&lt;/div&gt;</pre>
+      </div>
+      <h3 class="text-2xl font-semibold mb-4">トグルサイズ</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <div class="mb-4">
+          <div class="flex items-center gap-8">
+            <div>
+              <div class="flex items-center">
+                <div class="toggle toggle-sm">
+                  <input type="checkbox" id="toggle-demo-contrast-sm" />
+                  <label for="toggle-demo-contrast-sm"></label>
+                </div>
+                <span class="ml-2">小</span>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center">
+                <div class="toggle">
+                  <input type="checkbox" id="toggle-demo-contrast-md" checked />
+                  <label for="toggle-demo-contrast-md"></label>
+                </div>
+                <span class="ml-2">標準</span>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center">
+                <div class="toggle toggle-lg">
+                  <input type="checkbox" id="toggle-demo-contrast-lg" />
+                  <label for="toggle-demo-contrast-lg"></label>
+                </div>
+                <span class="ml-2">大</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm mb-6">&lt;div class="toggle toggle-sm"&gt;...&lt;/div&gt;
+&lt;div class="toggle"&gt;...&lt;/div&gt;
+&lt;div class="toggle toggle-lg"&gt;...&lt;/div&gt;</pre>
+      </div>
+    </section>
+
+    <section id="forms" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">フォーム</h2>
+
+      <h3 class="text-2xl font-semibold mb-4">基本的なフォーム要素</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <form class="mb-4">
+          <div class="form-group mb-4">
+            <label for="text-input" class="form-label">テキスト入力</label>
+            <input type="text" id="text-input" class="form-control" placeholder="テキストを入力">
+          </div>
+          <div class="form-group mb-4">
+            <label for="textarea" class="form-label">テキストエリア</label>
+            <textarea id="textarea" class="form-control" rows="3" placeholder="複数行テキストを入力"></textarea>
+          </div>
+          <div class="form-group mb-4">
+            <label for="select" class="form-label">セレクトボックス</label>
+            <select id="select" class="form-control">
+              <option>オプション1</option>
+              <option>オプション2</option>
+              <option>オプション3</option>
+            </select>
+          </div>
+        </form>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm">&lt;div class="form-group"&gt;
+  &lt;label for="input-id" class="form-label"&gt;ラベル&lt;/label&gt;
+  &lt;input type="text" id="input-id" class="form-control" placeholder="テキストを入力"&gt;
+&lt;/div&gt;</pre>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">バリデーション状態</h3>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <form class="mb-4">
+          <div class="form-group mb-4">
+            <label for="valid-input" class="form-label">正常</label>
+            <input type="text" id="valid-input" class="form-control is-valid" value="正常な入力値">
+            <div class="form-text text-success">入力値は正しい形式です</div>
+          </div>
+          <div class="form-group mb-4">
+            <label for="invalid-input" class="form-label">エラー</label>
+            <input type="text" id="invalid-input" class="form-control is-invalid" value="エラーのある入力値">
+            <div class="form-text text-danger">入力値が正しくありません</div>
+          </div>
+        </form>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm">&lt;div class="form-group"&gt;
+  &lt;label for="valid-input" class="form-label"&gt;正常&lt;/label&gt;
+  &lt;input type="text" id="valid-input" class="form-control is-valid" value="正常な入力値"&gt;
+  &lt;div class="form-text text-success"&gt;入力値は正しい形式です&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </section>
+
+    <section id="tables" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">テーブル</h2>
+
+      <h3 class="text-2xl font-semibold mb-4">基本的なテーブル</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <div class="mb-4 overflow-x-auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>名前</th>
+                <th>メールアドレス</th>
+                <th>役職</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>山田太郎</td>
+                <td>taro@example.com</td>
+                <td>エンジニア</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>佐藤花子</td>
+                <td>hanako@example.com</td>
+                <td>デザイナー</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>鈴木一郎</td>
+                <td>ichiro@example.com</td>
+                <td>マネージャー</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm">&lt;table class="table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;名前&lt;/th&gt;
+      &lt;!-- 他のヘッダーセル --&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;山田太郎&lt;/td&gt;
+      &lt;!-- 他のデータセル --&gt;
+    &lt;/tr&gt;
+    &lt;!-- 他の行 --&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">バリエーション</h3>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="mb-4 overflow-x-auto">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>名前</th>
+                <th>メールアドレス</th>
+                <th>役職</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>山田太郎</td>
+                <td>taro@example.com</td>
+                <td>エンジニア</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>佐藤花子</td>
+                <td>hanako@example.com</td>
+                <td>デザイナー</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>鈴木一郎</td>
+                <td>ichiro@example.com</td>
+                <td>マネージャー</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm">&lt;table class="table table-bordered table-striped"&gt;
+  &lt;!-- テーブルコンテンツ --&gt;
+&lt;/table&gt;</pre>
+      </div>
+    </section>
+
+    <section id="alerts" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">アラート</h2>
+
+      <h3 class="text-2xl font-semibold mb-4">基本的なアラート</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <div class="mb-4">
+          <div class="alert alert-primary mb-4">
+            これは主要なアラートです。重要な情報に注目してください。
+          </div>
+          <div class="alert alert-success mb-4">
+            成功！操作が正常に完了しました。
+          </div>
+          <div class="alert alert-warning mb-4">
+            警告！この操作は注意が必要です。
+          </div>
+          <div class="alert alert-danger mb-4">
+            エラー！問題が発生しました。
+          </div>
+          <div class="alert alert-info">
+            情報：新機能が利用可能になりました。
+          </div>
+        </div>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm">&lt;div class="alert alert-primary"&gt;
+  これは主要なアラートです。重要な情報に注目してください。
+&lt;/div&gt;</pre>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">閉じるボタン付きアラート</h3>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="mb-4">
+          <div class="alert alert-warning alert-dismissible">
+            この警告メッセージは閉じることができます。
+            <button type="button" class="btn-close" onclick="this.parentElement.style.display='none'">×</button>
+          </div>
+        </div>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm">&lt;div class="alert alert-warning alert-dismissible"&gt;
+  この警告メッセージは閉じることができます。
+  &lt;button type="button" class="btn-close"&gt;×&lt;/button&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </section>
+
+    <section id="badges" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">バッジ</h2>
+
+      <h3 class="text-2xl font-semibold mb-4">基本的なバッジ</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <div class="mb-4">
+          <span class="badge badge-primary mr-2">Primary</span>
+          <span class="badge badge-secondary mr-2">Secondary</span>
+          <span class="badge badge-success mr-2">Success</span>
+          <span class="badge badge-danger mr-2">Danger</span>
+          <span class="badge badge-warning mr-2">Warning</span>
+          <span class="badge badge-info mr-2">Info</span>
+          <span class="badge badge-light mr-2">Light</span>
+          <span class="badge badge-dark">Dark</span>
+        </div>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm">&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;</pre>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">ピルバッジ</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <div class="mb-4">
+          <span class="badge badge-pill badge-primary mr-2">Primary</span>
+          <span class="badge badge-pill badge-secondary mr-2">Secondary</span>
+          <span class="badge badge-pill badge-success mr-2">Success</span>
+          <span class="badge badge-pill badge-danger mr-2">Danger</span>
+        </div>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm">&lt;span class="badge badge-pill badge-primary"&gt;Primary&lt;/span&gt;</pre>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">バッジの使用例</h3>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="mb-4">
+          <h5 class="mb-2">
+            未読メッセージ <span class="badge badge-danger">5</span>
+          </h5>
+          <button class="btn btn-primary">
+            通知 <span class="badge badge-light">4</span>
+          </button>
+        </div>
+        <pre class="bg-dark text-light p-4 rounded font-mono text-sm">&lt;h5&gt;
+  未読メッセージ &lt;span class="badge badge-danger"&gt;5&lt;/span&gt;
+&lt;/h5&gt;
+
+&lt;button class="btn btn-primary"&gt;
+  通知 &lt;span class="badge badge-light"&gt;4&lt;/span&gt;
+&lt;/button&gt;</pre>
+      </div>
+    </section>
+
+    <section id="cards" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">カード</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">シンプルカード</h5>
+            <p class="card-text">これは最もシンプルなカードコンポーネントです。カード本文のみを含みます。</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">カードヘッダー</h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">ヘッダー付きカード</h5>
+            <p class="card-text">ヘッダーとフッターを持つカードコンポーネントです。</p>
+          </div>
+          <div class="card-footer text-muted">
+            カードフッター
+          </div>
+        </div>
+
+        <div class="card card-primary text-white">
+          <div class="card-body">
+            <h5 class="card-title">カラーバリエーション</h5>
+            <p class="card-text">カードには色付きバリエーションもあります。</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">カードレイアウト</h3>
+      <div class="card card-horizontal mb-6">
+        <img src="https://placehold.jp/300x200.png" class="card-img" alt="カードのサンプル画像">
+        <div class="card-body">
+          <h5 class="card-title">横並びカード</h5>
+          <p class="card-text">画像と内容を横に並べたカードレイアウトです。</p>
+          <a href="#" class="btn btn-primary mt-2">詳細を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="layout" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">レイアウト</h2>
+
+      <h3 class="text-2xl font-semibold mb-4">コンテナ</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <p class="mb-4">.container - レスポンシブな最大幅を持つコンテナ</p>
+        <p class="mb-4">.container-sm - 小サイズに固定されたコンテナ</p>
+        <p class="mb-4">.container-lg - 大サイズに固定されたコンテナ</p>
+        <p>.container-fluid - 常に100%幅のコンテナ</p>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">グリッド</h3>
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-gray-200 p-4 rounded">Column 1</div>
+          <div class="bg-gray-200 p-4 rounded">Column 2</div>
+          <div class="bg-gray-200 p-4 rounded">Column 3</div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-4">
+          <div class="bg-gray-200 p-4 rounded col-span-2">Column 1 (span 2)</div>
+          <div class="bg-gray-200 p-4 rounded">Column 2</div>
+          <div class="bg-gray-200 p-4 rounded">Column 3</div>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-4">フレックスボックス</h3>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="flex items-center justify-between mb-6 bg-gray-100 p-4 rounded">
+          <div>Flex Item 1</div>
+          <div>Flex Item 2</div>
+          <div>Flex Item 3</div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 bg-gray-100 p-4 rounded">
+          <div class="bg-gray-200 p-4 rounded flex-1">Flex-1</div>
+          <div class="bg-gray-200 p-4 rounded flex-1">Flex-1</div>
+          <div class="bg-gray-200 p-4 rounded flex-1">Flex-1</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="utilities" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">ユーティリティクラス</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">スペーシング</h3>
+          <div class="bg-white p-6 rounded-lg shadow mb-8">
+            <p class="mb-2"><code>.m-*</code> - マージンのユーティリティ</p>
+            <p class="mb-2"><code>.mt-*, .mr-*, .mb-*, .ml-*</code> - 方向別マージン</p>
+            <p class="mb-2"><code>.mx-*, .my-*</code> - 水平/垂直マージン</p>
+            <p class="mb-2"><code>.p-*</code> - パディングのユーティリティ</p>
+            <p class="mb-2"><code>.pt-*, .pr-*, .pb-*, .pl-*</code> - 方向別パディング</p>
+            <p><code>.px-*, .py-*</code> - 水平/垂直パディング</p>
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">ディスプレイ</h3>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <p class="mb-2"><code>.block</code> - ブロック要素として表示</p>
+            <p class="mb-2"><code>.flex</code> - フレックスコンテナとして表示</p>
+            <p class="mb-2"><code>.grid</code> - グリッドコンテナとして表示</p>
+            <p class="mb-2"><code>.inline</code> - インライン要素として表示</p>
+            <p><code>.hidden</code> - 要素を非表示</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">レスポンシブユーティリティ</h3>
+          <div class="bg-white p-6 rounded-lg shadow mb-8">
+            <p class="mb-2"><code>.sm:*</code> - 640px以上の画面</p>
+            <p class="mb-2"><code>.md:*</code> - 768px以上の画面</p>
+            <p class="mb-2"><code>.lg:*</code> - 1024px以上の画面</p>
+            <p><code>.xl:*</code> - 1280px以上の画面</p>
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">その他のユーティリティ</h3>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <p class="mb-2"><code>.rounded, .rounded-lg, .rounded-full</code> - 角丸</p>
+            <p class="mb-2"><code>.shadow, .shadow-md, .shadow-lg</code> - シャドウ</p>
+            <p class="mb-2"><code>.opacity-*, .z-*</code> - 不透明度、重ね順</p>
+            <p class="mb-2"><code>.overflow-hidden, .overflow-scroll</code> - オーバーフロー</p>
+            <p><code>.sr-only</code> - スクリーンリーダー用</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dark-mode" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">ダークモード</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-surface p-6 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold mb-4">システム設定の検出</h3>
+          <p class="mb-4">システム設定に合わせた自動切り替えも対応しています。</p>
+          <pre class="bg-dark text-light p-4 rounded font-mono text-sm mb-6">/* auto-dark-modeクラスを使用 */
+&lt;html class="auto-dark-mode"&gt;</pre>
+          <p class="mb-4">メディアクエリを使って、システム設定を検出します：</p>
+          <pre class="bg-dark text-light p-4 rounded font-mono text-sm mb-6">@media (prefers-color-scheme: dark) {
+  .auto-dark-mode {
+    /* ダークモード変数 */
+  }
+}</pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-inverse text-inverse py-12">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-xl font-bold mb-4">BMF-CSS Framework</h2>
+          <p class="mb-4">シンプルで使いやすいCSSフレームワーク</p>
+          <p>MITライセンスの下で公開</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">リンク</h3>
+          <ul>
+            <li class="mb-2"><a href="#" class="text-subdued hover:text-default">GitHub</a></li>
+            <li class="mb-2"><a href="#" class="text-subdued hover:text-default">ドキュメント</a></li>
+            <li><a href="#" class="text-subdued hover:text-default">バージョン履歴</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-default text-center text-muted">
+        <p>© 2023 BMF-CSS. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

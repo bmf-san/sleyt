@@ -1,0 +1,101 @@
+/**
+ * BMF CSS Framework - Dark Mode
+ */
+
+/* 自動的にダークモードを適用するメディアクエリ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark Theme Colors Override */
+    --color-primary: #3b82f6;
+    --color-primary-hover: #2563eb;
+    --color-secondary: #94a3b8;
+    --color-secondary-hover: #cbd5e1;
+    --color-success: #10b981;
+    --color-info: #06b6d4;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+    --color-light: #1e293b;
+    --color-dark: #f8fafc;
+
+    /* Semantic Tokens - Content  */
+    --text-default: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-disabled: #475569;
+    --text-inverted: #0f172a;
+
+    /* Semantic Tokens - Background */
+    --bg-default: #0f172a;
+    --bg-subtle: #1e293b;
+    --bg-muted: #334155;
+    --bg-emphasis: #475569;
+    --bg-inverted: #f8fafc;
+
+    /* Semantic Tokens - Border */
+    --border-default: #334155;
+    --border-subtle: #1e293b;
+    --border-emphasis: #475569;
+
+    /* Semantic Tokens - Ring */
+    --ring-default: rgba(203, 213, 225, 0.2);
+
+    /* Grayscale Overrides */
+    --color-gray-50: #171923;
+    --color-gray-100: #1a202c;
+    --color-gray-200: #2d3748;
+    --color-gray-300: #4a5568;
+    --color-gray-400: #718096;
+    --color-gray-500: #a0aec0;
+    --color-gray-600: #cbd5e0;
+    --color-gray-700: #e2e8f0;
+    --color-gray-800: #edf2f7;
+    --color-gray-900: #f7fafc;
+  }
+}
+
+/* マニュアルダークモード切り替え用のクラス */
+.dark-mode {
+  /* Dark Theme Colors Override */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-secondary: #94a3b8;
+  --color-secondary-hover: #cbd5e1;
+  --color-success: #10b981;
+  --color-info: #06b6d4;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-light: #1e293b;
+  --color-dark: #f8fafc;
+
+  /* Semantic Tokens - Content  */
+  --text-default: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-disabled: #475569;
+  --text-inverted: #0f172a;
+
+  /* Semantic Tokens - Background */
+  --bg-default: #0f172a;
+  --bg-subtle: #1e293b;
+  --bg-muted: #334155;
+  --bg-emphasis: #475569;
+  --bg-inverted: #f8fafc;
+
+  /* Semantic Tokens - Border */
+  --border-default: #334155;
+  --border-subtle: #1e293b;
+  --border-emphasis: #475569;
+
+  /* Semantic Tokens - Ring */
+  --ring-default: rgba(203, 213, 225, 0.2);
+
+  /* Grayscale Overrides */
+  --color-gray-50: #171923;
+  --color-gray-100: #1a202c;
+  --color-gray-200: #2d3748;
+  --color-gray-300: #4a5568;
+  --color-gray-400: #718096;
+  --color-gray-500: #a0aec0;
+  --color-gray-600: #cbd5e0;
+  --color-gray-700: #e2e8f0;
+  --color-gray-800: #edf2f7;
+  --color-gray-900: #f7fafc;
+}

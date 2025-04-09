@@ -1,0 +1,190 @@
+/**
+ * BMF CSS Framework - Button Component
+ */
+
+/* Base Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  border-radius: var(--border-radius);
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* Button Variants */
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: var(--color-white);
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: var(--color-white);
+  background-color: var(--color-secondary-hover);
+  border-color: var(--color-secondary-hover);
+}
+
+.btn-success {
+  color: var(--color-white);
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  color: var(--color-white);
+  background-color: var(--color-success);
+  filter: brightness(90%);
+  border-color: var(--color-success);
+}
+
+.btn-danger {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+  filter: brightness(90%);
+  border-color: var(--color-danger);
+}
+
+.btn-light {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  border-color: var(--color-light);
+}
+
+.btn-light:hover,
+.btn-light:focus {
+  color: var(--color-dark);
+  background-color: var(--color-gray-200);
+  border-color: var(--color-gray-200);
+}
+
+.btn-dark {
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+  color: var(--color-white);
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-800);
+}
+
+/* Outline Buttons */
+.btn-outline-primary {
+  color: var(--color-primary);
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline-secondary {
+  color: var(--color-secondary);
+  background-color: transparent;
+  border-color: var(--color-secondary);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.btn-lg {
+  padding: var(--spacing-3) var(--spacing-6);
+  font-size: var(--font-size-lg);
+  border-radius: var(--border-radius-lg);
+}
+
+/* Icon Button */
+.btn-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon.btn-sm {
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn-icon.btn-lg {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Text Button (No Background) */
+.btn-text {
+  color: var(--color-primary);
+  background-color: transparent;
+  border-color: transparent;
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+.btn-text:hover,
+.btn-text:focus {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* Block button */
+.btn-block {
+  display: block;
+  width: 100%;
+}
