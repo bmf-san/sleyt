@@ -4,28 +4,28 @@
 
 :root {
   /* Light Theme - Semantic Tokens */
-  --text-default: #0f172a;
-  --text-muted: #64748b;
-  --text-disabled: #94a3b8;
+  --text-default: #18181b;
+  --text-muted: #71717a;
+  --text-disabled: #a1a1aa;
   --text-accent: var(--color-primary);
   --text-inverted: var(--color-white);
 
   --bg-default: #ffffff;
-  --bg-subtle: #f8fafc;
-  --bg-muted: #f1f5f9;
-  --bg-emphasis: #e2e8f0;
+  --bg-subtle: #fafafa;
+  --bg-muted: #f4f4f5;
+  --bg-emphasis: #e4e4e7;
   --bg-inverted: var(--color-dark);
 
   /* Border Colors */
-  --border-default: #e2e8f0;
-  --border-muted: #cbd5e0;
+  --border-default: #e4e4e7;
+  --border-muted: #d4d4d8;
   --border-accent: var(--color-primary);
   --border-critical: var(--color-danger);
 
   /* Ring/Focus Colors */
-  --ring-default: rgba(15, 23, 42, 0.1);
-  --ring-accent: rgba(37, 99, 235, 0.3);
-  --ring-critical: rgba(238, 68, 68, 0.3);
+  --ring-default: rgba(24, 24, 27, 0.1);
+  --ring-accent: rgba(79, 70, 229, 0.3);
+  --ring-critical: rgba(239, 68, 68, 0.3);
 }
 
 /* Text Colors */
