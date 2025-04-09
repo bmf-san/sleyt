@@ -23,7 +23,7 @@
   --color-bg-muted: var(--color-gray-100);
   --color-bg-emphasis: var(--color-gray-200);
   --color-bg-inverted: var(--color-dark);
-  --color-bg-overlay: hsla(240, 10%, 4%, var(--opacity-medium));
+  --color-bg-overlay: hsla(var(--color-black), var(--opacity-medium));
 
   /* Border Colors */
   --color-border-default: var(--color-gray-200);
@@ -32,9 +32,9 @@
   --color-border-critical: var(--color-danger);
 
   /* Focus Rings */
-  --color-ring-default: hsla(240, 4%, 10%, var(--opacity-low));
-  --color-ring-accent: hsla(246, 83%, 59%, var(--opacity-medium));
-  --color-ring-critical: hsla(0, 84%, 60%, var(--opacity-medium));
+  --color-ring-default: hsla(var(--color-gray-900), var(--opacity-low));
+  --color-ring-accent: hsla(var(--color-primary), var(--opacity-medium));
+  --color-ring-critical: hsla(var(--color-danger), var(--opacity-medium));
 }
 
 /* Text Colors */

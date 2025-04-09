@@ -46,7 +46,7 @@
     --color-bg-muted: var(--color-gray-700);
     --color-bg-emphasis: var(--color-gray-600);
     --color-bg-inverted: var(--color-white);
-    --color-bg-overlay: hsla(240, 10%, 4%, var(--opacity-high));
+    --color-bg-overlay: hsla(var(--color-black), var(--opacity-high));
 
     /* Border Colors */
     --color-border-default: var(--color-gray-700);
@@ -55,9 +55,9 @@
     --color-border-critical: var(--color-danger);
 
     /* Focus Rings */
-    --color-ring-default: hsla(0, 0%, 100%, var(--opacity-low));
-    --color-ring-accent: hsla(246, 83%, 59%, var(--opacity-medium));
-    --color-ring-critical: hsla(0, 84%, 60%, var(--opacity-medium));
+    --color-ring-default: hsla(var(--color-dark), var(--opacity-low));
+    --color-ring-accent: hsla(var(--color-primary), var(--opacity-medium));
+    --color-ring-critical: hsla(var(--color-danger), var(--opacity-medium));
 
     /* Grayscale Overrides */
     --color-gray-50: #18181b;
@@ -126,7 +126,7 @@
   --color-bg-muted: var(--color-gray-700);
   --color-bg-emphasis: var(--color-gray-600);
   --color-bg-inverted: var(--color-white);
-  --color-bg-overlay: hsla(240, 10%, 4%, var(--opacity-high));
+  --color-bg-overlay: hsla(var(--color-black), var(--opacity-high));
 
   /* Border Colors */
   --color-border-default: var(--color-gray-700);
@@ -135,9 +135,9 @@
   --color-border-critical: var(--color-danger);
 
   /* Focus Rings */
-  --color-ring-default: hsla(0, 0%, 100%, var(--opacity-low));
-  --color-ring-accent: hsla(246, 83%, 59%, var(--opacity-medium));
-  --color-ring-critical: hsla(0, 84%, 60%, var(--opacity-medium));
+  --color-ring-default: hsla(var(--color-white), var(--opacity-low));
+  --color-ring-accent: hsla(var(--color-primary), var(--opacity-medium));
+  --color-ring-critical: hsla(var(--color-danger), var(--opacity-medium));
 
   /* Grayscale Overrides */
   --color-gray-50: #18181b;
