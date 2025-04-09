@@ -97,12 +97,12 @@ ol {
 a {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #4f46e5;
+  color: hsl(217, 91%, 60%);
   color: var(--color-primary);
 }
 
 a:hover {
-  color: #4338ca;
+  color: hsl(217, 91%, 50%);
   color: var(--color-primary-hover);
 }
 
@@ -146,59 +146,34 @@ a:not([class]) {
    */
 
   /* Brand Colors */
-  --color-primary: #4f46e5;
-  --color-primary: 79, 70, 229;
-  --color-primary-hover: #4338ca;
-
-  --color-secondary: #64748b;
-  --color-secondary: 100, 116, 139;
-  --color-secondary-hover: #475569;
+  --color-primary: hsl(217, 91%, 60%);
+  --color-primary-hover: hsl(217, 91%, 50%);
+  --color-secondary: hsl(215, 25%, 47%);
+  --color-secondary-hover: hsl(215, 25%, 35%);
 
   /* Feedback Colors */
-  --color-success: #10b981;
-  --color-success: 16, 185, 129;
-
-  --color-info: #06b6d4;
-  --color-info: 6, 182, 212;
-
-  --color-warning: #f59e0b;
-  --color-warning: 245, 158, 11;
-
-  --color-danger: #ef4444;
-  --color-danger: 239, 68, 68;
+  --color-success: hsl(158, 84%, 41%);
+  --color-info: hsl(188, 94%, 43%);
+  --color-warning: hsl(35, 92%, 50%);
+  --color-danger: hsl(0, 84%, 60%);
 
   /* Neutral Colors */
-  --color-white: #ffffff;
-  --color-white: 255, 255, 255;
-  --color-black: #09090b;
-  --color-black: 9, 9, 11;
-
-  --color-light: #f8fafc;
-  --color-light: 248, 250, 252;
-  --color-dark: #0f172a;
-  --color-dark: 15, 23, 42;
+  --color-white: hsl(0, 0%, 98%);
+  --color-black: hsl(240, 10%, 4%);
+  --color-light: hsl(214, 30%, 95%);
+  --color-dark: hsl(222, 47%, 11%);
 
   /* Grayscale - Neutral Color Palette */
-  --color-gray-50: #fafafa;
-  --color-gray-50: 250, 250, 250;
-  --color-gray-100: #f4f4f5;
-  --color-gray-100: 244, 244, 245;
-  --color-gray-200: #e4e4e7;
-  --color-gray-200: 228, 228, 231;
-  --color-gray-300: #d4d4d8;
-  --color-gray-300: 212, 212, 216;
-  --color-gray-400: #a1a1aa;
-  --color-gray-400: 161, 161, 170;
-  --color-gray-500: #71717a;
-  --color-gray-500: 113, 113, 122;
-  --color-gray-600: #52525b;
-  --color-gray-600: 82, 82, 91;
-  --color-gray-700: #3f3f46;
-  --color-gray-700: 63, 63, 70;
-  --color-gray-800: #27272a;
-  --color-gray-800: 39, 39, 42;
-  --color-gray-900: #18181b;
-  --color-gray-900: 24, 24, 27;
+  --color-gray-50: hsl(0, 0%, 98%);
+  --color-gray-100: hsl(240, 5%, 96%);
+  --color-gray-200: hsl(240, 6%, 90%);
+  --color-gray-300: hsl(240, 5%, 84%);
+  --color-gray-400: hsl(240, 5%, 65%);
+  --color-gray-500: hsl(240, 4%, 46%);
+  --color-gray-600: hsl(240, 5%, 34%);
+  --color-gray-700: hsl(240, 5%, 26%);
+  --color-gray-800: hsl(240, 4%, 16%);
+  --color-gray-900: hsl(240, 4%, 12%);
 
   /* Opacity Levels - 透明度の標準値 */
   --opacity-low: 0.1;
@@ -261,11 +236,11 @@ a:not([class]) {
   --border-radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, var(--opacity-low));
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, var(--opacity-low)), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, var(--opacity-low)), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, var(--opacity-low)), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, var(--opacity-low)), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 2px 0 hsla(0, 0%, 0%, var(--opacity-low));
+  --shadow: 0 1px 3px 0 hsla(0, 0%, 0%, var(--opacity-low)), 0 1px 2px 0 hsla(0, 0%, 0%, 0.06);
+  --shadow-md: 0 4px 6px -1px hsla(0, 0%, 0%, var(--opacity-low)), 0 2px 4px -1px hsla(0, 0%, 0%, 0.06);
+  --shadow-lg: 0 10px 15px -3px hsla(0, 0%, 0%, var(--opacity-low)), 0 4px 6px -2px hsla(0, 0%, 0%, 0.05);
+  --shadow-xl: 0 20px 25px -5px hsla(0, 0%, 0%, var(--opacity-low)), 0 10px 10px -5px hsla(0, 0%, 0%, 0.04);
 
   /* Transitions */
   --transition-base: all 0.2s ease-in-out;
@@ -528,15 +503,15 @@ a:not([class]) {
 
 .shadow-none { box-shadow: none; }
 
-.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); box-shadow: var(--shadow-sm); }
+.shadow-sm { box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.1); box-shadow: var(--shadow-sm); }
 
-.shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); box-shadow: var(--shadow); }
+.shadow { box-shadow: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1), 0 1px 2px 0 hsla(0, 0%, 0%, 0.06); box-shadow: var(--shadow); }
 
-.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); box-shadow: var(--shadow-md); }
+.shadow-md { box-shadow: 0 4px 6px -1px hsla(0, 0%, 0%, 0.1), 0 2px 4px -1px hsla(0, 0%, 0%, 0.06); box-shadow: var(--shadow-md); }
 
-.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); box-shadow: var(--shadow-lg); }
+.shadow-lg { box-shadow: 0 10px 15px -3px hsla(0, 0%, 0%, 0.1), 0 4px 6px -2px hsla(0, 0%, 0%, 0.05); box-shadow: var(--shadow-lg); }
 
-.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); box-shadow: var(--shadow-xl); }
+.shadow-xl { box-shadow: 0 20px 25px -5px hsla(0, 0%, 0%, 0.1), 0 10px 10px -5px hsla(0, 0%, 0%, 0.04); box-shadow: var(--shadow-xl); }
 
 /* Object Fit */
 
@@ -819,7 +794,7 @@ ul.list-disc, ol.list-decimal {
 
 blockquote {
   font-style: italic;
-  border-left: 4px solid #d4d4d8;
+  border-left: 4px solid hsl(240, 5%, 84%);
   border-left: 4px solid var(--color-gray-300);
   padding-left: 1rem;
   padding-left: var(--spacing-4);
@@ -836,7 +811,7 @@ code, pre {
   font-family: var(--font-family-monospace);
   font-size: 0.875rem;
   font-size: var(--font-size-sm);
-  background-color: #f4f4f5;
+  background-color: hsl(240, 5%, 96%);
   background-color: var(--color-gray-100);
   border-radius: 0.25rem;
   border-radius: var(--border-radius);
@@ -887,7 +862,7 @@ pre code {
   --color-bg-muted: var(--color-gray-100);
   --color-bg-emphasis: var(--color-gray-200);
   --color-bg-inverted: var(--color-dark);
-  --color-bg-overlay: rgba(var(--color-black), var(--opacity-medium));
+  --color-bg-overlay: hsla(var(--color-black), var(--opacity-medium));
 
   /* Border Colors */
   --color-border-default: var(--color-gray-200);
@@ -896,200 +871,200 @@ pre code {
   --color-border-critical: var(--color-danger);
 
   /* Focus Rings */
-  --color-ring-default: rgba(var(--color-gray-900), var(--opacity-low));
-  --color-ring-accent: rgba(var(--color-primary), var(--opacity-medium));
-  --color-ring-critical: rgba(var(--color-danger), var(--opacity-medium));
+  --color-ring-default: hsla(var(--color-gray-900), var(--opacity-low));
+  --color-ring-accent: hsla(var(--color-primary), var(--opacity-medium));
+  --color-ring-critical: hsla(var(--color-danger), var(--opacity-medium));
 }
 
 /* Text Colors */
 
-.text-primary { color: #4f46e5; color: var(--color-primary); }
+.text-primary { color: hsl(217, 91%, 60%); color: var(--color-primary); }
 
-.text-secondary { color: #64748b; color: var(--color-secondary); }
+.text-secondary { color: hsl(215, 25%, 47%); color: var(--color-secondary); }
 
-.text-success { color: #10b981; color: var(--color-success); }
+.text-success { color: hsl(158, 84%, 41%); color: var(--color-success); }
 
-.text-info { color: #06b6d4; color: var(--color-info); }
+.text-info { color: hsl(188, 94%, 43%); color: var(--color-info); }
 
-.text-warning { color: #f59e0b; color: var(--color-warning); }
+.text-warning { color: hsl(35, 92%, 50%); color: var(--color-warning); }
 
-.text-danger { color: #ef4444; color: var(--color-danger); }
+.text-danger { color: hsl(0, 84%, 60%); color: var(--color-danger); }
 
-.text-light { color: #f8fafc; color: var(--color-light); }
+.text-light { color: hsl(214, 30%, 95%); color: var(--color-light); }
 
-.text-dark { color: #0f172a; color: var(--color-dark); }
+.text-dark { color: hsl(222, 47%, 11%); color: var(--color-dark); }
 
-.text-white { color: #ffffff; color: var(--color-white); }
+.text-white { color: hsl(0, 0%, 98%); color: var(--color-white); }
 
-.text-black { color: #09090b; color: var(--color-black); }
+.text-black { color: hsl(240, 10%, 4%); color: var(--color-black); }
 
 /* Semantic Text Colors */
 
-.text-default { color: #18181b; color: var(--color-text-default); }
+.text-default { color: hsl(240, 4%, 12%); color: var(--color-text-default); }
 
-.text-muted { color: #71717a; color: var(--color-text-muted); }
+.text-muted { color: hsl(240, 4%, 46%); color: var(--color-text-muted); }
 
-.text-disabled { color: #a1a1aa; color: var(--color-text-disabled); }
+.text-disabled { color: hsl(240, 5%, 65%); color: var(--color-text-disabled); }
 
-.text-accent { color: #4f46e5; color: var(--color-text-accent); }
+.text-accent { color: hsl(217, 91%, 60%); color: var(--color-text-accent); }
 
-.text-inverted { color: #ffffff; color: var(--color-text-inverted); }
+.text-inverted { color: hsl(0, 0%, 98%); color: var(--color-text-inverted); }
 
 /* Grayscale Text */
 
-.text-gray-50 { color: #fafafa; color: var(--color-gray-50); }
+.text-gray-50 { color: hsl(0, 0%, 98%); color: var(--color-gray-50); }
 
-.text-gray-100 { color: #f4f4f5; color: var(--color-gray-100); }
+.text-gray-100 { color: hsl(240, 5%, 96%); color: var(--color-gray-100); }
 
-.text-gray-200 { color: #e4e4e7; color: var(--color-gray-200); }
+.text-gray-200 { color: hsl(240, 6%, 90%); color: var(--color-gray-200); }
 
-.text-gray-300 { color: #d4d4d8; color: var(--color-gray-300); }
+.text-gray-300 { color: hsl(240, 5%, 84%); color: var(--color-gray-300); }
 
-.text-gray-400 { color: #a1a1aa; color: var(--color-gray-400); }
+.text-gray-400 { color: hsl(240, 5%, 65%); color: var(--color-gray-400); }
 
-.text-gray-500 { color: #71717a; color: var(--color-gray-500); }
+.text-gray-500 { color: hsl(240, 4%, 46%); color: var(--color-gray-500); }
 
-.text-gray-600 { color: #52525b; color: var(--color-gray-600); }
+.text-gray-600 { color: hsl(240, 5%, 34%); color: var(--color-gray-600); }
 
-.text-gray-700 { color: #3f3f46; color: var(--color-gray-700); }
+.text-gray-700 { color: hsl(240, 5%, 26%); color: var(--color-gray-700); }
 
-.text-gray-800 { color: #27272a; color: var(--color-gray-800); }
+.text-gray-800 { color: hsl(240, 4%, 16%); color: var(--color-gray-800); }
 
-.text-gray-900 { color: #18181b; color: var(--color-gray-900); }
+.text-gray-900 { color: hsl(240, 4%, 12%); color: var(--color-gray-900); }
 
 /* Background Colors */
 
-.bg-primary { background-color: #4f46e5; background-color: var(--color-primary); }
+.bg-primary { background-color: hsl(217, 91%, 60%); background-color: var(--color-primary); }
 
-.bg-secondary { background-color: #64748b; background-color: var(--color-secondary); }
+.bg-secondary { background-color: hsl(215, 25%, 47%); background-color: var(--color-secondary); }
 
-.bg-success { background-color: #10b981; background-color: var(--color-success); }
+.bg-success { background-color: hsl(158, 84%, 41%); background-color: var(--color-success); }
 
-.bg-info { background-color: #06b6d4; background-color: var(--color-info); }
+.bg-info { background-color: hsl(188, 94%, 43%); background-color: var(--color-info); }
 
-.bg-warning { background-color: #f59e0b; background-color: var(--color-warning); }
+.bg-warning { background-color: hsl(35, 92%, 50%); background-color: var(--color-warning); }
 
-.bg-danger { background-color: #ef4444; background-color: var(--color-danger); }
+.bg-danger { background-color: hsl(0, 84%, 60%); background-color: var(--color-danger); }
 
-.bg-light { background-color: #f8fafc; background-color: var(--color-light); }
+.bg-light { background-color: hsl(214, 30%, 95%); background-color: var(--color-light); }
 
-.bg-dark { background-color: #0f172a; background-color: var(--color-dark); }
+.bg-dark { background-color: hsl(222, 47%, 11%); background-color: var(--color-dark); }
 
-.bg-white { background-color: #ffffff; background-color: var(--color-white); }
+.bg-white { background-color: hsl(0, 0%, 98%); background-color: var(--color-white); }
 
-.bg-black { background-color: #09090b; background-color: var(--color-black); }
+.bg-black { background-color: hsl(240, 10%, 4%); background-color: var(--color-black); }
 
 .bg-transparent { background-color: transparent; }
 
 /* Semantic Background Colors */
 
-.bg-default { background-color: #ffffff; background-color: var(--color-bg-default); }
+.bg-default { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-default); }
 
-.bg-subtle { background-color: #fafafa; background-color: var(--color-bg-subtle); }
+.bg-subtle { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-subtle); }
 
-.bg-muted { background-color: #f4f4f5; background-color: var(--color-bg-muted); }
+.bg-muted { background-color: hsl(240, 5%, 96%); background-color: var(--color-bg-muted); }
 
-.bg-emphasis { background-color: #e4e4e7; background-color: var(--color-bg-emphasis); }
+.bg-emphasis { background-color: hsl(240, 6%, 90%); background-color: var(--color-bg-emphasis); }
 
-.bg-inverted { background-color: #0f172a; background-color: var(--color-bg-inverted); }
+.bg-inverted { background-color: hsl(222, 47%, 11%); background-color: var(--color-bg-inverted); }
 
 /* Grayscale Background */
 
-.bg-gray-50 { background-color: #fafafa; background-color: var(--color-gray-50); }
+.bg-gray-50 { background-color: hsl(0, 0%, 98%); background-color: var(--color-gray-50); }
 
-.bg-gray-100 { background-color: #f4f4f5; background-color: var(--color-gray-100); }
+.bg-gray-100 { background-color: hsl(240, 5%, 96%); background-color: var(--color-gray-100); }
 
-.bg-gray-200 { background-color: #e4e4e7; background-color: var(--color-gray-200); }
+.bg-gray-200 { background-color: hsl(240, 6%, 90%); background-color: var(--color-gray-200); }
 
-.bg-gray-300 { background-color: #d4d4d8; background-color: var(--color-gray-300); }
+.bg-gray-300 { background-color: hsl(240, 5%, 84%); background-color: var(--color-gray-300); }
 
-.bg-gray-400 { background-color: #a1a1aa; background-color: var(--color-gray-400); }
+.bg-gray-400 { background-color: hsl(240, 5%, 65%); background-color: var(--color-gray-400); }
 
-.bg-gray-500 { background-color: #71717a; background-color: var(--color-gray-500); }
+.bg-gray-500 { background-color: hsl(240, 4%, 46%); background-color: var(--color-gray-500); }
 
-.bg-gray-600 { background-color: #52525b; background-color: var(--color-gray-600); }
+.bg-gray-600 { background-color: hsl(240, 5%, 34%); background-color: var(--color-gray-600); }
 
-.bg-gray-700 { background-color: #3f3f46; background-color: var(--color-gray-700); }
+.bg-gray-700 { background-color: hsl(240, 5%, 26%); background-color: var(--color-gray-700); }
 
-.bg-gray-800 { background-color: #27272a; background-color: var(--color-gray-800); }
+.bg-gray-800 { background-color: hsl(240, 4%, 16%); background-color: var(--color-gray-800); }
 
-.bg-gray-900 { background-color: #18181b; background-color: var(--color-gray-900); }
+.bg-gray-900 { background-color: hsl(240, 4%, 12%); background-color: var(--color-gray-900); }
 
 /* Legacy Theme Classes (for backwards compatibility) */
 
-.bg-body { background-color: #ffffff; background-color: var(--color-bg-default); }
+.bg-body { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-default); }
 
-.bg-card { background-color: #ffffff; background-color: var(--color-bg-default); }
+.bg-card { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-default); }
 
-.bg-surface { background-color: #ffffff; background-color: var(--color-bg-default); }
+.bg-surface { background-color: hsl(0, 0%, 98%); background-color: var(--color-bg-default); }
 
-.bg-input { background-color: #f4f4f5; background-color: var(--color-bg-muted); }
+.bg-input { background-color: hsl(240, 5%, 96%); background-color: var(--color-bg-muted); }
 
 /* Border Colors */
 
-.border-primary { border-color: #4f46e5; border-color: var(--color-primary); }
+.border-primary { border-color: hsl(217, 91%, 60%); border-color: var(--color-primary); }
 
-.border-secondary { border-color: #64748b; border-color: var(--color-secondary); }
+.border-secondary { border-color: hsl(215, 25%, 47%); border-color: var(--color-secondary); }
 
-.border-success { border-color: #10b981; border-color: var(--color-success); }
+.border-success { border-color: hsl(158, 84%, 41%); border-color: var(--color-success); }
 
-.border-info { border-color: #06b6d4; border-color: var(--color-info); }
+.border-info { border-color: hsl(188, 94%, 43%); border-color: var(--color-info); }
 
-.border-warning { border-color: #f59e0b; border-color: var(--color-warning); }
+.border-warning { border-color: hsl(35, 92%, 50%); border-color: var(--color-warning); }
 
-.border-danger { border-color: #ef4444; border-color: var(--color-danger); }
+.border-danger { border-color: hsl(0, 84%, 60%); border-color: var(--color-danger); }
 
-.border-light { border-color: #f8fafc; border-color: var(--color-light); }
+.border-light { border-color: hsl(214, 30%, 95%); border-color: var(--color-light); }
 
-.border-dark { border-color: #0f172a; border-color: var(--color-dark); }
+.border-dark { border-color: hsl(222, 47%, 11%); border-color: var(--color-dark); }
 
-.border-white { border-color: #ffffff; border-color: var(--color-white); }
+.border-white { border-color: hsl(0, 0%, 98%); border-color: var(--color-white); }
 
-.border-black { border-color: #09090b; border-color: var(--color-black); }
+.border-black { border-color: hsl(240, 10%, 4%); border-color: var(--color-black); }
 
 /* Semantic Border Colors */
 
-.border-default { border-color: #e4e4e7; border-color: var(--color-border-default); }
+.border-default { border-color: hsl(240, 6%, 90%); border-color: var(--color-border-default); }
 
-.border-muted { border-color: #d4d4d8; border-color: var(--color-border-muted); }
+.border-muted { border-color: hsl(240, 5%, 84%); border-color: var(--color-border-muted); }
 
-.border-accent { border-color: #4f46e5; border-color: var(--color-border-accent); }
+.border-accent { border-color: hsl(217, 91%, 60%); border-color: var(--color-border-accent); }
 
-.border-critical { border-color: #ef4444; border-color: var(--color-border-critical); }
+.border-critical { border-color: hsl(0, 84%, 60%); border-color: var(--color-border-critical); }
 
 /* Grayscale Border */
 
-.border-gray-50 { border-color: #fafafa; border-color: var(--color-gray-50); }
+.border-gray-50 { border-color: hsl(0, 0%, 98%); border-color: var(--color-gray-50); }
 
-.border-gray-100 { border-color: #f4f4f5; border-color: var(--color-gray-100); }
+.border-gray-100 { border-color: hsl(240, 5%, 96%); border-color: var(--color-gray-100); }
 
-.border-gray-200 { border-color: #e4e4e7; border-color: var(--color-gray-200); }
+.border-gray-200 { border-color: hsl(240, 6%, 90%); border-color: var(--color-gray-200); }
 
-.border-gray-300 { border-color: #d4d4d8; border-color: var(--color-gray-300); }
+.border-gray-300 { border-color: hsl(240, 5%, 84%); border-color: var(--color-gray-300); }
 
-.border-gray-400 { border-color: #a1a1aa; border-color: var(--color-gray-400); }
+.border-gray-400 { border-color: hsl(240, 5%, 65%); border-color: var(--color-gray-400); }
 
-.border-gray-500 { border-color: #71717a; border-color: var(--color-gray-500); }
+.border-gray-500 { border-color: hsl(240, 4%, 46%); border-color: var(--color-gray-500); }
 
-.border-gray-600 { border-color: #52525b; border-color: var(--color-gray-600); }
+.border-gray-600 { border-color: hsl(240, 5%, 34%); border-color: var(--color-gray-600); }
 
-.border-gray-700 { border-color: #3f3f46; border-color: var(--color-gray-700); }
+.border-gray-700 { border-color: hsl(240, 5%, 26%); border-color: var(--color-gray-700); }
 
-.border-gray-800 { border-color: #27272a; border-color: var(--color-gray-800); }
+.border-gray-800 { border-color: hsl(240, 4%, 16%); border-color: var(--color-gray-800); }
 
-.border-gray-900 { border-color: #18181b; border-color: var(--color-gray-900); }
+.border-gray-900 { border-color: hsl(240, 4%, 12%); border-color: var(--color-gray-900); }
 
 /* Default Border */
 
-.border { border: 1px solid #e4e4e7; border: 1px solid var(--color-border-default); }
+.border { border: 1px solid hsl(240, 6%, 90%); border: 1px solid var(--color-border-default); }
 
-.border-t { border-top: 1px solid #e4e4e7; border-top: 1px solid var(--color-border-default); }
+.border-t { border-top: 1px solid hsl(240, 6%, 90%); border-top: 1px solid var(--color-border-default); }
 
-.border-r { border-right: 1px solid #e4e4e7; border-right: 1px solid var(--color-border-default); }
+.border-r { border-right: 1px solid hsl(240, 6%, 90%); border-right: 1px solid var(--color-border-default); }
 
-.border-b { border-bottom: 1px solid #e4e4e7; border-bottom: 1px solid var(--color-border-default); }
+.border-b { border-bottom: 1px solid hsl(240, 6%, 90%); border-bottom: 1px solid var(--color-border-default); }
 
-.border-l { border-left: 1px solid #e4e4e7; border-left: 1px solid var(--color-border-default); }
+.border-l { border-left: 1px solid hsl(240, 6%, 90%); border-left: 1px solid var(--color-border-default); }
 
 /* Border Widths */
 
@@ -1102,169 +1077,111 @@ pre code {
 .border-8 { border-width: 8px; }
 
 /**
- * BMF CSS Framework - Dark Mode
+ * BMF CSS Framework - Dark Mode (shadcn/ui inspired)
  */
 
 /* 自動的にダークモードを適用するメディアクエリ */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /*
-     * Base Colors Override - Dark Mode
-     */
-    --color-primary: #4f46e5;
-    --color-primary: 79, 70, 229;
-    --color-primary-hover: #4338ca;
-    --color-secondary: #94a3b8;
-    --color-secondary: 148, 163, 184;
-    --color-secondary-hover: #cbd5e1;
-    --color-success: #10b981;
-    --color-success: 16, 185, 129;
-    --color-info: #06b6d4;
-    --color-info: 6, 182, 212;
-    --color-warning: #f59e0b;
-    --color-warning: 245, 158, 11;
-    --color-danger: #ef4444;
-    --color-danger: 239, 68, 68;
-    --color-light: #1e293b;
-    --color-light: 30, 41, 59;
-    --color-dark: #f8fafc;
-    --color-dark: 248, 250, 252;
+    --color-primary: hsl(217, 91%, 60%);
+    --color-primary-hover: hsl(217, 91%, 50%);
+    --color-secondary: hsl(210, 15%, 65%);
+    --color-secondary-hover: hsl(210, 15%, 55%);
+    --color-success: hsl(158, 84%, 41%);
+    --color-info: hsl(188, 94%, 43%);
+    --color-warning: hsl(35, 92%, 50%);
+    --color-danger: hsl(0, 84%, 60%);
+    --color-light: hsl(222, 32%, 18%);
+    --color-dark: hsl(214, 30%, 95%);
 
-    /*
-     * Semantic Tokens - Dark Mode
-     */
-
-    /* Text Colors */
-    --color-text-default: var(--color-dark);
-    --color-text-muted: var(--color-secondary);
-    --color-text-disabled: var(--color-gray-600);
+    /* Semantic Tokens - Dark Mode */
+    --color-text-default: hsl(240, 6%, 95%);
+    --color-text-muted: hsl(240, 5%, 65%);
+    --color-text-disabled: hsl(240, 5%, 45%);
     --color-text-accent: var(--color-primary);
-    --color-text-inverted: var(--color-gray-900);
-    --color-text-link: var(--color-primary);
-    --color-text-link-hover: var(--color-primary-hover);
+    --color-text-inverted: hsl(240, 10%, 5%);
+    --color-text-link: hsl(217, 91%, 70%);
+    --color-text-link-hover: hsl(217, 91%, 80%);
 
-    /* Background Colors */
-    --color-bg-default: var(--color-gray-900);
-    --color-bg-subtle: var(--color-gray-800);
-    --color-bg-muted: var(--color-gray-700);
-    --color-bg-emphasis: var(--color-gray-600);
-    --color-bg-inverted: var(--color-dark);
-    --color-bg-overlay: rgba(var(--color-black), var(--opacity-high));
+    --color-bg-default: hsl(240, 10%, 5%);
+    --color-bg-subtle: hsl(240, 6%, 10%);
+    --color-bg-muted: hsl(240, 5%, 14%);
+    --color-bg-emphasis: hsl(240, 5%, 20%);
+    --color-bg-inverted: hsl(0, 0%, 100%);
+    --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
 
-    /* Border Colors */
-    --color-border-default: var(--color-gray-700);
-    --color-border-muted: var(--color-gray-800);
+    --color-border-default: hsl(240, 4%, 22%);
+    --color-border-muted: hsl(240, 4%, 28%);
     --color-border-accent: var(--color-primary);
     --color-border-critical: var(--color-danger);
 
-    /* Focus Rings */
-    --color-ring-default: rgba(var(--color-dark), var(--opacity-medium));
-    --color-ring-accent: rgba(var(--color-primary), var(--opacity-medium));
-    --color-ring-critical: rgba(var(--color-danger), var(--opacity-medium));
+    --color-ring-default: hsla(0, 0%, 100%, 0.1);
+    --color-ring-accent: hsla(217, 91%, 60%, 0.3);
+    --color-ring-critical: hsla(0, 84%, 60%, 0.3);
 
     /* Grayscale Overrides */
-    --color-gray-50: #18181b;
-    --color-gray-50: 24, 24, 27;
-    --color-gray-100: #27272a;
-    --color-gray-100: 39, 39, 42;
-    --color-gray-200: #3f3f46;
-    --color-gray-200: 63, 63, 70;
-    --color-gray-300: #52525b;
-    --color-gray-300: 82, 82, 91;
-    --color-gray-400: #71717a;
-    --color-gray-400: 113, 113, 122;
-    --color-gray-500: #a1a1aa;
-    --color-gray-500: 161, 161, 170;
-    --color-gray-600: #d4d4d8;
-    --color-gray-600: 212, 212, 216;
-    --color-gray-700: #e4e4e7;
-    --color-gray-700: 228, 228, 231;
-    --color-gray-800: #f4f4f5;
-    --color-gray-800: 244, 244, 245;
-    --color-gray-900: #fafafa;
-    --color-gray-900: 250, 250, 250;
+    --color-gray-50: hsl(240, 6%, 95%);
+    --color-gray-100: hsl(240, 6%, 90%);
+    --color-gray-200: hsl(240, 6%, 80%);
+    --color-gray-300: hsl(240, 5%, 65%);
+    --color-gray-400: hsl(240, 5%, 50%);
+    --color-gray-500: hsl(240, 4%, 40%);
+    --color-gray-600: hsl(240, 5%, 30%);
+    --color-gray-700: hsl(240, 5%, 20%);
+    --color-gray-800: hsl(240, 6%, 12%);
+    --color-gray-900: hsl(240, 10%, 5%);
   }
 }
 
 /* マニュアルダークモード切り替え用のクラス */
 
 .dark-mode {
-  /*
-   * Base Colors Override - Dark Mode
-   */
-  --color-primary: #4f46e5;
-  --color-primary: 79, 70, 229;
-  --color-primary-hover: #4338ca;
-  --color-secondary: #94a3b8;
-  --color-secondary: 148, 163, 184;
-  --color-secondary-hover: #cbd5e1;
-  --color-success: #10b981;
-  --color-success: 16, 185, 129;
-  --color-info: #06b6d4;
-  --color-info: 6, 182, 212;
-  --color-warning: #f59e0b;
-  --color-warning: 245, 158, 11;
-  --color-danger: #ef4444;
-  --color-danger: 239, 68, 68;
-  --color-light: #1e293b;
-  --color-light: 30, 41, 59;
-  --color-dark: #f8fafc;
-  --color-dark: 248, 250, 252;
+  --color-primary: hsl(217, 91%, 60%);
+  --color-primary-hover: hsl(217, 91%, 50%);
+  --color-secondary: hsl(210, 15%, 65%);
+  --color-secondary-hover: hsl(210, 15%, 55%);
+  --color-success: hsl(158, 84%, 41%);
+  --color-info: hsl(188, 94%, 43%);
+  --color-warning: hsl(35, 92%, 50%);
+  --color-danger: hsl(0, 84%, 60%);
+  --color-light: hsl(222, 32%, 18%);
+  --color-dark: hsl(214, 30%, 95%);
 
-  /*
-   * Semantic Tokens - Dark Mode
-   */
-
-  /* Text Colors */
-  --color-text-default: var(--color-dark);
-  --color-text-muted: var(--color-secondary);
-  --color-text-disabled: var(--color-gray-600);
+  --color-text-default: hsl(240, 6%, 95%);
+  --color-text-muted: hsl(240, 5%, 65%);
+  --color-text-disabled: hsl(240, 5%, 45%);
   --color-text-accent: var(--color-primary);
-  --color-text-inverted: var(--color-gray-900);
-  --color-text-link: var(--color-primary);
-  --color-text-link-hover: var(--color-primary-hover);
+  --color-text-inverted: hsl(240, 10%, 5%);
+  --color-text-link: hsl(217, 91%, 70%);
+  --color-text-link-hover: hsl(217, 91%, 80%);
 
-  /* Background Colors */
-  --color-bg-default: var(--color-gray-900);
-  --color-bg-subtle: var(--color-gray-800);
-  --color-bg-muted: var(--color-gray-700);
-  --color-bg-emphasis: var(--color-gray-600);
-  --color-bg-inverted: var(--color-dark);
-  --color-bg-overlay: rgba(var(--color-black), var(--opacity-high));
+  --color-bg-default: hsl(240, 10%, 5%);
+  --color-bg-subtle: hsl(240, 6%, 10%);
+  --color-bg-muted: hsl(240, 5%, 14%);
+  --color-bg-emphasis: hsl(240, 5%, 20%);
+  --color-bg-inverted: hsl(0, 0%, 100%);
+  --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
 
-  /* Border Colors */
-  --color-border-default: var(--color-gray-700);
-  --color-border-muted: var(--color-gray-800);
+  --color-border-default: hsl(240, 4%, 22%);
+  --color-border-muted: hsl(240, 4%, 28%);
   --color-border-accent: var(--color-primary);
   --color-border-critical: var(--color-danger);
 
-  /* Focus Rings */
-  --color-ring-default: rgba(var(--color-dark), var(--opacity-medium));
-  --color-ring-accent: rgba(var(--color-primary), var(--opacity-medium));
-  --color-ring-critical: rgba(var(--color-danger), var(--opacity-medium));
+  --color-ring-default: hsla(0, 0%, 100%, 0.1);
+  --color-ring-accent: hsla(217, 91%, 60%, 0.3);
+  --color-ring-critical: hsla(0, 84%, 60%, 0.3);
 
-  /* Grayscale Overrides */
-  --color-gray-50: #18181b;
-  --color-gray-50: 24, 24, 27;
-  --color-gray-100: #27272a;
-  --color-gray-100: 39, 39, 42;
-  --color-gray-200: #3f3f46;
-  --color-gray-200: 63, 63, 70;
-  --color-gray-300: #52525b;
-  --color-gray-300: 82, 82, 91;
-  --color-gray-400: #71717a;
-  --color-gray-400: 113, 113, 122;
-  --color-gray-500: #a1a1aa;
-  --color-gray-500: 161, 161, 170;
-  --color-gray-600: #d4d4d8;
-  --color-gray-600: 212, 212, 216;
-  --color-gray-700: #e4e4e7;
-  --color-gray-700: 228, 228, 231;
-  --color-gray-800: #f4f4f5;
-  --color-gray-800: 244, 244, 245;
-  --color-gray-900: #fafafa;
-  --color-gray-900: 250, 250, 250;
+  --color-gray-50: hsl(240, 6%, 95%);
+  --color-gray-100: hsl(240, 6%, 90%);
+  --color-gray-200: hsl(240, 6%, 80%);
+  --color-gray-300: hsl(240, 5%, 65%);
+  --color-gray-400: hsl(240, 5%, 50%);
+  --color-gray-500: hsl(240, 4%, 40%);
+  --color-gray-600: hsl(240, 5%, 30%);
+  --color-gray-700: hsl(240, 5%, 20%);
+  --color-gray-800: hsl(240, 6%, 12%);
+  --color-gray-900: hsl(240, 10%, 5%);
 }
 
 /* Layout */
@@ -2569,156 +2486,156 @@ pre code {
 /* Button Variants */
 
 .btn-primary {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #4f46e5;
+  background-color: hsl(217, 91%, 60%);
   background-color: var(--color-primary);
-  border-color: #4f46e5;
+  border-color: hsl(217, 91%, 60%);
   border-color: var(--color-primary);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #4338ca;
+  background-color: hsl(217, 91%, 50%);
   background-color: var(--color-primary-hover);
-  border-color: #4338ca;
+  border-color: hsl(217, 91%, 50%);
   border-color: var(--color-primary-hover);
 }
 
 .btn-secondary {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #64748b;
+  background-color: hsl(215, 25%, 47%);
   background-color: var(--color-secondary);
-  border-color: #64748b;
+  border-color: hsl(215, 25%, 47%);
   border-color: var(--color-secondary);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #475569;
+  background-color: hsl(215, 25%, 35%);
   background-color: var(--color-secondary-hover);
-  border-color: #475569;
+  border-color: hsl(215, 25%, 35%);
   border-color: var(--color-secondary-hover);
 }
 
 .btn-success {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #10b981;
+  background-color: hsl(158, 84%, 41%);
   background-color: var(--color-success);
-  border-color: #10b981;
+  border-color: hsl(158, 84%, 41%);
   border-color: var(--color-success);
 }
 
 .btn-success:hover,
 .btn-success:focus {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #10b981;
+  background-color: hsl(158, 84%, 41%);
   background-color: var(--color-success);
   filter: brightness(90%);
-  border-color: #10b981;
+  border-color: hsl(158, 84%, 41%);
   border-color: var(--color-success);
 }
 
 .btn-danger {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #ef4444;
+  background-color: hsl(0, 84%, 60%);
   background-color: var(--color-danger);
-  border-color: #ef4444;
+  border-color: hsl(0, 84%, 60%);
   border-color: var(--color-danger);
 }
 
 .btn-danger:hover,
 .btn-danger:focus {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #ef4444;
+  background-color: hsl(0, 84%, 60%);
   background-color: var(--color-danger);
   filter: brightness(90%);
-  border-color: #ef4444;
+  border-color: hsl(0, 84%, 60%);
   border-color: var(--color-danger);
 }
 
 .btn-light {
-  color: #0f172a;
+  color: hsl(222, 47%, 11%);
   color: var(--color-dark);
-  background-color: #f8fafc;
+  background-color: hsl(214, 30%, 95%);
   background-color: var(--color-light);
-  border-color: #f8fafc;
+  border-color: hsl(214, 30%, 95%);
   border-color: var(--color-light);
 }
 
 .btn-light:hover,
 .btn-light:focus {
-  color: #0f172a;
+  color: hsl(222, 47%, 11%);
   color: var(--color-dark);
-  background-color: #e4e4e7;
+  background-color: hsl(240, 6%, 90%);
   background-color: var(--color-gray-200);
-  border-color: #e4e4e7;
+  border-color: hsl(240, 6%, 90%);
   border-color: var(--color-gray-200);
 }
 
 .btn-dark {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #0f172a;
+  background-color: hsl(222, 47%, 11%);
   background-color: var(--color-dark);
-  border-color: #0f172a;
+  border-color: hsl(222, 47%, 11%);
   border-color: var(--color-dark);
 }
 
 .btn-dark:hover,
 .btn-dark:focus {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #27272a;
+  background-color: hsl(240, 4%, 16%);
   background-color: var(--color-gray-800);
-  border-color: #27272a;
+  border-color: hsl(240, 4%, 16%);
   border-color: var(--color-gray-800);
 }
 
 /* Outline Buttons */
 
 .btn-outline-primary {
-  color: #4f46e5;
+  color: hsl(217, 91%, 60%);
   color: var(--color-primary);
   background-color: transparent;
-  border-color: #4f46e5;
+  border-color: hsl(217, 91%, 60%);
   border-color: var(--color-primary);
 }
 
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #4f46e5;
+  background-color: hsl(217, 91%, 60%);
   background-color: var(--color-primary);
-  border-color: #4f46e5;
+  border-color: hsl(217, 91%, 60%);
   border-color: var(--color-primary);
 }
 
 .btn-outline-secondary {
-  color: #64748b;
+  color: hsl(215, 25%, 47%);
   color: var(--color-secondary);
   background-color: transparent;
-  border-color: #64748b;
+  border-color: hsl(215, 25%, 47%);
   border-color: var(--color-secondary);
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #64748b;
+  background-color: hsl(215, 25%, 47%);
   background-color: var(--color-secondary);
-  border-color: #64748b;
+  border-color: hsl(215, 25%, 47%);
   border-color: var(--color-secondary);
 }
 
@@ -2766,7 +2683,7 @@ pre code {
 /* Text Button (No Background) */
 
 .btn-text {
-  color: #4f46e5;
+  color: hsl(217, 91%, 60%);
   color: var(--color-primary);
   background-color: transparent;
   border-color: transparent;
@@ -2776,7 +2693,7 @@ pre code {
 
 .btn-text:hover,
 .btn-text:focus {
-  color: #4338ca;
+  color: hsl(217, 91%, 50%);
   color: var(--color-primary-hover);
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -3007,9 +2924,9 @@ pre code {
 /* Color Variants */
 
 .card-primary {
-  background-color: #4f46e5;
+  background-color: hsl(217, 91%, 60%);
   background-color: var(--color-primary);
-  border-color: #4f46e5;
+  border-color: hsl(217, 91%, 60%);
   border-color: var(--color-primary);
   color: #fff;
 }
@@ -3062,36 +2979,36 @@ pre code {
   border-radius: calc(0.5rem - 1px);
   border-radius: calc(var(--border-radius-lg) - 1px);
   background-color: rgba(0, 0, 0, 0.5);
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
 }
 
 /* Card Color Variants */
 
 .card-secondary {
-  background-color: #64748b;
+  background-color: hsl(215, 25%, 47%);
   background-color: var(--color-secondary);
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  border-color: #64748b;
+  border-color: hsl(215, 25%, 47%);
   border-color: var(--color-secondary);
 }
 
 .card-light {
-  background-color: #f8fafc;
+  background-color: hsl(214, 30%, 95%);
   background-color: var(--color-light);
-  color: #0f172a;
+  color: hsl(222, 47%, 11%);
   color: var(--color-dark);
-  border-color: #f8fafc;
+  border-color: hsl(214, 30%, 95%);
   border-color: var(--color-light);
 }
 
 .card-dark {
-  background-color: #0f172a;
+  background-color: hsl(222, 47%, 11%);
   background-color: var(--color-dark);
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  border-color: #0f172a;
+  border-color: hsl(222, 47%, 11%);
   border-color: var(--color-dark);
 }
 
@@ -3123,27 +3040,27 @@ pre code {
 .form-control:focus {
   color: var(--color-text-primary);
   background-color: var(--color-bg-input);
-  border-color: #4f46e5;
+  border-color: hsl(217, 91%, 60%);
   border-color: var(--color-primary);
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(74, 108, 247, 0.25);
 }
 
 .form-control::-moz-placeholder {
-  color: #71717a;
+  color: hsl(240, 4%, 46%);
   color: var(--color-text-muted);
   opacity: 1;
 }
 
 .form-control::placeholder {
-  color: #71717a;
+  color: hsl(240, 4%, 46%);
   color: var(--color-text-muted);
   opacity: 1;
 }
 
 .form-control:disabled,
 .form-control[readonly] {
-  background-color: #e4e4e7;
+  background-color: hsl(240, 6%, 90%);
   background-color: var(--color-gray-200);
   opacity: 1;
 }
@@ -3161,7 +3078,7 @@ pre code {
   margin-top: 0.25rem;
   font-size: 0.875rem;
   font-size: var(--font-size-sm);
-  color: #71717a;
+  color: hsl(240, 4%, 46%);
   color: var(--color-text-muted);
 }
 
@@ -3223,9 +3140,9 @@ select.form-control::-ms-expand {
 }
 
 .form-check-input:checked {
-  background-color: #4f46e5;
+  background-color: hsl(217, 91%, 60%);
   background-color: var(--color-primary);
-  border-color: #4f46e5;
+  border-color: hsl(217, 91%, 60%);
   border-color: var(--color-primary);
 }
 
@@ -3274,7 +3191,7 @@ select.form-control::-ms-expand {
 
 .was-validated .form-control:valid,
 .form-control.is-valid {
-  border-color: #10b981;
+  border-color: hsl(158, 84%, 41%);
   border-color: var(--color-success);
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -3285,7 +3202,7 @@ select.form-control::-ms-expand {
 
 .was-validated .form-control:invalid,
 .form-control.is-invalid {
-  border-color: #ef4444;
+  border-color: hsl(0, 84%, 60%);
   border-color: var(--color-danger);
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -3304,12 +3221,12 @@ select.form-control::-ms-expand {
 }
 
 .valid-feedback {
-  color: #10b981;
+  color: hsl(158, 84%, 41%);
   color: var(--color-success);
 }
 
 .invalid-feedback {
-  color: #ef4444;
+  color: hsl(0, 84%, 60%);
   color: var(--color-danger);
 }
 
@@ -3354,7 +3271,7 @@ select.form-control::-ms-expand {
   color: var(--color-text-primary);
   text-align: center;
   white-space: nowrap;
-  background-color: #e4e4e7;
+  background-color: hsl(240, 6%, 90%);
   background-color: var(--color-gray-200);
   border: 1px solid var(--color-border);
   border-radius: 0.25rem;
@@ -3404,7 +3321,7 @@ select.form-control::-ms-expand {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #4f46e5;
+  color: hsl(217, 91%, 60%);
   color: var(--color-primary);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3414,12 +3331,12 @@ select.form-control::-ms-expand {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #4338ca;
+  color: hsl(217, 91%, 50%);
   color: var(--color-primary-hover);
 }
 
 .nav-link.disabled {
-  color: #a1a1aa;
+  color: hsl(240, 5%, 65%);
   color: var(--color-gray-400);
   pointer-events: none;
   cursor: default;
@@ -3442,13 +3359,13 @@ select.form-control::-ms-expand {
 
 .nav-tabs .nav-link:hover,
 .nav-tabs .nav-link:focus {
-  border-color: #e4e4e7 #e4e4e7 var(--color-border);
+  border-color: hsl(240, 6%, 90%) hsl(240, 6%, 90%) var(--color-border);
   border-color: var(--color-gray-200) var(--color-gray-200) var(--color-border);
 }
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #3f3f46;
+  color: hsl(240, 5%, 26%);
   color: var(--color-gray-700);
   background-color: var(--color-bg-card);
   border-color: var(--color-border) var(--color-border) var(--color-bg-card);
@@ -3463,9 +3380,9 @@ select.form-control::-ms-expand {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #4f46e5;
+  background-color: hsl(217, 91%, 60%);
   background-color: var(--color-primary);
 }
 
@@ -3573,19 +3490,19 @@ select.form-control::-ms-expand {
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
-  color: #4f46e5;
+  color: hsl(217, 91%, 60%);
   color: var(--color-primary);
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
-  color: #a1a1aa;
+  color: hsl(240, 5%, 65%);
   color: var(--color-gray-400);
 }
 
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-text {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
 }
 
@@ -3636,7 +3553,7 @@ select.form-control::-ms-expand {
 }
 
 .navbar-dark .navbar-toggler {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
   border-color: rgba(255, 255, 255, 0.1);
 }
@@ -3656,22 +3573,22 @@ select.form-control::-ms-expand {
 /* Color variants */
 
 .navbar-primary {
-  background-color: #4f46e5;
+  background-color: hsl(217, 91%, 60%);
   background-color: var(--color-primary);
 }
 
 .navbar-secondary {
-  background-color: #64748b;
+  background-color: hsl(215, 25%, 47%);
   background-color: var(--color-secondary);
 }
 
 .navbar-light {
-  background-color: #f8fafc;
+  background-color: hsl(214, 30%, 95%);
   background-color: var(--color-light);
 }
 
 .navbar-dark {
-  background-color: #0f172a;
+  background-color: hsl(222, 47%, 11%);
   background-color: var(--color-dark);
 }
 
@@ -3854,7 +3771,7 @@ select.form-control::-ms-expand {
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #71717a;
+  color: hsl(240, 4%, 46%);
   color: var(--color-text-muted);
   text-align: left;
 }
@@ -3918,26 +3835,26 @@ caption {
 /* Alert Variants */
 
 .alert-primary {
-  color: #4f46e5;
+  color: hsl(217, 91%, 60%);
   color: var(--color-primary);
   background-color: rgba(74, 108, 247, 0.15);
   border-color: rgba(74, 108, 247, 0.4);
 }
 
 .alert-primary .alert-link {
-  color: #4f46e5;
+  color: hsl(217, 91%, 60%);
   color: var(--color-primary);
 }
 
 .alert-secondary {
-  color: #64748b;
+  color: hsl(215, 25%, 47%);
   color: var(--color-secondary);
   background-color: rgba(117, 127, 158, 0.15);
   border-color: rgba(117, 127, 158, 0.4);
 }
 
 .alert-secondary .alert-link {
-  color: #64748b;
+  color: hsl(215, 25%, 47%);
   color: var(--color-secondary);
 }
 
@@ -3992,7 +3909,7 @@ caption {
 }
 
 .alert-dark {
-  color: #0f172a;
+  color: hsl(222, 47%, 11%);
   color: var(--color-dark);
   background-color: rgba(29, 33, 68, 0.15);
   border-color: rgba(29, 33, 68, 0.4);
@@ -4048,9 +3965,9 @@ caption {
   vertical-align: baseline;
   border-radius: 9999px;
   border-radius: var(--border-radius-full);
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #64748b;
+  background-color: hsl(215, 25%, 47%);
   background-color: var(--color-secondary);
 }
 
@@ -4065,124 +3982,124 @@ caption {
 /* Badge Variants */
 
 .badge-primary {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #4f46e5;
+  background-color: hsl(217, 91%, 60%);
   background-color: var(--color-primary);
 }
 
 .badge-secondary {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #64748b;
+  background-color: hsl(215, 25%, 47%);
   background-color: var(--color-secondary);
 }
 
 .badge-success {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #10b981;
+  background-color: hsl(158, 84%, 41%);
   background-color: var(--color-success);
 }
 
 .badge-info {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #06b6d4;
+  background-color: hsl(188, 94%, 43%);
   background-color: var(--color-info);
 }
 
 .badge-warning {
-  color: #0f172a;
+  color: hsl(222, 47%, 11%);
   color: var(--color-dark);
-  background-color: #f59e0b;
+  background-color: hsl(35, 92%, 50%);
   background-color: var(--color-warning);
 }
 
 .badge-danger {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #ef4444;
+  background-color: hsl(0, 84%, 60%);
   background-color: var(--color-danger);
 }
 
 .badge-light {
-  color: #0f172a;
+  color: hsl(222, 47%, 11%);
   color: var(--color-dark);
-  background-color: #f8fafc;
+  background-color: hsl(214, 30%, 95%);
   background-color: var(--color-light);
 }
 
 .badge-dark {
-  color: #ffffff;
+  color: hsl(0, 0%, 98%);
   color: var(--color-white);
-  background-color: #0f172a;
+  background-color: hsl(222, 47%, 11%);
   background-color: var(--color-dark);
 }
 
 /* Outline Badge Variants */
 
 .badge-outline-primary {
-  color: #4f46e5;
+  color: hsl(217, 91%, 60%);
   color: var(--color-primary);
   background-color: transparent;
-  border: 1px solid #4f46e5;
+  border: 1px solid hsl(217, 91%, 60%);
   border: 1px solid var(--color-primary);
 }
 
 .badge-outline-secondary {
-  color: #64748b;
+  color: hsl(215, 25%, 47%);
   color: var(--color-secondary);
   background-color: transparent;
-  border: 1px solid #64748b;
+  border: 1px solid hsl(215, 25%, 47%);
   border: 1px solid var(--color-secondary);
 }
 
 .badge-outline-success {
-  color: #10b981;
+  color: hsl(158, 84%, 41%);
   color: var(--color-success);
   background-color: transparent;
-  border: 1px solid #10b981;
+  border: 1px solid hsl(158, 84%, 41%);
   border: 1px solid var(--color-success);
 }
 
 .badge-outline-info {
-  color: #06b6d4;
+  color: hsl(188, 94%, 43%);
   color: var(--color-info);
   background-color: transparent;
-  border: 1px solid #06b6d4;
+  border: 1px solid hsl(188, 94%, 43%);
   border: 1px solid var(--color-info);
 }
 
 .badge-outline-warning {
-  color: #f59e0b;
+  color: hsl(35, 92%, 50%);
   color: var(--color-warning);
   background-color: transparent;
-  border: 1px solid #f59e0b;
+  border: 1px solid hsl(35, 92%, 50%);
   border: 1px solid var(--color-warning);
 }
 
 .badge-outline-danger {
-  color: #ef4444;
+  color: hsl(0, 84%, 60%);
   color: var(--color-danger);
   background-color: transparent;
-  border: 1px solid #ef4444;
+  border: 1px solid hsl(0, 84%, 60%);
   border: 1px solid var(--color-danger);
 }
 
 .badge-outline-light {
-  color: #52525b;
+  color: hsl(240, 5%, 34%);
   color: var(--color-gray-600);
   background-color: transparent;
-  border: 1px solid #f8fafc;
+  border: 1px solid hsl(214, 30%, 95%);
   border: 1px solid var(--color-light);
 }
 
 .badge-outline-dark {
-  color: #0f172a;
+  color: hsl(222, 47%, 11%);
   color: var(--color-dark);
   background-color: transparent;
-  border: 1px solid #0f172a;
+  border: 1px solid hsl(222, 47%, 11%);
   border: 1px solid var(--color-dark);
 }
 
@@ -4262,7 +4179,7 @@ a.badge:focus {
   cursor: pointer;
   width: 100%;
   height: 100%;
-  background-color: #d4d4d8;
+  background-color: hsl(240, 5%, 84%);
   background-color: var(--color-gray-300);
   border-radius: 9999px;
   border-radius: var(--border-radius-full);
@@ -4279,7 +4196,7 @@ a.badge:focus {
   left: 0.25rem;
   width: 0.9rem;
   height: 0.9rem;
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 98%);
   background-color: var(--color-white);
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
@@ -4288,7 +4205,7 @@ a.badge:focus {
 }
 
 .toggle input:checked + label {
-  background-color: #4f46e5;
+  background-color: hsl(217, 91%, 60%);
   background-color: var(--color-primary);
 }
 

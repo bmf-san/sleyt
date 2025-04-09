@@ -1,17 +1,14 @@
 /**
- * BMF CSS Framework - Dark Mode
+ * BMF CSS Framework - Dark Mode (shadcn/ui inspired)
  */
 
 /* 自動的にダークモードを適用するメディアクエリ */
 @media (prefers-color-scheme: dark) {
   :root {
-    /*
-     * Base Colors Override - Dark Mode
-     */
-    --color-primary: hsl(246, 83%, 59%);
-    --color-primary-hover: hsl(246, 83%, 49%);
-    --color-secondary: hsl(215, 25%, 65%);
-    --color-secondary-hover: hsl(215, 25%, 75%);
+    --color-primary: hsl(217, 91%, 60%);
+    --color-primary-hover: hsl(217, 91%, 50%);
+    --color-secondary: hsl(210, 15%, 65%);
+    --color-secondary-hover: hsl(210, 15%, 55%);
     --color-success: hsl(158, 84%, 41%);
     --color-info: hsl(188, 94%, 43%);
     --color-warning: hsl(35, 92%, 50%);
@@ -19,61 +16,51 @@
     --color-light: hsl(222, 32%, 18%);
     --color-dark: hsl(214, 30%, 95%);
 
-    /*
-     * Semantic Tokens - Dark Mode
-     */
-
-    /* Text Colors */
-    --color-text-default: var(--color-gray-50);
-    --color-text-muted: var(--color-gray-400);
-    --color-text-disabled: var(--color-gray-600);
+    /* Semantic Tokens - Dark Mode */
+    --color-text-default: hsl(240, 6%, 95%);
+    --color-text-muted: hsl(240, 5%, 65%);
+    --color-text-disabled: hsl(240, 5%, 45%);
     --color-text-accent: var(--color-primary);
-    --color-text-inverted: var(--color-gray-900);
-    --color-text-link: var(--color-primary-lighter);
-    --color-text-link-hover: var(--color-primary-lightest);
+    --color-text-inverted: hsl(240, 10%, 5%);
+    --color-text-link: hsl(217, 91%, 70%);
+    --color-text-link-hover: hsl(217, 91%, 80%);
 
-    /* Background Colors */
-    --color-bg-default: var(--color-gray-900);
-    --color-bg-subtle: var(--color-gray-800);
-    --color-bg-muted: var(--color-gray-700);
-    --color-bg-emphasis: var(--color-gray-600);
-    --color-bg-inverted: var(--color-white);
-    --color-bg-overlay: hsla(var(--color-black), var(--opacity-high));
+    --color-bg-default: hsl(240, 10%, 5%);
+    --color-bg-subtle: hsl(240, 6%, 10%);
+    --color-bg-muted: hsl(240, 5%, 14%);
+    --color-bg-emphasis: hsl(240, 5%, 20%);
+    --color-bg-inverted: hsl(0, 0%, 100%);
+    --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
 
-    /* Border Colors */
-    --color-border-default: var(--color-gray-700);
-    --color-border-muted: var(--color-gray-600);
+    --color-border-default: hsl(240, 4%, 22%);
+    --color-border-muted: hsl(240, 4%, 28%);
     --color-border-accent: var(--color-primary);
     --color-border-critical: var(--color-danger);
 
-    /* Focus Rings */
-    --color-ring-default: hsla(var(--color-dark), var(--opacity-low));
-    --color-ring-accent: hsla(var(--color-primary), var(--opacity-medium));
-    --color-ring-critical: hsla(var(--color-danger), var(--opacity-medium));
+    --color-ring-default: hsla(0, 0%, 100%, 0.1);
+    --color-ring-accent: hsla(217, 91%, 60%, 0.3);
+    --color-ring-critical: hsla(0, 84%, 60%, 0.3);
 
     /* Grayscale Overrides */
-    --color-gray-50: hsl(240, 10%, 4%);
-    --color-gray-100: hsl(240, 5%, 16%);
-    --color-gray-200: hsl(240, 5%, 26%);
-    --color-gray-300: hsl(240, 5%, 34%);
-    --color-gray-400: hsl(240, 4%, 46%);
-    --color-gray-500: hsl(240, 5%, 65%);
-    --color-gray-600: hsl(240, 5%, 84%);
-    --color-gray-700: hsl(240, 6%, 90%);
-    --color-gray-800: hsl(240, 5%, 96%);
-    --color-gray-900: hsl(0, 0%, 98%);
+    --color-gray-50: hsl(240, 6%, 95%);
+    --color-gray-100: hsl(240, 6%, 90%);
+    --color-gray-200: hsl(240, 6%, 80%);
+    --color-gray-300: hsl(240, 5%, 65%);
+    --color-gray-400: hsl(240, 5%, 50%);
+    --color-gray-500: hsl(240, 4%, 40%);
+    --color-gray-600: hsl(240, 5%, 30%);
+    --color-gray-700: hsl(240, 5%, 20%);
+    --color-gray-800: hsl(240, 6%, 12%);
+    --color-gray-900: hsl(240, 10%, 5%);
   }
 }
 
 /* マニュアルダークモード切り替え用のクラス */
 .dark-mode {
-  /*
-   * Base Colors Override - Dark Mode
-   */
-  --color-primary: hsl(246, 83%, 59%);
-  --color-primary-hover: hsl(246, 83%, 49%);
-  --color-secondary: hsl(215, 25%, 65%);
-  --color-secondary-hover: hsl(215, 25%, 75%);
+  --color-primary: hsl(217, 91%, 60%);
+  --color-primary-hover: hsl(217, 91%, 50%);
+  --color-secondary: hsl(210, 15%, 65%);
+  --color-secondary-hover: hsl(210, 15%, 55%);
   --color-success: hsl(158, 84%, 41%);
   --color-info: hsl(188, 94%, 43%);
   --color-warning: hsl(35, 92%, 50%);
@@ -81,47 +68,38 @@
   --color-light: hsl(222, 32%, 18%);
   --color-dark: hsl(214, 30%, 95%);
 
-  /*
-   * Semantic Tokens - Dark Mode
-   */
-
-  /* Text Colors */
-  --color-text-default: var(--color-gray-50);
-  --color-text-muted: var(--color-gray-400);
-  --color-text-disabled: var(--color-gray-600);
+  --color-text-default: hsl(240, 6%, 95%);
+  --color-text-muted: hsl(240, 5%, 65%);
+  --color-text-disabled: hsl(240, 5%, 45%);
   --color-text-accent: var(--color-primary);
-  --color-text-inverted: var(--color-gray-900);
-  --color-text-link: var(--color-primary-lighter);
-  --color-text-link-hover: var(--color-primary-lightest);
+  --color-text-inverted: hsl(240, 10%, 5%);
+  --color-text-link: hsl(217, 91%, 70%);
+  --color-text-link-hover: hsl(217, 91%, 80%);
 
-  /* Background Colors */
-  --color-bg-default: var(--color-gray-900);
-  --color-bg-subtle: var(--color-gray-800);
-  --color-bg-muted: var(--color-gray-700);
-  --color-bg-emphasis: var(--color-gray-600);
-  --color-bg-inverted: var(--color-white);
-  --color-bg-overlay: hsla(var(--color-black), var(--opacity-high));
+  --color-bg-default: hsl(240, 10%, 5%);
+  --color-bg-subtle: hsl(240, 6%, 10%);
+  --color-bg-muted: hsl(240, 5%, 14%);
+  --color-bg-emphasis: hsl(240, 5%, 20%);
+  --color-bg-inverted: hsl(0, 0%, 100%);
+  --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
 
-  /* Border Colors */
-  --color-border-default: var(--color-gray-700);
-  --color-border-muted: var(--color-gray-600);
+  --color-border-default: hsl(240, 4%, 22%);
+  --color-border-muted: hsl(240, 4%, 28%);
   --color-border-accent: var(--color-primary);
   --color-border-critical: var(--color-danger);
 
-  /* Focus Rings */
-  --color-ring-default: hsla(var(--color-white), var(--opacity-low));
-  --color-ring-accent: hsla(var(--color-primary), var(--opacity-medium));
-  --color-ring-critical: hsla(var(--color-danger), var(--opacity-medium));
+  --color-ring-default: hsla(0, 0%, 100%, 0.1);
+  --color-ring-accent: hsla(217, 91%, 60%, 0.3);
+  --color-ring-critical: hsla(0, 84%, 60%, 0.3);
 
-  /* Grayscale Overrides */
-  --color-gray-50: hsl(240, 10%, 4%);
-  --color-gray-100: hsl(240, 5%, 16%);
-  --color-gray-200: hsl(240, 5%, 26%);
-  --color-gray-300: hsl(240, 5%, 34%);
-  --color-gray-400: hsl(240, 4%, 46%);
-  --color-gray-500: hsl(240, 5%, 65%);
-  --color-gray-600: hsl(240, 5%, 84%);
-  --color-gray-700: hsl(240, 6%, 90%);
-  --color-gray-800: hsl(240, 5%, 96%);
-  --color-gray-900: hsl(0, 0%, 98%);
+  --color-gray-50: hsl(240, 6%, 95%);
+  --color-gray-100: hsl(240, 6%, 90%);
+  --color-gray-200: hsl(240, 6%, 80%);
+  --color-gray-300: hsl(240, 5%, 65%);
+  --color-gray-400: hsl(240, 5%, 50%);
+  --color-gray-500: hsl(240, 4%, 40%);
+  --color-gray-600: hsl(240, 5%, 30%);
+  --color-gray-700: hsl(240, 5%, 20%);
+  --color-gray-800: hsl(240, 6%, 12%);
+  --color-gray-900: hsl(240, 10%, 5%);
 }

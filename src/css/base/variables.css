@@ -9,9 +9,8 @@
    */
 
   /* Brand Colors */
-  --color-primary: hsl(246, 83%, 59%);
-  --color-primary-hover: hsl(246, 83%, 49%);
-
+  --color-primary: hsl(217, 91%, 60%);
+  --color-primary-hover: hsl(217, 91%, 50%);
   --color-secondary: hsl(215, 25%, 47%);
   --color-secondary-hover: hsl(215, 25%, 35%);
 
@@ -22,7 +21,7 @@
   --color-danger: hsl(0, 84%, 60%);
 
   /* Neutral Colors */
-  --color-white: hsl(0, 0%, 100%);
+  --color-white: hsl(0, 0%, 98%);
   --color-black: hsl(240, 10%, 4%);
   --color-light: hsl(214, 30%, 95%);
   --color-dark: hsl(222, 47%, 11%);
@@ -37,7 +36,7 @@
   --color-gray-600: hsl(240, 5%, 34%);
   --color-gray-700: hsl(240, 5%, 26%);
   --color-gray-800: hsl(240, 4%, 16%);
-  --color-gray-900: hsl(240, 4%, 10%);
+  --color-gray-900: hsl(240, 4%, 12%);
 
   /* Opacity Levels - 透明度の標準値 */
   --opacity-low: 0.1;
