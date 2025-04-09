@@ -4,12 +4,41 @@
 
 /* Small (sm) */
 @media (min-width: 640px) {
+  /* Display */
   .sm\:flex { display: flex; }
   .sm\:hidden { display: none; }
   .sm\:block { display: block; }
   .sm\:inline-block { display: inline-block; }
   .sm\:inline { display: inline; }
   .sm\:grid { display: grid; }
+
+  /* Accessibility */
+  .sm\:sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sm\:not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* Visibility */
+  .sm\:visible { visibility: visible; }
+  .sm\:invisible { visibility: hidden; }
 
   /* Grid columns for small screens */
   .sm\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
@@ -60,12 +89,41 @@
 
 /* Medium (md) */
 @media (min-width: 768px) {
+  /* Display */
   .md\:flex { display: flex; }
   .md\:hidden { display: none; }
   .md\:block { display: block; }
   .md\:inline-block { display: inline-block; }
   .md\:inline { display: inline; }
   .md\:grid { display: grid; }
+
+  /* Accessibility */
+  .md\:sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .md\:not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* Visibility */
+  .md\:visible { visibility: visible; }
+  .md\:invisible { visibility: hidden; }
 
   /* Grid columns for medium screens */
   .md\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
@@ -116,12 +174,41 @@
 
 /* Large (lg) */
 @media (min-width: 1024px) {
+  /* Display */
   .lg\:flex { display: flex; }
   .lg\:hidden { display: none; }
   .lg\:block { display: block; }
   .lg\:inline-block { display: inline-block; }
   .lg\:inline { display: inline; }
   .lg\:grid { display: grid; }
+
+  /* Accessibility */
+  .lg\:sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .lg\:not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* Visibility */
+  .lg\:visible { visibility: visible; }
+  .lg\:invisible { visibility: hidden; }
 
   /* Grid columns for large screens */
   .lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
@@ -172,12 +259,41 @@
 
 /* Extra Large (xl) */
 @media (min-width: 1280px) {
+  /* Display */
   .xl\:flex { display: flex; }
   .xl\:hidden { display: none; }
   .xl\:block { display: block; }
   .xl\:inline-block { display: inline-block; }
   .xl\:inline { display: inline; }
   .xl\:grid { display: grid; }
+
+  /* Accessibility */
+  .xl\:sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .xl\:not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* Visibility */
+  .xl\:visible { visibility: visible; }
+  .xl\:invisible { visibility: hidden; }
 
   /* Grid columns for extra large screens */
   .xl\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }

@@ -7,7 +7,7 @@
     "build": "postcss src/css/index.css -o dist/bmf.css",
     "build:min": "postcss src/css/index.css -o dist/bmf.min.css --env production",
     "dev": "postcss src/css/index.css -o dist/bmf.css --watch",
-    "docs": "cp dist/bmf.css docs/bmf.css && cp dist/bmf.min.css docs/bmf.min.css"
+    "build-docs": "postcss src/css/index.css -o dist/bmf.min.css --env production && cp dist/bmf.min.css docs/bmf.min.css"
   },
   "keywords": [
     "css",

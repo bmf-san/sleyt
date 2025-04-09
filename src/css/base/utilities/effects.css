@@ -1,0 +1,17 @@
+/**
+ * BMF CSS Framework - Effects Utilities
+ */
+
+/* Shadows */
+.shadow-none { box-shadow: none; }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow { box-shadow: var(--shadow); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+/* Transitions */
+.transition { transition: var(--transition-base); }
+.transition-slow { transition: var(--transition-slow); }
+.transition-fast { transition: var(--transition-fast); }
+.transition-none { transition-property: none; }
