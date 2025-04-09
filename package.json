@@ -1,0 +1,57 @@
+{
+  "name": "sleyt",
+  "version": "1.0.0",
+  "description": "ミニマルでモダンなCSSフレームワーク",
+  "main": "dist/css/index.css",
+  "files": [
+    "dist/css/*.css",
+    "src/**/*.css",
+    "LICENSE",
+    "README.md"
+  ],
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss src/index.css --dir dist/css",
+    "watch:css": "postcss src/index.css --dir dist/css --watch",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
+    "prepublishOnly": "npm run build:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmf-san/sleyt.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "minimal",
+    "modern",
+    "utility-first"
+  ],
+  "author": "bmf-san",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bmf-san/sleyt/issues"
+  },
+  "homepage": "https://github.com/bmf-san/sleyt#readme",
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

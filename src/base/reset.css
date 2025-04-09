@@ -1,0 +1,67 @@
+/* リセットとベーススタイル */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--line-height-normal);
+  text-rendering: optimizelegibility;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: none;
+}
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover, a:focus {
+  color: var(--color-primary-hover);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+code, pre {
+  font-family: var(--font-family-code);
+}
+
+pre {
+  background-color: var(--bg-code);
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  padding: var(--spacing-4);
+}
+
+code {
+  background-color: var(--bg-code);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}

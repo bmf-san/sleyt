@@ -1,0 +1,147 @@
+/* CSS変数 */
+:root {
+  /* Slateグレースケール - 青みを抑えてより黒に近く */
+  --color-slate-50: hsl(205deg 12% 98%);
+  --color-slate-100: hsl(205deg 12% 95%);
+  --color-slate-200: hsl(205deg 10% 90%);
+  --color-slate-300: hsl(205deg 8% 82%);
+  --color-slate-400: hsl(205deg 6% 65%);
+  --color-slate-500: hsl(205deg 5% 48%);
+  --color-slate-600: hsl(205deg 5% 36%);
+  --color-slate-700: hsl(205deg 5% 27%);
+  --color-slate-800: hsl(205deg 5% 17%);
+  --color-slate-900: hsl(205deg 5% 10%);
+  --color-slate-950: hsl(205deg 5% 5%);
+
+  /* カラーパレット - 落ち着いたトーン */
+  --color-success-500: hsl(150deg 35% 40%);
+  --color-success-600: hsl(150deg 35% 35%);
+  --color-success-700: hsl(150deg 35% 30%);
+
+  --color-danger-500: hsl(355deg 50% 45%);
+  --color-danger-600: hsl(355deg 50% 40%);
+  --color-danger-700: hsl(355deg 50% 35%);
+
+  --color-warning-400: hsl(40deg 70% 50%);
+  --color-warning-500: hsl(40deg 70% 45%);
+  --color-warning-600: hsl(40deg 70% 40%);
+
+  --color-info-500: hsl(215deg 45% 45%);
+  --color-info-600: hsl(215deg 45% 40%);
+  --color-info-700: hsl(215deg 45% 35%);
+
+  /* 透明感のある色 */
+  --color-transparent-light: hsl(205deg 12% 98% / 80%);
+  --color-transparent-dark: hsl(205deg 5% 5% / 80%);
+
+  /* カラーテーマ - カスタムカラー */
+  --color-primary: var(--color-slate-900);
+  --color-primary-hover: var(--color-slate-800);
+  --color-secondary: var(--color-slate-700);
+  --color-secondary-hover: var(--color-slate-600);
+  --color-success: var(--color-success-600);
+  --color-success-hover: var(--color-success-700);
+  --color-danger: var(--color-danger-600);
+  --color-danger-hover: var(--color-danger-700);
+  --color-warning: var(--color-warning-500);
+  --color-warning-hover: var(--color-warning-600);
+  --color-info: var(--color-info-600);
+  --color-info-hover: var(--color-info-700);
+  --color-light: var(--color-slate-100);
+  --color-light-hover: var(--color-slate-200);
+  --color-dark: var(--color-slate-900);
+  --color-dark-hover: var(--color-slate-800);
+
+  /* テキストカラー */
+  --text-primary: var(--color-slate-900);
+  --text-secondary: var(--color-slate-700);
+  --text-disabled: var(--color-slate-500);
+  --text-on-primary: var(--color-slate-50);
+  --text-on-dark: var(--color-slate-50);
+  --text-on-success: var(--color-slate-50);
+  --text-on-danger: var(--color-slate-50);
+  --text-on-warning: var(--color-slate-900);
+  --text-on-info: var(--color-slate-50);
+
+  /* 背景色 */
+  --bg-body: hsl(0deg 0% 100%);
+  --bg-surface: var(--color-slate-50);
+  --bg-elevated: hsl(0deg 0% 100%);
+  --bg-card: hsl(0deg 0% 100%);
+  --bg-code: var(--color-slate-100);
+
+  /* ボーダー */
+  --border-color: var(--color-slate-200);
+  --border-color-transparent: rgb(255 255 255 / 20%);
+  --border-color-transparent-dark: rgb(0 0 0 / 20%);
+  --border-radius-sm: 0.25rem;
+  --border-radius: 0.375rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-full: 9999px;
+
+  /* シャドウ */
+  --shadow-sm: 0 1px 2px 0 hsl(205deg 5% 10% / 5%);
+  --shadow: 0 1px 3px 0 hsl(205deg 5% 10% / 10%), 0 1px 2px -1px hsl(205deg 5% 10% / 10%);
+  --shadow-md: 0 4px 6px -1px hsl(205deg 5% 10% / 10%), 0 2px 4px -2px hsl(205deg 5% 10% / 10%);
+  --shadow-lg: 0 10px 15px -3px hsl(205deg 5% 10% / 10%), 0 4px 6px -4px hsl(205deg 5% 10% / 10%);
+  --shadow-xl: 0 20px 25px -5px hsl(205deg 5% 10% / 10%), 0 8px 10px -6px hsl(205deg 5% 10% / 10%);
+
+  /* スペーシング */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+
+  /* フォント */
+  --font-family-base: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  --font-family-code: ui-monospace, sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* フォントウェイト */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* 行の高さ */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* トランジション */
+  --transition-base: all 0.2s ease-in-out;
+  --transition-slow: all 0.3s ease-in-out;
+  --transition-fast: all 0.1s ease-in-out;
+
+  /* z-index */
+  --z-index-0: 0;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50;
+  --z-index-auto: auto;
+}
