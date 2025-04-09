@@ -5,97 +5,159 @@
 /* 自動的にダークモードを適用するメディアクエリ */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark Theme Colors Override */
+    /*
+     * Base Colors Override - Dark Mode
+     */
     --color-primary: #4f46e5;
+    --color-primary-rgb: 79, 70, 229;
     --color-primary-hover: #4338ca;
     --color-secondary: #94a3b8;
+    --color-secondary-rgb: 148, 163, 184;
     --color-secondary-hover: #cbd5e1;
     --color-success: #10b981;
+    --color-success-rgb: 16, 185, 129;
     --color-info: #06b6d4;
+    --color-info-rgb: 6, 182, 212;
     --color-warning: #f59e0b;
+    --color-warning-rgb: 245, 158, 11;
     --color-danger: #ef4444;
+    --color-danger-rgb: 239, 68, 68;
     --color-light: #1e293b;
+    --color-light-rgb: 30, 41, 59;
     --color-dark: #f8fafc;
+    --color-dark-rgb: 248, 250, 252;
 
-    /* Semantic Tokens - Content  */
-    --text-default: #f8fafc;
-    --text-muted: #94a3b8;
-    --text-disabled: #475569;
-    --text-inverted: #0f172a;
+    /*
+     * Semantic Tokens - Dark Mode
+     */
 
-    /* Semantic Tokens - Background */
-    --bg-default: #0f172a;
-    --bg-subtle: #1e293b;
-    --bg-muted: #334155;
-    --bg-emphasis: #475569;
-    --bg-inverted: #f8fafc;
+    /* Text Colors */
+    --color-text-default: var(--color-gray-50);
+    --color-text-muted: var(--color-gray-400);
+    --color-text-disabled: var(--color-gray-600);
+    --color-text-accent: var(--color-primary);
+    --color-text-inverted: var(--color-gray-900);
+    --color-text-link: var(--color-primary-lighter);
+    --color-text-link-hover: var(--color-primary-lightest);
 
-    /* Semantic Tokens - Border */
-    --border-default: #334155;
-    --border-subtle: #1e293b;
-    --border-emphasis: #475569;
+    /* Background Colors */
+    --color-bg-default: var(--color-gray-900);
+    --color-bg-subtle: var(--color-gray-800);
+    --color-bg-muted: var(--color-gray-700);
+    --color-bg-emphasis: var(--color-gray-600);
+    --color-bg-inverted: var(--color-white);
+    --color-bg-overlay: hsla(240, 10%, 4%, var(--opacity-high));
 
-    /* Semantic Tokens - Ring */
-    --ring-default: rgba(203, 213, 225, 0.2);
+    /* Border Colors */
+    --color-border-default: var(--color-gray-700);
+    --color-border-muted: var(--color-gray-600);
+    --color-border-accent: var(--color-primary);
+    --color-border-critical: var(--color-danger);
+
+    /* Focus Rings */
+    --color-ring-default: hsla(0, 0%, 100%, var(--opacity-low));
+    --color-ring-accent: hsla(246, 83%, 59%, var(--opacity-medium));
+    --color-ring-critical: hsla(0, 84%, 60%, var(--opacity-medium));
 
     /* Grayscale Overrides */
     --color-gray-50: #18181b;
+    --color-gray-50-rgb: 24, 24, 27;
     --color-gray-100: #27272a;
+    --color-gray-100-rgb: 39, 39, 42;
     --color-gray-200: #3f3f46;
+    --color-gray-200-rgb: 63, 63, 70;
     --color-gray-300: #52525b;
+    --color-gray-300-rgb: 82, 82, 91;
     --color-gray-400: #71717a;
+    --color-gray-400-rgb: 113, 113, 122;
     --color-gray-500: #a1a1aa;
+    --color-gray-500-rgb: 161, 161, 170;
     --color-gray-600: #d4d4d8;
+    --color-gray-600-rgb: 212, 212, 216;
     --color-gray-700: #e4e4e7;
+    --color-gray-700-rgb: 228, 228, 231;
     --color-gray-800: #f4f4f5;
+    --color-gray-800-rgb: 244, 244, 245;
     --color-gray-900: #fafafa;
+    --color-gray-900-rgb: 250, 250, 250;
   }
 }
 
 /* マニュアルダークモード切り替え用のクラス */
 .dark-mode {
-  /* Dark Theme Colors Override */
+  /*
+   * Base Colors Override - Dark Mode
+   */
   --color-primary: #4f46e5;
+  --color-primary-rgb: 79, 70, 229;
   --color-primary-hover: #4338ca;
   --color-secondary: #94a3b8;
+  --color-secondary-rgb: 148, 163, 184;
   --color-secondary-hover: #cbd5e1;
   --color-success: #10b981;
+  --color-success-rgb: 16, 185, 129;
   --color-info: #06b6d4;
+  --color-info-rgb: 6, 182, 212;
   --color-warning: #f59e0b;
+  --color-warning-rgb: 245, 158, 11;
   --color-danger: #ef4444;
+  --color-danger-rgb: 239, 68, 68;
   --color-light: #1e293b;
+  --color-light-rgb: 30, 41, 59;
   --color-dark: #f8fafc;
+  --color-dark-rgb: 248, 250, 252;
 
-  /* Semantic Tokens - Content  */
-  --text-default: #f8fafc;
-  --text-muted: #94a3b8;
-  --text-disabled: #475569;
-  --text-inverted: #0f172a;
+  /*
+   * Semantic Tokens - Dark Mode
+   */
 
-  /* Semantic Tokens - Background */
-  --bg-default: #0f172a;
-  --bg-subtle: #1e293b;
-  --bg-muted: #334155;
-  --bg-emphasis: #475569;
-  --bg-inverted: #f8fafc;
+  /* Text Colors */
+  --color-text-default: var(--color-gray-50);
+  --color-text-muted: var(--color-gray-400);
+  --color-text-disabled: var(--color-gray-600);
+  --color-text-accent: var(--color-primary);
+  --color-text-inverted: var(--color-gray-900);
+  --color-text-link: var(--color-primary-lighter);
+  --color-text-link-hover: var(--color-primary-lightest);
 
-  /* Semantic Tokens - Border */
-  --border-default: #334155;
-  --border-subtle: #1e293b;
-  --border-emphasis: #475569;
+  /* Background Colors */
+  --color-bg-default: var(--color-gray-900);
+  --color-bg-subtle: var(--color-gray-800);
+  --color-bg-muted: var(--color-gray-700);
+  --color-bg-emphasis: var(--color-gray-600);
+  --color-bg-inverted: var(--color-white);
+  --color-bg-overlay: hsla(240, 10%, 4%, var(--opacity-high));
 
-  /* Semantic Tokens - Ring */
-  --ring-default: rgba(203, 213, 225, 0.2);
+  /* Border Colors */
+  --color-border-default: var(--color-gray-700);
+  --color-border-muted: var(--color-gray-600);
+  --color-border-accent: var(--color-primary);
+  --color-border-critical: var(--color-danger);
+
+  /* Focus Rings */
+  --color-ring-default: hsla(0, 0%, 100%, var(--opacity-low));
+  --color-ring-accent: hsla(246, 83%, 59%, var(--opacity-medium));
+  --color-ring-critical: hsla(0, 84%, 60%, var(--opacity-medium));
 
   /* Grayscale Overrides */
   --color-gray-50: #18181b;
+  --color-gray-50-rgb: 24, 24, 27;
   --color-gray-100: #27272a;
+  --color-gray-100-rgb: 39, 39, 42;
   --color-gray-200: #3f3f46;
+  --color-gray-200-rgb: 63, 63, 70;
   --color-gray-300: #52525b;
+  --color-gray-300-rgb: 82, 82, 91;
   --color-gray-400: #71717a;
+  --color-gray-400-rgb: 113, 113, 122;
   --color-gray-500: #a1a1aa;
+  --color-gray-500-rgb: 161, 161, 170;
   --color-gray-600: #d4d4d8;
+  --color-gray-600-rgb: 212, 212, 216;
   --color-gray-700: #e4e4e7;
+  --color-gray-700-rgb: 228, 228, 231;
   --color-gray-800: #f4f4f5;
+  --color-gray-800-rgb: 244, 244, 245;
   --color-gray-900: #fafafa;
+  --color-gray-900-rgb: 250, 250, 250;
 }

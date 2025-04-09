@@ -3,31 +3,71 @@
  */
 
 :root {
-  /* Colors - Light Theme */
-  --color-primary: #4f46e5;
-  --color-primary-hover: #4338ca;
-  --color-secondary: #64748b;
-  --color-secondary-hover: #475569;
-  --color-success: #10b981;
-  --color-info: #06b6d4;
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
-  --color-light: #f8fafc;
-  --color-dark: #0f172a;
+  /*
+   * Color System - Base Colors
+   * これらの色がカラーシステムの基盤となります
+   */
 
-  /* Grayscale */
-  --color-white: #ffffff;
-  --color-gray-50: #fafafa;
-  --color-gray-100: #f4f4f5;
-  --color-gray-200: #e4e4e7;
-  --color-gray-300: #d4d4d8;
-  --color-gray-400: #a1a1aa;
-  --color-gray-500: #71717a;
-  --color-gray-600: #52525b;
-  --color-gray-700: #3f3f46;
-  --color-gray-800: #27272a;
-  --color-gray-900: #18181b;
-  --color-black: #09090b;
+  /* Brand Colors */
+  --color-primary: hsl(246, 83%, 59%);
+  --color-primary-rgb: 79, 70, 229;
+  --color-primary-hover: hsl(246, 83%, 49%);
+
+  --color-secondary: hsl(215, 25%, 47%);
+  --color-secondary-rgb: 100, 116, 139;
+  --color-secondary-hover: hsl(215, 25%, 35%);
+
+  /* Feedback Colors */
+  --color-success: hsl(158, 84%, 41%);
+  --color-success-rgb: 16, 185, 129;
+
+  --color-info: hsl(188, 94%, 43%);
+  --color-info-rgb: 6, 182, 212;
+
+  --color-warning: hsl(35, 92%, 50%);
+  --color-warning-rgb: 245, 158, 11;
+
+  --color-danger: hsl(0, 84%, 60%);
+  --color-danger-rgb: 239, 68, 68;
+
+  /* Neutral Colors */
+  --color-white: hsl(0, 0%, 100%);
+  --color-white-rgb: 255, 255, 255;
+  --color-black: hsl(240, 10%, 4%);
+  --color-black-rgb: 9, 9, 11;
+
+  --color-light: hsl(214, 30%, 95%);
+  --color-light-rgb: 248, 250, 252;
+  --color-dark: hsl(222, 47%, 11%);
+  --color-dark-rgb: 15, 23, 42;
+
+  /* Grayscale - Neutral Color Palette */
+  --color-gray-50: hsl(0, 0%, 98%);
+  --color-gray-50-rgb: 250, 250, 250;
+  --color-gray-100: hsl(240, 5%, 96%);
+  --color-gray-100-rgb: 244, 244, 245;
+  --color-gray-200: hsl(240, 6%, 90%);
+  --color-gray-200-rgb: 228, 228, 231;
+  --color-gray-300: hsl(240, 5%, 84%);
+  --color-gray-300-rgb: 212, 212, 216;
+  --color-gray-400: hsl(240, 5%, 65%);
+  --color-gray-400-rgb: 161, 161, 170;
+  --color-gray-500: hsl(240, 4%, 46%);
+  --color-gray-500-rgb: 113, 113, 122;
+  --color-gray-600: hsl(240, 5%, 34%);
+  --color-gray-600-rgb: 82, 82, 91;
+  --color-gray-700: hsl(240, 5%, 26%);
+  --color-gray-700-rgb: 63, 63, 70;
+  --color-gray-800: hsl(240, 4%, 16%);
+  --color-gray-800-rgb: 39, 39, 42;
+  --color-gray-900: hsl(240, 4%, 10%);
+  --color-gray-900-rgb: 24, 24, 27;
+
+  /* Opacity Levels - 透明度の標準値 */
+  --opacity-low: 0.1;
+  --opacity-medium: 0.3;
+  --opacity-high: 0.6;
+  --opacity-full: 1;
 
   /* Typography */
   --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -84,11 +124,11 @@
   --border-radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 2px 0 hsla(0, 0%, 0%, var(--opacity-low));
+  --shadow: 0 1px 3px 0 hsla(0, 0%, 0%, var(--opacity-low)), 0 1px 2px 0 hsla(0, 0%, 0%, 0.06);
+  --shadow-md: 0 4px 6px -1px hsla(0, 0%, 0%, var(--opacity-low)), 0 2px 4px -1px hsla(0, 0%, 0%, 0.06);
+  --shadow-lg: 0 10px 15px -3px hsla(0, 0%, 0%, var(--opacity-low)), 0 4px 6px -2px hsla(0, 0%, 0%, 0.05);
+  --shadow-xl: 0 20px 25px -5px hsla(0, 0%, 0%, var(--opacity-low)), 0 10px 10px -5px hsla(0, 0%, 0%, 0.04);
 
   /* Transitions */
   --transition-base: all 0.2s ease-in-out;

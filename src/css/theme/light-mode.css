@@ -1,31 +1,40 @@
 /**
- * BMF CSS Framework - Colors
+ * BMF CSS Framework - Light Mode
  */
 
 :root {
-  /* Light Theme - Semantic Tokens */
-  --text-default: #18181b;
-  --text-muted: #71717a;
-  --text-disabled: #a1a1aa;
-  --text-accent: var(--color-primary);
-  --text-inverted: var(--color-white);
+  /*
+   * Semantic Tokens - Light Mode
+   * ベースカラーをUIの意味と用途に合わせて割り当てます
+   */
 
-  --bg-default: #ffffff;
-  --bg-subtle: #fafafa;
-  --bg-muted: #f4f4f5;
-  --bg-emphasis: #e4e4e7;
-  --bg-inverted: var(--color-dark);
+  /* Text Colors */
+  --color-text-default: var(--color-gray-900);
+  --color-text-muted: var(--color-gray-500);
+  --color-text-disabled: var(--color-gray-400);
+  --color-text-accent: var(--color-primary);
+  --color-text-inverted: var(--color-white);
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-hover);
+
+  /* Background Colors */
+  --color-bg-default: var(--color-white);
+  --color-bg-subtle: var(--color-gray-50);
+  --color-bg-muted: var(--color-gray-100);
+  --color-bg-emphasis: var(--color-gray-200);
+  --color-bg-inverted: var(--color-dark);
+  --color-bg-overlay: hsla(240, 10%, 4%, var(--opacity-medium));
 
   /* Border Colors */
-  --border-default: #e4e4e7;
-  --border-muted: #d4d4d8;
-  --border-accent: var(--color-primary);
-  --border-critical: var(--color-danger);
+  --color-border-default: var(--color-gray-200);
+  --color-border-muted: var(--color-gray-300);
+  --color-border-accent: var(--color-primary);
+  --color-border-critical: var(--color-danger);
 
-  /* Ring/Focus Colors */
-  --ring-default: rgba(24, 24, 27, 0.1);
-  --ring-accent: rgba(79, 70, 229, 0.3);
-  --ring-critical: rgba(239, 68, 68, 0.3);
+  /* Focus Rings */
+  --color-ring-default: hsla(240, 4%, 10%, var(--opacity-low));
+  --color-ring-accent: hsla(246, 83%, 59%, var(--opacity-medium));
+  --color-ring-critical: hsla(0, 84%, 60%, var(--opacity-medium));
 }
 
 /* Text Colors */
@@ -41,11 +50,11 @@
 .text-black { color: var(--color-black); }
 
 /* Semantic Text Colors */
-.text-default { color: var(--text-default); }
-.text-muted { color: var(--text-muted); }
-.text-disabled { color: var(--text-disabled); }
-.text-accent { color: var(--text-accent); }
-.text-inverted { color: var(--text-inverted); }
+.text-default { color: var(--color-text-default); }
+.text-muted { color: var(--color-text-muted); }
+.text-disabled { color: var(--color-text-disabled); }
+.text-accent { color: var(--color-text-accent); }
+.text-inverted { color: var(--color-text-inverted); }
 
 /* Grayscale Text */
 .text-gray-50 { color: var(--color-gray-50); }
@@ -73,11 +82,11 @@
 .bg-transparent { background-color: transparent; }
 
 /* Semantic Background Colors */
-.bg-default { background-color: var(--bg-default); }
-.bg-subtle { background-color: var(--bg-subtle); }
-.bg-muted { background-color: var(--bg-muted); }
-.bg-emphasis { background-color: var(--bg-emphasis); }
-.bg-inverted { background-color: var(--bg-inverted); }
+.bg-default { background-color: var(--color-bg-default); }
+.bg-subtle { background-color: var(--color-bg-subtle); }
+.bg-muted { background-color: var(--color-bg-muted); }
+.bg-emphasis { background-color: var(--color-bg-emphasis); }
+.bg-inverted { background-color: var(--color-bg-inverted); }
 
 /* Grayscale Background */
 .bg-gray-50 { background-color: var(--color-gray-50); }
@@ -92,10 +101,10 @@
 .bg-gray-900 { background-color: var(--color-gray-900); }
 
 /* Legacy Theme Classes (for backwards compatibility) */
-.bg-body { background-color: var(--bg-default); }
-.bg-card { background-color: var(--bg-default); }
-.bg-surface { background-color: var(--bg-default); }
-.bg-input { background-color: var(--bg-muted); }
+.bg-body { background-color: var(--color-bg-default); }
+.bg-card { background-color: var(--color-bg-default); }
+.bg-surface { background-color: var(--color-bg-default); }
+.bg-input { background-color: var(--color-bg-muted); }
 
 /* Border Colors */
 .border-primary { border-color: var(--color-primary); }
@@ -110,10 +119,10 @@
 .border-black { border-color: var(--color-black); }
 
 /* Semantic Border Colors */
-.border-default { border-color: var(--border-default); }
-.border-muted { border-color: var(--border-muted); }
-.border-accent { border-color: var(--border-accent); }
-.border-critical { border-color: var(--border-critical); }
+.border-default { border-color: var(--color-border-default); }
+.border-muted { border-color: var(--color-border-muted); }
+.border-accent { border-color: var(--color-border-accent); }
+.border-critical { border-color: var(--color-border-critical); }
 
 /* Grayscale Border */
 .border-gray-50 { border-color: var(--color-gray-50); }
@@ -128,11 +137,11 @@
 .border-gray-900 { border-color: var(--color-gray-900); }
 
 /* Default Border */
-.border { border: 1px solid var(--border-default); }
-.border-t { border-top: 1px solid var(--border-default); }
-.border-r { border-right: 1px solid var(--border-default); }
-.border-b { border-bottom: 1px solid var(--border-default); }
-.border-l { border-left: 1px solid var(--border-default); }
+.border { border: 1px solid var(--color-border-default); }
+.border-t { border-top: 1px solid var(--color-border-default); }
+.border-r { border-right: 1px solid var(--color-border-default); }
+.border-b { border-bottom: 1px solid var(--color-border-default); }
+.border-l { border-left: 1px solid var(--color-border-default); }
 
 /* Border Widths */
 .border-0 { border-width: 0; }

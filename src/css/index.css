@@ -10,7 +10,7 @@
 @import "./base/typography.css";
 
 /* Theme */
-@import "./theme/colors.css";
+@import "./theme/light-mode.css";
 @import "./theme/dark-mode.css";
 
 /* Layout */
