@@ -2,10 +2,10 @@
  * BMF CSS Framework - Dark Mode
  */
 
-/* 自動的にダークモードを適用するメディアクエリ */
+/* Automatic dark mode application via media query */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* データビジュアライズ用トークン */
+    /* Data Visualization Tokens */
     --color-primary: hsl(217, 91%, 60%);
     --color-primary-hover: hsl(217, 91%, 50%);
     --color-secondary: hsl(210, 15%, 65%);
@@ -15,11 +15,11 @@
     --color-warning: hsl(35, 92%, 50%);
     --color-danger: hsl(0, 84%, 60%);
 
-    /* ライト/ダークテーマトークン */
+    /* Light/Dark Theme Tokens */
     --color-gray-100: var(--color-gray-200);
     --color-gray-800: var(--color-gray-800);
 
-    /* テキストトークン */
+    /* Text Tokens */
     --color-text-default: var(--color-gray-50);
     --color-text-muted: var(--color-gray-300);
     --color-text-disabled: var(--color-gray-500);
@@ -28,7 +28,7 @@
     --color-text-link: var(--color-primary);
     --color-text-link-hover: hsl(217, 91%, 75%);
 
-    /* 背景トークン */
+    /* Background Tokens */
     --color-bg-default: var(--color-gray-900);
     --color-bg-subtle: var(--color-gray-800);
     --color-bg-muted: var(--color-gray-700);
@@ -36,18 +36,18 @@
     --color-bg-inverted: var(--color-gray-50);
     --color-bg-overlay: hsla(var(--color-gray-900), var(--opacity-high));
 
-    /* ボーダートークン */
+    /* Border Tokens */
     --color-border-default: var(--color-gray-700);
     --color-border-muted: var(--color-gray-600);
     --color-border-accent: var(--color-primary);
     --color-border-critical: var(--color-danger);
 
-    /* フォーカストークン */
+    /* Focus Tokens */
     --color-ring-default: hsla(0, 0%, 100%, 0.1);
     --color-ring-accent: hsla(217, 91%, 60%, 0.3);
     --color-ring-critical: hsla(0, 84%, 60%, 0.3);
 
-    /* シャドウトークン */
+    /* Shadow Tokens */
     --shadow-color: 240 3% 2%;
     --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.2);
     --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.2),
@@ -59,14 +59,14 @@
     --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.2),
                 0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
 
-    /* 状態トークン */
+    /* State Tokens */
     --color-state-hover: var(--color-gray-800);
     --color-state-focus: var(--color-gray-700);
     --color-state-active: var(--color-gray-600);
     --color-state-selected: var(--color-gray-700);
     --color-state-disabled: var(--color-gray-600);
 
-    /* グレースケールオーバーライド */
+    /* Grayscale Overrides */
     --color-gray-50: hsl(240, 6%, 95%);
     --color-gray-100: hsl(240, 6%, 90%);
     --color-gray-200: hsl(240, 6%, 80%);
@@ -80,9 +80,9 @@
   }
 }
 
-/* マニュアルダークモード切り替え用のクラス */
+/* Manual dark mode class for toggle functionality */
 .dark-mode {
-  /* データビジュアライズ用トークン */
+  /* Data Visualization Tokens */
   --color-primary: hsl(217, 91%, 60%);
   --color-primary-hover: hsl(217, 91%, 50%);
   --color-secondary: hsl(210, 15%, 65%);
@@ -92,11 +92,11 @@
   --color-warning: hsl(35, 92%, 50%);
   --color-danger: hsl(0, 84%, 60%);
 
-  /* ライト/ダークテーマトークン */
+  /* Light/Dark Theme Tokens */
   --color-gray-100: var(--color-gray-200);
   --color-gray-800: var(--color-gray-800);
 
-  /* テキストトークン */
+  /* Text Tokens */
   --color-text-default: var(--color-gray-50);
   --color-text-muted: var(--color-gray-300);
   --color-text-disabled: var(--color-gray-500);
@@ -105,7 +105,7 @@
   --color-text-link: var(--color-primary);
   --color-text-link-hover: hsl(217, 91%, 75%);
 
-  /* 背景トークン */
+  /* Background Tokens */
   --color-bg-default: var(--color-gray-900);
   --color-bg-subtle: var(--color-gray-800);
   --color-bg-muted: var(--color-gray-700);
@@ -113,37 +113,37 @@
   --color-bg-inverted: var(--color-gray-50);
   --color-bg-overlay: hsla(var(--color-gray-900), var(--opacity-high));
 
-  /* ボーダートークン */
+  /* Border Tokens */
   --color-border-default: var(--color-gray-700);
   --color-border-muted: var(--color-gray-600);
   --color-border-accent: var(--color-primary);
   --color-border-critical: var(--color-danger);
 
-  /* フォーカストークン */
+  /* Focus Tokens */
   --color-ring-default: hsla(0, 0%, 100%, 0.1);
   --color-ring-accent: hsla(217, 91%, 60%, 0.3);
   --color-ring-critical: hsla(0, 84%, 60%, 0.3);
 
-  /* シャドウトークン */
+  /* Shadow Tokens */
   --shadow-color: 240 3% 2%;
   --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.2);
   --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.2),
             0 1px 2px hsl(var(--shadow-color) / 0.15);
   --shadow-md: 0 4px 6px -1px hsl(var(--shadow-color) / 0.2),
-                0 2px 4px -1px hsl(var(--shadow-color) / 0.15);
+              0 2px 4px -1px hsl(var(--shadow-color) / 0.15);
   --shadow-lg: 0 10px 15px -3px hsl(var(--shadow-color) / 0.2),
-                0 4px 6px -2px hsl(var(--shadow-color) / 0.15);
+              0 4px 6px -2px hsl(var(--shadow-color) / 0.15);
   --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.2),
-                0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
+              0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
 
-  /* 状態トークン */
+  /* State Tokens */
   --color-state-hover: var(--color-gray-800);
   --color-state-focus: var(--color-gray-700);
   --color-state-active: var(--color-gray-600);
   --color-state-selected: var(--color-gray-700);
   --color-state-disabled: var(--color-gray-600);
 
-  /* グレースケールオーバーライド */
+  /* Grayscale Overrides */
   --color-gray-50: hsl(240, 6%, 95%);
   --color-gray-100: hsl(240, 6%, 90%);
   --color-gray-200: hsl(240, 6%, 80%);
@@ -156,7 +156,7 @@
   --color-gray-900: hsl(240, 10%, 5%);
 }
 
-/* ダークモード用ユーティリティクラス - 参考情報 (CSSファイルの分離時に移行可能) */
+/* Dark mode utility classes - Reference information (can be moved to separate CSS files) */
 /*
 .dark .text-primary { color: var(--color-primary); }
 .dark .text-secondary { color: var(--color-secondary); }

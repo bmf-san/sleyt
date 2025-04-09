@@ -3,7 +3,7 @@
  */
 
 :root {
-  /* データビジュアライズ用トークン */
+  /* Data Visualization Tokens */
   --color-primary: hsl(217, 91%, 60%);
   --color-primary-hover: hsl(217, 91%, 50%);
   --color-secondary: hsl(215, 25%, 47%);
@@ -13,11 +13,11 @@
   --color-warning: hsl(35, 92%, 50%);
   --color-danger: hsl(0, 84%, 60%);
 
-  /* ライト/ダークテーマトークン */
+  /* Light/Dark Theme Tokens */
   --color-gray-100: var(--color-gray-100);
   --color-gray-800: var(--color-gray-800);
 
-  /* テキストトークン */
+  /* Text Tokens */
   --color-text-default: var(--color-gray-900);
   --color-text-muted: var(--color-gray-500);
   --color-text-disabled: var(--color-gray-400);
@@ -26,7 +26,7 @@
   --color-text-link: var(--color-primary);
   --color-text-link-hover: var(--color-primary-hover);
 
-  /* 背景トークン */
+  /* Background Tokens */
   --color-bg-default: var(--color-gray-50);
   --color-bg-subtle: var(--color-gray-100);
   --color-bg-muted: var(--color-gray-200);
@@ -34,18 +34,18 @@
   --color-bg-inverted: var(--color-gray-800);
   --color-bg-overlay: hsla(var(--color-gray-900), var(--opacity-medium));
 
-  /* ボーダートークン */
+  /* Border Tokens */
   --color-border-default: var(--color-gray-200);
   --color-border-muted: var(--color-gray-300);
   --color-border-accent: var(--color-primary);
   --color-border-critical: var(--color-danger);
 
-  /* フォーカストークン */
+  /* Focus Tokens */
   --color-ring-default: hsla(var(--color-gray-900), var(--opacity-low));
   --color-ring-accent: hsla(var(--color-primary), var(--opacity-medium));
   --color-ring-critical: hsla(var(--color-danger), var(--opacity-medium));
 
-  /* シャドウトークン */
+  /* Shadow Tokens */
   --shadow-color: 220 3% 15%;
   --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.1);
   --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.1),
@@ -57,7 +57,7 @@
   --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.1),
               0 10px 10px -5px hsl(var(--shadow-color) / 0.04);
 
-  /* 状態トークン */
+  /* State Tokens */
   --color-state-hover: var(--color-gray-100);
   --color-state-focus: var(--color-gray-200);
   --color-state-active: var(--color-gray-300);
@@ -65,7 +65,7 @@
   --color-state-disabled: var(--color-gray-200);
 }
 
-/* ユーティリティクラス */
+/* Utility Classes */
 /* Text Colors */
 .text-primary { color: var(--color-primary); }
 .text-secondary { color: var(--color-secondary); }
