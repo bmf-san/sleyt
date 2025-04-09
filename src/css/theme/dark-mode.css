@@ -1,5 +1,5 @@
 /**
- * BMF CSS Framework - Dark Mode (shadcn/ui inspired)
+ * BMF CSS Framework - Dark Mode
  */
 
 /* 自動的にダークモードを適用するメディアクエリ */
@@ -16,8 +16,8 @@
     --color-danger: hsl(0, 84%, 60%);
 
     /* ライト/ダークテーマトークン */
-    --color-light: var(--color-gray-200);
-    --color-dark: var(--color-gray-800);
+    --color-gray-100: var(--color-gray-200);
+    --color-gray-800: var(--color-gray-800);
 
     /* テキストトークン */
     --color-text-default: var(--color-gray-50);
@@ -34,7 +34,7 @@
     --color-bg-muted: var(--color-gray-700);
     --color-bg-emphasis: var(--color-gray-600);
     --color-bg-inverted: var(--color-gray-50);
-    --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
+    --color-bg-overlay: hsla(var(--color-gray-900), var(--opacity-high));
 
     /* ボーダートークン */
     --color-border-default: var(--color-gray-700);
@@ -93,8 +93,8 @@
   --color-danger: hsl(0, 84%, 60%);
 
   /* ライト/ダークテーマトークン */
-  --color-light: var(--color-gray-200);
-  --color-dark: var(--color-gray-800);
+  --color-gray-100: var(--color-gray-200);
+  --color-gray-800: var(--color-gray-800);
 
   /* テキストトークン */
   --color-text-default: var(--color-gray-50);
@@ -111,7 +111,7 @@
   --color-bg-muted: var(--color-gray-700);
   --color-bg-emphasis: var(--color-gray-600);
   --color-bg-inverted: var(--color-gray-50);
-  --color-bg-overlay: hsla(240, 10%, 4%, 0.6);
+  --color-bg-overlay: hsla(var(--color-gray-900), var(--opacity-high));
 
   /* ボーダートークン */
   --color-border-default: var(--color-gray-700);
@@ -130,11 +130,11 @@
   --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.2),
             0 1px 2px hsl(var(--shadow-color) / 0.15);
   --shadow-md: 0 4px 6px -1px hsl(var(--shadow-color) / 0.2),
-              0 2px 4px -1px hsl(var(--shadow-color) / 0.15);
+                0 2px 4px -1px hsl(var(--shadow-color) / 0.15);
   --shadow-lg: 0 10px 15px -3px hsl(var(--shadow-color) / 0.2),
-              0 4px 6px -2px hsl(var(--shadow-color) / 0.15);
+                0 4px 6px -2px hsl(var(--shadow-color) / 0.15);
   --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.2),
-              0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
+                0 10px 10px -5px hsl(var(--shadow-color) / 0.15);
 
   /* 状態トークン */
   --color-state-hover: var(--color-gray-800);
@@ -155,3 +155,45 @@
   --color-gray-800: hsl(240, 6%, 12%);
   --color-gray-900: hsl(240, 10%, 5%);
 }
+
+/* ダークモード用ユーティリティクラス - 参考情報 (CSSファイルの分離時に移行可能) */
+/*
+.dark .text-primary { color: var(--color-primary); }
+.dark .text-secondary { color: var(--color-secondary); }
+.dark .text-success { color: var(--color-success); }
+.dark .text-info { color: var(--color-info); }
+.dark .text-warning { color: var(--color-warning); }
+.dark .text-danger { color: var(--color-danger); }
+.dark .text-light { color: var(--color-gray-100); }
+.dark .text-dark { color: var(--color-gray-800); }
+.dark .text-white { color: var(--color-gray-50); }
+.dark .text-black { color: var(--color-gray-900); }
+
+.dark .text-default { color: var(--color-text-default); }
+.dark .text-muted { color: var(--color-text-muted); }
+.dark .text-disabled { color: var(--color-text-disabled); }
+.dark .text-accent { color: var(--color-text-accent); }
+.dark .text-inverted { color: var(--color-text-inverted); }
+
+.dark .bg-primary { background-color: var(--color-primary); }
+.dark .bg-secondary { background-color: var(--color-secondary); }
+.dark .bg-success { background-color: var(--color-success); }
+.dark .bg-info { background-color: var(--color-info); }
+.dark .bg-warning { background-color: var(--color-warning); }
+.dark .bg-danger { background-color: var(--color-danger); }
+.dark .bg-light { background-color: var(--color-gray-100); }
+.dark .bg-dark { background-color: var(--color-gray-800); }
+.dark .bg-white { background-color: var(--color-gray-50); }
+.dark .bg-black { background-color: var(--color-gray-900); }
+
+.dark .bg-default { background-color: var(--color-bg-default); }
+.dark .bg-subtle { background-color: var(--color-bg-subtle); }
+.dark .bg-muted { background-color: var(--color-bg-muted); }
+.dark .bg-emphasis { background-color: var(--color-bg-emphasis); }
+.dark .bg-inverted { background-color: var(--color-bg-inverted); }
+
+.dark .border-default { border-color: var(--color-border-default); }
+.dark .border-muted { border-color: var(--color-border-muted); }
+.dark .border-accent { border-color: var(--color-border-accent); }
+.dark .border-critical { border-color: var(--color-border-critical); }
+*/

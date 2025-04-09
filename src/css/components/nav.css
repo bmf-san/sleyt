@@ -61,7 +61,7 @@
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: var(--color-white);
+  color: var(--color-gray-50);
   background-color: var(--color-primary);
 }
 
@@ -170,7 +170,7 @@
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-text {
-  color: var(--color-white);
+  color: var(--color-gray-50);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -218,7 +218,7 @@
 }
 
 .navbar-dark .navbar-toggler {
-  color: var(--color-white);
+  color: var(--color-gray-50);
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -243,9 +243,9 @@
 }
 
 .navbar-light {
-  background-color: var(--color-light);
+  background-color: var(--color-gray-100);
 }
 
 .navbar-dark {
-  background-color: var(--color-dark);
+  background-color: var(--color-gray-800);
 }

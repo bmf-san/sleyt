@@ -13,7 +13,7 @@
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: var(--border-radius-full);
-  color: var(--color-white);
+  color: var(--color-gray-50);
   background-color: var(--color-secondary);
 }
 
@@ -26,43 +26,43 @@
 
 /* Badge Variants */
 .badge-primary {
-  color: var(--color-white);
+  color: var(--color-gray-50);
   background-color: var(--color-primary);
 }
 
 .badge-secondary {
-  color: var(--color-white);
+  color: var(--color-gray-50);
   background-color: var(--color-secondary);
 }
 
 .badge-success {
-  color: var(--color-white);
+  color: var(--color-gray-50);
   background-color: var(--color-success);
 }
 
 .badge-info {
-  color: var(--color-white);
+  color: var(--color-gray-50);
   background-color: var(--color-info);
 }
 
 .badge-warning {
-  color: var(--color-dark);
+  color: var(--color-gray-800);
   background-color: var(--color-warning);
 }
 
 .badge-danger {
-  color: var(--color-white);
+  color: var(--color-gray-50);
   background-color: var(--color-danger);
 }
 
 .badge-light {
-  color: var(--color-dark);
-  background-color: var(--color-light);
+  color: var(--color-gray-800);
+  background-color: var(--color-gray-100);
 }
 
 .badge-dark {
-  color: var(--color-white);
-  background-color: var(--color-dark);
+  color: var(--color-gray-50);
+  background-color: var(--color-gray-800);
 }
 
 /* Outline Badge Variants */
@@ -105,13 +105,13 @@
 .badge-outline-light {
   color: var(--color-gray-600);
   background-color: transparent;
-  border: 1px solid var(--color-light);
+  border: 1px solid var(--color-gray-100);
 }
 
 .badge-outline-dark {
-  color: var(--color-dark);
+  color: var(--color-gray-800);
   background-color: transparent;
-  border: 1px solid var(--color-dark);
+  border: 1px solid var(--color-gray-800);
 }
 
 /* Badge Sizes */

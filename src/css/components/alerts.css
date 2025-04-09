@@ -117,7 +117,7 @@
 }
 
 .alert-dark {
-  color: var(--color-dark);
+  color: var(--color-gray-800);
   background-color: rgba(29, 33, 68, 0.15);
   border-color: rgba(29, 33, 68, 0.4);
 }

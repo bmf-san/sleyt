@@ -20,12 +20,6 @@
   --color-warning: hsl(35, 92%, 50%);
   --color-danger: hsl(0, 84%, 60%);
 
-  /* Neutral Colors */
-  --color-white: hsl(0, 0%, 98%);
-  --color-black: hsl(240, 10%, 4%);
-  --color-light: hsl(214, 30%, 95%);
-  --color-dark: hsl(222, 47%, 11%);
-
   /* Grayscale - Neutral Color Palette */
   --color-gray-50: hsl(0, 0%, 98%);
   --color-gray-100: hsl(240, 5%, 96%);
@@ -37,6 +31,26 @@
   --color-gray-700: hsl(240, 5%, 26%);
   --color-gray-800: hsl(240, 4%, 16%);
   --color-gray-900: hsl(240, 4%, 12%);
+
+  /* ユーティリティカラー
+   * 汎用的な色の定義です。
+   * プライマリカラーやセカンダリカラーとは異なり、
+   * より自由な用途で使用できる基本的なカラーパレットを提供します。
+   *
+   * 使用例:
+   * - アクセントカラーとして
+   * - 装飾的な要素に
+   * - 特定の意味を持たない視覚的な区別が必要な場合
+   */
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-blue: hsl(217, 91%, 60%);
+  --color-red: hsl(0, 84%, 60%);
+  --color-green: hsl(158, 84%, 41%);
+  --color-yellow: hsl(35, 92%, 50%);
+  --color-purple: hsl(271, 100%, 40%);
+  --color-orange: hsl(25, 98%, 50%);
+  --color-gray: hsl(240, 4%, 46%);
 
   /* Opacity Levels - 透明度の標準値 */
   --opacity-low: 0.1;

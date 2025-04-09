@@ -3,40 +3,69 @@
  */
 
 :root {
-  /*
-   * Semantic Tokens - Light Mode
-   * ベースカラーをUIの意味と用途に合わせて割り当てます
-   */
+  /* データビジュアライズ用トークン */
+  --color-primary: hsl(217, 91%, 60%);
+  --color-primary-hover: hsl(217, 91%, 50%);
+  --color-secondary: hsl(215, 25%, 47%);
+  --color-secondary-hover: hsl(215, 25%, 35%);
+  --color-success: hsl(158, 84%, 41%);
+  --color-info: hsl(188, 94%, 43%);
+  --color-warning: hsl(35, 92%, 50%);
+  --color-danger: hsl(0, 84%, 60%);
 
-  /* Text Colors */
+  /* ライト/ダークテーマトークン */
+  --color-gray-100: var(--color-gray-100);
+  --color-gray-800: var(--color-gray-800);
+
+  /* テキストトークン */
   --color-text-default: var(--color-gray-900);
   --color-text-muted: var(--color-gray-500);
   --color-text-disabled: var(--color-gray-400);
   --color-text-accent: var(--color-primary);
-  --color-text-inverted: var(--color-white);
+  --color-text-inverted: var(--color-gray-50);
   --color-text-link: var(--color-primary);
   --color-text-link-hover: var(--color-primary-hover);
 
-  /* Background Colors */
-  --color-bg-default: var(--color-white);
-  --color-bg-subtle: var(--color-gray-50);
-  --color-bg-muted: var(--color-gray-100);
-  --color-bg-emphasis: var(--color-gray-200);
-  --color-bg-inverted: var(--color-dark);
-  --color-bg-overlay: hsla(var(--color-black), var(--opacity-medium));
+  /* 背景トークン */
+  --color-bg-default: var(--color-gray-50);
+  --color-bg-subtle: var(--color-gray-100);
+  --color-bg-muted: var(--color-gray-200);
+  --color-bg-emphasis: var(--color-gray-300);
+  --color-bg-inverted: var(--color-gray-800);
+  --color-bg-overlay: hsla(var(--color-gray-900), var(--opacity-medium));
 
-  /* Border Colors */
+  /* ボーダートークン */
   --color-border-default: var(--color-gray-200);
   --color-border-muted: var(--color-gray-300);
   --color-border-accent: var(--color-primary);
   --color-border-critical: var(--color-danger);
 
-  /* Focus Rings */
+  /* フォーカストークン */
   --color-ring-default: hsla(var(--color-gray-900), var(--opacity-low));
   --color-ring-accent: hsla(var(--color-primary), var(--opacity-medium));
   --color-ring-critical: hsla(var(--color-danger), var(--opacity-medium));
+
+  /* シャドウトークン */
+  --shadow-color: 220 3% 15%;
+  --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.1);
+  --shadow: 0 1px 3px hsl(var(--shadow-color) / 0.1),
+            0 1px 2px hsl(var(--shadow-color) / 0.06);
+  --shadow-md: 0 4px 6px -1px hsl(var(--shadow-color) / 0.1),
+              0 2px 4px -1px hsl(var(--shadow-color) / 0.06);
+  --shadow-lg: 0 10px 15px -3px hsl(var(--shadow-color) / 0.1),
+              0 4px 6px -2px hsl(var(--shadow-color) / 0.05);
+  --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-color) / 0.1),
+              0 10px 10px -5px hsl(var(--shadow-color) / 0.04);
+
+  /* 状態トークン */
+  --color-state-hover: var(--color-gray-100);
+  --color-state-focus: var(--color-gray-200);
+  --color-state-active: var(--color-gray-300);
+  --color-state-selected: var(--color-gray-200);
+  --color-state-disabled: var(--color-gray-200);
 }
 
+/* ユーティリティクラス */
 /* Text Colors */
 .text-primary { color: var(--color-primary); }
 .text-secondary { color: var(--color-secondary); }
@@ -44,10 +73,10 @@
 .text-info { color: var(--color-info); }
 .text-warning { color: var(--color-warning); }
 .text-danger { color: var(--color-danger); }
-.text-light { color: var(--color-light); }
-.text-dark { color: var(--color-dark); }
-.text-white { color: var(--color-white); }
-.text-black { color: var(--color-black); }
+.text-light { color: var(--color-gray-100); }
+.text-dark { color: var(--color-gray-800); }
+.text-white { color: var(--color-gray-50); }
+.text-black { color: var(--color-gray-900); }
 
 /* Semantic Text Colors */
 .text-default { color: var(--color-text-default); }
@@ -75,10 +104,10 @@
 .bg-info { background-color: var(--color-info); }
 .bg-warning { background-color: var(--color-warning); }
 .bg-danger { background-color: var(--color-danger); }
-.bg-light { background-color: var(--color-light); }
-.bg-dark { background-color: var(--color-dark); }
-.bg-white { background-color: var(--color-white); }
-.bg-black { background-color: var(--color-black); }
+.bg-light { background-color: var(--color-gray-100); }
+.bg-dark { background-color: var(--color-gray-800); }
+.bg-white { background-color: var(--color-gray-50); }
+.bg-black { background-color: var(--color-gray-900); }
 .bg-transparent { background-color: transparent; }
 
 /* Semantic Background Colors */
@@ -100,7 +129,7 @@
 .bg-gray-800 { background-color: var(--color-gray-800); }
 .bg-gray-900 { background-color: var(--color-gray-900); }
 
-/* Legacy Theme Classes (for backwards compatibility) */
+/* Legacy Theme Classes */
 .bg-body { background-color: var(--color-bg-default); }
 .bg-card { background-color: var(--color-bg-default); }
 .bg-surface { background-color: var(--color-bg-default); }
@@ -113,10 +142,10 @@
 .border-info { border-color: var(--color-info); }
 .border-warning { border-color: var(--color-warning); }
 .border-danger { border-color: var(--color-danger); }
-.border-light { border-color: var(--color-light); }
-.border-dark { border-color: var(--color-dark); }
-.border-white { border-color: var(--color-white); }
-.border-black { border-color: var(--color-black); }
+.border-light { border-color: var(--color-gray-100); }
+.border-dark { border-color: var(--color-gray-800); }
+.border-white { border-color: var(--color-gray-50); }
+.border-black { border-color: var(--color-gray-900); }
 
 /* Semantic Border Colors */
 .border-default { border-color: var(--color-border-default); }

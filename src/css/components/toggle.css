@@ -38,7 +38,7 @@
   left: 0.25rem;
   width: 0.9rem;
   height: 0.9rem;
-  background-color: var(--color-white);
+  background-color: var(--color-gray-50);
   border-radius: 50%;
   transition: var(--transition-base);
   z-index: 2;
