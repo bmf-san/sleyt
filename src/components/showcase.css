@@ -1,0 +1,6 @@
+/* ショーケース */
+.showcase {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-4);
+}

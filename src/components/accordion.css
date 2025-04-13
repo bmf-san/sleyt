@@ -1,0 +1,89 @@
+/* アコーディオン
+ * CSSのみで実装されたアコーディオンコンポーネント
+ * - チェックボックスとラベルを利用したハックでJavaScriptなしで動作
+ * - アクセシビリティのためにaria属性を活用
+ */
+
+.accordion {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-bottom: var(--spacing-4);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-toggle {
+  /* チェックボックスは視覚的に隠すが、アクセシビリティのために残す */
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.accordion-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: var(--bg-surface);
+}
+
+.accordion-label::after {
+  content: "+";
+  font-size: 1.25em;
+  font-weight: var(--font-weight-bold);
+  transition: transform 0.3s ease;
+}
+
+.accordion-toggle:checked + .accordion-label::after {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  padding: 0 var(--spacing-4);
+  overflow: hidden;
+  background-color: var(--bg-card);
+  transition: all 0.5s ease;
+  visibility: hidden;
+}
+
+.accordion-toggle:checked ~ .accordion-content {
+  max-height: 1000px; /* より大きな高さを確保 */
+  padding: var(--spacing-4);
+  visibility: visible;
+}
+
+/* バリエーション */
+.accordion-primary .accordion-label {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+}
+
+.accordion-secondary .accordion-label {
+  background-color: var(--color-secondary);
+  color: var(--text-on-primary);
+}
+
+/* レスポンシブ対応 */
+@media screen and (width <= 768px) {
+  .accordion-label {
+    padding: var(--spacing-3);
+  }
+
+  .accordion-toggle:checked ~ .accordion-content {
+    padding: var(--spacing-3);
+  }
+}

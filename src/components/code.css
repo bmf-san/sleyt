@@ -1,0 +1,11 @@
+/* コード */
+.code-preview {
+  background-color: var(--bg-code);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.code-preview pre {
+  margin: 0;
+  padding: var(--spacing-4);
+}

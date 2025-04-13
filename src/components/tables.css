@@ -1,0 +1,97 @@
+/* テーブル */
+.table {
+  border-collapse: collapse;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-4);
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border-top: 1px solid var(--border-color);
+  padding: var(--spacing-3);
+  vertical-align: top;
+}
+
+.table thead th {
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid var(--border-color);
+}
+
+.table-sm th,
+.table-sm td {
+  padding: var(--spacing-2);
+}
+
+.table-bordered {
+  border: 1px solid var(--border-color);
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--border-color);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: var(--color-slate-50);
+}
+
+.table-hover tbody tr:hover, .table-hover tbody tr:focus {
+  background-color: var(--color-slate-100);
+}
+
+/* ページネーション */
+.pagination {
+  border-radius: var(--border-radius);
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-item:first-child .page-link {
+  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  margin-left: 0;
+}
+
+.page-item:last-child .page-link {
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.page-item.active .page-link {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--text-on-primary);
+}
+
+.page-item.disabled .page-link {
+  color: var(--text-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.page-link {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  display: block;
+  line-height: var(--line-height-normal);
+  margin-left: -1px;
+  padding: var(--spacing-2) var(--spacing-3);
+  position: relative;
+}
+
+.page-link:hover, .page-link:focus {
+  background-color: var(--color-slate-100);
+  border-color: var(--border-color);
+  color: var(--color-primary);
+}
