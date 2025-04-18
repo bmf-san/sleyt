@@ -6,17 +6,24 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: チェックアウト
+      - uses: arduino/setup-task@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Node.jsセットアップ
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
           cache: 'npm'
 
-      - name: 依存関係インストール
+      - name: Install Dependencies
         run: npm ci
 
-      - name: スタイルリント実行
+      - name: Run lint css
         run: npm run lint:css
+
+      - name: Run lint html
+        run: npm run lint:html

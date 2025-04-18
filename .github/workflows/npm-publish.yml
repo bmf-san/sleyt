@@ -1,61 +1,45 @@
-name: NPM公開
+name: NPM Publish
 
 on:
   push:
     tags:
-      - 'v*'
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'バージョン（例：1.0.1）'
-        required: true
-        default: ''
+      - "v*"
 
 jobs:
-  publish-npm:
-    runs-on: ubuntu-latest
+  publish:
+    name: Node.js ${{ matrix.python-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        node-version: [22.x]
+        os: [ubuntu-latest]
+
+    permissions:
+      contents: read
+      id-token: write
+
     steps:
-      - name: チェックアウト
+      - uses: arduino/setup-task@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Node.jsセットアップ
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          registry-url: 'https://registry.npmjs.org/'
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
 
-      - name: 依存関係インストール
+      - name: Install dependencies
         run: npm ci
 
-      - name: CSSビルド
+      - name: Build
         run: npm run build:css
 
-      - name: 手動バージョン更新（ワークフロー手動実行時）
-        if: github.event_name == 'workflow_dispatch'
-        run: |
-          npm version ${{ github.event.inputs.version }} --no-git-tag-version
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add package.json package-lock.json
-          git commit -m "バージョン ${{ github.event.inputs.version }} に更新"
-
-      - name: タグからバージョン抽出（タグプッシュ時）
-        if: startsWith(github.ref, 'refs/tags/')
-        id: get_version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
-
-      - name: パッケージバージョン設定（タグプッシュ時）
-        if: startsWith(github.ref, 'refs/tags/')
-        run: npm version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
-
-      - name: NPMへ公開
-        run: npm publish
+      - name: Publish
+        run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: コミット・プッシュ（ワークフロー手動実行時）
-        if: github.event_name == 'workflow_dispatch'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
