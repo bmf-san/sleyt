@@ -1,44 +1,45 @@
 # sleyt
 
-ミニマルでモダンなCSSフレームワーク
+[English](README.md) | [日本語](README-ja.md)
 
-## 特徴
+A minimal and modern CSS framework
 
-- 透明感のあるモダンなデザイン
-- アクセシビリティを考慮
-- シンプルで使いやすいコンポーネント
-- レスポンシブデザイン対応
-- ダークモード対応
+## Features
 
-## インストール
+- Modern design with transparency
+- Accessibility-conscious
+- Simple and easy-to-use components
+- Responsive design support
+- Dark mode support
+
+## Installation
 
 ```bash
 npm install
 ```
 
-## ドキュメント
-<!-- TODO: docs/index.htmlをgithub pagesとして配信、リンク  -->
+## Documentation
+<!-- TODO: Serve docs/index.html as GitHub Pages and add link -->
 
-## 開発
+## Development
 
-### CSSのビルド
+### Building CSS
 
 ```bash
-# ビルド
+# Build
 npm run build:css
 
-# 監視モード（変更を監視して自動的にビルド）
+# Watch mode (automatically build when changes are detected)
 npm run watch:css
 ```
 
 ### Stylelint
 
-コードの品質を保つために、CSSのlintツール（Stylelint）を導入しています。
+We use Stylelint to maintain code quality.
 
 ```bash
-# lintを実行
+# Run lint
 npm run lint:css
 
-# lintのエラーを自動修正
+# Auto-fix lint errors
 npm run lint:css:fix
-```
