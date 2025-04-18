@@ -20,6 +20,10 @@ jobs:
       id-token: write
 
     steps:
+      - uses: arduino/setup-task@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Checkout
         uses: actions/checkout@v4
 
