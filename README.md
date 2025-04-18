@@ -19,7 +19,7 @@ npm install
 ```
 
 ## Documentation
-<!-- TODO: Serve docs/index.html as GitHub Pages and add link -->
+[Document](https://bmf-san.github.io/sleyt/)
 
 ## Development
 
