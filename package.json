@@ -1,7 +1,7 @@
 {
   "name": "sleyt",
   "version": "1.0.0",
-  "description": "ミニマルでモダンなCSSフレームワーク",
+  "description": "A minimal and modern CSS framework",
   "main": "dist/css/index.css",
   "files": [
     "dist/css/*.css",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "postcss src/index.css --dir dist/css",
+    "build:css": "postcss src/index.css --dir dist/css && postcss src/index.css --dir docs/public/css",
     "watch:css": "postcss src/index.css --dir dist/css --watch",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
