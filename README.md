@@ -43,3 +43,29 @@ npm run lint:css
 
 # Auto-fix lint errors
 npm run lint:css:fix
+```
+
+## Contribution
+We welcome issues and pull requests at any time.
+
+Feel free to contribute!
+
+Before contributing, please check the following documents:
+
+- [CODE_OF_CONDUCT](https://github.com/bmf-san/sleyt/blob/main/.github/CODE_OF_CONDUCT.md)
+- [CONTRIBUTING](https://github.com/bmf-san/sleyt/blob/main/.github/CONTRIBUTING.md)
+
+# Sponsors
+If you like this project, consider sponsoring us!
+
+[Github Sponsors - bmf-san](https://github.com/sponsors/bmf-san)
+
+Alternatively, giving us a star would be appreciated!
+
+It helps motivate us to continue maintaining this project. :D
+
+# License
+This project is licensed under the MIT License.
+
+[LICENSE](https://github.com/bmf-san/sleyt/blob/main/LICENSE)
+
