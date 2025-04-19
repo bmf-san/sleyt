@@ -1,81 +1,81 @@
-# Sleyt CSSフレームワーク ドキュメント
+# Sleyt CSS Framework Documentation
 
-このディレクトリには、Sleyt CSSフレームワークの公式ドキュメントが含まれています。
+This directory contains the official documentation for the Sleyt CSS Framework.
 
-## ファイル構成
+## File Structure
 
-- `index.html` - メインのドキュメントファイル。フレームワークの概要、コンポーネント、ユーティリティの使用方法を説明しています。
+- `index.html` - The main documentation file. Explains the framework overview, components, and how to use utilities.
 
-## index.htmlの構成
+## Structure of index.html
 
-`index.html`は以下のセクションで構成されています：
+`index.html` consists of the following sections:
 
-1. **ヘッダー** - フレームワークの名前と簡単な説明
-2. **ベース** - リセット、変数、テーマなどの基本要素の説明
-3. **コンポーネント** - アラート、バッジ、ボタン、カードなどのUIコンポーネントの説明
-4. **レイアウト** - コンテナ、グリッド、フレックスボックスなどのレイアウト要素の説明
-5. **ユーティリティ** - 境界線、色、表示、効果、位置、間隔、タイポグラフィなどのユーティリティクラスの説明
-6. **フッター** - フレームワークの概要情報
+1. **Header** - The framework name and a brief description
+2. **Base** - Explanation of basic elements such as reset, variables, themes, etc.
+3. **Components** - Description of UI components such as alerts, badges, buttons, cards, etc.
+4. **Layout** - Description of layout elements such as containers, grid, flexbox, etc.
+5. **Utilities** - Description of utility classes for borders, colors, display, effects, position, spacing, typography, etc.
+6. **Footer** - Framework overview information
 
-## 更新ルール
+## Update Rules
 
-ドキュメントを更新する際は、以下のルールに従ってください：
+When updating documentation, please follow these rules:
 
-1. **実装との一致** - ドキュメントに記載されるクラス名や使用方法は、必ず実際の実装と一致させてください。
-   - 例：実装されているクラス名は接頭辞なしの `.relative` なら、ドキュメントでも `.position-relative` ではなく `.relative` と記載する
+1. **Match Implementation** - Class names and usage described in the documentation must match the actual implementation.
+   - Example: If the implemented class name is `.relative` without a prefix, document it as `.relative` rather than `.position-relative`
 
-2. **一貫性の維持** - クラス名、変数名などの記述は一貫性を保ってください。
+2. **Maintain Consistency** - Keep descriptions of class names, variable names, etc. consistent.
 
-3. **例の提供** - 可能な限り、各機能の使用例を提供してください。コード例と視覚的な例の両方があるとベストです。
+3. **Provide Examples** - Whenever possible, provide usage examples for each feature. It's best to have both code examples and visual examples.
 
-4. **プレビューの検証** - コード例を追加する場合は、実際に動作することを確認してください。
+4. **Verify Previews** - When adding code examples, verify that they actually work.
 
-5. **構造の維持** - 新しいセクションや例を追加する場合は、既存の構造に合わせてください。
+5. **Maintain Structure** - When adding new sections or examples, follow the existing structure.
 
-## ドキュメント更新時のチェックリスト
+## Documentation Update Checklist
 
-- [ ] クラス名が実装と一致しているか
-- [ ] コード例が正しく機能するか
-- [ ] 新しい機能や変更点が適切に反映されているか
-- [ ] レスポンシブ設計が適切に機能するか
-- [ ] 全体的な一貫性が保たれているか
+- [ ] Do class names match the implementation?
+- [ ] Do code examples function correctly?
+- [ ] Are new features or changes properly reflected?
+- [ ] Does responsive design function properly?
+- [ ] Is overall consistency maintained?
 
-## コードサンプルのスタイルガイド
+## Style Guide for Code Samples
 
-コードサンプルを追加する場合は、以下のフォーマットを使用してください：
+When adding code samples, use the following format:
 
 ```html
 <div class="example-class">
-  <!-- コンテンツ -->
+  <!-- Content -->
 </div>
 ```
 
-## 新規コンポーネントやユーティリティの追加
+## Adding New Components or Utilities
 
-新しいコンポーネントやユーティリティを追加する場合は、以下の情報を含めてください：
+When adding new components or utilities, include the following information:
 
-1. コンポーネント/ユーティリティの名前と簡単な説明
-2. 使用可能なクラスとそのバリエーション
-3. 基本的な使用例
-4. 実際の表示例
-5. 関連する変数や設定（該当する場合）
+1. The name and brief description of the component/utility
+2. Available classes and their variations
+3. Basic usage examples
+4. Actual display examples
+5. Related variables or settings (if applicable)
 
-## メンテナンス
+## Maintenance
 
-ドキュメントは以下のタイミングで更新してください：
+Update the documentation at the following times:
 
-- 新機能の追加時
-- 既存機能の変更時
-- バグ修正時（影響がある場合）
-- 定期的な見直し（四半期ごと推奨）
+- When adding new features
+- When changing existing features
+- When fixing bugs (if they have an impact)
+- During regular reviews (recommended quarterly)
 
-## ビルドとデプロイ
+## Build and Deploy
 
-ドキュメントの変更をテストするには：
+To test documentation changes:
 
-1. ローカルでHTMLファイルを開いて表示を確認
-2. CSSの変更がある場合は、必要に応じてビルドプロセスを実行
+1. Open the HTML file locally to verify display
+2. If there are CSS changes, run the build process as needed
 
-## 問題やフィードバック
+## Issues and Feedback
 
-ドキュメントに関する問題やフィードバックは、イシュートラッカーに報告してください。
+Please report any issues or feedback about the documentation to the issue tracker.
