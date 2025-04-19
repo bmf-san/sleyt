@@ -1,4 +1,4 @@
-/* ボーダー */
+/* Borders */
 .border { border: 1px solid var(--border-color); }
 .border-0 { border-width: 0; }
 .border-t { border-top: 1px solid var(--border-color); }
@@ -6,7 +6,7 @@
 .border-b { border-bottom: 1px solid var(--border-color); }
 .border-l { border-left: 1px solid var(--border-color); }
 
-/* 角丸 */
+/* Border Radius */
 .rounded-none { border-radius: 0; }
 .rounded-sm { border-radius: var(--border-radius-sm); }
 .rounded { border-radius: var(--border-radius); }

@@ -1,7 +1,7 @@
-/* アコーディオン
- * CSSのみで実装されたアコーディオンコンポーネント
- * - チェックボックスとラベルを利用したハックでJavaScriptなしで動作
- * - アクセシビリティのためにaria属性を活用
+/* Accordion
+ * CSS-only implementation of accordion component
+ * - Uses checkbox and label hack to work without JavaScript
+ * - Utilizes aria attributes for accessibility
  */
 
 .accordion {
@@ -21,7 +21,7 @@
 }
 
 .accordion-toggle {
-  /* チェックボックスは視覚的に隠すが、アクセシビリティのために残す */
+  /* Visually hide checkbox but keep it accessible */
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -61,12 +61,12 @@
 }
 
 .accordion-toggle:checked ~ .accordion-content {
-  max-height: 1000px; /* より大きな高さを確保 */
+  max-height: 1000px; /* Ensure enough height */
   padding: var(--spacing-4);
   visibility: visible;
 }
 
-/* バリエーション */
+/* Variations */
 .accordion-primary .accordion-label {
   background-color: var(--color-primary);
   color: var(--text-on-primary);
@@ -77,7 +77,7 @@
   color: var(--text-on-primary);
 }
 
-/* レスポンシブ対応 */
+/* Responsive adjustments */
 @media screen and (width <= 768px) {
   .accordion-label {
     padding: var(--spacing-3);

@@ -1,4 +1,4 @@
-/* フォーム */
+/* Forms */
 .form-group {
   margin-bottom: var(--spacing-4);
 }
@@ -51,7 +51,7 @@
   opacity: 0.65;
 }
 
-/* チェックボックスとラジオボタン */
+/* Checkboxes and Radio Buttons */
 .form-check {
   align-items: center;
   display: flex;
@@ -72,23 +72,23 @@
   width: 18px;
 }
 
-/* チェックボックス特有のスタイル */
+/* Checkbox-specific styles */
 input[type="checkbox"].form-check-input {
   border-radius: var(--border-radius-sm);
 }
 
-/* ラジオボタン特有のスタイル */
+/* Radio button-specific styles */
 input[type="radio"].form-check-input {
   border-radius: 50%;
 }
 
-/* チェックボックスがチェックされた状態 */
+/* Checkbox checked state */
 .form-check-input:checked {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
-/* チェックマークの表示 */
+/* Checkmark display */
 input[type="checkbox"].form-check-input:checked::after {
   border-bottom: 2px solid #fff;
   border-right: 2px solid #fff;
@@ -102,7 +102,7 @@ input[type="checkbox"].form-check-input:checked::after {
   width: 5px;
 }
 
-/* ラジオボタンの選択表示 */
+/* Radio button selection display */
 input[type="radio"].form-check-input:checked::after {
   background-color: #fff;
   border-radius: 50%;
@@ -115,14 +115,14 @@ input[type="radio"].form-check-input:checked::after {
   width: 8px;
 }
 
-/* フォーカス状態 */
+/* Focus state */
 .form-check-input:focus {
   border-color: var(--color-primary);
   box-shadow: 0 0 0 2px rgb(var(--color-primary-rgb) 0.25);
   outline: none;
 }
 
-/* 無効状態 */
+/* Disabled state */
 .form-check-input:disabled {
   background-color: var(--color-gray-100);
   cursor: not-allowed;
@@ -140,7 +140,7 @@ input[type="radio"].form-check-input:checked::after {
   font-size: var(--font-size-base);
 }
 
-/* フォームの検証スタイル */
+/* Form validation styles */
 .form-control.is-invalid {
   border-color: var(--color-danger);
 }

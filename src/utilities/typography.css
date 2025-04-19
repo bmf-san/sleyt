@@ -1,4 +1,4 @@
-/* フォントサイズ */
+/* Font Size */
 .text-xs { font-size: var(--font-size-xs); }
 .text-sm { font-size: var(--font-size-sm); }
 .text-base { font-size: var(--font-size-base); }
@@ -9,20 +9,20 @@
 .text-4xl { font-size: var(--font-size-4xl); }
 .text-5xl { font-size: var(--font-size-5xl); }
 
-/* フォントウェイト */
+/* Font Weight */
 .font-light { font-weight: var(--font-weight-light); }
 .font-normal { font-weight: var(--font-weight-normal); }
 .font-medium { font-weight: var(--font-weight-medium); }
 .font-semibold { font-weight: var(--font-weight-semibold); }
 .font-bold { font-weight: var(--font-weight-bold); }
 
-/* テキスト配置 */
+/* Text Alignment */
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-justify { text-align: justify; }
 
-/* 行の高さ */
+/* Line Height */
 .leading-none { line-height: var(--line-height-none); }
 .leading-tight { line-height: var(--line-height-tight); }
 .leading-snug { line-height: var(--line-height-snug); }
@@ -30,7 +30,7 @@
 .leading-relaxed { line-height: var(--line-height-relaxed); }
 .leading-loose { line-height: var(--line-height-loose); }
 
-/* テキストカラー */
+/* Text Colors */
 .text-primary { color: var(--text-primary); }
 .text-secondary { color: var(--text-secondary); }
 .text-disabled { color: var(--text-disabled); }
@@ -41,7 +41,7 @@
 .text-warning { color: var(--color-warning); }
 .text-info { color: var(--color-info); }
 
-/* Slateテキストカラー */
+/* Slate Text Colors */
 .text-slate-50 { color: var(--color-slate-50); }
 .text-slate-100 { color: var(--color-slate-100); }
 .text-slate-200 { color: var(--color-slate-200); }
@@ -54,14 +54,14 @@
 .text-slate-900 { color: var(--color-slate-900); }
 .text-slate-950 { color: var(--color-slate-950); }
 
-/* ホワイトスペース */
+/* Whitespace */
 .whitespace-normal { white-space: normal; }
 .whitespace-nowrap { white-space: nowrap; }
 .whitespace-pre { white-space: pre; }
 .whitespace-pre-line { white-space: pre-line; }
 .whitespace-pre-wrap { white-space: pre-wrap; }
 
-/* 改行 */
+/* Line Break */
 .break-normal {
   overflow-wrap: normal;
   word-break: normal;

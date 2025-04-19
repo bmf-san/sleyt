@@ -1,7 +1,7 @@
-/* ダークモード */
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* ダークモードのSlateスケール - 青みを抑えてより黒に近く */
+    /* Dark Mode Slate Scale - Reduced Blue Tint for Closer to Black */
     --color-slate-50: hsl(205deg 5% 10%);
     --color-slate-100: hsl(205deg 5% 15%);
     --color-slate-200: hsl(205deg 5% 25%);
@@ -14,7 +14,7 @@
     --color-slate-900: hsl(205deg 12% 98%);
     --color-slate-950: hsl(0deg 0% 100%);
 
-    /* カラーパレット - ダークモード用にやや明るめ */
+    /* Color Palette - Slightly Brighter for Dark Mode */
     --color-success-500: hsl(150deg 40% 45%);
     --color-success-600: hsl(150deg 40% 40%);
     --color-success-700: hsl(150deg 40% 35%);
@@ -28,11 +28,11 @@
     --color-info-600: hsl(215deg 50% 45%);
     --color-info-700: hsl(215deg 50% 40%);
 
-    /* 透明感のある色 - ダークモード */
+    /* Transparent Colors - Dark Mode */
     --color-transparent-light: hsl(0deg 0% 100% / 80%);
     --color-transparent-dark: hsl(205deg 5% 10% / 80%);
 
-    /* テキストカラー */
+    /* Text Colors */
     --text-primary: var(--color-slate-900);
     --text-secondary: var(--color-slate-700);
     --text-disabled: var(--color-slate-500);
@@ -43,14 +43,14 @@
     --text-on-warning: var(--color-slate-950);
     --text-on-info: var(--color-slate-950);
 
-    /* 背景色 */
+    /* Background Colors */
     --bg-body: hsl(205deg 5% 5%);
     --bg-surface: var(--color-slate-50);
     --bg-elevated: hsl(205deg 5% 10%);
     --bg-card: hsl(205deg 5% 10%);
     --bg-code: var(--color-slate-100);
 
-    /* ボーダー */
+    /* Borders */
     --border-color: var(--color-slate-200);
     --border-color-transparent: rgb(0 0 0 / 20%);
     --border-color-transparent-dark: rgb(255 255 255 / 20%);
