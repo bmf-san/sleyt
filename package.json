@@ -1,6 +1,6 @@
 {
   "name": "sleyt",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A minimal and modern CSS framework",
   "main": "dist/css/index.css",
   "files": [
