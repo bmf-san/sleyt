@@ -27,22 +27,39 @@
   --color-info-600: hsl(215deg 45% 40%);
   --color-info-700: hsl(215deg 45% 35%);
 
+  /* RGB値（rgba()で使用するため） */
+  --color-slate-900-rgb: 26, 30, 33;
+  --color-slate-800-rgb: 43, 50, 55;
+  --color-slate-700-rgb: 69, 80, 88;
+  --color-slate-600-rgb: 92, 107, 117;
+  --color-slate-500-rgb: 122, 142, 156;
+  --color-success-600-rgb: 54, 112, 91;
+  --color-danger-600-rgb: 173, 52, 62;
+  --color-warning-500-rgb: 212, 159, 41;
+  --color-info-600-rgb: 55, 92, 148;
+
   /* 透明感のある色 */
   --color-transparent-light: hsl(205deg 12% 98% / 80%);
   --color-transparent-dark: hsl(205deg 5% 5% / 80%);
 
   /* カラーテーマ - カスタムカラー */
   --color-primary: var(--color-slate-900);
+  --color-primary-rgb: var(--color-slate-900-rgb);
   --color-primary-hover: var(--color-slate-800);
   --color-secondary: var(--color-slate-700);
+  --color-secondary-rgb: var(--color-slate-700-rgb);
   --color-secondary-hover: var(--color-slate-600);
   --color-success: var(--color-success-600);
+  --color-success-rgb: var(--color-success-600-rgb);
   --color-success-hover: var(--color-success-700);
   --color-danger: var(--color-danger-600);
+  --color-danger-rgb: var(--color-danger-600-rgb);
   --color-danger-hover: var(--color-danger-700);
   --color-warning: var(--color-warning-500);
+  --color-warning-rgb: var(--color-warning-500-rgb);
   --color-warning-hover: var(--color-warning-600);
   --color-info: var(--color-info-600);
+  --color-info-rgb: var(--color-info-600-rgb);
   --color-info-hover: var(--color-info-700);
   --color-light: var(--color-slate-100);
   --color-light-hover: var(--color-slate-200);
