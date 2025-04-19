@@ -56,14 +56,89 @@
   align-items: center;
   display: flex;
   margin-bottom: var(--spacing-2);
+  position: relative;
 }
 
 .form-check-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  display: inline-block;
+  height: 18px;
   margin-right: var(--spacing-2);
+  position: relative;
+  vertical-align: middle;
+  width: 18px;
+}
+
+/* チェックボックス特有のスタイル */
+input[type="checkbox"].form-check-input {
+  border-radius: var(--border-radius-sm);
+}
+
+/* ラジオボタン特有のスタイル */
+input[type="radio"].form-check-input {
+  border-radius: 50%;
+}
+
+/* チェックボックスがチェックされた状態 */
+.form-check-input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* チェックマークの表示 */
+input[type="checkbox"].form-check-input:checked::after {
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  content: "";
+  display: block;
+  height: 9px;
+  left: 6px;
+  position: absolute;
+  top: 2px;
+  transform: rotate(45deg);
+  width: 5px;
+}
+
+/* ラジオボタンの選択表示 */
+input[type="radio"].form-check-input:checked::after {
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 8px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 8px;
+}
+
+/* フォーカス状態 */
+.form-check-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.25);
+  outline: none;
+}
+
+/* 無効状態 */
+.form-check-input:disabled {
+  background-color: var(--color-gray-100);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.form-check-input:disabled + .form-check-label {
+  color: var(--color-gray-500);
+  cursor: not-allowed;
 }
 
 .form-check-label {
   color: var(--text-primary);
+  cursor: pointer;
   font-size: var(--font-size-base);
 }
 
@@ -73,6 +148,14 @@
 }
 
 .form-control.is-valid {
+  border-color: var(--color-success);
+}
+
+.form-check-input.is-invalid {
+  border-color: var(--color-danger);
+}
+
+.form-check-input.is-valid {
   border-color: var(--color-success);
 }
 
