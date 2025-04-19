@@ -2,7 +2,7 @@
 
 [English](README.md) | [日本語](README-ja.md)
 
-A minimal and modern CSS framework
+A minimal and modern CSS framework.
 
 ## Features
 
