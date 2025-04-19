@@ -7,6 +7,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: var(--spacing-3) var(--spacing-4);
+  position: relative;
 }
 
 .navbar-brand {
@@ -24,6 +25,29 @@
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+/* ハンバーガーメニュー制御用チェックボックス（非表示） */
+.navbar-toggle-checkbox {
+  display: none;
+}
+
+/* ハンバーガーメニューラベル */
+.navbar-toggle-label {
+  display: none;
+  cursor: pointer;
+  padding: var(--spacing-2);
+  z-index: 1001;
+}
+
+/* ハンバーガーアイコン */
+.navbar-toggle-label span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--text-primary);
+  transition: var(--transition-base);
 }
 
 /* ナビゲーション項目 */
@@ -50,13 +74,13 @@
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-.nav-link {
-  color: var(--text-primary);
-  display: block;
-  padding: var(--spacing-2) var(--spacing-3);
-  text-decoration: none;
-  transition: none;
-}
+  .nav-link {
+    color: var(--text-primary);
+    display: block;
+    padding: var(--spacing-2) var(--spacing-3);
+    text-decoration: none;
+    transition: none;
+  }
 }
 
 .nav-link {
@@ -74,4 +98,52 @@
 .nav-link.active {
   color: var(--color-primary);
   font-weight: var(--font-weight-medium);
+}
+
+/* レスポンシブ対応 */
+@media (width <= 768px) {
+  /* ハンバーガーメニューボタン表示 */
+  .navbar-toggle-label {
+    display: block;
+  }
+
+  /* ナビゲーションメニューのモバイル表示 */
+  .navbar-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--bg-elevated);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px var(--spacing-4) var(--spacing-4);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgb(0 0 0 / 10%);
+  }
+
+  /* チェックボックスがチェックされたときのメニュー表示 */
+  .navbar-toggle-checkbox:checked ~ .navbar-nav {
+    right: 0;
+  }
+
+  /* チェックボックスがチェックされたときのハンバーガーアイコン変形 */
+  .navbar-toggle-checkbox:checked ~ .navbar-toggle-label span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .navbar-toggle-checkbox:checked ~ .navbar-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle-checkbox:checked ~ .navbar-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  .navbar-item {
+    margin-right: 0;
+    margin-bottom: var(--spacing-3);
+    width: 100%;
+  }
 }

@@ -60,8 +60,6 @@
 }
 
 .form-check-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -120,7 +118,7 @@ input[type="radio"].form-check-input:checked::after {
 /* フォーカス状態 */
 .form-check-input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.25);
+  box-shadow: 0 0 0 2px rgb(var(--color-primary-rgb) 0.25);
   outline: none;
 }
 
