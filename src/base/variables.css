@@ -1,6 +1,6 @@
-/* CSS変数 */
+/* CSS Variables */
 :root {
-  /* Slateグレースケール - 青みを抑えてより黒に近く */
+  /* Slate Gray Scale - Reduced Blue Tint for Closer to Black */
   --color-slate-50: hsl(205deg 12% 98%);
   --color-slate-100: hsl(205deg 12% 95%);
   --color-slate-200: hsl(205deg 10% 90%);
@@ -13,7 +13,7 @@
   --color-slate-900: hsl(205deg 5% 10%);
   --color-slate-950: hsl(205deg 5% 5%);
 
-  /* カラーパレット - 落ち着いたトーン */
+  /* Color Palette - Subdued Tones */
   --color-success-500: hsl(150deg 35% 40%);
   --color-success-600: hsl(150deg 35% 35%);
   --color-success-700: hsl(150deg 35% 30%);
@@ -27,7 +27,7 @@
   --color-info-600: hsl(215deg 45% 40%);
   --color-info-700: hsl(215deg 45% 35%);
 
-  /* RGB値（rgba()で使用するため） */
+  /* RGB Values (for use with rgba()) */
   --color-slate-900-rgb: 26, 30, 33;
   --color-slate-800-rgb: 43, 50, 55;
   --color-slate-700-rgb: 69, 80, 88;
@@ -38,11 +38,11 @@
   --color-warning-500-rgb: 212, 159, 41;
   --color-info-600-rgb: 55, 92, 148;
 
-  /* 透明感のある色 */
+  /* Transparent Colors */
   --color-transparent-light: hsl(205deg 12% 98% / 80%);
   --color-transparent-dark: hsl(205deg 5% 5% / 80%);
 
-  /* カラーテーマ - カスタムカラー */
+  /* Color Theme - Custom Colors */
   --color-primary: var(--color-slate-900);
   --color-primary-rgb: var(--color-slate-900-rgb);
   --color-primary-hover: var(--color-slate-800);
@@ -66,7 +66,7 @@
   --color-dark: var(--color-slate-900);
   --color-dark-hover: var(--color-slate-800);
 
-  /* テキストカラー */
+  /* Text Colors */
   --text-primary: var(--color-slate-900);
   --text-secondary: var(--color-slate-700);
   --text-disabled: var(--color-slate-500);
@@ -77,14 +77,14 @@
   --text-on-warning: var(--color-slate-900);
   --text-on-info: var(--color-slate-50);
 
-  /* 背景色 */
+  /* Background Colors */
   --bg-body: hsl(0deg 0% 100%);
   --bg-surface: var(--color-slate-50);
   --bg-elevated: hsl(0deg 0% 100%);
   --bg-card: hsl(0deg 0% 100%);
   --bg-code: var(--color-slate-100);
 
-  /* ボーダー */
+  /* Borders */
   --border-color: var(--color-slate-200);
   --border-color-transparent: rgb(255 255 255 / 20%);
   --border-color-transparent-dark: rgb(0 0 0 / 20%);
@@ -94,14 +94,14 @@
   --border-radius-xl: 0.75rem;
   --border-radius-full: 9999px;
 
-  /* シャドウ */
+  /* Shadows */
   --shadow-sm: 0 1px 2px 0 hsl(205deg 5% 10% / 5%);
   --shadow: 0 1px 3px 0 hsl(205deg 5% 10% / 10%), 0 1px 2px -1px hsl(205deg 5% 10% / 10%);
   --shadow-md: 0 4px 6px -1px hsl(205deg 5% 10% / 10%), 0 2px 4px -2px hsl(205deg 5% 10% / 10%);
   --shadow-lg: 0 10px 15px -3px hsl(205deg 5% 10% / 10%), 0 4px 6px -4px hsl(205deg 5% 10% / 10%);
   --shadow-xl: 0 20px 25px -5px hsl(205deg 5% 10% / 10%), 0 8px 10px -6px hsl(205deg 5% 10% / 10%);
 
-  /* スペーシング */
+  /* Spacing */
   --spacing-0: 0;
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -117,7 +117,7 @@
   --spacing-24: 6rem;
   --spacing-32: 8rem;
 
-  /* フォント */
+  /* Fonts */
   --font-family-base: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   --font-family-code: ui-monospace, sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
   --font-size-xs: 0.75rem;
@@ -130,14 +130,14 @@
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
 
-  /* フォントウェイト */
+  /* Font Weights */
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* 行の高さ */
+  /* Line Heights */
   --line-height-none: 1;
   --line-height-tight: 1.25;
   --line-height-snug: 1.375;
@@ -145,7 +145,7 @@
   --line-height-relaxed: 1.625;
   --line-height-loose: 2;
 
-  /* トランジション */
+  /* Transitions */
   --transition-base: all 0.2s ease-in-out;
   --transition-slow: all 0.3s ease-in-out;
   --transition-fast: all 0.1s ease-in-out;

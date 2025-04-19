@@ -1,4 +1,4 @@
-/* ナビゲーションバー */
+/* Navigation Bar */
 .navbar {
   align-items: center;
   background-color: var(--bg-elevated);
@@ -27,12 +27,12 @@
   padding-left: 0;
 }
 
-/* ハンバーガーメニュー制御用チェックボックス（非表示） */
+/* Hidden checkbox for hamburger menu control */
 .navbar-toggle-checkbox {
   display: none;
 }
 
-/* ハンバーガーメニューラベル */
+/* Hamburger menu label */
 .navbar-toggle-label {
   display: none;
   cursor: pointer;
@@ -40,7 +40,7 @@
   z-index: 1001;
 }
 
-/* ハンバーガーアイコン */
+/* Hamburger icon */
 .navbar-toggle-label span {
   display: block;
   width: 24px;
@@ -50,7 +50,7 @@
   transition: var(--transition-base);
 }
 
-/* ナビゲーション項目 */
+/* Navigation items */
 .navbar-item {
   color: var(--text-primary);
   display: block;
@@ -100,14 +100,14 @@
   font-weight: var(--font-weight-medium);
 }
 
-/* レスポンシブ対応 */
+/* Responsive adjustments */
 @media (width <= 768px) {
-  /* ハンバーガーメニューボタン表示 */
+  /* Show hamburger menu button */
   .navbar-toggle-label {
     display: block;
   }
 
-  /* ナビゲーションメニューのモバイル表示 */
+  /* Mobile display for navigation menu */
   .navbar-nav {
     position: fixed;
     top: 0;
@@ -123,12 +123,12 @@
     box-shadow: -2px 0 10px rgb(0 0 0 / 10%);
   }
 
-  /* チェックボックスがチェックされたときのメニュー表示 */
+  /* Menu display when checkbox is checked */
   .navbar-toggle-checkbox:checked ~ .navbar-nav {
     right: 0;
   }
 
-  /* チェックボックスがチェックされたときのハンバーガーアイコン変形 */
+  /* Hamburger icon transformation when checkbox is checked */
   .navbar-toggle-checkbox:checked ~ .navbar-toggle-label span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
   }

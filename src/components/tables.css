@@ -1,4 +1,4 @@
-/* テーブル */
+/* Tables */
 .table {
   border-collapse: collapse;
   color: var(--text-primary);
@@ -48,7 +48,7 @@
   background-color: var(--color-slate-100);
 }
 
-/* ページネーション */
+/* Pagination */
 .pagination {
   border-radius: var(--border-radius);
   display: flex;

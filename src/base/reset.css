@@ -1,4 +1,4 @@
-/* リセットとベーススタイル */
+/* Reset and Base Styles */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;

@@ -1,12 +1,12 @@
-/* sleyt - ミニマルでモダンなCSSフレームワーク */
+/* sleyt - Minimal Modern CSS Framework */
 
-/* ベース */
+/* Base */
 @import url('./base/reset.css');
 @import url('./base/variables.css');
 @import url('./base/themes.css');
 
 
-/* コンポーネント */
+/* Components */
 @import url('./components/accordion.css');
 @import url('./components/alerts.css');
 @import url('./components/badges.css');
@@ -19,12 +19,12 @@
 @import url('./components/swatch.css');
 @import url('./components/tables.css');
 
-/* レイアウト */
+/* Layout */
 @import url('./layout/container.css');
 @import url('./layout/flexbox.css');
 @import url('./layout/grid.css');
 
-/* ユーティリティ */
+/* Utilities */
 @import url('./utilities/borders.css');
 @import url('./utilities/colors.css');
 @import url('./utilities/display.css');

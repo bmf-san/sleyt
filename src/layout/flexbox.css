@@ -1,4 +1,4 @@
-/* フレックスレイアウト */
+/* Flex Layout */
 .flex {
   display: flex;
 }
@@ -67,7 +67,7 @@
   flex-shrink: 1;
 }
 
-/* フレックス項目の配置 */
+/* Flex Item Alignment */
 .justify-start {
   justify-content: flex-start;
 }

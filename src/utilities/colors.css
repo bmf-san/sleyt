@@ -1,4 +1,4 @@
-/* 背景色 */
+/* Background Colors */
 .bg-body { background-color: var(--bg-body); }
 .bg-surface { background-color: var(--bg-surface); }
 .bg-card { background-color: var(--bg-card); }
@@ -12,7 +12,7 @@
 .bg-light { background-color: var(--color-light); }
 .bg-dark { background-color: var(--color-dark); }
 
-/* Slate背景色 */
+/* Slate Background Colors */
 .bg-slate-50 { background-color: var(--color-slate-50); }
 .bg-slate-100 { background-color: var(--color-slate-100); }
 .bg-slate-200 { background-color: var(--color-slate-200); }
