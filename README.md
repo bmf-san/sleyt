@@ -15,7 +15,7 @@ A minimal and modern CSS framework.
 ## Installation
 
 ```bash
-npm install
+npm i sleyt
 ```
 
 ## Documentation
@@ -26,6 +26,9 @@ npm install
 ### Building CSS
 
 ```bash
+# Install dependencies
+npm install
+
 # Build
 npm run build:css
 
