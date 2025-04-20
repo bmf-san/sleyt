@@ -1,8 +1,12 @@
+[![npm version](https://badge.fury.io/js/sleyt.svg)](https://badge.fury.io/js/sleyt)
+
 # sleyt
 
 [English](README.md) | [日本語](README-ja.md)
 
-ミニマルでモダンなCSSフレームワーク
+ミニマルでモダンなCSSフレームワーク。
+
+[![NPM](https://nodei.co/npm/sleyt.png)](https://nodei.co/npm/sleyt/)
 
 ## 特徴
 
@@ -15,7 +19,7 @@
 ## インストール
 
 ```bash
-npm install
+npm i sleyt
 ```
 
 ## ドキュメント
@@ -26,6 +30,9 @@ npm install
 ### CSSのビルド
 
 ```bash
+# 依存関係のインストール
+npm install
+
 # ビルド
 npm run build:css
 
