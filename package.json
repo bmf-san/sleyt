@@ -54,6 +54,6 @@
     "not dead"
   ],
   "publishConfig": {
-    "access": "public",
+    "access": "public"
   }
 }
