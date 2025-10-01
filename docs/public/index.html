@@ -3,2134 +3,764 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sleyt CSS Framework</title>
+    <title>Sleyt CSS Framework - Documentation</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body class="bg-body">
+    <!-- Header -->
     <header class="bg-slate-900 text-slate-50 py-6">
       <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-2">Sleyt CSS</h1>
-        <p class="text-slate-300">A minimal and modern CSS framework.</p>
-        <div class="mt-2">
-          <span class="text-slate-50">English</span>
+        <h1 class="text-3xl font-bold mb-2">Sleyt CSS Framework</h1>
+        <p class="text-slate-300 mb-4">
+          A minimal and modern CSS framework with glass morphism design.
+        </p>
+        <div class="flex gap-4">
+          <span class="text-slate-50 font-medium">English</span>
           <a href="index-ja.html" class="text-slate-300 underline">日本語</a>
+          <a
+            href="https://github.com/bmf-san/sleyt"
+            class="text-slate-300 underline"
+            >GitHub</a
+          >
+          <a
+            href="https://www.npmjs.com/package/sleyt"
+            class="text-slate-300 underline"
+            >NPM</a
+          >
         </div>
       </div>
     </header>
 
+    <!-- Main Content -->
     <main class="container mx-auto py-8">
-      <!-- Base Section -->
-      <section class="mb-16">
-        <h2 class="text-2xl font-bold mb-6">Base</h2>
-        <p class="mb-4">
-          Base components are the foundation of the Sleyt framework. They
-          include reset, variables, and themes, providing a consistent design
-          foundation.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/base/reset.css"
-                >reset.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Provides minimal CSS reset for browser compatibility. It
-                initializes default margins, paddings, and box sizes.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/base/themes.css"
-                >themes.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Supports theme switching between light/dark modes. Theme
-                switching can be done via data attributes.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/base/variables.css"
-                >variables.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Defines design tokens as CSS variables. These can be used across
-                the project for consistent styling and theme switching.
-              </p>
-            </div>
+      <!-- Navigation Card -->
+      <div class="card mb-8 glass">
+        <div class="card-header">
+          <h2 class="text-xl font-semibold">Quick Navigation</h2>
+        </div>
+        <div class="card-body">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="#installation" class="btn btn-outline-primary btn-sm"
+              >Installation</a
+            >
+            <a href="#components" class="btn btn-outline-primary btn-sm"
+              >Components</a
+            >
+            <a href="#charts" class="btn btn-outline-primary btn-sm">Charts</a>
+            <a href="#utilities" class="btn btn-outline-primary btn-sm"
+              >Utilities</a
+            >
           </div>
         </div>
+      </div>
 
-        <!-- Theme Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Themes</h3>
-          <p class="mb-4">
-            In Sleyt, you can easily switch between themes using data
-            attributes. Both light and dark modes are supported by default, and
-            custom themes can also be created.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">How to Use Themes</div>
-            <div class="card-body">
-              <p class="mb-2">Use the HTML data attribute to switch themes:</p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;html data-theme="dark"&gt;
-  ...
-&lt;/html&gt;</code></pre>
-
-              <p class="mt-4 mb-2">
-                Example of dynamically switching themes with JavaScript:
-              </p>
-              <pre class="bg-slate-100 p-3 rounded"><code>// Switch to dark mode
-document.documentElement.setAttribute('data-theme', 'dark');
-
-// Switch to light mode
-document.documentElement.setAttribute('data-theme', 'light');</code></pre>
-
-              <div class="flex gap-4 mt-4">
-                <div class="p-4 rounded bg-slate-50 text-slate-900 border">
-                  <p class="font-bold">Light Mode</p>
-                  <p>Data attribute: data-theme="light"</p>
-                </div>
-                <div class="p-4 rounded bg-slate-900 text-slate-50 border">
-                  <p class="font-bold">Dark Mode</p>
-                  <p>Data attribute: data-theme="dark"</p>
-                </div>
-              </div>
-            </div>
+      <!-- Installation Section -->
+      <section id="installation" class="mb-16">
+        <div class="card mb-8">
+          <div class="card-header">
+            <h2 class="text-2xl font-bold">Getting Started</h2>
           </div>
+          <div class="card-body">
+            <p class="mb-4 text-secondary">
+              Learn how to install and use Sleyt CSS Framework in your projects.
+            </p>
 
-          <div class="card">
-            <div class="card-header">Creating Custom Themes</div>
-            <div class="card-body">
-              <p class="mb-2">
-                To create your own theme, override CSS variables:
-              </p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>[data-theme="custom"] {
-  --color-primary: #6c5ce7;
-  --color-secondary: #00cec9;
-  --color-background: #ffeaa7;
-  --color-text: #2d3436;
-  /* Other variables... */
-}</code></pre>
+            <div class="alert alert-info mb-6">
+              <strong>Quick Start:</strong> Install via npm or include directly
+              in your HTML.
             </div>
-          </div>
-        </div>
 
-        <!-- Variables Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Variables</h3>
-          <p class="mb-4">
-            Sleyt uses CSS variables (custom properties) to manage design
-            tokens. This enables consistent styling and easy theme switching.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Main Variable Categories</div>
-            <div class="card-body">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <h4 class="font-bold mb-2">Color Variables</h4>
-                  <pre class="bg-slate-100 p-3 rounded"><code>:root {
-  --color-primary: #3b82f6;
-  --color-secondary: #64748b;
-  --color-success: #10b981;
-  --color-danger: #ef4444;
-  --color-warning: #f59e0b;
-  --color-info: #3b82f6;
-}</code></pre>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="font-semibold">NPM Installation</h3>
                 </div>
-                <div>
-                  <h4 class="font-bold mb-2">Typography Variables</h4>
-                  <pre class="bg-slate-100 p-3 rounded"><code>:root {
-  --font-family-base: 'Helvetica Neue', sans-serif;
-  --font-family-heading: 'Helvetica Neue', sans-serif;
-  --font-size-base: 1rem;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-}</code></pre>
+                <div class="card-body">
+                  <pre
+                    class="bg-slate-100 p-4 rounded mb-4"
+                  ><code>npm install sleyt</code></pre>
+                  <p class="text-sm text-secondary">Then import in your CSS:</p>
+                  <pre
+                    class="bg-slate-100 p-4 rounded"
+                  ><code>@import 'sleyt/dist/css/index.css';</code></pre>
                 </div>
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                <div>
-                  <h4 class="font-bold mb-2">Spacing Variables</h4>
-                  <pre class="bg-slate-100 p-3 rounded"><code>:root {
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 0.75rem;
-  --spacing-4: 1rem;
-  --spacing-6: 1.5rem;
-  --spacing-8: 2rem;
-}</code></pre>
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="font-semibold">CDN Usage</h3>
                 </div>
-                <div>
-                  <h4 class="font-bold mb-2">Breakpoint Variables</h4>
-                  <pre class="bg-slate-100 p-3 rounded"><code>:root {
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-}</code></pre>
+                <div class="card-body">
+                  <pre
+                    class="bg-slate-100 p-4 rounded"
+                  ><code>&lt;link rel="stylesheet" href="https://unpkg.com/sleyt@latest/dist/css/index.css"&gt;</code></pre>
+                  <p class="text-sm text-secondary mt-4">
+                    Include in your HTML head section.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="card">
-            <div class="card-header">How to Use Variables</div>
-            <div class="card-body">
-              <p class="mb-2">Example of using variables in CSS:</p>
-              <pre class="bg-slate-100 p-3 rounded"><code>.button {
-  background-color: var(--color-primary);
-  color: white;
-  padding: var(--spacing-2) var(--spacing-4);
-  border-radius: var(--border-radius-md);
-  font-weight: var(--font-weight-bold);
-}</code></pre>
+            <div class="card mt-6">
+              <div class="card-header">
+                <h3 class="font-semibold">Quick Example</h3>
+              </div>
+              <div class="card-body">
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <h4 class="font-semibold">Welcome to Sleyt</h4>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-4">
+                      A modern CSS framework with glass morphism design.
+                    </p>
+                    <button class="btn btn-primary">Get Started</button>
+                  </div>
+                </div>
 
-              <p class="mt-4 mb-2">
-                Example of manipulating variables with JavaScript:
-              </p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>// Get CSS variable value
-const primaryColor = getComputedStyle(document.documentElement)
-  .getPropertyValue('--color-primary');
-
-// Set CSS variable value
-document.documentElement.style.setProperty('--color-primary', '#0088ff');</code></pre>
+                <pre
+                  class="bg-slate-100 p-4 rounded"
+                ><code>&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;h4 class="font-semibold"&gt;Welcome to Sleyt&lt;/h4&gt;
+    &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;p class="mb-4"&gt;A modern CSS framework with glass morphism design.&lt;/p&gt;
+    &lt;button class="btn btn-primary"&gt;Get Started&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Components Section -->
-      <section class="mb-16">
-        <h2 class="text-2xl font-bold mb-6">Components</h2>
-        <p class="mb-4">
-          Components are the building blocks of UI. Each functions independently
-          and can be combined to create complex interfaces. They handle both
-          styling and interactions.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-          <!-- accordion -->
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/accordion.css"
-                >accordion.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Collapsible content panels. Useful for organizing and displaying
-                information while saving space. Expands and collapses when
-                clicked.
-              </p>
-              <div class="accordion mt-2">
-                <div class="accordion-item">
-                  <input
-                    type="checkbox"
-                    id="example-accordion"
-                    class="accordion-toggle"
-                  />
-                  <label for="example-accordion" class="accordion-label"
-                    >Accordion Example</label
-                  >
-                  <div class="accordion-content">
-                    This is the content of the accordion.
-                  </div>
+      <section id="components" class="mb-16">
+        <div class="card mb-8">
+          <div class="card-header">
+            <h2 class="text-2xl font-bold">Components</h2>
+          </div>
+          <div class="card-body">
+            <p class="text-secondary mb-6">
+              Building blocks for modern web interfaces with glass morphism
+              effects.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Buttons -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Buttons</h3>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- alerts -->
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/alerts.css"
-                >alerts.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Notification elements for conveying important information to
-                users. Can express various states like success, error, warning,
-                etc.
-              </p>
-              <div class="alert alert-info mt-2">Info Alert Example</div>
-            </div>
-          </div>
-
-          <!-- badges -->
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/badges.css"
-                >badges.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Small labels for displaying status or counts. Used for item
-                counts or status indicators.
-              </p>
-              <span class="badge badge-primary mt-2">New</span>
-              <span class="badge badge-secondary mt-2">7</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- buttons -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/buttons.css"
-                >buttons.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Interactive elements representing primary actions. Available in
-                various sizes, colors, and styles.
-              </p>
-              <button class="btn btn-sm btn-primary mt-2">
-                Button Example
-              </button>
-            </div>
-          </div>
-
-          <!-- cards -->
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/cards.css"
-                >cards.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Containers for grouping related content. Has a structure of
-                header, body, and footer.
-              </p>
-            </div>
-          </div>
-
-          <!-- code -->
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/code.css"
-                >code.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Styling for code blocks and inline code. Formats code display
-                for better readability.
-              </p>
-              <code class="mt-2">console.log('Hello world');</code>
-            </div>
-          </div>
-        </div>
-
-        <!-- forms -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/forms.css"
-                >forms.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Input fields for collecting user input. Supports various input
-                types like text, select, checkbox, etc.
-              </p>
-              <input
-                type="text"
-                class="form-control mt-2"
-                placeholder="Text input"
-              />
-            </div>
-          </div>
-
-          <!-- navbar -->
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/navbar.css"
-                >navbar.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Header component for site navigation. Organizes brand display
-                and navigation links.
-              </p>
-            </div>
-          </div>
-
-          <!-- showcase -->
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/showcase.css"
-                >showcase.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Styles for component presentation and demonstration. Used for
-                demo displays in documentation pages.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- swatch -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/swatch.css"
-                >swatch.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Styling for color palette display. A component for visually
-                displaying color samples.
-              </p>
-              <div class="swatch bg-slate-500 mt-2">500</div>
-            </div>
-          </div>
-
-          <!-- tables -->
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/components/tables.css"
-                >tables.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Elements for displaying data in rows and columns. Variations
-                include basic tables, striped tables, bordered tables, etc.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Accordion</h3>
-          <p class="mb-4">
-            The accordion is a collapsible content panel. It's ideal for
-            organizing and displaying a large amount of information in a limited
-            space. It's implemented with CSS only and doesn't require
-            JavaScript.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Accordion</div>
-            <div class="card-body">
-              <p class="mb-2">Basic accordion:</p>
-              <div class="accordion mb-4">
-                <div class="accordion-item">
-                  <input
-                    type="checkbox"
-                    id="basic-accordion"
-                    class="accordion-toggle"
-                  />
-                  <label for="basic-accordion" class="accordion-label"
-                    >Basic Accordion</label
-                  >
-                  <div class="accordion-content">
-                    <p>This is a basic accordion example.</p>
-                  </div>
-                </div>
-              </div>
-
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;div class="accordion"&gt;
-  &lt;div class="accordion-item"&gt;
-    &lt;input type="checkbox" id="basic-accordion" class="accordion-toggle"&gt;
-    &lt;label for="basic-accordion" class="accordion-label"&gt;Basic Accordion&lt;/label&gt;
-    &lt;div class="accordion-content"&gt;
-      &lt;p&gt;This is a basic accordion example.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-              <p class="mb-2">Primary-colored accordion:</p>
-              <div class="accordion accordion-primary mb-4">
-                <div class="accordion-item">
-                  <input
-                    type="checkbox"
-                    id="primary-accordion"
-                    class="accordion-toggle"
-                  />
-                  <label for="primary-accordion" class="accordion-label"
-                    >Primary Color Accordion</label
-                  >
-                  <div class="accordion-content">
-                    <p>This is an accordion example using the primary color.</p>
-                  </div>
-                </div>
-              </div>
-
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="accordion accordion-primary"&gt;
-  &lt;div class="accordion-item"&gt;
-    &lt;input type="checkbox" id="primary-accordion" class="accordion-toggle"&gt;
-    &lt;label for="primary-accordion" class="accordion-label"&gt;Primary Color Accordion&lt;/label&gt;
-    &lt;div class="accordion-content"&gt;
-      &lt;p&gt;This is an accordion example using the primary color.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Alerts Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Alerts</h3>
-          <p class="mb-4">
-            Alerts are notification elements for conveying important information
-            to users. They can express various states like success, error,
-            warning, etc.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Alerts</div>
-            <div class="card-body">
-              <p class="mb-2">Various styles of alerts:</p>
-              <div class="alert alert-primary mb-2">Primary Alert</div>
-              <div class="alert alert-secondary mb-2">Secondary Alert</div>
-              <div class="alert alert-success mb-2">Success Alert</div>
-              <div class="alert alert-danger mb-2">Danger Alert</div>
-              <div class="alert alert-warning mb-2">Warning Alert</div>
-              <div class="alert alert-info mb-2">Info Alert</div>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="alert alert-primary mb-2"&gt;Primary Alert&lt;/div&gt;
-&lt;div class="alert alert-secondary mb-2"&gt;Secondary Alert&lt;/div&gt;
-&lt;div class="alert alert-success mb-2"&gt;Success Alert&lt;/div&gt;
-&lt;div class="alert alert-danger mb-2"&gt;Danger Alert&lt;/div&gt;
-&lt;div class="alert alert-warning mb-2"&gt;Warning Alert&lt;/div&gt;
-&lt;div class="alert alert-info mb-2"&gt;Info Alert&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Badges Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Badges</h3>
-          <p class="mb-4">
-            Badges are small labels for displaying status or counts. They can be
-            used for item counts or status indicators.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Badges</div>
-            <div class="card-body">
-              <div class="flex flex-wrap gap-2 mb-4">
-                <p class="mb-2">Various styles of badges:</p>
-                <span class="badge badge-primary">Primary</span>
-                <span class="badge badge-secondary">Secondary</span>
-                <span class="badge badge-success">Success</span>
-                <span class="badge badge-danger">Danger</span>
-                <span class="badge badge-warning">Warning</span>
-                <span class="badge badge-info">Info</span>
-                <span class="badge badge-dark">Dark</span>
-                <span class="badge badge-light">Light</span>
-              </div>
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
-&lt;span class="badge badge-secondary"&gt;Secondary&lt;/span&gt;
-&lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
-&lt;span class="badge badge-danger"&gt;Danger&lt;/span&gt;
-&lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
-&lt;span class="badge badge-info"&gt;Info&lt;/span&gt;
-&lt;span class="badge badge-dark"&gt;Dark&lt;/span&gt;
-&lt;span class="badge badge-light"&gt;Light&lt;/span&gt;</code></pre>
-
-              <p class="mb-2">Badges inside buttons:</p>
-              <button class="btn btn-primary mb-4">
-                Message <span class="badge badge-light">4</span>
-              </button>
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;button class="btn btn-primary"&gt;
-  Message &lt;span class="badge badge-light"&gt;4&lt;/span&gt;
-&lt;/button&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Buttons Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Buttons</h3>
-          <p class="mb-4">
-            Buttons are basic interactive components. They come in various
-            sizes, colors, and states, and are used for form submission or
-            triggering actions.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Buttons</div>
-            <div class="card-body">
-              <p class="mb-2">Basic button styles:</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <button class="btn btn-primary">Primary</button>
-                <button class="btn btn-secondary">Secondary</button>
-                <button class="btn btn-success">Success</button>
-                <button class="btn btn-danger">Danger</button>
-                <button class="btn btn-warning">Warning</button>
-                <button class="btn btn-info">Info</button>
-                <button class="btn btn-dark">Dark</button>
-                <button class="btn btn-light">Light</button>
-                <button class="btn" disabled>Disabled</button>
-              </div>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
-&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
-&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
-&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
-&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
-&lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
-&lt;button class="btn btn-dark"&gt;Dark&lt;/button&gt;
-&lt;button class="btn btn-light"&gt;Light&lt;/button&gt;
-&lt;button class="btn" disabled&gt;Disabled&lt;/button&gt;</code></pre>
-
-              <p class="mt-4 mb-2">Outlined buttons:</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <button class="btn btn-outline-primary">Primary</button>
-                <button class="btn btn-outline-secondary">Secondary</button>
-              </div>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;button class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
-&lt;button class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;</code></pre>
-
-              <p class="mt-4 mb-2">Button sizes:</p>
-              <div class="flex items-center gap-2 mb-4">
-                <button class="btn btn-sm btn-primary">Small</button>
-                <button class="btn btn-primary">Medium (default)</button>
-                <button class="btn btn-lg btn-primary">Large</button>
-              </div>
-
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;button class="btn btn-sm btn-primary"&gt;Small&lt;/button&gt;
-&lt;button class="btn btn-primary"&gt;Medium (default)&lt;/button&gt;
-&lt;button class="btn btn-lg btn-primary"&gt;Large&lt;/button&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cards Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Cards</h3>
-          <p class="mb-4">
-            Cards are containers for grouping related content. They have a
-            structure of header, body, and footer.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Cards</div>
-            <div class="card-body">
-              <p class="mb-2">Basic card:</p>
-              <div class="card mb-4">
-                <div class="card-header">Product Information</div>
                 <div class="card-body">
-                  <h5 class="font-bold mb-2">Smartwatch Pro</h5>
-                  <p>
-                    High-performance smartwatch. Includes heart rate monitor,
-                    sleep tracking, and water resistance.
+                  <p class="text-sm text-secondary mb-4">
+                    Interactive elements with various styles and sizes.
                   </p>
-                </div>
-                <div class="card-footer">
-                  <button class="btn btn-sm btn-primary">View Details</button>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <button class="btn btn-primary btn-sm">Primary</button>
+                    <button class="btn btn-secondary btn-sm">Secondary</button>
+                    <button class="btn btn-outline-primary btn-sm">
+                      Outline
+                    </button>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;</code></pre>
                 </div>
               </div>
 
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    Product Information
-  &lt;/div&gt;
+              <!-- Cards -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Cards</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    Flexible containers for grouping content.
+                  </p>
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <p class="text-sm">Sample card content</p>
+                    </div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="card"&gt;
   &lt;div class="card-body"&gt;
-    &lt;h5 class="font-bold mb-2"&gt;Smartwatch Pro&lt;/h5&gt;
-    &lt;p&gt;High-performance smartwatch. Includes heart rate monitor, sleep tracking, and water resistance.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="card-footer"&gt;
-    &lt;button class="btn btn-sm btn-primary"&gt;View Details&lt;/button&gt;
+    Content
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-
-              <p class="mb-2">Multiple cards:</p>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <div class="card p-3">Card 1</div>
-                <div class="card p-3">Card 2</div>
-                <div class="card p-3">Card 3</div>
-              </div>
-
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-4"&gt;
-  &lt;div class="card p-3"&gt;Card 1&lt;/div&gt;
-  &lt;div class="card p-3"&gt;Card 2&lt;/div&gt;
-  &lt;div class="card p-3"&gt;Card 3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Code Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Code</h3>
-          <p class="mb-4">
-            Code components provide styling for code blocks and inline code.
-            They support both inline code and code blocks.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Code</div>
-            <div class="card-body">
-              <p class="mb-2">Inline code:</p>
-              <p class="mb-2"><code>npm install</code></p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;code&gt;npm install&lt;/code&gt;</code></pre>
-
-              <p class="my-2">Code block:</p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>// JavaScript function example
-function calculateTotal(items) {
-  return items
-    .map(item => item.price * item.quantity)
-    .reduce((total, value) => total + value, 0);
-}</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Forms Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Forms</h3>
-          <p class="mb-4">
-            Forms are collections of input fields for collecting user input.
-            They support various input types like text, select, checkbox, etc.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Forms</div>
-            <div class="card-body">
-              <p class="mb-2">Basic form:</p>
-              <!-- Full form example display -->
-              <form class="mb-4">
-                <div class="form-group mb-3">
-                  <label class="form-label"
-                    >Name <span class="text-danger">*</span></label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="John Doe"
-                  />
-                </div>
-
-                <div class="form-group mb-3">
-                  <label class="form-label"
-                    >Email <span class="text-danger">*</span></label
-                  >
-                  <input
-                    type="email"
-                    class="form-control is-invalid"
-                    placeholder="example@mail.com"
-                    value="invalid-email"
-                  />
-                  <div class="invalid-feedback">
-                    Please enter a valid email address
-                  </div>
-                  <small class="text-muted"
-                    >Your email will not be shared publicly</small
-                  >
-                </div>
-
-                <div class="form-group mb-3">
-                  <label class="form-label">Phone Number</label>
-                  <input
-                    type="tel"
-                    class="form-control is-valid"
-                    value="123-456-7890"
-                  />
-                  <div class="form-check mt-1 text-success">
-                    Valid phone number format
-                  </div>
-                </div>
-
-                <div class="form-group mb-3">
-                  <label class="form-label"
-                    >Inquiry Type <span class="text-danger">*</span></label
-                  >
-                  <select class="form-control is-invalid">
-                    <option value="">Please select</option>
-                    <option>About the product</option>
-                    <option>Support</option>
-                    <option>Other</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please select an inquiry type
-                  </div>
-                </div>
-
-                <div class="form-group mb-3">
-                  <label class="form-label">Message (max 200 characters)</label>
-                  <textarea
-                    class="form-control is-invalid"
-                    rows="3"
-                    placeholder="Enter your message here"
-                  >
-This text is too long, causing a validation error. In a real application, JavaScript would count the characters and display an error when the limit is reached.</textarea
-                  >
-                  <div class="invalid-feedback">
-                    Please keep your message under 200 characters (currently 180
-                    characters)
-                  </div>
-                </div>
-
-                <div class="form-check mb-3">
-                  <input
-                    type="checkbox"
-                    class="form-check-input is-invalid"
-                    id="terms"
-                  />
-                  <label class="form-check-label" for="terms"
-                    >I agree to the terms and conditions
-                    <span class="text-danger">*</span></label
-                  >
-                  <div class="d-block invalid-feedback">
-                    You must agree to the terms and conditions
-                  </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary" disabled>
-                  Submit
-                </button>
-                <small class="d-block text-danger mt-2"
-                  >Please complete all required fields and resolve validation
-                  errors</small
-                >
-              </form>
-
-              <pre class="bg-slate-100 p-3 rounded"><code>&lt;form&gt;
-  &lt;div class="form-group mb-3"&gt;
-    &lt;label class="form-label"&gt;Name &lt;span class="text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
-    &lt;input type="text" class="form-control" placeholder="John Doe"&gt;
-  &lt;/div&gt;
-
-  &lt;div class="form-group mb-3"&gt;
-    &lt;label class="form-label"&gt;Email &lt;span class="text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
-    &lt;input type="email" class="form-control is-invalid" placeholder="example@mail.com" value="invalid-email"&gt;
-    &lt;div class="invalid-feedback"&gt;Please enter a valid email address&lt;/div&gt;
-    &lt;small class="text-muted"&gt;Your email will not be shared publicly&lt;/small&gt;
-  &lt;/div&gt;
-
-  &lt;div class="form-group mb-3"&gt;
-    &lt;label class="form-label"&gt;Phone Number&lt;/label&gt;
-    &lt;input type="tel" class="form-control is-valid" value="123-456-7890"&gt;
-    &lt;div class="form-check mt-1 text-success"&gt;Valid phone number format&lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class="form-group mb-3"&gt;
-    &lt;label class="form-label"&gt;Inquiry Type &lt;span class="text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
-    &lt;select class="form-control is-invalid"&gt;
-      &lt;option value=""&gt;Please select&lt;/option&gt;
-      &lt;option&gt;About the product&lt;/option&gt;
-      &lt;option&gt;Support&lt;/option&gt;
-      &lt;option&gt;Other&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;div class="invalid-feedback"&gt;Please select an inquiry type&lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class="form-check mb-3"&gt;
-    &lt;input type="checkbox" class="form-check-input is-invalid" id="terms"&gt;
-    &lt;label class="form-check-label" for="terms"&gt;I agree to the terms and conditions &lt;span class="text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
-    &lt;div class="d-block invalid-feedback"&gt;You must agree to the terms and conditions&lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;button type="submit" class="btn btn-primary" disabled&gt;Submit&lt;/button&gt;
-  &lt;small class="d-block text-danger mt-2"&gt;Please complete all required fields and resolve validation errors&lt;/small&gt;
-&lt;/form&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navbar Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Navbar</h3>
-          <p class="mb-4">
-            Navbar is a header component for site navigation. It organizes brand
-            display and navigation links.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Navbar</div>
-            <div class="card-body">
-              <p class="mb-2">Basic navbar:</p>
-              <div class="border rounded overflow-hidden mb-4">
-                <nav class="navbar">
-                  <a href="#" class="navbar-brand">Sleyt</a>
-                  <input
-                    type="checkbox"
-                    id="navbar-toggle-en"
-                    class="navbar-toggle-checkbox"
-                    aria-hidden="true"
-                  />
-                  <label
-                    for="navbar-toggle-en"
-                    class="navbar-toggle-label"
-                    aria-label="Toggle menu"
-                  >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </label>
-                  <ul class="navbar-nav">
-                    <li><a href="#" class="navbar-item active">Home</a></li>
-                    <li><a href="#" class="navbar-item">Components</a></li>
-                    <li><a href="#" class="navbar-item">Documentation</a></li>
-                    <li><a href="#" class="navbar-item">GitHub</a></li>
-                  </ul>
-                </nav>
-              </div>
-
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;nav class="navbar"&gt;
-  &lt;a href="#" class="navbar-brand"&gt;Site Name&lt;/a&gt;
-  &lt;input type="checkbox" id="navbar-toggle" class="navbar-toggle-checkbox" aria-hidden="true"&gt;
-  &lt;label for="navbar-toggle" class="navbar-toggle-label" aria-label="Toggle menu"&gt;
-    &lt;span&gt;&lt;/span&gt;
-    &lt;span&gt;&lt;/span&gt;
-    &lt;span&gt;&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;ul class="navbar-nav"&gt;
-    &lt;li&gt;&lt;a href="#" class="navbar-item active"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#" class="navbar-item"&gt;Features&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#" class="navbar-item"&gt;Pricing&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#" class="navbar-item"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Showcase Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Showcase</h3>
-          <p class="mb-4">
-            Showcase styles are for component presentation and demonstration.
-            They are used for demo displays in documentation pages.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Showcase</div>
-            <div class="card-body">
-              <p class="mb-2">Basic showcase:</p>
-              <div class="showcase mb-4">
-                <div class="showcase-preview">
-                  <div class="alert alert-info">Showcase component example</div>
-                </div>
-                <div class="showcase-code">
-                  <pre><code>&lt;div class="alert alert-info"&gt;Showcase component example&lt;/div&gt;</code></pre>
                 </div>
               </div>
 
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="showcase"&gt;
-  &lt;div class="showcase-preview"&gt;
-    &lt;div class="alert alert-info"&gt;Showcase component example&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="showcase-code"&gt;
-    &lt;pre&gt;&lt;code&gt;&amp;lt;div class="alert alert-info"&amp;gt;Showcase component example&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Swatch Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Swatch</h3>
-          <p class="mb-4">
-            Swatch styles are for visually displaying color samples. They are
-            used for color palette displays.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Swatch</div>
-            <div class="card-body">
-              <p class="mb-2">Basic swatch:</p>
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
-                <div class="swatch bg-primary">Primary</div>
-                <div class="swatch bg-secondary">Secondary</div>
-                <div class="swatch bg-success">Success</div>
-                <div class="swatch bg-danger">Danger</div>
+              <!-- Forms -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Forms</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    Input fields and form controls.
+                  </p>
+                  <div class="mb-4">
+                    <input
+                      type="text"
+                      class="form-control mb-2"
+                      placeholder="Text input"
+                    />
+                    <select class="form-control">
+                      <option>Select option</option>
+                    </select>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;input type="text" class="form-control"&gt;</code></pre>
+                </div>
               </div>
 
-              <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mb-4">
-                <div class="swatch bg-slate-100">100</div>
-                <div class="swatch bg-slate-200">200</div>
-                <div class="swatch bg-slate-300">300</div>
-                <div class="swatch bg-slate-400">400</div>
-                <div class="swatch bg-slate-500">500</div>
-                <div class="swatch bg-slate-600 text-white">600</div>
+              <!-- Alerts -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Alerts</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    Notification messages for users.
+                  </p>
+                  <div class="alert alert-success mb-2 text-sm">
+                    Success message
+                  </div>
+                  <div class="alert alert-warning mb-4 text-sm">
+                    Warning message
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="alert alert-success"&gt;Success&lt;/div&gt;</code></pre>
+                </div>
               </div>
 
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;!-- Color swatch --&gt;
-&lt;div class="swatch bg-primary"&gt;Primary&lt;/div&gt;
-&lt;div class="swatch bg-secondary"&gt;Secondary&lt;/div&gt;
-&lt;div class="swatch bg-success"&gt;Success&lt;/div&gt;
+              <!-- Badges -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Badges</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    Small status indicators and labels.
+                  </p>
+                  <div class="flex gap-2 mb-4">
+                    <span class="badge badge-primary">New</span>
+                    <span class="badge badge-success">Active</span>
+                    <span class="badge badge-warning">5</span>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;span class="badge badge-primary"&gt;New&lt;/span&gt;</code></pre>
+                </div>
+              </div>
 
-&lt;!-- Grayscale swatch --&gt;
-&lt;div class="grid grid-cols-3 md:grid-cols-6 gap-2"&gt;
-  &lt;div class="swatch bg-slate-100"&gt;100&lt;/div&gt;
-  &lt;div class="swatch bg-slate-200"&gt;200&lt;/div&gt;
-  &lt;div class="swatch bg-slate-300"&gt;300&lt;/div&gt;
-  &lt;div class="swatch bg-slate-400"&gt;400&lt;/div&gt;
-  &lt;div class="swatch bg-slate-500"&gt;500&lt;/div&gt;
-  &lt;div class="swatch bg-slate-600 text-white"&gt;600&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tables Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Tables</h3>
-          <p class="mb-4">
-            Tables are elements for displaying data in rows and columns. They
-            include variations like basic tables, striped tables, bordered
-            tables, etc.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Tables</div>
-            <div class="card-body">
-              <p class="mb-2">Basic table:</p>
-              <table class="table mb-4">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Department</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>John Smith</td>
-                    <td>Project Manager</td>
-                    <td>Development</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jane Doe</td>
-                    <td>Designer</td>
-                    <td>UI/UX</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Robert Johnson</td>
-                    <td>Engineer</td>
-                    <td>Backend</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <pre
-                class="bg-slate-100 p-3 mb-2 rounded"
-              ><code>&lt;table class="table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;#&lt;/th&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Position&lt;/th&gt;
-      &lt;th&gt;Department&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;John Smith&lt;/td&gt;
-      &lt;td&gt;Project Manager&lt;/td&gt;
-      &lt;td&gt;Development&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;!-- Other rows --&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-              <!-- Striped table -->
-              <p class="mb-2">Striped table:</p>
-              <table class="table table-striped mb-4">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Department</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>John Smith</td>
-                    <td>Project Manager</td>
-                    <td>Development</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jane Doe</td>
-                    <td>Designer</td>
-                    <td>UI/UX</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Robert Johnson</td>
-                    <td>Engineer</td>
-                    <td>Backend</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <pre
-                class="bg-slate-100 p-3 mb-4 rounded"
-              ><code>&lt;!-- Striped table --&gt;
-&lt;table class="table table-striped"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;#&lt;/th&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Position&lt;/th&gt;
-      &lt;th&gt;Department&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;John Smith&lt;/td&gt;
-      &lt;td&gt;Project Manager&lt;/td&gt;
-      &lt;td&gt;Development&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;Jane Doe&lt;/td&gt;
-      &lt;td&gt;Designer&lt;/td&gt;
-      &lt;td&gt;UI/UX&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;Robert Johnson&lt;/td&gt;
-      &lt;td&gt;Engineer&lt;/td&gt;
-      &lt;td&gt;Backend&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-              <!-- Bordered table -->
-              <p class="mb-2">Bordered table:</p>
-              <table class="table table-bordered mb-4">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Department</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>John Smith</td>
-                    <td>Project Manager</td>
-                    <td>Development</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jane Doe</td>
-                    <td>Designer</td>
-                    <td>UI/UX</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Robert Johnson</td>
-                    <td>Engineer</td>
-                    <td>Backend</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <pre
-                class="bg-slate-100 p-3 mb-4 rounded"
-              ><code>&lt;!-- Bordered table --&gt;
-&lt;table class="table table-bordered"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;#&lt;/th&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Position&lt;/th&gt;
-      &lt;th&gt;Department&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;John Smith&lt;/td&gt;
-      &lt;td&gt;Project Manager&lt;/td&gt;
-      &lt;td&gt;Development&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;Jane Doe&lt;/td&gt;
-      &lt;td&gt;Designer&lt;/td&gt;
-      &lt;td&gt;UI/UX&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;Robert Johnson&lt;/td&gt;
-      &lt;td&gt;Engineer&lt;/td&gt;
-      &lt;td&gt;Backend&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-              <!-- Hoverable table -->
-              <p class="mb-2">Hoverable table (try hovering over rows):</p>
-              <table class="table table-hover mb-4">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Department</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>John Smith</td>
-                    <td>Project Manager</td>
-                    <td>Development</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jane Doe</td>
-                    <td>Designer</td>
-                    <td>UI/UX</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Robert Johnson</td>
-                    <td>Engineer</td>
-                    <td>Backend</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <pre
-                class="bg-slate-100 p-3 mb-4 rounded"
-              ><code>&lt;!-- Hoverable table --&gt;
-&lt;table class="table table-hover"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;#&lt;/th&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Position&lt;/th&gt;
-      &lt;th&gt;Department&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;John Smith&lt;/td&gt;
-      &lt;td&gt;Project Manager&lt;/td&gt;
-      &lt;td&gt;Development&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;Jane Doe&lt;/td&gt;
-      &lt;td&gt;Designer&lt;/td&gt;
-      &lt;td&gt;UI/UX&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;Robert Johnson&lt;/td&gt;
-      &lt;td&gt;Engineer&lt;/td&gt;
-      &lt;td&gt;Backend&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-              <!-- Compact table -->
-              <p class="mb-2">Compact table:</p>
-              <table class="table table-sm mb-4">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Department</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>John Smith</td>
-                    <td>Project Manager</td>
-                    <td>Development</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jane Doe</td>
-                    <td>Designer</td>
-                    <td>UI/UX</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Robert Johnson</td>
-                    <td>Engineer</td>
-                    <td>Backend</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;!-- Compact table --&gt;
-&lt;table class="table table-sm"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;#&lt;/th&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Position&lt;/th&gt;
-      &lt;th&gt;Department&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;John Smith&lt;/td&gt;
-      &lt;td&gt;Project Manager&lt;/td&gt;
-      &lt;td&gt;Development&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;Jane Doe&lt;/td&gt;
-      &lt;td&gt;Designer&lt;/td&gt;
-      &lt;td&gt;UI/UX&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;Robert Johnson&lt;/td&gt;
-      &lt;td&gt;Engineer&lt;/td&gt;
-      &lt;td&gt;Backend&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
+              <!-- Tables -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Tables</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    Structured data display.
+                  </p>
+                  <table class="table table-sm mb-4">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Item 1</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;table class="table"&gt;...&lt;/table&gt;</code></pre>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Layout Section -->
-      <section class="mb-16">
-        <h2 class="text-2xl font-bold mb-6">Layout</h2>
-        <p class="mb-4">
-          Layout components are responsible for page structure. They provide
-          tools for positioning and organizing elements, such as containers,
-          grids, and flexbox.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/layout/container.css"
-                >container.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                A container that centers content with appropriate margins.
-                Adjusts responsively with maximum width constraints.
-              </p>
-            </div>
+      <!-- Charts Section -->
+      <section id="charts" class="mb-16">
+        <div class="card mb-8">
+          <div class="card-header">
+            <h2 class="text-2xl font-bold">Charts</h2>
           </div>
+          <div class="card-body">
+            <p class="text-secondary mb-6">
+              Beautiful data visualization components with transparency effects.
+            </p>
 
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/layout/grid.css"
-                >grid.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                CSS Grid-based layout system. Easily creates complex
-                two-dimensional (rows and columns) layouts.
-              </p>
-              <div class="grid grid-cols-3 gap-1 mt-2">
-                <div class="p-1 bg-slate-200">1</div>
-                <div class="p-1 bg-slate-300">2</div>
-                <div class="p-1 bg-slate-400">3</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/layout/flexbox.css"
-                >flexbox.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Flexbox-based layout system. Flexibly builds one-dimensional
-                layouts (row or column direction).
-              </p>
-              <div class="flex justify-between mt-2">
-                <div class="p-1 bg-slate-200">Left</div>
-                <div class="p-1 bg-slate-300">Center</div>
-                <div class="p-1 bg-slate-400">Right</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Container Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Container</h3>
-          <p class="mb-4">
-            Containers are layout elements that constrain the width of page
-            content and automatically adjust based on screen size. They are
-            centered on the screen and form the foundation for responsive
-            design.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Basic Container Usage</div>
-            <div class="card-body">
-              <p class="mb-2">Example of using the basic container class:</p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="container"&gt;
-  &lt;!-- Content goes here --&gt;
-&lt;/div&gt;</code></pre>
-
-              <p class="mt-4 mb-2">
-                Center alignment and automatic margin adjustment:
-              </p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="container mx-auto"&gt;
-  &lt;!-- Left and right margins will be automatically equal --&gt;
-&lt;/div&gt;</code></pre>
-
-              <div class="mt-4">
-                <p class="mb-2">Container max-width by breakpoint:</p>
-                <table class="w-full border">
-                  <thead class="bg-slate-100">
-                    <tr>
-                      <th class="p-2 border">Breakpoint</th>
-                      <th class="p-2 border">Class</th>
-                      <th class="p-2 border">Max Width</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="p-2 border">Default</td>
-                      <td class="p-2 border">.container</td>
-                      <td class="p-2 border">100%</td>
-                    </tr>
-                    <tr>
-                      <td class="p-2 border">Small (sm)</td>
-                      <td class="p-2 border">.container</td>
-                      <td class="p-2 border">640px</td>
-                    </tr>
-                    <tr>
-                      <td class="p-2 border">Medium (md)</td>
-                      <td class="p-2 border">.container</td>
-                      <td class="p-2 border">768px</td>
-                    </tr>
-                    <tr>
-                      <td class="p-2 border">Large (lg)</td>
-                      <td class="p-2 border">.container</td>
-                      <td class="p-2 border">1024px</td>
-                    </tr>
-                    <tr>
-                      <td class="p-2 border">Extra Large (xl)</td>
-                      <td class="p-2 border">.container</td>
-                      <td class="p-2 border">1280px</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Flexbox Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Flexbox</h3>
-          <p class="mb-4">
-            Flexbox is a one-dimensional layout system that allows for flexible
-            element placement along a row or column. It provides easy control of
-            alignment, order, and distribution.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Basic Flexbox Usage</div>
-            <div class="card-body">
-              <p class="mb-2">Creating a flex container:</p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="flex"&gt;
-  &lt;div&gt;Item 1&lt;/div&gt;
-  &lt;div&gt;Item 2&lt;/div&gt;
-  &lt;div&gt;Item 3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-              <div class="flex gap-4 mt-4 mb-4">
-                <div class="flex-1">
-                  <p class="mb-2">Horizontal alignment:</p>
-                  <div class="p-2 bg-slate-100 rounded mb-2">
-                    <p class="mb-1">justify-start</p>
-                    <div class="flex justify-start bg-slate-200 p-1">
-                      <div class="p-1 bg-slate-400 mx-1">1</div>
-                      <div class="p-1 bg-slate-400 mx-1">2</div>
-                      <div class="p-1 bg-slate-400 mx-1">3</div>
-                    </div>
-                  </div>
-                  <div class="p-2 bg-slate-100 rounded mb-2">
-                    <p class="mb-1">justify-center</p>
-                    <div class="flex justify-center bg-slate-200 p-1">
-                      <div class="p-1 bg-slate-400 mx-1">1</div>
-                      <div class="p-1 bg-slate-400 mx-1">2</div>
-                      <div class="p-1 bg-slate-400 mx-1">3</div>
-                    </div>
-                  </div>
-                  <div class="p-2 bg-slate-100 rounded">
-                    <p class="mb-1">justify-between</p>
-                    <div class="flex justify-between bg-slate-200 p-1">
-                      <div class="p-1 bg-slate-400">1</div>
-                      <div class="p-1 bg-slate-400">2</div>
-                      <div class="p-1 bg-slate-400">3</div>
-                    </div>
-                  </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <!-- Bar Chart -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Bar Charts</h3>
                 </div>
-                <div class="flex-1">
-                  <p class="mb-2">Vertical alignment:</p>
-                  <div class="p-2 bg-slate-100 rounded mb-2">
-                    <p class="mb-1">items-start</p>
-                    <div class="flex items-start bg-slate-200 p-1">
-                      <div class="p-1 bg-slate-400 mx-1">1</div>
-                      <div class="p-1 bg-slate-400 mx-1">2</div>
-                      <div class="p-1 bg-slate-400 mx-1">3</div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    Create stunning bar charts with customizable colors.
+                  </p>
+                  <div class="chart chart-sm mb-4">
+                    <div class="bar-chart">
+                      <div
+                        class="bar-chart-item"
+                        data-variant="primary"
+                        data-height="md"
+                      ></div>
+                      <div
+                        class="bar-chart-item"
+                        data-variant="success"
+                        data-height="lg"
+                      ></div>
+                      <div
+                        class="bar-chart-item"
+                        data-variant="warning"
+                        data-height="sm"
+                      ></div>
+                      <div
+                        class="bar-chart-item"
+                        data-variant="primary"
+                        data-height="xl"
+                      ></div>
                     </div>
                   </div>
-                  <div class="p-2 bg-slate-100 rounded mb-2">
-                    <p class="mb-1">items-center</p>
-                    <div class="flex items-center bg-slate-200 p-1">
-                      <div class="p-1 bg-slate-400 mx-1">1</div>
-                      <div class="p-1 bg-slate-400 mx-1">2</div>
-                      <div class="p-1 bg-slate-400 mx-1">3</div>
-                    </div>
-                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="chart"&gt;
+  &lt;div class="bar-chart"&gt;
+    &lt;div class="bar-chart-item" data-variant="primary" data-height="md"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                 </div>
               </div>
 
-              <p class="mb-2">Controlling flex item size:</p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="flex"&gt;
-  &lt;div class="flex-1"&gt;Flexible width&lt;/div&gt;
-  &lt;div class="flex-none w-24"&gt;Fixed width&lt;/div&gt;
-  &lt;div class="flex-2"&gt;Double flexible width&lt;/div&gt;
+              <!-- Line Chart -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Line Charts</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    Smooth line charts with gradient fills.
+                  </p>
+                  <div class="chart chart-sm mb-4">
+                    <svg class="line-chart-svg" viewBox="0 0 200 100">
+                      <path
+                        d="M 10 80 Q 50 20 100 40 T 190 30"
+                        stroke="var(--color-primary)"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                      />
+                      <circle
+                        cx="10"
+                        cy="80"
+                        r="3"
+                        fill="var(--color-primary)"
+                      />
+                      <circle
+                        cx="100"
+                        cy="40"
+                        r="3"
+                        fill="var(--color-primary)"
+                      />
+                      <circle
+                        cx="190"
+                        cy="30"
+                        r="3"
+                        fill="var(--color-primary)"
+                      />
+                    </svg>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="chart"&gt;
+  &lt;svg class="line-chart-svg"&gt;
+    &lt;path d="..." stroke="var(--color-primary)"/&gt;
+  &lt;/svg&gt;
 &lt;/div&gt;</code></pre>
+                </div>
+              </div>
+
+              <!-- Donut Chart -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Donut Charts</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    Elegant donut charts with legends.
+                  </p>
+                  <div class="donut-chart mb-4">
+                    <svg class="donut-chart-svg" viewBox="0 0 100 100">
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="30"
+                        fill="none"
+                        stroke="var(--border-color)"
+                        stroke-width="10"
+                      ></circle>
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="30"
+                        fill="none"
+                        stroke="var(--color-primary)"
+                        stroke-width="10"
+                        stroke-dasharray="60 188"
+                        stroke-dashoffset="0"
+                      ></circle>
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="30"
+                        fill="none"
+                        stroke="var(--color-success)"
+                        stroke-width="10"
+                        stroke-dasharray="40 188"
+                        stroke-dashoffset="-60"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="donut-chart"&gt;
+  &lt;svg class="donut-chart-svg"&gt;
+    &lt;circle cx="50" cy="50" r="30"/&gt;
+  &lt;/svg&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Grid Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Grid</h3>
-          <p class="mb-4">
-            CSS Grid is a two-dimensional layout system that allows element
-            placement along both rows and columns. It's a powerful tool for
-            creating complex layouts with minimal code.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Basic Grid Layout</div>
-            <div class="card-body">
-              <p class="mb-2">Basic grid example:</p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="grid grid-cols-3 gap-4"&gt;
-  &lt;div&gt;Item 1&lt;/div&gt;
-  &lt;div&gt;Item 2&lt;/div&gt;
-  &lt;div&gt;Item 3&lt;/div&gt;
-  &lt;div&gt;Item 4&lt;/div&gt;
-  &lt;div&gt;Item 5&lt;/div&gt;
-  &lt;div&gt;Item 6&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-              <div class="mt-4 mb-4">
-                <p class="mb-2">3-column grid example:</p>
-                <div class="grid grid-cols-3 gap-2 bg-slate-100 p-2 rounded">
-                  <div class="p-2 bg-slate-300 text-center">1</div>
-                  <div class="p-2 bg-slate-300 text-center">2</div>
-                  <div class="p-2 bg-slate-300 text-center">3</div>
-                  <div class="p-2 bg-slate-300 text-center">4</div>
-                  <div class="p-2 bg-slate-300 text-center">5</div>
-                  <div class="p-2 bg-slate-300 text-center">6</div>
-                </div>
+            <!-- Detailed Chart Example -->
+            <div class="card mt-8 glass">
+              <div class="card-header">
+                <h3 class="font-semibold">Complete Chart Example</h3>
               </div>
-
-              <p class="mb-2">Responsive grid example:</p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"&gt;
-  &lt;!-- 1 column on small screens, 2 columns on medium screens, 4 columns on large screens --&gt;
-&lt;/div&gt;</code></pre>
-
-              <div class="mt-4 mb-4">
-                <p class="mb-2">Grid item spanning:</p>
-                <div class="grid grid-cols-3 gap-2 bg-slate-100 p-2 rounded">
-                  <div class="p-2 bg-slate-300 text-center">
-                    1 (span 2 columns)
+              <div class="card-body">
+                <div class="chart mb-6">
+                  <div class="chart-header">
+                    <h4 class="chart-title">Monthly Revenue</h4>
+                    <p class="chart-description">
+                      Revenue growth over the past 6 months
+                    </p>
                   </div>
-                  <div class="p-2 bg-slate-300 text-center">2</div>
-                  <div class="p-2 bg-slate-300 text-center">3</div>
-                  <div class="p-2 bg-slate-300 text-center">
-                    4 (span 3 columns)
+                  <div class="chart-content">
+                    <div class="bar-chart">
+                      <div
+                        class="bar-chart-item"
+                        data-variant="primary"
+                        data-height="sm"
+                      >
+                        <div class="bar-chart-label">Jan</div>
+                      </div>
+                      <div
+                        class="bar-chart-item"
+                        data-variant="primary"
+                        data-height="md"
+                      >
+                        <div class="bar-chart-label">Feb</div>
+                      </div>
+                      <div
+                        class="bar-chart-item"
+                        data-variant="success"
+                        data-height="lg"
+                      >
+                        <div class="bar-chart-label">Mar</div>
+                      </div>
+                      <div
+                        class="bar-chart-item"
+                        data-variant="primary"
+                        data-height="xl"
+                      >
+                        <div class="bar-chart-label">Apr</div>
+                      </div>
+                      <div
+                        class="bar-chart-item"
+                        data-variant="success"
+                        data-height="lg"
+                      >
+                        <div class="bar-chart-label">May</div>
+                      </div>
+                      <div
+                        class="bar-chart-item"
+                        data-variant="primary"
+                        data-height="md"
+                      >
+                        <div class="bar-chart-label">Jun</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <p class="mb-2">Grid item spanning code example:</p>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="grid grid-cols-3 gap-4"&gt;
-  &lt;div&gt;Takes up 2 columns&lt;/div&gt;
-  &lt;div&gt;1 column&lt;/div&gt;
-  &lt;div&gt;1 column&lt;/div&gt;
-  &lt;div&gt;Takes all 3 columns&lt;/div&gt;
+                <pre
+                  class="bg-slate-100 p-4 rounded"
+                ><code>&lt;div class="chart"&gt;
+  &lt;div class="chart-header"&gt;
+    &lt;h4 class="chart-title"&gt;Monthly Revenue&lt;/h4&gt;
+    &lt;p class="chart-description"&gt;Revenue growth over the past 6 months&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="chart-content"&gt;
+    &lt;div class="bar-chart"&gt;
+      &lt;div class="bar-chart-item" data-variant="primary" data-height="sm"&gt;
+        &lt;div class="bar-chart-label"&gt;Jan&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- More bars... --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Utility Section -->
-      <section class="mb-16">
-        <h2 class="text-2xl font-bold mb-6">Utility</h2>
-        <p class="mb-4">
-          Utility classes are small classes for quickly applying specific
-          styles. They are used for quick styling without writing custom CSS.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/utilities/borders.css"
-                >borders.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Utility classes for controlling borders, border width, and
-                border color.
-              </p>
-            </div>
+      <!-- Glass Morphism Section -->
+      <section id="glass-morphism" class="mb-16">
+        <div class="card mb-8">
+          <div class="card-header">
+            <h2 class="text-2xl font-bold">Glass Morphism</h2>
           </div>
+          <div class="card-body">
+            <p class="text-secondary mb-6">
+              Create beautiful transparent effects with backdrop blur.
+            </p>
 
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/utilities/colors.css"
-                >colors.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>Utility classes for text color, background color, and more.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/utilities/display.css"
-                >display.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Utility classes for controlling element display and visibility.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/utilities/effects.css"
-                >effects.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Utility classes for adding shadows, transitions, and other
-                visual effects.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/utilities/position.css"
-                >position.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>Utility classes for controlling element positioning.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/utilities/spacing.css"
-                >spacing.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>Utility classes for margin and padding.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <a
-                href="https://github.com/bmf-san/sleyt/tree/main/src/utilities/typography.css"
-                >typography.css</a
-              >
-            </div>
-            <div class="card-body">
-              <p>
-                Utility classes for font size, weight, line height, and more.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Border Details -->
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Borders</h3>
-          <p class="mb-4">
-            Border utility classes allow you to easily add borders to elements.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Border Usage</div>
-            <div class="card-body">
-              <h4 class="font-bold mb-2">Basic Borders</h4>
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                <div class="p-4 border bg-surface">border</div>
-                <div class="p-4 border-0 bg-surface">border-0</div>
-                <div class="p-4 border-t bg-surface">border-t</div>
-                <div class="p-4 border-r bg-surface">border-r</div>
-                <div class="p-4 border-b bg-surface">border-b</div>
-                <div class="p-4 border-l bg-surface">border-l</div>
-              </div>
-
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;div class="border"&gt;All sides border&lt;/div&gt;
-&lt;div class="border-0"&gt;No border&lt;/div&gt;
-&lt;div class="border-t"&gt;Top border&lt;/div&gt;
-&lt;div class="border-r"&gt;Right border&lt;/div&gt;
-&lt;div class="border-b"&gt;Bottom border&lt;/div&gt;
-&lt;div class="border-l"&gt;Left border&lt;/div&gt;</code></pre>
-
-              <h4 class="font-bold mb-2">Rounded Borders</h4>
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-                <div class="p-4 border rounded-none bg-surface">
-                  rounded-none
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">Glass Effect</h3>
                 </div>
-                <div class="p-4 border rounded-sm bg-surface">rounded-sm</div>
-                <div class="p-4 border rounded bg-surface">rounded</div>
-                <div class="p-4 border rounded-lg bg-surface">rounded-lg</div>
-                <div class="p-4 border rounded-xl bg-surface">rounded-xl</div>
-                <div class="p-4 border rounded-full bg-surface">
-                  rounded-full
+                <div class="card-body">
+                  <p class="text-sm mb-4">
+                    Standard glass morphism effect with backdrop blur.
+                  </p>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="glass"&gt;Content&lt;/div&gt;</code></pre>
                 </div>
               </div>
 
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="rounded-none"&gt;No border radius&lt;/div&gt;
-&lt;div class="rounded-sm"&gt;Small border radius&lt;/div&gt;
-&lt;div class="rounded"&gt;Default border radius&lt;/div&gt;
-&lt;div class="rounded-lg"&gt;Large border radius&lt;/div&gt;
-&lt;div class="rounded-xl"&gt;Extra large border radius&lt;/div&gt;
-&lt;div class="rounded-full"&gt;Full circle border radius&lt;/div&gt;</code></pre>
+              <div class="card glass-light">
+                <div class="card-header">
+                  <h3 class="font-semibold">Light Glass</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm mb-4">
+                    Lighter glass effect for subtle transparency.
+                  </p>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="glass-light"&gt;Content&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+
+              <div class="card glass-heavy">
+                <div class="card-header">
+                  <h3 class="font-semibold">Heavy Glass</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm mb-4">
+                    Heavy glass effect with more opacity.
+                  </p>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="glass-heavy"&gt;Content&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="alert alert-info mt-6">
+              <strong>Available Glass Classes:</strong>
+              <code>.glass</code>, <code>.glass-light</code>,
+              <code>.glass-heavy</code>, <code>.backdrop-blur</code>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Colors</h3>
-          <p class="mb-4">
-            Color utility classes allow you to easily apply colors to elements.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Color Usage</div>
-            <div class="card-body">
-              <h4 class="font-bold mb-2">Background Colors</h4>
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                <div class="p-4 bg-body">bg-body</div>
-                <div class="p-4 bg-surface">bg-surface</div>
-                <div class="p-4 bg-card">bg-card</div>
-                <div class="p-4 bg-elevated">bg-elevated</div>
-                <div class="p-4 bg-primary text-slate-50">bg-primary</div>
-                <div class="p-4 bg-secondary text-slate-50">bg-secondary</div>
-                <div class="p-4 bg-success text-slate-50">bg-success</div>
-                <div class="p-4 bg-danger text-slate-50">bg-danger</div>
-                <div class="p-4 bg-warning">bg-warning</div>
-                <div class="p-4 bg-info text-slate-50">bg-info</div>
-                <div class="p-4 bg-light">bg-light</div>
-                <div class="p-4 bg-dark text-slate-50">bg-dark</div>
-              </div>
-
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;div class="bg-body"&gt;Base background color&lt;/div&gt;
-&lt;div class="bg-surface"&gt;Surface background color&lt;/div&gt;
-&lt;div class="bg-card"&gt;Card background color&lt;/div&gt;
-&lt;div class="bg-elevated"&gt;Elevated background color&lt;/div&gt;
-&lt;div class="bg-primary"&gt;Primary background color&lt;/div&gt;
-&lt;div class="bg-secondary"&gt;Secondary background color&lt;/div&gt;
-&lt;div class="bg-success"&gt;Success background color&lt;/div&gt;
-&lt;div class="bg-danger"&gt;Danger background color&lt;/div&gt;
-&lt;div class="bg-warning"&gt;Warning background color&lt;/div&gt;
-&lt;div class="bg-info"&gt;Info background color&lt;/div&gt;
-&lt;div class="bg-light"&gt;Light background color&lt;/div&gt;
-&lt;div class="bg-dark"&gt;Dark background color&lt;/div&gt;</code></pre>
-
-              <h4 class="font-bold mb-2">Slate Colors</h4>
-              <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mb-4">
-                <div class="p-4 bg-slate-50">50</div>
-                <div class="p-4 bg-slate-100">100</div>
-                <div class="p-4 bg-slate-200">200</div>
-                <div class="p-4 bg-slate-300">300</div>
-                <div class="p-4 bg-slate-400">400</div>
-                <div class="p-4 bg-slate-500 text-slate-50">500</div>
-                <div class="p-4 bg-slate-600 text-slate-50">600</div>
-                <div class="p-4 bg-slate-700 text-slate-50">700</div>
-                <div class="p-4 bg-slate-800 text-slate-50">800</div>
-                <div class="p-4 bg-slate-900 text-slate-50">900</div>
-                <div class="p-4 bg-slate-950 text-slate-50">950</div>
-              </div>
-
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="bg-slate-50"&gt;Slate 50&lt;/div&gt;
-&lt;div class="bg-slate-100"&gt;Slate 100&lt;/div&gt;
-&lt;div class="bg-slate-200"&gt;Slate 200&lt;/div&gt;
-&lt;div class="bg-slate-300"&gt;Slate 300&lt;/div&gt;
-&lt;div class="bg-slate-400"&gt;Slate 400&lt;/div&gt;
-&lt;div class="bg-slate-500"&gt;Slate 500&lt;/div&gt;
-&lt;div class="bg-slate-600"&gt;Slate 600&lt;/div&gt;
-&lt;div class="bg-slate-700"&gt;Slate 700&lt;/div&gt;
-&lt;div class="bg-slate-800"&gt;Slate 800&lt;/div&gt;
-&lt;div class="bg-slate-900"&gt;Slate 900&lt;/div&gt;
-&lt;div class="bg-slate-950"&gt;Slate 950&lt;/div&gt;</code></pre>
-            </div>
+      <!-- Utilities Section -->
+      <section id="utilities" class="mb-16">
+        <div class="card mb-8">
+          <div class="card-header">
+            <h2 class="text-2xl font-bold">Utility Classes</h2>
           </div>
-        </div>
+          <div class="card-body">
+            <p class="text-secondary mb-6">
+              Quick styling utilities for rapid development.
+            </p>
 
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Display</h3>
-          <p class="mb-4">
-            Display utility classes control how elements are displayed.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Display Usage</div>
-            <div class="card-body">
-              <h4 class="font-bold mb-2">Basic Display Settings</h4>
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;div class="block"&gt;Block element&lt;/div&gt;
-&lt;div class="inline"&gt;Inline element&lt;/div&gt;
-&lt;div class="inline-block"&gt;Inline-block element&lt;/div&gt;
-&lt;div class="hidden"&gt;Hidden element&lt;/div&gt;
-&lt;div class="flex"&gt;Flex container&lt;/div&gt;
-&lt;div class="grid"&gt;Grid container&lt;/div&gt;</code></pre>
-
-              <h4 class="font-bold mb-2">Responsive Display</h4>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="hidden md:block"&gt;Show on medium screens and larger&lt;/div&gt;
-&lt;div class="block md:hidden"&gt;Hide on medium screens, show on small screens&lt;/div&gt;
-&lt;div class="hidden lg:flex"&gt;Show on large screens&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Effects</h3>
-          <p class="mb-4">
-            Effect utility classes add visual effects to elements.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Effect Usage</div>
-            <div class="card-body">
-              <h4 class="font-bold mb-2">Shadows</h4>
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-                <div class="p-4 shadow-sm bg-surface">shadow-sm</div>
-                <div class="p-4 shadow bg-surface">shadow</div>
-                <div class="p-4 shadow-md bg-surface">shadow-md</div>
-                <div class="p-4 shadow-lg bg-surface">shadow-lg</div>
-                <div class="p-4 shadow-xl bg-surface">shadow-xl</div>
-                <div class="p-4 shadow-2xl bg-surface">shadow-2xl</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Spacing -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="font-semibold">Spacing</h3>
+                </div>
+                <div class="card-body">
+                  <div class="mb-4">
+                    <div class="p-2 bg-slate-100 mb-2">p-2: Padding</div>
+                    <div class="m-2 bg-slate-200">m-2: Margin</div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="p-4 m-2"&gt;Spaced&lt;/div&gt;</code></pre>
+                </div>
               </div>
 
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;div class="shadow-sm"&gt;Small shadow&lt;/div&gt;
-&lt;div class="shadow"&gt;Default shadow&lt;/div&gt;
-&lt;div class="shadow-md"&gt;Medium shadow&lt;/div&gt;
-&lt;div class="shadow-lg"&gt;Large shadow&lt;/div&gt;
-&lt;div class="shadow-xl"&gt;Extra large shadow&lt;/div&gt;
-&lt;div class="shadow-2xl"&gt;Extra large shadow&lt;/div&gt;</code></pre>
-
-              <h4 class="font-bold mb-2">Transitions</h4>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="transition"&gt;Default transition&lt;/div&gt;
-&lt;div class="transition-all"&gt;Transition all properties&lt;/div&gt;
-&lt;div class="transition-colors"&gt;Transition only colors&lt;/div&gt;
-&lt;div class="transition-transform"&gt;Transition only transform&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Position</h3>
-          <p class="mb-4">
-            Position utility classes control element positioning.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Position Usage</div>
-            <div class="card-body">
-              <h4 class="font-bold mb-2">Basic Positioning</h4>
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;div class="static"&gt;Default position&lt;/div&gt;
-&lt;div class="relative"&gt;Relative positioning&lt;/div&gt;
-&lt;div class="absolute"&gt;Absolute positioning&lt;/div&gt;
-&lt;div class="fixed"&gt;Fixed position&lt;/div&gt;
-&lt;div class="sticky"&gt;Sticky position&lt;/div&gt;</code></pre>
-
-              <h4 class="font-bold mb-2">Positioning Controls</h4>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="absolute top-0"&gt;Top position&lt;/div&gt;
-&lt;div class="absolute bottom-0"&gt;Bottom position&lt;/div&gt;
-&lt;div class="absolute left-0"&gt;Left position&lt;/div&gt;
-&lt;div class="absolute right-0"&gt;Right position&lt;/div&gt;
-&lt;div class="absolute inset-0"&gt;Full parent size&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Spacing</h3>
-          <p class="mb-4">
-            Spacing utility classes control margins and paddings.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Spacing Usage</div>
-            <div class="card-body">
-              <h4 class="font-bold mb-2">Margins</h4>
-              <pre
-                class="bg-slate-100 p-3 rounded mb-4"
-              ><code>&lt;div class="m-2"&gt;All directions margin&lt;/div&gt;
-&lt;div class="mt-2"&gt;Top margin&lt;/div&gt;
-&lt;div class="mr-2"&gt;Right margin&lt;/div&gt;
-&lt;div class="mb-2"&gt;Bottom margin&lt;/div&gt;
-&lt;div class="ml-2"&gt;Left margin&lt;/div&gt;
-&lt;div class="mx-2"&gt;Horizontal margins&lt;/div&gt;
-&lt;div class="my-2"&gt;Vertical margins&lt;/div&gt;</code></pre>
-
-              <h4 class="font-bold mb-2">Paddings</h4>
-              <pre
-                class="bg-slate-100 p-3 rounded"
-              ><code>&lt;div class="p-2"&gt;All directions padding&lt;/div&gt;
-&lt;div class="pt-2"&gt;Top padding&lt;/div&gt;
-&lt;div class="pr-2"&gt;Right padding&lt;/div&gt;
-&lt;div class="pb-2"&gt;Bottom padding&lt;/div&gt;
-&lt;div class="pl-2"&gt;Left padding&lt;/div&gt;
-&lt;div class="px-2"&gt;Horizontal paddings&lt;/div&gt;
-&lt;div class="py-2"&gt;Vertical paddings&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Typography</h3>
-          <p class="mb-4">
-            Typography utility classes control font size, weight, line height,
-            and more.
-          </p>
-
-          <div class="card mb-4">
-            <div class="card-header">Typography Usage</div>
-            <div class="card-body">
-              <h4 class="font-bold mb-2">Font Sizes</h4>
-              <div class="space-y-2 mb-4">
-                <p class="text-xs">text-xs: Extra small text (12px)</p>
-                <p class="text-sm">text-sm: Small text (14px)</p>
-                <p class="text-base">text-base: Base text (16px)</p>
-                <p class="text-lg">text-lg: Large text (18px)</p>
-                <p class="text-xl">text-xl: Extra large text (20px)</p>
-                <p class="text-2xl">text-2xl: 2x size text (24px)</p>
-                <p class="text-3xl">text-3xl: 3x size text (30px)</p>
-                <p class="text-4xl">text-4xl: 4x size text (36px)</p>
-                <p class="text-5xl">text-5xl: 5x size text (48px)</p>
+              <!-- Colors -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="font-semibold">Colors</h3>
+                </div>
+                <div class="card-body">
+                  <div class="grid grid-cols-3 gap-1 mb-4">
+                    <div class="bg-primary p-2 text-xs text-center text-white">
+                      primary
+                    </div>
+                    <div class="bg-success p-2 text-xs text-center text-white">
+                      success
+                    </div>
+                    <div class="bg-warning p-2 text-xs text-center">
+                      warning
+                    </div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="bg-primary text-white"&gt;Colored&lt;/div&gt;</code></pre>
+                </div>
               </div>
 
-              <h4 class="font-bold mb-2">Font Weights</h4>
-              <div class="space-y-2 mb-4">
-                <p class="font-light">font-light: Light weight (300)</p>
-                <p class="font-normal">font-normal: Normal weight (400)</p>
-                <p class="font-medium">font-medium: Medium weight (500)</p>
-                <p class="font-semibold">
-                  font-semibold: Semi-bold weight (600)
-                </p>
-                <p class="font-bold">font-bold: Bold weight (700)</p>
+              <!-- Typography -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="font-semibold">Typography</h3>
+                </div>
+                <div class="card-body">
+                  <div class="mb-4">
+                    <p class="text-xs">text-xs: Small text</p>
+                    <p class="text-sm">text-sm: Small text</p>
+                    <p class="text-base">text-base: Normal text</p>
+                    <p class="text-lg">text-lg: Large text</p>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;p class="text-lg font-bold"&gt;Text&lt;/p&gt;</code></pre>
+                </div>
               </div>
 
-              <h4 class="font-bold mb-2">Text Alignment</h4>
-              <div class="space-y-2 mb-4">
-                <p class="text-left">text-left: Left alignment</p>
-                <p class="text-center">text-center: Center alignment</p>
-                <p class="text-right">text-right: Right alignment</p>
-                <p class="text-justify">text-justify: Justified alignment</p>
+              <!-- Layout -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="font-semibold">Layout</h3>
+                </div>
+                <div class="card-body">
+                  <div class="flex justify-between mb-2">
+                    <div class="bg-slate-200 p-1 text-xs">Left</div>
+                    <div class="bg-slate-300 p-1 text-xs">Right</div>
+                  </div>
+                  <div class="grid grid-cols-3 gap-1 mb-4">
+                    <div class="bg-slate-200 p-1 text-xs text-center">1</div>
+                    <div class="bg-slate-300 p-1 text-xs text-center">2</div>
+                    <div class="bg-slate-400 p-1 text-xs text-center">3</div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="flex justify-between"&gt;Layout&lt;/div&gt;</code></pre>
+                </div>
               </div>
 
-              <h4 class="font-bold mb-2">Line Height</h4>
-              <div class="space-y-2 mb-4">
-                <p class="leading-none">leading-none: No leading (1)</p>
-                <p class="leading-tight">leading-tight: Tight leading (1.25)</p>
-                <p class="leading-snug">
-                  leading-snug: Slightly tight leading (1.375)
-                </p>
-                <p class="leading-normal">
-                  leading-normal: Normal leading (1.5)
-                </p>
-                <p class="leading-relaxed">
-                  leading-relaxed: Slightly loose leading (1.625)
-                </p>
-                <p class="leading-loose">leading-loose: Loose leading (2)</p>
+              <!-- Borders -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="font-semibold">Borders</h3>
+                </div>
+                <div class="card-body">
+                  <div class="grid grid-cols-2 gap-2 mb-4">
+                    <div class="border p-2 text-xs text-center">border</div>
+                    <div class="border rounded p-2 text-xs text-center">
+                      rounded
+                    </div>
+                    <div class="border rounded-lg p-2 text-xs text-center">
+                      rounded-lg
+                    </div>
+                    <div class="border rounded-full p-2 text-xs text-center">
+                      rounded-full
+                    </div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="border rounded"&gt;Bordered&lt;/div&gt;</code></pre>
+                </div>
               </div>
 
-              <h4 class="font-bold mb-2">Text Color</h4>
-              <div class="space-y-2 mb-4">
-                <p class="text-primary">text-primary: Primary text</p>
-                <p class="text-secondary">text-secondary: Secondary text</p>
-                <p class="text-disabled">text-disabled: Disabled text</p>
-                <p class="text-primary-color">
-                  text-primary-color: Primary color text
-                </p>
-                <p class="text-success">text-success: Success message</p>
-                <p class="text-danger">text-danger: Error message</p>
-                <p class="text-warning">text-warning: Warning message</p>
-                <p class="text-info">text-info: Info message</p>
-              </div>
-
-              <h4 class="font-bold mb-2">Whitespace</h4>
-              <div class="space-y-2 mb-4">
-                <p class="whitespace-normal">
-                  whitespace-normal: Normal wrapping
-                </p>
-                <p class="whitespace-nowrap">whitespace-nowrap: No wrapping</p>
-                <p class="whitespace-pre">whitespace-pre: Preserves format</p>
-                <p class="whitespace-pre-line">
-                  whitespace-pre-line: Preserve line breaks
-                </p>
-                <p class="whitespace-pre-wrap">
-                  whitespace-pre-wrap: Preserve whitespace and breaks
-                </p>
-              </div>
-
-              <h4 class="font-bold mb-2">Word Break</h4>
-              <div class="space-y-2">
-                <p class="break-normal">break-normal: Normal breaks</p>
-                <p class="break-words">break-words: Break words</p>
-                <p class="break-all">break-all: Break on any character</p>
+              <!-- Effects -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="font-semibold">Effects</h3>
+                </div>
+                <div class="card-body">
+                  <div class="grid grid-cols-2 gap-2 mb-4">
+                    <div class="shadow-sm p-2 text-xs text-center bg-white">
+                      shadow-sm
+                    </div>
+                    <div class="shadow p-2 text-xs text-center bg-white">
+                      shadow
+                    </div>
+                    <div class="shadow-md p-2 text-xs text-center bg-white">
+                      shadow-md
+                    </div>
+                    <div class="shadow-lg p-2 text-xs text-center bg-white">
+                      shadow-lg
+                    </div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs"
+                  ><code>&lt;div class="shadow-lg"&gt;Shadow&lt;/div&gt;</code></pre>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-100 py-8 mt-16">
+      <div class="container mx-auto text-center">
+        <h3 class="text-lg font-semibold mb-2">Sleyt CSS Framework</h3>
+        <p class="text-secondary mb-4">
+          A minimal and modern CSS framework with glass morphism design.
+        </p>
+        <div class="flex justify-center gap-4">
+          <a
+            href="https://github.com/bmf-san/sleyt"
+            class="btn btn-outline-primary btn-sm"
+            >GitHub</a
+          >
+          <a
+            href="https://www.npmjs.com/package/sleyt"
+            class="btn btn-outline-primary btn-sm"
+            >NPM</a
+          >
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

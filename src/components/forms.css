@@ -27,26 +27,31 @@
 }
 
 .form-control {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+  background-color: var(--bg-glass);
+  border: 1px solid var(--border-color-input);
+  border-radius: var(--border-radius-sm);
   color: var(--text-primary);
   display: block;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   line-height: var(--line-height-normal);
   padding: var(--spacing-2) var(--spacing-3);
   transition: var(--transition-base);
   width: 100%;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: var(--shadow-sm);
 }
 
 .form-control:focus {
-  border-color: var(--color-gray-400);
-  box-shadow: 0 0 0 2px hsl(0deg 0% 0% / 5%);
-  outline: none;
+  border-color: var(--color-slate-950);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-slate-950), var(--shadow-md);
+  background-color: var(--bg-elevated);
 }
 
 .form-control:disabled {
-  background-color: var(--color-gray-100);
+  background-color: var(--color-slate-100);
   cursor: not-allowed;
   opacity: 0.65;
 }
@@ -124,13 +129,13 @@ input[type="radio"].form-check-input:checked::after {
 
 /* Disabled state */
 .form-check-input:disabled {
-  background-color: var(--color-gray-100);
+  background-color: var(--color-slate-100);
   cursor: not-allowed;
   opacity: 0.5;
 }
 
 .form-check-input:disabled + .form-check-label {
-  color: var(--color-gray-500);
+  color: var(--color-slate-500);
   cursor: not-allowed;
 }
 

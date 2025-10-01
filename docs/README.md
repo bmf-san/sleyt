@@ -4,78 +4,93 @@ This directory contains the official documentation for the Sleyt CSS Framework.
 
 ## File Structure
 
-- `index.html` - The main documentation file. Explains the framework overview, components, and how to use utilities.
+- `index.html` - The main English documentation file
+- `index-ja.html` - The Japanese documentation file
+- `css/` - Built CSS files for documentation
 
-## Structure of index.html
+## Structure of Documentation
 
-`index.html` consists of the following sections:
+Both documentation files consist of the following sections:
 
-1. **Header** - The framework name and a brief description
-2. **Base** - Explanation of basic elements such as reset, variables, themes, etc.
-3. **Components** - Description of UI components such as alerts, badges, buttons, cards, etc.
-4. **Layout** - Description of layout elements such as containers, grid, flexbox, etc.
-5. **Utilities** - Description of utility classes for borders, colors, display, effects, position, spacing, typography, etc.
-6. **Footer** - Framework overview information
+1. **Header** - Framework name, description, and navigation links
+2. **Quick Navigation** - Jump links to main sections
+3. **Installation** - Getting started guide with npm and CDN options
+4. **Components** - UI components (buttons, cards, forms, alerts, badges, tables)
+5. **Charts** - Data visualization components (bar charts, line charts, donut charts)
+6. **Glass Morphism** - Transparency and backdrop blur effects
+7. **Utilities** - Utility classes for rapid development
+8. **Footer** - Framework overview and links
+
+## Key Features Documented
+
+### Components
+- **buttons** - Interactive elements with various styles and sizes
+- **cards** - Flexible containers for grouping content
+- **forms** - Input fields and form controls
+- **alerts** - Notification messages for users
+- **badges** - Small status indicators and labels
+- **tables** - Structured data display
+- **charts** - Data visualization (bar, line, donut charts)
+
+### Utilities
+- **glass morphism** - Transparency effects with backdrop blur
+- **spacing** - Margin and padding utilities
+- **colors** - Background and text color classes
+- **typography** - Font size, weight, and text utilities
+- **layout** - Flexbox and grid utilities
+- **borders** - Border and border-radius utilities
+- **effects** - Shadow and visual effect utilities
 
 ## Update Rules
 
 When updating documentation, please follow these rules:
 
-1. **Match Implementation** - Class names and usage described in the documentation must match the actual implementation.
-   - Example: If the implemented class name is `.relative` without a prefix, document it as `.relative` rather than `.position-relative`
+1. **Match Implementation** - Class names and usage must match the actual CSS implementation
+2. **Maintain Consistency** - Keep descriptions and examples consistent between English and Japanese versions
+3. **Provide Examples** - Include both code examples and visual demonstrations
+4. **Verify Functionality** - Test that all code examples work correctly
+5. **Follow Structure** - Maintain the established section structure
 
-2. **Maintain Consistency** - Keep descriptions of class names, variable names, etc. consistent.
+## Documentation Standards
 
-3. **Provide Examples** - Whenever possible, provide usage examples for each feature. It's best to have both code examples and visual examples.
+### Code Examples
+All code examples use only Sleyt CSS framework classes - no inline styles or custom CSS.
 
-4. **Verify Previews** - When adding code examples, verify that they actually work.
-
-5. **Maintain Structure** - When adding new sections or examples, follow the existing structure.
-
-## Documentation Update Checklist
-
-- [ ] Do class names match the implementation?
-- [ ] Do code examples function correctly?
-- [ ] Are new features or changes properly reflected?
-- [ ] Does responsive design function properly?
-- [ ] Is overall consistency maintained?
-
-## Style Guide for Code Samples
-
-When adding code samples, use the following format:
-
+Example format:
 ```html
-<div class="example-class">
-  <!-- Content -->
+<div class="card glass">
+  <div class="card-header">
+    <h3 class="font-semibold">Title</h3>
+  </div>
+  <div class="card-body">
+    <p class="text-sm text-secondary mb-4">Description</p>
+  </div>
 </div>
 ```
 
-## Adding New Components or Utilities
-
-When adding new components or utilities, include the following information:
-
-1. The name and brief description of the component/utility
-2. Available classes and their variations
-3. Basic usage examples
-4. Actual display examples
-5. Related variables or settings (if applicable)
-
-## Maintenance
-
-Update the documentation at the following times:
-
-- When adding new features
-- When changing existing features
-- When fixing bugs (if they have an impact)
-- During regular reviews (recommended quarterly)
+### Chart Examples
+Charts include proper data attributes for heights and variants:
+```html
+<div class="bar-chart-item" data-variant="primary" data-height="md">
+  <div class="bar-chart-label">Label</div>
+</div>
+```
 
 ## Build and Deploy
 
-To test documentation changes:
+To update documentation:
 
-1. Open the HTML file locally to verify display
-2. If there are CSS changes, run the build process as needed
+1. Make changes to HTML files
+2. Run `npm run build:css` to update CSS files
+3. Test locally by opening HTML files
+4. Commit changes to update GitHub Pages
 
-## Issues and Feedback
+## Maintenance Checklist
 
-Please report any issues or feedback about the documentation to the issue tracker.
+- [ ] Do class names match the CSS implementation?
+- [ ] Are code examples functional?
+- [ ] Are new features properly documented?
+- [ ] Is responsive design working?
+- [ ] Are both English and Japanese versions consistent?
+- [ ] Are chart examples displaying correctly?
+- [ ] Are glass morphism effects working?

@@ -1,0 +1,128 @@
+/* Glass Morphism Effects */
+
+/* Glass Background */
+.glass {
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color-glass);
+}
+
+.glass-light {
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color-transparent);
+}
+
+.glass-heavy {
+  background-color: var(--bg-backdrop);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color-glass);
+}
+
+/* Backdrop Blur Utilities */
+.backdrop-blur-none {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Transparency Utilities */
+.bg-transparent-light {
+  background-color: var(--color-transparent-light);
+}
+
+.bg-transparent-dark {
+  background-color: var(--color-transparent-dark);
+}
+
+/* Enhanced Shadow Effects */
+.shadow-glass {
+  box-shadow: var(--shadow-glass);
+}
+
+.shadow-elevated {
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Frosted Glass Effect */
+.frosted {
+  background: linear-gradient(
+    135deg,
+    var(--bg-glass) 0%,
+    var(--bg-backdrop) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color-glass);
+  position: relative;
+}
+
+.frosted::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    var(--border-color-transparent) 0%,
+    transparent 50%,
+    var(--border-color-transparent) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Subtle Border Effects */
+.border-glass {
+  border: 1px solid var(--border-color-glass);
+}
+
+.border-subtle {
+  border: 1px solid var(--border-color-subtle);
+}
+
+/* Hover Effects for Glass Elements */
+.glass:hover,
+.glass-light:hover,
+.glass-heavy:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-elevated);
+  transition: var(--transition-base);
+}
+
+/* Focus Effects for Interactive Glass Elements */
+.glass:focus-visible,
+.glass-light:focus-visible,
+.glass-heavy:focus-visible {
+  outline: 2px solid var(--color-slate-950);
+  outline-offset: 2px;
+}

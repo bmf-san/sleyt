@@ -1,17 +1,17 @@
 /* CSS Variables */
 :root {
-  /* Slate Gray Scale - Reduced Blue Tint for Closer to Black */
-  --color-slate-50: hsl(205deg 12% 98%);
-  --color-slate-100: hsl(205deg 12% 95%);
-  --color-slate-200: hsl(205deg 10% 90%);
-  --color-slate-300: hsl(205deg 8% 82%);
-  --color-slate-400: hsl(205deg 6% 65%);
-  --color-slate-500: hsl(205deg 5% 48%);
-  --color-slate-600: hsl(205deg 5% 36%);
-  --color-slate-700: hsl(205deg 5% 27%);
-  --color-slate-800: hsl(205deg 5% 17%);
-  --color-slate-900: hsl(205deg 5% 10%);
-  --color-slate-950: hsl(205deg 5% 5%);
+  /* Neutral Gray Scale */
+  --color-slate-50: hsl(0deg 0% 98%);
+  --color-slate-100: hsl(0deg 0% 96%);
+  --color-slate-200: hsl(0deg 0% 90%);
+  --color-slate-300: hsl(0deg 0% 83%);
+  --color-slate-400: hsl(0deg 0% 64%);
+  --color-slate-500: hsl(0deg 0% 45%);
+  --color-slate-600: hsl(0deg 0% 32%);
+  --color-slate-700: hsl(0deg 0% 25%);
+  --color-slate-800: hsl(0deg 0% 15%);
+  --color-slate-900: hsl(0deg 0% 9%);
+  --color-slate-950: hsl(0deg 0% 4%);
 
   /* Color Palette - Subdued Tones */
   --color-success-500: hsl(150deg 35% 40%);
@@ -28,11 +28,11 @@
   --color-info-700: hsl(215deg 45% 35%);
 
   /* RGB Values (for use with rgba()) */
-  --color-slate-900-rgb: 26, 30, 33;
-  --color-slate-800-rgb: 43, 50, 55;
-  --color-slate-700-rgb: 69, 80, 88;
-  --color-slate-600-rgb: 92, 107, 117;
-  --color-slate-500-rgb: 122, 142, 156;
+  --color-slate-900-rgb: 23, 23, 23;
+  --color-slate-800-rgb: 38, 38, 38;
+  --color-slate-700-rgb: 64, 64, 64;
+  --color-slate-600-rgb: 82, 82, 82;
+  --color-slate-500-rgb: 115, 115, 115;
   --color-success-600-rgb: 54, 112, 91;
   --color-danger-600-rgb: 173, 52, 62;
   --color-warning-500-rgb: 212, 159, 41;
@@ -77,29 +77,37 @@
   --text-on-warning: var(--color-slate-900);
   --text-on-info: var(--color-slate-50);
 
-  /* Background Colors */
+  /* Background Colors - Enhanced Transparency */
   --bg-body: hsl(0deg 0% 100%);
-  --bg-surface: var(--color-slate-50);
-  --bg-elevated: hsl(0deg 0% 100%);
-  --bg-card: hsl(0deg 0% 100%);
-  --bg-code: var(--color-slate-100);
+  --bg-surface: hsl(0deg 0% 98% / 60%);
+  --bg-elevated: hsl(0deg 0% 100% / 80%);
+  --bg-card: hsl(0deg 0% 100% / 70%);
+  --bg-card-hover: hsl(0deg 0% 100% / 85%);
+  --bg-code: hsl(0deg 0% 96% / 80%);
+  --bg-backdrop: hsl(0deg 0% 100% / 40%);
+  --bg-glass: hsl(0deg 0% 100% / 20%);
 
-  /* Borders */
-  --border-color: var(--color-slate-200);
-  --border-color-transparent: rgb(255 255 255 / 20%);
-  --border-color-transparent-dark: rgb(0 0 0 / 20%);
-  --border-radius-sm: 0.25rem;
-  --border-radius: 0.375rem;
-  --border-radius-lg: 0.5rem;
-  --border-radius-xl: 0.75rem;
+  /* Borders - Enhanced Transparency */
+  --border-color: hsl(0deg 0% 89% / 60%);
+  --border-color-input: hsl(0deg 0% 89% / 70%);
+  --border-color-subtle: hsl(0deg 0% 89% / 30%);
+  --border-color-transparent: rgb(255 255 255 / 15%);
+  --border-color-transparent-dark: rgb(0 0 0 / 15%);
+  --border-color-glass: hsl(0deg 0% 100% / 20%);
+  --border-radius-sm: 0.375rem;
+  --border-radius: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
   --border-radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 hsl(205deg 5% 10% / 5%);
-  --shadow: 0 1px 3px 0 hsl(205deg 5% 10% / 10%), 0 1px 2px -1px hsl(205deg 5% 10% / 10%);
-  --shadow-md: 0 4px 6px -1px hsl(205deg 5% 10% / 10%), 0 2px 4px -2px hsl(205deg 5% 10% / 10%);
-  --shadow-lg: 0 10px 15px -3px hsl(205deg 5% 10% / 10%), 0 4px 6px -4px hsl(205deg 5% 10% / 10%);
-  --shadow-xl: 0 20px 25px -5px hsl(205deg 5% 10% / 10%), 0 8px 10px -6px hsl(205deg 5% 10% / 10%);
+  /* Shadows - Enhanced Transparency & Depth */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 3%), 0 0 0 1px rgb(0 0 0 / 2%);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 6%), 0 1px 2px -1px rgb(0 0 0 / 6%), 0 0 0 1px rgb(0 0 0 / 3%);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 6%), 0 2px 4px -2px rgb(0 0 0 / 6%), 0 0 0 1px rgb(0 0 0 / 3%);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 8%), 0 4px 6px -4px rgb(0 0 0 / 8%), 0 0 0 1px rgb(0 0 0 / 4%);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%), 0 0 0 1px rgb(0 0 0 / 5%);
+  --shadow-glass: 0 8px 32px rgb(0 0 0 / 4%), 0 0 0 1px rgb(255 255 255 / 20%);
+  --shadow-elevated: 0 25px 50px -12px rgb(0 0 0 / 8%), 0 0 0 1px rgb(0 0 0 / 3%);
 
   /* Spacing */
   --spacing-0: 0;
@@ -118,8 +126,8 @@
   --spacing-32: 8rem;
 
   /* Fonts */
-  --font-family-base: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  --font-family-code: ui-monospace, sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-base: ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-code: ui-monospace, sfmono-regular, "SF Mono", consolas, "Liberation Mono", menlo, monospace;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;

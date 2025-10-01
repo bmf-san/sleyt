@@ -1,13 +1,14 @@
 {
   "name": "sleyt",
-  "version": "1.0.2",
-  "description": "A minimal and modern CSS framework",
+  "version": "1.1.0",
+  "description": "A minimal and modern CSS framework with glass morphism design and data visualization components",
   "main": "dist/css/index.css",
   "files": [
     "dist/css/*.css",
     "src/**/*.css",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "README-ja.md"
   ],
   "directories": {
     "doc": "docs"
@@ -23,13 +24,18 @@
     "stylelint-config-standard": "^34.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint:css && npm run lint:html",
+    "build": "npm run build:css",
     "build:css": "postcss src/index.css --dir dist/css && postcss src/index.css --dir docs/public/css",
+    "build:dev": "mkdir -p dist/css && postcss src/index.css --dir dist/css",
     "watch:css": "postcss src/index.css --dir dist/css --watch",
+    "lint": "npm run lint:css && npm run lint:html",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
     "lint:html": "prettier --check \"docs/public/**/*.html\"",
-    "lint:html:fix": "prettier --write \"docs/public/**/*.html\""
+    "lint:html:fix": "prettier --write \"docs/public/**/*.html\"",
+    "clean": "rm -rf dist/css/*",
+    "prepublishOnly": "npm run clean && npm run build && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -40,7 +46,11 @@
     "framework",
     "minimal",
     "modern",
-    "utility-first"
+    "utility-first",
+    "glass-morphism",
+    "charts",
+    "data-visualization",
+    "transparency"
   ],
   "author": "bmf-san",
   "license": "MIT",
