@@ -11,11 +11,13 @@ A minimal and modern CSS framework.
 
 ## Features
 
-- Modern design with transparency
-- Accessibility-conscious
-- Simple and easy-to-use components
-- Responsive design support
-- Dark mode support
+- **Glass morphism design** with transparency and backdrop blur effects
+- **Data visualization** with bar charts, line charts, and donut charts
+- **Accessibility-conscious** design patterns and semantic markup
+- **Comprehensive components** including forms, buttons, cards, and navigation
+- **Responsive design** support with mobile-first approach
+- **Dark mode** support with automatic theme switching
+- **CSS-only implementation** with no JavaScript dependencies
 
 ## Installation
 
