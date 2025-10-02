@@ -71,24 +71,7 @@ jobs:
           npm pack --dry-run
 
       - name: Publish to NPM
-        run: |
-          echo "Publishing to NPM..."
-          echo "Registry: $(npm config get registry)"
-          echo "User: $(npm whoami)"
-          echo "Package name: $(npm pkg get name)"
-          echo "Package version: $(npm pkg get version)"
-
-          # Check if package already exists
-          if npm view sleyt@${{ steps.version.outputs.version }} version 2>/dev/null; then
-            echo "Version ${{ steps.version.outputs.version }} already exists, skipping publish"
-            exit 0
-          fi
-
-          npm publish --provenance || {
-            echo "Publish failed, checking package status..."
-            npm view sleyt versions --json
-            exit 1
-          }
+        run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
