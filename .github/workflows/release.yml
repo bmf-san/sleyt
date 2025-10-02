@@ -3,7 +3,7 @@ name: Release to NPM
 on:
   push:
     tags:
-      - 'v*'
+      - '*'
 
 jobs:
   release:
@@ -45,7 +45,7 @@ jobs:
       - name: Extract version from tag
         id: version
         run: |
-          TAG=${GITHUB_REF#refs/tags/v}
+          TAG=${GITHUB_REF#refs/tags/}
           echo "version=$TAG" >> $GITHUB_OUTPUT
           echo "Extracted version: $TAG"
 
@@ -79,33 +79,12 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ steps.version.outputs.version }}
           body: |
-            ## 🎉 Changes in v${{ steps.version.outputs.version }}
+            ## 🎉 Sleyt CSS Framework ${{ steps.version.outputs.version }}
 
-            ### 📚 Documentation Overhaul
-            - **Complete documentation redesign** with unified English and Japanese versions
-            - **Pure Sleyt implementation** - removed all inline styles and custom CSS
-            - **Consistent structure** across both language versions using only framework classes
-            - **Enhanced readability** with clean, professional layout
+            A minimal and modern CSS framework with glass morphism design and data visualization components.
 
-            ### 🐛 Bug Fixes
-            - **Fixed bar chart display issues** - charts now render correctly with proper heights
-            - **Added data-height attributes** for customizable bar chart heights (sm, md, lg, xl)
-            - **Resolved HTML formatting** issues across all documentation files
-
-            ### 🎨 Design Improvements
-            - **Glass morphism effects** properly showcased in documentation
-            - **Responsive design** improvements for mobile and desktop
-            - **Visual consistency** between English and Japanese documentation
-
-            ### 🔧 Infrastructure Improvements
-            - **Automated version updates** - package.json now updates automatically on release
-            - **Clean Git management** - removed dist directory from version control
-            - **Enhanced CI/CD** with proper build verification and linting
-
-            ### 📦 Code Quality
-            - **Reduced codebase** by 3,000+ lines through cleanup
-            - **Improved maintainability** with pure framework approach
-            - **Better performance** with optimized documentation structure
+            ### ✨ What's New
+            See the [CHANGELOG](https://github.com/bmf-san/sleyt/compare/${{ github.event.before }}..${{ steps.version.outputs.version }}) for detailed changes in this release.
 
             ### 📦 Installation
             ```bash
