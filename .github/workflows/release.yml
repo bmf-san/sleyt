@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -57,9 +60,10 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git checkout main
           git add package.json package-lock.json
-          git commit -m "chore: bump version to ${{ steps.version.outputs.version }} [skip ci]"
-          git push
+          git commit -m "chore: bump version to ${{ steps.version.outputs.version }}"
+          git push origin main
 
       - name: Verify package contents
         run: |
