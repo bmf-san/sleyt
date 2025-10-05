@@ -43,6 +43,10 @@ img, svg {
   max-width: 100%;
 }
 
+ul, ol {
+  list-style: none;
+}
+
 code, pre {
   font-family: var(--font-family-code);
 }

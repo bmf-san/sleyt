@@ -140,7 +140,7 @@
               <div class="card glass">
                 <div class="card-header">
                   <h3 class="font-semibold">Themes</h3>
-                </div>
+              </div>
                 <div class="card-body">
                   <p class="text-sm text-secondary mb-4">
                     Automatic dark mode support based on system preferences. Seamless theme switching with CSS variables.
@@ -176,35 +176,176 @@
             <!-- Color Palette Example -->
             <div class="card mt-6 glass">
               <div class="card-header">
-                <h3 class="font-semibold">Color Palette</h3>
+                <h3 class="font-semibold">Color Palette (CSS Variables)</h3>
               </div>
               <div class="card-body">
-                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 mb-4">
+                <p class="text-sm text-secondary mb-6">
+                  Complete color system defined in <code class="text-xs bg-slate-100 px-2 py-1 rounded">base/variables.css</code>
+                </p>
+
+                <!-- Neutral Gray Scale -->
+                <h4 class="font-semibold mb-3 text-sm">Neutral Gray Scale (Slate)</h4>
+                <div class="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-11 gap-2 mb-6">
                   <div class="text-center">
-                    <div class="bg-primary h-12 rounded mb-2"></div>
-                    <span class="text-xs">Primary</span>
+                    <div style="background-color: var(--color-slate-50);" class="h-16 rounded mb-2 border border-slate-200"></div>
+                    <code class="text-xs block">slate-50</code>
+                    <span class="text-xs text-secondary">98%</span>
                   </div>
                   <div class="text-center">
-                    <div class="bg-secondary h-12 rounded mb-2"></div>
-                    <span class="text-xs">Secondary</span>
+                    <div style="background-color: var(--color-slate-100);" class="h-16 rounded mb-2 border border-slate-200"></div>
+                    <code class="text-xs block">slate-100</code>
+                    <span class="text-xs text-secondary">96%</span>
                   </div>
                   <div class="text-center">
-                    <div class="bg-success h-12 rounded mb-2"></div>
-                    <span class="text-xs">Success</span>
+                    <div style="background-color: var(--color-slate-200);" class="h-16 rounded mb-2"></div>
+                    <code class="text-xs block">slate-200</code>
+                    <span class="text-xs text-secondary">90%</span>
                   </div>
                   <div class="text-center">
-                    <div class="bg-danger h-12 rounded mb-2"></div>
-                    <span class="text-xs">Danger</span>
+                    <div style="background-color: var(--color-slate-300);" class="h-16 rounded mb-2"></div>
+                    <code class="text-xs block">slate-300</code>
+                    <span class="text-xs text-secondary">83%</span>
                   </div>
                   <div class="text-center">
-                    <div class="bg-warning h-12 rounded mb-2"></div>
-                    <span class="text-xs">Warning</span>
+                    <div style="background-color: var(--color-slate-400);" class="h-16 rounded mb-2"></div>
+                    <code class="text-xs block">slate-400</code>
+                    <span class="text-xs text-secondary">64%</span>
                   </div>
                   <div class="text-center">
-                    <div class="bg-info h-12 rounded mb-2"></div>
-                    <span class="text-xs">Info</span>
+                    <div style="background-color: var(--color-slate-500);" class="h-16 rounded mb-2"></div>
+                    <code class="text-xs block text-white">slate-500</code>
+                    <span class="text-xs text-secondary">45%</span>
+                  </div>
+                  <div class="text-center">
+                    <div style="background-color: var(--color-slate-600);" class="h-16 rounded mb-2"></div>
+                    <code class="text-xs block text-white">slate-600</code>
+                    <span class="text-xs text-secondary">32%</span>
+                  </div>
+                  <div class="text-center">
+                    <div style="background-color: var(--color-slate-700);" class="h-16 rounded mb-2"></div>
+                    <code class="text-xs block text-white">slate-700</code>
+                    <span class="text-xs text-secondary">25%</span>
+                  </div>
+                  <div class="text-center">
+                    <div style="background-color: var(--color-slate-800);" class="h-16 rounded mb-2"></div>
+                    <code class="text-xs block text-white">slate-800</code>
+                    <span class="text-xs text-secondary">15%</span>
+                  </div>
+                  <div class="text-center">
+                    <div style="background-color: var(--color-slate-900);" class="h-16 rounded mb-2"></div>
+                    <code class="text-xs block text-white">slate-900</code>
+                    <span class="text-xs text-secondary">9%</span>
+                  </div>
+                  <div class="text-center">
+                    <div style="background-color: var(--color-slate-950);" class="h-16 rounded mb-2"></div>
+                    <code class="text-xs block text-white">slate-950</code>
+                    <span class="text-xs text-secondary">4%</span>
                   </div>
                 </div>
+
+                <!-- Semantic Color Palette - Subdued Tones -->
+                <h4 class="font-semibold mb-3 text-sm">Semantic Colors (Subdued Tones)</h4>
+
+                <div class="mb-4">
+                  <p class="text-xs font-semibold mb-2">Success (Green)</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                      <div style="background-color: var(--color-success-500);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block text-white">success-500</code>
+                      <span class="text-xs text-secondary">hsl(150, 35%, 40%)</span>
+                    </div>
+                    <div class="text-center">
+                      <div style="background-color: var(--color-success-600);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block text-white">success-600</code>
+                      <span class="text-xs text-secondary">hsl(150, 35%, 35%)</span>
+                    </div>
+                    <div class="text-center">
+                      <div style="background-color: var(--color-success-700);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block text-white">success-700</code>
+                      <span class="text-xs text-secondary">hsl(150, 35%, 30%)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-xs font-semibold mb-2">Danger (Red)</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                      <div style="background-color: var(--color-danger-500);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block text-white">danger-500</code>
+                      <span class="text-xs text-secondary">hsl(355, 50%, 45%)</span>
+                    </div>
+                    <div class="text-center">
+                      <div style="background-color: var(--color-danger-600);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block text-white">danger-600</code>
+                      <span class="text-xs text-secondary">hsl(355, 50%, 40%)</span>
+                    </div>
+                    <div class="text-center">
+                      <div style="background-color: var(--color-danger-700);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block text-white">danger-700</code>
+                      <span class="text-xs text-secondary">hsl(355, 50%, 35%)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-xs font-semibold mb-2">Warning (Yellow)</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                      <div style="background-color: var(--color-warning-400);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block">warning-400</code>
+                      <span class="text-xs text-secondary">hsl(40, 70%, 50%)</span>
+                    </div>
+                    <div class="text-center">
+                      <div style="background-color: var(--color-warning-500);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block">warning-500</code>
+                      <span class="text-xs text-secondary">hsl(40, 70%, 45%)</span>
+                    </div>
+                    <div class="text-center">
+                      <div style="background-color: var(--color-warning-600);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block">warning-600</code>
+                      <span class="text-xs text-secondary">hsl(40, 70%, 40%)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <p class="text-xs font-semibold mb-2">Info (Blue)</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                      <div style="background-color: var(--color-info-500);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block text-white">info-500</code>
+                      <span class="text-xs text-secondary">hsl(215, 45%, 45%)</span>
+                    </div>
+                    <div class="text-center">
+                      <div style="background-color: var(--color-info-600);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block text-white">info-600</code>
+                      <span class="text-xs text-secondary">hsl(215, 45%, 40%)</span>
+                    </div>
+                    <div class="text-center">
+                      <div style="background-color: var(--color-info-700);" class="h-16 rounded mb-2"></div>
+                      <code class="text-xs block text-white">info-700</code>
+                      <span class="text-xs text-secondary">hsl(215, 45%, 35%)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Theme Colors Mapping -->
+                <h4 class="font-semibold mb-3 text-sm">Theme Color Mapping</h4>
+                <div class="p-4 bg-slate-50 rounded mb-4">
+                  <p class="text-xs mb-2"><strong>Primary:</strong> <code class="bg-white px-2 py-1 rounded">var(--color-slate-900)</code></p>
+                  <p class="text-xs mb-2"><strong>Secondary:</strong> <code class="bg-white px-2 py-1 rounded">var(--color-slate-700)</code></p>
+                  <p class="text-xs mb-2"><strong>Success:</strong> <code class="bg-white px-2 py-1 rounded">var(--color-success-600)</code></p>
+                  <p class="text-xs mb-2"><strong>Danger:</strong> <code class="bg-white px-2 py-1 rounded">var(--color-danger-600)</code></p>
+                  <p class="text-xs mb-2"><strong>Warning:</strong> <code class="bg-white px-2 py-1 rounded">var(--color-warning-500)</code></p>
+                  <p class="text-xs mb-2"><strong>Info:</strong> <code class="bg-white px-2 py-1 rounded">var(--color-info-600)</code></p>
+                  <p class="text-xs mb-2"><strong>Light:</strong> <code class="bg-white px-2 py-1 rounded">var(--color-slate-100)</code></p>
+                  <p class="text-xs"><strong>Dark:</strong> <code class="bg-white px-2 py-1 rounded">var(--color-slate-900)</code></p>
+                </div>
+
+                <p class="text-xs text-secondary">
+                  All colors are defined using HSL values for easy theming and dark mode support.
+                </p>
               </div>
             </div>
           </div>
@@ -250,18 +391,64 @@
                   <p class="text-sm text-secondary mb-4">
                     Comprehensive flexbox utilities for flexible layouts.
                   </p>
-                  <div class="flex justify-between items-center bg-slate-100 p-3 rounded mb-4">
-                    <div class="bg-primary text-white p-2 text-xs">1</div>
-                    <div class="bg-success text-white p-2 text-xs">2</div>
-                    <div class="bg-warning p-2 text-xs">3</div>
+                  <h4 class="font-semibold mb-2 text-sm">Example: Horizontal Layout</h4>
+                  <div class="flex justify-between items-center bg-slate-100 p-3 rounded mb-2">
+                    <div class="bg-primary text-white p-2 text-xs">Logo</div>
+                    <div class="bg-success text-white p-2 text-xs">Menu</div>
+                    <div class="bg-warning p-2 text-xs">Button</div>
                   </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="flex justify-between items-center"&gt;
-  &lt;div&gt;1&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
+                  <pre class="bg-slate-100 p-3 rounded text-xs mb-4"><code>&lt;div class="flex justify-between items-center"&gt;
+  &lt;div&gt;Logo&lt;/div&gt;
+  &lt;div&gt;Menu&lt;/div&gt;
+  &lt;div&gt;Button&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+                  <h4 class="font-semibold mb-2 text-sm mt-4">Example: Vertical Centered Layout</h4>
+                  <div class="flex flex-col items-center justify-center bg-slate-100 p-6 rounded mb-2" style="min-height: 150px;">
+                    <div class="bg-primary text-white p-2 text-xs mb-2">Title</div>
+                    <div class="bg-secondary text-white p-2 text-xs">Content</div>
+                  </div>
+                  <pre class="bg-slate-100 p-3 rounded text-xs mb-4"><code>&lt;div class="flex flex-col items-center justify-center"&gt;
+  &lt;div&gt;Title&lt;/div&gt;
+  &lt;div&gt;Content&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                  <h4 class="font-semibold mb-2 text-sm mt-4">Example: Card Grid with Gap</h4>
+                  <div class="flex gap-4 flex-wrap bg-slate-100 p-3 rounded mb-2">
+                    <div class="flex-1 bg-primary text-white p-3 text-xs text-center" style="min-width: 100px;">Card 1</div>
+                    <div class="flex-1 bg-success text-white p-3 text-xs text-center" style="min-width: 100px;">Card 2</div>
+                    <div class="flex-1 bg-warning p-3 text-xs text-center" style="min-width: 100px;">Card 3</div>
+                  </div>
+                  <pre class="bg-slate-100 p-3 rounded text-xs mb-4"><code>&lt;div class="flex gap-4 flex-wrap"&gt;
+  &lt;div class="flex-1"&gt;Card 1&lt;/div&gt;
+  &lt;div class="flex-1"&gt;Card 2&lt;/div&gt;
+  &lt;div class="flex-1"&gt;Card 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                  <div class="mt-4 p-3 bg-slate-50 rounded">
+                    <p class="text-xs font-semibold mb-2">Display:</p>
+                    <code class="text-xs block mb-1">.flex, .inline-flex</code>
+
+                    <p class="text-xs font-semibold mb-2 mt-3">Direction:</p>
+                    <code class="text-xs block mb-1">.flex-row, .flex-row-reverse, .flex-col, .flex-col-reverse</code>
+
+                    <p class="text-xs font-semibold mb-2 mt-3">Wrap:</p>
+                    <code class="text-xs block mb-1">.flex-wrap, .flex-nowrap, .flex-wrap-reverse</code>
+
+                    <p class="text-xs font-semibold mb-2 mt-3">Flex Properties:</p>
+                    <code class="text-xs block mb-1">.flex-1, .flex-auto, .flex-initial, .flex-none</code>
+                    <code class="text-xs block mb-1">.flex-grow, .flex-grow-0, .flex-shrink, .flex-shrink-0</code>
+
+                    <p class="text-xs font-semibold mb-2 mt-3">Justify Content:</p>
+                    <code class="text-xs block mb-1">.justify-start, .justify-end, .justify-center</code>
+                    <code class="text-xs block mb-1">.justify-between, .justify-around, .justify-evenly</code>
+
+                    <p class="text-xs font-semibold mb-2 mt-3">Align Items:</p>
+                    <code class="text-xs block mb-1">.items-start, .items-end, .items-center, .items-baseline, .items-stretch</code>
+
+                    <p class="text-xs font-semibold mb-2 mt-3">Align Content:</p>
+                    <code class="text-xs block">.content-start, .content-end, .content-center, .content-between, .content-around</code>
+                  </div>
                 </div>
               </div>
 
@@ -274,18 +461,36 @@
                   <p class="text-sm text-secondary mb-4">
                     CSS Grid system with responsive columns and gap utilities.
                   </p>
-                  <div class="grid grid-cols-3 gap-2 bg-slate-100 p-3 rounded mb-4">
-                    <div class="bg-primary text-white p-2 text-xs text-center">1</div>
-                    <div class="bg-success text-white p-2 text-xs text-center">2</div>
-                    <div class="bg-warning p-2 text-xs text-center">3</div>
+
+                  <h4 class="font-semibold mb-2 text-sm">Example: 3-Column Grid</h4>
+                  <div class="grid grid-cols-3 gap-4 bg-slate-100 p-3 rounded mb-2">
+                    <div class="bg-primary text-white p-3 text-xs text-center">Item 1</div>
+                    <div class="bg-success text-white p-3 text-xs text-center">Item 2</div>
+                    <div class="bg-warning p-3 text-xs text-center">Item 3</div>
+                    <div class="bg-info text-white p-3 text-xs text-center">Item 4</div>
+                    <div class="bg-danger text-white p-3 text-xs text-center">Item 5</div>
+                    <div class="bg-secondary text-white p-3 text-xs text-center">Item 6</div>
                   </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="grid grid-cols-3 gap-2"&gt;
-  &lt;div&gt;1&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
+                  <pre class="bg-slate-100 p-3 rounded text-xs mb-4"><code>&lt;div class="grid grid-cols-3 gap-4"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+                  <h4 class="font-semibold mb-2 text-sm mt-4">Example: Responsive Grid</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 bg-slate-100 p-3 rounded mb-2">
+                    <div class="bg-primary text-white p-3 text-xs text-center">Card 1</div>
+                    <div class="bg-success text-white p-3 text-xs text-center">Card 2</div>
+                    <div class="bg-warning p-3 text-xs text-center">Card 3</div>
+                    <div class="bg-info text-white p-3 text-xs text-center">Card 4</div>
+                  </div>
+                  <pre class="bg-slate-100 p-3 rounded text-xs mb-4"><code>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"&gt;
+  &lt;div&gt;Card 1&lt;/div&gt;
+  &lt;div&gt;Card 2&lt;/div&gt;
+  &lt;div&gt;Card 3&lt;/div&gt;
+  &lt;div&gt;Card 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  <p class="text-xs text-secondary mb-4">Mobile: 1 column, Tablet: 2 columns, Desktop: 4 columns</p>
                 </div>
               </div>
             </div>
@@ -293,23 +498,25 @@
             <!-- Layout Classes Reference -->
             <div class="card mt-6">
               <div class="card-header">
-                <h3 class="font-semibold">Common Layout Classes</h3>
+                <h3 class="font-semibold">Quick Reference</h3>
               </div>
               <div class="card-body">
+                <p class="text-xs text-secondary mb-4">Most commonly used layout classes for quick access.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <h4 class="font-semibold mb-2 text-sm">Flexbox</h4>
-                    <code class="text-xs block mb-1">.flex, .inline-flex</code>
-                    <code class="text-xs block mb-1">.flex-row, .flex-col</code>
-                    <code class="text-xs block mb-1">.justify-start, .justify-center, .justify-between</code>
-                    <code class="text-xs block">.items-start, .items-center, .items-stretch</code>
+                    <h4 class="font-semibold mb-2 text-sm">Container</h4>
+                    <code class="text-xs block">.container, .container-fluid</code>
                   </div>
                   <div>
-                    <h4 class="font-semibold mb-2 text-sm">Grid</h4>
-                    <code class="text-xs block mb-1">.grid, .inline-grid</code>
-                    <code class="text-xs block mb-1">.grid-cols-1 ~ .grid-cols-12</code>
-                    <code class="text-xs block mb-1">.gap-1 ~ .gap-12</code>
-                    <code class="text-xs block">.md:grid-cols-3, .lg:grid-cols-4</code>
+                    <h4 class="font-semibold mb-2 text-sm">Flexbox (Most Used)</h4>
+                    <code class="text-xs block mb-1">.flex, .flex-row, .flex-col</code>
+                    <code class="text-xs block mb-1">.justify-center, .justify-between</code>
+                    <code class="text-xs block">.items-center, .gap-{'{1-12}'}</code>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">Grid (Most Used)</h4>
+                    <code class="text-xs block mb-1">.grid, .grid-cols-{'{1-12}'}</code>
+                    <code class="text-xs block">.gap-{'{1-12}'}, .md:grid-cols-{'{1-12}'}</code>
                   </div>
                 </div>
               </div>
@@ -329,27 +536,27 @@
               Complete UI components library with modern glass morphism effects.
             </p>
 
-            <!-- Buttons -->
+              <!-- Buttons -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Buttons</h3>
-              </div>
-              <div class="card-body">
-                <p class="text-sm text-secondary mb-4">
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
                   Interactive buttons with multiple variants, sizes, and states.
-                </p>
+                  </p>
 
                 <h4 class="font-semibold mb-2 text-sm">Variants</h4>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <button class="btn btn-primary btn-sm">Primary</button>
-                  <button class="btn btn-secondary btn-sm">Secondary</button>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <button class="btn btn-primary btn-sm">Primary</button>
+                    <button class="btn btn-secondary btn-sm">Secondary</button>
                   <button class="btn btn-success btn-sm">Success</button>
                   <button class="btn btn-danger btn-sm">Danger</button>
                   <button class="btn btn-warning btn-sm">Warning</button>
                   <button class="btn btn-info btn-sm">Info</button>
                   <button class="btn btn-light btn-sm">Light</button>
                   <button class="btn btn-dark btn-sm">Dark</button>
-                </div>
+                  </div>
 
                 <h4 class="font-semibold mb-2 text-sm mt-4">Outline Variants</h4>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -363,7 +570,7 @@
                   <button class="btn btn-primary btn-sm">Small</button>
                   <button class="btn btn-primary">Default</button>
                   <button class="btn btn-primary btn-lg">Large</button>
-                </div>
+              </div>
 
                 <h4 class="font-semibold mb-2 text-sm mt-4">States</h4>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -376,16 +583,16 @@
                   <code class="text-xs block mb-1">.btn-outline-{'{variant}'}, .btn-link</code>
                   <code class="text-xs block">.btn-sm, .btn-lg</code>
                 </div>
+                </div>
               </div>
-            </div>
 
-            <!-- Forms -->
+              <!-- Forms -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Forms</h3>
-              </div>
-              <div class="card-body">
-                <p class="text-sm text-secondary mb-4">
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
                   Comprehensive form controls with validation states.
                 </p>
 
@@ -393,25 +600,25 @@
                 <div class="form-group mb-4">
                   <label class="form-label">Default Input</label>
                   <input type="text" class="form-control" placeholder="Enter text" />
-                </div>
+                    </div>
                 <div class="form-group mb-4">
                   <label class="form-label">Disabled Input</label>
                   <input type="text" class="form-control" placeholder="Disabled" disabled />
-                </div>
+                  </div>
 
                 <h4 class="font-semibold mb-3 text-sm mt-4">Select & Textarea</h4>
                 <div class="form-group mb-4">
                   <label class="form-label">Select Dropdown</label>
-                  <select class="form-control">
+                    <select class="form-control">
                     <option>Choose an option</option>
                     <option>Option 1</option>
                     <option>Option 2</option>
-                  </select>
+                    </select>
                 </div>
                 <div class="form-group mb-4">
                   <label class="form-label">Textarea</label>
                   <textarea class="form-control" rows="3" placeholder="Enter message"></textarea>
-                </div>
+              </div>
 
                 <h4 class="font-semibold mb-3 text-sm mt-4">Checkboxes & Radios</h4>
                 <div class="form-check mb-2">
@@ -425,7 +632,7 @@
                 <div class="form-check mb-2">
                   <input type="checkbox" class="form-check-input" id="check3" disabled />
                   <label class="form-check-label" for="check3">Disabled checkbox</label>
-                </div>
+              </div>
 
                 <div class="mt-4">
                   <div class="form-check mb-2">
@@ -460,11 +667,11 @@
 
             <!-- Cards -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Cards</h3>
-              </div>
-              <div class="card-body">
-                <p class="text-sm text-secondary mb-4">
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
                   Flexible containers with glass morphism effects.
                 </p>
 
@@ -472,10 +679,10 @@
                   <div class="card">
                     <div class="card-header">
                       <h4 class="font-semibold text-sm">Card with Header</h4>
-                    </div>
+                  </div>
                     <div class="card-body">
                       <p class="text-sm">Card content goes here with header section.</p>
-                    </div>
+                  </div>
                   </div>
 
                   <div class="card">
@@ -493,16 +700,16 @@
                   <p class="text-xs font-semibold mb-2">Available Classes:</p>
                   <code class="text-xs block">.card, .card-header, .card-body, .card-footer</code>
                 </div>
+                </div>
               </div>
-            </div>
 
-            <!-- Alerts -->
+              <!-- Alerts -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Alerts</h3>
-              </div>
-              <div class="card-body">
-                <p class="text-sm text-secondary mb-4">
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
                   Contextual feedback messages for user actions.
                 </p>
 
@@ -516,17 +723,17 @@
                 <div class="mt-4 p-3 bg-slate-50 rounded">
                   <p class="text-xs font-semibold mb-2">Available Classes:</p>
                   <code class="text-xs block">.alert, .alert-{'{variant}'} (primary, secondary, success, danger, warning, info)</code>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Badges -->
+              <!-- Badges -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Badges</h3>
-              </div>
-              <div class="card-body">
-                <p class="text-sm text-secondary mb-4">
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
                   Small status indicators and count labels.
                 </p>
 
@@ -543,51 +750,51 @@
 
                 <h4 class="font-semibold mb-2 text-sm mt-4">Usage Examples</h4>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="badge badge-primary">New</span>
-                  <span class="badge badge-success">Active</span>
+                    <span class="badge badge-primary">New</span>
+                    <span class="badge badge-success">Active</span>
                   <span class="badge badge-danger">5</span>
                   <span class="badge badge-warning">99+</span>
-                </div>
+                  </div>
 
                 <div class="mt-4 p-3 bg-slate-50 rounded">
                   <p class="text-xs font-semibold mb-2">Available Classes:</p>
                   <code class="text-xs block">.badge, .badge-{'{variant}'} (primary, secondary, success, danger, warning, info, light, dark)</code>
                 </div>
+                </div>
               </div>
-            </div>
 
-            <!-- Tables -->
+              <!-- Tables -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Tables</h3>
-              </div>
-              <div class="card-body">
-                <p class="text-sm text-secondary mb-4">
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
                   Structured data display with various styles.
-                </p>
+                  </p>
 
                 <h4 class="font-semibold mb-2 text-sm">Basic Table</h4>
                 <table class="table mb-4">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
+                    <thead>
+                      <tr>
+                        <th>Name</th>
                       <th>Email</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
                       <td>John Doe</td>
                       <td>john@example.com</td>
-                      <td><span class="badge badge-success">Active</span></td>
-                    </tr>
+                        <td><span class="badge badge-success">Active</span></td>
+                      </tr>
                     <tr>
                       <td>Jane Smith</td>
                       <td>jane@example.com</td>
                       <td><span class="badge badge-warning">Pending</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+                      </tr>
+                    </tbody>
+                  </table>
 
                 <h4 class="font-semibold mb-2 text-sm mt-4">Table Variations</h4>
                 <table class="table table-sm table-bordered table-striped table-hover mb-4">
@@ -625,10 +832,10 @@
 
             <!-- Charts -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+          <div class="card-header">
                 <h3 class="font-semibold text-lg">Charts</h3>
-              </div>
-              <div class="card-body">
+          </div>
+          <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
                   Data visualization components including bar charts, line charts, and donut charts.
                 </p>
@@ -648,7 +855,7 @@
                     <div class="chart-legend-color" data-variant="primary"></div>
                     <span class="chart-legend-label">Primary</span>
                     <span class="chart-legend-value">45%</span>
-                  </div>
+                    </div>
                   <div class="chart-legend-item">
                     <div class="chart-legend-color" data-variant="success"></div>
                     <span class="chart-legend-label">Success</span>
@@ -658,8 +865,8 @@
                     <div class="chart-legend-color" data-variant="warning"></div>
                     <span class="chart-legend-label">Warning</span>
                     <span class="chart-legend-value">25%</span>
-                  </div>
                 </div>
+              </div>
 
                 <div class="mt-4 p-3 bg-slate-50 rounded">
                   <p class="text-xs font-semibold mb-2">Available Classes:</p>
@@ -670,16 +877,16 @@
                   <code class="text-xs block mb-1">.chart-legend, .chart-legend-item - Chart legend</code>
                   <code class="text-xs block">data-variant="{'{variant}'}" (primary, success, warning, danger, info)</code>
                 </div>
+                </div>
               </div>
-            </div>
 
             <!-- Navbar -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Navbar</h3>
-              </div>
-              <div class="card-body">
-                <p class="text-sm text-secondary mb-4">
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
                   Responsive navigation bar with mobile hamburger menu support.
                 </p>
 
@@ -693,7 +900,7 @@
                       <li><a class="navbar-item">Contact</a></li>
                     </ul>
                   </nav>
-                </div>
+                  </div>
 
                 <div class="mt-4 p-3 bg-slate-50 rounded">
                   <p class="text-xs font-semibold mb-2">Available Classes:</p>
@@ -723,21 +930,21 @@
                     <label class="accordion-label" for="acc1">First Section</label>
                     <div class="accordion-content">
                       <p class="text-sm">This is the content of the first accordion section. It expands and collapses smoothly.</p>
-                    </div>
                   </div>
+                      </div>
                   <div class="accordion-item">
                     <input type="checkbox" class="accordion-toggle" id="acc2" />
                     <label class="accordion-label" for="acc2">Second Section</label>
                     <div class="accordion-content">
                       <p class="text-sm">This is the content of the second accordion section with more details.</p>
-                    </div>
-                  </div>
+                      </div>
+                      </div>
                   <div class="accordion-item">
                     <input type="checkbox" class="accordion-toggle" id="acc3" />
                     <label class="accordion-label" for="acc3">Third Section</label>
                     <div class="accordion-content">
                       <p class="text-sm">This is the content of the third accordion section.</p>
-                    </div>
+                      </div>
                   </div>
                 </div>
 
@@ -748,16 +955,16 @@
                   <code class="text-xs block mb-1">.accordion-toggle - Hidden checkbox for toggle</code>
                   <code class="text-xs block mb-1">.accordion-label - Clickable header</code>
                   <code class="text-xs block">.accordion-content - Collapsible content</code>
-                </div>
               </div>
             </div>
+          </div>
 
             <!-- Code -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+          <div class="card-header">
                 <h3 class="font-semibold text-lg">Code</h3>
-              </div>
-              <div class="card-body">
+          </div>
+          <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
                   Code block display with syntax highlighting support.
                 </p>
@@ -768,21 +975,21 @@
   console.log(message);
   return true;
 }</code></pre>
-                </div>
+              </div>
 
                 <div class="mt-4 p-3 bg-slate-50 rounded">
                   <p class="text-xs font-semibold mb-2">Available Classes:</p>
                   <code class="text-xs block">.code-preview - Code block container</code>
                 </div>
+                </div>
               </div>
-            </div>
 
             <!-- Showcase & Swatch -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Showcase & Swatch</h3>
-              </div>
-              <div class="card-body">
+                </div>
+                <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
                   Utility components for displaying demos and color samples.
                 </p>
@@ -797,7 +1004,7 @@
                   <div class="swatch bg-primary">#3B82F6</div>
                   <div class="swatch bg-success">#10B981</div>
                   <div class="swatch bg-danger">#EF4444</div>
-                </div>
+            </div>
 
                 <div class="mt-4 p-3 bg-slate-50 rounded">
                   <p class="text-xs font-semibold mb-2">Available Classes:</p>
@@ -813,20 +1020,20 @@
       <!-- Utilities Section -->
       <section id="utilities" class="mb-16">
         <div class="card mb-8">
-              <div class="card-header">
+          <div class="card-header">
             <h2 class="text-2xl font-bold">Utilities</h2>
-              </div>
-              <div class="card-body">
+          </div>
+          <div class="card-body">
             <p class="text-secondary mb-6">
               Comprehensive utility classes for rapid styling and customization.
             </p>
 
-            <!-- Spacing -->
+              <!-- Spacing -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Spacing</h3>
-                  </div>
-              <div class="card-body">
+                </div>
+                <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
                   Margin and padding utilities. Values: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32
                 </p>
@@ -840,7 +1047,7 @@
                     <code class="text-xs block mb-1">.mr-{'{0-32}'}, .mr-auto - Right</code>
                     <code class="text-xs block mb-1">.mb-{'{0-32}'}, .mb-auto - Bottom</code>
                     <code class="text-xs block">.ml-{'{0-32}'}, .ml-auto - Left</code>
-                      </div>
+                  </div>
                   <div>
                     <h4 class="font-semibold mb-2 text-sm">Padding</h4>
                     <code class="text-xs block mb-1">.p-{'{0-32}'} - All sides</code>
@@ -856,15 +1063,15 @@
                   <p class="text-xs text-secondary mb-2">Spacing scale (in rem):</p>
                   <code class="text-xs">0: 0 | 1: 0.25 | 2: 0.5 | 3: 0.75 | 4: 1 | 5: 1.25 | 6: 1.5 | 8: 2 | 10: 2.5 | 12: 3 | 16: 4 | 20: 5 | 24: 6 | 32: 8</code>
                       </div>
-                      </div>
-                      </div>
+                </div>
+              </div>
 
-            <!-- Colors -->
+              <!-- Colors -->
             <div class="card mb-6 glass">
-              <div class="card-header">
+                <div class="card-header">
                 <h3 class="font-semibold text-lg">Colors</h3>
-                    </div>
-              <div class="card-body">
+                </div>
+                <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
                   Background and text color utilities with full slate scale.
                 </p>
@@ -875,15 +1082,15 @@
                   <div class="text-center">
                     <div class="bg-primary h-20 rounded mb-2 flex items-center justify-center">
                       <span class="text-white text-xs font-semibold">Primary</span>
-                  </div>
+                    </div>
                     <code class="text-xs">.bg-primary</code>
-                </div>
+                    </div>
                   <div class="text-center">
                     <div class="bg-secondary h-20 rounded mb-2 flex items-center justify-center">
                       <span class="text-white text-xs font-semibold">Secondary</span>
-              </div>
+                    </div>
                     <code class="text-xs">.bg-secondary</code>
-            </div>
+                  </div>
                   <div class="text-center">
                     <div class="bg-success h-20 rounded mb-2 flex items-center justify-center">
                       <span class="text-white text-xs font-semibold">Success</span>
@@ -1028,7 +1235,7 @@
                 </div>
               </div>
 
-            <!-- Typography -->
+              <!-- Typography -->
             <div class="card mb-6 glass">
                 <div class="card-header">
                 <h3 class="font-semibold text-lg">Typography</h3>
@@ -1049,7 +1256,7 @@
                     <code class="text-xs block mb-1">.text-3xl (1.875rem)</code>
                     <code class="text-xs block mb-1">.text-4xl (2.25rem)</code>
                     <code class="text-xs block">.text-5xl (3rem)</code>
-                    </div>
+                  </div>
                   <div>
                     <h4 class="font-semibold mb-2 text-sm">Font Weight & Alignment</h4>
                     <code class="text-xs block mb-1">.font-light (300)</code>
@@ -1116,16 +1323,16 @@
                   <div class="shadow-md p-3 bg-white text-xs text-center">shadow-md</div>
                   <div class="shadow-lg p-3 bg-white text-xs text-center">shadow-lg</div>
                   <div class="shadow-xl p-3 bg-white text-xs text-center">shadow-xl</div>
-                  </div>
+                    </div>
                 <code class="text-xs">.shadow-none, .shadow-sm, .shadow, .shadow-md, .shadow-lg, .shadow-xl</code>
-                </div>
-              </div>
+                    </div>
+                    </div>
 
             <!-- Glass Morphism -->
             <div class="card mb-6 glass">
                 <div class="card-header">
                 <h3 class="font-semibold text-lg">Glass Morphism</h3>
-                </div>
+                  </div>
                 <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
                   Complete glass morphism system with transparency and backdrop blur effects.
