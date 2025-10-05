@@ -875,11 +875,11 @@
                 <h3 class="font-semibold text-lg">Charts</h3>
           </div>
           <div class="card-body">
-                <p class="text-sm text-secondary mb-4">
+                <p class="text-sm text-secondary mb-6">
                   Data visualization components including bar charts, line charts, and donut charts.
                 </p>
 
-                <h4 class="font-semibold mb-2 text-sm">Bar Chart</h4>
+                <h4 class="font-semibold mb-3 text-sm">Bar Chart</h4>
                 <div class="bar-chart mb-6" style="height: 120px;">
                   <div class="bar-chart-item" data-variant="primary" data-height="md"></div>
                   <div class="bar-chart-item" data-variant="success" data-height="xl"></div>
@@ -888,31 +888,45 @@
                   <div class="bar-chart-item" data-variant="info" data-height="md"></div>
                 </div>
 
-                <h4 class="font-semibold mb-2 text-sm mt-4">Chart with Legend</h4>
-                <div class="chart-legend mb-4">
-                  <div class="chart-legend-item">
-                    <div class="chart-legend-color" data-variant="primary"></div>
-                    <span class="chart-legend-label">Primary</span>
-                    <span class="chart-legend-value">45%</span>
-                    </div>
-                  <div class="chart-legend-item">
-                    <div class="chart-legend-color" data-variant="success"></div>
-                    <span class="chart-legend-label">Success</span>
-                    <span class="chart-legend-value">30%</span>
-                  </div>
-                  <div class="chart-legend-item">
-                    <div class="chart-legend-color" data-variant="warning"></div>
-                    <span class="chart-legend-label">Warning</span>
-                    <span class="chart-legend-value">25%</span>
+                <h4 class="font-semibold mb-3 text-sm">Line Chart</h4>
+                <div class="line-chart mb-6">
+                  <svg class="line-chart-svg" viewBox="0 0 400 150" preserveAspectRatio="none">
+                    <polyline class="line-chart-path" data-variant="success" points="0,100 100,40 200,80 300,20 400,60" />
+                  </svg>
                 </div>
-              </div>
+
+                <h4 class="font-semibold mb-3 text-sm">Donut Chart</h4>
+                <div class="donut-chart mb-6">
+                  <svg class="donut-chart-svg" viewBox="0 0 200 200">
+                    <circle class="donut-chart-segment" data-variant="primary" cx="100" cy="100" r="80" fill="none" stroke-width="40" stroke-dasharray="251.2 251.2" transform="rotate(-90 100 100)" />
+                    <circle class="donut-chart-segment" data-variant="success" cx="100" cy="100" r="80" fill="none" stroke-width="40" stroke-dasharray="125.6 376.8" stroke-dashoffset="-251.2" transform="rotate(-90 100 100)" />
+                    <circle class="donut-chart-segment" data-variant="warning" cx="100" cy="100" r="80" fill="none" stroke-width="40" stroke-dasharray="62.8 439.6" stroke-dashoffset="-376.8" transform="rotate(-90 100 100)" />
+                  </svg>
+                  <div class="chart-legend">
+                    <div class="chart-legend-item">
+                      <div class="chart-legend-color" data-variant="primary"></div>
+                      <span class="chart-legend-label">Primary</span>
+                      <span class="chart-legend-value">50%</span>
+                    </div>
+                    <div class="chart-legend-item">
+                      <div class="chart-legend-color" data-variant="success"></div>
+                      <span class="chart-legend-label">Success</span>
+                      <span class="chart-legend-value">25%</span>
+                    </div>
+                    <div class="chart-legend-item">
+                      <div class="chart-legend-color" data-variant="warning"></div>
+                      <span class="chart-legend-label">Warning</span>
+                      <span class="chart-legend-value">25%</span>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="mt-4 p-3 bg-slate-50 rounded">
                   <p class="text-xs font-semibold mb-2">Available Classes:</p>
                   <code class="text-xs block mb-1">.chart, .chart-sm, .chart-lg - Chart containers</code>
                   <code class="text-xs block mb-1">.bar-chart, .bar-chart-item - Bar charts</code>
-                  <code class="text-xs block mb-1">.line-chart, .line-chart-path - Line charts</code>
-                  <code class="text-xs block mb-1">.donut-chart, .donut-chart-segment - Donut charts</code>
+                  <code class="text-xs block mb-1">.line-chart, .line-chart-svg, .line-chart-path - Line charts</code>
+                  <code class="text-xs block mb-1">.donut-chart, .donut-chart-svg, .donut-chart-segment - Donut charts</code>
                   <code class="text-xs block mb-1">.chart-legend, .chart-legend-item - Chart legend</code>
                   <code class="text-xs block">data-variant="{'{variant}'}" (primary, success, warning, danger, info)</code>
                 </div>
