@@ -40,15 +40,16 @@
           <h2 class="text-xl font-semibold">クイックナビゲーション</h2>
         </div>
         <div class="card-body">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
             <a href="#installation" class="btn btn-outline-primary btn-sm"
               >インストール</a
             >
+            <a href="#base" class="btn btn-outline-primary btn-sm">基礎</a>
+            <a href="#layout" class="btn btn-outline-primary btn-sm"
+              >レイアウト</a
+            >
             <a href="#components" class="btn btn-outline-primary btn-sm"
               >コンポーネント</a
-            >
-            <a href="#charts" class="btn btn-outline-primary btn-sm"
-              >チャート</a
             >
             <a href="#utilities" class="btn btn-outline-primary btn-sm"
               >ユーティリティ</a
@@ -104,35 +105,785 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="card mt-6">
+      <!-- 基礎セクション -->
+      <section id="base" class="mb-16">
+        <div class="card mb-8">
+          <div class="card-header">
+            <h2 class="text-2xl font-bold">基礎</h2>
+          </div>
+          <div class="card-body">
+            <p class="text-secondary mb-6">
+              CSSリセット、テーマ、デザイントークンを含む基礎スタイル。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- リセット -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">リセット</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    モダンなCSSリセットでブラウザのデフォルトを正規化。ブラウザ間での一貫した表示のための基本要素スタイリングを含みます。
+                  </p>
+                  <ul class="text-sm space-y-1">
+                    <li>• ボックスサイズ: border-box</li>
+                    <li>• マージンとパディングのリセット</li>
+                    <li>• 最適化されたフォントレンダリング</li>
+                    <li>• モーション軽減のサポート</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- テーマ -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">テーマ</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    システム設定に基づく自動ダークモードサポート。CSS変数でシームレスなテーマ切り替えを実現。
+                  </p>
+                  <ul class="text-sm space-y-1">
+                    <li>• 自動ダークモード検出</li>
+                    <li>• スムーズなトランジション</li>
+                    <li>• 一貫したカラー</li>
+                    <li>• 透明度の向上</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 変数 -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">変数</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    カラー、スペーシング、タイポグラフィなどのCSSカスタムプロパティ。デザイントークンによる簡単なカスタマイズ。
+                  </p>
+                  <ul class="text-sm space-y-1">
+                    <li>• カラーパレット</li>
+                    <li>• スペーシングスケール</li>
+                    <li>• タイポグラフィシステム</li>
+                    <li>• シャドウとエフェクト</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- カラーパレット例 -->
+            <div class="card mt-6 glass">
               <div class="card-header">
-                <h3 class="font-semibold">クイック例</h3>
+                <h3 class="font-semibold">カラーパレット (CSS変数)</h3>
               </div>
               <div class="card-body">
-                <div class="card mb-4">
-                  <div class="card-header">
-                    <h4 class="font-semibold">Sleytへようこそ</h4>
+                <p class="text-sm text-secondary mb-6">
+                  <code class="text-xs bg-slate-100 px-2 py-1 rounded"
+                    >base/variables.css</code
+                  >
+                  で定義された完全なカラーシステム
+                </p>
+
+                <!-- ニュートラルグレースケール -->
+                <h4 class="font-semibold mb-3 text-sm">
+                  ニュートラルグレースケール (Slate)
+                </h4>
+                <div
+                  class="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-11 gap-2 mb-6"
+                >
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-50 rounded mb-2 border-2 border-slate-400"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block">slate-50</code>
+                    <span class="text-xs text-secondary">98%</span>
                   </div>
-                  <div class="card-body">
-                    <p class="mb-4">
-                      ガラスモーフィズムデザインを持つモダンなCSSフレームワーク。
-                    </p>
-                    <button class="btn btn-primary">はじめる</button>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-100 rounded mb-2 border-2 border-slate-400"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block">slate-100</code>
+                    <span class="text-xs text-secondary">96%</span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-200 rounded mb-2 border-2 border-slate-400"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block">slate-200</code>
+                    <span class="text-xs text-secondary">90%</span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-300 rounded mb-2 border-2 border-slate-400"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block">slate-300</code>
+                    <span class="text-xs text-secondary">83%</span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-400 rounded mb-2 border-2 border-slate-600"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block">slate-400</code>
+                    <span class="text-xs text-secondary">64%</span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-500 rounded mb-2 border-2 border-slate-600"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block text-white">slate-500</code>
+                    <span class="text-xs text-secondary">45%</span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-600 rounded mb-2 border-2 border-slate-400"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block text-white">slate-600</code>
+                    <span class="text-xs text-secondary">32%</span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-700 rounded mb-2 border-2 border-slate-400"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block text-white">slate-700</code>
+                    <span class="text-xs text-secondary">25%</span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-800 rounded mb-2 border-2 border-slate-400"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block text-white">slate-800</code>
+                    <span class="text-xs text-secondary">15%</span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-900 rounded mb-2 border-2 border-slate-400"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block text-white">slate-900</code>
+                    <span class="text-xs text-secondary">9%</span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-slate-950 rounded mb-2 border-2 border-slate-400"
+                      style="height: 4rem"
+                    ></div>
+                    <code class="text-xs block text-white">slate-950</code>
+                    <span class="text-xs text-secondary">4%</span>
                   </div>
                 </div>
 
-                <pre
-                  class="bg-slate-100 p-4 rounded"
-                ><code>&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h4 class="font-semibold"&gt;Sleytへようこそ&lt;/h4&gt;
-    &lt;/div&gt;
-  &lt;div class="card-body"&gt;
-    &lt;p class="mb-4"&gt;ガラスモーフィズムデザインを持つモダンなCSSフレームワーク。&lt;/p&gt;
-    &lt;button class="btn btn-primary"&gt;はじめる&lt;/button&gt;
-  &lt;/div&gt;
+                <!-- セマンティックカラーパレット - 控えめなトーン -->
+                <h4 class="font-semibold mb-3 text-sm">
+                  セマンティックカラー (控えめなトーン)
+                </h4>
+                <p class="text-xs text-secondary mb-4">
+                  <strong>注:</strong>
+                  ダークモードでは視認性向上のため、自動的に明るく鮮やかな色に調整されます
+                </p>
+
+                <div class="mb-4">
+                  <p class="text-xs font-semibold mb-2">Success (グリーン)</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                      <div
+                        class="bg-success rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem"
+                      >
+                        <span class="text-white text-xs font-semibold"
+                          >500</span
+                        >
+                      </div>
+                      <code class="text-xs block">success-500</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(150, 35%, 40%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(150, 40%, 45%)</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="bg-success rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem; filter: brightness(0.92)"
+                      >
+                        <span class="text-white text-xs font-semibold"
+                          >600</span
+                        >
+                      </div>
+                      <code class="text-xs block">success-600</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(150, 35%, 35%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(150, 40%, 40%)</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="bg-success rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem; filter: brightness(0.84)"
+                      >
+                        <span class="text-white text-xs font-semibold"
+                          >700</span
+                        >
+                      </div>
+                      <code class="text-xs block">success-700</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(150, 35%, 30%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(150, 40%, 35%)</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-xs font-semibold mb-2">Danger (レッド)</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                      <div
+                        class="bg-danger rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem"
+                      >
+                        <span class="text-white text-xs font-semibold"
+                          >500</span
+                        >
+                      </div>
+                      <code class="text-xs block">danger-500</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(355, 50%, 45%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(355, 60%, 50%)</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="bg-danger rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem; filter: brightness(0.92)"
+                      >
+                        <span class="text-white text-xs font-semibold"
+                          >600</span
+                        >
+                      </div>
+                      <code class="text-xs block">danger-600</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(355, 50%, 40%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(355, 60%, 45%)</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="bg-danger rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem; filter: brightness(0.84)"
+                      >
+                        <span class="text-white text-xs font-semibold"
+                          >700</span
+                        >
+                      </div>
+                      <code class="text-xs block">danger-700</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(355, 50%, 35%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(355, 60%, 40%)</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-xs font-semibold mb-2">Warning (イエロー)</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                      <div
+                        class="bg-warning rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem; filter: brightness(1.08)"
+                      >
+                        <span class="text-slate-900 text-xs font-semibold"
+                          >400</span
+                        >
+                      </div>
+                      <code class="text-xs block">warning-400</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(40, 70%, 50%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(40, 80%, 55%)</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="bg-warning rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem"
+                      >
+                        <span class="text-slate-900 text-xs font-semibold"
+                          >500</span
+                        >
+                      </div>
+                      <code class="text-xs block">warning-500</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(40, 70%, 45%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(40, 80%, 50%)</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="bg-warning rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem; filter: brightness(0.92)"
+                      >
+                        <span class="text-slate-900 text-xs font-semibold"
+                          >600</span
+                        >
+                      </div>
+                      <code class="text-xs block">warning-600</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(40, 70%, 40%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(40, 80%, 45%)</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <p class="text-xs font-semibold mb-2">Info (ブルー)</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                      <div
+                        class="bg-info rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem"
+                      >
+                        <span class="text-white text-xs font-semibold"
+                          >500</span
+                        >
+                      </div>
+                      <code class="text-xs block">info-500</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(215, 45%, 45%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(215, 50%, 50%)</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="bg-info rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem; filter: brightness(0.92)"
+                      >
+                        <span class="text-white text-xs font-semibold"
+                          >600</span
+                        >
+                      </div>
+                      <code class="text-xs block">info-600</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(215, 45%, 40%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(215, 50%, 45%)</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="bg-info rounded mb-2 flex items-center justify-center"
+                        style="height: 4rem; filter: brightness(0.84)"
+                      >
+                        <span class="text-white text-xs font-semibold"
+                          >700</span
+                        >
+                      </div>
+                      <code class="text-xs block">info-700</code>
+                      <span class="text-xs text-secondary block"
+                        >Light: hsl(215, 45%, 35%)</span
+                      >
+                      <span class="text-xs text-secondary"
+                        >Dark: hsl(215, 50%, 40%)</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- テーマカラーマッピング -->
+                <h4 class="font-semibold mb-3 text-sm">
+                  テーマカラーマッピング
+                </h4>
+                <div class="p-4 bg-slate-50 rounded mb-4">
+                  <p class="text-xs mb-2">
+                    <strong>Primary:</strong>
+                    <code class="bg-white px-2 py-1 rounded"
+                      >var(--color-slate-900)</code
+                    >
+                  </p>
+                  <p class="text-xs mb-2">
+                    <strong>Secondary:</strong>
+                    <code class="bg-white px-2 py-1 rounded"
+                      >var(--color-slate-700)</code
+                    >
+                  </p>
+                  <p class="text-xs mb-2">
+                    <strong>Success:</strong>
+                    <code class="bg-white px-2 py-1 rounded"
+                      >var(--color-success-600)</code
+                    >
+                  </p>
+                  <p class="text-xs mb-2">
+                    <strong>Danger:</strong>
+                    <code class="bg-white px-2 py-1 rounded"
+                      >var(--color-danger-600)</code
+                    >
+                  </p>
+                  <p class="text-xs mb-2">
+                    <strong>Warning:</strong>
+                    <code class="bg-white px-2 py-1 rounded"
+                      >var(--color-warning-500)</code
+                    >
+                  </p>
+                  <p class="text-xs mb-2">
+                    <strong>Info:</strong>
+                    <code class="bg-white px-2 py-1 rounded"
+                      >var(--color-info-600)</code
+                    >
+                  </p>
+                  <p class="text-xs mb-2">
+                    <strong>Light:</strong>
+                    <code class="bg-white px-2 py-1 rounded"
+                      >var(--color-slate-100)</code
+                    >
+                  </p>
+                  <p class="text-xs">
+                    <strong>Dark:</strong>
+                    <code class="bg-white px-2 py-1 rounded"
+                      >var(--color-slate-900)</code
+                    >
+                  </p>
+                </div>
+
+                <p class="text-xs text-secondary">
+                  すべての色はテーマ設定とダークモードサポートを容易にするためHSL値で定義されています。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- レイアウトセクション -->
+      <section id="layout" class="mb-16">
+        <div class="card mb-8">
+          <div class="card-header">
+            <h2 class="text-2xl font-bold">レイアウト</h2>
+          </div>
+          <div class="card-body">
+            <p class="text-secondary mb-6">
+              コンテナ、フレックスボックス、グリッドユーティリティを備えた柔軟なレイアウトシステム。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- コンテナ -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">コンテナ</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    自動センタリングとmax-widthブレイクポイントを持つレスポンシブコンテナ。
+                  </p>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs mb-4"
+                  ><code>&lt;div class="container"&gt;
+  コンテンツ
 &lt;/div&gt;</code></pre>
+                  <p class="text-xs text-secondary">
+                    ブレイクポイント: 640px, 768px, 1024px, 1280px, 1536px
+                  </p>
+                </div>
+              </div>
+
+              <!-- フレックスボックス -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">フレックスボックス</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    柔軟なレイアウトのための包括的なFlexboxユーティリティ。
+                  </p>
+                  <h4 class="font-semibold mb-2 text-sm">
+                    例: 横並びレイアウト
+                  </h4>
+                  <div
+                    class="flex justify-between items-center bg-slate-100 p-3 rounded mb-2"
+                  >
+                    <div class="bg-primary text-white p-2 text-xs">ロゴ</div>
+                    <div class="bg-success text-white p-2 text-xs">
+                      メニュー
+                    </div>
+                    <div class="bg-warning p-2 text-xs">ボタン</div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs mb-4"
+                  ><code>&lt;div class="flex justify-between items-center"&gt;
+  &lt;div&gt;ロゴ&lt;/div&gt;
+  &lt;div&gt;メニュー&lt;/div&gt;
+  &lt;div&gt;ボタン&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                  <h4 class="font-semibold mb-2 text-sm mt-4">
+                    例: 縦並び中央揃えレイアウト
+                  </h4>
+                  <div
+                    class="flex flex-col items-center justify-center bg-slate-100 p-6 rounded mb-2"
+                    style="min-height: 150px"
+                  >
+                    <div class="bg-primary text-white p-2 text-xs mb-2">
+                      タイトル
+                    </div>
+                    <div class="bg-secondary text-white p-2 text-xs">
+                      コンテンツ
+                    </div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs mb-4"
+                  ><code>&lt;div class="flex flex-col items-center justify-center"&gt;
+  &lt;div&gt;タイトル&lt;/div&gt;
+  &lt;div&gt;コンテンツ&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                  <h4 class="font-semibold mb-2 text-sm mt-4">
+                    例: 間隔のあるカードグリッド
+                  </h4>
+                  <div
+                    class="flex gap-4 flex-wrap bg-slate-100 p-3 rounded mb-2"
+                  >
+                    <div
+                      class="flex-1 bg-primary text-white p-3 text-xs text-center"
+                      style="min-width: 100px"
+                    >
+                      カード 1
+                    </div>
+                    <div
+                      class="flex-1 bg-success text-white p-3 text-xs text-center"
+                      style="min-width: 100px"
+                    >
+                      カード 2
+                    </div>
+                    <div
+                      class="flex-1 bg-warning p-3 text-xs text-center"
+                      style="min-width: 100px"
+                    >
+                      カード 3
+                    </div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs mb-4"
+                  ><code>&lt;div class="flex gap-4 flex-wrap"&gt;
+  &lt;div class="flex-1"&gt;カード 1&lt;/div&gt;
+  &lt;div class="flex-1"&gt;カード 2&lt;/div&gt;
+  &lt;div class="flex-1"&gt;カード 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                  <div class="mt-4 p-3 bg-slate-50 rounded">
+                    <p class="text-xs font-semibold mb-2">Display:</p>
+                    <code class="text-xs block mb-1">.flex, .inline-flex</code>
+
+                    <p class="text-xs font-semibold mb-2 mt-3">
+                      Direction（方向）:
+                    </p>
+                    <code class="text-xs block mb-1"
+                      >.flex-row, .flex-row-reverse, .flex-col,
+                      .flex-col-reverse</code
+                    >
+
+                    <p class="text-xs font-semibold mb-2 mt-3">
+                      Wrap（折り返し）:
+                    </p>
+                    <code class="text-xs block mb-1"
+                      >.flex-wrap, .flex-nowrap, .flex-wrap-reverse</code
+                    >
+
+                    <p class="text-xs font-semibold mb-2 mt-3">
+                      Flexプロパティ:
+                    </p>
+                    <code class="text-xs block mb-1"
+                      >.flex-1, .flex-auto, .flex-initial, .flex-none</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.flex-grow, .flex-grow-0, .flex-shrink,
+                      .flex-shrink-0</code
+                    >
+
+                    <p class="text-xs font-semibold mb-2 mt-3">
+                      Justify Content（主軸）:
+                    </p>
+                    <code class="text-xs block mb-1"
+                      >.justify-start, .justify-end, .justify-center</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.justify-between, .justify-around, .justify-evenly</code
+                    >
+
+                    <p class="text-xs font-semibold mb-2 mt-3">
+                      Align Items（交差軸）:
+                    </p>
+                    <code class="text-xs block mb-1"
+                      >.items-start, .items-end, .items-center, .items-baseline,
+                      .items-stretch</code
+                    >
+
+                    <p class="text-xs font-semibold mb-2 mt-3">
+                      Align Content（複数行）:
+                    </p>
+                    <code class="text-xs block"
+                      >.content-start, .content-end, .content-center,
+                      .content-between, .content-around</code
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- グリッド -->
+              <div class="card glass">
+                <div class="card-header">
+                  <h3 class="font-semibold">グリッド</h3>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-secondary mb-4">
+                    レスポンシブカラムとギャップユーティリティを備えたCSS
+                    Gridシステム。
+                  </p>
+
+                  <h4 class="font-semibold mb-2 text-sm">
+                    例: 3カラムグリッド
+                  </h4>
+                  <div
+                    class="grid grid-cols-3 gap-4 bg-slate-100 p-3 rounded mb-2"
+                  >
+                    <div class="bg-primary text-white p-3 text-xs text-center">
+                      アイテム 1
+                    </div>
+                    <div class="bg-success text-white p-3 text-xs text-center">
+                      アイテム 2
+                    </div>
+                    <div class="bg-warning p-3 text-xs text-center">
+                      アイテム 3
+                    </div>
+                    <div class="bg-info text-white p-3 text-xs text-center">
+                      アイテム 4
+                    </div>
+                    <div class="bg-danger text-white p-3 text-xs text-center">
+                      アイテム 5
+                    </div>
+                    <div
+                      class="bg-secondary text-white p-3 text-xs text-center"
+                    >
+                      アイテム 6
+                    </div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs mb-4"
+                  ><code>&lt;div class="grid grid-cols-3 gap-4"&gt;
+  &lt;div&gt;アイテム 1&lt;/div&gt;
+  &lt;div&gt;アイテム 2&lt;/div&gt;
+  &lt;div&gt;アイテム 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                  <h4 class="font-semibold mb-2 text-sm mt-4">
+                    例: レスポンシブグリッド
+                  </h4>
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 bg-slate-100 p-3 rounded mb-2"
+                  >
+                    <div class="bg-primary text-white p-3 text-xs text-center">
+                      カード 1
+                    </div>
+                    <div class="bg-success text-white p-3 text-xs text-center">
+                      カード 2
+                    </div>
+                    <div class="bg-warning p-3 text-xs text-center">
+                      カード 3
+                    </div>
+                    <div class="bg-info text-white p-3 text-xs text-center">
+                      カード 4
+                    </div>
+                  </div>
+                  <pre
+                    class="bg-slate-100 p-3 rounded text-xs mb-4"
+                  ><code>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"&gt;
+  &lt;div&gt;カード 1&lt;/div&gt;
+  &lt;div&gt;カード 2&lt;/div&gt;
+  &lt;div&gt;カード 3&lt;/div&gt;
+  &lt;div&gt;カード 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  <p class="text-xs text-secondary mb-4">
+                    モバイル: 1カラム、タブレット: 2カラム、デスクトップ:
+                    4カラム
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- レイアウトクラスリファレンス -->
+            <div class="card mt-6">
+              <div class="card-header">
+                <h3 class="font-semibold">クイックリファレンス</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-xs text-secondary mb-4">
+                  よく使うレイアウトクラスのクイックアクセス。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">コンテナ</h4>
+                    <code class="text-xs block"
+                      >.container, .container-fluid</code
+                    >
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">
+                      フレックスボックス（よく使う）
+                    </h4>
+                    <code class="text-xs block mb-1"
+                      >.flex, .flex-row, .flex-col</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.justify-center, .justify-between</code
+                    >
+                    <code class="text-xs block"
+                      >.items-center, .gap-{'{1-12}'}</code
+                    >
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">
+                      グリッド（よく使う）
+                    </h4>
+                    <code class="text-xs block mb-1"
+                      >.grid, .grid-cols-{'{1-12}'}</code
+                    >
+                    <code class="text-xs block"
+                      >.gap-{'{1-12}'}, .md:grid-cols-{'{1-12}'}</code
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -147,454 +898,750 @@
           </div>
           <div class="card-body">
             <p class="text-secondary mb-6">
-              ガラスモーフィズム効果を持つモダンなWebインターフェースの構築ブロック。
+              モダンなガラスモーフィズム効果を持つ完全なUIコンポーネントライブラリ。
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <!-- ボタン -->
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">ボタン</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm text-secondary mb-4">
-                    様々なスタイルとサイズのインタラクティブ要素。
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-4">
-                    <button class="btn btn-primary btn-sm">プライマリー</button>
-                    <button class="btn btn-secondary btn-sm">
-                      セカンダリー
-                    </button>
-                    <button class="btn btn-outline-primary btn-sm">
-                      アウトライン
-                    </button>
-                  </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;button class="btn btn-primary"&gt;プライマリー&lt;/button&gt;</code></pre>
-                </div>
-              </div>
-
-              <!-- カード -->
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">カード</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm text-secondary mb-4">
-                    コンテンツをグループ化するための柔軟なコンテナ。
-                  </p>
-                  <div class="card mb-4">
-                    <div class="card-body">
-                      <p class="text-sm">サンプルカードコンテンツ</p>
-                    </div>
-                  </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="card"&gt;
-  &lt;div class="card-body"&gt;
-    コンテンツ
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-
-              <!-- フォーム -->
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">フォーム</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm text-secondary mb-4">
-                    入力フィールドとフォームコントロール。
-                  </p>
-                  <div class="mb-4">
-                    <input
-                      type="text"
-                      class="form-control mb-2"
-                      placeholder="テキスト入力"
-                    />
-                    <select class="form-control">
-                      <option>オプションを選択</option>
-                    </select>
-                  </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;input type="text" class="form-control"&gt;</code></pre>
-                </div>
-              </div>
-
-              <!-- アラート -->
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">アラート</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm text-secondary mb-4">
-                    ユーザーへの通知メッセージ。
-                  </p>
-                  <div class="alert alert-success mb-2 text-sm">
-                    成功メッセージ
-                  </div>
-                  <div class="alert alert-warning mb-4 text-sm">
-                    警告メッセージ
-                  </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="alert alert-success"&gt;成功&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-
-              <!-- バッジ -->
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">バッジ</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm text-secondary mb-4">
-                    小さなステータス表示とラベル。
-                  </p>
-                  <div class="flex gap-2 mb-4">
-                    <span class="badge badge-primary">新着</span>
-                    <span class="badge badge-success">アクティブ</span>
-                    <span class="badge badge-warning">5</span>
-                  </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;span class="badge badge-primary"&gt;新着&lt;/span&gt;</code></pre>
-                </div>
-              </div>
-
-              <!-- テーブル -->
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">テーブル</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm text-secondary mb-4">
-                    構造化データの表示。
-                  </p>
-                  <table class="table table-sm mb-4">
-                    <thead>
-                      <tr>
-                        <th>名前</th>
-                        <th>ステータス</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>アイテム1</td>
-                        <td>
-                          <span class="badge badge-success">アクティブ</span>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;table class="table"&gt;...&lt;/table&gt;</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- チャートセクション -->
-      <section id="charts" class="mb-16">
-        <div class="card mb-8">
-          <div class="card-header">
-            <h2 class="text-2xl font-bold">チャート</h2>
-          </div>
-          <div class="card-body">
-            <p class="text-secondary mb-6">
-              透明効果を持つ美しいデータ視覚化コンポーネント。
-            </p>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <!-- バーチャート -->
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">バーチャート</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm text-secondary mb-4">
-                    カスタマイズ可能な色で美しいバーチャートを作成。
-                  </p>
-                  <div class="chart chart-sm mb-4">
-                    <div class="bar-chart">
-                      <div
-                        class="bar-chart-item"
-                        data-variant="primary"
-                        data-height="md"
-                      ></div>
-                      <div
-                        class="bar-chart-item"
-                        data-variant="success"
-                        data-height="lg"
-                      ></div>
-                      <div
-                        class="bar-chart-item"
-                        data-variant="warning"
-                        data-height="sm"
-                      ></div>
-                      <div
-                        class="bar-chart-item"
-                        data-variant="primary"
-                        data-height="xl"
-                      ></div>
-                    </div>
-                  </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="chart"&gt;
-  &lt;div class="bar-chart"&gt;
-    &lt;div class="bar-chart-item" data-variant="primary" data-height="md"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-
-              <!-- 折れ線チャート -->
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">折れ線チャート</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm text-secondary mb-4">
-                    グラデーション塗りつぶしのスムーズな折れ線チャート。
-                  </p>
-                  <div class="chart chart-sm mb-4">
-                    <svg class="line-chart-svg" viewBox="0 0 200 100">
-                      <path
-                        d="M 10 80 Q 50 20 100 40 T 190 30"
-                        stroke="var(--color-primary)"
-                        stroke-width="2"
-                        fill="none"
-                        stroke-linecap="round"
-                      />
-                      <circle
-                        cx="10"
-                        cy="80"
-                        r="3"
-                        fill="var(--color-primary)"
-                      />
-                      <circle
-                        cx="100"
-                        cy="40"
-                        r="3"
-                        fill="var(--color-primary)"
-                      />
-                      <circle
-                        cx="190"
-                        cy="30"
-                        r="3"
-                        fill="var(--color-primary)"
-                      />
-                    </svg>
-                  </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="chart"&gt;
-  &lt;svg class="line-chart-svg"&gt;
-    &lt;path d="..." stroke="var(--color-primary)"/&gt;
-  &lt;/svg&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-
-              <!-- ドーナツチャート -->
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">ドーナツチャート</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm text-secondary mb-4">
-                    凡例付きのエレガントなドーナツチャート。
-                  </p>
-                  <div class="donut-chart mb-4">
-                    <svg class="donut-chart-svg" viewBox="0 0 100 100">
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="30"
-                        fill="none"
-                        stroke="var(--border-color)"
-                        stroke-width="10"
-                      ></circle>
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="30"
-                        fill="none"
-                        stroke="var(--color-primary)"
-                        stroke-width="10"
-                        stroke-dasharray="60 188"
-                        stroke-dashoffset="0"
-                      ></circle>
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="30"
-                        fill="none"
-                        stroke="var(--color-success)"
-                        stroke-width="10"
-                        stroke-dasharray="40 188"
-                        stroke-dashoffset="-60"
-                      ></circle>
-                    </svg>
-                  </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="donut-chart"&gt;
-  &lt;svg class="donut-chart-svg"&gt;
-    &lt;circle cx="50" cy="50" r="30"/&gt;
-  &lt;/svg&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-            </div>
-
-            <!-- 詳細なチャート例 -->
-            <div class="card mt-8 glass">
+            <!-- ボタン -->
+            <div class="card mb-6 glass">
               <div class="card-header">
-                <h3 class="font-semibold">完全なチャート例</h3>
+                <h3 class="font-semibold text-lg">ボタン</h3>
               </div>
               <div class="card-body">
-                <div class="chart mb-6">
-                  <div class="chart-header">
-                    <h4 class="chart-title">月次売上</h4>
-                    <p class="chart-description">過去6ヶ月の売上成長</p>
+                <p class="text-sm text-secondary mb-4">
+                  複数のバリアント、サイズ、状態を持つインタラクティブボタン。
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">バリアント</h4>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <button class="btn btn-primary btn-sm">Primary</button>
+                  <button class="btn btn-secondary btn-sm">Secondary</button>
+                  <button class="btn btn-success btn-sm">Success</button>
+                  <button class="btn btn-danger btn-sm">Danger</button>
+                  <button class="btn btn-warning btn-sm">Warning</button>
+                  <button class="btn btn-info btn-sm">Info</button>
+                  <button class="btn btn-light btn-sm">Light</button>
+                  <button class="btn btn-dark btn-sm">Dark</button>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">
+                  アウトラインバリアント
+                </h4>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <button class="btn btn-outline-primary btn-sm">
+                    Outline Primary
+                  </button>
+                  <button class="btn btn-outline-secondary btn-sm">
+                    Outline Secondary
+                  </button>
+                  <button class="btn btn-link btn-sm">Link</button>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">サイズ</h4>
+                <div class="flex flex-wrap items-center gap-2 mb-4">
+                  <button class="btn btn-primary btn-sm">小</button>
+                  <button class="btn btn-primary">通常</button>
+                  <button class="btn btn-primary btn-lg">大</button>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">状態</h4>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <button class="btn btn-primary btn-sm" disabled>無効</button>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.btn, .btn-{'{variant}'} (primary, secondary, success,
+                    danger, warning, info, light, dark)</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.btn-outline-{'{variant}'}, .btn-link</code
+                  >
+                  <code class="text-xs block">.btn-sm, .btn-lg</code>
+                </div>
+              </div>
+            </div>
+
+            <!-- フォーム -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">フォーム</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  バリデーション状態を持つ包括的なフォームコントロール。
+                </p>
+
+                <h4 class="font-semibold mb-3 text-sm">テキスト入力</h4>
+                <div class="form-group mb-4">
+                  <label class="form-label">通常の入力</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="テキストを入力"
+                  />
+                </div>
+                <div class="form-group mb-4">
+                  <label class="form-label">無効な入力</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="無効"
+                    disabled
+                  />
+                </div>
+
+                <h4 class="font-semibold mb-3 text-sm mt-4">
+                  セレクト & テキストエリア
+                </h4>
+                <div class="form-group mb-4">
+                  <label class="form-label">セレクトドロップダウン</label>
+                  <select class="form-control">
+                    <option>オプションを選択</option>
+                    <option>オプション 1</option>
+                    <option>オプション 2</option>
+                  </select>
+                </div>
+                <div class="form-group mb-4">
+                  <label class="form-label">テキストエリア</label>
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    placeholder="メッセージを入力"
+                  ></textarea>
+                </div>
+
+                <h4 class="font-semibold mb-3 text-sm mt-4">
+                  チェックボックス & ラジオ
+                </h4>
+                <div class="form-check mb-2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check1-ja"
+                    checked
+                  />
+                  <label class="form-check-label" for="check1-ja"
+                    >チェック済みチェックボックス</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check2-ja"
+                  />
+                  <label class="form-check-label" for="check2-ja"
+                    >未チェックチェックボックス</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check3-ja"
+                    disabled
+                  />
+                  <label class="form-check-label" for="check3-ja"
+                    >無効チェックボックス</label
+                  >
+                </div>
+
+                <div class="mt-4">
+                  <div class="form-check mb-2">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="radio1-ja"
+                      name="radioGroupJa"
+                      checked
+                    />
+                    <label class="form-check-label" for="radio1-ja"
+                      >選択済みラジオ</label
+                    >
                   </div>
-                  <div class="chart-content">
-                    <div class="bar-chart">
-                      <div
-                        class="bar-chart-item"
-                        data-variant="primary"
-                        data-height="sm"
-                      >
-                        <div class="bar-chart-label">1月</div>
-                      </div>
-                      <div
-                        class="bar-chart-item"
-                        data-variant="primary"
-                        data-height="md"
-                      >
-                        <div class="bar-chart-label">2月</div>
-                      </div>
-                      <div
-                        class="bar-chart-item"
-                        data-variant="success"
-                        data-height="lg"
-                      >
-                        <div class="bar-chart-label">3月</div>
-                      </div>
-                      <div
-                        class="bar-chart-item"
-                        data-variant="primary"
-                        data-height="xl"
-                      >
-                        <div class="bar-chart-label">4月</div>
-                      </div>
-                      <div
-                        class="bar-chart-item"
-                        data-variant="success"
-                        data-height="lg"
-                      >
-                        <div class="bar-chart-label">5月</div>
-                      </div>
-                      <div
-                        class="bar-chart-item"
-                        data-variant="primary"
-                        data-height="md"
-                      >
-                        <div class="bar-chart-label">6月</div>
-                      </div>
+                  <div class="form-check mb-2">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="radio2-ja"
+                      name="radioGroupJa"
+                    />
+                    <label class="form-check-label" for="radio2-ja"
+                      >未選択ラジオ</label
+                    >
+                  </div>
+                </div>
+
+                <h4 class="font-semibold mb-3 text-sm mt-4">
+                  バリデーション状態
+                </h4>
+                <div class="form-group mb-4">
+                  <label class="form-label">有効な入力</label>
+                  <input
+                    type="text"
+                    class="form-control is-valid"
+                    value="検証済み入力"
+                  />
+                </div>
+                <div class="form-group mb-4">
+                  <label class="form-label">無効な入力</label>
+                  <input
+                    type="text"
+                    class="form-control is-invalid"
+                    value="エラー入力"
+                  />
+                  <div class="invalid-feedback">このフィールドは必須です。</div>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.form-group, .form-label, .form-control</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.form-check, .form-check-input, .form-check-label</code
+                  >
+                  <code class="text-xs block"
+                    >.is-valid, .is-invalid, .invalid-feedback</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- カード -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">カード</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  ガラスモーフィズム効果を持つ柔軟なコンテナ。
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="font-semibold text-sm">ヘッダー付きカード</h4>
+                    </div>
+                    <div class="card-body">
+                      <p class="text-sm">
+                        ヘッダーセクション付きのカードコンテンツ。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="font-semibold text-sm mb-2">シンプルカード</h4>
+                      <p class="text-sm">ボディのみのカード、ヘッダーなし。</p>
+                    </div>
+                    <div class="card-footer">
+                      <p class="text-xs text-secondary">フッターセクション</p>
                     </div>
                   </div>
                 </div>
 
-                <pre
-                  class="bg-slate-100 p-4 rounded"
-                ><code>&lt;div class="chart"&gt;
-  &lt;div class="chart-header"&gt;
-    &lt;h4 class="chart-title"&gt;月次売上&lt;/h4&gt;
-    &lt;p class="chart-description"&gt;過去6ヶ月の売上成長&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="chart-content"&gt;
-    &lt;div class="bar-chart"&gt;
-      &lt;div class="bar-chart-item" data-variant="primary" data-height="sm"&gt;
-        &lt;div class="bar-chart-label"&gt;1月&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;!-- その他のバー... --&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ガラスモーフィズムセクション -->
-      <section id="glass-morphism" class="mb-16">
-        <div class="card mb-8">
-          <div class="card-header">
-            <h2 class="text-2xl font-bold">ガラスモーフィズム</h2>
-          </div>
-          <div class="card-body">
-            <p class="text-secondary mb-6">
-              バックドロップブラーで美しい透明効果を作成。
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div class="card glass">
-                <div class="card-header">
-                  <h3 class="font-semibold">ガラス効果</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm mb-4">
-                    バックドロップブラーを持つ標準的なガラスモーフィズム効果。
-                  </p>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="glass"&gt;コンテンツ&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-
-              <div class="card glass-light">
-                <div class="card-header">
-                  <h3 class="font-semibold">ライトガラス</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm mb-4">
-                    微細な透明感のためのライトガラス効果。
-                  </p>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="glass-light"&gt;コンテンツ&lt;/div&gt;</code></pre>
-                </div>
-              </div>
-
-              <div class="card glass-heavy">
-                <div class="card-header">
-                  <h3 class="font-semibold">ヘビーガラス</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm mb-4">
-                    より多くの不透明度を持つヘビーガラス効果。
-                  </p>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="glass-heavy"&gt;コンテンツ&lt;/div&gt;</code></pre>
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block"
+                    >.card, .card-header, .card-body, .card-footer</code
+                  >
                 </div>
               </div>
             </div>
 
-            <div class="alert alert-info mt-6">
-              <strong>利用可能なガラスクラス:</strong>
-              <code>.glass</code>, <code>.glass-light</code>,
-              <code>.glass-heavy</code>, <code>.backdrop-blur</code>
+            <!-- アラート -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">アラート</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  ユーザーアクションのためのコンテキストフィードバックメッセージ。
+                </p>
+
+                <div class="alert alert-primary mb-2">
+                  <strong>Primary</strong> - 一般的な情報メッセージ
+                </div>
+                <div class="alert alert-secondary mb-2">
+                  <strong>Secondary</strong> - セカンダリ情報メッセージ
+                </div>
+                <div class="alert alert-success mb-2">
+                  <strong>成功!</strong> - アクションが正常に完了しました
+                </div>
+                <div class="alert alert-danger mb-2">
+                  <strong>危険!</strong> - エラーまたは重要なメッセージ
+                </div>
+                <div class="alert alert-warning mb-2">
+                  <strong>警告!</strong> - 注意が必要です
+                </div>
+                <div class="alert alert-info mb-4">
+                  <strong>情報</strong> - 情報メッセージ
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block"
+                    >.alert, .alert-{'{variant}'} (primary, secondary, success,
+                    danger, warning, info)</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- バッジ -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">バッジ</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  小さなステータスインジケーターとカウントラベル。
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="badge badge-primary">Primary</span>
+                  <span class="badge badge-secondary">Secondary</span>
+                  <span class="badge badge-success">Success</span>
+                  <span class="badge badge-danger">Danger</span>
+                  <span class="badge badge-warning">Warning</span>
+                  <span class="badge badge-info">Info</span>
+                  <span class="badge badge-light">Light</span>
+                  <span class="badge badge-dark">Dark</span>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">使用例</h4>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="badge badge-primary">新着</span>
+                  <span class="badge badge-success">アクティブ</span>
+                  <span class="badge badge-danger">5</span>
+                  <span class="badge badge-warning">99+</span>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block"
+                    >.badge, .badge-{'{variant}'} (primary, secondary, success,
+                    danger, warning, info, light, dark)</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- テーブル -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">テーブル</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  様々なスタイルを持つ構造化データ表示。
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">基本テーブル</h4>
+                <table class="table mb-4">
+                  <thead>
+                    <tr>
+                      <th>名前</th>
+                      <th>メール</th>
+                      <th>ステータス</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>田中太郎</td>
+                      <td>tanaka@example.com</td>
+                      <td>
+                        <span class="badge badge-success">アクティブ</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>佐藤花子</td>
+                      <td>sato@example.com</td>
+                      <td><span class="badge badge-warning">保留中</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">
+                  テーブルバリエーション
+                </h4>
+                <table
+                  class="table table-sm table-bordered table-striped table-hover mb-4"
+                >
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>アイテム</th>
+                      <th>価格</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>商品 A</td>
+                      <td>¥1,999</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>商品 B</td>
+                      <td>¥2,999</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1">.table - 基本テーブル</code>
+                  <code class="text-xs block mb-1"
+                    >.table-sm - コンパクトテーブル</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.table-bordered - ボーダー付きテーブル</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.table-striped - ストライプ行</code
+                  >
+                  <code class="text-xs block">.table-hover - ホバー効果</code>
+                </div>
+              </div>
+            </div>
+
+            <!-- チャート -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">チャート</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-6">
+                  バーチャート、折れ線チャート、ドーナツチャートを含むデータ可視化コンポーネント。
+                </p>
+
+                <h4 class="font-semibold mb-3 text-sm">バーチャート</h4>
+                <div class="bar-chart mb-6" style="height: 120px">
+                  <div
+                    class="bar-chart-item"
+                    data-variant="primary"
+                    data-height="md"
+                  ></div>
+                  <div
+                    class="bar-chart-item"
+                    data-variant="success"
+                    data-height="xl"
+                  ></div>
+                  <div
+                    class="bar-chart-item"
+                    data-variant="warning"
+                    data-height="sm"
+                  ></div>
+                  <div
+                    class="bar-chart-item"
+                    data-variant="danger"
+                    data-height="lg"
+                  ></div>
+                  <div
+                    class="bar-chart-item"
+                    data-variant="info"
+                    data-height="md"
+                  ></div>
+                </div>
+
+                <h4 class="font-semibold mb-3 text-sm">折れ線チャート</h4>
+                <div class="line-chart mb-6">
+                  <svg
+                    class="line-chart-svg"
+                    viewBox="0 0 400 150"
+                    preserveAspectRatio="none"
+                  >
+                    <polyline
+                      class="line-chart-path"
+                      data-variant="success"
+                      points="0,100 100,40 200,80 300,20 400,60"
+                    />
+                  </svg>
+                </div>
+
+                <h4 class="font-semibold mb-3 text-sm">ドーナツチャート</h4>
+                <div class="donut-chart mb-6">
+                  <svg class="donut-chart-svg" viewBox="0 0 200 200">
+                    <circle
+                      class="donut-chart-segment"
+                      data-variant="primary"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                      fill="none"
+                      stroke-width="40"
+                      stroke-dasharray="251.2 251.2"
+                      transform="rotate(-90 100 100)"
+                    />
+                    <circle
+                      class="donut-chart-segment"
+                      data-variant="success"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                      fill="none"
+                      stroke-width="40"
+                      stroke-dasharray="125.6 376.8"
+                      stroke-dashoffset="-251.2"
+                      transform="rotate(-90 100 100)"
+                    />
+                    <circle
+                      class="donut-chart-segment"
+                      data-variant="warning"
+                      cx="100"
+                      cy="100"
+                      r="80"
+                      fill="none"
+                      stroke-width="40"
+                      stroke-dasharray="62.8 439.6"
+                      stroke-dashoffset="-376.8"
+                      transform="rotate(-90 100 100)"
+                    />
+                  </svg>
+                  <div class="chart-legend">
+                    <div class="chart-legend-item">
+                      <div
+                        class="chart-legend-color"
+                        data-variant="primary"
+                      ></div>
+                      <span class="chart-legend-label">Primary</span>
+                      <span class="chart-legend-value">50%</span>
+                    </div>
+                    <div class="chart-legend-item">
+                      <div
+                        class="chart-legend-color"
+                        data-variant="success"
+                      ></div>
+                      <span class="chart-legend-label">Success</span>
+                      <span class="chart-legend-value">25%</span>
+                    </div>
+                    <div class="chart-legend-item">
+                      <div
+                        class="chart-legend-color"
+                        data-variant="warning"
+                      ></div>
+                      <span class="chart-legend-label">Warning</span>
+                      <span class="chart-legend-value">25%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.chart, .chart-sm, .chart-lg - チャートコンテナ</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.bar-chart, .bar-chart-item - バーチャート</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.line-chart, .line-chart-svg, .line-chart-path -
+                    折れ線チャート</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.donut-chart, .donut-chart-svg, .donut-chart-segment -
+                    ドーナツチャート</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.chart-legend, .chart-legend-item - チャート凡例</code
+                  >
+                  <code class="text-xs block"
+                    >data-variant="{'{variant}'}" (primary, success, warning,
+                    danger, info)</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- ナビバー -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">ナビバー</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  モバイルハンバーガーメニューをサポートするレスポンシブナビゲーションバー。
+                </p>
+
+                <div class="mb-4">
+                  <nav class="navbar">
+                    <a class="navbar-brand">ブランド</a>
+                    <ul class="navbar-nav">
+                      <li><a class="navbar-item active">ホーム</a></li>
+                      <li><a class="navbar-item">会社概要</a></li>
+                      <li><a class="navbar-item">サービス</a></li>
+                      <li><a class="navbar-item">お問い合わせ</a></li>
+                    </ul>
+                  </nav>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.navbar - ナビゲーションコンテナ</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.navbar-brand - ブランド/ロゴセクション</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.navbar-nav - ナビゲーションリスト</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.navbar-item - ナビゲーションリンク</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.navbar-toggle-checkbox, .navbar-toggle-label -
+                    モバイルメニュートグル</code
+                  >
+                  <code class="text-xs block">.active - アクティブ状態</code>
+                </div>
+              </div>
+            </div>
+
+            <!-- アコーディオン -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">アコーディオン</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  スムーズなアニメーション付きのCSS
+                  のみで実装された折りたたみコンテンツパネル。
+                </p>
+
+                <div class="accordion mb-4">
+                  <div class="accordion-item">
+                    <input
+                      type="checkbox"
+                      class="accordion-toggle"
+                      id="acc1-ja"
+                    />
+                    <label class="accordion-label" for="acc1-ja"
+                      >第1セクション</label
+                    >
+                    <div class="accordion-content">
+                      <p class="text-sm">
+                        これは第1セクションのコンテンツです。スムーズに展開・折りたたみされます。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <input
+                      type="checkbox"
+                      class="accordion-toggle"
+                      id="acc2-ja"
+                    />
+                    <label class="accordion-label" for="acc2-ja"
+                      >第2セクション</label
+                    >
+                    <div class="accordion-content">
+                      <p class="text-sm">
+                        これは第2セクションのコンテンツで、より詳細な情報が含まれています。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <input
+                      type="checkbox"
+                      class="accordion-toggle"
+                      id="acc3-ja"
+                    />
+                    <label class="accordion-label" for="acc3-ja"
+                      >第3セクション</label
+                    >
+                    <div class="accordion-content">
+                      <p class="text-sm">
+                        これは第3セクションのコンテンツです。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.accordion - アコーディオンコンテナ</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.accordion-item - 個別アコーディオンアイテム</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.accordion-toggle - トグル用の非表示チェックボックス</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.accordion-label - クリック可能なヘッダー</code
+                  >
+                  <code class="text-xs block"
+                    >.accordion-content - 折りたたみ可能なコンテンツ</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- コード -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">コード</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  シンタックスハイライトをサポートするコードブロック表示。
+                </p>
+
+                <div class="code-preview mb-4">
+                  <pre><code>function example() {
+  const message = "こんにちは、世界!";
+  console.log(message);
+  return true;
+}</code></pre>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block"
+                    >.code-preview - コードブロックコンテナ</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- ショーケース & スウォッチ -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">ショーケース & スウォッチ</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  デモ表示とカラーサンプル用のユーティリティコンポーネント。
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">ショーケース</h4>
+                <div class="showcase mb-4">
+                  <p class="text-sm">
+                    コンポーネントの例とデモを表示するためのショーケースコンテナです。
+                  </p>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">スウォッチ</h4>
+                <div class="flex gap-2 mb-4">
+                  <div class="swatch bg-primary">#3B82F6</div>
+                  <div class="swatch bg-success">#10B981</div>
+                  <div class="swatch bg-danger">#EF4444</div>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.showcase - デモ表示コンテナ</code
+                  >
+                  <code class="text-xs block"
+                    >.swatch - カラーサンプル表示 (100x100px)</code
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -604,139 +1651,567 @@
       <section id="utilities" class="mb-16">
         <div class="card mb-8">
           <div class="card-header">
-            <h2 class="text-2xl font-bold">ユーティリティクラス</h2>
+            <h2 class="text-2xl font-bold">ユーティリティ</h2>
           </div>
           <div class="card-body">
             <p class="text-secondary mb-6">
-              高速開発のためのクイックスタイリングユーティリティ。
+              迅速なスタイリングとカスタマイズのための包括的なユーティリティクラス。
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <!-- スペーシング -->
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="font-semibold">スペーシング</h3>
-                </div>
-                <div class="card-body">
-                  <div class="mb-4">
-                    <div class="p-2 bg-slate-100 mb-2">p-2: パディング</div>
-                    <div class="m-2 bg-slate-200">m-2: マージン</div>
+            <!-- スペーシング -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">スペーシング</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  マージンとパディングユーティリティ。値: 0, 1, 2, 3, 4, 5, 6,
+                  8, 10, 12, 16, 20, 24, 32
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">マージン</h4>
+                    <code class="text-xs block mb-1"
+                      >.m-{'{0-32}'} - 全方向</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.mx-{'{0-32}'}, .mx-auto - 水平</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.my-{'{0-32}'}, .my-auto - 垂直</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.mt-{'{0-32}'}, .mt-auto - 上</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.mr-{'{0-32}'}, .mr-auto - 右</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.mb-{'{0-32}'}, .mb-auto - 下</code
+                    >
+                    <code class="text-xs block"
+                      >.ml-{'{0-32}'}, .ml-auto - 左</code
+                    >
                   </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="p-4 m-2"&gt;スペース&lt;/div&gt;</code></pre>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">パディング</h4>
+                    <code class="text-xs block mb-1"
+                      >.p-{'{0-32}'} - 全方向</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.px-{'{0-32}'} - 水平</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.py-{'{0-32}'} - 垂直</code
+                    >
+                    <code class="text-xs block mb-1">.pt-{'{0-32}'} - 上</code>
+                    <code class="text-xs block mb-1">.pr-{'{0-32}'} - 右</code>
+                    <code class="text-xs block mb-1">.pb-{'{0-32}'} - 下</code>
+                    <code class="text-xs block">.pl-{'{0-32}'} - 左</code>
+                  </div>
+                </div>
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs text-secondary mb-2">
+                    スペーシングスケール（rem単位）:
+                  </p>
+                  <code class="text-xs"
+                    >0: 0 | 1: 0.25 | 2: 0.5 | 3: 0.75 | 4: 1 | 5: 1.25 | 6: 1.5
+                    | 8: 2 | 10: 2.5 | 12: 3 | 16: 4 | 20: 5 | 24: 6 | 32:
+                    8</code
+                  >
                 </div>
               </div>
+            </div>
 
-              <!-- カラー -->
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="font-semibold">カラー</h3>
+            <!-- カラー -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">カラー</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  完全なスレートスケールを持つ背景とテキストカラーユーティリティ。
+                </p>
+
+                <!-- セマンティックカラー -->
+                <h4 class="font-semibold mb-3 text-sm">セマンティックカラー</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                  <div class="text-center">
+                    <div
+                      class="bg-primary h-20 rounded mb-2 flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs font-semibold"
+                        >Primary</span
+                      >
+                    </div>
+                    <code class="text-xs">.bg-primary</code>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-secondary h-20 rounded mb-2 flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs font-semibold"
+                        >Secondary</span
+                      >
+                    </div>
+                    <code class="text-xs">.bg-secondary</code>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-success h-20 rounded mb-2 flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs font-semibold"
+                        >Success</span
+                      >
+                    </div>
+                    <code class="text-xs">.bg-success</code>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-danger h-20 rounded mb-2 flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs font-semibold"
+                        >Danger</span
+                      >
+                    </div>
+                    <code class="text-xs">.bg-danger</code>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-warning h-20 rounded mb-2 flex items-center justify-center"
+                    >
+                      <span class="text-slate-900 text-xs font-semibold"
+                        >Warning</span
+                      >
+                    </div>
+                    <code class="text-xs">.bg-warning</code>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-info h-20 rounded mb-2 flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs font-semibold">Info</span>
+                    </div>
+                    <code class="text-xs">.bg-info</code>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-light h-20 rounded mb-2 border flex items-center justify-center"
+                    >
+                      <span class="text-slate-900 text-xs font-semibold"
+                        >Light</span
+                      >
+                    </div>
+                    <code class="text-xs">.bg-light</code>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="bg-dark h-20 rounded mb-2 flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs font-semibold">Dark</span>
+                    </div>
+                    <code class="text-xs">.bg-dark</code>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <div class="grid grid-cols-3 gap-1 mb-4">
-                    <div class="bg-primary p-2 text-xs text-center text-white">
-                      primary
+
+                <!-- スレートスケール -->
+                <h4 class="font-semibold mb-3 text-sm">
+                  スレートスケール (.bg-slate-{'{50-950}'})
+                </h4>
+                <div class="grid grid-cols-1 gap-2 mb-6">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-50 h-10 w-20 rounded border flex items-center justify-center"
+                    >
+                      <span class="text-slate-900 text-xs">50</span>
                     </div>
-                    <div class="bg-success p-2 text-xs text-center text-white">
-                      success
+                    <code class="text-xs flex-1">.bg-slate-50</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-100 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-slate-900 text-xs">100</span>
                     </div>
-                    <div class="bg-warning p-2 text-xs text-center">
-                      warning
+                    <code class="text-xs flex-1">.bg-slate-100</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-200 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-slate-900 text-xs">200</span>
+                    </div>
+                    <code class="text-xs flex-1">.bg-slate-200</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-300 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-slate-900 text-xs">300</span>
+                    </div>
+                    <code class="text-xs flex-1">.bg-slate-300</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-400 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs">400</span>
+                    </div>
+                    <code class="text-xs flex-1">.bg-slate-400</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-500 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs">500</span>
+                    </div>
+                    <code class="text-xs flex-1">.bg-slate-500</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-600 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs">600</span>
+                    </div>
+                    <code class="text-xs flex-1">.bg-slate-600</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-700 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs">700</span>
+                    </div>
+                    <code class="text-xs flex-1">.bg-slate-700</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-800 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs">800</span>
+                    </div>
+                    <code class="text-xs flex-1">.bg-slate-800</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-900 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs">900</span>
+                    </div>
+                    <code class="text-xs flex-1">.bg-slate-900</code>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="bg-slate-950 h-10 w-20 rounded flex items-center justify-center"
+                    >
+                      <span class="text-white text-xs">950</span>
+                    </div>
+                    <code class="text-xs flex-1">.bg-slate-950</code>
+                  </div>
+                </div>
+
+                <!-- テキストカラー -->
+                <h4 class="font-semibold mb-3 text-sm">テキストカラー</h4>
+                <div class="p-4 bg-slate-50 rounded">
+                  <p class="text-primary mb-2">
+                    .text-primary - プライマリテキストカラー
+                  </p>
+                  <p class="text-secondary mb-2">
+                    .text-secondary - セカンダリテキストカラー
+                  </p>
+                  <p class="text-disabled mb-2">
+                    .text-disabled - 無効テキストカラー
+                  </p>
+                  <p class="text-success mb-2">.text-success - 成功カラー</p>
+                  <p class="text-danger mb-2">.text-danger - 危険カラー</p>
+                  <p class="text-warning mb-2">.text-warning - 警告カラー</p>
+                  <p class="text-info">.text-info - 情報カラー</p>
+                </div>
+
+                <!-- クラスリファレンス -->
+                <div class="mt-6 p-4 bg-slate-50 rounded">
+                  <h4 class="font-semibold mb-2 text-sm">利用可能な全クラス</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div>
+                      <p class="text-xs font-semibold mb-1">背景:</p>
+                      <code class="text-xs"
+                        >.bg-body, .bg-surface, .bg-card, .bg-elevated</code
+                      >
+                      <code class="text-xs block"
+                        >.bg-primary, .bg-secondary, .bg-success, .bg-danger,
+                        .bg-warning, .bg-info</code
+                      >
+                      <code class="text-xs block">.bg-light, .bg-dark</code>
+                      <code class="text-xs block">.bg-slate-{'{50-950}'}</code>
+                    </div>
+                    <div>
+                      <p class="text-xs font-semibold mb-1">テキスト:</p>
+                      <code class="text-xs block"
+                        >.text-primary, .text-secondary, .text-disabled</code
+                      >
+                      <code class="text-xs block"
+                        >.text-primary-color, .text-secondary-color</code
+                      >
+                      <code class="text-xs block"
+                        >.text-success, .text-danger, .text-warning,
+                        .text-info</code
+                      >
+                      <code class="text-xs block"
+                        >.text-slate-{'{50-950}'}</code
+                      >
                     </div>
                   </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="bg-primary text-white"&gt;カラー&lt;/div&gt;</code></pre>
                 </div>
               </div>
+            </div>
 
-              <!-- タイポグラフィ -->
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="font-semibold">タイポグラフィ</h3>
-                </div>
-                <div class="card-body">
-                  <div class="mb-4">
-                    <p class="text-xs">text-xs: 極小テキスト</p>
-                    <p class="text-sm">text-sm: 小テキスト</p>
-                    <p class="text-base">text-base: 通常テキスト</p>
-                    <p class="text-lg">text-lg: 大テキスト</p>
+            <!-- タイポグラフィ -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">タイポグラフィ</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  サイズ、ウェイト、配置、行高を含む完全なタイポグラフィシステム。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">フォントサイズ</h4>
+                    <code class="text-xs block mb-1">.text-xs (0.75rem)</code>
+                    <code class="text-xs block mb-1">.text-sm (0.875rem)</code>
+                    <code class="text-xs block mb-1">.text-base (1rem)</code>
+                    <code class="text-xs block mb-1">.text-lg (1.125rem)</code>
+                    <code class="text-xs block mb-1">.text-xl (1.25rem)</code>
+                    <code class="text-xs block mb-1">.text-2xl (1.5rem)</code>
+                    <code class="text-xs block mb-1">.text-3xl (1.875rem)</code>
+                    <code class="text-xs block mb-1">.text-4xl (2.25rem)</code>
+                    <code class="text-xs block">.text-5xl (3rem)</code>
                   </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;p class="text-lg font-bold"&gt;テキスト&lt;/p&gt;</code></pre>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">
+                      フォントウェイト & 配置
+                    </h4>
+                    <code class="text-xs block mb-1">.font-light (300)</code>
+                    <code class="text-xs block mb-1">.font-normal (400)</code>
+                    <code class="text-xs block mb-1">.font-medium (500)</code>
+                    <code class="text-xs block mb-1">.font-semibold (600)</code>
+                    <code class="text-xs block mb-1">.font-bold (700)</code>
+                    <code class="text-xs block mb-2">&nbsp;</code>
+                    <code class="text-xs block"
+                      >.text-left, .text-center, .text-right,
+                      .text-justify</code
+                    >
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <h4 class="font-semibold mb-2 text-sm">行高</h4>
+                  <code class="text-xs"
+                    >.leading-none (1) | .leading-tight (1.25) | .leading-snug
+                    (1.375) | .leading-normal (1.5) | .leading-relaxed (1.625) |
+                    .leading-loose (2)</code
+                  >
                 </div>
               </div>
+            </div>
 
-              <!-- レイアウト -->
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="font-semibold">レイアウト</h3>
-                </div>
-                <div class="card-body">
-                  <div class="flex justify-between mb-2">
-                    <div class="bg-slate-200 p-1 text-xs">左</div>
-                    <div class="bg-slate-300 p-1 text-xs">右</div>
+            <!-- ボーダー -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">ボーダー</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  ボーダーとborder-radiusユーティリティ。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">ボーダー方向</h4>
+                    <code class="text-xs block mb-1">.border - 全方向</code>
+                    <code class="text-xs block mb-1"
+                      >.border-0 - ボーダーなし</code
+                    >
+                    <code class="text-xs block mb-1">.border-t - 上</code>
+                    <code class="text-xs block mb-1">.border-r - 右</code>
+                    <code class="text-xs block mb-1">.border-b - 下</code>
+                    <code class="text-xs block">.border-l - 左</code>
                   </div>
-                  <div class="grid grid-cols-3 gap-1 mb-4">
-                    <div class="bg-slate-200 p-1 text-xs text-center">1</div>
-                    <div class="bg-slate-300 p-1 text-xs text-center">2</div>
-                    <div class="bg-slate-400 p-1 text-xs text-center">3</div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">角丸</h4>
+                    <code class="text-xs block mb-1">.rounded-none (0)</code>
+                    <code class="text-xs block mb-1"
+                      >.rounded-sm (0.375rem)</code
+                    >
+                    <code class="text-xs block mb-1">.rounded (0.5rem)</code>
+                    <code class="text-xs block mb-1"
+                      >.rounded-lg (0.75rem)</code
+                    >
+                    <code class="text-xs block mb-1">.rounded-xl (1rem)</code>
+                    <code class="text-xs block">.rounded-full (9999px)</code>
                   </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="flex justify-between"&gt;レイアウト&lt;/div&gt;</code></pre>
                 </div>
               </div>
+            </div>
 
-              <!-- ボーダー -->
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="font-semibold">ボーダー</h3>
-                </div>
-                <div class="card-body">
-                  <div class="grid grid-cols-2 gap-2 mb-4">
-                    <div class="border p-2 text-xs text-center">border</div>
-                    <div class="border rounded p-2 text-xs text-center">
-                      rounded
-                    </div>
-                    <div class="border rounded-lg p-2 text-xs text-center">
-                      rounded-lg
-                    </div>
-                    <div class="border rounded-full p-2 text-xs text-center">
-                      rounded-full
-                    </div>
+            <!-- エフェクト -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">エフェクト</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  深度とエレベーションのためのシャドウユーティリティ。
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-3">
+                  <div
+                    class="shadow-none p-3 bg-white border text-xs text-center"
+                  >
+                    shadow-none
                   </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="border rounded"&gt;ボーダー&lt;/div&gt;</code></pre>
+                  <div class="shadow-sm p-3 bg-white text-xs text-center">
+                    shadow-sm
+                  </div>
+                  <div class="shadow p-3 bg-white text-xs text-center">
+                    shadow
+                  </div>
+                  <div class="shadow-md p-3 bg-white text-xs text-center">
+                    shadow-md
+                  </div>
+                  <div class="shadow-lg p-3 bg-white text-xs text-center">
+                    shadow-lg
+                  </div>
+                  <div class="shadow-xl p-3 bg-white text-xs text-center">
+                    shadow-xl
+                  </div>
+                </div>
+                <code class="text-xs"
+                  >.shadow-none, .shadow-sm, .shadow, .shadow-md, .shadow-lg,
+                  .shadow-xl</code
+                >
+              </div>
+            </div>
+
+            <!-- ガラスモーフィズム -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">ガラスモーフィズム</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  透明度とバックドロップブラー効果を持つ完全なガラスモーフィズムシステム。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">ガラススタイル</h4>
+                    <code class="text-xs block mb-1"
+                      >.glass - 標準ガラス (ブラー: 8px)</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.glass-light - ライトガラス (ブラー: 12px)</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.glass-heavy - ヘビーガラス (ブラー: 16px)</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.frosted - グラデーション付きフロストガラス</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.shadow-glass - ガラスシャドウ効果</code
+                    >
+                    <code class="text-xs block"
+                      >.shadow-elevated - エレベーションシャドウ</code
+                    >
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">
+                      バックドロップブラー
+                    </h4>
+                    <code class="text-xs block mb-1">.backdrop-blur-none</code>
+                    <code class="text-xs block mb-1"
+                      >.backdrop-blur-sm (4px)</code
+                    >
+                    <code class="text-xs block mb-1">.backdrop-blur (8px)</code>
+                    <code class="text-xs block mb-1"
+                      >.backdrop-blur-md (12px)</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.backdrop-blur-lg (16px)</code
+                    >
+                    <code class="text-xs block">.backdrop-blur-xl (24px)</code>
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+                  <div class="glass p-4 text-xs">glass</div>
+                  <div class="glass-light p-4 text-xs">glass-light</div>
+                  <div class="glass-heavy p-4 text-xs">glass-heavy</div>
                 </div>
               </div>
+            </div>
 
-              <!-- エフェクト -->
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="font-semibold">エフェクト</h3>
-                </div>
-                <div class="card-body">
-                  <div class="grid grid-cols-2 gap-2 mb-4">
-                    <div class="shadow-sm p-2 text-xs text-center bg-white">
-                      shadow-sm
-                    </div>
-                    <div class="shadow p-2 text-xs text-center bg-white">
-                      shadow
-                    </div>
-                    <div class="shadow-md p-2 text-xs text-center bg-white">
-                      shadow-md
-                    </div>
-                    <div class="shadow-lg p-2 text-xs text-center bg-white">
-                      shadow-lg
-                    </div>
+            <!-- ディスプレイ -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">ディスプレイ & サイズ</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  ディスプレイプロパティ、幅、高さ、オーバーフローユーティリティ。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">ディスプレイ</h4>
+                    <code class="text-xs block mb-1"
+                      >.block, .inline-block, .inline, .hidden</code
+                    >
+                    <h4 class="font-semibold mb-2 mt-3 text-sm">幅</h4>
+                    <code class="text-xs block mb-1">.w-full, .w-auto</code>
+                    <code class="text-xs block"
+                      >.w-1/2, .w-1/3, .w-2/3, .w-1/4, .w-3/4</code
+                    >
                   </div>
-                  <pre
-                    class="bg-slate-100 p-3 rounded text-xs"
-                  ><code>&lt;div class="shadow-lg"&gt;シャドウ&lt;/div&gt;</code></pre>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">高さ</h4>
+                    <code class="text-xs block mb-1"
+                      >.h-full, .h-auto, .h-screen</code
+                    >
+                    <h4 class="font-semibold mb-2 mt-3 text-sm">
+                      オーバーフロー
+                    </h4>
+                    <code class="text-xs block mb-1"
+                      >.overflow-auto, .overflow-hidden</code
+                    >
+                    <code class="text-xs block"
+                      >.overflow-x-auto, .overflow-y-auto</code
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ポジション -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">ポジション</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  ポジションユーティリティと配置ヘルパー。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">ポジションタイプ</h4>
+                    <code class="text-xs block mb-1"
+                      >.relative, .absolute, .fixed</code
+                    >
+                    <code class="text-xs block">.sticky, .static</code>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">配置</h4>
+                    <code class="text-xs block mb-1"
+                      >.inset-0 - 全方向を0に</code
+                    >
+                    <code class="text-xs block"
+                      >.top-0, .right-0, .bottom-0, .left-0</code
+                    >
+                  </div>
                 </div>
               </div>
             </div>
