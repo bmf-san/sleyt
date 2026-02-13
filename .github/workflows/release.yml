@@ -54,18 +54,16 @@ jobs:
           echo "version=$TAG" >> $GITHUB_OUTPUT
           echo "Extracted version: $TAG"
 
-      - name: Update package.json version
+      - name: Verify package.json version matches tag
         run: |
-          npm version ${{ steps.version.outputs.version }} --no-git-tag-version
-
-      - name: Commit version update to repository
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git checkout main
-          git add package.json package-lock.json
-          git commit -m "chore: bump version to ${{ steps.version.outputs.version }}"
-          git push origin main
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          TAG_VERSION=${{ steps.version.outputs.version }}
+          echo "Package version: $PACKAGE_VERSION"
+          echo "Tag version: $TAG_VERSION"
+          if [ "$PACKAGE_VERSION" != "$TAG_VERSION" ]; then
+            echo "Error: package.json version ($PACKAGE_VERSION) does not match tag ($TAG_VERSION)"
+            exit 1
+          fi
 
       - name: Verify package contents
         run: |
