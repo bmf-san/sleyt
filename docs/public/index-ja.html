@@ -1643,6 +1643,189 @@
                 </div>
               </div>
             </div>
+
+            <!-- スピナー -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">スピナー</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  非同期操作のためのローディングスピナーとスケルトンローダー。
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">基本スピナー</h4>
+                <div class="mb-4">
+                  <div class="spinner"></div>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">サイズ</h4>
+                <div class="flex flex-wrap items-center gap-4 mb-4">
+                  <div class="spinner spinner-sm"></div>
+                  <div class="spinner"></div>
+                  <div class="spinner spinner-lg"></div>
+                  <div class="spinner spinner-xl"></div>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">
+                  スケルトンローダー
+                </h4>
+                <div class="mb-4">
+                  <div class="skeleton skeleton-text mb-2"></div>
+                  <div class="skeleton skeleton-text mb-2"></div>
+                  <div class="skeleton skeleton-title mb-3"></div>
+                  <div class="skeleton skeleton-avatar"></div>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.spinner, .spinner-{'{size}'} (sm, lg, xl)</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.spinner-{'{variant}'} (primary, success, danger等)</code
+                  >
+                  <code class="text-xs block"
+                    >.skeleton, .skeleton-text, .skeleton-title,
+                    .skeleton-avatar</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- タブ -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">タブ</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  コンテンツをセクションに整理するためのタブナビゲーション。
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">基本タブ</h4>
+                <div class="tabs mb-4">
+                  <div class="tabs-nav">
+                    <button class="tab active">タブ1</button>
+                    <button class="tab">タブ2</button>
+                    <button class="tab">タブ3</button>
+                  </div>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">ピルバリアント</h4>
+                <div class="tabs tabs-pills mb-4">
+                  <div class="tabs-nav">
+                    <button class="tab active">ホーム</button>
+                    <button class="tab">プロフィール</button>
+                    <button class="tab">設定</button>
+                  </div>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.tabs, .tabs-nav - タブコンテナ</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.tab, .tab.active - タブボタン</code
+                  >
+                  <code class="text-xs block"
+                    >.tabs-pills, .tabs-boxed - スタイルバリアント</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- ナビゲーション -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">ナビゲーション</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  パンくずリストとページネーションコンポーネント。
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">パンくずリスト</h4>
+                <nav class="breadcrumbs mb-4">
+                  <a href="#" class="breadcrumb-item">ホーム</a>
+                  <a href="#" class="breadcrumb-item">製品</a>
+                  <span class="breadcrumb-item active">詳細</span>
+                </nav>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">
+                  ページネーション
+                </h4>
+                <nav class="pagination mb-4">
+                  <a href="#" class="page-item">前へ</a>
+                  <a href="#" class="page-item">1</a>
+                  <a href="#" class="page-item active">2</a>
+                  <a href="#" class="page-item">3</a>
+                  <a href="#" class="page-item">次へ</a>
+                </nav>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.breadcrumbs, .breadcrumb-item</code
+                  >
+                  <code class="text-xs block"
+                    >.pagination, .page-item, .pagination-sm,
+                    .pagination-lg</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- プログレス & ツールチップ -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">プログレス & ツールチップ</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  プログレスバーとツールチップコンポーネント。
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">基本プログレス</h4>
+                <div class="progress mb-4">
+                  <div class="progress-bar bg-primary" style="width: 60%"></div>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">
+                  ストライプ & アニメーション
+                </h4>
+                <div class="progress mb-2">
+                  <div
+                    class="progress-bar bg-success progress-striped"
+                    style="width: 70%"
+                  ></div>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">ツールチップ</h4>
+                <div class="flex gap-4 mb-4">
+                  <span class="tooltip tooltip-top">
+                    ホバー
+                    <span class="tooltip-content">上部ツールチップ</span>
+                  </span>
+                  <span class="tooltip tooltip-bottom">
+                    ホバー
+                    <span class="tooltip-content">下部ツールチップ</span>
+                  </span>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">利用可能なクラス:</p>
+                  <code class="text-xs block mb-1"
+                    >.progress, .progress-bar, .progress-striped,
+                    .progress-animated</code
+                  >
+                  <code class="text-xs block"
+                    >.tooltip, .tooltip-content, .tooltip-{'{position}'}</code
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -2058,8 +2241,10 @@
               </div>
               <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
-                  深度とエレベーションのためのシャドウユーティリティ。
+                  シャドウ、不透明度、カーソル、インタラクションユーティリティ。
                 </p>
+
+                <h4 class="font-semibold mb-2 text-sm">シャドウ</h4>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-3">
                   <div
                     class="shadow-none p-3 bg-white border text-xs text-center"
@@ -2082,9 +2267,83 @@
                     shadow-xl
                   </div>
                 </div>
-                <code class="text-xs"
+                <code class="text-xs block mb-4"
                   >.shadow-none, .shadow-sm, .shadow, .shadow-md, .shadow-lg,
                   .shadow-xl</code
+                >
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">不透明度</h4>
+                <div class="grid grid-cols-5 gap-2 mb-3">
+                  <div
+                    class="opacity-0 p-3 bg-primary text-xs text-center text-white"
+                  >
+                    0
+                  </div>
+                  <div
+                    class="opacity-25 p-3 bg-primary text-xs text-center text-white"
+                  >
+                    25
+                  </div>
+                  <div
+                    class="opacity-50 p-3 bg-primary text-xs text-center text-white"
+                  >
+                    50
+                  </div>
+                  <div
+                    class="opacity-75 p-3 bg-primary text-xs text-center text-white"
+                  >
+                    75
+                  </div>
+                  <div
+                    class="opacity-100 p-3 bg-primary text-xs text-center text-white"
+                  >
+                    100
+                  </div>
+                </div>
+                <code class="text-xs block mb-4"
+                  >.opacity-{'{0-100}'} - 値: 0, 5, 10, 20, 25, 30, 40, 50, 60,
+                  70, 75, 80, 90, 95, 100</code
+                >
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">カーソル</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-3">
+                  <div
+                    class="cursor-pointer p-2 bg-slate-50 text-xs text-center"
+                  >
+                    pointer
+                  </div>
+                  <div
+                    class="cursor-not-allowed p-2 bg-slate-50 text-xs text-center"
+                  >
+                    not-allowed
+                  </div>
+                  <div class="cursor-grab p-2 bg-slate-50 text-xs text-center">
+                    grab
+                  </div>
+                  <div class="cursor-wait p-2 bg-slate-50 text-xs text-center">
+                    wait
+                  </div>
+                  <div class="cursor-help p-2 bg-slate-50 text-xs text-center">
+                    help
+                  </div>
+                  <div class="cursor-move p-2 bg-slate-50 text-xs text-center">
+                    move
+                  </div>
+                </div>
+                <code class="text-xs block mb-4"
+                  >.cursor-{'{type}'} - 30種類以上: pointer, not-allowed, grab,
+                  grabbing, wait, help, move, 全方向のresize,
+                  zoom-in/out等</code
+                >
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">
+                  ポインターイベント & ユーザー選択
+                </h4>
+                <code class="text-xs block mb-1"
+                  >.pointer-events-none, .pointer-events-auto</code
+                >
+                <code class="text-xs block"
+                  >.select-none, .select-text, .select-all, .select-auto</code
                 >
               </div>
             </div>
@@ -2193,7 +2452,7 @@
               </div>
               <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
-                  ポジションユーティリティと配置ヘルパー。
+                  ポジションユーティリティ、配置ヘルパー、z-indexレイヤリング。
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -2201,16 +2460,160 @@
                     <code class="text-xs block mb-1"
                       >.relative, .absolute, .fixed</code
                     >
-                    <code class="text-xs block">.sticky, .static</code>
-                  </div>
-                  <div>
+                    <code class="text-xs block mb-3">.sticky, .static</code>
+
                     <h4 class="font-semibold mb-2 text-sm">配置</h4>
                     <code class="text-xs block mb-1"
                       >.inset-0 - 全方向を0に</code
                     >
-                    <code class="text-xs block"
+                    <code class="text-xs block mb-1"
                       >.top-0, .right-0, .bottom-0, .left-0</code
                     >
+                    <code class="text-xs block mb-1">
+                      .top-1/2, .left-1/2 - 分数指定 (50%)</code
+                    >
+                    <code class="text-xs block">
+                      .top-full, .left-full - 完全 (100%)</code
+                    >
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">Z-Index</h4>
+                    <code class="text-xs block mb-1">.z-0 - z-index: 0</code>
+                    <code class="text-xs block mb-1">.z-10 - z-index: 10</code>
+                    <code class="text-xs block mb-1">.z-20 - z-index: 20</code>
+                    <code class="text-xs block mb-1">.z-30 - z-index: 30</code>
+                    <code class="text-xs block mb-1">.z-40 - z-index: 40</code>
+                    <code class="text-xs block mb-1">.z-50 - z-index: 50</code>
+                    <code class="text-xs block">.z-auto - z-index: auto</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- トランスフォーム -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">トランスフォーム</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  スケール、回転、移動、変形原点のトランスフォームユーティリティ。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">スケール</h4>
+                    <code class="text-xs block mb-1"
+                      >.scale-0 から .scale-150</code
+                    >
+                    <code class="text-xs block mb-3"
+                      >値: 0, 50, 75, 90, 95, 100, 105, 110, 125, 150</code
+                    >
+
+                    <h4 class="font-semibold mb-2 text-sm">回転</h4>
+                    <code class="text-xs block mb-1"
+                      >.rotate-0, .rotate-45, .rotate-90, .rotate-180</code
+                    >
+                    <code class="text-xs block mb-3"
+                      >.-rotate-45, .-rotate-90, .-rotate-180 (逆方向)</code
+                    >
+
+                    <h4 class="font-semibold mb-2 text-sm">移動</h4>
+                    <code class="text-xs block mb-1"
+                      >.translate-x-1/2, .translate-y-1/2 (50%)</code
+                    >
+                    <code class="text-xs block"
+                      >.translate-x-full, .translate-y-full (100%)</code
+                    >
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">変形原点</h4>
+                    <code class="text-xs block mb-1">.origin-center</code>
+                    <code class="text-xs block mb-1"
+                      >.origin-top, .origin-bottom</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.origin-left, .origin-right</code
+                    >
+                    <code class="text-xs block"
+                      >.origin-top-left, .origin-top-right等</code
+                    >
+
+                    <h4 class="font-semibold mb-2 text-sm mt-3">例</h4>
+                    <div class="flex gap-3">
+                      <div class="scale-75 p-2 bg-primary text-xs text-white">
+                        scale-75
+                      </div>
+                      <div class="rotate-45 p-2 bg-success text-xs text-white">
+                        rotate-45
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- トランジション & アニメーション -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">
+                  トランジション & アニメーション
+                </h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  スムーズなエフェクトのためのトランジションとアニメーションユーティリティ。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">
+                      トランジションプロパティ
+                    </h4>
+                    <code class="text-xs block mb-1"
+                      >.transition-all - 全プロパティ</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.transition-colors - 色</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.transition-opacity - 不透明度</code
+                    >
+                    <code class="text-xs block mb-3"
+                      >.transition-transform - 変形</code
+                    >
+
+                    <h4 class="font-semibold mb-2 text-sm">継続時間</h4>
+                    <code class="text-xs block mb-1">.duration-{'{ms}'}</code>
+                    <code class="text-xs block mb-3"
+                      >値: 75, 100, 150, 200, 300, 500, 700, 1000</code
+                    >
+
+                    <h4 class="font-semibold mb-2 text-sm">タイミング</h4>
+                    <code class="text-xs block"
+                      >.ease-linear, .ease-in, .ease-out, .ease-in-out</code
+                    >
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-sm">遅延</h4>
+                    <code class="text-xs block mb-1">.delay-{'{ms}'}</code>
+                    <code class="text-xs block mb-3"
+                      >値: 75, 100, 150, 200, 300, 500, 700, 1000</code
+                    >
+
+                    <h4 class="font-semibold mb-2 text-sm">アニメーション</h4>
+                    <code class="text-xs block mb-1">.animate-spin - 回転</code>
+                    <code class="text-xs block mb-1"
+                      >.animate-pulse - 点滅</code
+                    >
+                    <code class="text-xs block mb-3"
+                      >.animate-bounce - バウンス</code
+                    >
+
+                    <h4 class="font-semibold mb-2 text-sm">例</h4>
+                    <div
+                      class="p-2 bg-primary text-xs text-white transition-all duration-300 hover:scale-110 inline-block"
+                    >
+                      ホバーしてください
+                    </div>
                   </div>
                 </div>
               </div>

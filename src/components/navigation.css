@@ -1,0 +1,133 @@
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.breadcrumbs-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.breadcrumbs-link:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumbs-item.active .breadcrumbs-link {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  pointer-events: none;
+}
+
+.breadcrumbs-separator {
+  color: var(--text-disabled);
+  user-select: none;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-item {
+  display: inline-flex;
+}
+
+.pagination-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.pagination-link:hover:not(.disabled) {
+  background-color: var(--bg-surface);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.pagination-link.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--text-on-primary);
+  cursor: default;
+}
+
+.pagination-link.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text-disabled);
+}
+
+/* Pagination Sizes */
+.pagination-sm .pagination-link {
+  min-width: 2rem;
+  height: 2rem;
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+.pagination-lg .pagination-link {
+  min-width: 3rem;
+  height: 3rem;
+  font-size: var(--font-size-base);
+  padding: var(--spacing-3) var(--spacing-4);
+}
+
+/* Pagination Variants */
+.pagination-rounded .pagination-link {
+  border-radius: var(--border-radius-full);
+}
+
+.pagination-simple {
+  gap: var(--spacing-4);
+}
+
+.pagination-simple .pagination-link {
+  min-width: auto;
+  border: none;
+  background: none;
+}
+
+.pagination-simple .pagination-link:hover:not(.disabled) {
+  background: none;
+  text-decoration: underline;
+}

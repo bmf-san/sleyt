@@ -37,10 +37,15 @@ Both documentation files are organized to match the source code structure in `sr
 - **charts** - Data visualization (bar, line, donut charts)
 - **code** - Code block styling
 - **forms** - Input fields and form controls
+- **modals** - Modal dialogs and dropdown menus
 - **navbar** - Navigation components
+- **navigation** - Breadcrumbs and pagination
+- **progress** - Progress bars and tooltips
 - **showcase** - Feature showcase components
+- **spinners** - Loading spinners and skeleton loaders
 - **swatch** - Color palette display
 - **tables** - Structured data display
+- **tabs** - Tab navigation system
 
 ### Layout (src/layout/)
 - **container** - Responsive container with max-width breakpoints
@@ -48,14 +53,16 @@ Both documentation files are organized to match the source code structure in `sr
 - **grid** - CSS Grid utilities for complex layouts
 
 ### Utilities (src/utilities/)
-- **borders** - Border and border-radius utilities
+- **borders** - Border width, style, and border-radius utilities
 - **colors** - Background and text color classes
-- **display** - Display property utilities
-- **effects** - Shadow and visual effect utilities
+- **display** - Display property, aspect-ratio, object-fit utilities
+- **effects** - Shadow, opacity, cursor, pointer-events utilities
 - **glass** - Glass morphism transparency effects
-- **position** - Positioning utilities
+- **position** - Positioning and z-index utilities
 - **spacing** - Margin and padding utilities
-- **typography** - Font size, weight, and text utilities
+- **transforms** - Scale, rotate, translate, transform-origin utilities
+- **transitions** - Transition, duration, timing, delay, animations utilities
+- **typography** - Font size, weight, text-decoration, text-transform, and text utilities
 
 ## Update Rules
 
