@@ -13,19 +13,19 @@
   --color-slate-900: hsl(0deg 0% 9%);
   --color-slate-950: hsl(0deg 0% 4%);
 
-  /* Color Palette - Subdued Tones */
-  --color-success-500: hsl(150deg 35% 40%);
-  --color-success-600: hsl(150deg 35% 35%);
-  --color-success-700: hsl(150deg 35% 30%);
-  --color-danger-500: hsl(355deg 50% 45%);
-  --color-danger-600: hsl(355deg 50% 40%);
-  --color-danger-700: hsl(355deg 50% 35%);
-  --color-warning-400: hsl(40deg 70% 50%);
-  --color-warning-500: hsl(40deg 70% 45%);
-  --color-warning-600: hsl(40deg 70% 40%);
-  --color-info-500: hsl(215deg 45% 45%);
-  --color-info-600: hsl(215deg 45% 40%);
-  --color-info-700: hsl(215deg 45% 35%);
+  /* Color Palette - Vibrant Modern Tones */
+  --color-success-500: hsl(150deg 60% 48%);
+  --color-success-600: hsl(150deg 60% 42%);
+  --color-success-700: hsl(150deg 60% 36%);
+  --color-danger-500: hsl(355deg 75% 52%);
+  --color-danger-600: hsl(355deg 75% 46%);
+  --color-danger-700: hsl(355deg 75% 40%);
+  --color-warning-400: hsl(35deg 90% 58%);
+  --color-warning-500: hsl(35deg 90% 52%);
+  --color-warning-600: hsl(35deg 90% 46%);
+  --color-info-500: hsl(215deg 70% 52%);
+  --color-info-600: hsl(215deg 70% 46%);
+  --color-info-700: hsl(215deg 70% 40%);
 
   /* RGB Values (for use with rgba()) */
   --color-slate-900-rgb: 23, 23, 23;
@@ -33,10 +33,10 @@
   --color-slate-700-rgb: 64, 64, 64;
   --color-slate-600-rgb: 82, 82, 82;
   --color-slate-500-rgb: 115, 115, 115;
-  --color-success-600-rgb: 54, 112, 91;
-  --color-danger-600-rgb: 173, 52, 62;
-  --color-warning-500-rgb: 212, 159, 41;
-  --color-info-600-rgb: 55, 92, 148;
+  --color-success-600-rgb: 43, 171, 123;
+  --color-danger-600-rgb: 205, 29, 47;
+  --color-warning-500-rgb: 252, 147, 13;
+  --color-info-600-rgb: 35, 92, 199;
 
   /* Transparent Colors */
   --color-transparent-light: hsl(205deg 12% 98% / 80%);
