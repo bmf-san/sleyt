@@ -64,3 +64,28 @@
 .overflow-y-auto { overflow-y: auto; }
 .overflow-x-hidden { overflow-x: hidden; }
 .overflow-y-hidden { overflow-y: hidden; }
+
+/* Aspect Ratio */
+.aspect-auto { aspect-ratio: auto; }
+.aspect-square { aspect-ratio: 1 / 1; }
+.aspect-video { aspect-ratio: 16 / 9; }
+.aspect-4-3 { aspect-ratio: 4 / 3; }
+.aspect-21-9 { aspect-ratio: 21 / 9; }
+
+/* Object Fit */
+.object-contain { object-fit: contain; }
+.object-cover { object-fit: cover; }
+.object-fill { object-fit: fill; }
+.object-none { object-fit: none; }
+.object-scale-down { object-fit: scale-down; }
+
+/* Object Position */
+.object-bottom { object-position: bottom; }
+.object-center { object-position: center; }
+.object-left { object-position: left; }
+.object-left-bottom { object-position: left bottom; }
+.object-left-top { object-position: left top; }
+.object-right { object-position: right; }
+.object-right-bottom { object-position: right bottom; }
+.object-right-top { object-position: right top; }
+.object-top { object-position: top; }

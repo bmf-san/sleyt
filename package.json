@@ -1,6 +1,6 @@
 {
   "name": "sleyt",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A minimal and modern CSS framework with glass morphism design and data visualization components",
   "main": "dist/css/index.css",
   "files": [
