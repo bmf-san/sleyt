@@ -6,17 +6,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: var(--spacing-3) var(--spacing-4);
+  padding: var(--spacing-4) var(--spacing-6);
   position: relative;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-md);
 }
 
 .navbar-brand {
   align-items: center;
   color: var(--text-primary);
   display: inline-flex;
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
-  margin-right: var(--spacing-4);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-right: var(--spacing-6);
+  letter-spacing: -0.02em;
 }
 
 .navbar-nav {
@@ -54,10 +58,12 @@
 .navbar-item {
   color: var(--text-primary);
   display: block;
-  padding: var(--spacing-2) var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-4);
   text-decoration: none;
-  transition: var(--transition-base);
-  margin-right: var(--spacing-3);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: var(--spacing-2);
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-medium);
 }
 
 .navbar-item:last-child {
@@ -66,11 +72,14 @@
 
 .navbar-item:hover, .navbar-item:focus {
   color: var(--color-primary);
+  background-color: var(--color-slate-100);
+  transform: translateY(-1px);
 }
 
 .navbar-item.active {
   color: var(--color-primary);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-slate-100);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
