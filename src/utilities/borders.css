@@ -13,6 +13,7 @@
 .rounded-lg { border-radius: var(--border-radius-lg); }
 .rounded-xl { border-radius: var(--border-radius-xl); }
 .rounded-full { border-radius: var(--border-radius-full); }
+
 /* Border Width */
 .border-2 { border-width: 2px; }
 .border-4 { border-width: 4px; }
