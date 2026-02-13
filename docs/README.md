@@ -37,10 +37,15 @@ Both documentation files are organized to match the source code structure in `sr
 - **charts** - Data visualization (bar, line, donut charts)
 - **code** - Code block styling
 - **forms** - Input fields and form controls
+- **modals** - Modal dialogs and dropdown menus (v1.2.0)
 - **navbar** - Navigation components
+- **navigation** - Breadcrumbs and pagination (v1.2.0)
+- **progress** - Progress bars and tooltips (v1.2.0)
 - **showcase** - Feature showcase components
+- **spinners** - Loading spinners and skeleton loaders (v1.2.0)
 - **swatch** - Color palette display
 - **tables** - Structured data display
+- **tabs** - Tab navigation system (v1.2.0)
 
 ### Layout (src/layout/)
 - **container** - Responsive container with max-width breakpoints
@@ -48,14 +53,16 @@ Both documentation files are organized to match the source code structure in `sr
 - **grid** - CSS Grid utilities for complex layouts
 
 ### Utilities (src/utilities/)
-- **borders** - Border and border-radius utilities
+- **borders** - Border width, style, and border-radius utilities
 - **colors** - Background and text color classes
-- **display** - Display property utilities
-- **effects** - Shadow and visual effect utilities
+- **display** - Display property, aspect-ratio, object-fit utilities (v1.2.0: aspect-ratio, object-fit/position)
+- **effects** - Shadow, opacity, cursor, pointer-events utilities (v1.2.0: opacity, cursor, pointer-events, user-select)
 - **glass** - Glass morphism transparency effects
-- **position** - Positioning utilities
+- **position** - Positioning and z-index utilities (v1.2.0: z-index stack, fractional positioning)
 - **spacing** - Margin and padding utilities
-- **typography** - Font size, weight, and text utilities
+- **transforms** - Scale, rotate, translate, transform-origin utilities (v1.2.0)
+- **transitions** - Transition, duration, timing, delay, animations utilities (v1.2.0)
+- **typography** - Font size, weight, text-decoration, text-transform, and text utilities (v1.2.0: text-decoration, text-transform, text-overflow, vertical-align)
 
 ## Update Rules
 
