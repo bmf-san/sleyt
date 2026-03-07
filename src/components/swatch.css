@@ -1,10 +1,9 @@
 /* Swatch */
 
-/* Color preview box used in docs (4rem tall, supports --swatch-brightness) */
+/* Color preview box used in docs (4rem tall) */
 .swatch-preview {
   height: var(--spacing-16);
   border-radius: var(--border-radius-sm);
-  filter: brightness(var(--swatch-brightness, 1));
 }
 
 .swatch {

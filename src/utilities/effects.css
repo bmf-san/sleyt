@@ -69,4 +69,9 @@
 .select-none { user-select: none; }
 .select-text { user-select: text; }
 .select-all { user-select: all; }
+
+/* Filter Brightness */
+.brightness-84 { filter: brightness(0.84); }
+.brightness-92 { filter: brightness(0.92); }
+.brightness-108 { filter: brightness(1.08); }
 .select-auto { user-select: auto; }
