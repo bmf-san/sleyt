@@ -3,12 +3,503 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard - Sleyt CSS Framework Demo</title>
+    <title>Admin Dashboard - sleyt CSS Framework Demo</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body class="bg-body">
     <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox" />
+
+    <div class="dashboard">
+      <!-- ── Sidebar ── -->
+      <aside class="sidebar">
+        <a href="index.html" class="sidebar-brand">
+          <span class="sidebar-brand-icon">S</span>
+          sleyt
+        </a>
+
+        <nav class="sidebar-nav">
+          <span class="sidebar-section-label">Main</span>
+          <a href="#" class="sidebar-link active">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2L2 9h2v9h4v-5h4v5h4V9h2L10 2z"/></svg>
+            Overview
+          </a>
+          <a href="#" class="sidebar-link">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M2 17V9h4v8H2zM8 17V5h4v12H8zM14 17v-6h4v6h-4z"/></svg>
+            Analytics
+          </a>
+          <a href="#" class="sidebar-link">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2L2 5v5c0 5 3.5 8 8 9.5C15.5 18 18 14 18 10V5L10 2z"/></svg>
+            Monitoring
+          </a>
+          <a href="#" class="sidebar-link">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 8A3 3 0 1 0 10 8A3 3 0 1 0 4 8zM1 18A7 7 0 0 1 15 18H1z"/></svg>
+            Team
+          </a>
+
+          <span class="sidebar-section-label">Workspace</span>
+          <a href="#" class="sidebar-link">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7 3h6v2h4v12H3V5h4V3zm1 1h4V4H8z"/></svg>
+            Projects
+          </a>
+          <a href="#" class="sidebar-link">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 2h9l5 5V18H4V2zm9 1v4h4L13 3zM7 10h6v1H7zm0 3h6v1H7zm0 3h4v1H7z"/></svg>
+            Files
+          </a>
+          <a href="#" class="sidebar-link">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M2 17L6 10 10 13 14 6 18 4V17z"/></svg>
+            Reports
+          </a>
+          <a href="#" class="sidebar-link">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3h16v11H12l-2 3-2-3H2V3z"/></svg>
+            Messages
+          </a>
+
+          <a href="#" class="sidebar-link mt-auto">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5h3v2H2zm5 0h11v2H7zm-5 4h11v2H2zm13 0h3v2h-3zm-13 4h3v2H2zm5 0h11v2H7z"/></svg>
+            Settings
+          </a>
+          <a href="#" class="sidebar-link">
+            <svg class="sidebar-link-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a8 8 0 100 16A8 8 0 0010 2zM9 5h2v2H9zM9 8h2v6H9z"/></svg>
+            Help
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="sidebar-user">
+            <div class="sidebar-user-avatar">HM</div>
+            <div class="min-w-0">
+              <p class="text-sm font-medium leading-tight">Hina Mori</p>
+              <p class="text-xs text-secondary truncate">admin@example.com</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ── Main Area ── -->
+      <div class="dashboard-main">
+
+        <!-- Topbar -->
+        <header class="topbar">
+          <label for="sidebar-toggle" class="sidebar-toggle-label" aria-label="Toggle sidebar">☰</label>
+
+          <div class="topbar-search">
+            <svg class="icon-sm" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 3a5 5 0 100 10A5 5 0 008 3zm0 2a3 3 0 110 6A3 3 0 018 5zM12 12l5 5-1 1-5-5z"/></svg>
+            Search tasks, files, people…
+          </div>
+
+          <div class="flex items-center gap-2">
+            <a href="blog.html" class="btn btn-outline-primary btn-sm">Blog Demo</a>
+            <a href="index.html" class="btn btn-outline-primary btn-sm">Docs</a>
+            <button class="topbar-icon-btn" aria-label="Notifications">
+              <svg class="icon-sm" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 0 0-6 6v3l-2 2v1h16v-1l-2-2V8a6 6 0 0 0-6-6zm0 16a2 2 0 0 1-2-2h4a2 2 0 0 1-2 2z"/></svg>
+              <span class="badge-dot"></span>
+            </button>
+            <div class="topbar-user-avatar">HM</div>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <div class="dashboard-content">
+
+          <!-- Page Header -->
+          <div class="mb-6">
+            <p class="text-xs text-secondary mb-1">sleyt / Overview</p>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-bold">Overview</h1>
+              <button class="btn btn-primary btn-sm">+ New Task</button>
+            </div>
+          </div>
+
+          <!-- ── Stat Cards ── -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+
+            <!-- Monthly Sales -->
+            <div class="card stat-card">
+              <div class="card-body p-4">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-sm text-secondary">Monthly Sales</span>
+                  <svg class="icon-base text-disabled" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M1 5h18v10H1V5zm2 2v6h14V7H3zM7 10a3 3 0 1 0 6 0a3 3 0 1 0-6 0zm2 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0z"/></svg>
+                </div>
+                <svg class="stat-spark text-success" viewBox="0 0 100 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                  <path d="M2,26 C18,22 30,18 45,14 C58,10 70,8 98,4"/>
+                </svg>
+                <p class="text-2xl font-bold mb-2">$1,250</p>
+                <div class="flex items-center justify-between">
+                  <span class="badge badge-soft-success">↑ +12.5%</span>
+                  <span class="text-xs text-secondary">vs last month</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- New Sign-ups -->
+            <div class="card stat-card">
+              <div class="card-body p-4">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-sm text-secondary">New Sign-ups</span>
+                  <svg class="icon-base text-disabled" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 8A3 3 0 1 0 9 8A3 3 0 1 0 3 8zM0 18A6 6 0 0 1 12 18H0zM14 4h2v2h2v2h-2v2h-2v-2h-2V6h2V4z"/></svg>
+                </div>
+                <svg class="stat-spark text-danger" viewBox="0 0 100 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                  <path d="M2,4 C18,8 30,10 45,14 C60,18 75,22 98,26"/>
+                </svg>
+                <p class="text-2xl font-bold mb-2">1,234</p>
+                <div class="flex items-center justify-between">
+                  <span class="badge badge-soft-danger">↓ -20%</span>
+                  <span class="text-xs text-secondary">vs last month</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Active Users -->
+            <div class="card stat-card">
+              <div class="card-body p-4">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-sm text-secondary">Active Users</span>
+                  <svg class="icon-base text-disabled" viewBox="0 0 20 20" fill="currentColor"><path d="M2 17V13h4v4H2zM8 17V7h4v10H8zM14 17V9h4v8h-4z"/></svg>
+                </div>
+                <svg class="stat-spark text-success" viewBox="0 0 100 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                  <path d="M2,22 C15,18 26,26 42,16 C56,8 72,6 98,4"/>
+                </svg>
+                <p class="text-2xl font-bold mb-2">45,678</p>
+                <div class="flex items-center justify-between">
+                  <span class="badge badge-soft-success">↑ +12.5%</span>
+                  <span class="text-xs text-secondary">vs last month</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Conversion Rate -->
+            <div class="card stat-card">
+              <div class="card-body p-4">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-sm text-secondary">Conversion Rate</span>
+                  <svg class="icon-base text-disabled" viewBox="0 0 20 20" fill="currentColor"><path d="M2 16L7 9l3 4 4-7 4-1V16z"/></svg>
+                </div>
+                <svg class="stat-spark text-info" viewBox="0 0 100 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                  <path d="M2,24 C20,22 36,20 50,16 C64,12 78,10 98,6"/>
+                </svg>
+                <p class="text-2xl font-bold mb-2">4.5%</p>
+                <div class="flex items-center justify-between">
+                  <span class="badge badge-soft-success">↑ +4.5%</span>
+                  <span class="text-xs text-secondary">vs last month</span>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /stat cards -->
+
+          <!-- ── Middle: Chart + Sprint/Activity ── -->
+          <div class="grid md:grid-cols-3 gap-4 mb-6">
+
+            <!-- Line Chart (2/3 width) -->
+            <div class="card md:col-span-2">
+              <div class="card-header">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                  <div>
+                    <h2 class="text-base font-semibold">Page Views</h2>
+                    <p class="text-xs text-secondary font-normal mt-0.5">Traffic for the last 6 months</p>
+                  </div>
+                  <div class="flex gap-2">
+                    <button class="btn btn-outline-primary btn-sm active">3 months</button>
+                    <button class="btn btn-outline-primary btn-sm">6 months</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <div class="line-chart">
+                    <svg class="line-chart-svg" viewBox="0 0 800 160" preserveAspectRatio="none">
+                      <line x1="0" y1="32"  x2="800" y2="32"  class="line-chart-grid-line"/>
+                      <line x1="0" y1="64"  x2="800" y2="64"  class="line-chart-grid-line"/>
+                      <line x1="0" y1="96"  x2="800" y2="96"  class="line-chart-grid-line"/>
+                      <line x1="0" y1="128" x2="800" y2="128" class="line-chart-grid-line"/>
+                      <path class="line-chart-path stroke-dashed" data-variant="danger"
+                        d="M 0,140 C 60,130 100,100 160,90 C 220,80 260,120 320,110 C 380,100 420,70 480,60 C 540,50 580,80 640,70 C 700,60 750,40 800,30"/>
+                      <path class="line-chart-path" data-variant="primary"
+                        d="M 0,150 C 60,145 100,120 160,105 C 220,90 260,130 320,120 C 380,110 420,80 480,72 C 540,65 580,90 640,78 C 700,66 750,48 800,38"/>
+                      <circle class="line-chart-point" data-variant="primary" cx="0"   cy="150"/>
+                      <circle class="line-chart-point" data-variant="primary" cx="160" cy="105"/>
+                      <circle class="line-chart-point" data-variant="primary" cx="320" cy="120"/>
+                      <circle class="line-chart-point" data-variant="primary" cx="480" cy="72"/>
+                      <circle class="line-chart-point" data-variant="primary" cx="640" cy="78"/>
+                      <circle class="line-chart-point" data-variant="primary" cx="800" cy="38"/>
+                      <circle class="line-chart-point" data-variant="danger" cx="0"   cy="140"/>
+                      <circle class="line-chart-point" data-variant="danger" cx="160" cy="90"/>
+                      <circle class="line-chart-point" data-variant="danger" cx="320" cy="110"/>
+                      <circle class="line-chart-point" data-variant="danger" cx="480" cy="60"/>
+                      <circle class="line-chart-point" data-variant="danger" cx="640" cy="70"/>
+                      <circle class="line-chart-point" data-variant="danger" cx="800" cy="30"/>
+                    </svg>
+                    <div class="line-chart-x-labels">
+                      <span class="line-chart-x-label">Apr 8</span>
+                      <span class="line-chart-x-label">Apr 21</span>
+                      <span class="line-chart-x-label">May 5</span>
+                      <span class="line-chart-x-label">Jun 1</span>
+                      <span class="line-chart-x-label">Jun 14</span>
+                      <span class="line-chart-x-label">Jun 30</span>
+                    </div>
+                  </div>
+                  <div class="chart-legend flex-row flex-wrap mt-2 gap-4">
+                    <div class="chart-legend-item">
+                      <span class="chart-legend-color" data-variant="primary"></span>
+                      <span class="chart-legend-label">Desktop</span>
+                      <span class="chart-legend-value">327</span>
+                    </div>
+                    <div class="chart-legend-item">
+                      <span class="chart-legend-color" data-variant="danger"></span>
+                      <span class="chart-legend-label">Mobile</span>
+                      <span class="chart-legend-value">350</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right column: Sprint Progress + Activity Feed -->
+            <div class="flex flex-col gap-4">
+
+              <!-- Sprint Progress -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="flex items-center justify-between">
+                    <h2 class="text-base font-semibold">Sprint 7</h2>
+                    <span class="badge badge-soft-info">Active</span>
+                  </div>
+                  <p class="text-xs text-secondary font-normal mt-0.5">Apr 8 – Apr 21</p>
+                </div>
+                <div class="card-body">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-medium">Progress</span>
+                    <span class="text-sm font-semibold">72%</span>
+                  </div>
+                  <div class="progress progress-sm mb-4">
+                    <div class="progress-bar bg-success" role="progressbar" style="width:72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="grid grid-cols-3 gap-2 text-center">
+                    <div>
+                      <p class="text-lg font-bold">14</p>
+                      <p class="text-xs text-secondary">Done</p>
+                    </div>
+                    <div>
+                      <p class="text-lg font-bold">5</p>
+                      <p class="text-xs text-secondary">In Progress</p>
+                    </div>
+                    <div>
+                      <p class="text-lg font-bold">3</p>
+                      <p class="text-xs text-secondary">Days left</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Activity Feed -->
+              <div class="card flex-1">
+                <div class="card-header">
+                  <h2 class="text-base font-semibold">Recent Activity</h2>
+                </div>
+                <div class="card-body">
+                  <div class="activity-feed">
+                    <div class="activity-item">
+                      <div class="activity-avatar-sm">HM</div>
+                      <div class="activity-body">
+                        <p class="text-sm leading-tight"><span class="font-medium">Hina Mori</span> merged <span class="text-primary-color">#landing-redesign</span></p>
+                        <p class="activity-time mt-0.5">2h ago</p>
+                      </div>
+                    </div>
+                    <div class="activity-item">
+                      <div class="activity-avatar-sm">RT</div>
+                      <div class="activity-body">
+                        <p class="text-sm leading-tight"><span class="font-medium">Ryo Tanaka</span> commented on <span class="text-primary-color">#cicd-pipeline</span></p>
+                        <p class="activity-time mt-0.5">4h ago</p>
+                      </div>
+                    </div>
+                    <div class="activity-item">
+                      <div class="activity-avatar-sm">HM</div>
+                      <div class="activity-body">
+                        <p class="text-sm leading-tight"><span class="font-medium">Hina Mori</span> closed <span class="text-primary-color">#auth-refactor</span></p>
+                        <p class="activity-time mt-0.5">6h ago</p>
+                      </div>
+                    </div>
+                    <div class="activity-item">
+                      <div class="activity-avatar-sm">RT</div>
+                      <div class="activity-body">
+                        <p class="text-sm leading-tight"><span class="font-medium">Ryo Tanaka</span> created <span class="text-primary-color">#performance-opt</span></p>
+                        <p class="activity-time mt-0.5">Yesterday</p>
+                      </div>
+                    </div>
+                    <div class="activity-item">
+                      <div class="activity-avatar-sm">YI</div>
+                      <div class="activity-body">
+                        <p class="text-sm leading-tight"><span class="font-medium">Yuki Inoue</span> updated the roadmap</p>
+                        <p class="activity-time mt-0.5">Yesterday</p>
+                      </div>
+                    </div>
+                    <div class="activity-item">
+                      <div class="activity-avatar-sm text-success">CI</div>
+                      <div class="activity-body">
+                        <p class="text-sm leading-tight">Build <span class="font-medium">#48</span> passed <span class="text-success">✓</span></p>
+                        <p class="activity-time mt-0.5">2 days ago</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="text-sm text-primary-color">View all activity →</a>
+                </div>
+              </div>
+
+            </div><!-- /right column -->
+          </div><!-- /middle section -->
+
+          <!-- ── Task Table ── -->
+          <div class="card">
+            <div class="card-header">
+              <div class="flex items-center justify-between gap-4 flex-wrap">
+                <div>
+                  <h2 class="text-base font-semibold">Sprint 7 – Tasks</h2>
+                  <p class="text-xs text-secondary font-normal mt-0.5">19 tasks · 14 done · 3 days remaining</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button class="btn btn-outline-primary btn-sm">Columns ▾</button>
+                  <button class="btn btn-outline-primary btn-sm">Filter ▾</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0 overflow-x-auto">
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th class="w-8"></th>
+                    <th class="w-8"><input type="checkbox" class="form-check-input m-0" aria-label="Select all"/></th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th class="text-right">Points</th>
+                    <th class="text-right">Est.</th>
+                    <th>Assignee</th>
+                    <th class="w-10"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="text-disabled cursor-grab text-base leading-none">⋮⋮</span></td>
+                    <td><input type="checkbox" class="form-check-input m-0"/></td>
+                    <td class="font-medium">Setup CI/CD pipeline</td>
+                    <td><span class="text-secondary text-sm">DevOps</span></td>
+                    <td><span class="badge badge-soft-info">In Progress</span></td>
+                    <td class="text-right text-sm">8</td>
+                    <td class="text-right text-sm">5</td>
+                    <td class="text-sm">Hina Mori</td>
+                    <td><button class="btn btn-outline-primary btn-xs min-w-0">⋯</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-disabled cursor-grab text-base leading-none">⋮⋮</span></td>
+                    <td><input type="checkbox" class="form-check-input m-0"/></td>
+                    <td class="font-medium">Landing page redesign</td>
+                    <td><span class="text-secondary text-sm">Design</span></td>
+                    <td><span class="badge badge-soft-success">Done</span></td>
+                    <td class="text-right text-sm">12</td>
+                    <td class="text-right text-sm">14</td>
+                    <td class="text-sm">Hina Mori</td>
+                    <td><button class="btn btn-outline-primary btn-xs min-w-0">⋯</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-disabled cursor-grab text-base leading-none">⋮⋮</span></td>
+                    <td><input type="checkbox" class="form-check-input m-0"/></td>
+                    <td class="font-medium">User auth refactor</td>
+                    <td><span class="text-secondary text-sm">Feature</span></td>
+                    <td><span class="badge badge-soft-success">Done</span></td>
+                    <td class="text-right text-sm">6</td>
+                    <td class="text-right text-sm">8</td>
+                    <td class="text-sm">Hina Mori</td>
+                    <td><button class="btn btn-outline-primary btn-xs min-w-0">⋯</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-disabled cursor-grab text-base leading-none">⋮⋮</span></td>
+                    <td><input type="checkbox" class="form-check-input m-0"/></td>
+                    <td class="font-medium">Write API documentation</td>
+                    <td><span class="text-secondary text-sm">Docs</span></td>
+                    <td><span class="badge badge-soft-success">Done</span></td>
+                    <td class="text-right text-sm">10</td>
+                    <td class="text-right text-sm">11</td>
+                    <td class="text-sm">Ryo Tanaka</td>
+                    <td><button class="btn btn-outline-primary btn-xs min-w-0">⋯</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-disabled cursor-grab text-base leading-none">⋮⋮</span></td>
+                    <td><input type="checkbox" class="form-check-input m-0"/></td>
+                    <td class="font-medium">Fix mobile layout bug</td>
+                    <td><span class="text-secondary text-sm">Bug Fix</span></td>
+                    <td><span class="badge badge-soft-info">In Progress</span></td>
+                    <td class="text-right text-sm">3</td>
+                    <td class="text-right text-sm">4</td>
+                    <td class="text-sm">Ryo Tanaka</td>
+                    <td><button class="btn btn-outline-primary btn-xs min-w-0">⋯</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-disabled cursor-grab text-base leading-none">⋮⋮</span></td>
+                    <td><input type="checkbox" class="form-check-input m-0"/></td>
+                    <td class="font-medium">Add dark mode support</td>
+                    <td><span class="text-secondary text-sm">Feature</span></td>
+                    <td><span class="badge badge-soft-info">In Progress</span></td>
+                    <td class="text-right text-sm">15</td>
+                    <td class="text-right text-sm">9</td>
+                    <td class="text-sm">Ryo Tanaka</td>
+                    <td><button class="btn btn-outline-primary btn-xs min-w-0">⋯</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-disabled cursor-grab text-base leading-none">⋮⋮</span></td>
+                    <td><input type="checkbox" class="form-check-input m-0"/></td>
+                    <td class="font-medium">Performance optimization</td>
+                    <td><span class="text-secondary text-sm">Feature</span></td>
+                    <td><span class="badge badge-soft-info">In Progress</span></td>
+                    <td class="text-right text-sm">11</td>
+                    <td class="text-right text-sm">13</td>
+                    <td class="text-sm">Ryo Tanaka</td>
+                    <td><button class="btn btn-outline-primary btn-xs min-w-0">⋯</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-disabled cursor-grab text-base leading-none">⋮⋮</span></td>
+                    <td><input type="checkbox" class="form-check-input m-0"/></td>
+                    <td class="font-medium">Accessibility audit</td>
+                    <td><span class="text-secondary text-sm">Docs</span></td>
+                    <td><span class="badge badge-soft-success">Done</span></td>
+                    <td class="text-right text-sm">9</td>
+                    <td class="text-right text-sm">10</td>
+                    <td class="text-sm">—</td>
+                    <td><button class="btn btn-outline-primary btn-xs min-w-0">⋯</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-disabled cursor-grab text-base leading-none">⋮⋮</span></td>
+                    <td><input type="checkbox" class="form-check-input m-0"/></td>
+                    <td class="font-medium">Database migration</td>
+                    <td><span class="text-secondary text-sm">Feature</span></td>
+                    <td><span class="badge badge-soft-success">Done</span></td>
+                    <td class="text-right text-sm">20</td>
+                    <td class="text-right text-sm">22</td>
+                    <td class="text-sm">—</td>
+                    <td><button class="btn btn-outline-primary btn-xs min-w-0">⋯</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <div class="flex items-center justify-between gap-4 flex-wrap">
+                <span class="text-sm text-secondary">Page 1 of 7</span>
+                <div class="flex gap-2">
+                  <button class="btn btn-outline-primary btn-sm disabled" disabled>← Prev</button>
+                  <button class="btn btn-outline-primary btn-sm">Next →</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- /task table -->
+
+        </div><!-- /dashboard-content -->
+      </div><!-- /dashboard-main -->
+    </div><!-- /dashboard -->
+  </body>
+</html>
+
 
     <div class="dashboard">
       <!-- ── Sidebar ── -->

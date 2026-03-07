@@ -60,3 +60,94 @@
 .stroke-dashed {
   stroke-dasharray: 5, 5;
 }
+
+/* Topbar icon button */
+.topbar-icon-btn {
+  align-items: center;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  padding: var(--spacing-2);
+  position: relative;
+}
+
+.topbar-icon-btn:hover {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+.topbar-user-avatar {
+  align-items: center;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+.badge-dot {
+  background-color: var(--color-danger);
+  border-radius: 50%;
+  height: 6px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 6px;
+}
+
+/* Stat sparkline */
+.stat-spark {
+  display: block;
+  height: 28px;
+  margin-bottom: var(--spacing-1);
+  overflow: visible;
+  width: 100%;
+}
+
+/* Activity feed */
+.activity-feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.activity-item {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.activity-avatar-sm {
+  align-items: center;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-primary);
+  display: flex;
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: var(--font-weight-semibold);
+  height: 26px;
+  justify-content: center;
+  width: 26px;
+}
+
+.activity-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-time {
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+}
