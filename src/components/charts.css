@@ -41,6 +41,8 @@
   padding: var(--spacing-4) 0;
 }
 
+.bar-chart-sm { height: 120px; }
+
 .bar-chart-item {
   background-color: var(--color-slate-900);
   border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;

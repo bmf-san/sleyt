@@ -59,6 +59,8 @@
 
 /* Min Height */
 .min-h-0 { min-height: 0; }
+.min-h-24 { min-height: var(--spacing-24); }  /* 6rem / 96px */
+.min-h-36 { min-height: var(--spacing-36); }  /* 9rem / 144px */
 .min-h-full { min-height: 100%; }
 .min-h-screen { min-height: 100vh; }
 
@@ -79,6 +81,7 @@
 
 /* Min Width */
 .min-w-0 { min-width: 0; }
+.min-w-24 { min-width: var(--spacing-24); }   /* 6rem / 96px */
 .min-w-full { min-width: 100%; }
 
 /* Overflow */
