@@ -3,8 +3,6 @@
 
 # sleyt
 
-[English](README.md) | [日本語](README-ja.md)
-
 A minimal and modern CSS framework.
 
 [![NPM](https://nodei.co/npm/sleyt.png)](https://nodei.co/npm/sleyt/)
