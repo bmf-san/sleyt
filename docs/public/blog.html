@@ -5,46 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Sleyt CSS Framework Demo</title>
     <link rel="stylesheet" href="./css/index.css" />
-    <style>
-      .blog-hero-img {
-        width: 100%;
-        aspect-ratio: 16 / 7;
-        object-fit: cover;
-        display: block;
-      }
-      .post-card-img {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        object-fit: cover;
-        display: block;
-      }
-      .author-avatar {
-        width: 2rem;
-        height: 2rem;
-        border-radius: var(--border-radius-full);
-        object-fit: cover;
-        flex-shrink: 0;
-      }
-      .line-clamp-2 {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-      .line-clamp-3 {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-      .sidebar-post-img {
-        width: 4rem;
-        height: 4rem;
-        border-radius: var(--border-radius);
-        object-fit: cover;
-        flex-shrink: 0;
-      }
-    </style>
   </head>
 
   <body class="bg-body">
@@ -80,21 +40,21 @@
 
       <!-- Category Filter -->
       <div class="flex gap-2 flex-wrap justify-center mb-10">
-        <a href="#" class="badge badge-primary" style="font-size: var(--font-size-sm); padding: var(--spacing-2) var(--spacing-4);">All Posts</a>
-        <a href="#" class="badge badge-light text-secondary" style="font-size: var(--font-size-sm); padding: var(--spacing-2) var(--spacing-4);">Design</a>
-        <a href="#" class="badge badge-light text-secondary" style="font-size: var(--font-size-sm); padding: var(--spacing-2) var(--spacing-4);">Business</a>
-        <a href="#" class="badge badge-light text-secondary" style="font-size: var(--font-size-sm); padding: var(--spacing-2) var(--spacing-4);">Technology</a>
-        <a href="#" class="badge badge-light text-secondary" style="font-size: var(--font-size-sm); padding: var(--spacing-2) var(--spacing-4);">UX</a>
-        <a href="#" class="badge badge-light text-secondary" style="font-size: var(--font-size-sm); padding: var(--spacing-2) var(--spacing-4);">SaaS</a>
+        <a href="#" class="badge badge-primary badge-lg">All Posts</a>
+        <a href="#" class="badge badge-light text-secondary badge-lg">Design</a>
+        <a href="#" class="badge badge-light text-secondary badge-lg">Business</a>
+        <a href="#" class="badge badge-light text-secondary badge-lg">Technology</a>
+        <a href="#" class="badge badge-light text-secondary badge-lg">UX</a>
+        <a href="#" class="badge badge-light text-secondary badge-lg">SaaS</a>
       </div>
 
       <!-- Featured Post (Hero) -->
       <section class="mb-12">
-        <a href="blog-detail.html" class="card" style="text-decoration: none;">
+        <a href="blog-detail.html" class="card">
           <img
             src="https://placehold.co/1200x450?text=Featured+Article"
             alt="Featured article cover"
-            class="blog-hero-img"
+            class="w-full aspect-16-7 object-cover block"
           />
           <div class="card-body">
             <div class="flex items-center gap-3 mb-3">
@@ -114,11 +74,11 @@
             </p>
             <div class="flex items-center gap-2">
               <img
-                src="https://placehold.co/40x40?text=JT"
-                alt="Jennifer Taylor"
-                class="author-avatar"
+                src="https://placehold.co/40x40?text=YI"
+                alt="Yuki Inoue"
+                class="w-8 h-8 rounded-full object-cover flex-shrink-0"
               />
-              <span class="text-sm font-medium">Jennifer Taylor</span>
+              <span class="text-sm font-medium">Yuki Inoue</span>
             </div>
           </div>
         </a>
@@ -136,11 +96,11 @@
           <!-- Post Cards Grid -->
           <div class="grid gap-6">
             <!-- Post 1 -->
-            <a href="blog-detail.html" class="card" style="text-decoration: none;">
+            <a href="blog-detail.html" class="card">
               <img
                 src="https://placehold.co/600x340?text=Post+1"
                 alt="Post cover"
-                class="post-card-img"
+                class="w-full aspect-video object-cover block"
               />
               <div class="card-body">
                 <div class="flex items-center gap-2 mb-2">
@@ -157,11 +117,11 @@
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
                     <img
-                      src="https://placehold.co/32x32?text=JT"
-                      alt="Jennifer Taylor"
-                      class="author-avatar"
+                      src="https://placehold.co/32x32?text=YI"
+                      alt="Yuki Inoue"
+                      class="w-8 h-8 rounded-full object-cover flex-shrink-0"
                     />
-                    <span class="text-sm font-medium">Jennifer Taylor</span>
+                    <span class="text-sm font-medium">Yuki Inoue</span>
                   </div>
                   <span class="text-xs text-secondary">Oct 12, 2023</span>
                 </div>
@@ -169,11 +129,11 @@
             </a>
 
             <!-- Post 2 -->
-            <a href="blog-detail.html" class="card" style="text-decoration: none;">
+            <a href="blog-detail.html" class="card">
               <img
                 src="https://placehold.co/600x340?text=Post+2"
                 alt="Post cover"
-                class="post-card-img"
+                class="w-full aspect-video object-cover block"
               />
               <div class="card-body">
                 <div class="flex items-center gap-2 mb-2">
@@ -190,11 +150,11 @@
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
                     <img
-                      src="https://placehold.co/32x32?text=JT"
-                      alt="Jennifer Taylor"
-                      class="author-avatar"
+                      src="https://placehold.co/32x32?text=YI"
+                      alt="Yuki Inoue"
+                      class="w-8 h-8 rounded-full object-cover flex-shrink-0"
                     />
-                    <span class="text-sm font-medium">Jennifer Taylor</span>
+                    <span class="text-sm font-medium">Yuki Inoue</span>
                   </div>
                   <span class="text-xs text-secondary">Sep 30, 2023</span>
                 </div>
@@ -202,11 +162,11 @@
             </a>
 
             <!-- Post 3 -->
-            <a href="blog-detail.html" class="card" style="text-decoration: none;">
+            <a href="blog-detail.html" class="card">
               <img
                 src="https://placehold.co/600x340?text=Post+3"
                 alt="Post cover"
-                class="post-card-img"
+                class="w-full aspect-video object-cover block"
               />
               <div class="card-body">
                 <div class="flex items-center gap-2 mb-2">
@@ -224,11 +184,11 @@
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
                     <img
-                      src="https://placehold.co/32x32?text=RA"
-                      alt="Ryan A."
-                      class="author-avatar"
+                      src="https://placehold.co/32x32?text=KM"
+                      alt="Kenji Mori"
+                      class="w-8 h-8 rounded-full object-cover flex-shrink-0"
                     />
-                    <span class="text-sm font-medium">Ryan A.</span>
+                    <span class="text-sm font-medium">Kenji Mori</span>
                   </div>
                   <span class="text-xs text-secondary">Sep 15, 2023</span>
                 </div>
@@ -271,14 +231,14 @@
             <div class="card-header">
               <h3 class="font-semibold text-base">Other Featured Posts</h3>
             </div>
-            <div class="card-body" style="padding: var(--spacing-4);">
+            <div class="card-body-compact">
               <div class="flex flex-col gap-4">
                 <!-- Sidebar Post 1 -->
-                <a href="blog-detail.html" class="flex gap-3 items-start" style="text-decoration: none;">
+                <a href="blog-detail.html" class="flex gap-3 items-start no-underline">
                   <img
                     src="https://placehold.co/80x80?text=."
                     alt="Post thumbnail"
-                    class="sidebar-post-img"
+                    class="w-16 h-16 rounded object-cover flex-shrink-0"
                   />
                   <div>
                     <p class="text-sm font-medium text-primary line-clamp-2">
@@ -288,11 +248,11 @@
                   </div>
                 </a>
                 <!-- Sidebar Post 2 -->
-                <a href="blog-detail.html" class="flex gap-3 items-start" style="text-decoration: none;">
+                <a href="blog-detail.html" class="flex gap-3 items-start no-underline">
                   <img
                     src="https://placehold.co/80x80?text=."
                     alt="Post thumbnail"
-                    class="sidebar-post-img"
+                    class="w-16 h-16 rounded object-cover flex-shrink-0"
                   />
                   <div>
                     <p class="text-sm font-medium text-primary line-clamp-2">
@@ -302,11 +262,11 @@
                   </div>
                 </a>
                 <!-- Sidebar Post 3 -->
-                <a href="blog-detail.html" class="flex gap-3 items-start" style="text-decoration: none;">
+                <a href="blog-detail.html" class="flex gap-3 items-start no-underline">
                   <img
                     src="https://placehold.co/80x80?text=."
                     alt="Post thumbnail"
-                    class="sidebar-post-img"
+                    class="w-16 h-16 rounded object-cover flex-shrink-0"
                   />
                   <div>
                     <p class="text-sm font-medium text-primary line-clamp-2">
@@ -316,11 +276,11 @@
                   </div>
                 </a>
                 <!-- Sidebar Post 4 -->
-                <a href="blog-detail.html" class="flex gap-3 items-start" style="text-decoration: none;">
+                <a href="blog-detail.html" class="flex gap-3 items-start no-underline">
                   <img
                     src="https://placehold.co/80x80?text=."
                     alt="Post thumbnail"
-                    class="sidebar-post-img"
+                    class="w-16 h-16 rounded object-cover flex-shrink-0"
                   />
                   <div>
                     <p class="text-sm font-medium text-primary line-clamp-2">
@@ -338,7 +298,7 @@
             <div class="card-header">
               <h3 class="font-semibold text-base">Tags</h3>
             </div>
-            <div class="card-body" style="padding: var(--spacing-4);">
+            <div class="card-body-compact">
               <div class="flex flex-wrap gap-2">
                 <a href="#" class="badge badge-light text-secondary">Design</a>
                 <a href="#" class="badge badge-light text-secondary">UX</a>
@@ -357,7 +317,7 @@
             <div class="card-header">
               <h3 class="font-semibold text-base">Newsletter</h3>
             </div>
-            <div class="card-body" style="padding: var(--spacing-4);">
+            <div class="card-body-compact">
               <p class="text-sm text-secondary mb-3">
                 Get the latest articles delivered to your inbox.
               </p>

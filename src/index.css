@@ -19,7 +19,9 @@
 @import url('./components/navbar.css');
 @import url('./components/navigation.css');
 @import url('./components/progress.css');
+@import url('./components/prose.css');
 @import url('./components/showcase.css');
+@import url('./components/sidebar.css');
 @import url('./components/spinners.css');
 @import url('./components/swatch.css');
 @import url('./components/tables.css');
@@ -27,6 +29,7 @@
 
 /* Layout */
 @import url('./layout/container.css');
+@import url('./layout/dashboard.css');
 @import url('./layout/flexbox.css');
 @import url('./layout/grid.css');
 
