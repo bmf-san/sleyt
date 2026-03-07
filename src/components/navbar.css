@@ -111,6 +111,14 @@
 
 /* Responsive adjustments */
 @media (width <= 768px) {
+  /* backdrop-filter creates a new containing block for position:fixed,
+     which prevented .navbar-nav from sliding in/out correctly on mobile.
+     Removing it on mobile allows the hamburger menu to work as expected. */
+  .navbar {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
   /* Show hamburger menu button */
   .navbar-toggle-label {
     display: block;
