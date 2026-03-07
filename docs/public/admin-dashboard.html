@@ -185,12 +185,12 @@
             <div class="card-body">
               <div class="chart">
                 <div class="line-chart">
-                  <svg class="line-chart-svg" viewBox="0 0 800 180" preserveAspectRatio="none">
+                  <svg class="line-chart-svg" viewBox="0 0 800 160" preserveAspectRatio="none">
                     <!-- Grid lines -->
-                    <line x1="0" y1="36" x2="800" y2="36"  class="line-chart-grid-line"/>
-                    <line x1="0" y1="72" x2="800" y2="72"  class="line-chart-grid-line"/>
-                    <line x1="0" y1="108" x2="800" y2="108" class="line-chart-grid-line"/>
-                    <line x1="0" y1="144" x2="800" y2="144" class="line-chart-grid-line"/>
+                    <line x1="0" y1="32" x2="800" y2="32"  class="line-chart-grid-line"/>
+                    <line x1="0" y1="64" x2="800" y2="64"  class="line-chart-grid-line"/>
+                    <line x1="0" y1="96" x2="800" y2="96"  class="line-chart-grid-line"/>
+                    <line x1="0" y1="128" x2="800" y2="128" class="line-chart-grid-line"/>
 
                     <!-- Mobile line (dashed) -->
                     <path class="line-chart-path stroke-dashed" data-variant="danger"
@@ -216,15 +216,16 @@
                     <circle class="line-chart-point" data-variant="danger" cx="480" cy="60"/>
                     <circle class="line-chart-point" data-variant="danger" cx="640" cy="70"/>
                     <circle class="line-chart-point" data-variant="danger" cx="800" cy="30"/>
-
-                    <!-- X-axis labels -->
-                    <text class="line-chart-axis-label" x="0"   y="175" text-anchor="start">Apr 8</text>
-                    <text class="line-chart-axis-label" x="160" y="175" text-anchor="middle">Apr 21</text>
-                    <text class="line-chart-axis-label" x="320" y="175" text-anchor="middle">May 5</text>
-                    <text class="line-chart-axis-label" x="480" y="175" text-anchor="middle">Jun 1</text>
-                    <text class="line-chart-axis-label" x="640" y="175" text-anchor="middle">Jun 14</text>
-                    <text class="line-chart-axis-label" x="800" y="175" text-anchor="end">Jun 30</text>
                   </svg>
+                  <!-- X-axis labels as HTML to avoid stretching from preserveAspectRatio="none" -->
+                  <div class="line-chart-x-labels">
+                    <span class="line-chart-x-label">Apr 8</span>
+                    <span class="line-chart-x-label">Apr 21</span>
+                    <span class="line-chart-x-label">May 5</span>
+                    <span class="line-chart-x-label">Jun 1</span>
+                    <span class="line-chart-x-label">Jun 14</span>
+                    <span class="line-chart-x-label">Jun 30</span>
+                  </div>
                 </div>
                 <!-- Legend -->
                 <div class="chart-legend flex-row flex-wrap mt-2 gap-4">

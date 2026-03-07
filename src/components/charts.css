@@ -258,6 +258,31 @@
   font-weight: var(--font-weight-medium);
 }
 
+.line-chart-x-labels {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--spacing-1);
+}
+
+.line-chart-x-label {
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+.line-chart-x-label:first-child {
+  text-align: left;
+}
+
+.line-chart-x-label:last-child {
+  text-align: right;
+}
+
+.line-chart-x-label:not(:first-child):not(:last-child) {
+  text-align: center;
+}
+
 /* Multi-line Chart Support */
 .line-chart-multi .line-chart-path:nth-child(1) {
   stroke-dasharray: none;
