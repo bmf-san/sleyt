@@ -28,6 +28,9 @@ npm i sleyt
 ## Documentation
 [Document](https://bmf-san.github.io/sleyt/)
 
+## Demo
+[Demo Pages](https://bmf-san.github.io/sleyt/demo.html)
+
 ## Development
 
 ### Building CSS
@@ -37,22 +40,31 @@ npm i sleyt
 npm install
 
 # Build
-npm run build:css
+npm run build
 
 # Watch mode (automatically build when changes are detected)
 npm run watch:css
 ```
 
-### Stylelint
+### Linting
 
-We use Stylelint to maintain code quality.
+We use Stylelint for CSS and Prettier for HTML.
 
 ```bash
-# Run lint
+# Run all lints
+npm run lint
+
+# CSS lint only
 npm run lint:css
 
-# Auto-fix lint errors
+# CSS lint with auto-fix
 npm run lint:css:fix
+
+# HTML lint only
+npm run lint:html
+
+# HTML lint with auto-fix
+npm run lint:html:fix
 ```
 
 ## Contribution
