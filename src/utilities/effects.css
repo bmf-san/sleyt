@@ -42,7 +42,6 @@
 .cursor-alias { cursor: alias; }
 .cursor-copy { cursor: copy; }
 .cursor-no-drop { cursor: no-drop; }
-.cursor-grab { cursor: grab; }
 .cursor-grabbing { cursor: grabbing; }
 .cursor-all-scroll { cursor: all-scroll; }
 .cursor-col-resize { cursor: col-resize; }

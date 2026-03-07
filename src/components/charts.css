@@ -281,7 +281,7 @@
   text-align: right;
 }
 
-.line-chart-x-label:not(:first-child):not(:last-child) {
+.line-chart-x-label:not(:first-child, :last-child) {
   text-align: center;
 }
 

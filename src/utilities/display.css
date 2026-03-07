@@ -104,11 +104,35 @@
 .aspect-21-9  { aspect-ratio: 21 / 9; }
 
 /* Icon Sizes (width + height shorthand for inline SVG) */
-.icon-xs   { width: 0.75rem;  height: 0.75rem;  flex-shrink: 0; }
-.icon-sm   { width: 0.875rem; height: 0.875rem; flex-shrink: 0; }
-.icon-base { width: 1rem;     height: 1rem;     flex-shrink: 0; }
-.icon-lg   { width: 1.25rem;  height: 1.25rem;  flex-shrink: 0; }
-.icon-xl   { width: 1.5rem;   height: 1.5rem;   flex-shrink: 0; }
+.icon-xs {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex-shrink: 0;
+}
+
+.icon-sm {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+}
+
+.icon-base {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.icon-lg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.icon-xl {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
 
 /* Object Fit */
 .object-contain { object-fit: contain; }
