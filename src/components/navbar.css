@@ -111,6 +111,13 @@
 
 /* Responsive adjustments */
 @media (width <= 768px) {
+  /* backdrop-filter creates a new containing block for position:fixed,
+     which breaks the slide-out nav panel. Remove it on mobile. */
+  .navbar {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
   /* Show hamburger menu button */
   .navbar-toggle-label {
     display: block;
