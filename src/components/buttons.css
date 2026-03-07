@@ -59,6 +59,13 @@
   pointer-events: none;
 }
 
+.btn-xs {
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-1) var(--spacing-2);
+  box-shadow: none;
+}
+
 .btn-sm {
   border-radius: var(--border-radius);
   font-size: var(--font-size-xs);
@@ -203,24 +210,19 @@
   color: var(--text-on-primary);
 }
 
-/* Circle Icon Button */
-.btn-circle {
+/* Icon Button */
+.btn-icon {
   width: 2.5rem;
   height: 2.5rem;
+  padding: 0;
   border-radius: var(--border-radius-full);
-  border: 1px solid var(--border-color);
-  background-color: var(--bg-surface);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: var(--font-size-sm);
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: var(--transition-base);
+  box-shadow: var(--shadow-sm);
 }
 
-.btn-circle:hover {
-  background-color: var(--bg-card);
-  color: var(--text-primary);
+.btn-icon-sm {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--shadow-sm);
 }

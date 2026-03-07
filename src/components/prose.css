@@ -1,0 +1,95 @@
+/* Prose - Styled Article / Long-form Content */
+
+.prose {
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 65ch;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-4);
+}
+
+.prose h1 {
+  font-size: var(--font-size-4xl);
+}
+
+.prose h2 {
+  font-size: var(--font-size-2xl);
+}
+
+.prose h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--spacing-6);
+}
+
+.prose h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.prose p {
+  margin-bottom: var(--spacing-5);
+}
+
+.prose a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: var(--color-primary-hover);
+}
+
+.prose blockquote {
+  background-color: var(--bg-surface);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: var(--spacing-6) 0;
+  padding: var(--spacing-4) var(--spacing-6);
+}
+
+.prose ul,
+.prose ol {
+  list-style: revert;
+  margin-bottom: var(--spacing-5);
+  padding-left: var(--spacing-6);
+}
+
+.prose li {
+  margin-bottom: var(--spacing-2);
+}
+
+.prose strong {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.prose code {
+  font-size: var(--font-size-sm);
+}
+
+.prose pre {
+  margin-bottom: var(--spacing-5);
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: var(--spacing-8) 0;
+}
+
+/* When prose is used inside a wider container, remove max-width */
+.prose-full {
+  max-width: none;
+}
