@@ -8,30 +8,40 @@
   </head>
 
   <body class="bg-body">
-    <!-- Header -->
-    <header class="bg-slate-900 text-slate-50 py-6">
-      <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-2">Sleyt CSS Framework</h1>
-        <p class="text-slate-300 mb-4">
-          A minimal and modern CSS framework with glass morphism design.
-        </p>
-        <div class="flex gap-4">
-          <span class="text-slate-50 font-medium">English</span>
-          <a href="index-ja.html" class="text-slate-300 underline">日本語</a>
-          <a href="demo.html" class="text-slate-300 underline">Demo</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">sleyt</a>
+      <input type="checkbox" id="navbar-toggle" class="navbar-toggle-checkbox" />
+      <label for="navbar-toggle" class="navbar-toggle-label" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="navbar-item active">Docs</a></li>
+        <li><a href="demo.html" class="navbar-item">Demo</a></li>
+        <li><a href="index-ja.html" class="navbar-item">日本語</a></li>
+        <li>
           <a
             href="https://github.com/bmf-san/sleyt"
-            class="text-slate-300 underline"
+            class="navbar-item"
+            target="_blank"
+            rel="noopener"
             >GitHub</a
           >
+        </li>
+        <li>
           <a
             href="https://www.npmjs.com/package/sleyt"
-            class="text-slate-300 underline"
+            class="navbar-item"
+            target="_blank"
+            rel="noopener"
             >NPM</a
           >
-        </div>
-      </div>
-    </header>
+        </li>
+      </ul>
+      <label for="navbar-toggle" class="navbar-overlay" aria-hidden="true"></label>
+    </nav>
 
     <!-- Main Content -->
     <main class="container mx-auto py-8">
