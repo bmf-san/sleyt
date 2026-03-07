@@ -2,8 +2,6 @@
 
 # sleyt
 
-[English](README.md) | [日本語](README-ja.md)
-
 ミニマルでモダンなCSSフレームワーク。
 
 [![NPM](https://nodei.co/npm/sleyt.png)](https://nodei.co/npm/sleyt/)

@@ -4,9 +4,118 @@ This directory contains the official documentation for the Sleyt CSS Framework.
 
 ## File Structure
 
-- `index.html` - The main English documentation file
-- `index-ja.html` - The Japanese documentation file
+- `index.html` - The main documentation file
+- `demo.html` - Demo page hub (links to all demo pages)
+- `blog.html` - Blog listing demo page
+- `blog-detail.html` - Blog article detail demo page
+- `admin-dashboard.html` - Admin dashboard demo page
 - `css/` - Built CSS files for documentation
+- `img/` - Images used in demo pages
+
+## Structure of Documentation
+
+The documentation file is organized to match the source code structure in `src/`:
+
+1. **Header** - Framework name, description, and navigation links
+2. **Quick Navigation** - Jump links to main sections
+3. **Installation** - Getting started guide with npm and CDN options
+4. **Base** - Foundation styles (reset, themes, variables)
+5. **Components** - UI components library
+6. **Layout** - Layout system (container, flexbox, grid)
+7. **Utilities** - Utility classes for rapid development
+8. **Footer** - Framework overview and links
+
+## Key Features Documented
+
+### Base (src/base/)
+- **reset** - CSS reset and base element styles
+- **themes** - Dark mode and theme support
+- **variables** - CSS custom properties and design tokens
+
+### Components (src/components/)
+- **accordion** - Collapsible content panels
+- **alerts** - Notification messages for users
+- **badges** - Small status indicators and labels
+- **buttons** - Interactive elements with various styles and sizes
+- **cards** - Flexible containers for grouping content
+- **charts** - Data visualization (bar, line, donut charts)
+- **code** - Code block styling
+- **forms** - Input fields and form controls
+- **modals** - Modal dialogs and dropdown menus
+- **navbar** - Navigation components
+- **navigation** - Breadcrumbs and pagination
+- **progress** - Progress bars
+- **prose** - Article/blog body typography styles
+- **showcase** - Feature showcase components
+- **sidebar** - Sidebar navigation for dashboard layouts
+- **spinners** - Loading spinners and skeleton loaders
+- **swatch** - Color palette display
+- **tables** - Structured data display
+- **tabs** - Tab navigation system
+
+### Layout (src/layout/)
+- **container** - Responsive container with max-width breakpoints
+- **dashboard** - Dashboard layout (sidebar + main content area)
+- **flexbox** - Flexbox utilities for flexible layouts
+- **grid** - CSS Grid utilities for complex layouts
+
+### Utilities (src/utilities/)
+- **borders** - Border width, style, and border-radius utilities
+- **colors** - Background and text color classes
+- **display** - Display property, aspect-ratio, object-fit utilities
+- **effects** - Shadow, opacity, cursor, pointer-events utilities
+- **glass** - Glass morphism transparency effects
+- **position** - Positioning and z-index utilities
+- **spacing** - Margin and padding utilities
+- **transforms** - Scale, rotate, translate, transform-origin utilities
+- **transitions** - Transition, duration, timing, delay, animations utilities
+- **typography** - Font size, weight, text-decoration, text-transform, and text utilities
+
+## Update Rules
+
+When updating documentation, please follow these rules:
+
+1. **Match Implementation** - Class names and usage must match the actual CSS implementation
+2. **Provide Examples** - Include both code examples and visual demonstrations
+3. **Verify Functionality** - Test that all code examples work correctly
+4. **Follow Structure** - Maintain the established section structure
+5. **Classes Only** - All examples use only sleyt CSS classes — no inline styles or custom CSS
+
+## Documentation Standards
+
+### Code Examples
+All code examples use only Sleyt CSS framework classes - no inline styles or custom CSS.
+
+Example format:
+```html
+<div class="card glass">
+  <div class="card-header">
+    <h3 class="font-semibold">Title</h3>
+  </div>
+  <div class="card-body">
+    <p class="text-sm text-secondary mb-4">Description</p>
+  </div>
+</div>
+```
+
+## Build and Deploy
+
+To update documentation:
+
+1. Make changes to HTML files
+2. Run `npm run build` to update CSS files
+3. Test locally by opening HTML files
+4. Commit changes to update GitHub Pages
+
+## Maintenance Checklist
+
+- [ ] Do class names match the CSS implementation?
+- [ ] Are code examples functional?
+- [ ] Are new features properly documented?
+- [ ] Is responsive design working?
+- [ ] Are chart examples displaying correctly?
+- [ ] Are glass morphism effects working?
+
 
 ## Structure of Documentation
 
