@@ -106,7 +106,7 @@
 
 /* Line Chart - Enhanced */
 .line-chart {
-  height: 200px;
+  aspect-ratio: 4 / 1;
   position: relative;
   width: 100%;
   overflow: hidden;
