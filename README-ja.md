@@ -27,6 +27,9 @@ npm i sleyt
 ## ドキュメント
 [ドキュメント](https://bmf-san.github.io/sleyt/)
 
+## デモ
+[デモページ](https://bmf-san.github.io/sleyt/demo.html)
+
 ## 開発
 
 ### CSSのビルド
@@ -36,22 +39,31 @@ npm i sleyt
 npm install
 
 # ビルド
-npm run build:css
+npm run build
 
 # 監視モード（変更を監視して自動的にビルド）
 npm run watch:css
 ```
 
-### Stylelint
+### リント
 
-コードの品質を保つために、CSSのlintツール（Stylelint）を導入しています。
+CSSはStylelint、HTMLはPrettierで品質を維持しています。
 
 ```bash
-# lintを実行
+# 全lintを実行
+npm run lint
+
+# CSS lintのみ
 npm run lint:css
 
-# lintのエラーを自動修正
+# CSS lintの自動修正
 npm run lint:css:fix
+
+# HTML lintのみ
+npm run lint:html
+
+# HTML lintの自動修正
+npm run lint:html:fix
 ```
 
 # コントリビューション

@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Sleyt CSS Framework Demo</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body class="bg-body">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">sleyt</a>
+      <input
+        type="checkbox"
+        id="navbar-toggle"
+        class="navbar-toggle-checkbox"
+      />
+      <label
+        for="navbar-toggle"
+        class="navbar-toggle-label"
+        aria-label="Toggle navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="navbar-item">Docs</a></li>
+        <li><a href="demo.html" class="navbar-item">Demo</a></li>
+        <li>
+          <a
+            href="https://github.com/bmf-san/sleyt"
+            class="navbar-item"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.npmjs.com/package/sleyt"
+            class="navbar-item"
+            target="_blank"
+            rel="noopener"
+            >NPM</a
+          >
+        </li>
+      </ul>
+      <label
+        for="navbar-toggle"
+        class="navbar-overlay"
+        aria-hidden="true"
+      ></label>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-10">
+      <!-- Page Title -->
+      <div class="mb-8 text-center">
+        <h1 class="text-4xl font-bold mb-3">Blog</h1>
+        <p class="text-secondary text-lg">
+          The latest articles, guides, and updates.
+        </p>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="flex gap-2 flex-wrap justify-center mb-10">
+        <a href="#" class="badge badge-primary badge-lg">All Posts</a>
+        <a href="#" class="badge badge-light text-secondary badge-lg">Design</a>
+        <a href="#" class="badge badge-light text-secondary badge-lg"
+          >Business</a
+        >
+        <a href="#" class="badge badge-light text-secondary badge-lg"
+          >Technology</a
+        >
+        <a href="#" class="badge badge-light text-secondary badge-lg">UX</a>
+        <a href="#" class="badge badge-light text-secondary badge-lg">SaaS</a>
+      </div>
+
+      <!-- Featured Post (Hero) -->
+      <section class="mb-12">
+        <a href="blog-detail.html" class="card">
+          <img
+            src="https://placehold.co/1200x450?text=Featured+Article"
+            alt="Featured article cover"
+            class="w-full aspect-16-7 object-cover block"
+          />
+          <div class="card-body">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="badge badge-info">Business</span>
+              <span class="text-sm text-secondary">Nov 24, 2023</span>
+              <span class="text-sm text-secondary">·</span>
+              <span class="text-sm text-secondary">5 min read</span>
+            </div>
+            <h2 class="text-3xl font-bold mb-3 text-primary">
+              Unlocking Business Efficiency with SaaS Solutions
+            </h2>
+            <p class="text-secondary leading-relaxed line-clamp-3 mb-4">
+              Dive into the world of Software as a Service and discover how
+              modern businesses harness cloud-based tools to streamline
+              operations, reduce costs, and scale seamlessly. From automation to
+              real-time analytics, SaaS is reshaping the way teams work.
+            </p>
+            <div class="flex items-center gap-2">
+              <img
+                src="https://placehold.co/40x40?text=YI"
+                alt="Yuki Inoue"
+                class="w-8 h-8 rounded-full object-cover flex-shrink-0"
+              />
+              <span class="text-sm font-medium">Yuki Inoue</span>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <!-- Two-column layout: post list + sidebar -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Post List (left/main, 2/3 width) -->
+        <div class="md:col-span-2">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl font-bold">Recent Posts</h2>
+            <a href="#" class="btn btn-outline-primary btn-sm">All Posts</a>
+          </div>
+
+          <!-- Post Cards Grid -->
+          <div class="grid gap-6">
+            <!-- Post 1 -->
+            <a href="blog-detail.html" class="card">
+              <img
+                src="https://placehold.co/600x340?text=Post+1"
+                alt="Post cover"
+                class="w-full aspect-video object-cover block"
+              />
+              <div class="card-body">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-secondary">Design</span>
+                  <span class="text-xs text-secondary">3 min read</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-primary">
+                  Mastering UI Elements: A Practical Guide for Designers
+                </h3>
+                <p
+                  class="text-secondary text-sm leading-relaxed line-clamp-2 mb-4"
+                >
+                  Dive into the world of user interfaces with our expert guides,
+                  latest trends, and practical tips for building better
+                  products.
+                </p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="https://placehold.co/32x32?text=YI"
+                      alt="Yuki Inoue"
+                      class="w-8 h-8 rounded-full object-cover flex-shrink-0"
+                    />
+                    <span class="text-sm font-medium">Yuki Inoue</span>
+                  </div>
+                  <span class="text-xs text-secondary">Oct 12, 2023</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Post 2 -->
+            <a href="blog-detail.html" class="card">
+              <img
+                src="https://placehold.co/600x340?text=Post+2"
+                alt="Post cover"
+                class="w-full aspect-video object-cover block"
+              />
+              <div class="card-body">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-info">UX</span>
+                  <span class="text-xs text-secondary">5 min read</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-primary">
+                  Crafting Seamless Experiences: The Art of Intuitive UI Design
+                </h3>
+                <p
+                  class="text-secondary text-sm leading-relaxed line-clamp-2 mb-4"
+                >
+                  Explore the principles and techniques that drive user-centric
+                  UI design, ensuring a seamless and intuitive experience for
+                  your audience.
+                </p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="https://placehold.co/32x32?text=YI"
+                      alt="Yuki Inoue"
+                      class="w-8 h-8 rounded-full object-cover flex-shrink-0"
+                    />
+                    <span class="text-sm font-medium">Yuki Inoue</span>
+                  </div>
+                  <span class="text-xs text-secondary">Sep 30, 2023</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Post 3 -->
+            <a href="blog-detail.html" class="card">
+              <img
+                src="https://placehold.co/600x340?text=Post+3"
+                alt="Post cover"
+                class="w-full aspect-video object-cover block"
+              />
+              <div class="card-body">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-success">Technology</span>
+                  <span class="text-xs text-secondary">2 min read</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-primary">
+                  Beyond Aesthetics: The Power of Emotional UX Design
+                </h3>
+                <p
+                  class="text-secondary text-sm leading-relaxed line-clamp-2 mb-4"
+                >
+                  Delve into the realm of emotional design and discover how
+                  incorporating empathy and psychological insights can elevate
+                  user experiences.
+                </p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="https://placehold.co/32x32?text=KM"
+                      alt="Kenji Mori"
+                      class="w-8 h-8 rounded-full object-cover flex-shrink-0"
+                    />
+                    <span class="text-sm font-medium">Kenji Mori</span>
+                  </div>
+                  <span class="text-xs text-secondary">Sep 15, 2023</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Pagination -->
+          <div class="flex justify-center mt-8">
+            <ul class="pagination flex gap-2">
+              <li class="pagination-item">
+                <a href="#" class="pagination-link disabled">&laquo;</a>
+              </li>
+              <li class="pagination-item">
+                <a href="#" class="pagination-link active">1</a>
+              </li>
+              <li class="pagination-item">
+                <a href="#" class="pagination-link">2</a>
+              </li>
+              <li class="pagination-item">
+                <a href="#" class="pagination-link">3</a>
+              </li>
+              <li class="pagination-item">
+                <span class="pagination-ellipsis">&hellip;</span>
+              </li>
+              <li class="pagination-item">
+                <a href="#" class="pagination-link">8</a>
+              </li>
+              <li class="pagination-item">
+                <a href="#" class="pagination-link">&raquo;</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar (right, 1/3 width) -->
+        <aside class="md:col-span-1">
+          <!-- Featured Posts -->
+          <div class="card mb-6">
+            <div class="card-header">
+              <h3 class="font-semibold text-base">Other Featured Posts</h3>
+            </div>
+            <div class="card-body-compact">
+              <div class="flex flex-col gap-4">
+                <!-- Sidebar Post 1 -->
+                <a
+                  href="blog-detail.html"
+                  class="flex gap-3 items-start no-underline"
+                >
+                  <img
+                    src="https://placehold.co/80x80?text=."
+                    alt="Post thumbnail"
+                    class="w-16 h-16 rounded object-cover flex-shrink-0"
+                  />
+                  <div>
+                    <p class="text-sm font-medium text-primary line-clamp-2">
+                      Revolutionizing industries through SaaS implementation
+                    </p>
+                    <span class="text-xs text-secondary">Oct 5, 2023</span>
+                  </div>
+                </a>
+                <!-- Sidebar Post 2 -->
+                <a
+                  href="blog-detail.html"
+                  class="flex gap-3 items-start no-underline"
+                >
+                  <img
+                    src="https://placehold.co/80x80?text=."
+                    alt="Post thumbnail"
+                    class="w-16 h-16 rounded object-cover flex-shrink-0"
+                  />
+                  <div>
+                    <p class="text-sm font-medium text-primary line-clamp-2">
+                      Synergizing SaaS and UX design for elevating digital
+                      experiences
+                    </p>
+                    <span class="text-xs text-secondary">Sep 22, 2023</span>
+                  </div>
+                </a>
+                <!-- Sidebar Post 3 -->
+                <a
+                  href="blog-detail.html"
+                  class="flex gap-3 items-start no-underline"
+                >
+                  <img
+                    src="https://placehold.co/80x80?text=."
+                    alt="Post thumbnail"
+                    class="w-16 h-16 rounded object-cover flex-shrink-0"
+                  />
+                  <div>
+                    <p class="text-sm font-medium text-primary line-clamp-2">
+                      Navigating SaaS waters with intuitive UI and UX
+                    </p>
+                    <span class="text-xs text-secondary">Sep 10, 2023</span>
+                  </div>
+                </a>
+                <!-- Sidebar Post 4 -->
+                <a
+                  href="blog-detail.html"
+                  class="flex gap-3 items-start no-underline"
+                >
+                  <img
+                    src="https://placehold.co/80x80?text=."
+                    alt="Post thumbnail"
+                    class="w-16 h-16 rounded object-cover flex-shrink-0"
+                  />
+                  <div>
+                    <p class="text-sm font-medium text-primary line-clamp-2">
+                      Sculpting SaaS success &mdash; the art of UI and UX design
+                    </p>
+                    <span class="text-xs text-secondary">Aug 30, 2023</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="card mb-6">
+            <div class="card-header">
+              <h3 class="font-semibold text-base">Tags</h3>
+            </div>
+            <div class="card-body-compact">
+              <div class="flex flex-wrap gap-2">
+                <a href="#" class="badge badge-light text-secondary">Design</a>
+                <a href="#" class="badge badge-light text-secondary">UX</a>
+                <a href="#" class="badge badge-light text-secondary">SaaS</a>
+                <a href="#" class="badge badge-light text-secondary"
+                  >Business</a
+                >
+                <a href="#" class="badge badge-light text-secondary"
+                  >Technology</a
+                >
+                <a href="#" class="badge badge-light text-secondary">Product</a>
+                <a href="#" class="badge badge-light text-secondary"
+                  >Frontend</a
+                >
+                <a href="#" class="badge badge-light text-secondary">CSS</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="font-semibold text-base">Newsletter</h3>
+            </div>
+            <div class="card-body-compact">
+              <p class="text-sm text-secondary mb-3">
+                Get the latest articles delivered to your inbox.
+              </p>
+              <form>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary w-full">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-8 mt-16">
+      <div class="container mx-auto text-center">
+        <p class="text-sm">
+          &copy; 2024 sleyt &mdash; A minimal CSS framework demo.
+          <a href="index.html" class="text-slate-50 underline ml-2"
+            >Back to Docs</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

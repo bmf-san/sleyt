@@ -59,6 +59,13 @@
   pointer-events: none;
 }
 
+.btn-xs {
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-1) var(--spacing-2);
+  box-shadow: none;
+}
+
 .btn-sm {
   border-radius: var(--border-radius);
   font-size: var(--font-size-xs);
@@ -201,4 +208,21 @@
 .btn-outline-secondary:hover:not(:disabled), .btn-outline-secondary:focus:not(:disabled) {
   background-color: var(--color-secondary);
   color: var(--text-on-primary);
+}
+
+/* Icon Button */
+.btn-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-icon-sm {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--shadow-sm);
 }

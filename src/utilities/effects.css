@@ -33,6 +33,7 @@
 .cursor-help { cursor: help; }
 .cursor-not-allowed { cursor: not-allowed; }
 .cursor-none { cursor: none; }
+.cursor-grab { cursor: grab; }
 .cursor-context-menu { cursor: context-menu; }
 .cursor-progress { cursor: progress; }
 .cursor-cell { cursor: cell; }
@@ -41,7 +42,6 @@
 .cursor-alias { cursor: alias; }
 .cursor-copy { cursor: copy; }
 .cursor-no-drop { cursor: no-drop; }
-.cursor-grab { cursor: grab; }
 .cursor-grabbing { cursor: grabbing; }
 .cursor-all-scroll { cursor: all-scroll; }
 .cursor-col-resize { cursor: col-resize; }
@@ -69,4 +69,9 @@
 .select-none { user-select: none; }
 .select-text { user-select: text; }
 .select-all { user-select: all; }
+
+/* Filter Brightness */
+.brightness-84 { filter: brightness(0.84); }
+.brightness-92 { filter: brightness(0.92); }
+.brightness-108 { filter: brightness(1.08); }
 .select-auto { user-select: auto; }

@@ -8,29 +8,51 @@
   </head>
 
   <body class="bg-body">
-    <!-- Header -->
-    <header class="bg-slate-900 text-slate-50 py-6">
-      <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-2">Sleyt CSS Framework</h1>
-        <p class="text-slate-300 mb-4">
-          A minimal and modern CSS framework with glass morphism design.
-        </p>
-        <div class="flex gap-4">
-          <span class="text-slate-50 font-medium">English</span>
-          <a href="index-ja.html" class="text-slate-300 underline">日本語</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">sleyt</a>
+      <input
+        type="checkbox"
+        id="navbar-toggle"
+        class="navbar-toggle-checkbox"
+      />
+      <label
+        for="navbar-toggle"
+        class="navbar-toggle-label"
+        aria-label="Toggle navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="navbar-item active">Docs</a></li>
+        <li><a href="demo.html" class="navbar-item">Demo</a></li>
+        <li>
           <a
             href="https://github.com/bmf-san/sleyt"
-            class="text-slate-300 underline"
+            class="navbar-item"
+            target="_blank"
+            rel="noopener"
             >GitHub</a
           >
+        </li>
+        <li>
           <a
             href="https://www.npmjs.com/package/sleyt"
-            class="text-slate-300 underline"
+            class="navbar-item"
+            target="_blank"
+            rel="noopener"
             >NPM</a
           >
-        </div>
-      </div>
-    </header>
+        </li>
+      </ul>
+      <label
+        for="navbar-toggle"
+        class="navbar-overlay"
+        aria-hidden="true"
+      ></label>
+    </nav>
 
     <!-- Main Content -->
     <main class="container mx-auto py-8">
@@ -55,6 +77,12 @@
           </div>
         </div>
       </div>
+
+      <!-- Demo Pages Section -->
+      <section id="demos" class="mb-10">
+        <h2 class="text-xl font-semibold mb-4">Demo Pages</h2>
+        <a href="demo.html" class="btn btn-primary">View all demos →</a>
+      </section>
 
       <!-- Installation Section -->
       <section id="installation" class="mb-16">
@@ -199,88 +227,77 @@
                 >
                   <div class="text-center">
                     <div
-                      class="bg-slate-50 rounded mb-2 border-2 border-slate-400"
-                      style="height: 4rem"
+                      class="bg-slate-50 rounded mb-2 border-2 border-slate-400 swatch-preview"
                     ></div>
                     <code class="text-xs block">slate-50</code>
                     <span class="text-xs text-secondary">98%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-100 rounded mb-2 border-2 border-slate-400"
-                      style="height: 4rem"
+                      class="bg-slate-100 rounded mb-2 border-2 border-slate-400 swatch-preview"
                     ></div>
                     <code class="text-xs block">slate-100</code>
                     <span class="text-xs text-secondary">96%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-200 rounded mb-2 border-2 border-slate-400"
-                      style="height: 4rem"
+                      class="bg-slate-200 rounded mb-2 border-2 border-slate-400 swatch-preview"
                     ></div>
                     <code class="text-xs block">slate-200</code>
                     <span class="text-xs text-secondary">90%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-300 rounded mb-2 border-2 border-slate-400"
-                      style="height: 4rem"
+                      class="bg-slate-300 rounded mb-2 border-2 border-slate-400 swatch-preview"
                     ></div>
                     <code class="text-xs block">slate-300</code>
                     <span class="text-xs text-secondary">83%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-400 rounded mb-2 border-2 border-slate-600"
-                      style="height: 4rem"
+                      class="bg-slate-400 rounded mb-2 border-2 border-slate-600 swatch-preview"
                     ></div>
                     <code class="text-xs block">slate-400</code>
                     <span class="text-xs text-secondary">64%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-500 rounded mb-2 border-2 border-slate-600"
-                      style="height: 4rem"
+                      class="bg-slate-500 rounded mb-2 border-2 border-slate-600 swatch-preview"
                     ></div>
                     <code class="text-xs block text-white">slate-500</code>
                     <span class="text-xs text-secondary">45%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-600 rounded mb-2 border-2 border-slate-400"
-                      style="height: 4rem"
+                      class="bg-slate-600 rounded mb-2 border-2 border-slate-400 swatch-preview"
                     ></div>
                     <code class="text-xs block text-white">slate-600</code>
                     <span class="text-xs text-secondary">32%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-700 rounded mb-2 border-2 border-slate-400"
-                      style="height: 4rem"
+                      class="bg-slate-700 rounded mb-2 border-2 border-slate-400 swatch-preview"
                     ></div>
                     <code class="text-xs block text-white">slate-700</code>
                     <span class="text-xs text-secondary">25%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-800 rounded mb-2 border-2 border-slate-400"
-                      style="height: 4rem"
+                      class="bg-slate-800 rounded mb-2 border-2 border-slate-400 swatch-preview"
                     ></div>
                     <code class="text-xs block text-white">slate-800</code>
                     <span class="text-xs text-secondary">15%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-900 rounded mb-2 border-2 border-slate-400"
-                      style="height: 4rem"
+                      class="bg-slate-900 rounded mb-2 border-2 border-slate-400 swatch-preview"
                     ></div>
                     <code class="text-xs block text-white">slate-900</code>
                     <span class="text-xs text-secondary">9%</span>
                   </div>
                   <div class="text-center">
                     <div
-                      class="bg-slate-950 rounded mb-2 border-2 border-slate-400"
-                      style="height: 4rem"
+                      class="bg-slate-950 rounded mb-2 border-2 border-slate-400 swatch-preview"
                     ></div>
                     <code class="text-xs block text-white">slate-950</code>
                     <span class="text-xs text-secondary">4%</span>
@@ -302,8 +319,7 @@
                   <div class="grid grid-cols-3 gap-2">
                     <div class="text-center">
                       <div
-                        class="bg-success rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem"
+                        class="bg-success rounded mb-2 flex items-center justify-center swatch-preview"
                       >
                         <span class="text-white text-xs font-semibold"
                           >500</span
@@ -319,8 +335,7 @@
                     </div>
                     <div class="text-center">
                       <div
-                        class="bg-success rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem; filter: brightness(0.92)"
+                        class="bg-success rounded mb-2 flex items-center justify-center swatch-preview brightness-92"
                       >
                         <span class="text-white text-xs font-semibold"
                           >600</span
@@ -336,8 +351,7 @@
                     </div>
                     <div class="text-center">
                       <div
-                        class="bg-success rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem; filter: brightness(0.84)"
+                        class="bg-success rounded mb-2 flex items-center justify-center swatch-preview brightness-84"
                       >
                         <span class="text-white text-xs font-semibold"
                           >700</span
@@ -359,8 +373,7 @@
                   <div class="grid grid-cols-3 gap-2">
                     <div class="text-center">
                       <div
-                        class="bg-danger rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem"
+                        class="bg-danger rounded mb-2 flex items-center justify-center swatch-preview"
                       >
                         <span class="text-white text-xs font-semibold"
                           >500</span
@@ -376,8 +389,7 @@
                     </div>
                     <div class="text-center">
                       <div
-                        class="bg-danger rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem; filter: brightness(0.92)"
+                        class="bg-danger rounded mb-2 flex items-center justify-center swatch-preview brightness-92"
                       >
                         <span class="text-white text-xs font-semibold"
                           >600</span
@@ -393,8 +405,7 @@
                     </div>
                     <div class="text-center">
                       <div
-                        class="bg-danger rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem; filter: brightness(0.84)"
+                        class="bg-danger rounded mb-2 flex items-center justify-center swatch-preview brightness-84"
                       >
                         <span class="text-white text-xs font-semibold"
                           >700</span
@@ -416,8 +427,7 @@
                   <div class="grid grid-cols-3 gap-2">
                     <div class="text-center">
                       <div
-                        class="bg-warning rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem; filter: brightness(1.08)"
+                        class="bg-warning rounded mb-2 flex items-center justify-center swatch-preview brightness-108"
                       >
                         <span class="text-slate-900 text-xs font-semibold"
                           >400</span
@@ -433,8 +443,7 @@
                     </div>
                     <div class="text-center">
                       <div
-                        class="bg-warning rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem"
+                        class="bg-warning rounded mb-2 flex items-center justify-center swatch-preview"
                       >
                         <span class="text-slate-900 text-xs font-semibold"
                           >500</span
@@ -450,8 +459,7 @@
                     </div>
                     <div class="text-center">
                       <div
-                        class="bg-warning rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem; filter: brightness(0.92)"
+                        class="bg-warning rounded mb-2 flex items-center justify-center swatch-preview brightness-92"
                       >
                         <span class="text-slate-900 text-xs font-semibold"
                           >600</span
@@ -473,8 +481,7 @@
                   <div class="grid grid-cols-3 gap-2">
                     <div class="text-center">
                       <div
-                        class="bg-info rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem"
+                        class="bg-info rounded mb-2 flex items-center justify-center swatch-preview"
                       >
                         <span class="text-white text-xs font-semibold"
                           >500</span
@@ -490,8 +497,7 @@
                     </div>
                     <div class="text-center">
                       <div
-                        class="bg-info rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem; filter: brightness(0.92)"
+                        class="bg-info rounded mb-2 flex items-center justify-center swatch-preview brightness-92"
                       >
                         <span class="text-white text-xs font-semibold"
                           >600</span
@@ -507,8 +513,7 @@
                     </div>
                     <div class="text-center">
                       <div
-                        class="bg-info rounded mb-2 flex items-center justify-center"
-                        style="height: 4rem; filter: brightness(0.84)"
+                        class="bg-info rounded mb-2 flex items-center justify-center swatch-preview brightness-84"
                       >
                         <span class="text-white text-xs font-semibold"
                           >700</span
@@ -654,7 +659,7 @@
                   </h4>
                   <div
                     class="flex flex-col items-center justify-center bg-slate-100 p-6 rounded mb-2"
-                    style="min-height: 150px"
+                    class="min-h-36"
                   >
                     <div class="bg-primary text-white p-2 text-xs mb-2">
                       Title
@@ -678,19 +683,19 @@
                   >
                     <div
                       class="flex-1 bg-primary text-white p-3 text-xs text-center"
-                      style="min-width: 100px"
+                      class="min-w-24"
                     >
                       Card 1
                     </div>
                     <div
                       class="flex-1 bg-success text-white p-3 text-xs text-center"
-                      style="min-width: 100px"
+                      class="min-w-24"
                     >
                       Card 2
                     </div>
                     <div
                       class="flex-1 bg-warning p-3 text-xs text-center"
-                      style="min-width: 100px"
+                      class="min-w-24"
                     >
                       Card 3
                     </div>
@@ -946,7 +951,10 @@
                   <code class="text-xs block mb-1"
                     >.btn-outline-{'{variant}'}, .btn-link</code
                   >
-                  <code class="text-xs block">.btn-sm, .btn-lg</code>
+                  <code class="text-xs block mb-1">.btn-sm, .btn-lg</code>
+                  <code class="text-xs block"
+                    >.btn-circle - Circular icon button</code
+                  >
                 </div>
               </div>
             </div>
@@ -1303,7 +1311,7 @@
                 </p>
 
                 <h4 class="font-semibold mb-3 text-sm">Bar Chart</h4>
-                <div class="bar-chart mb-6" style="height: 120px">
+                <div class="bar-chart bar-chart-sm mb-6">
                   <div
                     class="bar-chart-item"
                     data-variant="primary"
@@ -1802,7 +1810,7 @@
 
                 <h4 class="font-semibold mb-2 text-sm">Basic Progress</h4>
                 <div class="progress mb-4">
-                  <div class="progress-bar bg-primary" style="width: 60%"></div>
+                  <div class="progress-bar bg-primary w-3/5"></div>
                 </div>
 
                 <h4 class="font-semibold mb-2 text-sm mt-4">
@@ -1810,14 +1818,12 @@
                 </h4>
                 <div class="progress mb-2">
                   <div
-                    class="progress-bar bg-success progress-striped"
-                    style="width: 70%"
+                    class="progress-bar bg-success progress-striped w-7/10"
                   ></div>
                 </div>
                 <div class="progress mb-4">
                   <div
-                    class="progress-bar bg-info progress-animated"
-                    style="width: 80%"
+                    class="progress-bar bg-info progress-animated w-4/5"
                   ></div>
                 </div>
 
@@ -1871,8 +1877,8 @@
               </div>
               <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
-                  Margin and padding utilities. Values: 0, 1, 2, 3, 4, 5, 6, 8,
-                  10, 12, 16, 20, 24, 32
+                  Margin and padding utilities. Values: 0, 0.5, 1, 2, 3, 4, 5,
+                  6, 8, 10, 12, 16, 20, 24, 32
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -1925,9 +1931,9 @@
                     Spacing scale (in rem):
                   </p>
                   <code class="text-xs"
-                    >0: 0 | 1: 0.25 | 2: 0.5 | 3: 0.75 | 4: 1 | 5: 1.25 | 6: 1.5
-                    | 8: 2 | 10: 2.5 | 12: 3 | 16: 4 | 20: 5 | 24: 6 | 32:
-                    8</code
+                    >0: 0 | 0.5: 0.125 | 1: 0.25 | 2: 0.5 | 3: 0.75 | 4: 1 | 5:
+                    1.25 | 6: 1.5 | 8: 2 | 10: 2.5 | 12: 3 | 16: 4 | 20: 5 | 24:
+                    6 | 32: 8</code
                   >
                 </div>
               </div>
@@ -2449,6 +2455,15 @@
                     <code class="text-xs block mb-1"
                       >.block, .inline-block, .inline, .hidden</code
                     >
+                    <h4 class="font-semibold mb-2 mt-3 text-sm">
+                      Responsive Display
+                    </h4>
+                    <code class="text-xs block mb-1"
+                      >.md:hidden, .md:block, .md:flex, .md:inline-flex</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.lg:hidden, .lg:block, .lg:flex, .lg:inline-flex</code
+                    >
                     <h4 class="font-semibold mb-2 mt-3 text-sm">Width</h4>
                     <code class="text-xs block mb-1">.w-full, .w-auto</code>
                     <code class="text-xs block"
@@ -2459,6 +2474,15 @@
                     <h4 class="font-semibold mb-2 text-sm">Height</h4>
                     <code class="text-xs block mb-1"
                       >.h-full, .h-auto, .h-screen</code
+                    >
+                    <h4 class="font-semibold mb-2 mt-3 text-sm">
+                      Aspect Ratio
+                    </h4>
+                    <code class="text-xs block mb-1"
+                      >.aspect-video (16/9), .aspect-square (1/1)</code
+                    >
+                    <code class="text-xs block mb-1"
+                      >.aspect-16-6, .aspect-16-7</code
                     >
                     <h4 class="font-semibold mb-2 mt-3 text-sm">Overflow</h4>
                     <code class="text-xs block mb-1"

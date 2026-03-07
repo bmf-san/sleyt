@@ -1,4 +1,11 @@
 /* Swatch */
+
+/* Color preview box used in docs (4rem tall) */
+.swatch-preview {
+  height: var(--spacing-16);
+  border-radius: var(--border-radius-sm);
+}
+
 .swatch {
   align-items: center;
   border-radius: var(--border-radius);
