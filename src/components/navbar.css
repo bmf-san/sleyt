@@ -155,4 +155,21 @@
     margin-bottom: var(--spacing-3);
     width: 100%;
   }
+
+  /* Backdrop overlay – closes menu when clicked */
+  .navbar-overlay {
+    background-color: rgb(0 0 0 / 50%);
+    cursor: pointer;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+  }
+
+  .navbar-toggle-checkbox:checked ~ .navbar-overlay {
+    display: block;
+  }
 }
