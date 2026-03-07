@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demos - Sleyt CSS Framework</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body class="bg-body">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">sleyt</a>
+      <input type="checkbox" id="navbar-toggle" class="navbar-toggle-checkbox" />
+      <label for="navbar-toggle" class="navbar-toggle-label" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="navbar-item">Docs</a></li>
+        <li><a href="demo.html" class="navbar-item active">Demo</a></li>
+        <li>
+          <a
+            href="https://github.com/bmf-san/sleyt"
+            class="navbar-item"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+      <label for="navbar-toggle" class="navbar-overlay" aria-hidden="true"></label>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-12">
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold mb-3">Demo Pages</h1>
+        <p class="text-secondary text-lg">
+          Explore real-world UI patterns built entirely with Sleyt CSS classes.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Blog Demo -->
+        <a href="blog.html" class="card glass hover:scale-105 transition-transform no-underline">
+          <div class="card-header">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-lg">B</div>
+              <h2 class="text-xl font-semibold">Blog</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-secondary text-sm mb-4">
+              Article listing page showcasing typography, cards, badges, responsive grid, and layout utilities.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge badge-primary badge-sm">Cards</span>
+              <span class="badge badge-light badge-sm">Typography</span>
+              <span class="badge badge-light badge-sm">Badges</span>
+              <span class="badge badge-light badge-sm">Grid</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="text-primary text-sm font-medium">View demo →</span>
+          </div>
+        </a>
+
+        <!-- Blog Detail Demo -->
+        <a href="blog-detail.html" class="card glass hover:scale-105 transition-transform no-underline">
+          <div class="card-header">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-white font-bold text-lg">A</div>
+              <h2 class="text-xl font-semibold">Article</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-secondary text-sm mb-4">
+              Single article page with prose styles, code blocks, breadcrumbs, and sidebar components.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge badge-primary badge-sm">Prose</span>
+              <span class="badge badge-light badge-sm">Code</span>
+              <span class="badge badge-light badge-sm">Sidebar</span>
+              <span class="badge badge-light badge-sm">Breadcrumbs</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="text-primary text-sm font-medium">View demo →</span>
+          </div>
+        </a>
+
+        <!-- Admin Dashboard Demo -->
+        <a href="admin-dashboard.html" class="card glass hover:scale-105 transition-transform no-underline">
+          <div class="card-header">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="flex items-center justify-center w-10 h-10 rounded-full bg-success text-white font-bold text-lg">D</div>
+              <h2 class="text-xl font-semibold">Dashboard</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-secondary text-sm mb-4">
+              Admin dashboard with stat cards, charts, activity feed, data table, and a collapsible sidebar layout.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge badge-primary badge-sm">Charts</span>
+              <span class="badge badge-light badge-sm">Tables</span>
+              <span class="badge badge-light badge-sm">Sidebar</span>
+              <span class="badge badge-light badge-sm">Stats</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="text-primary text-sm font-medium">View demo →</span>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-6 mt-16">
+      <div class="container mx-auto text-center text-sm">
+        <p>
+          Built with
+          <a href="index.html" class="text-slate-100 underline">Sleyt CSS Framework</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
