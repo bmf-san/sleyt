@@ -93,3 +93,30 @@
 .prose-full {
   max-width: none;
 }
+
+/* Prose tables — bare <table> elements rendered from Markdown */
+.prose table {
+  border-collapse: collapse;
+  border: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-4);
+  width: 100%;
+}
+
+.prose table th,
+.prose table td {
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-3);
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose table thead th {
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
