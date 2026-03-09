@@ -1855,6 +1855,213 @@
                 </div>
               </div>
             </div>
+
+            <!-- Prose -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">Prose</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  Styled long-form content for articles, blog posts, and
+                  Markdown-rendered HTML.
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">Example</h4>
+                <div class="prose mb-4">
+                  <h2>Article Heading</h2>
+                  <p>
+                    A paragraph of body text with an
+                    <a href="#">inline link</a> and <strong>bold text</strong>.
+                  </p>
+                  <blockquote>
+                    A blockquote for highlighted passages.
+                  </blockquote>
+                  <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                  </ul>
+                  <hr />
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Column A</th>
+                        <th>Column B</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Cell 1</td>
+                        <td>Cell 2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">Available Classes:</p>
+                  <code class="text-xs block mb-1"
+                    >.prose - Styled long-form content (max-width: 65ch)</code
+                  >
+                  <code class="text-xs block"
+                    >.prose-full - Remove max-width constraint</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Modals & Dropdown -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">Modals & Dropdown</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  Overlay dialogs and contextual dropdown menus.
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">Modal Structure</h4>
+                <div class="bg-slate-50 rounded mb-4 p-4">
+                  <div
+                    class="border border-slate-300 rounded-lg p-4 bg-white shadow max-w-xs mx-auto"
+                  >
+                    <div class="flex items-center justify-between mb-3">
+                      <span class="font-semibold">Dialog Title</span>
+                      <button class="btn btn-ghost btn-sm">&times;</button>
+                    </div>
+                    <p class="text-sm text-secondary mb-3">
+                      Modal body content goes here.
+                    </p>
+                    <div class="flex gap-2 justify-end">
+                      <button class="btn btn-outline-primary btn-sm">
+                        Cancel
+                      </button>
+                      <button class="btn btn-primary btn-sm">Confirm</button>
+                    </div>
+                  </div>
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">Dropdown</h4>
+                <div class="flex gap-4 mb-4">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-primary btn-sm">
+                      Menu &#9662;
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      style="
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                        position: static;
+                        box-shadow: none;
+                      "
+                    >
+                      <a class="dropdown-item" href="#">Item one</a>
+                      <a class="dropdown-item" href="#">Item two</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Item three</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">Modal Classes:</p>
+                  <code class="text-xs block mb-1"
+                    >.modal, .modal.active - Overlay; add .active to show</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.modal-content, .modal-header, .modal-title, .modal-close,
+                    .modal-body, .modal-footer</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.modal-{'{sm|md|lg|xl|full}'} - Size variants</code
+                  >
+                  <p class="text-xs font-semibold mb-2 mt-2">
+                    Dropdown Classes:
+                  </p>
+                  <code class="text-xs block mb-1"
+                    >.dropdown, .dropdown-menu, .dropdown-item,
+                    .dropdown-divider</code
+                  >
+                  <code class="text-xs block"
+                    >.dropdown-menu.dropdown-right, .dropdown-menu.dropdown-top
+                    - Positions</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">Sidebar</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  Fixed-width vertical navigation sidebar, responsive with a
+                  CSS-only mobile toggle.
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">Example</h4>
+                <div
+                  class="bg-slate-50 rounded mb-4 overflow-hidden"
+                  style="height: 220px"
+                >
+                  <aside class="sidebar" style="position: static; height: 100%">
+                    <a href="#" class="sidebar-brand">
+                      <span class="sidebar-brand-icon">S</span>
+                      Sleyt
+                    </a>
+                    <nav class="sidebar-nav">
+                      <span class="sidebar-section-label">Main</span>
+                      <a href="#" class="sidebar-link active">Dashboard</a>
+                      <a href="#" class="sidebar-link">Analytics</a>
+                      <span class="sidebar-section-label">Settings</span>
+                      <a href="#" class="sidebar-link">Profile</a>
+                    </nav>
+                    <div class="sidebar-footer">
+                      <div class="sidebar-user">
+                        <span class="sidebar-user-avatar">U</span>
+                        <span class="text-sm font-medium">User Name</span>
+                      </div>
+                    </div>
+                  </aside>
+                </div>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">Available Classes:</p>
+                  <code class="text-xs block mb-1"
+                    >.sidebar - Fixed 220px vertical nav (sticky,
+                    full-height)</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.sidebar-brand, .sidebar-brand-icon - Logo / brand
+                    area</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.sidebar-nav, .sidebar-section-label - Navigation container
+                    and section labels</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.sidebar-link, .sidebar-link.active - Nav links; .active
+                    for current page</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.sidebar-link-icon - Optional icon inside a link</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.sidebar-footer, .sidebar-user, .sidebar-user-avatar -
+                    Footer area</code
+                  >
+                  <code class="text-xs block"
+                    >.sidebar-toggle-checkbox, .sidebar-toggle-label - CSS-only
+                    mobile toggle</code
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
