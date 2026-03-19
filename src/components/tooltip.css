@@ -8,41 +8,49 @@
  */
 
 .tooltip {
-  position: relative;
   cursor: help;
+  position: relative;
 }
 
-.tooltip::before,
-.tooltip::after {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  transition: opacity 0.15s ease-in-out;
-  z-index: var(--z-index-50);
-}
-
-/* Tooltip bubble */
+/* Tooltip bubble — default position: top */
 .tooltip::before {
   background-color: var(--color-dark);
   border-radius: var(--border-radius-sm);
+  bottom: calc(100% + 8px);
   color: var(--text-on-dark);
   content: attr(data-tooltip);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-normal);
+  left: 50%;
   line-height: var(--line-height-snug);
   max-width: 20rem;
+  opacity: 0;
   padding: var(--spacing-2) var(--spacing-3);
+  pointer-events: none;
+  position: absolute;
   text-align: left;
+  transform: translateX(-50%);
+  transition: opacity 0.15s ease-in-out;
   white-space: pre-line;
   width: max-content;
+  z-index: var(--z-index-50);
 }
 
-/* Arrow */
+/* Arrow — default position: top */
 .tooltip::after {
   border: 5px solid transparent;
+  border-top-color: var(--color-dark);
+  bottom: calc(100% - 2px);
   content: "";
   height: 0;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: opacity 0.15s ease-in-out;
   width: 0;
+  z-index: var(--z-index-50);
 }
 
 /* Show on hover / focus */
@@ -51,20 +59,6 @@
 .tooltip:focus::before,
 .tooltip:focus::after {
   opacity: 1;
-}
-
-/* ── Default: top ── */
-.tooltip::before {
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.tooltip::after {
-  border-top-color: var(--color-dark);
-  bottom: calc(100% + -2px);
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* ── Bottom ── */
@@ -80,7 +74,7 @@
   border-top-color: transparent;
   bottom: auto;
   left: 50%;
-  top: calc(100% + -2px);
+  top: calc(100% - 2px);
   transform: translateX(-50%);
 }
 
@@ -98,7 +92,7 @@
   border-top-color: transparent;
   bottom: auto;
   left: auto;
-  right: calc(100% + -2px);
+  right: calc(100% - 2px);
   top: 50%;
   transform: translateY(-50%);
 }
@@ -115,7 +109,7 @@
   border-right-color: var(--color-dark);
   border-top-color: transparent;
   bottom: auto;
-  left: calc(100% + -2px);
+  left: calc(100% - 2px);
   top: 50%;
   transform: translateY(-50%);
 }
