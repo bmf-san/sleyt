@@ -1798,14 +1798,14 @@
               </div>
             </div>
 
-            <!-- Progress & Tooltips -->
+            <!-- Progress -->
             <div class="card mb-6 glass">
               <div class="card-header">
-                <h3 class="font-semibold text-lg">Progress & Tooltips</h3>
+                <h3 class="font-semibold text-lg">Progress</h3>
               </div>
               <div class="card-body">
                 <p class="text-sm text-secondary mb-4">
-                  Progress bars and tooltip components.
+                  Progress bars for loading and completion indicators.
                 </p>
 
                 <h4 class="font-semibold mb-2 text-sm">Basic Progress</h4>
@@ -1827,30 +1827,88 @@
                   ></div>
                 </div>
 
-                <h4 class="font-semibold mb-2 text-sm mt-4">Tooltips</h4>
-                <div class="flex gap-4 mb-4">
-                  <span class="tooltip tooltip-top">
-                    Hover me
-                    <span class="tooltip-content">Top tooltip</span>
-                  </span>
-                  <span class="tooltip tooltip-bottom">
-                    Hover me
-                    <span class="tooltip-content">Bottom tooltip</span>
-                  </span>
-                </div>
-
                 <div class="mt-4 p-3 bg-slate-50 rounded">
                   <p class="text-xs font-semibold mb-2">Available Classes:</p>
                   <code class="text-xs block mb-1"
                     >.progress, .progress-bar, .progress-striped,
                     .progress-animated</code
                   >
-                  <code class="text-xs block mb-1"
+                  <code class="text-xs block"
                     >.progress-indeterminate - Indeterminate loading state</code
                   >
+                </div>
+              </div>
+            </div>
+
+            <!-- Tooltip -->
+            <div class="card mb-6 glass">
+              <div class="card-header">
+                <h3 class="font-semibold text-lg">Tooltip</h3>
+              </div>
+              <div class="card-body">
+                <p class="text-sm text-secondary mb-4">
+                  CSS-only tooltips using the
+                  <code class="text-xs bg-slate-100 px-2 py-1 rounded"
+                    >data-tooltip</code
+                  >
+                  attribute. No JavaScript required.
+                </p>
+
+                <h4 class="font-semibold mb-2 text-sm">
+                  Directions (default: top)
+                </h4>
+                <div class="flex flex-wrap gap-6 mb-4">
+                  <span class="tooltip" data-tooltip="Top tooltip (default)"
+                    >Hover me (top)</span
+                  >
+                  <span
+                    class="tooltip tooltip-bottom"
+                    data-tooltip="Bottom tooltip"
+                    >Hover me (bottom)</span
+                  >
+                  <span class="tooltip tooltip-left" data-tooltip="Left tooltip"
+                    >Hover me (left)</span
+                  >
+                  <span
+                    class="tooltip tooltip-right"
+                    data-tooltip="Right tooltip"
+                    >Hover me (right)</span
+                  >
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">
+                  Multi-line Tooltip
+                </h4>
+                <div class="flex gap-6 mb-4">
+                  <span
+                    class="tooltip tooltip-bottom"
+                    data-tooltip="Line 1&#10;Line 2&#10;Line 3"
+                    >Hover for multi-line</span
+                  >
+                </div>
+
+                <h4 class="font-semibold mb-2 text-sm mt-4">Code Example</h4>
+                <pre
+                  class="bg-slate-100 p-3 rounded text-xs mb-4"
+                ><code>&lt;span class="tooltip" data-tooltip="Tooltip text"&gt;Hover me&lt;/span&gt;
+&lt;span class="tooltip tooltip-bottom" data-tooltip="Below"&gt;Bottom&lt;/span&gt;
+&lt;span class="tooltip tooltip-left" data-tooltip="Left side"&gt;Left&lt;/span&gt;
+&lt;span class="tooltip tooltip-right" data-tooltip="Right side"&gt;Right&lt;/span&gt;</code></pre>
+
+                <div class="mt-4 p-3 bg-slate-50 rounded">
+                  <p class="text-xs font-semibold mb-2">Available Classes:</p>
+                  <code class="text-xs block mb-1"
+                    >.tooltip - Base class (shows tooltip on hover/focus,
+                    default: top)</code
+                  >
+                  <code class="text-xs block mb-1"
+                    >.tooltip-bottom, .tooltip-left, .tooltip-right - Direction
+                    modifiers</code
+                  >
+                  <p class="text-xs font-semibold mb-2 mt-2">Attribute:</p>
                   <code class="text-xs block"
-                    >.tooltip, .tooltip-content, .tooltip-{'{position}'} (top,
-                    bottom, left, right)</code
+                    >data-tooltip="text" - Tooltip content (use &amp;#10; for
+                    line breaks)</code
                   >
                 </div>
               </div>
