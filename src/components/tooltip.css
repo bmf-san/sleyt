@@ -1,0 +1,121 @@
+/* Tooltip - CSS-only tooltip using data-tooltip attribute */
+
+/* Usage:
+ *   <span class="tooltip" data-tooltip="Tooltip text here">Hover me</span>
+ *   <span class="tooltip tooltip-bottom" data-tooltip="Below">Bottom</span>
+ *   <span class="tooltip tooltip-left" data-tooltip="Left side">Left</span>
+ *   <span class="tooltip tooltip-right" data-tooltip="Right side">Right</span>
+ */
+
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip::before,
+.tooltip::after {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.15s ease-in-out;
+  z-index: var(--z-index-50);
+}
+
+/* Tooltip bubble */
+.tooltip::before {
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-on-dark);
+  content: attr(data-tooltip);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-snug);
+  max-width: 20rem;
+  padding: var(--spacing-2) var(--spacing-3);
+  text-align: left;
+  white-space: pre-line;
+  width: max-content;
+}
+
+/* Arrow */
+.tooltip::after {
+  border: 5px solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+}
+
+/* Show on hover / focus */
+.tooltip:hover::before,
+.tooltip:hover::after,
+.tooltip:focus::before,
+.tooltip:focus::after {
+  opacity: 1;
+}
+
+/* ── Default: top ── */
+.tooltip::before {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip::after {
+  border-top-color: var(--color-dark);
+  bottom: calc(100% + -2px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ── Bottom ── */
+.tooltip-bottom::before {
+  bottom: auto;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%);
+}
+
+.tooltip-bottom::after {
+  border-bottom-color: var(--color-dark);
+  border-top-color: transparent;
+  bottom: auto;
+  left: 50%;
+  top: calc(100% + -2px);
+  transform: translateX(-50%);
+}
+
+/* ── Left ── */
+.tooltip-left::before {
+  bottom: auto;
+  left: auto;
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-left::after {
+  border-left-color: var(--color-dark);
+  border-top-color: transparent;
+  bottom: auto;
+  left: auto;
+  right: calc(100% + -2px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ── Right ── */
+.tooltip-right::before {
+  bottom: auto;
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-right::after {
+  border-right-color: var(--color-dark);
+  border-top-color: transparent;
+  bottom: auto;
+  left: calc(100% + -2px);
+  top: 50%;
+  transform: translateY(-50%);
+}
