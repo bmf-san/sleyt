@@ -26,6 +26,7 @@
 @import url('./components/swatch.css');
 @import url('./components/tables.css');
 @import url('./components/tabs.css');
+@import url('./components/tooltip.css');
 
 /* Layout */
 @import url('./layout/container.css');
