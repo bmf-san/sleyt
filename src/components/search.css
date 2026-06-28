@@ -1,0 +1,138 @@
+/* Search
+ *
+ * Header search box (.navbar-search / .navbar-search-input) and the dedicated
+ * /search page (.search-page-* / .search-result-*). Intended for sites that
+ * emit a search-index.json (gohan >= 1.6.0) and filter it client-side.
+ */
+
+/* Header search box (navbar) */
+.navbar-search {
+  align-items: center;
+  display: flex;
+}
+
+.navbar-search-input {
+  background-color: var(--bg-body);
+  border: 1px solid var(--border-color-input);
+  border-radius: var(--border-radius-full);
+  color: var(--text-primary);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  max-width: 13rem;
+  min-width: 8rem;
+  padding: var(--spacing-2) var(--spacing-3);
+  transition: var(--transition-base);
+  width: 100%;
+}
+
+.navbar-search-input::placeholder {
+  color: var(--text-disabled);
+}
+
+.navbar-search-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(var(--color-primary-rgb) / 12%);
+  outline: none;
+}
+
+/* /search page form */
+.search-page-form {
+  width: 100%;
+}
+
+.search-page-input {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color-input);
+  border-radius: var(--border-radius-lg);
+  color: var(--text-primary);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-lg);
+  padding: var(--spacing-3) var(--spacing-4);
+  transition: var(--transition-base);
+  width: 100%;
+}
+
+.search-page-input::placeholder {
+  color: var(--text-disabled);
+}
+
+.search-page-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(var(--color-primary-rgb) / 12%);
+  outline: none;
+}
+
+/* Results list */
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-result-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-4) var(--spacing-5);
+  transition: var(--transition-base);
+}
+
+.search-result-item:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.search-result-link {
+  color: var(--text-primary);
+  display: inline-block;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.search-result-link:hover {
+  text-decoration: underline;
+}
+
+.search-result-desc {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  margin: var(--spacing-2) 0 0;
+}
+
+.search-result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.search-result-tag {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-color-subtle);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-0-5) var(--spacing-2);
+}
+
+/* No-JS fallback message */
+.search-noscript {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  padding: var(--spacing-3) var(--spacing-4);
+}
+
+/* On small screens the navbar collapses; let the search box span the row */
+@media (width <= 768px) {
+  .navbar-search-input {
+    max-width: none;
+  }
+}
